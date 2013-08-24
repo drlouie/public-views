@@ -1,0 +1,4 @@
+NZAA|Auckland Airport
+NZCH|Christchurch
+PLCH|Christmas / Cassidy
+NZWN|Wellington Airport

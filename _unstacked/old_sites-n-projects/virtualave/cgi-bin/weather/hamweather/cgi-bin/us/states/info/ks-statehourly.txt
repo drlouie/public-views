@@ -1,0 +1,10 @@
+Coffeyville|Coffeyville|99
+Dodge City|Dodge City|78
+Garden City|Garden City|63
+Goodland|Goodland|13
+Great Bend|Great Bend|47
+Liberal|Liberal|86
+Manhattan|Manhattan|22
+Salina|Salina|49
+Topeka Billard|Topeka|39
+Wichita Mcconl|Wichita|83

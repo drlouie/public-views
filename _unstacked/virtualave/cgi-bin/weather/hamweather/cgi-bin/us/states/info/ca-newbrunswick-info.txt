@@ -1,0 +1,6 @@
+bathurst|new|fpcn11.wzf.htm|fpcn54.wzf.htm
+edmundston|new|fpcn11.wzf.htm|fpcn54.wzf.htm
+fredericton|new|fpcn11.wzf.htm|fpcn54.wzf.htm
+miramichi|new|fpcn11.wzf.htm|fpcn54.wzf.htm
+moncton|new|fpcn11.wzf.htm|fpcn54.wzf.htm
+saint john|new|fpcn11.wzf.htm|fpcn54.wzf.htm

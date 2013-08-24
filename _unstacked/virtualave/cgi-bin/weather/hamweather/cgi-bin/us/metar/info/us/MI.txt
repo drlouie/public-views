@@ -1,0 +1,53 @@
+KADG|Adrian, Lenawee County Airport
+KAMN|Alma, Gratiot Community Airport
+KAPN|Alpena, Alpena County Regional Airport
+KARB|Ann Arbor, Ann Arbor Municipal Airport
+KBAX|Bad Axe, Huron County Memorial Airport
+KBTL|Battle Creek, Kellogg Airport
+KACB|Bellaire, Antrim County Airport
+KBEH|Benton Harbor, Southwest Michigan Regional Airport
+KRQB|Big Rapids, Roben-Hood Airport
+KCAD|Cadillac / Wexford County
+KCIU|Chippewa International Automatic Weather Observing / Reporting System
+KOEB|Coldwater, Branch County Memorial Airport
+KP59|Copper Harbor
+KDET|Detroit, Detroit City Airport
+KDTW|Detroit, Detroit Metropolitan Wayne County Airport
+KYIP|Detroit, Willow Run Airport
+KONZ|Detroit/Grosse Ile, Grosse Ile Airport
+KESC|Escanaba
+KFNT|Flint, Bishop International Airport
+KGLR|Gaylord, Otsego County Airport
+KGRR|Grand Rapids, Kent County International Airport
+KSAW|Gwinn, Sawyer Airport
+KCMX|Hancock, Houghton County Memorial Airport
+KJYM|Hillsdale, Hillsdale Municipal Airport
+KBIV|Holland, Tulip City Airport
+KHTL|Houghton Lake, Roscommon County Airport
+KOZW|Howell, Livingston County Airport
+KIMT|Iron Mountain / Kingsford, Ford Airport
+KIWD|Ironwood Automatic Weather Observing / Reporting System
+KJXN|Jackson / Reynolds
+KAZO|Kalamazoo, Kalamazoo / Battle Creek International Airport
+KLAN|Lansing, Capital City Airport
+KMCD|Macinac Island, Mackinac Island Airport
+KMBL|Manistee Automatic Weather Observing / Reporting System
+KP75|Manistique
+KISQ|Manistique, Schoolcraft County Airport
+KMQT|Marquette
+KRMY|Marshall, Brooks Field Airport
+KTEW|Mason, Mason Jewett Field Airport
+KMNM|Menominee Automatic Weather Observing / Reporting System
+KTTF|Monroe, Custer Airport
+KMKG|Muskegon, Muskegon County Airport
+KERY|Newberry, Luce County Airport
+KPLN|Pellston, Pellston Regional Airport
+KPTK|Pontiac, Oakland-Pontiac Airport
+KP58|Port Hope
+KMBS|Saginaw, MBSy International Airport
+KANJ|Sault Ste. Marie
+KMTC|Selfridge Air National Guard Base
+KPHN|St. Clair County International
+KIRS|Sturgis, Kirsch Municipal Airport
+KTVC|Traverse City, Cherry Capital Airport
+KOSC|Wurtsmith Air Force Base

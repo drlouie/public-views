@@ -1,0 +1,9 @@
+Eau Claire|Eau Claire|28
+Green Bay|Green Bay|39
+Hayward|Hayward|8
+La Crosse|La Crosse|41
+Madison|Madison|63
+Milwaukee/Timm|Milwaukee|66
+Oshkosh|Oshkosh|48
+Wausau|Wausau|30
+Woodruff|Woodruff|10

@@ -1,0 +1,11 @@
+KTRI|Bristol / Johnson / Kingsport, Tri-City Regional Airport
+KCHA|Chattanooga, Lovell Field
+KCSV|Crossville, Crossville Memorial Airport
+KDYR|Dyersburg Automatic Weather Observing / Reporting System
+KMKL|Jackson, McKellar-Sipes Regional Airport
+KTYS|Knoxville, McGhee Tyson Airport
+KMEM|Memphis, Memphis International Airport
+KNQA|Millington, Millington Municipal Airport
+KBNA|Nashville, Nashville International Airport
+KOQT|Oak Ridge
+KMQY|Smyrna

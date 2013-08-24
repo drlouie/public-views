@@ -1,0 +1,4 @@
+a { color:#ffffff; text-decoration:underline }
+a:hover { color:#8f94a7; text-decoration:none }
+body {scrollbars:yes}
+INPUT.button { background-color:#60677f;font:arial;font-weight:bold;color:#8f94a7;font-size=2; }

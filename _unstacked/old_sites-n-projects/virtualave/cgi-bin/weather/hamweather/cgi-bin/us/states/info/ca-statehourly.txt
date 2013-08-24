@@ -1,0 +1,11 @@
+Alturas|Alturas|85
+Arcata|Arcata|1
+Bishop|Bishop|26
+Fresno|Fresno|90
+L.A. Downtown|Los Angeles|41
+Red Bluff|Red Bluff|15
+Sac Exec Arpt|Sacramento|17
+San Diego|San Diego|43
+San Fran Arpt|San Francisco|6
+San Luis Obisp|San Luis Obispo|34
+Truckee|Truckee|72

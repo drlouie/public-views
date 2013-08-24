@@ -1,0 +1,24 @@
+001=Mineral and Southern Lyon Counties
+002=Greater Lake Tahoe Area
+003=Greater Reno-Carson City-Minden Area
+004=Western Nevada Basin and Range including Pyramid Lake
+005=Northern Washoe County
+013=Northern Nye County
+014=Esmeralda and Central Nye County
+015=Lincoln County
+016=Northeast Clark County
+017=Western Clark and Southern Nye County
+018=Sheep Range
+019=Spring Mountains-Red Rock Canyon
+020=Las Vegas Valley
+021=Lake Mead National Recreation Area
+022=Southern Clark County
+030=Humboldt County
+031=Northern Elko County
+032=Southwest and South Central Elko County
+033=Extreme Eastern Elko County
+034=Ruby Mountains/East Humboldt Range
+035=White Pine County
+036=Northern Lander County and Northern Eureka County
+037=Southern Lander County and Southern Eureka County
+

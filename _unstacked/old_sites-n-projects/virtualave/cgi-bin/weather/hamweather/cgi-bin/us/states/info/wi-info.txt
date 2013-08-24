@@ -1,0 +1,79 @@
+<-begin image map->
+<map name="Wisconsin">
+  <area shape="circle" coords="211,234,4" href="%%scripturl%%?forecast=zandh&state=wi&place=madison">
+  <area shape="poly" coords="305,269,306,259,283,259,282,261,277,262,277,267,305,267" href="%%scripturl%%?forecast=zone&state=wi&zone=072" alt="Kenosha">
+  <area shape="poly" coords="306,257,308,251,305,247,278,249,278,261,283,260,286,259,306,258" href="%%scripturl%%?forecast=zone&state=wi&zone=071" alt="Racine">
+  <area shape="rect" coords="250,248,277,268" href="%%scripturl%%?forecast=zone&state=wi&zone=070" alt="Walworth">
+  <area shape="rect" coords="215,248,248,268" href="%%scripturl%%?forecast=zone&state=wi&zone=069" alt="Rock">
+  <area shape="rect" coords="187,249,214,266" href="%%scripturl%%?forecast=zone&state=wi&zone=068" alt="Green">
+  <area shape="rect" coords="152,251,184,267" href="%%scripturl%%?forecast=zone&state=wi&zone=067" alt="Lafayette">
+  <area shape="poly" coords="305,247,303,239,301,230,301,226,290,228,291,246,304,245" href="%%scripturl%%?forecast=zone&state=wi&zone=066" alt="Milwaukee">
+  <area shape="rect" coords="264,227,290,246" href="%%scripturl%%?forecast=zone&state=wi&zone=065" alt="Waukesha">
+  <area shape="rect" coords="233,227,262,246" href="%%scripturl%%?forecast=zone&state=wi&zone=064" alt="Jefferson">
+  <area shape="rect" coords="185,229,233,246" href="%%scripturl%%?forecast=zone&state=wi&zone=063" alt="Dane">
+  <area shape="rect" coords="151,227,186,250" href="%%scripturl%%?forecast=zone&state=wi&zone=062" alt="Iowa">
+  <area shape="poly" coords="150,267,148,226,133,226,107,238,110,246,112,252,121,258,133,259,140,267,151,266" href="%%scripturl%%?forecast=zone&state=wi&zone=061" alt="Grant">
+  <area shape="poly" coords="300,227,301,217,305,206,290,207,291,226,299,225" href="%%scripturl%%?forecast=zone&state=wi&zone=060" alt="Ozaukee">
+  <area shape="poly" coords="272,206,272,207,270,216,268,225,291,226,291,206,271,206" href="%%scripturl%%?forecast=zone&state=wi&zone=059" alt="Washington">
+  <area shape="poly" coords="237,225,269,225,272,206,234,202,236,225" href="%%scripturl%%?forecast=zone&state=wi&zone=058" alt="Dodge">
+  <area shape="poly" coords="191,199,234,202,234,225,185,226,192,218,198,215,197,205,193,201" href="%%scripturl%%?forecast=zone&state=wi&zone=057" alt="Columbia">
+  <area shape="poly" coords="157,202,190,202,198,207,198,216,185,221,179,227,164,226,162,207,158,201" href="%%scripturl%%?forecast=zone&state=wi&zone=056" alt="Sauk">
+  <area shape="poly" coords="136,206,163,208,163,226,155,224,149,227,135,225,135,206" href="%%scripturl%%?forecast=zone&state=wi&zone=055" alt="Richland">
+  <area shape="poly" coords="108,238,119,235,136,226,134,212,104,216,112,222,108,229,108,237" href="%%scripturl%%?forecast=zone&state=wi&zone=054" alt="Crawford">
+  <area shape="poly" coords="102,213,135,211,134,206,156,205,156,193,100,197,101,211" href="%%scripturl%%?forecast=zone&state=wi&zone=053" alt="Vernon">
+  <area shape="poly" coords="286,205,305,205,310,199,310,191,311,185,285,185,285,203" href="%%scripturl%%?forecast=zone&state=wi&zone=052" alt="Sheboygan">
+  <area shape="poly" coords="271,205,284,204,283,185,270,183,241,186,242,200,270,201,271,204" href="%%scripturl%%?forecast=zone&state=wi&zone=051" alt="Fond Du Lac">
+  <area shape="poly" coords="309,186,316,172,323,167,321,159,301,161,292,165,292,185,310,184" href="%%scripturl%%?forecast=zone&state=wi&zone=050" alt="Manitowoc">
+  <area shape="poly" coords="291,185,291,163,271,164,269,182,283,181,284,184,290,183" href="%%scripturl%%?forecast=zone&state=wi&zone=049" alt="Calumet">
+  <area shape="rect" coords="241,165,270,185" href="%%scripturl%%?forecast=zone&state=wi&zone=048" alt="Winnebago">
+  <area shape="poly" coords="241,200,241,179,224,183,222,191,220,199,242,199" href="%%scripturl%%?forecast=zone&state=wi&zone=047" alt="Green Lake">
+  <area shape="poly" coords="220,200,219,194,222,192,225,181,200,181,199,199,221,199" href="%%scripturl%%?forecast=zone&state=wi&zone=046" alt="Marquette">
+  <area shape="poly" coords="242,181,240,165,198,167,199,180,242,179" href="%%scripturl%%?forecast=zone&state=wi&zone=045" alt="Waushara">
+  <area shape="poly" coords="198,166,199,200,189,200,180,187,175,174,180,165,197,167" href="%%scripturl%%?forecast=zone&state=wi&zone=044" alt="Adams">
+  <area shape="poly" coords="188,200,179,186,174,175,180,166,158,168,157,201,189,202" href="%%scripturl%%?forecast=zone&state=wi&zone=043" alt="Juneau">
+  <area shape="poly" coords="122,194,156,195,157,168,122,171,123,192" href="%%scripturl%%?forecast=zone&state=wi&zone=042" alt="Monroe">
+  <area shape="poly" coords="100,194,122,193,122,175,106,175,97,176,93,182,102,194" href="%%scripturl%%?forecast=zone&state=wi&zone=041" alt="La Crosse">
+  <area shape="poly" coords="320,159,330,139,310,138,308,141,307,162,321,159" href="%%scripturl%%?forecast=zone&state=wi&zone=040" alt="Kewaunee">
+  <area shape="poly" coords="283,165,301,165,301,159,309,158,308,141,302,142,298,146,291,145,294,138,283,141,281,164" href="%%scripturl%%?forecast=zone&state=wi&zone=039" alt="Brown">
+  <area shape="poly" coords="283,164,283,144,251,144,251,163,254,164,282,163,282,145" href="%%scripturl%%?forecast=zone&state=wi&zone=038" alt="Outagamie">
+  <area shape="poly" coords="223,164,250,164,249,144,257,141,223,137,224,163" href="%%scripturl%%?forecast=zone&state=wi&zone=037" alt="Waupaca">
+  <area shape="poly" coords="222,163,221,138,187,139,186,150,192,151,194,166,224,164" href="%%scripturl%%?forecast=zone&state=wi&zone=036" alt="Portage">
+  <area shape="poly" coords="160,138,186,139,188,149,194,165,158,166,158,153,159,139" href="%%scripturl%%?forecast=zone&state=wi&zone=035" alt="Wood">
+  <area shape="poly" coords="157,169,157,154,129,155,122,150,107,146,107,173,118,175,121,171,157,170" href="%%scripturl%%?forecast=zone&state=wi&zone=034" alt="Jackson">
+  <area shape="poly" coords="85,145,106,146,107,175,97,176,93,182,82,175,82,167,84,145" href="%%scripturl%%?forecast=zone&state=wi&zone=033" alt="Trempealeau">
+  <area shape="poly" coords="82,175,66,169,60,158,51,152,56,144,84,145,83,164,81,167,82,176" href="%%scripturl%%?forecast=zone&state=wi&zone=032" alt="Buffalo">
+  <area shape="poly" coords="222,137,257,140,258,142,278,143,278,129,250,127,235,123,231,118,221,118,221,136" href="%%scripturl%%?forecast=zone&state=wi&zone=031" alt="Shawano">
+  <area shape="poly" coords="158,138,222,138,222,116,171,111,164,114,158,119,158,136" href="%%scripturl%%?forecast=zone&state=wi&zone=030" alt="Marathon">
+  <area shape="poly" coords="119,118,158,117,157,139,154,154,128,154,127,147,122,147,121,129,120,119" href="%%scripturl%%?forecast=zone&state=wi&zone=029" alt="Clark">
+  <area shape="rect" coords="78,128,121,142" href="%%scripturl%%?forecast=zone&state=wi&zone=028" alt="Eau Claire">
+  <area shape="poly" coords="119,126,77,127,77,109,84,107,84,104,121,104,120,127" href="%%scripturl%%?forecast=zone&state=wi&zone=027" alt="Chippewa">
+  <area shape="poly" coords="37,148,51,154,55,144,76,142,76,138,49,137" href="%%scripturl%%?forecast=zone&state=wi&zone=026" alt="Pepin">
+  <area shape="rect" coords="50,108,78,138" href="%%scripturl%%?forecast=zone&state=wi&zone=025" alt="Dunn">
+  <area shape="poly" coords="11,129,48,129,49,141,39,150,28,146,11,135,13,130" href="%%scripturl%%?forecast=zone&state=wi&zone=024" alt="Pierce">
+  <area shape="poly" coords="12,109,12,114,12,128,49,128,48,105,13,109" href="%%scripturl%%?forecast=zone&state=wi&zone=023" alt="St. Croix">
+  <area shape="poly" coords="311,138,330,138,332,130,342,124,344,116,344,108,340,111,335,117,331,124,325,128,319,130,313,134,313,136" href="%%scripturl%%?forecast=zone&state=wi&zone=022" alt="Door">
+  <area shape="poly" coords="296,138,283,140,282,130,267,128,267,113,259,112,254,97,273,98,278,105,284,111,288,117,298,121,306,127,305,133,298,135,295,138" href="%%scripturl%%?forecast=zone&state=wi&zone=021" alt="Oconto">
+  <area shape="poly" coords="237,115,237,123,250,123,252,127,265,127,263,113" href="%%scripturl%%?forecast=zone&state=wi&zone=020" alt="Menominee">
+  <area shape="poly" coords="211,113,221,113,222,118,235,117,240,113,256,114,253,97,238,97,238,93,210,91,211,112" href="%%scripturl%%?forecast=zone&state=wi&zone=019" alt="Langlade">
+  <area shape="rect" coords="175,87,210,111" href="%%scripturl%%?forecast=zone&state=wi&zone=018" alt="Lincoln">
+  <area shape="poly" coords="120,118,163,117,163,113,175,111,172,99,118,100,119,116" href="%%scripturl%%?forecast=zone&state=wi&zone=017" alt="Taylor">
+  <area shape="poly" coords="84,85,111,84,136,84,137,100,118,101,119,105,84,105,84,84" href="%%scripturl%%?forecast=zone&state=wi&zone=016" alt="Rusk">
+  <area shape="rect" coords="48,83,84,107" href="%%scripturl%%?forecast=zone&state=wi&zone=015" alt="Barron">
+  <area shape="poly" coords="3,80,7,86,12,88,17,94,14,101,11,110,47,108,46,81,26,76,17,82,5,81" href="%%scripturl%%?forecast=zone&state=wi&zone=014" alt="Polk">
+  <area shape="poly" coords="270,96,274,98,276,104,280,107,287,111,289,115,298,119,308,122,315,116,310,108,314,100,311,97,301,98,303,92,304,85,305,80,299,75,287,74,269,77,269,96" href="%%scripturl%%?forecast=zone&state=wi&zone=013" alt="Marinette">
+  <area shape="poly" coords="257,59,272,62,287,65,287,70,288,77,270,77,257,74,256,59" href="%%scripturl%%?forecast=zone&state=wi&zone=012" alt="Florence">
+  <area shape="poly" coords="234,92,241,92,241,97,270,97,269,75,257,77,256,60,248,57,240,56,235,62,232,66,234,91" href="%%scripturl%%?forecast=zone&state=wi&zone=011" alt="Forest">
+  <area shape="poly" coords="175,86,209,88,212,91,233,91,232,67,225,69,219,72,215,68,175,68" href="%%scripturl%%?forecast=zone&state=wi&zone=010" alt="Oneida">
+  <area shape="rect" coords="134,63,173,100" href="%%scripturl%%?forecast=zone&state=wi&zone=009" alt="Price">
+  <area shape="poly" coords="86,82,136,83,135,62,120,61,119,53,82,52,86,79" href="%%scripturl%%?forecast=zone&state=wi&zone=008" alt="Sawyer">
+  <area shape="poly" coords="55,81,84,82,84,63,82,53,54,52,54,80" href="%%scripturl%%?forecast=zone&state=wi&zone=007" alt="Washburn">
+  <area shape="poly" coords="3,81,24,82,25,76,46,77,46,81,53,81,54,52,36,52,30,56,23,64,15,64,11,71,3,82" href="%%scripturl%%?forecast=zone&state=wi&zone=006" alt="Burnett">
+  <area shape="poly" coords="173,63,173,68,216,68,219,71,227,69,230,65,236,64,237,58,225,54,201,51,182,47,176,46,178,46" href="%%scripturl%%?forecast=zone&state=wi&zone=005" alt="Vilas">
+  <area shape="poly" coords="143,25,149,26,154,28,160,30,164,32,169,39,178,42,180,60,157,59,156,49,149,47,148,42,143,42,143,26" href="%%scripturl%%?forecast=zone&state=wi&zone=004" alt="Iron">
+  <area shape="poly" coords="120,61,157,62,155,51,149,51,149,47,142,47,142,26,130,23,120,26,118,60" href="%%scripturl%%?forecast=zone&state=wi&zone=003" alt="Ashland">
+  <area shape="poly" coords="82,17,105,10,122,4,127,6,128,12,125,17,121,26,119,51,93,51,83,51,82,16" href="%%scripturl%%?forecast=zone&state=wi&zone=002" alt="Bayfield">
+  <area shape="poly" coords="41,22,44,23,51,20,59,22,73,20,82,18,84,52,69,53,48,52,39,52,39,38,40,25,40,24" href="%%scripturl%%?forecast=zone&state=wi&zone=001" alt="Douglas">
+</map>
+<img src="%%stateimagesurl%%/wi-zones.gif" width="345" height="282" border="0" usemap="#Wisconsin"> 
+
+<-end image map->

@@ -1,0 +1,11 @@
+Brainerd|Brainerd|34
+Duluth Harbor|Duluth|37
+Fergus Falls|Fergus Falls|30
+Intl Falls|International Falls|10
+Mankato|Mankato|83
+Rochester|Rochester
+Thief Rvr Fall|Thief River Falls|13
+Twin Cities|Twin Cities|62
+Willmar|Willmar|57
+Worthington|Worthington|89
+

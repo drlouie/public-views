@@ -1,0 +1,6 @@
+LOWG|Graz-Thalerhof-Flughafen
+LOWI|Innsbruck-Flughafen
+LOWK|Klagenfurt-Flughafen
+LOWL|Linz / Hoersching-Flughafen
+LOWS|Salzburg-Flughafen
+LOWW|Wien / Schwechat-Flughafen

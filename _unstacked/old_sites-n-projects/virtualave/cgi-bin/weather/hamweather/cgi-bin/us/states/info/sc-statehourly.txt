@@ -1,0 +1,8 @@
+Charleston Apt|Charleston|44
+Columbia Apt|Columbia|28
+Florence|Florence|32
+Greenville|Greenville|6
+Myrtle Beach|Myrtle Beach|34
+Orangeburg|Orangeburg|36
+Rock Hill|Rock Hill|8
+Sumter/Shaw|Sumter|31

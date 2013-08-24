@@ -1,0 +1,17 @@
+ESGG|Goteborg / Landvetter
+ESGP|Goteborg / Save
+ESGJ|Jonkoping Flygplats
+ESSQ|Karlstad Flygplats
+ESNQ|Kiruna Airport
+ESDA|Ljungbyhed
+ESMS|Malmo / Sturup
+ESSP|Norrkoping
+ESDF|Ronneby
+ESSA|Stockholm / Arlanda
+ESSB|Stockholm / Bromma
+ESNN|Sundsvall-Harnosand Flygplats
+ESGT|Trollhattan Private 
+ESNU|Umea Flygplats
+ESOW|Vasteras / Hasslo
+ESMX|Vaxjo
+ESSV|Visby Flygplats

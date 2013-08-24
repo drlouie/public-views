@@ -1,0 +1,21 @@
+KBOI|Boise, Boise Air Terminal
+KBYI|Burley, Burley Municipal Airport
+KEUL|Caldwell Automatic Weather Observing / Reporting System
+KCOE|Coeur D'Alene Automatic Weather Observing / Reporting System
+KS80|Grangeville 
+KSUN|Hailey / Friedman Memorial
+KIDA|Idaho Falls, Fanning Field
+KLWS|Lewiston, Lewiston-Nez Perce County Airport
+KP69|Lowell
+KMLD|Malad City
+K77M|Malta
+KMYL|McCall, McCall Airport
+KMUO|Mountain Home Air Force Base
+KMLP|Mullan Pass, Mullan Pass Vor
+KPIH|Pocatello, Pocatello Regional Airport
+KRXE|Rexburg, Rexburg-Madison County Airport
+KSMN|Salmon / Lemhi Automatic Weather Observing / Reporting System
+KU78|Soda Springs / Tigert
+KS14|Spencer
+KSNT|Stanley
+KTWF|Twin Falls, Joslin Field-Magic Valley Regional Airport

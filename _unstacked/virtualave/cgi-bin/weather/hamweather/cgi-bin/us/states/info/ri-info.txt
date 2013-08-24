@@ -1,0 +1,13 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="138, 62, 8" HREF="%%scripturl%%?forecast=zandh&state=ri&place=providence">
+<AREA SHAPE="POLYGON" COORDS="175, 123, 203, 106, 222, 112, 231, 162, 154, 177" HREF="%%scripturl%%?forecast=zandh&state=ri&zone=007" alt="Newport">
+<AREA SHAPE="POLYGON" COORDS="27, 129, 120, 127, 122, 121, 139, 114, 133, 165, 117, 194, 48, 212, 5, 215, 9, 207, 7, 190, 18, 184" HREF="%%scripturl%%?forecast=zandh&state=ri&zone=006" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="166, 74, 195, 96, 139, 114, 150, 99, 146, 84, 153, 87" HREF="%%scripturl%%?forecast=zandh&state=ri&zone=005" alt="Bristol">
+<AREA SHAPE="POLYGON" COORDS="99, 91, 127, 89, 144, 82, 152, 97, 136, 113, 120, 120, 118, 128, 64, 128, 65, 120, 70, 115, 88, 109, 95, 101" HREF="%%scripturl%%?forecast=zandh&state=ri&zone=004" alt="Eastern Kent">
+<AREA SHAPE="POLYGON" COORDS="28, 92, 99, 90, 95, 100, 86, 107, 70, 114, 64, 120, 61, 129, 27, 128" HREF="%%scripturl%%?forecast=zandh&state=ri&zone=003" alt="Western Kent">
+<AREA SHAPE="POLYGON" COORDS="149, 5, 149, 41, 166, 37, 166, 75, 153, 85, 142, 80, 133, 84, 126, 88, 99, 90, 97, 40, 103, 23" HREF="%%scripturl%%?forecast=zandh&state=ri&zone=002" alt="Southeast Providence">
+<AREA SHAPE="POLYGON" COORDS="23, 9, 149, 5, 104, 20, 96, 40, 96, 90, 26, 92" HREF="%%scripturl%%?forecast=zandh&state=ri&zone=001" alt="Northwest Providence">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="218" alt="RI" src="%%stateimagesurl%%/ri-zone.gif" width="253">
+<-end image map->

@@ -1,0 +1,69 @@
+SBAF|Afonsos Aeroporto 
+SBAT|Alta Floresta Aeroporto 
+SBHT|Altamira
+SBAR|Aracaju Aeroporto 
+SBBG|Bage Aeroporto 
+SBBU|Bauru
+SBBE|Belem Aeroporto 
+SBCF|Belo Horizonte
+SBBH|Belo Horizonte Aeroporto 
+SBBV|Boa Vista Aeropor-To 
+SBBR|Brasilia Aeroporto 
+SBKG|Campina Grande
+SBKP|Campinas Aeroporto 
+SBCG|Campo Grande Aeroporto 
+SBCV|Caravelas Aeropor-To 
+SBAA|Conceicao Do Araguaia
+SBCR|Corumba
+SBCY|Cuiaba Aeroporto 
+SBBI|Curitiba
+SBCT|Curitiba Aeroporto 
+SBEG|Eduardo Gomes International
+SBFN|Fernando De Noronha
+SBFL|Florianopolis Aeroporto 
+SBFZ|Fortaleza Aeropor-To 
+SBFI|Foz Do Iguacu Aeroporto 
+SBGL|Galeao
+SBGO|Goiania Aeroporto 
+SBGW|Guaratingueta
+SBGR|Guarulhos Civ / Mil 
+SBIL|Ilheus Aeroporto 
+SBIZ|Imperatriz
+SBIH|Itaituba
+SBLO|Londrina Aeroporto 
+SBME|Macae
+SBMQ|Macapa
+SBMO|Maceio Aeroporto 
+SBMN|Manaus Aeroporto 
+SBMA|Maraba
+SBMT|Marte Civ / Mil 
+SBNT|Natal Aeroporto
+SBPK|Pelotas
+SBYS|Pirassununga
+SBPC|Pocos De Caldas
+SBPP|Ponta Pora Aeropor-To 
+SBCO|Porto Alegre
+SBPA|Porto Alegre Aero-Porto 
+SBPN|Porto Nacional Aeroporto 
+SBPV|Porto Velho Aeroporto 
+SBDN|Presidente Prudente
+SBRF|Recife Aeroporto 
+SBJR|Rio / Jacarepagua
+SBRB|Rio Branco
+SBRJ|Rio De Janeiro Aeroporto 
+SBSV|Salvador Aeroporto 
+SBSC|Santa Cruz Aeropor-To 
+SBSM|Santa Maria Aero-Porto 
+SBSN|Santarem-Aeroporto
+SBST|Santos Aeroporto 
+SBSJ|Sao Jose Dos Campo 
+SBSL|Sao Luiz Aeroporto 
+SBSP|Sao Paulo Aeropor-To 
+SBTT|Tabatinga
+SBTF|Tefe
+SBTE|Teresina Aeroporto 
+SBTU|Tucurui
+SBUR|Uberaba
+SBUG|Uruguaiana Aeroporto 
+SBVH|Vilhena Aeroporto 
+SBVT|Vitoria Aeroporto 

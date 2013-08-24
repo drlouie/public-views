@@ -1,0 +1,6 @@
+LDDU|Dubrovnik / Cilipi
+LDPL|Pula Aerodrome
+LDRI|Rijeka / Omisalj
+LDSP|Split / Resnik
+LDZD|Zadar / Zemunik
+LDZA|Zagreb / Pleso

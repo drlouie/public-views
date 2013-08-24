@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>%%hwvtitle%% : Zone Forecast : %%lcplace%%, %%lcstate%%</title><style>A:hover { color:red } </style>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body %%hwvbodyargs%%>
+
+%%hwi=header%%
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+<br>
+%%hwi=nav3%%
+</td><td valign="top" width="24"></td><td valign="top">
+
+<table border="0" width="475">
+      <tr>
+        <td width="100%">
+%%hwi=form1%%
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" ><table border="0" width="100%">
+          <tr>
+            <td width="100%" bgcolor="%%hwvheaderbgcolor%%"><font color="%%hwvheadertcolor%%"><big><strong>Forecast for
+            %%lcplace%%, %%lcstate%%:</strong></big> </font></td>
+          </tr>
+        </table>
+        <table border="0" width="100%">
+          <tr>
+%%daytitlerow%%
+          </tr>
+          <tr>
+%%iconrow%%
+          </tr>
+          <tr>
+%%temprow%%
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="475">
+<tr>
+        <td valign="top" colspan="2" align="center">
+
+        <table border="2" bordercolor="#%%hwvbordercolor%%"
+        cellspacing="0" cellpadding="2" bordercolorlight="#%%hwvbordercolor%%" bordercolordark="#%%hwvbordercolor%%"
+        bgcolor="#FFFFD7">
+          <tr>
+            <td width="100%"><strong>
+            <a href="%%scripturl%%?&user=%%user%%&theme=%%theme%%&place=%%lplace%%&state=%%lstate%%&country=%%lcountry%%&forecast=%%forecastneeded%%&zone=%%zone%%&icao=%%icao%%&zipcode=%%zipcode%%&sc=1"><small>Click here to make this your default forecast!</small></a>
+
+            </strong></td>
+          </tr>
+        </table>
+
+
+
+        </td>
+      </tr>
+
+      <tr>
+        <td valign="top" bgcolor="%%hwvheaderbgcolor%%"><font color="%%hwvheadertcolor%%"><strong><big>Zone Forecast:</big><br>
+        </strong><small>Dated: <small>%%forecastdate%%</small></small></font></td>
+        <td valign="middle" bgcolor="%%hwvheaderbgcolor%%"><font color="%%hwvheadertcolor%%"><big><strong>Zone Image Radar:</strong></big></font></td>
+      </tr>
+      <tr>
+        <td valign="top">%%activewarning%%<small>%%zforecast%% </small></td>
+        <td valign="top"><small><img src="%%radarzoneimg%%" alt="Radar" width="260" height="310"></small></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+
+
+%%hwi=footer%%
+</body></html>

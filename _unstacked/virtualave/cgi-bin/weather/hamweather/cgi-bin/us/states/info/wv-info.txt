@@ -1,0 +1,62 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="77, 171, 7" HREF="%%scripturl%%?forecast=zandh&state=wv&place=charleston">
+<AREA SHAPE="POLYGON" COORDS="272, 106, 309, 115, 280, 140, 274, 134, 264, 140, 261, 134, 266, 127, 264, 118" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=055" alt="Hardy">
+<AREA SHAPE="POLYGON" COORDS="244, 128, 265, 140, 251, 164, 236, 163, 226, 151, 227, 145, 232, 139, 234, 130" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=054" alt="Pendleton">
+<AREA SHAPE="POLYGON" COORDS="358, 91, 365, 98, 356, 112, 342, 102, 352, 92" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=053" alt="Jefferson">
+<AREA SHAPE="POLYGON" COORDS="341, 79, 351, 81, 358, 89, 348, 96, 342, 103, 329, 94, 337, 79, 344, 78" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=052" alt="Berkeley">
+<AREA SHAPE="POLYGON" COORDS="309, 85, 316, 75, 334, 72, 341, 78, 336, 80, 327, 94, 320, 91" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=051" alt="Morgan">
+<AREA SHAPE="POLYGON" COORDS="294, 85, 312, 87, 318, 91, 310, 114, 272, 103" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=050" alt="Hampshire">
+<AREA SHAPE="POLYGON" COORDS="249, 98, 266, 88, 288, 78, 293, 85, 271, 103" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=049" alt="Mineral">
+<AREA SHAPE="POLYGON" COORDS="238, 107, 249, 98, 272, 105, 265, 115, 266, 126, 260, 136, 248, 128, 245, 107" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=048" alt="Grant">
+<AREA SHAPE="POLYGON" COORDS="175, 144, 188, 141, 192, 127, 204, 126, 210, 116, 214, 123, 246, 125, 245, 127, 234, 130, 233, 139, 224, 148, 215, 143, 205, 158, 188, 163, 181, 167, 186, 158" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=047" alt="Randolph">
+<AREA SHAPE="POLYGON" COORDS="172, 178, 175, 173, 187, 162, 195, 163, 206, 157, 213, 143, 218, 145, 226, 147, 222, 163, 201, 191, 181, 194, 173, 188" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=046" alt="Pocahontas">
+<AREA SHAPE="POLYGON" COORDS="136, 187, 145, 190, 165, 177, 171, 179, 172, 186, 179, 194, 202, 191, 177, 218, 149, 217, 142, 210" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=045" alt="Greenbrier">
+<AREA SHAPE="POLYGON" COORDS="149, 217, 176, 219, 183, 223, 175, 231, 138, 243, 134, 240" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=044" alt="Monroe">
+<AREA SHAPE="POLYGON" COORDS="116, 227, 127, 218, 132, 219, 133, 212, 138, 209, 149, 213, 133, 239" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=043" alt="Summers">
+<AREA SHAPE="POLYGON" COORDS="99, 244, 111, 228, 118, 228, 138, 242, 111, 252" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=042" alt="Mercer">
+<AREA SHAPE="POLYGON" COORDS="210, 108, 222, 103, 238, 109, 246, 107, 247, 126, 213, 122, 210, 114" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=041" alt="Tucker">
+<AREA SHAPE="POLYGON" COORDS="178, 116, 183, 108, 205, 100, 211, 108, 206, 124, 192, 126, 193, 122" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=040" alt="Barbour">
+<AREA SHAPE="POLYGON" COORDS="180, 117, 194, 123, 191, 128, 189, 141, 179, 143, 164, 143" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=039" alt="Upshur">
+<AREA SHAPE="POLYGON" COORDS="163, 144, 176, 145, 185, 158, 180, 166, 173, 173, 171, 179, 153, 168, 150, 158" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=038" alt="Webster">
+<AREA SHAPE="POLYGON" COORDS="108, 178, 138, 160, 134, 156, 141, 156, 149, 158, 151, 168, 165, 176, 144, 191, 137, 187, 131, 180" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=037" alt="Nicholas">
+<AREA SHAPE="POLYGON" COORDS="107, 179, 130, 181, 140, 197, 141, 208, 130, 209, 105, 204, 96, 199" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=036" alt="Fayette">
+<AREA SHAPE="POLYGON" COORDS="84, 211, 87, 199, 97, 199, 103, 204, 131, 211, 132, 219, 127, 219, 118, 226, 112, 227, 109, 232, 102, 231" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=035" alt="Raleigh">
+<AREA SHAPE="POLYGON" COORDS="61, 231, 71, 218, 70, 216, 78, 210, 85, 211, 103, 230, 109, 232, 101, 239, 75, 232" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=034" alt="Wyoming">
+<AREA SHAPE="POLYGON" COORDS="63, 231, 79, 231, 103, 240, 83, 255, 67, 248, 53, 235" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=033" alt="McDowell">
+<AREA SHAPE="POLYGON" COORDS="184, 94, 194, 94, 202, 91, 204, 103, 199, 102, 185, 107" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=032" alt="Taylor">
+<AREA SHAPE="POLYGON" COORDS="161, 91, 184, 95, 185, 105, 180, 115, 156, 109, 154, 101" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=031" alt="Harrison">
+<AREA SHAPE="POLYGON" COORDS="143, 116, 154, 110, 178, 116, 164, 139, 153, 130" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=030" alt="Lewis">
+<AREA SHAPE="POLYGON" COORDS="123, 122, 142, 116, 152, 131, 129, 143, 122, 140, 127, 134" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=029" alt="Gilmer">
+<AREA SHAPE="POLYGON" COORDS="124, 145, 152, 130, 160, 134, 165, 140, 151, 158, 137, 156" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=028" alt="Braxton">
+<AREA SHAPE="POLYGON" COORDS="104, 159, 122, 147, 136, 160, 107, 176, 104, 162, 120, 148" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=027" alt="Clay">
+<AREA SHAPE="POLYGON" COORDS="55, 190, 65, 182, 76, 181, 95, 198, 87, 198, 84, 206, 88, 210, 80, 211, 79, 206, 70, 207, 67, 198, 55, 196" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=026" alt="Boone">
+<AREA SHAPE="POLYGON" COORDS="39, 196, 55, 193, 54, 196, 66, 200, 70, 209, 77, 208, 77, 211, 71, 213, 72, 218, 67, 221, 57, 219, 52, 223, 47, 218" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=025" alt="Logan">
+<AREA SHAPE="POLYGON" COORDS="22, 208, 33, 199, 37, 196, 44, 207, 46, 219, 51, 225, 57, 220, 66, 222, 60, 231, 50, 231, 30, 219" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=024" alt="Mingo">
+<AREA SHAPE="POLYGON" COORDS="217, 72, 234, 71, 234, 108, 221, 103, 212, 107, 204, 101, 204, 90" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=023" alt="Preston">
+<AREA SHAPE="POLYGON" COORDS="169, 71, 216, 70, 212, 79, 203, 91, 185, 80, 169, 79" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=022" alt="Monongalia ">
+<AREA SHAPE="POLYGON" COORDS="166, 78, 186, 79, 202, 90, 194, 95, 183, 93, 163, 91" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=021" alt="Marion">
+<AREA SHAPE="POLYGON" COORDS="132, 99, 149, 91, 159, 91, 154, 100, 158, 107, 146, 116, 136, 115" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=020" alt="Dodridge">
+<AREA SHAPE="POLYGON" COORDS="107, 101, 126, 98, 129, 94, 132, 100, 131, 102, 136, 116, 121, 122, 100, 110" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=019" alt="Ritchie">
+<AREA SHAPE="POLYGON" COORDS="103, 128, 113, 119, 122, 123, 124, 135, 121, 139, 127, 142, 118, 149" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=018" alt="Calhoun">
+<AREA SHAPE="POLYGON" COORDS="84, 122, 102, 111, 112, 119, 103, 128, 86, 128" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=017" alt="Wirt">
+<AREA SHAPE="POLYGON" COORDS="87, 129, 103, 128, 117, 150, 104, 158, 86, 154" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=016" alt="Roane">
+<AREA SHAPE="POLYGON" COORDS="70, 159, 84, 155, 104, 158, 107, 177, 99, 189, 95, 198, 78, 181, 65, 181, 63, 175, 58, 173, 62, 166, 74, 158" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=015" alt="Kanawha">
+<AREA SHAPE="POLYGON" COORDS="48, 152, 66, 146, 72, 154, 68, 160, 60, 168, 57, 174, 49, 175, 48, 162" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=014" alt="Putnam">
+<AREA SHAPE="POLYGON" COORDS="46, 170, 49, 176, 57, 174, 63, 175, 65, 182, 55, 190, 57, 193, 31, 198, 40, 191, 31, 186, 35, 174" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=013" alt="Lincoln">
+<AREA SHAPE="POLYGON" COORDS="134, 79, 136, 71, 168, 71, 168, 78, 162, 80, 162, 87, 160, 91, 151, 90" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=012" alt="Wetzel">
+<AREA SHAPE="POLYGON" COORDS="119, 86, 131, 79, 150, 90, 135, 99, 130, 95, 128, 97, 124, 98" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=011" alt="Tyler">
+<AREA SHAPE="POLYGON" COORDS="101, 97, 118, 90, 123, 97, 106, 101" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=010" alt="Pleasants">
+<AREA SHAPE="POLYGON" COORDS="69, 118, 69, 112, 91, 93, 106, 102, 101, 110, 84, 121" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=009" alt="Wood">
+<AREA SHAPE="POLYGON" COORDS="59, 130, 68, 117, 84, 122, 86, 129, 85, 152, 76, 156, 66, 145" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=008" alt="Jackson">
+<AREA SHAPE="POLYGON" COORDS="35, 154, 36, 140, 49, 122, 58, 126, 59, 133, 66, 142, 65, 145, 48, 151, 46, 162" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=007" alt="Mason">
+<AREA SHAPE="POLYGON" COORDS="15, 166, 28, 164, 31, 154, 36, 155, 46, 163, 47, 170, 38, 173, 31, 181, 30, 175" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=006" alt="Cabell">
+<AREA SHAPE="POLYGON" COORDS="7, 168, 18, 168, 29, 174, 32, 186, 37, 192, 22, 207, 4, 183" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=005" alt="Wayne">
+<AREA SHAPE="POLYGON" COORDS="145, 48, 159, 47, 158, 70, 135, 70" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=004" alt="Marshall">
+<AREA SHAPE="POLYGON" COORDS="146, 40, 158, 38, 158, 48, 145, 47" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=003" alt="Ohio">
+<AREA SHAPE="POLYGON" COORDS="152, 22, 159, 21, 158, 38, 145, 38" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=002" alt="Brooke">
+<AREA SHAPE="POLYGON" COORDS="150, 4, 158, 3, 159, 20, 152, 20" HREF="%%scripturl%%?forecast=zandh&state=wv&zone=001" alt="Hancock">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="257" alt="WV" src="%%stateimagesurl%%/wv-zones.gif" width="365">
+<-end image map->
+

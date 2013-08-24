@@ -1,0 +1,14 @@
+PHSF|Bradshaw Army Air Field / Hawaii
+PHTO|Hilo, Hilo International Airport
+PHNL|Honolulu, Honolulu International Airport
+PHOG|Kahului, Kahului Airport
+PHKO|Kailua / Kona, Keahole Airport
+PHNG|Kaneohe, Marine Corps Air Station
+PHBK|Kekaha, Pacific Missile Test Facility Barking Sands
+PHJH|Lahaina / West Maui
+PHNY|Lanai City Airport
+PHLI|Lihue, Lihue Airport
+PMDY|Midway Island Naval Air Facility
+PHMK|Molokai Automatic Meteorological Observing System
+PHJR|Oahu, Kalaeloa Airport
+PHHI|Wheeler Air Force Base / Oahu

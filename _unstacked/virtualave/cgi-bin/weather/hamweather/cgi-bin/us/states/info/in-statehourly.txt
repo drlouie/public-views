@@ -1,0 +1,10 @@
+Bloomington|Bloomington|62
+Evansville|Evansville|86
+Fort Wayne|Fort Wayne|18
+Gary|Gary|1
+Huntingburg|Huntingburg|83
+ -Intl Airport|Indianapolis|47
+Lafayette|Lafayette|29
+Muncie|Muncie|41
+South Bend|South Bend|4
+Terre Haute|Terre Haute|51

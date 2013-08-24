@@ -1,0 +1,6 @@
+FVCZ|Buffalo Range
+FVBU|Bulawayo Airport
+FVTL|Gweru
+FVHA|Harare Kutsaga 
+FVMV|Masvingo
+FVFA|Victoria Falls

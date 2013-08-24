@@ -1,0 +1,4 @@
+SEGU|Guayaquil / Simon Bolivar
+SELT|Latacunga
+SEMT|Manta
+SEQU|Quito / Mariscal Sucre

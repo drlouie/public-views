@@ -1,0 +1,9 @@
+Biloxi|Biloxi|81
+Columbus|Columbus|31
+Greenwood|Greenwood|25
+Jackson|Jackson|48
+McComb|McComb|70
+Meridian|Meridian|52
+Natchez|Natchez|60
+Tupelo|Tupelo|16
+Vicksburg|Vicksburg|47

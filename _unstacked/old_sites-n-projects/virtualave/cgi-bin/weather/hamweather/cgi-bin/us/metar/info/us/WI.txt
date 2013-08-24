@@ -1,0 +1,44 @@
+KAIG|Antigo - Lang Automatic Weather Observing / Reporting System 
+KATW|Appleton / Outagamie
+KASX|Ashland, Kennedy Memorial Airport
+KDLL|Baraboo, Baraboo Wisconsin Dells Airport
+KOVS|Boscobel, Boscobel Airport
+KCLI|Clintonville, Clintonville Municipal Airport
+KEGV|Eagle River, Eagle River Union Airport
+KEAU|Eau Claire County Airport
+KFLD|Fond Du Lac, Fond Du Lac County Airport
+KGRB|Green Bay, Austin Straubel International Airport
+KHYR|Hayward, Hayward Municipal Airport
+KJVL|Janesville / Rock County
+KUNU|Juneau, Dodge County Airport
+KENW|Kenosha, Kenosha Regional Airport
+KLSE|La Crosse, La Crosse Municipal Airport
+KLNR|Lone Rock, Tri-County Regional Airport
+KMSN|Madison, Dane County Regional-Truax Field
+KMTW|Manitowoc Municipal Automatic Weather Observing / Reporting System
+KMFI|Marshfield, Marshfield Municipal Airport
+KMDZ|Medford, Taylor County Airport
+KRRL|Merrill, Merrill Municipal Airport
+KMWC|Milwaukee / Timmerman
+KMKE|Milwaukee, General Mitchell International Airport
+KMRJ|Mineral Point, Iowa County Airport
+KARV|Minocqua / Woodruff
+KEFT|Monroe, Monroe Municipal Airport
+KCWA|Mosinee / Central Wisconsin
+KOEO|Osceola, L O Simenstad Municipal Airport
+KOSH|Oshkosh, Wittman Regional Airport
+KPBH|Phillips / Price County
+KPDC|Prairie Du Chien, Prairie Du Chien Municipal Airport
+KRAC|Racine, Batten International Airport
+KRHI|Rhinelander, Rhinelander-Oneida County Airport
+KRPD|Rice Lake, Rice Lake Regional-Carl's Field Airport
+KSBM|Sheboygan, Sheboygan County Memorial Airport
+KSTE|Stevens Point, Stevens Point Municipal Airport
+KSUE|Sturgeon Bay
+KSUW|Superior, Richard I. Bong Airport
+KVOK|Volk / Camp Douglas
+KRYV|Watertown
+KUES|Waukesha, Waukesha County Airport
+KAUW|Wausau, Wausau Downtown Airport
+KETB|West Bend, West Bend Municipal Airport
+KISW|Wisconsin Rapids, Alexander Field South Wood County Airport

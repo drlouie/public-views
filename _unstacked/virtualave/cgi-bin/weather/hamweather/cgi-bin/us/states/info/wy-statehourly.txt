@@ -1,0 +1,10 @@
+Big Piney|Big Piney|20
+Casper|Casper|15
+Cheyenne|Cheyenne|69
+Cody|Cody|4
+Evanston|Evanston|21
+Rawlins|Rawlins|61
+Riverton|Riverton|13
+Rock Springs|Rock Springs|22
+Sheridan|Sheridan|99
+Worland|Worland|9

@@ -1,0 +1,9 @@
+amherst|nova|fpcn11.whx.htm|fpcn54.whx.htm|CENTRAL
+greenwood|nova|fpcn11.whx.htm|fpcn54.whx.htm|CENTRAL
+halifax|nova|fpcn11.whx.htm|fpcn54.whx.htm|HALIFAX
+new glasgow|nova|fpcn11.whx.htm|fpcn54.whx.htm|CENTRAL
+port hawkesbury|nova|fpcn11.whx.htm|fpcn54.whx.htm|CAPE BRETON
+shearwater|nova|fpcn11.whx.htm|fpcn54.whx.htm|HALIFAX
+sydney|nova|fpcn11.whx.htm|fpcn54.whx.htm|CAPE BRETON
+truro|nova|fpcn11.whx.htm|fpcn54.whx.htm|HALIFAX
+yarmouth|nova|fpcn11.whx.htm|fpcn54.whx.htm|CENTRAL

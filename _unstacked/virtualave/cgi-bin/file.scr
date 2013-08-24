@@ -1,0 +1,14 @@
+RemoteCwd /
+LocalCwd c:\windows\desktop\projects\virtualave\cgi-bin
+Host s11.virtualave.net
+Retry 20
+Login Normal
+User drlouie
+Pass 38vqg6
+Connect
+LocalCwd c:\windows\desktop\projects\virtualave\cgi-bin
+RemoteCwd /public_html
+RemoteCwd /public_html/cgi-bin
+LocalClearSelection
+LocalSelect normal_formail.cgi
+Upload

@@ -1,0 +1,323 @@
+##################################################################################
+##		HAMweather User Variables
+##################################################################################
+##########################
+#  Initial setup variables
+#
+# If you follow the setup procedure in the documentation  then the following  four
+# variables should be the only ones you need to set.
+##########################
+#set $hw_cgi_dir_url to the url to the hamweather cgi directory
+$hw_cgi_dir_url = "http://www.hamweather.com/cgi-bin";
+
+#set $hw_html_dir_path to the full path of the directory holding hamweather html & images
+$hw_html_dir_path ="/usr/www/users/hamnet/hamweather";
+
+# set $hw_html_dir_url  to the url of the directory containing the hamweather html & images
+$hw_html_dir_url = "http://www.hamweather.com";
+
+# set the url to the administration script  (it is good practice to change the
+# hwadmin5340 portion of the url to ensure security.)
+$admin_script_url = "hwadmin.cgi";
+
+###################################################
+#
+#
+# set the domain name for cookie
+# we will get it from the hw_cgi_dir_url variable
+$hw_cgi_dir_url =~ m%http://([^/]+)/(.+)%i;
+$server_domain = $1;
+#$server_domain = "www.hamweather.com";  #server domain
+#set the server path to hamweather cgi directory
+$server_hamweather_path = "/$2";
+#$server_hamweather_path = "/";
+###################################################
+#
+#
+$themes_path = "$hw_cgi_dir_path/themes"; #themes templates path
+$forecast_templates = "$hw_cgi_dir_path/templates";  #user templates path
+$include_templates = "$forecast_templates/include";  #user include templates path
+$email_template = "$forecast_templates/email";  #user email templates path
+
+$hwpro_info_path = "$hw_cgi_dir_path/hwpro_info"; #hwpro_info path
+
+$zipcodes_path = "$hw_cgi_dir_path/zipcodes"; #zip codes templates path
+
+##########################
+# Various HAMweather Paths
+##########################
+$zone_info_files = "$hw_cgi_dir_path/us/states/info";
+$state_info_path = "$hw_cgi_dir_path/us/states/info";
+
+$state_forecasts_path = "$hw_cgi_dir_path/us/states/forecasts";
+$metar_forecasts_path = "$hw_cgi_dir_path/us/metar/forecasts";
+$metar_path = "$hw_cgi_dir_path/us/metar/info";
+
+$log_mode = 0;  #log mode
+$log_file = "$hw_cgi_dir_path/logs/log.txt";
+$error_log_file = "$hw_cgi_dir_path/logs/error.txt";
+
+$script_url = "$hw_cgi_dir_url/hamweather.$cgi_ext";
+$getstate_script_url = "$hw_cgi_dir_url/hwgetstate.$cgi_ext";
+$metarlister_script_url = "$hw_cgi_dir_url/metarlister.$cgi_ext";
+$email_storer_script_url = "$hw_cgi_dir_url/hw2emailstorer.$cgi_ext";
+
+#$imagespath = "$hw_html_dir_url/images/fcicons";
+$main_images_url = "$hw_html_dir_url/images";
+$state_images_url = "$main_images_url/us/states";
+$map_images_url = "$main_images_url/fcmaps";
+
+
+##########################
+# Various Template Info
+##########################
+# set view_forecast to the fullpath to the diretory with the html templates
+
+$view_no_forecast = "noforecast.html";  #not found template
+$state_template_name = "statemap.html";
+$metar_lister_template = "metarlist.html";
+#begin alt templates
+
+%alt_templates=('activezone', 'activezone.html'
+,'icq', 'icq.txt'
+,'zonejava', 'zonejava.txt'
+,'nfjava', 'hwjavanf.txt'
+,'test', 'test.html'
+);
+
+#end alt templates
+
+#begin pass templates
+
+%pass_templates=('canada', 'canada.html'
+,'ccinternational', 'ccinternational.html'
+,'ccus', 'ccus.html'
+,'es', 'emailstorer.html'
+,'esca', 'emailstorer_ca.html'
+,'otherinfo', 'otherinfo.html'
+,'hwi_zone', 'hwi_zone.html'
+,'hwi_zandh', 'hwi_zandh.html'
+,,'hwi_current', 'hwi_current.html'
+);
+
+#end pass templates
+
+##########################
+# Output File Option/Info
+##########################
+# set $output_method to the type of output that you want.
+# 0 = Normal output to the web
+# 1 = Output to File and Web
+# 2 = Output to File only
+$output_method = "0";  #default output method
+
+$output_path = "f:/hamweather_pro2_b300/cgi-bin/output";  #output file path
+
+
+$output_file = "f:/hamweather_pro2_b300/cgi-bin/output/outputfile.txt"; #output path with default filename
+
+#begin output_file names
+
+%output_files = (
+"test" => "f:/hamweather_pro2_b300/cgi-bin/test.html"
+);
+
+#end output_file names
+
+##########################
+# Misc Options/Defaults
+##########################
+$forecast_case = 1;  #forecast case
+$extended_mode = 0;  #extended mode
+$text_mode = 0;  #text mode
+$map_mode = 1; #map mode
+$days_only = 0;  #default days_only
+$default_round = 1; #default round mode
+$default_metric = 0; #default metric
+$default_wind = 1; #default_wind units for metric
+
+$cookie_mode = 1;  #cookie mode
+
+$day_begin = 5; #day begin
+$day_end = 21; #day end
+
+$default_place = "";  #default place
+$default_state = "us";  #default state
+$default_country = "us"; #default Country
+
+$default_forecast = "nf";  #default forecast
+$default_icao = ""; #default icao
+
+
+$referer_mode = 0;  #referer mode
+
+#begin referer domains
+
+@referers=();
+
+#end referer domains
+
+#begin include files
+
+%hw_include = (
+"current" => "current.html"
+,"form1" => "form1.html"
+,"nav1" => "nav1.html"
+,"nav2" => "nav2.html"
+,"mz1" => "mz1.html"
+,"nav3" => "nav3.html"
+,"mz2" => "mz2.html"
+,"header" => "header.html"
+,"mz3" => "mz3.html"
+,"mz4" => "mz4.html"
+,"mz5" => "mz5.html"
+,"footer" => "footer.html"
+);
+
+#end include files
+
+#begin hwv
+
+%hwv = (
+"hwvbodyargs" => "bgcolor=\"#FFFFFF\" textcolor=\"#000000\""
+,"hwvheadertcolor" => "#FFFFFF"
+,"hwvboldtextcolor" => "#000080"
+,"hwvbordercolor" => "#000080"
+,"hwvheaderbgcolor" => "#000080"
+,"hwvmaptextcolor" => "black"
+,"hwvtitle" => "HAMweather"
+);
+
+#end hwv
+
+# begin add hwv
+
+%hwv_add = (
+
+);
+
+#end add hwv
+
+##########################
+# Email Info
+##########################
+$admin_email = "youremail\@yourdomain.com";  #admin email
+$user_domain = "yourdomain.com";  #user domain
+
+# 0=send mail or such & 1 means use an smtp server
+$email_mode = 0;  #email mode
+$email_method = 0;  #email method
+$email_prog_or_smtp = "/usr/sbin/sendmail";  #email prog
+
+$subject = "$forecastneeded Forecast for %%lcplace%%, %%lcstate%%";
+
+$email_dbase_path = "$hw_cgi_dir_path/email/email_list.txt"; #email dbase path
+
+$email_template_path = "$hw_cgi_dir_path/email";  #email template path
+$email_forecast_template = "email_template.txt";  #email forecast template
+$subscribe_email_template = "subscribe.txt"; #subscribe email template
+$unsubscribe_email_template = "unsubscribe.txt"; #unsubscribe email template
+
+$subscribe_html_template = "subscribe.html"; #subscribe html template
+$unsubscribe_html_template = "unsubscribe.html";  #unsubscribe html template
+$email_html_error = "email_error.html";  #email error template
+
+##########################
+# Forecast Type Info
+##########################
+
+#begin forecast types
+
+
+%forecast_types = ('aviation' => [ 'aviation.html', 120, 'other.html', 0 ]
+,'crop' => [ 'crop.html', 600, 'usother.html', 2 ]
+,'discussion' => [ 'discussion.html', 120, 'other.html', 0 ]
+,'earthquake' => [ 'earthquake.html', 240, 'usother.html', 2 ]
+,'flashflood' => [ 'flashflood.html', 10, 'other.html', 2 ]
+,'flood' => [ 'flood.html', 10, 'usother.html', 2 ]
+,'floodsummary' => [ 'nationalflood.html', 240, 'usother.html', 2 ]
+,'hourly' => [ 'hourly.html', 60, 'hourly.html', 1 ]
+,'hurricane' => [ 'hurricane.html', 10, 'usother.html', 2 ]
+,'hurricane2' => [ 'hurricaneinfo.html', 10, 'usother.html', 2 ]
+,'hydro' => [ 'hydro.html', 120, 'other.html', 0 ]
+,'marinewarning' => [ 'marinewarning.html', 10, 'usother.html', 2 ]
+,'metar' => [ 'tgsv7.nws.noaa.gov', 30, 'metar.html', 3 ]
+,'nf' => [ 'traveler.html', 240, 'nf.html', 2 ]
+,'nonprecip' => [ 'nonpreceipwarning.html', 10, 'usother.html', 2 ]
+,'ns' => [ 'nationalsummary.html', 60, 'ns.html', 2 ]
+,'public' => [ 'public.html', 30, 'other.html', 0 ]
+,'radar' => [ '/iwin/radar/now', 120, 'radar.html', 2 ]
+,'shortterm' => [ 'shortterm.html', 120, 'shortterm.html', 1 ]
+,'special' => [ 'special.html', 30, 'other.html', 0 ]
+,'state' => [ 'state.html', 240, 'other.html', 0 ]
+,'statehourly' => [ 'hourly.html', 60, 'statehourly.html', 1 ]
+,'summary' => [ 'summary.html', 120, 'other.html', 0 ]
+,'thunderstorm' => [ 'thunderstorm.html', 10, 'usother.html', 2 ]
+,'tornado' => [ 'tornado.html', 10, 'usother.html', 2 ]
+,'ultraviolet' => [ 'ultraviolet.html', 240, 'uvi.html', 2 ]
+,'uswarnings' => [ 'allwarnings.html', 10, 'uswarning.html', 2 ]
+,'warnings' => [ 'allwarnings.html', 10, 'other.html', 0 ]
+,'watches' => [ 'watches.html', 10, 'other.html', 0 ]
+,'winterstorm' => [ 'winterstorm.html', 10, 'usother.html', 2 ]
+,'zandh' => [ 'hourly.html', 60, 'zandh.html', 1 ]
+,'zone' => [ 'zone.html', 120, 'zone.html', 1 ]
+);
+
+#end forecast types
+
+%ft_order = ('IWIN' => 0, 'ma' => 1, 't' => 2, 'fn' => 3);
+
+%navbars = (0 => 'nav2', 1=> 'nav3', 2=>'nav1', 3=>'nav1');
+$base_template = "";
+
+##########################################################
+##    HAMweather PRO add-on Variables
+##########################################################
+
+##########################
+# National Forecast and
+# National Summary
+##########################
+$fc_map_name = "fcmap$gd_ext";
+
+$us_fcmap_path =  "$hw_html_dir_path/images/fcmaps/usfcmap$gd_ext";
+$us_fcmap_url =  "$hw_html_dir_url/images/fcmaps/usfcmap$gd_ext";
+
+
+$us_ccmap_path = "$hw_html_dir_path/images/fcmaps/usccmap$gd_ext";
+$uc_ccmap_url = "$hw_html_dir_url/images/fcmaps/usccmap$gd_ext";
+
+$blank_map_path = "$hw_html_dir_path/images/fcmaps/blankmap$gd_ext";
+
+$us_warning_map_path =  "$hw_html_dir_path/images/fcmaps/uswnmap$gd_ext";
+$us_warning_map_url =  "$hw_html_dir_url/images/fcmaps/uswnmap$gd_ext";
+$wn_2_color_map = 0;  # warning map on color
+$wn_2_c_x = 0; # warning map x pos
+$wn_2_c_y = 0; # warning map y pos
+
+##########################
+# National Radar
+##########################
+
+ $radar_url_path = "$hw_html_dir_url/images/radar/us";
+
+ $temp_radar_path = "$hw_html_dir_path/images/radar/radar$gd_ext";
+ $color_map_path = "$hw_cgi_dir_path/radar/us/color$gd_ext";
+ $small_radar_key_path = "$hw_cgi_dir_path/radar/us/smallradar$gd_ext";
+ $us_radar_path =  "$hw_html_dir_path/images/radar/us/us-radar$gd_ext";
+ $state_radar_path = "$hw_html_dir_path/images/radar/us/";
+
+%state_radar_imgs = ( 'al' => 'se', 'ak' => 'ak',   'az' => 'sw', 'ar' => 'sc', 'ca' => 'sw', 'co' => 'sc', 'ct' => 'ne',
+                                        'de' => 'ne', 'fl' => 'se', 'ga' => 'se', 'hi' => 'hi',
+	                                  'id' => 'nw', 'il' => 'nc', 'in' => 'nc', 'ia' => 'nc', 'ks' => 'sc', 'ky' => 'nc', 'la' => 'sc',
+	                                  'me' => 'ne', 'md' => 'ne', 'ma' => 'ne', 'mi' => 'nc', 'mn' => 'nc',
+	                                  'ms' => 'se', 'mo' => 'sc', 'mt' => 'nw', 'ne' => 'nc', 'nv' => 'sw', 'nh' => 'ne', 'nj' => 'ne',
+	                                  'nm' => 'sw', 'ny' => 'ne', 'nc' => 'se', 'nd' => 'nc', 'oh' => 'nc',
+	                                  'ok' => 'sc', 'or' => 'nw', 'pa' => 'ne', 'ri' => 'ne', 'sc' => 'se', 'sd' => 'nc', 'tn' => 'se',
+	                                  'tx' => 'sc', 'ut' => 'sw', 'vt' => 'ne', 'va' => 'se', 'wa' => 'nw',
+	                                  'wv' => 'se', 'wi' => 'nc', 'wy' => 'nw');
+
+
+
+
+1;

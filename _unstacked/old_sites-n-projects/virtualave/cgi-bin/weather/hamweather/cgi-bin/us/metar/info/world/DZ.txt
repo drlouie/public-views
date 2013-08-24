@@ -1,0 +1,11 @@
+DAUA|Adrar
+DABB|Annaba
+DABC|Constantine
+DAAG|Dar-El-Beida
+DAUG|Ghardaia
+DAUH|Hassi-Messaoud
+DAUZ|In Amenas
+DAOO|Oran / Es Senia
+DAAT|Tamanrasset / Aguenna
+DABS|Tebessa
+DAON|Tlemcen Zenata 

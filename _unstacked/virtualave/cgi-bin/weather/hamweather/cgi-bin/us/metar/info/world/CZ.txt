@@ -1,0 +1,3 @@
+LKTB|Brno / Turany
+LKMT|Ostrava / Mosnov
+LKPR|Praha / Ruzyne

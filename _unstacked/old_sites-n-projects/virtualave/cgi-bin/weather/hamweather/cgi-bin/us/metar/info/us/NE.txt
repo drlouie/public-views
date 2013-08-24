@@ -1,0 +1,28 @@
+KANW|Ainsworth Municipal
+KAIA|Alliance, Alliance Municipal Airport
+KAUH|Aurora, Aurora Municipal Airport
+KBIE|Beatrice Municipal
+KHDE|Brewster Field Airport
+KBBW|Broken Bow, Broken Bow Municipal Airport
+KCDR|Chadron, Chadron Municipal Airport
+KOLU|Columbus Municipal Automatic Weather Observing / Reporting System
+KFNB|Falls City / Brenner
+KFET|Fremont Municipal Airport
+KGRI|Grand Island, Central Nebraska Regional Airport
+KHSI|Hastings, Hastings Municipal Airport
+KIML|Imperial Municipal
+KEAR|Kearney Municipal Automatic Weather Observing / Reporting System
+KLXN|Lexington, Jim Kelly Field Airport
+KLNK|Lincoln, Lincoln Municipal Airport
+KMCK|McCook, McCook Municipal Airport
+KOFK|Norfolk, Stefan Memorial Airport
+KLBF|North Platte, North Platte Regional Airport
+KONL|O'Neill / Baker Field
+KOGA|Ogallala, Searle Field Airport
+KOFF|Omaha / Offutt Air Force Base
+KOMA|Omaha, Eppley Airfield
+KODX|Ord / Sharp Field
+KBFF|Scottsbluff, Heilig Field
+KSNY|Sidney, Sidney Municipal Airport
+KTQE|Tekamah, Tekamah Municipal Airport
+KVTN|Valentine, Miller Field

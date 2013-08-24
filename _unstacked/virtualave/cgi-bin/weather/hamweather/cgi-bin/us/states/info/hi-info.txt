@@ -1,0 +1,15 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="POLYGON" COORDS="247, 141, 257, 137, 264, 141, 271, 158, 240, 175, 228, 167" HREF="%%scripturl%%?forecast=zandh&state=hi&zone=008" alt="">
+<AREA SHAPE="POLYGON" COORDS="227, 109, 241, 120, 247, 143, 242, 149, 233, 163, 229, 169, 221, 132" HREF="%%scripturl%%?forecast=zandh&state=hi&zone=007" alt="">
+<AREA SHAPE="POLYGON" COORDS="230, 108, 271, 122, 287, 145, 272, 156, 263, 141, 256, 138, 248, 141, 240, 121" HREF="%%scripturl%%?forecast=zandh&state=hi&zone=004" alt="Island of Hawaii">
+<AREA SHAPE="POLYGON" COORDS="162, 75, 179, 72, 183, 77, 178, 86" HREF="%%scripturl%%?forecast=zandh&state=hi&zone=006" alt="Lanai">
+<AREA SHAPE="POLYGON" COORDS="155, 57, 190, 55, 183, 69, 158, 68" HREF="%%scripturl%%?forecast=zandh&state=hi&zone=005" alt="Molokai">
+<AREA SHAPE="POLYGON" COORDS="189, 83, 189, 73, 196, 64, 228, 80, 224, 88, 207, 94" HREF="%%scripturl%%?forecast=zandh&state=hi&zone=003" alt="Maui">
+<AREA SHAPE="CIRCLE" COORDS="130, 54, 6" HREF="%%scripturl%%?forecast=zandh&state=hi&place=honolulu">
+<AREA SHAPE="POLYGON" COORDS="98, 30, 145, 32, 146, 63, 111, 60" HREF="%%scripturl%%?forecast=zandh&state=hi&zone=002" alt="Oahu">
+<AREA SHAPE="POLYGON" COORDS="25, 7, 56, 4, 57, 27, 7, 31, 7, 21" HREF="%%scripturl%%?forecast=zandh&state=hi&zone=001" alt="Kauai">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="182" alt="HI" src="%%stateimagesurl%%/hi-zones.gif" width="291">
+<-end image map->
+

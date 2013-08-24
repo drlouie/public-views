@@ -1,0 +1,77 @@
+<-begin image map->
+<map name="Penn">
+  <area shape="circle" coords="257,142,5" href="%%scripturl%%?forecast=zandh&state=pa&place=Harrisburg">
+  <area shape="poly" coords="391,158,390,153,387,150,382,157,373,156,375,170,382,168,382,163,392,160" href="%%scripturl%%?forecast=zone&state=pa&zone=071" alt="Philadelphia">
+  <area shape="poly" coords="361,174,366,171,375,171,373,166,372,160,364,158,358,162,347,171,350,174,355,174,361,175" href="%%scripturl%%?forecast=zone&state=pa&zone=070" alt="Delaware">
+  <area shape="poly" coords="408,149,402,144,399,141,396,137,393,133,389,131,385,130,385,122,380,121,376,117,365,123,359,132,389,150,391,153,392,157,398,156,402,153,410,151" href="%%scripturl%%?forecast=zone&state=pa&zone=069" alt="Bucks">
+  <area shape="poly" coords="387,150,359,133,353,131,345,139,361,157,366,159,373,161,373,157,376,156,381,158" href="%%scripturl%%?forecast=zone&state=pa&zone=068" alt="Montgomery">
+  <area shape="poly" coords="337,180,340,175,346,173,351,166,358,163,361,157,355,151,351,147,345,142,333,147,325,151,323,160,323,164,322,168,307,182,338,180" href="%%scripturl%%?forecast=zone&state=pa&zone=067" alt="Chester">
+  <area shape="poly" coords="307,181,316,176,320,172,323,165,323,159,326,150,311,138,302,143,290,145,275,151,283,159,293,167,298,173,306,181" href="%%scripturl%%?forecast=zone&state=pa&zone=066" alt="Lancaster">
+  <area shape="poly" coords="304,180,295,173,293,167,288,165,283,160,276,155,271,151,264,146,256,147,249,151,243,155,249,159,254,166,253,172,249,181,304,181" href="%%scripturl%%?forecast=zone&state=pa&zone=065" alt="York">
+  <area shape="poly" coords="249,180,250,173,251,170,252,164,249,160,244,156,242,154,237,158,230,159,221,162,216,164,219,180,249,179" href="%%scripturl%%?forecast=zone&state=pa&zone=064" alt="Adams">
+  <area shape="poly" coords="218,162,225,160,231,160,236,158,246,151,252,149,261,142,251,138,236,142,227,139,218,144,208,146,218,161" href="%%scripturl%%?forecast=zone&state=pa&zone=063" alt="Cumberland">
+  <area shape="poly" coords="377,118,378,110,379,106,385,106,385,101,387,100,384,94,374,98,351,106,354,113,361,115,368,122,376,117" href="%%scripturl%%?forecast=zone&state=pa&zone=062" alt="Northampton">
+  <area shape="poly" coords="365,123,363,119,363,116,360,115,355,114,353,111,350,110,349,104,339,107,330,115,352,129,358,131,366,123" href="%%scripturl%%?forecast=zone&state=pa&zone=061" alt="Lehigh">
+  <area shape="poly" coords="326,151,343,143,353,131,328,113,319,119,308,123,293,128,311,139,325,149" href="%%scripturl%%?forecast=zone&state=pa&zone=060" alt="Berks">
+  <area shape="poly" coords="309,137,286,123,274,130,282,148,292,144,301,143,312,138" href="%%scripturl%%?forecast=zone&state=pa&zone=059" alt="Lebanon">
+  <area shape="poly" coords="291,127,299,125,315,122,321,116,330,114,336,109,321,97,310,95,302,98,298,103,274,115,284,121,291,125,295,127" href="%%scripturl%%?forecast=zone&state=pa&zone=058" alt="Schuylkill">
+  <area shape="poly" coords="282,148,274,129,285,123,272,115,257,117,255,126,260,146,266,145,270,151" href="%%scripturl%%?forecast=zone&state=pa&zone=057" alt="Dauphin">
+  <area shape="poly" coords="208,146,219,142,223,138,227,142,236,142,245,140,256,139,252,131,254,126,253,122,255,118,243,118,233,123,217,131,202,141,209,148" href="%%scripturl%%?forecast=zone&state=pa&zone=056" alt="Perry">
+  <area shape="poly" coords="380,93,392,84,381,81,381,75,359,74,354,75,349,79,346,81,357,92,349,95,358,104,383,93" href="%%scripturl%%?forecast=zone&state=pa&zone=055" alt="Monroe">
+  <area shape="poly" coords="334,109,342,106,356,105,351,94,357,92,345,80,340,84,338,91,321,98,335,110" href="%%scripturl%%?forecast=zone&state=pa&zone=054" alt="Carbon">
+  <area shape="poly" coords="294,105,298,103,302,97,309,95,308,89,304,85,304,83,299,78,300,69,290,73,282,77,279,81,281,87,284,94,289,97,285,98,297,104" href="%%scripturl%%?forecast=zone&state=pa&zone=053" alt="Columbia">
+  <area shape="poly" coords="293,106,255,118,259,112,264,107,265,100,260,94,262,85,259,80,268,82,269,95,283,96,286,102,293,105" href="%%scripturl%%?forecast=zone&state=pa&zone=052" alt="Northumberland">
+  <area shape="poly" coords="282,97,281,91,278,87,278,80,269,79,268,84,266,95,277,94,284,99" href="%%scripturl%%?forecast=zone&state=pa&zone=051" alt="Montour">
+  <area shape="poly" coords="254,115,262,109,265,100,254,100,236,103,224,105,225,112,238,113,245,113" href="%%scripturl%%?forecast=zone&state=pa&zone=050" alt="Snyder">
+  <area shape="poly" coords="262,99,258,94,261,90,261,86,258,82,251,85,245,87,238,86,225,102,225,105,243,102,249,100" href="%%scripturl%%?forecast=zone&state=pa&zone=049" alt="Union">
+  <area shape="poly" coords="390,86,395,82,399,79,399,74,404,72,410,66,409,61,406,59,399,59,395,56,389,52,387,49,373,62,368,74,381,74,380,80,386,83,391,86" href="%%scripturl%%?forecast=zone&state=pa&zone=048" alt="Pike">
+  <area shape="poly" coords="306,93,309,96,318,98,338,90,338,84,348,78,343,70,342,65,333,62,326,63,311,66,302,67,299,76,301,82,307,93,322,98" href="%%scripturl%%?forecast=zone&state=pa&zone=047" alt="Luzerne">
+  <area shape="poly" coords="289,70,279,72,262,72,241,77,229,79,239,86,247,86,250,85,256,81,265,79,276,82,290,71" href="%%scripturl%%?forecast=zone&state=pa&zone=046" alt="Southern Lycoming">
+  <area shape="poly" coords="239,87,228,79,209,87,215,93,222,93,228,92,240,87" href="%%scripturl%%?forecast=zone&state=pa&zone=045" alt="Southern Clinton">
+  <area shape="poly" coords="347,80,351,77,355,75,360,75,357,46,340,48,333,62,342,67,344,72,345,76,349,78" href="%%scripturl%%?forecast=zone&state=pa&zone=044" alt="Lackawanna">
+  <area shape="poly" coords="332,62,335,56,340,47,327,47,313,47,307,50,304,56,302,65,316,65,326,63,333,61" href="%%scripturl%%?forecast=zone&state=pa&zone=043" alt="Wyoming">
+  <area shape="poly" coords="300,70,305,52,295,51,278,52,264,50,271,60,278,69,289,71,302,71" href="%%scripturl%%?forecast=zone&state=pa&zone=042" alt="Sullivan">
+  <area shape="poly" coords="288,71,278,70,271,64,264,50,259,49,255,54,208,53,208,60,212,63,218,70,225,75,230,77,288,70" href="%%scripturl%%?forecast=zone&state=pa&zone=041" alt="Northern Lycoming">
+  <area shape="poly" coords="357,74,364,75,369,69,367,65,371,66,377,58,387,47,387,43,387,38,384,34,379,32,374,29,369,26,367,22,357,22,357,34,358,73" href="%%scripturl%%?forecast=zone&state=pa&zone=040" alt="Wayne">
+  <area shape="poly" coords="357,46,357,21,311,21,311,30,313,47,358,46" href="%%scripturl%%?forecast=zone&state=pa&zone=039" alt="Susquehanna">
+  <area shape="poly" coords="304,54,308,44,313,46,310,21,296,21,254,21,257,33,258,49,276,52,290,52,305,53,309,44,314,46" href="%%scripturl%%?forecast=zone&state=pa&zone=038" alt="Bradford">
+  <area shape="poly" coords="258,49,256,20,206,21,208,39,209,53,256,53,259,48" href="%%scripturl%%?forecast=zone&state=pa&zone=037" alt="Tioga">
+  <area shape="poly" coords="218,179,218,163,212,157,208,151,208,145,203,142,197,145,185,163,178,180,220,180" href="%%scripturl%%?forecast=zone&state=pa&zone=036" alt="Franklin">
+  <area shape="poly" coords="176,179,181,171,186,161,191,156,180,152,169,150,164,154,164,163,151,179,177,180" href="%%scripturl%%?forecast=zone&state=pa&zone=035" alt="Fulton">
+  <area shape="poly" coords="153,180,165,161,164,154,171,150,164,142,158,142,148,142,145,142,138,139,133,146,127,155,126,168,125,180,156,181" href="%%scripturl%%?forecast=zone&state=pa&zone=034" alt="Bedford">
+  <area shape="poly" coords="124,181,127,173,128,156,135,144,119,144,115,139,107,143,99,153,88,160,83,169,85,174,85,179,125,179" href="%%scripturl%%?forecast=zone&state=pa&zone=033" alt="Somerset">
+  <area shape="poly" coords="83,179,86,175,83,171,83,168,90,157,75,151,70,153,63,154,56,151,53,151,49,156,44,162,46,166,46,175,50,180,84,179" href="%%scripturl%%?forecast=zone&state=pa&zone=032" alt="Fayette">
+  <area shape="poly" coords="4,182,49,182,45,177,47,171,45,165,40,161,20,160,10,161,4,165,4,180" href="%%scripturl%%?forecast=zone&state=pa&zone=031" alt="Greene">
+  <area shape="poly" coords="89,159,93,154,102,148,108,142,113,134,104,133,95,131,87,130,81,126,74,122,64,113,57,120,63,126,59,137,53,153,62,154,67,155,72,151,83,155,88,159,88,158" href="%%scripturl%%?forecast=zone&state=pa&zone=030" alt="Westmoreland">
+  <area shape="poly" coords="4,165,12,162,19,161,26,160,31,160,39,161,45,160,49,159,51,156,49,151,53,145,42,142,31,140,26,136,17,127,5,128,5,166,4,166" href="%%scripturl%%?forecast=zone&state=pa&zone=029" alt="Washington">
+  <area shape="poly" coords="252,115,242,112,235,113,225,112,210,122,200,134,203,141,209,136,214,133,219,130,234,122,243,118,253,115" href="%%scripturl%%?forecast=zone&state=pa&zone=028" alt="Juniata">
+  <area shape="poly" coords="225,112,224,103,203,110,196,117,195,125,191,131,200,134,208,127,208,123,227,113" href="%%scripturl%%?forecast=zone&state=pa&zone=027" alt="Mifflin">
+  <area shape="poly" coords="190,156,201,140,200,134,193,134,187,132,194,126,192,120,203,110,188,111,180,112,173,109,167,114,170,119,172,125,167,133,163,141,170,150,182,153,191,156" href="%%scripturl%%?forecast=zone&state=pa&zone=026" alt="Huntingdon">
+  <area shape="poly" coords="159,142,172,127,171,123,168,118,167,113,172,107,159,107,153,110,139,141,151,142,160,141" href="%%scripturl%%?forecast=zone&state=pa&zone=025" alt="Blair">
+  <area shape="poly" coords="134,145,139,137,144,126,147,120,150,115,156,110,125,110,113,132,106,142,116,140,118,145,135,144" href="%%scripturl%%?forecast=zone&state=pa&zone=024" alt="Cambria">
+  <area shape="poly" coords="112,132,126,109,123,97,94,97,95,104,79,124,81,128,84,129,88,129,92,130,98,132,103,133,105,132" href="%%scripturl%%?forecast=zone&state=pa&zone=023" alt="Indiana">
+  <area shape="poly" coords="78,123,94,106,96,96,95,89,86,93,80,93,69,91,63,86,61,97,60,116,66,115,69,118,72,120,75,124,77,123" href="%%scripturl%%?forecast=zone&state=pa&zone=022" alt="Armstrong">
+  <area shape="poly" coords="54,145,56,140,57,135,62,130,63,125,57,121,61,115,31,116,17,129,28,139,45,143,52,147,55,145" href="%%scripturl%%?forecast=zone&state=pa&zone=021" alt="Allegheny">
+  <area shape="poly" coords="4,128,16,127,31,119,29,102,4,103,5,129" href="%%scripturl%%?forecast=zone&state=pa&zone=020" alt="Beaver">
+  <area shape="poly" coords="238,89,223,102,201,110,191,111,183,113,173,109,163,108,210,89,216,94,234,92,234,91" href="%%scripturl%%?forecast=zone&state=pa&zone=019" alt="Southern Centre">
+  <area shape="poly" coords="210,87,229,79,218,71,212,66,207,58,198,58,187,57,179,58,183,62,179,67,177,72,172,74,175,77,176,81,187,76,195,79,204,83" href="%%scripturl%%?forecast=zone&state=pa&zone=012" alt="Northern Clinton">
+  <area shape="poly" coords="154,111,210,88,203,83,198,82,194,79,192,78,188,78,184,78,179,81,174,83,175,87,177,89,175,92,170,96,165,99,161,102,157,109" href="%%scripturl%%?forecast=zone&state=pa&zone=018" alt="Northern Centre">
+  <area shape="poly" coords="124,111,154,111,156,104,160,104,164,98,167,94,176,94,176,87,174,84,176,78,168,74,159,74,145,74,135,74,129,76,123,80,125,111" href="%%scripturl%%?forecast=zone&state=pa&zone=017" alt="Clearfield">
+  <area shape="poly" coords="124,99,125,79,131,75,120,72,106,67,100,68,94,69,96,97,110,97,123,98" href="%%scripturl%%?forecast=zone&state=pa&zone=016" alt="Jefferson">
+  <area shape="poly" coords="96,89,94,68,92,62,85,61,79,63,74,67,71,70,66,75,63,79,63,87,67,90,69,92,74,91,76,92,80,92,84,92,88,91,93,89,95,89" href="%%scripturl%%?forecast=zone&state=pa&zone=015" alt="Clarion">
+  <area shape="poly" coords="61,115,62,76,42,78,39,81,33,84,30,88,28,94,30,109,30,115,43,115" href="%%scripturl%%?forecast=zone&state=pa&zone=014" alt="Butler">
+  <area shape="poly" coords="29,101,28,94,32,87,19,82,3,81,4,102,30,102" href="%%scripturl%%?forecast=zone&state=pa&zone=013" alt="Lawrence">
+  <area shape="poly" coords="172,74,178,71,181,66,181,58,176,54,165,46,152,47,150,55,152,59,152,63,161,65,164,73,173,74,174,75" href="%%scripturl%%?forecast=zone&state=pa&zone=011" alt="Cameron">
+  <area shape="poly" coords="164,73,162,65,152,62,151,49,145,46,114,48,112,60,105,64,112,68,122,71,129,73,130,75,134,75,143,73,154,74,165,74" href="%%scripturl%%?forecast=zone&state=pa&zone=010" alt="Elk">
+  <area shape="poly" coords="103,65,103,62,106,59,111,59,112,46,74,48,73,56,74,61,78,63,82,61,94,62,93,68,101,69,104,62,107,59,112,61" href="%%scripturl%%?forecast=zone&state=pa&zone=009" alt="Forest">
+  <area shape="poly" coords="63,79,63,75,66,71,69,70,73,67,76,67,77,61,73,59,74,46,61,48,52,48,45,54,39,58,43,77,63,78" href="%%scripturl%%?forecast=zone&state=pa&zone=008" alt="Venango">
+  <area shape="poly" coords="31,87,39,82,42,78,39,57,4,59,6,83,14,81,18,82,25,83,34,85" href="%%scripturl%%?forecast=zone&state=pa&zone=007" alt="Mercer">
+  <area shape="poly" coords="208,57,208,48,208,42,207,35,207,21,166,23,167,49,174,54,178,58,208,59" href="%%scripturl%%?forecast=zone&state=pa&zone=006" alt="Potter">
+  <area shape="poly" coords="166,48,165,21,115,22,113,28,113,37,114,47,145,46,149,50,158,48,165,48" href="%%scripturl%%?forecast=zone&state=pa&zone=005" alt="McKean">
+  <area shape="poly" coords="112,47,112,41,113,37,113,33,114,30,115,22,66,23,66,31,66,45,64,48,111,47" href="%%scripturl%%?forecast=zone&state=pa&zone=004" alt="Warren">
+  <area shape="poly" coords="4,57,9,57,14,57,21,56,39,56,45,54,49,50,53,49,66,47,66,30,5,33,5,57" href="%%scripturl%%?forecast=zone&state=pa&zone=003" alt="Crawford">
+  <area shape="poly" coords="66,31,66,26,69,22,57,21,57,7,4,28,4,31,67,31" href="%%scripturl%%?forecast=zone&state=pa&zone=002" alt="Southern Erie">
+  <area shape="poly" coords="4,23,56,4,58,7,5,26,5,22" href="%%scripturl%%?forecast=zone&state=pa&zone=001" alt="Northern Erie">
+</map>
+<img src="%%stateimagesurl%%/pa-zones.gif" width="415" height="184" border="0" usemap="#Penn"> 
+<-end image map->

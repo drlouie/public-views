@@ -1,0 +1,58 @@
+KAQQ|Apalachicola, Apalachicola
+KBOW|Bartow Municipal
+KBKV|Brooksville, Hernando County Airport
+KCOF|Cocoa / Patrick Air Force Base
+KCEW|Crestview, Sikes Airport
+KCTY|Cross City, Cross City Airport
+KDAB|Daytona Beach, Daytona Beach Regional Airport
+KDTS|Destin, Destin-Ft. Walton Beach Airport
+KEGI|Duke Field / Eglin Auxiliary
+KFLL|Fort Lauderdale, Fort Lauderdale / Hollywood International Airport
+KFXE|Fort Lauderdale, Fort Lauderdale Executive Airport
+KFMY|Fort Myers, Page Field
+KRSW|Fort Myers, Southwest Florida International Airport
+KFPR|Fort Pierce, St. Lucie County International Airport
+KGNV|Gainesville, Gainesville Regional Airport
+KHWO|Hollywood, North Perry Airport
+KHST|Homestead Air Force Base
+KHRT|Hurlburt Field
+KCRG|Jacksonville, Craig Municipal Airport
+KJAX|Jacksonville, Jacksonville International Airport
+KNIP|Jacksonville, Naval Air Station
+KEYW|Key West, Key West International Airport
+KNQX|Key West, Naval Air Station
+KLAL|Lakeland Regional
+KLEE|Leesburg, Leesburg Municipal Airport
+KMCF|Macdill Air Force Base, Fl.
+KMTH|Marathon, Marathon Airport
+KMAI|Marianna, Marianna Municipal Airport
+KNRB|Mayport, Naval Air Facility
+KMLB|Melbourne, Melbourne International Airport
+KTMB|Miami, Kendall-Tamiami Executive Airport
+KMIA|Miami, Miami International Airport
+KOPF|Miami, Opa Locka Airport
+KNSE|Milton, Whiting Field North
+KTTS|NASA Shuttle Facility
+KAPF|Naples Municipal
+KOCF|Ocala Municipal Automatic Weather Observing / Reporting System
+KSFB|Orlando / Sanford Airport
+KORL|Orlando, Orlando Executive Airport
+KMCO|Orlando, Orlando International Airport
+KPFN|Panama City, Panama City-Bay County International Airport
+KNPA|Pensacola, Naval Air Station
+KPNS|Pensacola, Pensacola Regional Airport
+K40J|Perry-Foley, Perry-Foley Airport
+KPMP|Pompano Beach, Pompano Beach Airpark
+KPGD|Punta Gorda, Charlotte County Airport
+KSRQ|Sarasota / Bradenton, Sarasota-Bradenton International Airport
+KSGJ|St. Augustine, St. Augustine Airport
+KPIE|St. Petersburg / Clearwater, St. Petersburg / Clearwater International Airport
+KSPG|St. Petersburg, Whitted Airport
+KTLH|Tallahassee, Tallahassee Regional Airport
+KTPA|Tampa, Tampa International Airport
+KTIX|Titusville
+KPAM|Tyndall Air Force Base
+KVPS|Valparaiso / Eglin Air Force Base
+KVRB|Vero Beach, Vero Beach Municipal Airport
+KPBI|West Palm Beach, Palm Beach International Airport
+KGIF|Winter Haven, Winter Haven's Gilbert Airport

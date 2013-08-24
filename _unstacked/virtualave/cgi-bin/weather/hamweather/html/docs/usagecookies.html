@@ -1,0 +1,109 @@
+<html>
+
+<head>
+<title>HAMweather Usage : Cookies</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Cookie Support and
+    Usage</strong></big></font></td>
+  </tr>
+</table>
+
+<p>There may be times when you would like to have a web visitors local forecast
+automatically display whenever they return to your HAMweather pages.&nbsp; This can be
+done using HAMweather's cookie support.</p>
+
+<p>The process of using cookies with HAMweather is quite simple.&nbsp; FIrst the cookie
+will need to be set on the users computer (requires a browser that supports cookies, such
+as Netscape or MS Internet Explorer) and then whenever the user browser the hamweather.cgi
+without the 'forecast' parameter being set HAMweather will use the cookie information to
+display the forecast.</p>
+
+<p><font color="#000080"><strong>Setting the Cookie</strong></font></p>
+
+<p>The process of setting a HAMweather cookie on the users system is to add the '<strong>sc</strong>'
+parameter to the url of the wanted forecast (or to a form as a form element).&nbsp; <font
+color="#FF0000">For example, to display the forecast for Roanoke, VA and set a cookie for
+this on the users system, the URL would look similir too:&nbsp; </font><font
+color="#000080"><small><a
+href="http://www.yourdomain.com/path/to/hamweather.cgi?place=roanoke&amp;state=va&amp;forecast=zandh&amp;sc=1">http://www.yourdomain.com/path/to/hamweather.cgi?place=roanoke&amp;state=va&amp;forecast=zandh&amp;sc=1</a>
+</small></font></p>
+
+<p>The '<strong>sc</strong>' parameter can be set to one of 5 values that offer
+alternatives on what exactly is stored in the cookie:</p>
+
+<blockquote>
+  <p><small><strong>sc=0</strong> (or parameter not used) : No cookie stored<br>
+  <strong>sc=1</strong> : cookie stored without the user and theme parameters (normal
+  default when saving a cookie)<br>
+  <strong>sc=2</strong> : cookie stored with the user parameter but not the theme parameter<br>
+  <strong>sc=3</strong> : cookie stored with the theme parameter but not the user parameter.<br>
+  <strong>sc=4</strong> : cookie stored with both the user and theme parameters</small></p>
+</blockquote>
+
+<p>Caution should be taken, not to add the '<strong>sc</strong>' (BTW '<strong>sc</strong>'
+stands for Set Cookie) parameter to all URLs, but to only to the URL that links to the
+needed forecast.&nbsp; This is because, HAMweather will overwrite any previously set
+HAMweather cookie.&nbsp; The best method to set cookies would be to offer a link on the
+forecast page that states something similar to :&quot; Click here to make this forecast
+your default&quot;&nbsp; Then whenthe user clicks the link, HAMweather will set the
+cookie.&nbsp; This is the method that is used in the HAMweather demo site pages included
+in the HAMweather package.</p>
+
+<p>The following parameter information is stored in the cookie on the users system
+&nbsp;and is used when deriving the forecast:</p>
+
+<blockquote>
+  <ul>
+    <li>Forecast</li>
+    <li>Place</li>
+    <li>State</li>
+    <li>Country</li>
+    <li>Zone </li>
+    <li>ICAO</li>
+    <li>Alt</li>
+    <li>Zipcode (if given)</li>
+  </ul>
+</blockquote>
+
+<p><font color="#000080"><strong>Using Cookies to Derive Foreast</strong></font></p>
+
+<p>So when does HAMwetaher use the cookie info to derive a forecast?</p>
+
+<p>Anytime the hamweather.cgi is accessed without the 'forecast' parameter being set.
+&nbsp; Normally, if the 'forecast' parameter is set, either in the URL or in a form,
+HAMweather will use this to derive the forecast.&nbsp; If the 'forecast' parameter was not
+set, then HAMweather will use the cookie informations stored on the userscomputer. &nbsp;
+If by chance, no HAMweather cookie is stored on the users system, then HAMweather will use
+the defaults set in the web based administration to derive the forecast.</p>
+
+<p>If you plan on allowing the use of cookies with HAMweather, you sohuld set the
+HAMweather defaults to the forecast you want displayed when no cookie is present.</p>
+
+<p>Then always link web users directly to the hamweather.cgi without setting the
+'forecast' parameter. <font color="#FF0000">For example:&nbsp; You can link directly to
+the hamwetaher.cgi with&nbsp; an URL similar to:</font>&nbsp; <font color="#000080"><a
+href="http://www.yourdomain.com/path/to/hamweather.cgi">http://www.yourdomain.com/path/to/hamweather.cgi</a>
+</font></p>
+
+<p>HAMweather also provides the ability to override the forecast parameter in a cookie. To
+do this you use the '<strong>forcefc' </strong>parameter.&nbsp; Remember that you can not
+provide the 'forecast' parameter directory when trying to display a users default
+forecast. So if you want to use the users cookie but display a different forecast type you
+set link to the hamweather.cgi as stated earlier but also provide the forcefc parameter as
+in: <font color="#000080"><a href="http://www.yourdomain.com/path/to/hamweather.cgi">http://www.yourdomain.com/path/to/h<u>amweather.cgi</a>?forcefc=xxxxxx</u>
+&nbsp; </font>Where xxxxx is the forecast type to display.</p>
+
+<p>Using the '<strong>forcefc</strong>' parameter you could do things such as provide a
+&quot;My weather page&quot; that has direct links to the users forecast, state warnings,
+watches, shortterm forecast and more.</p>
+
+<p>Well thats all there is to using cookies with HAMweather.</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

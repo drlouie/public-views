@@ -1,0 +1,10 @@
+Flagstaff|Flagstaff|15
+Gila Bend|Gila Bend|27
+Kingman|Kingman|3
+Page|Page|5
+Phoenix|Phoenix|19
+Prescott|Prescott|8
+Tucson|Tucson|23
+Window Rock|Window Rock|11
+Winslow|Winslow|13
+Yuma|Yuma|25

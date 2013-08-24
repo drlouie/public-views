@@ -1,0 +1,23 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="POLYGON" COORDS="189, 25, 247, 13, 255, 38, 265, 34, 263, 46, 236, 46, 231, 42, 232, 33, 217, 24, 202, 26, 194, 30, 193, 26, 193, 21" HREF="%%getstatescripturl%%?state=md" alt="Maryland">
+<AREA SHAPE="POLYGON" COORDS="169, 6, 175, 24, 251, 11, 260, 3, 259, 0, 170, 2, 170, 0" HREF="%%getstatescripturl%%?state=pa" alt="Pennsylvania">
+<AREA SHAPE="POLYGON" COORDS="2, 108, 30, 108, 29, 116, 37, 115, 45, 100, 24, 72, 25, 63, 20, 59, 3, 39" HREF="%%getstatescripturl%%?state=mo" alt="Missouri">
+<AREA SHAPE="POLYGON" COORDS="22, 3, 8, 11, 10, 21, 3, 33, 3, 43, 13, 52, 18, 61, 25, 64, 23, 71, 33, 81, 41, 97, 46, 94, 54, 94, 54, 88, 63, 79, 60, 76, 66, 60" HREF="%%getstatescripturl%%?state=il" alt="Illinois">
+<AREA SHAPE="POLYGON" COORDS="61, 2, 106, 2, 110, 51, 101, 58, 91, 70, 76, 77, 62, 76, 62, 70, 67, 57" HREF="%%getstatescripturl%%?state=in" alt="Indiana">
+<AREA SHAPE="POLYGON" COORDS="169, 2, 171, 29, 153, 44, 148, 60, 140, 52, 130, 54, 109, 46, 104, 0" HREF="%%getstatescripturl%%?state=oh" alt="Ohio">
+<AREA SHAPE="POLYGON" COORDS="1, 109, 28, 109, 27, 116, 35, 117, 14, 166, 14, 178, 4, 177" HREF="%%getstatescripturl%%?state=ar" alt="Arkansas">
+<AREA SHAPE="POLYGON" COORDS="1, 177, 16, 178, 19, 192, 12, 216, 41, 215, 61, 252" HREF="%%getstatescripturl%%?state=la" alt="Louisiana">
+<AREA SHAPE="POLYGON" COORDS="147, 60, 140, 53, 127, 55, 109, 46, 109, 53, 100, 57, 90, 72, 87, 72, 75, 78, 62, 78, 55, 86, 55, 93, 47, 91, 44, 94, 44, 102, 138, 94, 159, 75" HREF="%%getstatescripturl%%?state=ky" alt="Kentucky">
+<AREA SHAPE="POLYGON" COORDS="39, 106, 163, 92, 156, 103, 148, 106, 140, 116, 126, 120, 121, 130, 28, 136" HREF="%%getstatescripturl%%?state=tn" alt="Tennessee">
+<AREA SHAPE="POLYGON" COORDS="61, 134, 26, 136, 24, 146, 14, 166, 15, 179, 19, 193, 10, 215, 39, 215, 46, 229, 67, 226, 64, 195" HREF="%%getstatescripturl%%?state=ms" alt="Mississippi">
+<AREA SHAPE="POLYGON" COORDS="63, 135, 106, 133, 118, 173, 124, 180, 122, 192, 125, 209, 81, 211, 84, 219, 83, 223, 80, 227, 68, 225, 64, 197, 65, 164" HREF="%%getstatescripturl%%?state=al" alt="Alabama">
+<AREA SHAPE="POLYGON" COORDS="187, 204, 196, 226, 212, 246, 212, 252, 227, 278, 226, 302, 223, 309, 212, 309, 205, 298, 200, 298, 186, 279, 178, 272, 173, 261, 170, 239, 151, 227, 143, 224, 121, 234, 112, 224, 99, 222, 83, 225, 85, 219, 80, 213, 125, 207, 129, 213, 180, 211, 180, 206" HREF="%%getstatescripturl%%?state=fl" alt="florida">
+<AREA SHAPE="POLYGON" COORDS="191, 180, 187, 196, 187, 204, 181, 203, 179, 206, 180, 211, 178, 212, 175, 210, 130, 213, 121, 196, 124, 180, 118, 173, 106, 132, 146, 126, 144, 132, 180, 160" HREF="%%getstatescripturl%%?state=ga" alt="Georgia">
+<AREA SHAPE="POLYGON" COORDS="227, 135, 221, 148, 202, 166, 192, 177, 186, 169, 181, 160, 169, 152, 153, 139, 144, 133, 147, 126, 182, 116, 188, 122, 201, 121" HREF="%%getstatescripturl%%?state=sc" alt="South Carolina">
+<AREA SHAPE="POLYGON" COORDS="259, 75, 267, 90, 259, 112, 240, 132, 227, 135, 202, 120, 187, 122, 180, 116, 149, 124, 123, 127, 125, 120, 140, 114, 148, 106, 157, 102, 163, 92" HREF="%%getstatescripturl%%?state=nc" alt="North Carolina">
+<AREA SHAPE="POLYGON" COORDS="137, 95, 160, 73, 170, 77, 186, 71, 188, 56, 193, 48, 197, 49, 212, 29, 217, 31, 219, 26, 232, 34, 229, 45, 244, 49, 248, 59, 258, 75, 206, 85" HREF="%%getstatescripturl%%?state=va" alt="Virginia">
+<AREA SHAPE="POLYGON" COORDS="171, 13, 174, 26, 190, 25, 192, 32, 211, 22, 217, 25, 218, 32, 212, 29, 211, 29, 207, 37, 201, 43, 197, 48, 192, 47, 185, 66, 186, 69, 173, 77, 164, 79, 158, 75, 146, 61, 149, 56, 152, 43, 156, 46, 161, 35, 169, 29" HREF="%%getstatescripturl%%?state=wv" alt="West Virginia">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="315" alt="southeast.gif (4589 bytes)" src="%%stateimagesurl%%/southeast.gif" width="274">
+<-end image map->

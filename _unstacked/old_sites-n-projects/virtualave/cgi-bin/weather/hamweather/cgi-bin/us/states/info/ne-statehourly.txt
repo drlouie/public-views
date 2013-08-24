@@ -1,0 +1,9 @@
+Chadron|Chadron|2
+Grand Island|Grand Island|62
+Lincoln|Lincoln|66
+Mc Cook|McCook|81
+Norfolk|Norfolk|31
+North Platte|North Platte|70
+Omaha Eppley|Omaha|53
+Scottsbluff|Scottsbluff|19
+Valentine|Valentine|5

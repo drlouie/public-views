@@ -1,0 +1,12 @@
+VAAH|Ahmadabad
+VIAR|Amritsar
+VABB|Bombay / Santacruz
+VECC|Calcutta / Dum Dum
+VOHY|Hyderabad Airport
+VOMM|Madras / Minambakkam
+VANP|Nagpur Sonegaon
+VIDP|New Delhi / Palam
+VEPT|Patna
+VOTV|Thiruvananthapuram
+VOTR|Tiruchchirapalli
+VIBN|Varanasi / Babatpur

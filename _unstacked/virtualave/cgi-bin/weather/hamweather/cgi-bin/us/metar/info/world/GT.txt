@@ -1,0 +1,7 @@
+MGFL|Flores
+MGGT|Guatemala Aeropuertola Aurora 
+MGHT|Huehuetenango
+MGPB|Puerto Barrios
+MGQZ|Quezaltenango
+MGSJ|San Jose
+MGZA|Zacapa

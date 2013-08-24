@@ -1,0 +1,18 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="161, 49, 7" HREF="%%scripturl%%?forecast=zandh&state=ct&place=hartford">
+<AREA SHAPE="POLYGON" COORDS="212, 112, 227, 105, 227, 97, 231, 101, 242, 99, 241, 103, 270, 101, 275, 97, 291, 104, 291, 113, 225, 122, 217, 119" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=012" alt="Southern New London ">
+<AREA SHAPE="POLYGON" COORDS="230, 56, 245, 67, 297, 67, 296, 101, 290, 103, 274, 97, 268, 102, 241, 103, 242, 98, 231, 101, 228, 96, 225, 97, 226, 105, 211, 110, 201, 104, 202, 99, 219, 98, 216, 84, 201, 83, 198, 74, 201, 71, 215, 75" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=008" alt="Northern New London">
+<AREA SHAPE="POLYGON" COORDS="252, 9, 298, 11, 296, 67, 278, 69, 243, 65, 231, 55, 243, 48, 240, 39, 233, 39, 234, 19, 251, 18" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=004" alt="Windham">
+<AREA SHAPE="POLYGON" COORDS="180, 116, 190, 113, 187, 107, 200, 104, 208, 107, 208, 110, 209, 121, 185, 125" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=011" alt="Southern Middlesex">
+<AREA SHAPE="POLYGON" COORDS="191, 9, 253, 10, 252, 17, 232, 20, 233, 38, 240, 38, 243, 47, 238, 52, 228, 56, 224, 62, 225, 64, 217, 66, 214, 74, 203, 74, 189, 32" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=003" alt="Tolland">
+<AREA SHAPE="POLYGON" COORDS="99, 141, 98, 128, 101, 119, 121, 112, 126, 114, 142, 111, 143, 105, 167, 98, 183, 125, 127, 124" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=010" alt="Southern New Haven">
+<AREA SHAPE="POLYGON" COORDS="150, 78, 159, 70, 189, 64, 202, 84, 217, 84, 218, 97, 199, 100, 199, 103, 186, 106, 188, 111, 177, 115, 173, 107, 166, 98, 155, 100" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=007" alt="Northern Middlesex">
+<AREA SHAPE="POLYGON" COORDS="63, 88, 90, 84, 89, 80, 98, 79, 120, 67, 123, 79, 137, 79, 142, 79, 146, 78, 150, 78, 154, 92, 154, 100, 142, 103, 141, 110, 126, 114, 120, 110, 108, 115, 101, 118, 95, 116, 87, 103" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=006" alt="Northern New Haven">
+<AREA SHAPE="POLYGON" COORDS="41, 132, 4, 149, 16, 165, 98, 139, 96, 126, 85, 126, 83, 129, 51, 143" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=009" alt="Southern Fairfield">
+<AREA SHAPE="POLYGON" COORDS="35, 61, 48, 87, 65, 91, 90, 107, 95, 115, 101, 118, 96, 127, 93, 125, 83, 126, 84, 129, 49, 143, 42, 133, 30, 120" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=005" alt="Northern Fairfield">
+<AREA SHAPE="POLYGON" COORDS="115, 7, 144, 7, 145, 10, 150, 10, 152, 6, 190, 9, 191, 20, 188, 33, 190, 34, 189, 40, 198, 62, 204, 73, 196, 74, 190, 64, 160, 69, 152, 75, 142, 80, 139, 77, 137, 80, 130, 80, 122, 80, 122, 68, 119, 66, 112, 43, 121, 40, 121, 31, 123, 29, 129, 28, 130, 18, 112, 16" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=002" alt="Hartford">
+<AREA SHAPE="POLYGON" COORDS="40, 6, 114, 8, 112, 17, 130, 16, 127, 29, 123, 27, 121, 35, 123, 39, 121, 41, 113, 43, 118, 68, 98, 79, 90, 79, 90, 83, 63, 87, 63, 92, 54, 87, 47, 87, 36, 61" HREF="%%scripturl%%?forecast=zandh&state=ct&zone=001" alt="Litchfield">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="166" alt="CT" src="%%stateimagesurl%%/ct-zones.gif" width="303">
+<-end image map->

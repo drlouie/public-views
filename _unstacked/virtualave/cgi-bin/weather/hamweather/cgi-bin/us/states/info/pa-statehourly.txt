@@ -1,0 +1,10 @@
+Allentown|Allentown|61
+Altoona|Altoona|25
+Lancaster|Lancaster|66
+Meadville|Meadville|3
+Philadelphia|Philadelphia|71
+Pittsburgh|Pittsburgh|21
+State College|State College|19
+Wilkes Barre|Wilkes-Barre|47
+Williamsport|Williamsport|46
+York|York|65

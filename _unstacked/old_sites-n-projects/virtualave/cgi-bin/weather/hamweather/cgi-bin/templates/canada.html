@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>%%hwvtitle%%</title><style>A:hover { color:red } </style>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body %%hwvbodyargs%%>
+%%hwi=header%%
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+<br>
+%%hwi=nav1%%
+</td><td valign="top" width="12"></td><td valign="top" width='475'>
+
+%%hwi=form1%%
+
+ <TABLE border=0 width="475">
+   <TR><TD bgColor=#000080 width="100%">
+      <FONT color=#ffffff><STRONG><BIG>Canada : Zone Forecasts</BIG></STRONG></FONT>
+   </TD></TR>
+   <TR><TD width="100%" align='center'>
+      <P align=center><BIG><FONT color=#000080><STRONG>Select a
+      Province</STRONG></FONT></BIG><BR>
+      <FORM action="%%metarlisterurl%%"  method=post>
+      <SELECT name="state" size=10>
+      <OPTION selected value="ab">Alberta</OPTION>
+      <OPTION  value="bc">British Columbia</OPTION>
+      <OPTION  value="mb">Manitoba</OPTION>
+      <OPTION  value="nb">New Brunswick</OPTION>
+      <OPTION  value="nf">New Foundland</OPTION>
+      <OPTION value="nt">Northwest Territories</OPTION>
+      <OPTION value="ns">Nova Scotia</OPTION>
+      <OPTION value="nu">Nunavut</OPTION>
+      <OPTION value="on">Ontario</OPTION>
+      <OPTION value="pe">Prince Edward Island</OPTION>
+      <OPTION value="qc">Quebec</OPTION>
+      <OPTION value="sk">Saskatchewan</OPTION>
+      <OPTION value="yk">Yukon</OPTION>
+      </SELECT><BR><BR>
+      <INPUT name="do"  type=hidden value="other">
+      <INPUT name=country type=hidden  value=ca>
+      <INPUT name=user type=hidden value=%%user%%>
+      <INPUT  name=theme type=hidden value=%%theme%%>
+      <INPUT name=button type=submit value="Display Forecast"> </P>
+
+
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+
+%%hwi=footer%%
+</body></html>

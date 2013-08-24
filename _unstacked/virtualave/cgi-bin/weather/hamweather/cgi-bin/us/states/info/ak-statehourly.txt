@@ -1,0 +1,5 @@
+Anchorage|Anchorage|18
+Fairbanks|Fairbanks|7
+Juneau|Juneau|13
+Kodiak|Kodiak|20
+Nome|Nome|6

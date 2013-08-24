@@ -1,0 +1,11 @@
+SUAG|Artigas
+SULS|Capitan Corbeta
+SUMU|Carrasco
+SUCA|Colonia
+SUDU|Durazno
+SUPE|Maldonado / Punta Est
+SUAA|Melilla
+SUPU|Paysandu
+SURV|Rivera
+SUSO|Salto
+SUTB|Tacuarembo

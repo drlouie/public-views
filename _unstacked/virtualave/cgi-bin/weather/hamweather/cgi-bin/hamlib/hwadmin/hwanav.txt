@@ -1,0 +1,45 @@
+<table border="0" width="100%" >
+		<tr>
+		  <td width="100%" bgcolor="#000080" align="center"><font color="#FFFFFF" size=-1><strong>Administration
+		  Menu</strong></font></td>
+		</tr>
+		<tr>
+		  <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&lib=system&what=system&user=%%user%%&theme=%%theme%%"><i>System Settings</i></a></font></td>
+		</tr>
+		<tr>
+		  <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=user&user=%%user%%&theme=%%theme%%">Users</a></font></td>
+		</tr>
+		<tr>
+		  <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=theme&user=%%user%%&theme=%%theme%%">Themes</a></font></td>
+		</tr>
+		<tr>
+		  <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=options&user=%%user%%&theme=%%theme%%">Defaults and 
+		  Settings</a></font></td>
+		</tr>
+		<tr>
+		  <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=ftypes&user=%%user%%&theme=%%theme%%&lib=ftype">Forecast
+		  Info</a></font></td>
+		</tr>
+		<tr>
+		  <td width="100%" align="left"> <font size=2><a href="%%admin_url%%?do=load&what=wxinfo&lib=wxinfo&user=%%user%%&theme=%%theme%%">Weather and
+		  Icons</a></font></td>
+		</tr>
+		<tr>
+		  <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=hwi&lib=hwi&user=%%user%%&theme=%%theme%%">Include Files</a></font></td>
+		</tr>
+		<tr>
+		  <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=alt&lib=spectemp&user=%%user%%&theme=%%theme%%">Special Templates</a></font></td>
+		</tr>
+
+		<tr>
+		  <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=hwv&lib=hwv&user=%%user%%&theme=%%theme%%">User Defined Variables</a></font></td>
+		</tr>
+		<tr>
+		  <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=referer&lib=referer&user=%%user%%&theme=%%theme%%">Referers</a></font></td>
+		</tr>
+
+		<tr>
+		  <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=of&lib=of&user=%%user%%&theme=%%theme%%">Output Files</a></font></td>
+		</tr>
+
+	 </table>

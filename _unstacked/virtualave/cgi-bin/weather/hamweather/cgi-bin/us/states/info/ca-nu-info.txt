@@ -1,0 +1,19 @@
+arviat|northern|fpcn13.wnt.htm|fpcn53.wnt.htm
+baker lake|northern|fpcn13.wnt.htm|fpcn53.wnt.htm
+cambridge bay|northern|fpcn13.wnt.htm|fpcn53.wnt.htm
+cape dorset|northern|fpcn14.wnt.htm|fpcn54.wnt.htm
+clyde river|northern|fpcn14.wnt.htm|fpcn54.wnt.htm
+coral harbour|northern|fpcn13.wnt.htm|fpcn53.wnt.htm
+grise fiord|northern|fpcn15.wnt.htm|fpcn15.wnt.htm
+gjoa haven|northern|fpcn13.wnt.htm|fpcn13.wnt.htm
+iqaluit|northern|fpcn14.wnt.htm|fpcn54.wnt.htm
+kimmirut|northern|fpcn14.wnt.htm|fpcn14.wnt.htm
+nanisivik arctic bay|northern|fpcn15.wnt.htm|fpcn15.wnt.htm|nanisivik
+pangnirtung|northern|fpcn14.wnt.htm|fpcn14.wnt.htm
+pelly bay|northern|fpcn13.wnt.htm|fpcn13.wnt.htm
+pond inlet|northern|fpcn15.wnt.htm|fpcn15.wnt.htm
+qikiqtarjuaq|northern|fpcn14.wnt.htm|fpcn14.wnt.htm
+rankin inlet|northern|fpcn13.wnt.htm|fpcn13.wnt.htm|Rankin 
+repulse bay|northern|fpcn13.wnt.htm|fpcn13.wnt.htm
+resolute|northern|fpcn15.wnt.htm|fpcn55.wnt.htm
+taloyoak|northern|fpcn13.wnt.htm|fpcn13.wnt.htm

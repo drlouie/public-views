@@ -1,0 +1,6 @@
+KBID|Block Island Automatic Weather Observing / Reporting System
+KOQU|N. Kingston / Quonset
+KUUU|Newport, Newport State Airport
+KSFZ|Pawtucket Automatic Weather Observing / Reporting System
+KPVD|Providence, Green State Airport
+KWST|Westerly, Westerly State Airport

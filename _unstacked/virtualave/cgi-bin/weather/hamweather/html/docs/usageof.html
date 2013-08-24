@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<title>HAMweather Usage : Output</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Controlling the
+    HAMweather Output</strong></big></font></td>
+  </tr>
+</table>
+
+<p>HAMweather allows you to control where the output goes.&nbsp; There are three modes,
+the default and most commonly used is to send the output to the web browser, but you can
+have HAMweather output to a file or even both, the web and a file.</p>
+
+<p>The output of HAMweather is controlled using the '<strong>om</strong>' (Output Method)
+and the '<strong>of</strong>' (Output Filename) parameters.&nbsp; </p>
+
+<p>The '<strong>om</strong>' parameter sets what method of output HAMweather should
+use.&nbsp; If not set or if set to zero (0) then the output will be sent to the web.&nbsp;
+If set to one (1) &nbsp; then output will be sent to both the web and a file.&nbsp;
+Finally if set to two (2), the output will be sent to a file only.</p>
+
+<p>When you want the output to goto a file, then you should also set the '<strong>of</strong>'
+parameter. &nbsp; this shoudl be set to the nickname of a file to output to.&nbsp; You can
+used the web based administration to set the various files that can be outputted.&nbsp;
+Also, if you do not specify the '<strong>of</strong>' parameter, then HAMwetaher will use
+the default ouptut file name.&nbsp; This filename can also be set using the web based
+administration.</p>
+
+<p><font color="#FF0000"><strong>Examples of Use:</strong></font></p>
+
+<p>To send output to the web simply do not specify the 'om' parameter in the URL:<br>
+<small><font color="#000080">http://www.yourdomain.com/path/to/hamweather.cgi?place=roanoke&amp;state=va&amp;forecast=zandh
+</font></small></p>
+
+<p>To send output to the default file only then include the 'om' parameter in the URL:<br>
+<small><font color="#000080">http://www.yourdomain.com/path/to/hamweather.cgi?place=roanoke&amp;state=va&amp;forecast=zandh&amp;om=2</font></small></p>
+
+<p>To send output to the test output file then include the 'om' and 'of' parameters in the
+URL:<br>
+<small><font color="#000080">http://www.yourdomain.com/path/to/hamweather.cgi?place=roanoke&amp;state=va&amp;forecast=zandh&amp;om=2&amp;of=test</font></small></p>
+
+<p>To send output to both web and test output file use the following url:<br>
+<small><font color="#000080">http://www.yourdomain.com/path/to/hamweather.cgi?place=roanoke&amp;state=va&amp;forecast=zandh&amp;om=1&amp;of=test</font></small></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

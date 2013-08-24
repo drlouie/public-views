@@ -1,0 +1,28 @@
+SABE|Aeroparque Bs. As. Aerodrome
+SAZB|Bahia Blanca Aerodrome
+SAZS|Bariloche Aerodrome
+SAVC|Comodoro Rivadavia Aerodrome
+SAAC|Concordia Aerodrome
+SACO|Cordoba Aerodrome
+SARC|Corrientes Aero.
+SADD|Don Torcuato Aerodrome
+SAEZ|Ezeiza Aerodrome
+SARF|Formosa Aerodrome
+SARI|Iguazu Aerodrome
+SASJ|Jujuy Aerodrome
+SAZM|Mar Del Plata Aerodrome
+SAME|Mendoza Aerodrome
+SAZN|Neuquen Aerodrome
+SARL|Paso De Los Libres Aerodrome
+SARP|Posadas Aero.
+SARE|Resistencia Aero.
+SAWG|Rio Gallegos Aerodrome
+SAWE|Rio Grande B. A.
+SAAR|Rosario Aerodrome
+SASA|Salta Aerodrome
+SANU|San Juan Aerodrome
+SANE|Santiago Del Estero Aero.
+SAAV|Sauce Viejo Aerodrome
+SAVT|Trelew Aerodrome
+SANT|Tucuman Aerodrome
+SAOR|Villa Reynolds Aerodrome

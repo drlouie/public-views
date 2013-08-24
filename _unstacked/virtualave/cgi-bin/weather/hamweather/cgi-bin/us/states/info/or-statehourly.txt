@@ -1,0 +1,10 @@
+Astoria|Astoria|1
+Burns|Burns|61
+Eugene|Eugene|8
+Klamath Falls|Klamath Falls|29
+La Grande|La Grande|47
+Medford|Medford|26
+Newport|Newport|2
+Portland|Portland|6
+Redmond|Redmond|42
+Salem|Salem|7

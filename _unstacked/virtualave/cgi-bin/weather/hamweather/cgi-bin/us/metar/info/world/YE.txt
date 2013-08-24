@@ -1,0 +1,7 @@
+OYAA|Aden
+OYHD|Hodeidah
+OYMB|Marib 
+OYSN|Sana'A
+OYSY|Sayun
+OYSQ|Socotra
+OYTZ|Taiz

@@ -1,0 +1,16 @@
+UHMA|Anadyr
+UHMD|Buhta Providenja
+UIAA|Chita
+UHHH|Habarovsk
+UIII|Irkutsk
+UEEE|Jakutsk
+UHSS|Juzhno-Sahalinsk
+UHMM|Magadan
+UUEE|Moscow / Sheremet'Ye 
+UUWW|Moscow / Vnukovo 
+UWPP|Penza
+UHPP|Petropavlovsk-Kamchatskij
+ULLI|St. Peterburg
+UUEM|Tver
+UIUU|Ulan-Ude
+UHWW|Vladivostok

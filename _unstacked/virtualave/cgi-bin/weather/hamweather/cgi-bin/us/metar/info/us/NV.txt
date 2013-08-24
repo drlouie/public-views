@@ -1,0 +1,17 @@
+KU31|Austin
+KB23|Battle Mountain
+KP38|Caliente
+KEKO|Elko, Elko Municipal-Harris Field
+KELY|Ely, Ely Airport
+KP68|Eureka
+KNFL|Fallon, Naval Air Station
+KLAS|Las Vegas, McCarran International Airport
+KVGT|Las Vegas, North Las Vegas Airport
+KLOL|Lovelock, Derby Field
+KDRA|Mercury, Desert Rock Airport
+KLSV|Nellis Air Force Base
+KRNO|Reno, Reno Tahoe International Airport
+KTPH|Tonopah, Tonopah Airport
+K9BB|Wells
+KAWH|Wildhorse Reservation / Elko
+KWMC|Winnemucca, Winnemucca Municipal Airport

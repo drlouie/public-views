@@ -1,0 +1,24 @@
+KBHK|Baker, Baker Municipal Airport
+KBIL|Billings, Billings Logan International Airport
+KBZN|Bozeman, Gallatin Field
+KBTM|Butte, Mooney Airport
+KCTB|Cut Bank Automatic Weather Observing / Reporting System
+KDLN|Dillon, Dillon Airport
+K3DU|Drummond
+KGGW|Glasgow, Glasgow International Airport
+KGDV|Glendive Automatic Weather Observing / Reporting System
+KGTF|Great Falls, Great Falls International Airport
+KHMM|Hamilton / Ravalli County
+K3HT|Harlowton
+KHVR|Havre, Havre City-County Airport
+KHLN|Helena, Helena Regional Airport
+KJDN|Jordan, Jordan Airport
+KFCA|Kalispell, Glacier Park International Airport
+KLWT|Lewistown Municipal
+KLVM|Livingston, Mission Field
+KGFA|Malmstrom Air Force Base
+KMLS|Miles City, Wiley Field
+KMSO|Missoula, Missoula International Airport
+KSDY|Sidney-Richland
+K3TH|Thompson Falls
+KOLF|Wolf Point, Clayton Airport

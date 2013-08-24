@@ -1,0 +1,23 @@
+KLTS|Altus Air Force Base
+KADM|Ardmore Municipal
+K1F0|Ardmore, Ardmore Downtown Executive Airport
+KBVO|Bartlesville, Bartlesville Municipal Airport
+KCSM|Clinton, Clinton-Sherman Airport
+KWDG|Enid / Woodring Municipal
+KFSI|Fort Sill
+KFDR|Frederick, Frederick Municipal Airport
+KGAG|Gage, Gage Airport
+KGOK|Guthrie, Guthrie Municipal Airport
+KGUY|Guymon / Guymon Municipal Airport
+KHBR|Hobart, Hobart Municipal Airport
+KLAW|Lawton, Lawton Municipal Airport
+KMLC|McAlester, McAlester Regional Airport
+KMKO|Muskogee, Davis Field
+KPWA|Oklahoma City, Wiley Post Airport
+KOKC|Oklahoma City, Will Rogers World Airport
+KPNC|Ponca City, Ponca City Municipal Airport
+KSWO|Stillwater, Stillwater Municipal Airport
+KTIK|Tinker Air Force Base
+KRVS|Tulsa, Jones Jr. Airport
+KTUL|Tulsa, Tulsa International Airport
+KEND|Vance Air Force Base / Enid

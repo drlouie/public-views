@@ -1,0 +1,9 @@
+Hoquiam|Aberdeen|16
+Bellingham|Bellingham|2
+Kelso|Kelso|22
+Pasco|Pasco|28
+SeaTac Airport|Seattle|7
+Spokane Felts|Spokane|36
+Walla Walla|Walla Walla|29
+Wenatchee|Wenatchee|41
+Yakima|Yakima|27

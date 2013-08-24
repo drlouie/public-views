@@ -1,0 +1,9 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="POLYGON" COORDS="150, 139, 234, 152, 218, 260, 184, 259, 123, 225, 123, 221, 130, 220, 125, 210, 140, 192, 134, 173, 140, 155, 147, 158" HREF="%%getstatescripturl%%?state=az" alt="Arizona">
+<AREA SHAPE="POLYGON" COORDS="173, 44, 217, 50, 214, 70, 245, 74, 233, 151, 151, 138" HREF="%%getstatescripturl%%?state=ut" alt="Utah">
+<AREA SHAPE="POLYGON" COORDS="86, 25, 173, 43, 147, 158, 140, 154, 135, 175, 69, 80" HREF="%%getstatescripturl%%?state=nv" alt="Nevada">
+<AREA SHAPE="POLYGON" COORDS="23, 8, 86, 23, 68, 79, 133, 175, 140, 192, 126, 210, 129, 217, 127, 220, 84, 215, 69, 186, 36, 164, 11, 67, 9, 38" HREF="%%getstatescripturl%%?state=ca" alt="California">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="274" alt="southwest.gif (2659 bytes)" src="%%stateimagesurl%%/southwest.gif" width="254">
+<-end image map->

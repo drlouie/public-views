@@ -1,0 +1,24 @@
+SLCA|Camiri
+SLCN|Charana
+SLCO|Cobija
+SLCB|Cochabamba
+SLCP|Concepcion
+SLLP|La Paz / Alto
+SLMG|Magdalena
+SLOR|Oruro
+SLPO|Potosi
+SLPS|Puerto Suarez
+SLRY|Reyes
+SLRI|Riberalta
+SLRB|Robore
+SLRQ|Rurrenabaque
+SLSI|San Ignacio De Velasco
+SLJO|San Joaquin
+SLJE|San Jose De Chiquitos
+SLSA|Santa Ana
+SLSU|Sucre
+SLTJ|Tarija
+SLTR|Trinidad
+SLVM|Villamontes
+SLVR|Viru-Viru
+SLYA|Yacuiba

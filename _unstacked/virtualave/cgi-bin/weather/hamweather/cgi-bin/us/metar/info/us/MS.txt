@@ -1,0 +1,14 @@
+KCBM|Columbus Air Force Base
+KGTR|Golden Tri Automatic Weather Observing / Reporting System
+KGLH|Greenville, Greenville Municipal Airport
+KGWO|Greenwood, Greenwood-LeFlore Airport
+KGPT|Gulfport, Gulfport-Biloxi Regional Airport
+KJAN|Jackson, Jackson International Airport
+KBIX|Keesler Air Force Base / Biloxi
+KMCB|McComb, McComb / Pike County Airport
+KMEI|Meridian, Key Field
+KNMM|Meridian, Naval Air Station
+KHEZ|Natchez / Hardy Automatic Weather Observing / Reporting System
+KPQL|Pascagoula, Lott International Airport
+KPIB|Pine Belt Regional Automatic Weather Observing / Reporting System
+KTUP|Tupelo, Tupelo Municipal-Lemons Airport

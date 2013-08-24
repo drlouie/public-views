@@ -1,0 +1,78 @@
+<-begin image map->
+<map name="SDakota">
+  <area shape="circle" coords="204,88,5" href="%%scripturl%%?forecast=zandh&state=sd&place=pierre">
+  <area shape="poly" coords="404,170,409,166,410,160,410,158,392,157,393,171,406,171" href="%%scripturl%%?forecast=zone&state=sd&zone=071" alt="Union">
+  <area shape="rect" coords="376,158,392,172" href="%%scripturl%%?forecast=zone&state=sd&zone=070" alt="Clay">
+  <area shape="poly" coords="374,171,374,162,373,155,368,153,348,153,351,170,362,169,369,170,374,172" href="%%scripturl%%?forecast=zone&state=sd&zone=069" alt="Yankton">
+  <area shape="poly" coords="350,167,347,150,324,152,324,161,324,171,330,172,337,169,342,169,350,168" href="%%scripturl%%?forecast=zone&state=sd&zone=068" alt="Bon Homme">
+  <area shape="poly" coords="411,157,413,153,412,150,408,150,408,144,409,141,406,136,388,136,390,156,411,156" href="%%scripturl%%?forecast=zone&state=sd&zone=067" alt="Lincoln">
+  <area shape="poly" coords="386,156,388,146,387,134,362,136,362,153,374,152,373,157" href="%%scripturl%%?forecast=zone&state=sd&zone=066" alt="Turner">
+  <area shape="rect" coords="326,135,362,150" href="%%scripturl%%?forecast=zone&state=sd&zone=065" alt="Hutchinson">
+  <area shape="poly" coords="325,150,324,134,292,135,295,142,306,146,325,151" href="%%scripturl%%?forecast=zone&state=sd&zone=064" alt="Douglas">
+  <area shape="poly" coords="322,169,324,164,323,158,325,151,300,145,292,140,292,136,265,136,273,143,285,151,303,161,310,166,318,169,326,171" href="%%scripturl%%?forecast=zone&state=sd&zone=063" alt="Charles Mix">
+  <area shape="poly" coords="411,134,412,115,377,115,378,125,378,135" href="%%scripturl%%?forecast=zone&state=sd&zone=062" alt="Minnehaha">
+  <area shape="poly" coords="377,133,378,126,376,115,351,117,351,133,377,134" href="%%scripturl%%?forecast=zone&state=sd&zone=061" alt="McCook">
+  <area shape="rect" coords="334,117,350,133" href="%%scripturl%%?forecast=zone&state=sd&zone=060" alt="Hanson">
+  <area shape="rect" coords="313,117,333,133" href="%%scripturl%%?forecast=zone&state=sd&zone=059" alt="Davison">
+  <area shape="rect" coords="289,113,311,134" href="%%scripturl%%?forecast=zone&state=sd&zone=058" alt="Aurora">
+  <area shape="poly" coords="288,134,287,111,259,113,258,117,254,122,260,128,264,134,289,134" href="%%scripturl%%?forecast=zone&state=sd&zone=057" alt="Brule">
+  <area shape="poly" coords="412,114,412,96,401,97,389,99,389,114,412,115" href="%%scripturl%%?forecast=zone&state=sd&zone=056" alt="Moody">
+  <area shape="rect" coords="365,99,390,114" href="%%scripturl%%?forecast=zone&state=sd&zone=055" alt="Lake">
+  <area shape="rect" coords="340,97,364,115" href="%%scripturl%%?forecast=zone&state=sd&zone=054" alt="Miner">
+  <area shape="poly" coords="339,115,337,95,313,95,311,116,339,116" href="%%scripturl%%?forecast=zone&state=sd&zone=053" alt="Sanborn">
+  <area shape="rect" coords="282,96,312,111" href="%%scripturl%%?forecast=zone&state=sd&zone=052" alt="Jerauld">
+  <area shape="poly" coords="280,111,282,96,242,98,246,104,253,105,258,108,262,111,279,110" href="%%scripturl%%?forecast=zone&state=sd&zone=051" alt="Buffalo">
+  <area shape="poly" coords="302,161,294,155,289,154,284,152,280,148,272,143,268,141,262,135,249,136,250,161" href="%%scripturl%%?forecast=zone&state=sd&zone=050" alt="Gregory">
+  <area shape="poly" coords="248,161,247,133,244,133,240,122,230,123,220,123,211,123,210,138,216,162" href="%%scripturl%%?forecast=zone&state=sd&zone=049" alt="Tripp">
+  <area shape="poly" coords="243,134,261,133,259,127,255,125,253,120,260,116,257,109,252,105,246,105,239,100,223,97,202,98,203,119,210,122,219,123,232,124,242,122,244,133" href="%%scripturl%%?forecast=zone&state=sd&zone=048" alt="Lyman">
+  <area shape="poly" coords="213,160,213,161,212,155,211,146,211,139,157,139,157,149,157,162,188,163,213,162" href="%%scripturl%%?forecast=zone&state=sd&zone=047" alt="Todd">
+  <area shape="poly" coords="210,140,157,140,158,117,162,114,165,114,171,118,178,121,196,120,203,121,211,125,210,131,211,139" href="%%scripturl%%?forecast=zone&state=sd&zone=046" alt="Mellette">
+  <area shape="poly" coords="203,122,202,112,202,98,184,101,168,100,167,106,166,112,170,117,176,120,181,122,190,121,197,121,203,121" href="%%scripturl%%?forecast=zone&state=sd&zone=045" alt="Jones">
+  <area shape="poly" coords="156,161,157,140,110,142,110,150,112,161,157,160" href="%%scripturl%%?forecast=zone&state=sd&zone=044" alt="Bennett">
+  <area shape="poly" coords="157,140,157,117,161,117,164,113,166,107,115,108,116,123,108,127,109,140" href="%%scripturl%%?forecast=zone&state=sd&zone=043" alt="Jackson">
+  <area shape="poly" coords="111,160,110,155,109,147,109,136,108,124,70,125,66,126,62,131,62,147,62,161,112,161" href="%%scripturl%%?forecast=zone&state=sd&zone=042" alt="Shannon">
+  <area shape="poly" coords="61,160,20,161,6,161,5,140,18,145,33,149,41,146,52,136,62,137,61,161" href="%%scripturl%%?forecast=zone&state=sd&zone=041" alt="Fall River Co.">
+  <area shape="poly" coords="412,96,400,96,391,97,378,95,377,93,376,77,413,78,412,85" href="%%scripturl%%?forecast=zone&state=sd&zone=040" alt="Brookings">
+  <area shape="rect" coords="340,79,377,96" href="%%scripturl%%?forecast=zone&state=sd&zone=039" alt="Kingsbury">
+  <area shape="rect" coords="294,73,338,94" href="%%scripturl%%?forecast=zone&state=sd&zone=038" alt="Beadle">
+  <area shape="rect" coords="261,62,293,95" href="%%scripturl%%?forecast=zone&state=sd&zone=037" alt="Hand">
+  <area shape="poly" coords="260,96,261,79,259,74,260,60,241,62,240,69,242,95,260,97" href="%%scripturl%%?forecast=zone&state=sd&zone=036" alt="Hyde">
+  <area shape="poly" coords="242,101,239,97,241,87,238,78,203,81,210,86,222,92,230,99,240,98" href="%%scripturl%%?forecast=zone&state=sd&zone=035" alt="Hughes">
+  <area shape="poly" coords="240,78,238,60,200,63,194,66,189,70,203,80,241,78" href="%%scripturl%%?forecast=zone&state=sd&zone=034" alt="Sully">
+  <area shape="poly" coords="226,96,202,96,204,99,166,100,160,93,160,76,162,66,168,69,179,67,191,72,198,81,213,90" href="%%scripturl%%?forecast=zone&state=sd&zone=033" alt="Stanley">
+  <area shape="poly" coords="166,107,168,100,161,98,159,88,161,68,151,73,139,77,123,79,115,80,116,87,116,99,117,107" href="%%scripturl%%?forecast=zone&state=sd&zone=032" alt="Haakon">
+  <area shape="poly" coords="115,123,115,108,115,89,114,79,107,84,99,86,95,93,93,98,64,99,65,106,64,114,79,117,75,122,76,125,109,124,116,122" href="%%scripturl%%?forecast=zone&state=sd&zone=031" alt="Pennington Plains">
+  <area shape="poly" coords="61,135,64,127,70,125,75,122,79,116,60,116,56,125,53,135,62,133" href="%%scripturl%%?forecast=zone&state=sd&zone=030" alt="Custer Plains">
+  <area shape="poly" coords="5,117,47,116,44,130,34,141,19,137,5,129,6,116" href="%%scripturl%%?forecast=zone&state=sd&zone=029" alt="Southern Black Hills">
+  <area shape="poly" coords="6,116,51,114,55,110,53,99,5,101,6,114" href="%%scripturl%%?forecast=zone&state=sd&zone=028" alt="Central Black Hills">
+  <area shape="poly" coords="94,99,96,90,100,84,108,84,115,79,115,53,64,53,65,74,45,75,64,99,93,99" href="%%scripturl%%?forecast=zone&state=sd&zone=013" alt="Meade Co. Plains">
+  <area shape="poly" coords="51,99,41,88,32,82,34,93,40,99,52,99" href="%%scripturl%%?forecast=zone&state=sd&zone=013" alt="Meade Co. Plains">
+  <area shape="poly" coords="5,99,37,99,36,94,31,94,30,80,17,76,4,77,6,100" href="%%scripturl%%?forecast=zone&state=sd&zone=024" alt="Northern Black Hills">
+  <area shape="poly" coords="64,75,64,42,4,45,6,67,18,68,42,71,50,75,65,74" href="%%scripturl%%?forecast=zone&state=sd&zone=012" alt="Butte">
+  <area shape="poly" coords="46,126,46,121,48,117,53,114,55,108,53,100,46,92,53,89,61,100,64,107,62,115,56,119,55,128,46,125" href="%%scripturl%%?forecast=zone&state=sd&zone=026" alt="Central Foot Hills">
+  <area shape="poly" coords="6,131,13,132,20,139,31,143,40,140,43,131,46,126,51,126,55,129,49,142,34,149,25,148,18,145,4,139,5,131" href="%%scripturl%%?forecast=zone&state=sd&zone=027" alt="Southern Foot Hills">
+  <area shape="poly" coords="5,67,12,69,30,70,41,73,48,82,53,90,45,94,40,85,29,79,4,75,4,68" href="%%scripturl%%?forecast=zone&state=sd&zone=025" alt="Northern Foot Hills">
+  <area shape="rect" coords="391,58,412,77" href="%%scripturl%%?forecast=zone&state=sd&zone=023" alt="Deuel">
+  <area shape="rect" coords="357,67,391,77" href="%%scripturl%%?forecast=zone&state=sd&zone=022" alt="Hamlin">
+  <area shape="poly" coords="412,54,413,44,411,38,371,37,371,44,389,47,391,56,411,56" href="%%scripturl%%?forecast=zone&state=sd&zone=021" alt="Grant">
+  <area shape="rect" coords="356,47,390,64" href="%%scripturl%%?forecast=zone&state=sd&zone=020" alt="Codington">
+  <area shape="poly" coords="356,78,356,65,355,46,333,46,333,73,338,74,339,77,357,78" href="%%scripturl%%?forecast=zone&state=sd&zone=019" alt="Clark">
+  <area shape="rect" coords="291,41,332,72" href="%%scripturl%%?forecast=zone&state=sd&zone=018" alt="Spink">
+  <area shape="rect" coords="242,43,290,59" href="%%scripturl%%?forecast=zone&state=sd&zone=017" alt="Faulk">
+  <area shape="poly" coords="244,59,244,41,207,42,207,47,203,54,202,61,244,60" href="%%scripturl%%?forecast=zone&state=sd&zone=016" alt="Potter">
+  <area shape="poly" coords="143,30,203,31,206,36,206,43,207,53,202,53,202,59,197,63,189,66,177,66,169,68,161,66,162,53,150,51,144,52,143,29" href="%%scripturl%%?forecast=zone&state=sd&zone=015" alt="Dewey">
+  <area shape="poly" coords="114,29,143,30,143,53,162,55,160,69,152,72,144,74,134,79,122,80,115,79,115,30,143,31" href="%%scripturl%%?forecast=zone&state=sd&zone=014" alt="Ziebach">
+  <area shape="rect" coords="331,24,371,46" href="%%scripturl%%?forecast=zone&state=sd&zone=011" alt="Day">
+  <area shape="rect" coords="240,22,291,41" href="%%scripturl%%?forecast=zone&state=sd&zone=010" alt="Edmunds">
+  <area shape="poly" coords="238,40,239,22,199,23,204,28,206,34,207,40,239,39" href="%%scripturl%%?forecast=zone&state=sd&zone=009" alt="Walworth">
+  <area shape="poly" coords="371,38,412,38,407,31,397,29,395,25,394,21,398,16,404,8,407,3,371,3,370,36" href="%%scripturl%%?forecast=zone&state=sd&zone=008" alt="Roberts">
+  <area shape="poly" coords="333,5,371,5,371,26,363,22,355,22,334,22,331,4" href="%%scripturl%%?forecast=zone&state=sd&zone=007" alt="Marshall">
+  <area shape="rect" coords="292,6,332,40" href="%%scripturl%%?forecast=zone&state=sd&zone=006" alt="Brown">
+  <area shape="rect" coords="239,5,289,21" href="%%scripturl%%?forecast=zone&state=sd&zone=005" alt="McPherson">
+  <area shape="poly" coords="199,4,238,4,237,22,197,21,203,19,205,18,205,14,203,10,201,8,201,5" href="%%scripturl%%?forecast=zone&state=sd&zone=004" alt="Campbell">
+  <area shape="poly" coords="114,4,198,4,199,8,202,9,204,13,207,15,204,17,200,18,198,24,201,27,202,30,114,29" href="%%scripturl%%?forecast=zone&state=sd&zone=003" alt="Corson">
+  <area shape="rect" coords="65,5,114,53" href="%%scripturl%%?forecast=zone&state=sd&zone=002" alt="Perkins">
+  <area shape="poly" coords="7,4,65,4,65,24,63,24,63,43,6,43,6,4" href="%%scripturl%%?forecast=zone&state=sd&zone=001" alt="Harding">
+</map>
+<img src="%%stateimagesurl%%/sd-zones.gif" width="426" height="195" border="0" usemap="#SDakota"> 
+<-end image map->

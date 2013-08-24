@@ -1,0 +1,26 @@
+KABY|Albany, Southwest Georgia Regional Airport
+KAMG|Alma, Bacon County Airport
+KAHN|Athens, Athens Airport
+KPDK|Atlanta, De Kalb-Peachtree Airport
+KFTY|Atlanta, Fulton County Airport-Brown Field
+KATL|Atlanta, Hartsfield Atlanta International Airport
+KFFC|Atlanta, Peachtree City-Falcon Field
+KAGS|Augusta, Bush Field
+KDNL|Augusta, Daniel Field
+KBQK|Brunswick / Glynco
+KSSI|Brunswick, McKinnon Airport
+KCSG|Columbus, Columbus Metropolitan Airport
+KDNN|Dalton, Dalton Municipal Airport
+KLSF|Fort Benning
+KLHW|Ft. Stewart
+KGVL|Gainesville, Gilmer Memorial Airport
+KSVN|Hunter U. S. Army Airfield 
+KMCN|Macon, Middle Georgia Regional Airport
+KMGE|Marietta / Dobbins Air Force Base
+KVAD|Moody Air Force Base
+KCCO|Newnan, Newnan Coweta County Airport
+KRMG|Rome, R. B. Russell Airport
+KSAV|Savannah, Savannah International Airport
+KVLD|Valdosta Regional
+KVDI|Vidalia, Vidalia Municipal Airport
+KWRB|Warner Robins Air Force Base

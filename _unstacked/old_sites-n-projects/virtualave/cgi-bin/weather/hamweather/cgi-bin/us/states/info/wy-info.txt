@@ -1,0 +1,53 @@
+<-begin image map->
+ <map name="Wyoming">
+  <area shape="circle" coords="371,250,5" href="%%scripturl%%?forecast=zandh&state=wy&place=cheyenne">
+  <area shape="poly" coords="414,256,413,226,391,226,395,237,396,259,415,257" href="%%scripturl%%?forecast=zone&state=wy&zone=070" alt="Pine Bluffs	">
+  <area shape="poly" coords="393,227,396,260,364,258,360,238,353,223,380,223,380,226,392,227" href="%%scripturl%%?forecast=zone&state=wy&zone=069" alt="Cheyenne Foothills	">
+  <area shape="rect" coords="380,165,414,226" href="%%scripturl%%?forecast=zone&state=wy&zone=068" alt="Goshen">
+  <area shape="poly" coords="379,167,379,224,376,222,346,224,346,203,343,186,343,176,343,166" href="%%scripturl%%?forecast=zone&state=wy&zone=067" alt="Platte">
+  <area shape="poly" coords="326,204,344,208,344,224,355,224,364,259,326,260,326,227,326,205" href="%%scripturl%%?forecast=zone&state=wy&zone=066" alt="Laramie Range	">
+  <area shape="poly" coords="282,177,297,177,298,201,305,195,313,195,326,196,326,203,334,204,345,207,342,185,343,167,328,163,310,163,298,166,291,167,282,169" href="%%scripturl%%?forecast=zone&state=wy&zone=064" alt="North Laramie Range">
+  <area shape="poly" coords="298,200,308,196,316,196,318,196,325,195,326,261,299,259,297,199" href="%%scripturl%%?forecast=zone&state=wy&zone=065" alt="Laramie Valley">
+  <area shape="poly" coords="191,258,190,228,191,222,217,222,217,198,238,200,268,211,263,221,268,234,260,243,238,235,227,242,223,258" href="%%scripturl%%?forecast=zone&state=wy&zone=061" alt="Southwest Carbon">
+  <area shape="poly" coords="297,221,296,221,298,262,224,259,227,246,231,240,238,237,247,240,256,243,263,244,268,233,263,224,264,218,268,211,298,223" href="%%scripturl%%?forecast=zone&state=wy&zone=063" alt="Snowy Range">
+  <area shape="poly" coords="216,200,238,200,297,221,298,177,216,177,215,200" href="%%scripturl%%?forecast=zone&state=wy&zone=062" alt="North Carbon">
+  <area shape="rect" coords="366,117,412,165" href="%%scripturl%%?forecast=zone&state=wy&zone=060" alt="Niobrara">
+  <area shape="poly" coords="298,163,330,162,342,167,367,166,364,117,353,115,297,116,297,162" href="%%scripturl%%?forecast=zone&state=wy&zone=059" alt="Converse">
+  <area shape="poly" coords="413,115,413,84,407,82,399,75,353,77,353,113,366,117,414,115" href="%%scripturl%%?forecast=zone&state=wy&zone=058" alt="Weston	">
+  <area shape="poly" coords="355,29,395,30,395,69,398,74,355,76,356,56,356,30" href="%%scripturl%%?forecast=zone&state=wy&zone=056" alt="Moorcroft">
+  <area shape="poly" coords="395,30,395,70,400,76,405,82,410,85,414,85,413,30,396,30" href="%%scripturl%%?forecast=zone&state=wy&zone=057" alt="Wyoming Black Hills">
+  <area shape="poly" coords="354,115,353,75,302,76,300,99,301,116,355,114" href="%%scripturl%%?forecast=zone&state=wy&zone=055" alt="South Campbell">
+  <area shape="poly" coords="300,54,298,29,232,30,247,40,256,54,301,54" href="%%scripturl%%?forecast=zone&state=wy&zone=099" alt="">
+  <area shape="poly" coords="253,52,249,44,229,29,196,30,198,36,203,40,207,47,221,50,225,55,254,54" href="%%scripturl%%?forecast=zone&state=wy&zone=098" alt="">
+  <area shape="poly" coords="300,29,300,43,301,57,301,74,354,75,355,45,356,35,354,30,299,30" href="%%scripturl%%?forecast=zone&state=wy&zone=054" alt="Gillette	">
+  <area shape="poly" coords="253,54,253,55,301,57,301,80,301,87,300,116,265,115,262,88,261,72" href="%%scripturl%%?forecast=zone&state=wy&zone=028" alt="">
+  <area shape="poly" coords="251,55,260,75,262,97,264,117,237,114,237,87,237,69,226,56,253,56" href="%%scripturl%%?forecast=zone&state=wy&zone=027" alt="">
+  <area shape="poly" coords="193,29,196,34,200,40,202,45,206,48,211,50,219,52,224,55,229,59,233,63,236,68,237,76,238,116,214,112,210,106,213,100,215,97,207,77,197,75,195,63,173,50,172,42,171,37,173,28,193,28" href="%%scripturl%%?forecast=zone&state=wy&zone=026" alt="">
+  <area shape="poly" coords="191,257,140,258,147,237,138,225,162,227,190,230,190,258" href="%%scripturl%%?forecast=zone&state=wy&zone=025" alt="Southeast Sweetwater">
+  <area shape="poly" coords="138,225,145,234,146,240,140,259,104,257,101,257,110,243,123,236,137,226" href="%%scripturl%%?forecast=zone&state=wy&zone=024" alt="Flaming Gorge">
+  <area shape="poly" coords="139,224,156,226,192,229,190,220,214,219,216,199,213,188,125,187,124,202,125,211,134,218,137,225" href="%%scripturl%%?forecast=zone&state=wy&zone=023" alt="Red Desert">
+  <area shape="poly" coords="124,212,131,216,137,222,138,225,132,230,122,236,113,243,107,248,102,258,67,259,68,226,70,217,79,219,88,220,112,220,123,221,123,213" href="%%scripturl%%?forecast=zone&state=wy&zone=022" alt="Rock Springs/Green River">
+  <area shape="rect" coords="10,227,68,259" href="%%scripturl%%?forecast=zone&state=wy&zone=021" alt="Uinta">
+  <area shape="poly" coords="127,177,126,186,125,198,125,214,118,221,108,222,92,219,86,219,73,219,66,214,54,214,54,186,57,173,63,156,73,149,87,151,93,157,97,168,102,175,113,177,125,179" href="%%scripturl%%?forecast=zone&state=wy&zone=020" alt="Upper Green River Basin">
+  <area shape="poly" coords="10,227,69,226,67,215,58,216,54,214,54,205,54,186,40,186,37,190,29,190,32,199,28,211,10,213,12,226" href="%%scripturl%%?forecast=zone&state=wy&zone=018" alt="Kemmerer">
+  <area shape="poly" coords="75,150,66,153,62,157,57,169,56,182,55,187,41,184,40,189,28,192,24,156,19,129,31,133,37,128,53,126,65,127,73,150" href="%%scripturl%%?forecast=zone&state=wy&zone=017" alt="Salt River Range">
+  <area shape="poly" coords="51,127,64,128,76,151,85,150,91,153,96,163,97,172,103,175,125,178,124,159,96,144,92,134,84,116,66,119,68,121,50,122,52,126" href="%%scripturl%%?forecast=zone&state=wy&zone=019" alt="Wind River Mountains West">
+  <area shape="poly" coords="10,211,18,211,29,210,33,201,29,192,20,130,11,126,11,209" href="%%scripturl%%?forecast=zone&state=wy&zone=016" alt="Star Valley	">
+  <area shape="poly" coords="297,114,297,165,289,167,282,170,281,177,213,175,215,153,213,139,214,114,237,115,297,116" href="%%scripturl%%?forecast=zone&state=wy&zone=015" alt="Natrona">
+  <area shape="poly" coords="126,187,216,187,215,177,214,155,195,164,165,159,151,164,136,175,127,176,126,186,215,187" href="%%scripturl%%?forecast=zone&state=wy&zone=014" alt="Green Mountains">
+  <area shape="poly" coords="167,156,192,163,213,157,215,137,212,114,177,119,154,116,140,111,119,107,116,115,150,125,154,137,160,150,166,156" href="%%scripturl%%?forecast=zone&state=wy&zone=013" alt="Wind River Basin">
+  <area shape="poly" coords="150,165,157,160,167,156,158,146,154,139,149,124,130,120,114,114,111,125,134,131,138,137,142,148,149,163" href="%%scripturl%%?forecast=zone&state=wy&zone=012" alt="Lander Foothills">
+  <area shape="poly" coords="126,176,138,174,150,167,142,146,132,132,107,124,95,115,85,118,89,125,91,136,98,142,114,155,124,162,126,177" href="%%scripturl%%?forecast=zone&state=wy&zone=011" alt="Wind River Mtns East">
+  <area shape="poly" coords="86,117,97,118,100,121,109,125,114,115,87,105,68,102,68,118,83,117" href="%%scripturl%%?forecast=zone&state=wy&zone=010" alt="Dubois	">
+  <area shape="poly" coords="206,78,215,99,210,108,186,107,167,106,149,100,134,93,135,86,142,87,143,79,156,81,154,76,207,78" href="%%scripturl%%?forecast=zone&state=wy&zone=009" alt="South Big Horn Basin">
+  <area shape="poly" coords="208,113,207,117,179,117,165,117,155,115,147,110,127,106,118,105,114,96,126,96,131,91,142,97,166,106,211,109,207,114" href="%%scripturl%%?forecast=zone&state=wy&zone=008" alt="Owl Creek Mountains">
+  <area shape="poly" coords="12,129,10,68,66,70,66,122,50,122,51,128,38,128,38,131,31,130,36,106,45,109,51,101,48,88,44,84,32,88,22,101,22,130,13,128" href="%%scripturl%%?forecast=zone&state=wy&zone=006" alt="Teton/Moutains">
+  <area shape="poly" coords="22,128,21,108,30,89,37,85,47,86,50,96,52,103,46,110,36,104,32,133,22,131" href="%%scripturl%%?forecast=zone&state=wy&zone=007" alt="Jackson Valley	">
+  <area shape="poly" coords="172,29,170,34,171,43,173,50,195,65,197,77,153,76,155,82,141,81,140,87,132,87,135,61,133,41,130,30" href="%%scripturl%%?forecast=zone&state=wy&zone=005" alt="North Big Horn Basin">
+  <area shape="poly" coords="129,30,133,46,135,68,133,87,130,93,121,92,121,66,122,52,118,52,121,47,117,29,130,30" href="%%scripturl%%?forecast=zone&state=wy&zone=004" alt="Cody Foothills">
+  <area shape="poly" coords="67,70,67,101,78,102,98,107,113,117,118,107,111,95,125,97,124,92,124,80,122,66,97,69,83,66,66,69,66,70" href="%%scripturl%%?forecast=zone&state=wy&zone=003" alt="South Abasarokas">
+  <area shape="poly" coords="115,30,120,46,117,53,123,52,122,64,122,66,73,69,71,55,76,47,79,43,82,39,76,35,71,28,117,29" href="%%scripturl%%?forecast=zone&state=wy&zone=002" alt="North Absarokas">
+  <area shape="poly" coords="11,70,73,70,70,62,69,54,80,46,81,38,76,35,67,25,21,25,14,23,5,20,2,27,3,31,8,32,10,49" href="%%scripturl%%?forecast=zone&state=wy&zone=001" alt="Yellowstone National Park">
+</map>
+<img src="%%stateimagesurl%%/wy-zones.gif" width="426" height="272" border="0" usemap="#Wyoming">
+<-end image map->

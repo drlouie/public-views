@@ -1,0 +1,15 @@
+EBAW|Antwerpen / Deurne
+EBBE|Beauvechain
+EBLG|Bierset
+EBBT|Brasschaat
+EBBR|Bruxelles National
+EBCI|Charleroi / Gosselies
+EBCV|Chievres
+EBLB|Elsenborn
+EBFS|Florennes
+EBTN|Goetsenhoven
+EBBL|Kleine Brogel
+EBFN|Koksijde
+EBOS|Oostende Airport 
+EBDT|Schaffen
+EBSP|Spa / La Sauveniere

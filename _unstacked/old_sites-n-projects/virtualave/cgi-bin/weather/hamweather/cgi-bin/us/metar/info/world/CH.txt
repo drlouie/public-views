@@ -1,0 +1,5 @@
+LSZB|Bern / Belp 
+LSGG|Geneve-Cointrin
+LSZA|Lugano
+LSGS|Sion
+LSZH|Zurich-Kloten

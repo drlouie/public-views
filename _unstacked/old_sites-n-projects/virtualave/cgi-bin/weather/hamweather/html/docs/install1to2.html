@@ -1,0 +1,343 @@
+<html>
+
+<head>
+<title>HAMweather Installation Steps 1 and 2</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Installation : </strong></big></font></td>
+  </tr>
+</table>
+
+<p>Well you have just downloaded HAMweather 2.0&nbsp; and now are getting ready for the
+fun filled installation.&nbsp; The process isn't too bad, but if you do not have
+experience setting up CGI scripts or just do not have the time you may want to check out
+HAMweather, LLC's <a href="http://www.hamweather.com/install/">HAMweather Installation
+Services</a>.&nbsp; Before installing you should use the HAMweather <a
+href="http://www.hamweather.com/install/hw2testscript.html">Pre-install Test script</a> to
+ensure that you will be able to run HAMweather on your server.</p>
+
+<p><strong><font color="#FF0000">NOTE</font></strong>: To add US zipcode searching
+capability you will need to also download the HWzipdb add-on and install it per its
+instructions. It is also recommended to install the HWaltplaces add-on. This add on will
+allow for more US &quot;place, state&quot; combinations than normally available in
+HAMweather. Both of these add-ons&nbsp; can be downloaded from <a
+href="http://www.hamweather.com/downloads">http://www.hamweather.com/downloads</a> </p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><a name="Installation : Requirements"><font
+    color="#FFFFFF"><big><strong>Installation : Requirements</strong></big></font></a></td>
+  </tr>
+</table>
+
+<p>HAMweather requires that your web site pass the following minimum requirements before
+you will be able to use the HAMweather scripts: <br>
+<br>
+<font color="#FF0000"><strong>NOTE</strong></font>:&nbsp; With HAMweather Version 2.0 Beta
+1.05&nbsp; or later the LWP::Simple Module is no longer needed. 
+
+<ul>
+  <li><font color="#000080"><strong>Account</strong></font>. You must have an account to store
+    www pages on a Unix, Linux, Windows NT &nbsp; or Windows 95/98 web server. </li>
+  <li><font color="#000080"><strong>CGI Permission.</strong></font>&nbsp; You must have
+    permission to run custom CGI scripts on your web server.Be aware that the majority of free
+    web services do not allow this ability. (America Online, GeoCities and Tripod are such
+    accounts that do not allow for custom CGI scripts) </li>
+  <li><font color="#000080"><strong>Perl</strong></font>.&nbsp; Perl 5.004 or later must be
+    installed on the web server.&nbsp; On Windows NT and 95/98 server we prefer <a
+    href="http://www.activestate.com">ActiveState Perl</a> be installed. </li>
+  <li><strong><font color="#000080">Perl Sockets Module</font></strong>. The perl Sockets
+    module should beinstalled on the server, for this module allows HAMweather to fetch the
+    forecasts from the NWS.&nbsp; This module is part of the perl distribution and is usually
+    automatically installed, but this module may be missing on a few ISPs that do not install
+    the full Perl distribution.&nbsp; (Or the LWP Modules can be used)</li>
+  <li><font color="#000080"><strong>Perl GD.pm Module. </strong></font>Users of the HW Pro
+    must have the Perl GD.pm Module installed on the server before the additional features of
+    HAMweather Pro will work.&nbsp; These features include the dynamic image generation for
+    the US forecast, Current Conditions and warning maps.&nbsp; <font color="#FF0000"><strong>NOTE</strong></font>:
+    GIF support is in GD.pm 1.19 and earlier.&nbsp; PNG support only in GD.pm 1.20 through
+    1.25. PNG and JPEG support in GD.pm 1.26.&nbsp; Unix users can download gd.pm from CPAN
+    at: <a href="http://www.perl.com/CPAN-local/modules/by-module/GD/">http://www.perl.com/CPAN-local/modules/by-module/GD/</a>
+    &nbsp; NT users should have your Provider install the module via the Perl package manager
+    (PPM).</li>
+  <li><font color="#000080"><strong>File Permissions.</strong></font>&nbsp; On Unix servers,
+    you will need to have the ability to set and change file permissions either through FTP or
+    telnet.&nbsp; The need to set file permissions does not usually exist for Windows NT,
+    95/98 web servers. </li>
+  <li><font color="#000080"><strong>FTP Access.</strong></font>&nbsp; You will need to have
+    FTP access to the web directories on your server.&nbsp; An account with Front Page only
+    access does not count.&nbsp; Telnet access would be a plus, but is not needed.</li>
+</ul>
+
+<p><font color="#FF0000"><strong>NOTE</strong></font>: If you are unsure if your web site
+has the correct perl version and/or the needed modules then you use the <a
+href="http://www.hamweather.com/support">HAMweather Pre-Installation test script</a> to
+test your web site. </p>
+
+<p>If your web site meets the above requirements then to fully install HAMweather 2.0
+follow the next four easy steps. Following these steps should get a working version of
+HAMweather on your web site.&nbsp; After the demo is working then you can use the
+HAMweather web based administration to set and/or customize some of the various settings.</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Installation : <a
+    name="STEP 1">STEP 1</a> : Uncompressing the package.</strong></big></font></td>
+  </tr>
+</table>
+
+<p>The first step is to uncompress the software package.&nbsp; You can use&nbsp; <a
+href="http://www.winzip.com/">Winzip</a> or something similar. Once unzipped you should
+have a directory structure similar to the directory tree shown in <a
+href="install3to4.html">Step 3</a>.</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><big><font color="#FFFFFF"><strong>Installation : <a
+    name="STEP 2">STEP 2 </a>: Pre-Install Test</strong></font></big></td>
+  </tr>
+</table>
+
+<p>Before you begin installing HAMweather on your server you should use the pre-install
+test script (hw2test.cgi) to test your server to make sure what version of HAMweather you
+should use and how to set it up.</p>
+
+<p><big><font color="#000080"><strong>Steps to perform the pre-install test:</strong></font></big></p>
+
+<p><strong><font color="#000080"><big>Step 1. </big></font>Set Perl path in the
+hw2test.cgi</strong></p>
+
+<p>You will need to change the first line of the pre-install test script (hw2test.cgi) to
+match the perl path for your server.&nbsp; This is usually something like: /usr/bin/perl
+or /usr/local/bin/perl.&nbsp; After modifying the first line it should look similiar to:</p>
+
+<blockquote>
+  <p>#!/usr/bin/perl</p>
+</blockquote>
+
+<p><strong><big><font color="#000080">Step 2.</font></big>&nbsp; Upload the HAMweather
+Pre-Install Test Script to your Server.</strong></p>
+
+<p>You will now use your FTP client to transfer the hw2test.cgi file from your local
+machine to your servers CGI-BIN directory (or equivalent) because it needs to be executed
+as a cgi script (Preferably upload the script to the same directory that you are going to
+put your HAMweather scripts in).&nbsp;&nbsp; Make sure you transfer the hw2test.cgi file
+in ASCII mode.</p>
+
+<p>Next set the permissions on the&nbsp; hw2test.cgi file to 0755 (rwxr-xr-x).&nbsp; If
+you are on an NT server you can most likely skip this step.</p>
+
+<p><font color="#FF0000"><strong>NOTE</strong></font>:&nbsp; If your server requires an
+extension other than &quot;.cgi&quot; for perl scripts, you will need to rename the
+script.&nbsp; Calling it <em>hw2test.pl</em> or whatever the proper extensions is on your
+server.&nbsp; You will find that the &quot;.cgi&quot; extension works on most systems.</p>
+
+<p><strong><font color="#000080"><big>Step 3.</big></font> Access the Pre-Install Test
+Script with your Browser</strong></p>
+
+<p>View the output of the script in your web browser by entering the URL to the script in
+your web browser.&nbsp; This URL will be determined by the directory to which you uploaded
+the hw2test.cgi script and the URL may look similar to: <em>http://www.yourserver.com/cgi-bin/hamweather/hw2test.cgi</em>.</p>
+
+<p>If successful you will be presented with&nbsp; a web page detailing the version of perl
+on your system, what (if any) needed modules are available on your server.&nbsp; From this
+information the test script will attempt to inform you of which version of HAMweather you
+may use on your sever as is.</p>
+
+<p><font color="#FF0000"><strong>NOTE</strong></font>: The HW2test.cgi script will test to
+see if GD.pm,&nbsp; LWP modules and Socket.pm are&nbsp; available server wide.&nbsp; If
+you have installed these modules locally (mainly GD.pm) in your server space then the
+script may not find them.&nbsp; If you have installed them locally you can try adding the
+&quot;<em>use lib 'path/to/local/directory/containing/the/modules';</em>&quot; line as the
+second or third line of the script.&nbsp; Then try the accessing the script again, if the
+modules are found this time, then you will need to add this line to the hamweather.cgi
+file as well.</p>
+
+<p><big><font color="#000080">Trouble Shooting The Pre-Install Test Script</font></big></p>
+
+<p>If you get a <strong>500 Error (Internal Server Error)</strong>, then one of the
+following is likely the problem: 
+
+<ul>
+  <li>The path to Perl is wrong.&nbsp; you may consult your ISP's documentation, contact your
+    system administrator or try <strong>/usr/bin/perl, /usr/local/bin/perl, /usr/bin/perl5 or
+    /usr/local/bin/perl5.</strong></li>
+  <li>You did not transfer the script in ASCII mode.&nbsp; Do this and transfer the file
+    again.</li>
+  <li>You did not set the permissions on the file to executable as describe in step 2.</li>
+</ul>
+
+<p>If you get a <strong>404 Error (File Not Found)</strong>, then the URL that you entered
+does not correspond to the location where you put the hw2test.cgi script in step 2. &nbsp;
+You should double check the URL even the spleen and capitalization of the URL.</p>
+
+<p>If you get a<strong> 403 Error (Forbidden)</strong>, then you most likely forgot to
+change the permissions to 0755(executable) or you did not put the script in a directory
+with the appropriate CGI permissions.</p>
+
+<p>If you see the s<strong>ource code of the script and not an information page</strong>,
+then either the extension that you gave the script is incorrect (if you tried
+&quot;.cgi&quot; try &quot;.pl&quot; instead), or you did not put the script in a
+directory with appropriate CGI permissions.</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Installation : <a
+    name="STEP 2">STEP 3 </a>: Setup Configuration Files</strong></big></font></td>
+  </tr>
+</table>
+
+<p><font color="#FF0000"><strong>NOTE</strong>:&nbsp; Be on the look out for the upcoming
+&nbsp; HAMweather Install Tool.&nbsp; It will help in the configuration of these setup
+files.</font></p>
+
+<p>With the software package uncompressed it is now time for the hardest step of the
+installation process.&nbsp; Here you will need to set up the configuration files. &nbsp;
+In particular the default.txt file located in the&nbsp; &quot;/users/&quot;
+directory.&nbsp; Then you will need to edit the first 3 lines in CGI script files
+themselves.</p>
+
+<p>You will need to gather the following four pieces of information and add them to the
+default.txt file in the user directory as stated::</p>
+
+<blockquote>
+  <ul>
+    <li>You will now need the URL to the cgi directory above that holds the HAMweather scripts.<strong>
+      <font color="#FF0000">For Example:</strong>&nbsp; If the URL to the HAMweather script on
+      your system will be: <em>http://www.hamweather.com/cgi-bin/weather/hamweather.cgi</em>&nbsp;
+      then you will need to know the </font><strong><font color="#000080"><em>http://www.hamweather.com/cgi-bin/weather</em></font></strong><font
+      color="#FF0000"> portion.<br>
+      <br>
+      </font>You will use this information to set the $hw_cgi_dir_url variable in the
+      default.txt file.&nbsp; The line will look similar <br>
+      to:<br>
+      <font color="#000080"><strong>$hw_cgi_dir_url =
+      &quot;http://www.hamweather.com/cgi-bin/weather&quot;;<br>
+      </strong></font></li>
+    <li>You will now need the full path name to the directory where the HAMweather cgi scripts
+      will be.&nbsp; This is not the URL and does not include<em> &quot;http://.&quot;</em> <font
+      color="#FF0000"><strong>For Example:</strong> If the full path to the HAMweather html
+      files directory on your system will be: &nbsp;
+      /usr/www/users/hamnet/hamweather/hamweatherhtmlfiles.html&nbsp; then you will need to know
+      the </font><font color="#000080">/<strong>usr/www/users/hamnet/hamweather/weather</strong></font><font
+      color="#FF0000"> portion. </font><font color="#000000">(On Microsoft NT and W95/98
+      platforms you will also need to include the drive letter.)<br>
+      <strong>NOTE:</strong> This is not the path to the HAMweather HTML templates but to the
+      html files that lead into HAMweather.&nbsp; The HAMweather &quot;images&quot; directory
+      and all its subdirectories must be in this directory as well. For Example: the images path
+      would be</font><font color="#FF0000"> </font><font color="#000080">/<strong>usr/www/users/hamnet/hamweather/weather/images</strong></font><font
+      color="#000000">.<br>
+      <br>
+      You will use this information to set the </font>$hw_html_dir_path variable near the top of
+      the default.txt file.&nbsp; The line will look similar to :<br>
+      <font color="#000080"><strong>$hw_html_dir_path
+      =&quot;/usr/www/users/hamnet/hamweather/weather&quot;;<br>
+      </strong></font></li>
+    <li>You will now need the URL to the cgi directory above that holds the HAMweather html
+      files and images directory.<strong> <font color="#FF0000">For Example:</strong>&nbsp; If
+      the URL to the HAMweather script on your system will be: <em>http://www.hamweather.com/</em>weather/hamweatherhtmlfiles.html
+      &nbsp; then you will need to know the </font><strong><font color="#000080"><em>http://www.hamweather.com/weather</em></font></strong><font
+      color="#FF0000"> portion.<br>
+      <br>
+      </font>You will use this information to set the $hw_html_dir_url variable in the
+      default.txt file.&nbsp; The line will look similar <br>
+      to:<br>
+      <font color="#000080"><strong>$hw_html_dir_url =
+      &quot;http://www.hamweather.com/weather&quot;;<br>
+      </strong></font></li>
+    <li>You will now need the URL to the HAMweather administration script<strong>. <font
+      color="#FF0000">For Example:</strong>&nbsp; If the URL to the HAMweather administration
+      script on your system will be: <em>http://www.hamweather.com/cgi-bin/weather/hwadmin5340/hwadmin.cgi</em>&nbsp;
+      then you will need to know this.&nbsp; You sould change the 'hwadmin5340' portion to a
+      different name for security reasons.&nbsp; You could change it to something similiar to: </font><strong><font
+      color="#000080"><em>http://www.hamweather.com/cgi-bin/weather/hwadmin1256/hwadmin.cg</em>i</font></strong><font
+      color="#FF0000"> or such.<br>
+      <br>
+      </font>You will use this information to set the $admin_script_url variable in the
+      default.txt file.&nbsp; The line will look similar <br>
+      to:<br>
+      <strong><font color="#000080">$admin_script_url = <a
+      href="http://www.hamweather.com/cgi-bin/weather/hwadmin1256/hwadmin.cgi">&quot;http://www.hamweather.com/cgi-bin/weather/hwadmin1256/hwadmin.cgi&quot;</a>;<br>
+      </font><font color="#FF0000">NOTE</font></strong><font color="#000080">: Technically you
+      can leave this setting as &quot; hwadmin.cgi&quot; and it will usually work fine.<strong><br>
+      </strong></font></li>
+  </ul>
+  <p>Now you will need to gather two pieces of information and add this to the first couple
+  lines of the following cgi scripts:</p>
+  <table border="2" bordercolor="#000080" cellpadding="2" bordercolorlight="#000080"
+  bordercolordark="#000080" cellspacing="0">
+    <tr>
+      <td width="100%"><table border="0" bgcolor="#FFFFD7" height="98">
+        <tr>
+          <td height="21"><font color="#000080"><strong>hamweather.cgi</strong></font></td>
+          <td height="21">In the main HAMweather cgi path.</td>
+        </tr>
+        <tr>
+          <td height="19"><font color="#000080"><strong>hwgetstate.cgi</strong></font></td>
+          <td height="19">In the main HAMweather cgi path. <font color="#FF0000"><small>(not in
+          HAMweather Lite)</small></font></td>
+        </tr>
+        <tr>
+          <td height="21"><font color="#000080"><strong>metarlister.cgi</strong></font></td>
+          <td height="21">In the main HAMweather cgi path</td>
+        </tr>
+        <tr>
+          <td height="21"><font color="#000080"><strong>hwadmin.cgi</strong></font></td>
+          <td height="21">In the admin directory of the HAMweather cgi path.</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+  <ul>
+    <li>You will need the path to perl on your on your system.&nbsp; This is usually something
+      like: /usr/bin/perl or /usr/local/bin/perl.&nbsp; You will add this as the first line in
+      the above cgi files. it will look as follows on:<br>
+      <br>
+      #!/usr/bin/perl<br>
+    </li>
+    <li>The full path name to the directory where the HAMweather cgi scripts will be.&nbsp; This
+      is not the URL and does not include<em> &quot;http://.&quot;</em> <font color="#FF0000"><strong>For
+      Example:</strong> If the full path to the HAMweather script on your system will be:&nbsp; <em>/usr/www/users/hamnet/hamweather/cgi-bin/weather/hamweather.cgi
+      </em>then you will need to know the </font><font color="#000080"><strong><em>/usr/www/users/hamnet/hamweather/cgi-bin/weather</em></strong></font><font
+      color="#FF0000"> portion. </font><font color="#000000">(On Microsoft NT and W95/98
+      platforms you will also need to include the drive letter.)<br>
+      <br>
+      You will use this information to set the </font>$hw_cgi_dir_path variable near the top of
+      the each of the cgi files (The second or third line from the top).&nbsp; The line will
+      look similar to :<br>
+      <font color="#000080"><strong>$hw_cgi_dir_path =
+      &quot;/usr/www/users/hamnet/hamweather/cgi-bin/weather&quot;;</strong></font></li>
+  </ul>
+</blockquote>
+
+<p>You may find that you will need to change the http_mode.&nbsp; This is the way that
+HAMweather connect to the Weather servers.&nbsp; Since a lot of servers do not have the
+LWP modules installed the default is for HAMweather to use normal sockets. But on some
+servers this will not work properly.&nbsp; If you find that you cannot connect&nbsp; (you
+will recieve protocol errors) using the default sockets mode then you will need to have
+the LWP modules installed and then you will need to set HAMweather&nbsp; to use the LWP
+http_mode. </p>
+
+<p>To switch to the LWP mode, browse to the web based administration (browse to the
+administration URL you just previously entered into the users/default.txt file). Next
+click on the &quot;System settings&quot; link and then you can set the http_mode.&nbsp; If
+you are having trouble with with the web based admin you can&nbsp; simply open up the <em>hwconfig.txt</em>
+file and set the $http_mode variable to 1 thus it would look like: <strong><font
+color="#FF0000">NOTE</font></strong>: &nbsp; <strong><font color="#FF0000">This mode
+requires that you have the LWP Modules installed.</font></strong><br>
+<font color="#000080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>$http_mode =1;</strong></font></p>
+
+<p><font color="#FF0000"><strong>NOTE:&nbsp; Users of the HYPERMART free webservers should
+use HAMweather in the LWP mode.</strong></font></p>
+
+<p><a href="install3to4.html">Continue To Installation Step 4</a> </p>
+
+<p><em><small>HAMweather </small><font FACE="Verdana,Arial,Helvetica" size="1">copyright
+© 2000 by HAMweather, LLC, all rights reserved</font></em></p>
+</body>
+</html>

@@ -1,0 +1,4 @@
+LBBG|Burgas
+LBPD|Plovdiv
+LBSF|Sofia Observ. 
+LBWN|Varna

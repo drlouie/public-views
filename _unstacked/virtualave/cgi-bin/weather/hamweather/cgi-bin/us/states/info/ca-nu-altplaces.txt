@@ -1,0 +1,20 @@
+
+arviat=fpcn13.wnt.htm--|0
+baker lake=fpcn13.wnt.htm--|0
+cambridge bay=fpcn13.wnt.htm--|0|CYCB|2
+cape dorset=fpcn14.wnt.htm--|0
+clyde river=fpcn14.wnt.htm--|0
+coral harbour=fpcn13.wnt.htm--|0|CYZS|2
+grise fiord=fpcn15.wnt.htm--|0
+gjoa haven=fpcn13.wnt.htm--|0
+iqaluit=fpcn14.wnt.htm--|0|CYFB|2
+kimmirut=fpcn14.wnt.htm--|0
+nanisivik arctic bay=fpcn15.wnt.htm--nanisivik|0
+pangnirtung=fpcn14.wnt.htm--|0
+pelly bay=fpcn13.wnt.htm--|0
+pond inlet=fpcn15.wnt.htm--|0
+qikiqtarjuaq=fpcn14.wnt.htm--|0
+rankin inlet=fpcn13.wnt.htm--Rankin|0
+repulse bay=fpcn13.wnt.htm--|0
+resolute=fpcn15.wnt.htm--|0
+taloyoak=fpcn13.wnt.htm--|0

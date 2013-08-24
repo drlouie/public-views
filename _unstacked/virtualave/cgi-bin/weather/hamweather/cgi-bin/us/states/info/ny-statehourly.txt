@@ -1,0 +1,8 @@
+Albany|Albany|52
+Buffalo|Buffalo|10
+New York City|New York City|72
+Plattsburgh|Plattsburgh|31
+Poughkeepsie|Poughkeepsie|65
+Rochester|Rochester|3
+Syracuse|Syracuse|18
+Utica|Utica|37

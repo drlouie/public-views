@@ -1,0 +1,18 @@
+KBPI|Big Piney, Big Piney-Marbleton Airport
+KBYG|Buffalo, Buffalo Johnson County Airport
+KCPR|Casper, Natrona County International Airport
+KCYS|Cheyenne, Cheyenne Airport
+KCOD|Cody
+KDGW|Douglas, Converse County Airport
+KEVW|Evanston, Evanston-Uninta County Burns Field
+KGCC|Gillette, Gillette-Campbell County Airport
+KGEY|Greybull, South Big Horn County Airport
+KJAC|Jackson Hole Automatic Weather Observing / Reporting System
+KLND|Lander
+KLAR|Laramie, Laramie Regional Airport
+KRWL|Rawlins Municipal
+KRIW|Riverton, Riverton Regional Airport
+KRKS|Rock Springs
+KSHR|Sheridan, Sheridan County Airport
+KTOR|Torrington, Torrington Municipal Airport
+KWRL|Worland, Worland Municipal Airport

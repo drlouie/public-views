@@ -1,0 +1,13 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="POLYGON" COORDS="107, 200, 119, 110, 165, 113, 165, 152, 214, 168, 245, 165, 267, 174, 268, 187, 268, 202, 277, 218, 270, 248, 225, 270, 207, 293, 212, 321, 177, 311, 169, 288, 142, 249, 117, 244, 103, 258, 77, 238, 75, 222, 50, 194" HREF="%%getstatescripturl%%?state=tx" alt="Texas">
+<AREA SHAPE="POLYGON" COORDS="267, 186, 318, 181, 321, 193, 310, 220, 341, 219, 354, 237, 359, 256, 328, 256, 272, 244, 273, 230, 277, 218, 268, 203" HREF="%%getstatescripturl%%?state=la" alt="Louisiana">
+<AREA SHAPE="POLYGON" COORDS="256, 114, 329, 113, 329, 119, 339, 121, 328, 142, 319, 160, 315, 171, 316, 182, 266, 184, 266, 171, 261, 171" HREF="%%getstatescripturl%%?state=ar" alt="Arkansas">
+<AREA SHAPE="POLYGON" COORDS="121, 103, 255, 101, 258, 171, 244, 164, 210, 166, 165, 149, 165, 113, 120, 109" HREF="%%getstatescripturl%%?state=ok" alt="Oklahoma">
+<AREA SHAPE="POLYGON" COORDS="21, 92, 120, 101, 109, 199, 52, 192, 47, 198, 23, 195, 19, 203, 5, 199" HREF="%%getstatescripturl%%?state=nm" alt="New Mexico">
+<AREA SHAPE="POLYGON" COORDS="238, 34, 302, 32, 304, 41, 320, 63, 325, 63, 325, 72, 323, 75, 339, 91, 338, 97, 346, 103, 342, 109, 336, 121, 326, 121, 331, 115, 327, 114, 256, 113, 253, 62, 247, 56, 250, 46, 241, 35, 300, 32, 301, 32" HREF="%%getstatescripturl%%?state=mo" alt="Missouri">
+<AREA SHAPE="POLYGON" COORDS="141, 43, 247, 45, 250, 51, 247, 57, 255, 65, 255, 103, 135, 102" HREF="%%getstatescripturl%%?state=ks" alt="Kansas">
+<AREA SHAPE="POLYGON" COORDS="32, 13, 142, 23, 135, 103, 21, 90" HREF="%%getstatescripturl%%?state=co" alt="Colorado">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="330" alt="southcentral.gif (4060 bytes)" src="%%stateimagesurl%%/southcentral.gif" width="364">
+<-end image map->

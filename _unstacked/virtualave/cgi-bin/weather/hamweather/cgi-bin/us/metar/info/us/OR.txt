@@ -1,0 +1,32 @@
+KAST|Astoria, Astoria Regional Airport
+KUAO|Aurora, Aurora State Airport
+KBKE|Baker, Baker Municipal Airport
+K4BK|Brookings
+KBNO|Burns, Burns Municipal Airport
+KCZK|Cascade Locks State
+KCVO|Corvallis Municipal Automatic Weather Observing / Reporting System
+KEUG|Eugene, Mahlon Sweet Field
+KHRI|Hermiston, Hermiston Municipal Airport
+K5J0|John Day, John Day State Airport
+KLMT|Klamath Falls, Klamath Falls International Airport
+KLGD|La Grande Automatic Weather Observing / Reporting System
+KLKV|Lakeview Automatic Weather Observing / Reporting System
+KMMV|McMinnville, McMinnville Municipal Airport
+KMEH|Meacham, Meacham
+KMFR|Medford, Rogue Valley International Airport
+KJNW|Newport
+KONP|Newport Municipal
+KOTH|North Bend Automatic Weather Observing / Reporting System
+KONO|Ontario, Ontario Municipal Airport
+KPDT|Pendleton, Eastern Oregon Regional At Pendleton Airport
+KPDX|Portland, Portland International Airport
+KHIO|Portland, Portland-Hillsboro Airport
+KTTD|Portland, Portland-Troutdale Airport
+KRDM|Redmond Automatic Weather Observing / Reporting System
+KREO|Rome, Rome
+KRBG|Roseburg, Roseburg Regional Airport
+KSLE|Salem, McNary Field
+KSPB|Scappoose, Scappoose Industrial Airpark
+KSXT|Sexton Summit,
+KDLS|The Dalles, The Dalles Municipal Airport
+KS47|Tilamook

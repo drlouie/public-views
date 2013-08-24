@@ -1,0 +1,123 @@
+<html>
+
+<head>
+<title>HAMweather Administration : Defaults and Options</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Administration :
+    Defaults and Options</strong></big></font></td>
+  </tr>
+</table>
+
+<p>Everything goes well when HAMweather is provided with all its needed parameters, but
+what would happen if HAMweather wasn't provided with these needed parameters?&nbsp; To
+keep us from having to find out what would go wrong, HAMweather allows you to set defaults
+parameters.&nbsp; These defaults allow HAMweather to properly handle requests that do not
+supply all needed parameters.&nbsp; The defaults can be set by clicking the &quot;Defaults
+and Options&quot; link in the administration options at the top left of any administration
+page.</p>
+
+<p>Following is a list of the various defaults and options with a description of each.</p>
+
+<p><font color="#000080"><strong>Default Place</strong></font><br>
+This is the place that a forecast should be retrieved for&nbsp; if not provided.</p>
+
+<p><font color="#000080"><strong>Default State</strong></font><br>
+This is the state that a forecast should be retrieved for&nbsp; if not provided.</p>
+
+<p><strong><font color="#000080">Default Forecast Type<br>
+</font></strong>This is the forecast type HAMweather should use if a type isn't specified.
+&nbsp; This can be a value from the list on the &quot;<a href="adminfortypes.html">Available
+Forecasts</a>&quot; page.</p>
+
+<p><strong><font color="#000080">Default ICAO code<br>
+</font></strong>This is the 4 letter ICAO code to use as defaul when the Default forecast
+type is set to &quot;metar&quot;. </p>
+
+<p><strong><font color="#000080">Days Only Mode:</font></strong><br>
+The days only mode tells what to display on the icon row for a zone forecast:</p>
+
+<blockquote>
+  <ul>
+    <li>Normal : <small>Display the weather icon row normally with day and night icons and use
+      the day titles givien.</small></li>
+    <li><small>Display the icon row with days only (no nights) and use the normal day titles
+      given</small></li>
+    <li><small>Display the icon row with days only (no nights) and use only weekday names
+      (Monday, Tuesday etc) </small></li>
+    <li><small>Display the icon row with days only (no nights) and use only 3 letter weekday
+      names (MON, TUE, etc)</small></li>
+  </ul>
+</blockquote>
+
+<p><font color="#000080"><strong>Maximum Days<br>
+</strong></font>Set this with the value for the maximum number of icons to&nbsp; create in
+the zone forecasts.</p>
+
+<p><font color="#000080"><strong>Extended Forecast<br>
+</strong></font>This controls whether HAMweather includes the extended forecast in the
+text or icons in the zone forecasts.&nbsp; </p>
+
+<p><font color="#000080"><strong>Default Forecast Text Casing<br>
+</strong></font>This value is used to determine whether HAMweather leaves the forecast in
+upper case or performs Proper casing.</p>
+
+<p><font color="#000080"><strong>Text Mode<br>
+</strong></font>This value is used to determine whether HAMweather strips any html
+encoding from the text portion of a forecast.&nbsp; Normally this would be set to 'No.'</p>
+
+<p><font color="#000080"><strong>Default Rounding:<br>
+</strong></font>This value is used to determine whether HAMweather rounds the Farenheit to
+Celsius conversions, Wind chill and heat index calculations.</p>
+
+<p><font color="#000080"><strong>Use Metric by Default?<br>
+</strong></font>This value is used to determine whether HAMweather uses english or metric
+units by default.</p>
+
+<p><font color="#000080"><strong>Default win unit when in metric mode<br>
+</strong></font>This value is used to determine what unit for wind HAMweather uses when in
+metric mode. (either KNots, MpS, or KM/H)</p>
+
+<p><font color="#000080"><strong>Day Begin Hour<br>
+</strong></font>This value is used to determine whether HAMweather should display a day or
+night icon for the current conditions. This shouldbe set to a number between 0 and 23.
+Where it is the hour that the sun rises.</p>
+
+<p><font color="#000080"><strong>Day End Hour<br>
+</strong></font>This value is used to determine whether HAMweather should display a day or
+night icon for the current conditions. This should be set to a number between 0 and 23.
+Where it is the hour that the sun sets.</p>
+
+<p><font color="#000080"><strong>Default Map Mode<small> (Pro Only)</small></strong></font><br>
+The map mode value HAMweather uses in case the map parameters is not provided when needed.
+&nbsp; The settings for this value are the same as for the map parameter.</p>
+
+<blockquote>
+  <ul>
+    <li>Set to '0' to stop maps from being created dynamically but to output the template.</li>
+    <li>Set to '1' to have map created dynamically and template outputted.</li>
+    <li>Set to '2' to have the map created dynamically&nbsp; but do not output the template.</li>
+  </ul>
+</blockquote>
+
+<p><font color="#000080"><strong>Allow Logging<br>
+</strong></font>This determines weather HAMweather will log all errors that occur as well
+as any requests that are made.&nbsp; This is normally set to yes so that at minimum you'll
+have error logging. </p>
+
+<p><font color="#000080"><strong>User Template Path<br>
+</strong></font>This is not a default but an actual value.&nbsp; This is the path to the
+users templates.&nbsp; The checkbox to the left of this should ONLY be checked when you
+plan on changing this value.</p>
+
+<p><font color="#000080"><strong>Theme Images URL<br>
+</strong></font>This is not a default but an actual value.&nbsp; This is the path to the
+URL to the directory that holds the weather icons used in the zone forecasts and hourly
+and metar observations..&nbsp; The checkbox to the left of this should ONLY be checked
+when you plato on changing this value. </p>
+</body>
+</html>

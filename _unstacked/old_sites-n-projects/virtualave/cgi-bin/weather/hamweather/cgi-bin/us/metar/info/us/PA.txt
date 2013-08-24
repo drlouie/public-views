@@ -1,0 +1,31 @@
+KABE|Allentown, Lehigh Valley International Airport
+KAOO|Altoona, Altoona-Blair County Airport
+KBVI|Beaver Falls Airport
+KBFD|Bradford, Bradford Regional Airport
+KBTP|Butler County Automatic Weather Observing / Reporting System
+KDYL|Doylestown, Doylestown Airport
+KDUJ|Du Bois Automatic Weather Observing / Reporting System
+KERI|Erie, Erie International Airport
+KFKL|Franklin Automatic Weather Observing / Reporting System
+KCXY|Harrisburg, Capital City Airport
+KMDT|Harrisburg, Harrisburg International Airport
+KIDI|Indiana / Stewart Field
+KJST|Johnstown, Johnstown-Cambria County Airport
+KLNS|Lancaster, Lancaster Airport
+KLBE|Latrobe / Westmorland
+KGKJ|Meadville, Port Meadville Airport
+KMPO|Mount Pocono, Pocono Mountains Municipal Airport
+KMUI|Muir Army Air Field / Indiantown
+KPNE|Philadelphia, Northeast Philadelphia Airport
+KPHL|Philadelphia, Philadelphia International Airport
+KAGC|Pittsburgh, Allegheny County Airport
+KPIT|Pittsburgh, Pittsburgh International Airport
+KPTW|Pottstown, Pottstown Limerick Airport
+KRDG|Reading, Reading Regional Airport
+KSEG|Selinsgrove, Penn Valley Airport
+KUNV|State College
+KAFJ|Washington Automatic Weather Observing / Reporting System 
+KAVP|Wilkes-Barre - Scranton, Wilkes-Barre / Scranton International Airport
+KIPT|Williamsport, Williamsport-Lycoming County Airport
+KNXX|Willow Grove, Naval Air Station
+KTHV|York, York Airport

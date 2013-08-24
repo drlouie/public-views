@@ -1,0 +1,35 @@
+abbotsford|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|LOWER FRASER VALLEY
+bella coola|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|QUEEN CHARLOTTES
+campbell river|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|EAST VANCOUVER ISLAND
+castlegar|kootenay|fpcn15.wlw.htm|fpcn54.wlw.htm|WEST KOOTENAY
+chilliwack|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|LOWER FRASER VALLEY
+comox|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|EAST VANCOUVER ISLAND
+cranbrook|kootenay|fpcn15.wlw.htm|fpcn54.wlw.htm|EAST KOOTENAY
+creston|kootenay|fpcn15.wlw.htm|fpcn54.wlw.htm|EAST KOOTENAY
+dawson creek|peace|fpcn18.wlw.htm|fpcn54.wlw.htm|BC PEACE RIVER
+dease lake|southeastern|fpcn12.yxy.htm|fpcn54.yxy.htm
+fort nelson|southeastern|fpcn12.yxy.htm|fpcn54.yxy.htm
+fort st. john|peace|fpcn18.wlw.htm|fpcn54.wlw.htm|BC PEACE RIVER
+golden|columbia|fpcn13.wlw.htm|fpcn54.wlw.htm|EAST COLUMBIA
+hope|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|LOWER FRASER VALLEY
+kamloops|southwest|fpcn11.wlw.htm|fpcn54.wlw.htm|SOUTH THOMPSON
+kelowna|southwest|fpcn11.wlw.htm|fpcn54.wlw.htm|OKANAGAN VALLEY
+nanaimo|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|EAST VANCOUVER ISLAND
+nelson|kootenay|fpcn15.wlw.htm|fpcn54.wlw.htm|WEST KOOTENAY
+nootka|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|WEST VANCOUVER ISLAND
+penticton|southwest|fpcn11.wlw.htm|fpcn54.wlw.htm|OKANAGAN VALLEY
+port alberni|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|WEST VANCOUVER ISLAND
+port hardy|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|NORTH VANCOUVER ISLAND
+powell river|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|SUNSHINE COAST
+prince george|central|fpcn16.wlw.htm|fpcn54.wlw.htm
+prince rupert|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|CENTRAL COAST
+revelstoke|columbia|fpcn13.wlw.htm|fpcn54.wlw.htm|KINBASKET
+sandspit|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|QUEEN CHARLOTTES
+smithers|central|fpcn16.wlw.htm|fpcn54.wlw.htm|Bulkley valley 
+terrace|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|CENTRAL COAST
+tofino|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|WEST VANCOUVER ISLAND
+vancouver|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm|GREATER VANCOUVER
+vernon|southwest|fpcn11.wlw.htm|fpcn54.wlw.htm|Okanagan Valley
+victoria|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm
+whistler|coastal|fpcn11.wvr.htm|fpcn54.wvr.htm
+williams lake|central|fpcn16.wlw.htm|fpcn54.wlw.htm

@@ -1,0 +1,188 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>HAMweather Installation Trouble Shooting</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Installation :
+    Trouble Shooting</strong></big></font></td>
+  </tr>
+</table>
+
+<p>If you followed the Five easy steps to installation and are having troubles THis page
+may be able to help you solve your problem.</p>
+
+<p><big><big><font color="#000080">Trouble Shooting Server Errors</font></big></big></p>
+
+<p>If you get a <strong>500 Error (Internal Server Error)</strong>, then one of the
+following is likely the problem: 
+
+<ul>
+  <li>The path to Perl is wrong.&nbsp; you may consult your ISP's documentation, contact your
+    system administrator or try <strong>/usr/bin/perl, /usr/local/bin/perl, /usr/bin/perl5 or
+    /usr/local/bin/perl5.</strong></li>
+  <li>You did not transfer the script in ASCII mode.&nbsp; Do this and transfer the file
+    again.</li>
+  <li>You did not set the permissions on the file to executable as describe in step 2.</li>
+  <li>The file path you provided in step 3 (namely the path for <strong><font color="#000080">$hw_cgi_dir_url</font></strong>)
+    may be incorrect.&nbsp; Double check tomake sure this path is correct.</li>
+</ul>
+
+<p>If you get a <strong>404 Error (File Not Found)</strong>, then the URL that you entered
+does not correspond to the location where you put the hw2test.cgi script in step 2. &nbsp;
+You should double check the URL even the spleen and capitalization of the URL.</p>
+
+<p>If you get a<strong> 403 Error (Forbidden)</strong>, then you most likely forgot to
+change the permissions to 0755(executable) or you did not put the script in a directory
+with the appropriate CGI permissions.</p>
+
+<p>If you see the <strong>source code of the script and not an information page</strong>,
+then either the extension that you gave the script is incorrect (if you tried
+&quot;.cgi&quot; try &quot;.pl&quot; instead), or you did not put the script in a
+directory with appropriate CGI permissions.</p>
+
+<p><big><big><font color="#000080">Trouble Shooting Other Errors</font></big></big></p>
+
+<p>So you didn't get a common server type error, so now whats the problem?</p>
+
+<p><big><strong>Cannot Connect to the IWIN and/or NWS servers error</strong> </big>
+
+<ul>
+  <li>The National Weather service or IWIN server is down. This happens sometimes but is not
+    often.&nbsp; You can double check the HAMweather site to see if the main HAMweather demo
+    is working. If it is then this most likely is not the problem.</li>
+  <li>If you are getting this error only and you are using the sockets http_mode (the default)
+    to connect to the Weather servers&nbsp; you may try using the LWP mode.&nbsp; Simply goto
+    the web based admin, click the system settings link and you can select the select the
+    LWP::Simple or LWP advanced mode for HTTP mode. Alternatively, you can open up the
+    hwconfig.txt file and set the $http_mode variable to 1 thus it would look like: <strong><font
+    color="#FF0000">NOTE</font></strong>:&nbsp; <strong><font color="#FF0000">This mode
+    requires that you have the LWP Modules installed.</font></strong><br>
+    <font color="#000080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>$http_mode =1;</strong></font></li>
+</ul>
+
+<p><big><strong>Fetching page error : -hwERR Can't connect socket:Unknown error </strong></big>or<br>
+<big><strong>-hwERR Can't connect socket:Address family not supported by protocol family</strong></big>
+
+<ul>
+  <li>These error are most likely caused if your servers setup will not allow the sockets
+    http_mode (the default) to connect to the weather servers.&nbsp; In this case you will
+    need to use the LWP http_mode.&nbsp; This requires that you have the LWP modules install
+    on you server. (You can test for them using the Pre-Install Setup Program) If the LWP
+    modules are installed then goto the web based admin, click the system settings link and
+    you can select the select the LWP::Simple or LWP advanced mode for HTTP mode.
+    Alternatively, you can open up the hwconfig.txt file and set the $http_mode variable to 1
+    thus it would look like: <strong><font color="#FF0000">NOTE</font></strong>:&nbsp; <strong><font
+    color="#FF0000">This mode requires that you have the LWP Modules installed.</font></strong><br>
+    <font color="#000080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>$http_mode =1;</strong></font></li>
+</ul>
+
+<p><big><strong>Document Contains no Data (Netscape Users) or a Blank Screen (Internet
+Explorer Users)</strong></big></p>
+
+<p>This error happens when the HAMweather script outputs the appropriate headers and
+nothing else.&nbsp; The normal reasons for failure are: 
+
+<ul>
+  <li>When Using HAMweather Pro the GD.pm module is not installed.&nbsp; When
+    creating/updating the dynamic maps HAMweather uses the GD.pm module to create them. &nbsp;
+    If this modules is not on the server the script will fail before it can output naything
+    but the headers, thus causing this error.&nbsp; Test that you have the GD.pm module
+    installed on your server using the pre-install test script (hw2test.cgi) included in the
+    HAMweather package.&nbsp; <font color="#FF0000"><strong>NOTE</strong>:&nbsp; If you have
+    installed the GD.pm locally to your web site and not server wide then you will need to add
+    the 'use lib' command near the top of the hamweather.cgi file to let hamweather know where
+    the GD.pm module was installed.&nbsp; the 'use lib' line should look similiar to:</font><br>
+    <font color="#000080">use lib '/path/to/the/local/GDpm_directory',
+    '/path/to/the/local/GDpm_directory/arch';<br>
+    </font></li>
+  <li>When using HW Pro and GD.pm is installed then you may have HW configured to use the
+    GD.pm incorrectly.&nbsp; If you are using GD.pm 1.19 or older you need to make sure HW is
+    using GD.pm in GIF mode&nbsp; and if you are using GD.pm 1.20+ then you need to make sure
+    HW is using GD.pm in PNG mode.&nbsp; You can check/set this setting by going to the web
+    based admin, click on System settings and select the correct GD.pm version number next to
+    the GD.pm Version setting.&nbsp; Alternatively you can open up the hwconfig.txt file and
+    set the $gd_version variable to 0 for GD.pm 1.19 or older or set it to 1 for gd.pm 1.20
+    and newer.&nbsp; If you do not know what version of GD.pm you have installed you can use
+    the pre-install test script provided in the distribution to find out.</li>
+</ul>
+
+<ul>
+  <li>Permissions and/or filepaths couldbe incorrect.&nbsp; Double check these.</li>
+</ul>
+
+<p><strong><font color="#FF0000">Note</font></strong>: <font color="#FF0000">As of Version
+2.0 Beta 2.03 HAMweather uses version checkig that should help in stopping a lot of the
+Document Contains no Data (Netscape Users) or a Blank Screen (Internet Explorer Users)
+error for if the GD.pm is not installed or the permissions to the needed library files or
+incorrect an error will be displayed.</font></p>
+
+<p><big><strong>Error loading files XXXXXX</strong></big> 
+
+<ul>
+  <li>This error is caused when HAMweather tries loading a library file that does not exist.
+    It is usually followed by a more detailed error message that will provide more insight
+    into the failure.</li>
+  <li>This error can occur if HAMweather tries to load a library file that is older than the
+    one required.&nbsp; If this is so you will see an erro discripting labeling what file the
+    error was with witht he current files version number and the needed version number. &nbsp;
+    Make sure you have the latest versions of the HAMweather files.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><big><big><strong><font color="#000080">HAMweather Debug Mode</font></strong></big></big></p>
+
+<p>HAMweather contains a debug mode that will give you information about your server,
+parameters passed to HAMweather and other pertinent HAMweather information.&nbsp; To use
+this mode simply browse to the hamweather.cgi filr and pass the debug=1 parameter. &nbsp;
+The URL would look similiar to the following URLs:</p>
+
+<blockquote>
+  <p><font color="#000080"><em>http://www.yourdomain.com/cgi-bin/hamweather/hamweather.cgi?debug=1
+  <br>
+  http://www.yourdomain.com/cgi-bin/hamweather/hamweather.cgi?forecast=zandh&amp;place=blacksburg&amp;state=va&amp;debug=1</em></font></p>
+</blockquote>
+
+<p>When you access the debug mode of HAMweather you will see the perl environmental
+variables, the passed parameters, versions of HAMweather and all loaded hamweather library
+files and other pertinent information.&nbsp; If for some reason you do not see this
+information then the Debug ability may have been turned off. You can turn debug mode
+capability on by going tothe web based admin, clicking the system settings link, and then
+selected the &quot;On with 'debug=1' paramter&quot; or &quot;Always On&quot; options next
+to the 'Debug mode&quot; setting.&nbsp; Alternatively, in the hwconfig.txt file there is a
+variable named $allow_debug.&nbsp; This variable should be set to 0 to turn on debug
+ability or 1 to turn off.&nbsp; Changing that line the hwconfig.txt file to the following
+would turn debug ability on:</p>
+
+<blockquote>
+  <p>$allow_debug = 0;</p>
+</blockquote>
+
+<p>This debug information maybe useful in solving your HAMweather problems.&nbsp; When you
+are done debugging if youwant to turn the debug ability off simply change the $allow_debug
+value to '1' in the hwconfig.txt file.</p>
+
+<p><big><big><strong><font color="#000080">The Support Center</font></strong></big></big></p>
+
+<p>If all else fells try out the HAMweather support Center at <a
+href="http://www.hamweather.com/support/">http://www.hamweather.com/support/</a> Near the
+botomof this page you will be able to goto the Support Forums or you can goi directly to
+them at <a href="http://www.hamweather.com/cgi-bin/support/hamboards.cgi">http://www.hamweather.com/cgi-bin/support/hamboards.cgi</a></p>
+
+<p><strong><font color="#FF0000">NOTE</font></strong>: Once at the support center you can
+view past threads for up to 365 days.&nbsp; SImple click the options link and select how
+many days worth of past threads to view.</p>
+
+<p><br>
+<a href="http://www.hamweather.com/support/">Hmmm.. I need some trouble shooting help.</a>
+</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

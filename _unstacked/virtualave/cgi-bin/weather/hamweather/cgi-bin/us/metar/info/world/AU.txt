@@ -1,0 +1,20 @@
+YPAD|Adelaide Airport
+YBAS|Alice Springs Aerodrome
+YPPH|Belmont Perth Airport 
+YBBN|Brisbane Airport M. O
+YBRM|Broome Airport
+YPEA|Bullsbrook Pearce Amo
+YBCS|Cairns Airport
+YSCB|Canberra
+YPDN|Darwin Airport
+YSDU|Dubbo
+YMHB|Hobart Airport
+YPTN|Katherine Aerodrome
+YPLM|Learmonth Airport
+YMML|Melbourne Airport
+YSNF|Norfolk Island Airport
+YPPD|Port Hedland Pardoo
+YSRI|Richmond Aus-Afb 
+YBRK|Rockhampton Airport
+YSSY|Sydney Airport
+YBTL|Townsville Amo

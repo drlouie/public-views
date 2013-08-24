@@ -1,0 +1,13 @@
+KBIS|Bismarck, Bismarck Municipal Airport
+KDVL|Devils Lake Automatic Weather Observing / Reporting System
+KDIK|Dickinson, Dickinson Municipal Airport
+KFAR|Fargo, Hector International Airport
+KN60|Garrison
+KRDR|Grand Forks Air Force Base
+KGFK|Grand Forks, Grand Forks International Airport
+KHEI|Hettinger, Hettinger Municipal Airport
+KJMS|Jamestown, Jamestown Municipal Airport
+KP67|Lidgerwood Remote Automatic Meteorological Observing System
+KMIB|Minot Air Force Base
+KMOT|Minot, Minot International Airport
+KISN|Williston, Sloulin Field International Airport

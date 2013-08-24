@@ -1,0 +1,81 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="POLYGON" COORDS="232, 215, 252, 216, 258, 231, 251, 250, 228, 250" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=075" alt="Chicot">
+<AREA SHAPE="POLYGON" COORDS="183, 238, 193, 225, 229, 226, 228, 251, 182, 251" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=074" alt="Ashley">
+<AREA SHAPE="POLYGON" COORDS="125, 228, 150, 224, 170, 231, 183, 240, 184, 249, 121, 247" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=073" alt="Union">
+<AREA SHAPE="POLYGON" COORDS="93, 223, 115, 221, 116, 225, 123, 225, 120, 250, 89, 249, 89, 236" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=072" alt="Columbia">
+<AREA SHAPE="POLYGON" COORDS="69, 221, 88, 218, 87, 221, 94, 221, 88, 233, 86, 250, 63, 247, 65, 241, 69, 239" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=071" alt="Lafayette">
+<AREA SHAPE="POLYGON" COORDS="47, 215, 61, 208, 70, 217, 72, 225, 68, 242, 62, 242, 64, 248, 48, 248" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=070" alt="Miller">
+<AREA SHAPE="POLYGON" COORDS="192, 196, 228, 196, 229, 225, 192, 223" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=069" alt="Drew">
+<AREA SHAPE="POLYGON" COORDS="168, 206, 193, 204, 190, 224, 193, 227, 181, 239, 174, 234, 169, 232" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=068" alt="Bradley">
+<AREA SHAPE="POLYGON" COORDS="151, 198, 165, 197, 168, 212, 164, 232, 158, 229, 149, 222, 139, 216, 141, 208" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=067" alt="Calhoun">
+<AREA SHAPE="POLYGON" COORDS="115, 196, 131, 194, 152, 196, 137, 213, 149, 225, 137, 224, 115, 225" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=066" alt="Ouachita">
+<AREA SHAPE="POLYGON" COORDS="220, 198, 228, 181, 237, 181, 251, 187, 250, 180, 259, 170, 267, 171, 270, 174, 260, 191, 262, 200, 249, 216, 230, 213, 229, 198, 223, 196, 228, 181" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=065" alt="Desha">
+<AREA SHAPE="POLYGON" COORDS="195, 178, 211, 176, 212, 172, 225, 175, 230, 185, 224, 185, 222, 196, 193, 196" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=064" alt="Lincoln">
+<AREA SHAPE="POLYGON" COORDS="162, 178, 179, 177, 193, 177, 191, 204, 168, 203, 164, 196" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=063" alt="Cleveland">
+<AREA SHAPE="POLYGON" COORDS="131, 173, 160, 174, 158, 180, 166, 196, 132, 195, 124, 181, 129, 181" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=062" alt="Dallas">
+<AREA SHAPE="POLYGON" COORDS="88, 186, 97, 185, 99, 190, 114, 194, 113, 221, 86, 220, 88, 214, 91, 211, 87, 202" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=061" alt="Nevada">
+<AREA SHAPE="POLYGON" COORDS="64, 181, 89, 184, 86, 218, 72, 217, 61, 207, 54, 199, 63, 199" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=060" alt="Hempstead">
+<AREA SHAPE="POLYGON" COORDS="18, 186, 53, 199, 55, 204, 61, 209, 50, 212, 23, 213, 17, 206" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=059" alt="Little River">
+<AREA SHAPE="POLYGON" COORDS="261, 140, 289, 138, 292, 145, 285, 157, 273, 170, 265, 171, 257, 172, 256, 160, 261, 160, 263, 149, 256, 149" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=058" alt="Phillips">
+<AREA SHAPE="POLYGON" COORDS="214, 149, 217, 149, 217, 144, 237, 143, 256, 157, 254, 174, 248, 177, 251, 188, 231, 182, 227, 172, 222, 166, 211, 165, 214, 144, 218, 149, 217, 146" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=057" alt="Arkansas">
+<AREA SHAPE="POLYGON" COORDS="176, 145, 212, 145, 212, 167, 221, 167, 229, 175, 225, 175, 218, 173, 212, 171, 210, 176, 177, 175" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=056" alt="Jefferson">
+<AREA SHAPE="POLYGON" COORDS="145, 152, 164, 144, 174, 145, 175, 178, 166, 177, 143, 170" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=055" alt="Grant">
+<AREA SHAPE="POLYGON" COORDS="93, 154, 125, 152, 129, 142, 135, 142, 143, 152, 142, 172, 128, 170, 93, 158" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=054" alt="Hot Spring">
+<AREA SHAPE="POLYGON" COORDS="90, 156, 98, 160, 128, 171, 128, 181, 122, 180, 130, 193, 119, 197, 99, 191, 85, 164" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=053" alt="Clark">
+<AREA SHAPE="POLYGON" COORDS="56, 160, 87, 160, 85, 165, 92, 184, 81, 185, 64, 181" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=052" alt="Pike">
+<AREA SHAPE="POLYGON" COORDS="31, 158, 55, 157, 56, 165, 62, 171, 61, 200, 52, 197, 43, 168, 32, 168" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=051" alt="Howard">
+<AREA SHAPE="POLYGON" COORDS="20, 168, 43, 168, 52, 200, 46, 195, 19, 186" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=050" alt="Sevier">
+<AREA SHAPE="POLYGON" COORDS="255, 120, 300, 121, 289, 138, 259, 139" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=049" alt="Lee">
+<AREA SHAPE="POLYGON" COORDS="249, 112, 258, 112, 260, 99, 304, 100, 303, 118, 252, 119" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=048" alt="St. Francis">
+<AREA SHAPE="POLYGON" COORDS="234, 120, 246, 113, 253, 120, 256, 131, 259, 148, 261, 149, 258, 159, 233, 138" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=047" alt="Monroe">
+<AREA SHAPE="POLYGON" COORDS="208, 110, 236, 106, 234, 134, 230, 134, 233, 141, 217, 142, 218, 145, 213, 117, 205, 117" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=046" alt="Prairie">
+<AREA SHAPE="POLYGON" COORDS="184, 108, 205, 109, 205, 117, 212, 118, 214, 144, 188, 146, 188, 136, 184, 135" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=045" alt="Lonoke">
+<AREA SHAPE="CIRCLE" COORDS="165, 130, 5" HREF="%%scripturl%%?forecast=zandh&state=ar&place=little+rock">
+<AREA SHAPE="POLYGON" COORDS="141, 119, 152, 109, 161, 118, 173, 116, 182, 106, 182, 135, 188, 138, 186, 145, 167, 147" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=044" alt="Pulaski">
+<AREA SHAPE="POLYGON" COORDS="114, 127, 116, 121, 142, 121, 143, 126, 153, 133, 159, 138, 165, 141, 175, 141, 174, 147, 164, 146, 161, 148, 144, 152" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=043" alt="Saline">
+<AREA SHAPE="POLYGON" COORDS="96, 129, 121, 129, 120, 134, 138, 143, 128, 146, 125, 153, 91, 154" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=042" alt="Garland">
+<AREA SHAPE="POLYGON" COORDS="56, 135, 67, 128, 94, 129, 90, 158, 52, 158" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=041" alt="Montgomery">
+<AREA SHAPE="POLYGON" COORDS="19, 132, 56, 135, 54, 158, 30, 157, 31, 169, 20, 167" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=040" alt="Polk">
+<AREA SHAPE="POLYGON" COORDS="119, 107, 155, 105, 151, 115, 139, 119, 113, 122, 114, 126, 105, 127, 100, 121" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=039" alt="Perry">
+<AREA SHAPE="POLYGON" COORDS="83, 103, 97, 97, 102, 92, 120, 104, 100, 119, 100, 126, 92, 129, 69, 129, 72, 101" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=038" alt="Yell">
+<AREA SHAPE="POLYGON" COORDS="20, 117, 33, 116, 37, 106, 71, 108, 70, 128, 55, 135, 19, 131" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=037" alt="Scott">
+<AREA SHAPE="POLYGON" COORDS="295, 81, 324, 80, 325, 100, 308, 120, 303, 121, 304, 98, 295, 99, 296, 86" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=036" alt="Crittenden">
+<AREA SHAPE="POLYGON" COORDS="260, 80, 295, 80, 296, 100, 261, 100" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=035" alt="Cross">
+<AREA SHAPE="POLYGON" COORDS="235, 82, 240, 83, 243, 87, 257, 87, 258, 112, 243, 112, 239, 117, 236, 117, 236, 108, 230, 105, 234, 96" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=034" alt="Woodruff">
+<AREA SHAPE="POLYGON" COORDS="183, 87, 201, 85, 209, 73, 224, 73, 222, 81, 234, 81, 229, 105, 223, 105, 220, 109, 209, 107, 201, 109, 186, 106" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=033" alt="White">
+<AREA SHAPE="POLYGON" COORDS="157, 87, 182, 85, 182, 110, 177, 109, 170, 117, 161, 119, 157, 115, 151, 111, 153, 105" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=032" alt="Faulkner">
+<AREA SHAPE="POLYGON" COORDS="135, 79, 153, 81, 157, 88, 155, 104, 121, 107, 119, 103, 132, 98" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=031" alt="Conway">
+<AREA SHAPE="POLYGON" COORDS="39, 107, 48, 94, 64, 89, 64, 85, 88, 81, 101, 89, 100, 96, 88, 98, 84, 102, 70, 102, 71, 108" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=030" alt="Logan">
+<AREA SHAPE="POLYGON" COORDS="21, 83, 31, 87, 43, 80, 48, 99, 41, 101, 35, 108, 33, 115, 20, 116" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=029" alt="Sebastian">
+<AREA SHAPE="POLYGON" COORDS="314, 44, 351, 42, 355, 48, 332, 78, 313, 79" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=028" alt="Mississippi">
+<AREA SHAPE="POLYGON" COORDS="259, 64, 311, 62, 310, 79, 259, 80" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=027" alt="Poinsett">
+<AREA SHAPE="POLYGON" COORDS="271, 45, 312, 43, 311, 63, 260, 63, 261, 50, 270, 48" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=026" alt="Craighead">
+<AREA SHAPE="POLYGON" COORDS="246, 49, 258, 49, 258, 86, 243, 86, 242, 81, 221, 81, 220, 76, 236, 71, 239, 60" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=025" alt="Jackson">
+<AREA SHAPE="POLYGON" COORDS="176, 63, 204, 62, 206, 78, 201, 85, 173, 85" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=024" alt="Cleburne">
+<AREA SHAPE="POLYGON" COORDS="136, 61, 144, 61, 146, 56, 162, 56, 163, 60, 174, 62, 172, 83, 154, 86, 155, 80, 133, 78" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=023" alt="Van Buren">
+<AREA SHAPE="POLYGON" COORDS="110, 60, 135, 60, 132, 98, 113, 99, 98, 88, 104, 77, 104, 69" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=022" alt="Pope">
+<AREA SHAPE="POLYGON" COORDS="73, 58, 84, 58, 84, 61, 109, 60, 108, 68, 103, 69, 104, 78, 100, 79, 99, 88, 93, 87, 88, 81, 71, 84" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=021" alt="Johnson">
+<AREA SHAPE="POLYGON" COORDS="45, 67, 51, 65, 58, 57, 72, 57, 69, 85, 63, 83, 62, 90, 56, 89, 55, 95, 46, 95, 44, 81" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=020" alt="Franklin">
+<AREA SHAPE="POLYGON" COORDS="15, 61, 54, 59, 50, 65, 46, 65, 47, 71, 44, 80, 35, 85, 28, 85, 20, 80" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=019" alt="Crawford">
+<AREA SHAPE="POLYGON" COORDS="277, 22, 317, 27, 304, 41, 275, 42, 280, 29, 275, 30" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=018" alt="Greene">
+<AREA SHAPE="POLYGON" COORDS="239, 25, 255, 32, 277, 30, 268, 48, 238, 46, 239, 20" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=017" alt="Lawrence">
+<AREA SHAPE="POLYGON" COORDS="213, 47, 245, 49, 244, 55, 237, 60, 235, 74, 206, 73, 206, 60, 200, 51" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=016" alt="Independence">
+<AREA SHAPE="POLYGON" COORDS="182, 25, 213, 26, 212, 44, 200, 51, 187, 44, 183, 33, 179, 33" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=015" alt="Izard">
+<AREA SHAPE="POLYGON" COORDS="163, 45, 169, 44, 174, 35, 182, 33, 185, 44, 199, 50, 203, 60, 161, 60" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=014" alt="Stone">
+<AREA SHAPE="POLYGON" COORDS="128, 35, 160, 36, 162, 55, 147, 56, 144, 60, 128, 60" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=013" alt="Searcy">
+<AREA SHAPE="POLYGON" COORDS="90, 34, 127, 34, 124, 60, 85, 59" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=012" alt="Newton">
+<AREA SHAPE="POLYGON" COORDS="61, 21, 75, 21, 83, 31, 90, 36, 84, 56, 54, 58" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=011" alt="Madison">
+<AREA SHAPE="POLYGON" COORDS="12, 32, 22, 34, 31, 26, 58, 22, 52, 59, 17, 59" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=010" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="278, 7, 326, 6, 326, 21, 318, 28, 308, 28, 280, 22" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=009" alt="Clay">
+<AREA SHAPE="POLYGON" COORDS="235, 8, 276, 8, 279, 22, 273, 23, 274, 30, 255, 33, 241, 24, 235, 11" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=008" alt="Randolph">
+<AREA SHAPE="POLYGON" COORDS="233, 7, 242, 23, 240, 23, 236, 47, 227, 48, 211, 45, 212, 26, 219, 25, 223, 18, 229, 17" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=007" alt="Sharp">
+<AREA SHAPE="POLYGON" COORDS="183, 6, 230, 7, 228, 17, 222, 16, 220, 23, 182, 24" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=006" alt="Fulton">
+<AREA SHAPE="POLYGON" COORDS="155, 7, 181, 6, 179, 26, 178, 30, 178, 34, 171, 35, 167, 45, 161, 44, 158, 27" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=005" alt="Baxter">
+<AREA SHAPE="POLYGON" COORDS="129, 9, 154, 7, 150, 14, 161, 32, 160, 35, 130, 35" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=004" alt="Marion">
+<AREA SHAPE="POLYGON" COORDS="100, 7, 129, 8, 129, 31, 100, 31" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=003" alt="Boone">
+<AREA SHAPE="POLYGON" COORDS="62, 6, 99, 7, 99, 31, 82, 32, 75, 21, 63, 20" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=002" alt="Carroll">
+<AREA SHAPE="POLYGON" COORDS="7, 8, 62, 6, 61, 22, 53, 23, 29, 26, 22, 34, 14, 32" HREF="%%scripturl%%?forecast=zandh&state=ar&zone=001" alt="Benton">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="257" alt="AR" src="%%stateimagesurl%%/ar-zones.gif" width="361">
+<-end image map->

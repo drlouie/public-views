@@ -1,0 +1,83 @@
+<-begin image map->
+<MAP NAME="FrontPageMap0">
+<AREA SHAPE="CIRCLE" COORDS="284, 86, 4" HREF="%%scripturl%%?forecast=zandh&state=ok&place=oklahoma+city">
+<AREA SHAPE="POLYGON" COORDS="436, 133, 436, 178, 401, 161, 401, 153, 407, 146, 408, 134" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=077" alt="McCurtain ">
+<AREA SHAPE="POLYGON" COORDS="438, 91, 436, 133, 413, 133, 413, 123, 409, 123, 408, 117, 412, 110, 414, 99, 418, 98, 422, 91, 425, 93" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=076" alt="Le Flore">
+<AREA SHAPE="POLYGON" COORDS="413, 106, 414, 109, 411, 112, 408, 115, 408, 123, 386, 123, 386, 105" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=075" alt="Latimer">
+<AREA SHAPE="POLYGON" COORDS="419, 92, 420, 97, 414, 97, 413, 106, 393, 105, 392, 100, 387, 100, 386, 95, 389, 94, 396, 93, 401, 93, 406, 86" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=074" alt="Haskell">
+<AREA SHAPE="POLYGON" COORDS="387, 96, 387, 100, 391, 100, 392, 105, 386, 106, 384, 126, 368, 130, 364, 124, 356, 124, 356, 118, 356, 109, 359, 105, 363, 101, 368, 99" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=073" alt="Pittsburg">
+<AREA SHAPE="POLYGON" COORDS="436, 76, 438, 89, 436, 91, 431, 93, 428, 93, 421, 91, 405, 86, 404, 76" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=072" alt="Sequoyah">
+<AREA SHAPE="POLYGON" COORDS="391, 82, 394, 92, 390, 93, 383, 97, 378, 97, 371, 98, 361, 101, 361, 90, 365, 89, 372, 80" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=071" alt="McIntosh">
+<AREA SHAPE="POLYGON" COORDS="277, 92, 292, 102, 292, 108, 301, 113, 276, 113" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=028" alt="McClain">
+<AREA SHAPE="POLYGON" COORDS="403, 68, 403, 80, 405, 87, 399, 94, 394, 93, 392, 81, 374, 80, 374, 72, 371, 72, 371, 65, 377, 65, 378, 69, 386, 70, 391, 66" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=070" alt="Muskogee">
+<AREA SHAPE="POLYGON" COORDS="432, 50, 435, 77, 419, 77, 421, 50" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=069" alt="Adair">
+<AREA SHAPE="POLYGON" COORDS="420, 51, 419, 77, 404, 76, 404, 67, 396, 67, 398, 55, 403, 55, 404, 51" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=068" alt="Cherokee">
+<AREA SHAPE="POLYGON" COORDS="398, 57, 397, 62, 396, 67, 391, 67, 386, 70, 378, 70, 378, 65, 371, 65, 371, 48, 377, 51, 386, 55" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=067" alt="Wagoner">
+<AREA SHAPE="POLYGON" COORDS="370, 65, 370, 70, 374, 71, 374, 80, 371, 80, 369, 82, 368, 82, 366, 88, 358, 89, 356, 82, 353, 82, 351, 77, 351, 66" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=066" alt="Okmulgee">
+<AREA SHAPE="POLYGON" COORDS="349, 75, 351, 81, 355, 81, 356, 89, 361, 89, 361, 94, 339, 94, 338, 87, 330, 87, 330, 77" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=065" alt="Okfuskee">
+<AREA SHAPE="POLYGON" COORDS="357, 55, 359, 65, 351, 65, 350, 76, 330, 76, 328, 61, 330, 50, 344, 50, 345, 55" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=064" alt="Creek">
+<AREA SHAPE="POLYGON" COORDS="429, 24, 429, 36, 431, 49, 409, 50, 411, 24" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=063" alt="Delaware">
+<AREA SHAPE="POLYGON" COORDS="409, 32, 409, 50, 404, 50, 404, 55, 387, 54, 391, 32" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=062" alt="Mayes">
+<AREA SHAPE="POLYGON" COORDS="394, 28, 394, 32, 390, 32, 387, 53, 384, 54, 378, 50, 371, 50, 370, 28" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=061" alt="Rogers">
+<AREA SHAPE="POLYGON" COORDS="370, 37, 369, 50, 372, 50, 370, 65, 359, 65, 358, 55, 346, 55, 346, 50, 359, 50, 359, 35" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=060" alt="Tulsa">
+<AREA SHAPE="POLYGON" COORDS="345, 49, 318, 49, 318, 45, 315, 45, 312, 41, 310, 41, 310, 30, 313, 35, 315, 35, 322, 30, 324, 35" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=059" alt="Pawnee">
+<AREA SHAPE="POLYGON" COORDS="428, 8, 430, 23, 410, 24, 408, 8" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=058" alt="Ottawa">
+<AREA SHAPE="POLYGON" COORDS="408, 9, 410, 21, 410, 31, 394, 32, 394, 29, 390, 29, 389, 8" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=057" alt="Craig">
+<AREA SHAPE="POLYGON" COORDS="389, 8, 389, 28, 369, 28, 368, 9" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=056" alt="Nowata">
+<AREA SHAPE="POLYGON" COORDS="369, 9, 369, 37, 360, 37, 358, 8" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=055" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="359, 9, 359, 49, 348, 49, 343, 47, 339, 45, 333, 42, 331, 39, 325, 36, 324, 31, 321, 31, 317, 34, 312, 35, 312, 33, 316, 28, 309, 29, 307, 22, 310, 23, 322, 18, 322, 9" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=054" alt="Osage">
+<AREA SHAPE="POLYGON" COORDS="401, 151, 402, 160, 400, 160, 398, 162, 393, 166, 388, 166, 383, 163, 380, 162, 374, 163, 369, 164, 362, 159, 362, 151" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=053" alt="Choctaw">
+<AREA SHAPE="POLYGON" COORDS="362, 151, 362, 159, 369, 165, 363, 165, 358, 165, 351, 169, 343, 171, 339, 170, 334, 168, 330, 163, 331, 153, 337, 149" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=052" alt="Bryan">
+<AREA SHAPE="POLYGON" COORDS="333, 152, 330, 156, 330, 163, 326, 163" HREF="(32">
+<AREA SHAPE="POLYGON" COORDS="309, 156, 312, 158, 314, 159, 309, 161, 311, 164, 306, 166, 305, 171, 301, 171, 301, 167, 301, 164, 297, 164, 294, 164, 290, 167, 286, 164, 284, 162, 281, 162, 281, 156" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=050" alt="Love">
+<AREA SHAPE="POLYGON" COORDS="413, 124, 413, 133, 408, 134, 407, 138, 408, 146, 404, 146, 403, 151, 371, 151, 371, 132, 376, 132, 376, 128, 384, 128, 384, 123" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=049" alt="Pushmataha">
+<AREA SHAPE="POLYGON" COORDS="376, 128, 376, 133, 371, 133, 371, 150, 339, 149, 339, 137, 351, 137, 351, 132, 354, 132, 355, 123, 363, 124, 365, 129" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=048" alt="Atoka">
+<AREA SHAPE="POLYGON" COORDS="339, 137, 339, 150, 337, 150, 337, 152, 333, 152, 329, 150, 312, 149, 319, 132, 332, 132, 332, 136" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=047" alt="Johnston">
+<AREA SHAPE="POLYGON" COORDS="313, 141, 313, 149, 311, 150, 310, 156, 281, 155, 280, 134, 293, 134, 293, 139" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=046" alt="Carter">
+<AREA SHAPE="POLYGON" COORDS="280, 143, 280, 161, 276, 159, 272, 163, 268, 164, 261, 164, 261, 160, 257, 159, 254, 156, 253, 152, 253, 144" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=045" alt="Jefferson">
+<AREA SHAPE="POLYGON" COORDS="252, 133, 252, 150, 251, 152, 244, 151, 241, 152, 238, 155, 230, 154, 229, 150, 229, 145, 227, 142, 226, 138, 232, 134" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=044" alt="Cotton">
+<AREA SHAPE="POLYGON" COORDS="355, 119, 355, 131, 352, 132, 352, 137, 334, 137, 334, 123, 340, 123, 340, 119" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=043" alt="Coal">
+<AREA SHAPE="POLYGON" COORDS="340, 117, 339, 124, 334, 124, 334, 132, 319, 132, 316, 127, 314, 123, 314, 119, 314, 114, 321, 113, 339, 113" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=042" alt="Pontotoc">
+<AREA SHAPE="POLYGON" COORDS="313, 128, 318, 127, 318, 132, 317, 132, 315, 140, 309, 141, 308, 139, 294, 139, 294, 134, 301, 134, 301, 128" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=041" alt="Murray">
+<AREA SHAPE="POLYGON" COORDS="312, 114, 314, 126, 306, 127, 301, 127, 302, 133, 281, 134, 281, 124, 274, 124, 275, 114" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=040" alt="Garvin">
+<AREA SHAPE="RECT" COORDS="252, 124, 281, 144" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=039" alt="Stephens">
+<AREA SHAPE="POLYGON" COORDS="254, 115, 255, 123, 253, 124, 253, 132, 249, 132, 246, 134, 234, 134, 226, 139, 226, 134, 219, 133, 220, 114" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=038" alt="Comanche">
+<AREA SHAPE="POLYGON" COORDS="217, 127, 217, 134, 225, 134, 225, 140, 228, 142, 227, 150, 222, 153, 211, 149, 201, 148, 198, 139, 198, 132, 205, 128" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=037" alt="Tillman">
+<AREA SHAPE="POLYGON" COORDS="207, 126, 204, 129, 199, 130, 198, 137, 196, 140, 191, 137, 189, 141, 183, 138, 180, 140, 169, 134, 175, 133, 175, 124, 188, 124, 189, 121, 194, 118, 200, 116, 202, 122" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=036" alt="Jackson">
+<AREA SHAPE="POLYGON" COORDS="228, 103, 229, 115, 220, 115, 218, 128, 213, 128, 208, 128, 208, 126, 205, 122, 204, 122, 203, 117, 199, 117, 195, 114, 194, 108, 192, 103" HREF="%%scripturl%%?">
+<AREA SHAPE="POLYGON" COORDS="190, 103, 194, 107, 193, 110, 195, 113, 197, 118, 192, 118, 188, 123, 175, 123, 173, 120, 173, 116, 173, 112, 165, 113, 165, 110, 169, 108, 172, 104" HREF="%%scripturl%%?forecast=zandh&state=o">
+<AREA SHAPE="POLYGON" COORDS="163, 108, 164, 112, 172, 112, 173, 119, 175, 122, 176, 134, 166, 134, 162, 131, 159, 130, 159, 111, 159, 110" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=033" alt="Harmon">
+<AREA SHAPE="POLYGON" COORDS="361, 94, 361, 100, 357, 107, 355, 119, 341, 119, 339, 114, 336, 114, 336, 102, 338, 102, 340, 94" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=032" alt="Hughes">
+<AREA SHAPE="POLYGON" COORDS="338, 88, 339, 100, 337, 102, 336, 113, 333, 114, 331, 113, 328, 114, 323, 114, 321, 88" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=031" alt="Seminole">
+<AREA SHAPE="POLYGON" COORDS="330, 85, 330, 88, 322, 88, 320, 88, 322, 112, 302, 111, 302, 85" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=030" alt="Pottawatomie">
+<AREA SHAPE="POLYGON" COORDS="302, 89, 302, 110, 293, 109, 291, 102, 286, 98, 277, 91" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=029" alt="Cleveland">
+<AREA SHAPE="RECT" COORDS="254, 90, 276, 125" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=027" alt="Grady">
+<AREA SHAPE="POLYGON" COORDS="328, 61, 330, 85, 302, 84, 302, 60" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=026" alt="Lincoln">
+<AREA SHAPE="POLYGON" COORDS="301, 74, 301, 90, 276, 89, 276, 72" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=025" alt="Oklahoma">
+<AREA SHAPE="POLYGON" COORDS="275, 75, 276, 91, 266, 91, 257, 90, 245, 90, 245, 72" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=024" alt="Canadian">
+<AREA SHAPE="POLYGON" COORDS="244, 81, 244, 89, 255, 89, 255, 114, 228, 114, 228, 82" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=023" alt="Caddo">
+<AREA SHAPE="POLYGON" COORDS="228, 84, 228, 103, 192, 103, 192, 84" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=022" alt="Washita">
+<AREA SHAPE="POLYGON" COORDS="191, 84, 191, 103, 172, 103, 170, 106, 164, 108, 159, 107, 159, 86, 180, 86, 181, 83" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=021" alt="Beckham">
+<AREA SHAPE="POLYGON" COORDS="329, 50, 328, 61, 301, 61, 293, 58, 293, 49, 301, 49, 301, 46, 317, 46, 317, 50" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=020" alt="Payne">
+<AREA SHAPE="POLYGON" COORDS="292, 50, 292, 58, 302, 61, 302, 74, 276, 73, 275, 49" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=019" alt="Logan">
+<AREA SHAPE="POLYGON" COORDS="275, 50, 275, 73, 249, 72, 249, 49" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=018" alt="Kingfisher">
+<AREA SHAPE="POLYGON" COORDS="249, 49, 249, 71, 244, 71, 244, 81, 228, 80, 228, 49" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=017" alt="Blaine">
+<AREA SHAPE="POLYGON" COORDS="226, 67, 228, 84, 191, 84, 191, 68" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=016" alt="Custer">
+<AREA SHAPE="POLYGON" COORDS="227, 49, 226, 67, 190, 67, 191, 51" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=015" alt="Dewey">
+<AREA SHAPE="POLYGON" COORDS="190, 57, 190, 84, 181, 84, 181, 87, 160, 87, 160, 63, 168, 57, 168, 60, 172, 64, 177, 66, 180, 64, 185, 59" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=014" alt="Roger Mills">
+<AREA SHAPE="POLYGON" COORDS="307, 29, 315, 28, 309, 32, 308, 41, 313, 41, 312, 44, 303, 44, 302, 49, 286, 50, 286, 30" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=013" alt="Noble">
+<AREA SHAPE="RECT" COORDS="254, 29, 286, 50" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=012" alt="Garfield">
+<AREA SHAPE="POLYGON" COORDS="254, 35, 254, 49, 211, 49, 211, 32, 217, 32, 230, 38, 233, 38, 234, 34" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=011" alt="Major">
+<AREA SHAPE="POLYGON" COORDS="211, 33, 211, 50, 179, 51, 179, 28, 195, 28, 196, 17" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=010" alt="Woodward">
+<AREA SHAPE="POLYGON" COORDS="179, 28, 179, 50, 191, 51, 191, 56, 185, 58, 184, 61, 180, 63, 175, 65, 172, 64, 168, 60, 168, 57, 164, 60, 160, 62, 160, 29" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=009" alt="Ellis">
+<AREA SHAPE="POLYGON" COORDS="322, 8, 322, 16, 319, 19, 315, 21, 311, 23, 307, 21, 308, 24, 308, 28, 286, 30, 286, 9" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=008" alt="Kay">
+<AREA SHAPE="RECT" COORDS="254, 8, 286, 30" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=007" alt="Grant">
+<AREA SHAPE="POLYGON" COORDS="255, 9, 255, 34, 233, 35, 231, 9" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=006" alt="Alfalfa">
+<AREA SHAPE="POLYGON" COORDS="232, 8, 233, 38, 229, 39, 226, 37, 224, 36, 221, 34, 218, 33, 212, 33, 212, 30, 201, 18, 197, 18, 185, 9" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=005" alt="Woods">
+<AREA SHAPE="POLYGON" COORDS="186, 9, 195, 18, 195, 28, 159, 28, 159, 8" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=004" alt="Harper">
+<AREA SHAPE="RECT" COORDS="109, 8, 159, 34" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=003" alt="Beaver">
+<AREA SHAPE="RECT" COORDS="55, 8, 111, 34" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=002" alt="Texas">
+<AREA SHAPE="RECT" COORDS="8, 8, 57, 34" HREF="%%scripturl%%?forecast=zandh&state=ok&zone=001" alt="Cimarron">
+</MAP>
+<img src="%%stateimagesurl%%/ok-zones.gif" width="446" height="186" alt="OK" border="0" usemap="#FrontPageMap0">
+<-end image map->

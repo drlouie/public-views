@@ -1,0 +1,28 @@
+{
+	package CAVacationsSitePage;
+	@ISA = qw( VirtualDirectorySitePage );
+	
+	sub links {
+		my $page = shift;
+		my $vURL = $page->vURL();
+		my $pagename = $page->getURL();
+		my @pagename = split(/\//, $pagename);
+		my $page = $pagename[5];
+		
+		my $out = qq`
+			<a href="$vURL/cavacations/anzaborrego/">Anza Borrego</a> || <a href="$vURL/cavacations/sanfrancisco/">San Francisco</a><BR>
+			<!--<a href="$vURL/cavacations/tahoe/">Lake Tahoe</a> || <a href="$vURL/cavacations/sierra/">Sierra Nevada</a><BR>-->  
+			<a href="$vURL/cavacations/pebblebch/">Pebble Beach</a> || <a href="$vURL/cavacations/palmsprings/">Palm Springs</a><BR>  
+		 	<a href="$vURL/cavacations/hotels/">Beach Hotels</a>  || <a href="$vURL/cavacations/baja/">Baja California</a><BR>
+		 	<a href="$vURL/cavacations/cambria/">Cambria</a>  || <a href="$vURL/cavacations/catalina/">Channel Islands</a><BR>
+			<a href="$vURL/cavacations/desert/">California Deserts</a>  || <a href="$vURL/cavacations/laguna/">Laguna Beach</a><BR>
+		`;
+		
+		$out =~ s/<A HREF="$vURL\/cavacations\/$page\/\">(.*)?<\/A>/$1/i;
+		
+		return $out;
+	}	
+}
+
+
+'CAVacationsSitePage';

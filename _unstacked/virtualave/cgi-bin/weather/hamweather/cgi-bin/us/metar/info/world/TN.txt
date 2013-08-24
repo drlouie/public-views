@@ -1,0 +1,12 @@
+DTTB|Bizerte
+DTTJ|Djerba Mellita
+DTTR|El Borma
+DTTG|Gabes
+DTMB|Habib Bourguiba 
+DTTN|Jendouba
+DTTK|Kairouan
+DTTL|Kelibia
+DTTD|Remada
+DTTX|Sfax El-Maou
+DTTZ|Tozeur
+DTTA|Tunis-Carthage

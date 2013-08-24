@@ -1,0 +1,20 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="POLYGON" COORDS="94, 270, 122, 277, 153, 276, 150, 352, 79, 350, 78, 324, 69, 318, 71, 294, 89, 292" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=014" alt="Windham ">
+<AREA SHAPE="POLYGON" COORDS="30, 266, 93, 266, 88, 292, 71, 292, 67, 320, 80, 324, 77, 350, 25, 349" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=013" alt="Bennington">
+<AREA SHAPE="POLYGON" COORDS="74, 180, 87, 175, 89, 178, 102, 167, 190, 195, 169, 218, 155, 275, 117, 277, 94, 270, 95, 267, 90, 265, 92, 256, 103, 256, 108, 239, 102, 235, 104, 223, 109, 207, 97, 200, 100, 191, 93, 187, 79, 183, 77, 180" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=012" alt="Windsor">
+<AREA SHAPE="POLYGON" COORDS="11, 194, 34, 195, 38, 186, 62, 182, 68, 187, 79, 185, 96, 186, 99, 190, 96, 202, 111, 209, 103, 223, 102, 237, 109, 240, 101, 255, 93, 253, 87, 266, 31, 264, 30, 231, 23, 217, 16, 218, 8, 223, 4, 221, 5, 213, 14, 195" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=011" alt="Rutland">
+<AREA SHAPE="POLYGON" COORDS="162, 129, 213, 134, 214, 146, 189, 193, 100, 167, 110, 155, 133, 136, 154, 139" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=010" alt="Orange">
+<AREA SHAPE="CIRCLE" COORDS="132, 121, 6" HREF="%%scripturl%%?forecast=zandh&state=vt&place=montpelier&zone=008" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="98, 89, 121, 97, 130, 88, 149, 93, 157, 82, 185, 97, 164, 128, 159, 128, 155, 137, 134, 134, 110, 157, 84, 147, 78, 132, 86, 110" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=008" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="22, 120, 64, 118, 71, 113, 83, 146, 108, 156, 89, 179, 87, 174, 72, 179, 75, 184, 66, 186, 63, 181, 36, 184, 34, 196, 13, 194, 0, 152" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=009" alt="Addison">
+<AREA SHAPE="POLYGON" COORDS="164, 71, 180, 77, 198, 54, 205, 55, 205, 48, 214, 52, 230, 43, 245, 50, 235, 60, 243, 69, 234, 80, 239, 84, 232, 88, 246, 107, 222, 109, 213, 121, 212, 134, 164, 126, 185, 97, 183, 95, 154, 82" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=007" alt="Caledonia">
+<AREA SHAPE="POLYGON" COORDS="82, 62, 92, 50, 98, 53, 102, 42, 125, 36, 156, 50, 147, 63, 163, 71, 146, 93, 129, 88, 121, 99, 95, 88, 97, 76" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=006" alt="Lamoille">
+<AREA SHAPE="POLYGON" COORDS="14, 73, 28, 69, 34, 49, 81, 62, 97, 76, 96, 90, 95, 100, 84, 113, 77, 132, 72, 114, 65, 113, 62, 117, 22, 119" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=005" alt="	Chittenden">
+<AREA SHAPE="POLYGON" COORDS="235, 6, 295, 3, 290, 72, 274, 92, 246, 106, 230, 90, 240, 84, 234, 79, 243, 68, 236, 61, 245, 49, 226, 40, 237, 26, 230, 20" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=004" alt="Essex">
+<AREA SHAPE="POLYGON" COORDS="141, 6, 235, 5, 231, 21, 238, 27, 224, 40, 227, 43, 217, 51, 204, 45, 205, 54, 198, 53, 179, 73, 149, 61, 156, 49, 135, 41, 144, 31" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=003" alt="	Orleans">
+<AREA SHAPE="POLYGON" COORDS="38, 6, 139, 6, 139, 32, 135, 40, 126, 36, 102, 40, 96, 54, 92, 51, 79, 63, 64, 59, 35, 50, 35, 40, 41, 28, 33, 16" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=002" alt="Franklin">
+<AREA SHAPE="POLYGON" COORDS="15, 6, 38, 6, 33, 16, 39, 29, 34, 40, 32, 61, 27, 69, 14, 73, 10, 67, 9, 30" HREF="%%scripturl%%?forecast=zandh&state=vt&zone=001" alt="Grand Isle">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="355" alt="VT" src="%%stateimagesurl%%/vt-zones.gif" width="297">
+<-end image map->

@@ -1,0 +1,18 @@
+banff|southern|fpcn11.wyc.htm|fpcn51.wyc.htm
+calgary|southern|fpcn11.wyc.htm|fpcn51.wyc.htm
+cold lake|northern|fpcn12.weg.htm|fpcn52.weg.htm
+coronation|southern|fpcn11.wyc.htm|fpcn51.wyc.htm
+edmonton|northern|fpcn12.weg.htm|fpcn52.weg.htm
+edson|northern|fpcn12.weg.htm|fpcn52.weg.htm
+fort mcmurray|northern|fpcn12.weg.htm|fpcn52.weg.htm
+ghost lake|southern|fpcn11.wyc.htm|fpcn51.wyc.htm||waterton
+grande prairie|northern|fpcn12.weg.htm|fpcn52.weg.htm
+high level|northern|fpcn12.weg.htm|fpcn52.weg.htm
+jasper|northern|fpcn12.weg.htm|fpcn52.weg.htm
+lethbridge|southern|fpcn11.wyc.htm|fpcn51.wyc.htm
+lloydminster|northern|fpcn12.weg.htm|fpcn52.weg.htm
+medicine hat|southern|fpcn11.wyc.htm|fpcn51.wyc.htm
+red deer|southern|fpcn11.wyc.htm|fpcn51.wyc.htm
+rocky mountain house|southern|fpcn11.wyc.htm|fpcn51.wyc.htm
+slave lake|northern|fpcn12.weg.htm|fpcn52.weg.htm
+waterton|southern|fpcn11.wyc.htm|fpcn51.wyc.htm

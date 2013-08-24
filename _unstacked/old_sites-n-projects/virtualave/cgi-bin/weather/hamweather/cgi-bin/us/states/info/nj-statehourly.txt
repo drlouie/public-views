@@ -1,0 +1,10 @@
+Andover|Andover|1
+Belmar|Belmar|14
+Millville|Millville|21
+Mount Holly|Mt. Holly|19
+Newark|Newark|5
+Pomona|Atlantic City|25
+Somerville|Somerville|10
+Trenton|Trenton|15
+Wildwood|Wildwood|24
+

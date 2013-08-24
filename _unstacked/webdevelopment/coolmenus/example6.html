@@ -1,0 +1,174 @@
+<html>
+<head>
+	<title>eXperience DHTML CoolMenus - DHTML Menu example 5</title>
+</head>
+<body>
+<script language="JavaScript1.2" src="coolmenus.js">
+/*******************************************************************************
+Copyright (c) 1999 Thomas Brattli (www.bratta.com)
+
+eXperience DHTML coolMenus - Get it at www.bratta.com
+Version 2.0
+This script can be used freely as long as all copyright messages are
+intact. Visit www.bratta.com/dhtml for the latest version of the script.
+
+These are the varibles you have to set to customize the menu.
+*******************************************************************************/
+</script>
+<script>
+
+
+/********************************************************************************
+Variables to set.
+
+Remember that to set fontsize and fonttype you set that in the stylesheet
+above!
+********************************************************************************/
+
+//Making a menu object
+oMenu=new menuObj('oMenu') //Place a name for the menu in there. Must be uniqe for each menu
+
+//Setting menu object variables
+
+//Style variables NOTE: The stylesheet have been removed. Use this instead! (some styles are there by default, like position:absolute ++)
+oMenu.clMain='padding:5px; font-family:arial; font-size:13px; font-weight:bold' //The style for the main menus
+oMenu.clSub='padding:5px; font-family:arial; font-size:12px' //The style for the submenus
+oMenu.clSubSub='padding:5px; font-family:arial; font-size:11px' //The style for the subsubmenus
+oMenu.clAMain='text-decoration:none; color:White' //The style for the main links
+oMenu.clASub='text-decoration:none; color:White' //The style for the sub links
+oMenu.clASubSub='text-decoration:none; color:White' //The style for the subsub links
+
+//Writing out the style for the menu (leave this line!)
+oMenu.makeStyle()
+
+//Background bar properties
+oMenu.backgroundbar=1 //Set to 0 if no backgroundbar
+oMenu.backgroundbarfromleft="10%" //The left placement of the backgroundbar in pixel or %
+oMenu.backgroundbarfromtop=50 //The top placement of the backgroundbar  in pixel or %
+oMenu.backgroundbarsize="80%" //The size of the bar in pixel or %
+oMenu.backgroundbarcolor="Navy" //The backgroundcolor of the bar
+
+oMenu.mainheight=30 //The height of the main menuitems in pixel or %
+oMenu.mainwidth=170 //The width of the main menuitems  in pixel or %
+
+/*These are new variables. In this example they are set like the previous version*/
+oMenu.subwidth=oMenu.mainwidth // ** NEW ** The width of the submenus
+oMenu.subheight=25 //The height if the subitems in pixel or % 
+
+oMenu.subsubwidth=oMenu.subwidth // ** NEW ** The width of the subsubmenus in pixel or % 
+oMenu.subsubheight=25 //** NEW ** The height if the subsubitems in pixel or % 
+
+oMenu.subplacement=oMenu.mainwidth //** NEW ** Relative to the main item
+oMenu.subsubXplacement=oMenu.subwidth //** NEW ** The X placement of the subsubmenus, relative to the sub item
+oMenu.subsubYplacement=0 //** NEW ** The Y placement of the subsubmenus, relative to the sub item
+
+oMenu.mainbgcoloroff='#990033' //The backgroundcolor of the main menuitems
+oMenu.mainbgcoloron='#ffccff' //The backgroundcolor on mouseover of the main menuitems
+oMenu.subbgcoloroff='#006600' //The backgroundcolor of the sub menuitems
+oMenu.subbgcoloron='#ff33ff' //The backgroundcolor on mouseover of the sub menuitems
+oMenu.subsubbgcoloroff='#999900' //The backgroundcolor of the subsub menuitems
+oMenu.subsubbgcoloron='#6600ff' //The backgroundcolor on mouseover of the subsub menuitems
+oMenu.stayoncolor=1 //Do you want the menus to stay on the mouseovered color when clicked?
+
+oMenu.menuspeed=10 //The speed of the clipping in px
+oMenu.menusubspeed=15 //The speed of the submenus clipping in px
+
+oMenu.menurows=0 //Set to 0 if you want rows and to 1 if you want columns
+
+oMenu.menueventon="click" //Set this to "mouse" if you want the menus to appear onmouseover, set it to "click" if you want it to appear onclick
+oMenu.menueventoff="click" //Set this to "mouse" if you them to disappear onmouseout, if not set it to "click"
+
+//Placement of the menuitems
+
+//Example in %:
+//oMenu.menuplacement=new Array("5%","35%","65%") //Remember to make the arrays contain as many values as you have main menuitems
+
+//Example in px: (remember to use the ' ' around the numbers)
+//oMenu.menuplacement=new Array(10,200,300,400,500)
+
+//Example right beside eachother (only adding the pxbetween variable)
+oMenu.menuplacement=0
+
+//If you use the "right beside eachother" you cant how many pixel there should be between each here
+oMenu.pxbetween=20 //in pixel or %
+
+//And you can set where it should start from the left here
+oMenu.fromleft="10%" //in pixel or %
+
+//This is how much from the top the menu should be.
+oMenu.fromtop=50 //in pixel or %
+
+/********************************************************************************
+Construct your menus below
+********************************************************************************/
+
+//MAIN 0
+
+//Main items:
+// makeMain(MAIN_NUM,'TEXT','LINK','FRAME_TARGET') (set link to 0 if you want submenus of this menu item)
+oMenu.makeMain(0,'Dynamic HTML',0)
+	//Sub items:
+	// makeSub(MAIN_NUM,SUB_NUM,'TEXT','LINK',TOTAL,'FRAME_TARGET') (set link to 0 if you want submenus of this menu item)
+	oMenu.makeSub(0,0,'Scripts',0,5)
+	oMenu.makeSub(0,1,'Demos',0,5)
+	oMenu.makeSub(0,2,'Support',0,5)
+	oMenu.makeSub(0,3,'Tutorials',0,5)
+	oMenu.makeSub(0,4,'Forums',0,5)
+		//SubSub items:
+		// makeSubSub(MAIN_NUM,SUB_NUM,SUBSUB_NUM,'TEXT','LINK',TOTAL,'FRAME_TARGET')
+		oMenu.makeSubSub(0,0,0,'ZoomFade','test.html',7,'_blank')
+		oMenu.makeSubSub(0,0,1,'ScrollText','test.html',7,'_blank')
+		oMenu.makeSubSub(0,0,2,'PageScroll','test.html',7,'_blank')
+		oMenu.makeSubSub(0,0,3,'Foldoutmenu','test.html',7,'_blank')
+		oMenu.makeSubSub(0,0,4,'Spotlight','test.html',7,'_blank')
+		oMenu.makeSubSub(0,0,5,'Bgchange','test.html',7,'_blank')
+		oMenu.makeSubSub(0,0,6,'Showhide','test.html',7,'_blank')
+		
+		oMenu.makeSubSub(0,1,0,'DHTML Guestbook','test.html',6,'_blank')
+		oMenu.makeSubSub(0,1,1,'DHTML Intro','test.html',6,'_blank')
+		oMenu.makeSubSub(0,1,2,'CircleMenu','test.html',6,'_blank')
+		oMenu.makeSubSub(0,1,3,'DHTML Space 1.0','#',6,'_blank')
+		oMenu.makeSubSub(0,1,4,'Old site 4','test.html',6,'_blank')
+		oMenu.makeSubSub(0,1,5,'BallControl','test.html',6,'_blank')
+		
+		oMenu.makeSubSub(0,2,0,'Site FAQ','test.html',2,'_blank')
+		oMenu.makeSubSub(0,2,1,'Scripts FAQ','test.html',2,'_blank')
+		
+		oMenu.makeSubSub(0,3,0,'Introduction','test.html',3,'_blank')
+		oMenu.makeSubSub(0,3,1,'5th generation','test.html',3,'_blank')
+		oMenu.makeSubSub(0,3,2,'Keyboard','test.html',3,'_blank')
+		
+		oMenu.makeSubSub(0,4,0,'Forum 1','test.html',2,'_blank')
+		oMenu.makeSubSub(0,4,1,'Forum 2','test.html',2,'_blank')
+
+//MAIN 1		
+oMenu.makeMain(1,'Help',0)
+	oMenu.makeSub(1,0,'How do I do this?',0,3)
+	oMenu.makeSub(1,1,'How? (no submenu)','test.html',3,'_blank')
+	oMenu.makeSub(1,2,'Why does it work?',0,3)
+		oMenu.makeSubSub(1,0,0,'Like this part 1','test.html',3,'_blank')
+		oMenu.makeSubSub(1,0,1,'Like this part 2','test.html',3,'_blank')
+		oMenu.makeSubSub(1,0,2,'Like this part 3','test.html',3,'_blank')
+		
+		oMenu.makeSubSub(1,2,0,'Forum 1','test.html',2,'_blank')
+		oMenu.makeSubSub(1,2,1,'Forum 2','test.html',2,'_blank')
+
+//MAIN 2		
+oMenu.makeMain(2,'Links',0)
+	oMenu.makeSub(2,0,'Yahoo',0,2)
+	oMenu.makeSub(2,1,'Altavista','test.html',2,'_blank')
+		oMenu.makeSubSub(2,0,0,'Yahoo Norway','#',3,'_blank')
+		oMenu.makeSubSub(2,0,1,'Yahoo US','#',3,'_blank')
+		oMenu.makeSubSub(2,0,2,'Yahoo UK','#',3,'_blank')
+/********************************************************************************
+End menu construction
+********************************************************************************/
+		
+		
+//When all the menus are written out we initiates the menu
+oMenu.construct()	
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+K12N|Andover, Aeroflex-Andover Airport
+KACY|Atlantic City, Atlantic City International Airport
+KBLM|Belmar-Farmdale
+KCDW|Caldwell, Essex County Airport
+KNEL|Lakehurst Naval Air Station
+KWRI|Mcguire Air Force Base
+KMIV|Millville, Millville Municipal Airport
+KMMU|Morristown Municipal
+KVAY|Mount Holly, South Jersey Regional Airport
+KEWR|Newark, Newark International Airport
+KSMQ|Somerville, Somerset Airport
+KTEB|Teterboro, Teterboro Airport
+KTTN|Trenton, Mercer County Airport
+KWWD|Wildwood Automatic Weather Observing / Reporting System

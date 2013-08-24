@@ -1,0 +1,9 @@
+Akron-Canton|Akron|21
+Cinc-Lunken|Cincinnati|77
+Cle-Lakefront|Cleveland|11
+Columbus|Columbus|55
+Defiance|Defiance|4
+Findlay|Findlay|17
+Toledo|Toledo|3
+Youngstown|Youngstown|33
+Zanesville|Zanesville|57

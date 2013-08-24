@@ -1,0 +1,101 @@
+<html>
+
+<head>
+<title>HAMweather Usage</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Usage: &nbsp;
+    Accessing</strong></big></font></td>
+  </tr>
+</table>
+
+<p>Ok, now you have HAMweather 2.0 installed&nbsp; you wonder how to use it.&nbsp; The
+templates that came with the distribution provide you with a self contained&nbsp; version
+of HAMweather.&nbsp; Basically, a virtual stand alone system.&nbsp; Ok, but how do you
+access it?&nbsp; Easy.&nbsp; You just link to the main HAMweather script (hamweather.cgi)
+and HAMweather will start working as a self contained weather center.&nbsp; </p>
+
+<p>If you link to the script with out any parameters then you will get the default
+forecast. (see <a href="admindefaults.html">Administration : Defaults &amp; Options</a> on
+setting the defaults). <font color="#FF0000"><strong>For Example:</strong> if the URL to
+the HAMweather.cgi script on your system was : <a
+href="http://www.hamweather.com/cgi-bin/hamweather.cgi">http://www.hamweather.com/cgi-bin/hamweather.cgi</a>
+&nbsp; then you could just link to this and display the default forecast.</font></p>
+
+<p>If you want to lead users to a specific forecast then just append the appropriate
+parameters to the URL.&nbsp; <font color="#FF0000"><strong>For Example:</strong> to send
+users directly to the zone and hourly forecast for Roanoke, VA us the URL : <a
+href="http://www.hamweather.com/cgi-bin/hamweather.cgi?forecast=zandh&amp;place=roanoke&amp;state=va">http://www.hamweather.com/cgi-bin/hamweather.cgi?forecast=zandh&amp;place=roanoke&amp;state=va</a></font><br>
+In this example the <em>forecast</em> parameter defines what forecast to display, the <em>place</em>
+parameter defines what city/county you want forecast fore and finally, the <em>state</em>
+parameter defines the state in which the <em>place</em> is located. <strong>NOTE: </strong>See
+the <a href="usageparms.html">available parameters chart</a> for other parameters you can
+use.</p>
+
+<p>If you installed HAMweather Pro then you can point a person directly to the National
+Summary (National Current conditions) by using the URL : <a
+href="http://www.hamweather.com/cgi-bin/hamweather.cgi?forecast=ns&amp;state=us&amp;map=1">http://www.hamweather.com/cgi-bin/hamweather.cgi?forecast=ns&amp;state=us&amp;map=1</a><br>
+In this example, the forecast parameter is the forecast to display, the state is set to us
+to indicate we want us info, and the map parameter is set to one to tell HAMweather to
+update the national summary map if needed.</p>
+
+<p>HAMweather can also be accessed from a form on a web page. To do this just set the form
+action to point to your HAMweather URL and set the method to either &quot;get&quot; or
+&quot;post&quot;&nbsp; Then add the needed parameters as form elements. An example of a
+simple form asking for the web site user to enter the place and state for their zone
+forecast could be written as follows:</p>
+<div align="left">
+
+<table border="2" bgcolor="#FFFFD7" cellpadding="2" bordercolor="#000080"
+bordercolorlight="#000080" bordercolordark="#000080" cellspacing="0">
+  <tr>
+    <td><pre><small>&lt;form method=&quot;POST&quot; action=&quot;http://www.hamweather.com/cgi-bin/hamweather.cgi&quot;&gt;
+  Enter your 'City, State', state or zipcode :
+  &lt;input type=&quot;text&quot; name=&quot;pands&quot; size=&quot;20&quot; value=&quot;Blacksburg, VA&quot;&gt;</small>
+<small>  &lt;input type=&quot;hidden&quot; name=&quot;forecast&quot; value=&quot;zandh&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;GO&quot; name=&quot;Submit&quot;&gt;
+&lt;/form&gt;</small></pre>
+    </td>
+  </tr>
+</table>
+</div>
+
+<p>The above example is similar to what you see at the top of&nbsp; the&nbsp; pages
+included in the HAMweather distribution. Also for a full list of the available parameters
+that can be used with HAMweather refer to the <a href="usageparms.html">Available
+parameters page</a>.</p>
+
+<p>For the command line users or for users setting up cron jobs you can also add
+parameters from the command line. The parameters follow the script name and are separated
+by a space. <font color="#FF0000"><strong>For Example:</strong> to display the zone and
+hourly forecast for Roanoke, Virginia you would use the following command line:</font> <font
+color="#000080">hamweather.cgi forecast=zandh place=roanoke state=va</font></p>
+
+<p>Also when entering the parameters in the command line there may be a time when you need
+to include a space in a place name or such to do this just use a plus sign (+) in place of
+the needed space. <font color="#FF0000"><strong>For Example</strong>: to display the zone
+forecast for Newport News, Virginia use then following command line:</font><br>
+<font color="#000080">hamweather.cgi forecast=zandh place=newport+news state=va</font></p>
+
+<p>Finally, you should get in the habit of adding the parameters &quot;user&quot; and
+&quot;theme&quot; to all links you make to the HAMweather scripts.&nbsp; For these
+indicate which user and theme configuration files to use. If you do not add them then
+HAMweather will use the &quot;default.txt&quot; user file and the &quot;default.txt&quot;
+theme file. <font color="#FF0000"><strong>For Example: </strong>A proper link to display
+the zone and hourly forecast for Roanoke, Virginia which includes the user and theme
+parameters would look like:<br>
+</font><font color="#000080"><a
+href="http://www.hamweather.com/cgi-bin/hamweather.cgi?user=default&amp;theme=default&amp;forecast=zandh&amp;place=roanoke&amp;state=va">http://www.hamweather.com/cgi-bin/hamweather.cgi?user=default&amp;theme=default&amp;forecast=zandh&amp;place=roanoke&amp;state=va</a><br>
+</font></p>
+
+<p>Now that you know the general usage its time to review the <a href="usageparms.html">parameters
+that are available</a>. </p>
+
+<p><em><small>HAMweather </small><font FACE="Verdana,Arial,Helvetica" size="1">copyright
+© 2000 by HAMweather, LLC, all rights reserved</font></em></p>
+</body>
+</html>

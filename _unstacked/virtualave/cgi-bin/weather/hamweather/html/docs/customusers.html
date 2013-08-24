@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<title>HAMweather Multiple Users</title>
+
+</head>
+
+<body bgcolor='#ffffff' >
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Customization:
+    Multiple Users</strong></big></font></td>
+  </tr>
+</table>
+
+<p>HAMweather 2.0 has the very powerful ability to allow one installation of HW on a
+server provide multiple clients/users with personal customized HW sites.&nbsp; This is not
+to be confused with the ability to have multi web site visitors obtain forecasts, but the
+ability for an ISP to have one installation of HW on a server and allow the various
+clients to create their own HW web sites.&nbsp; </p>
+
+<p>Since only one installation needs to be made per server then upgrading can be performed
+easily.&nbsp; Also resources are saved because all the various HW sites on the server will
+use the same cache, thus reducing disk space usage and bandwidth.&nbsp; Each users HW
+templates and graphics can be stored in their corresponding web space thus, allowing for
+the disk space used to be part of their disk allowance.&nbsp; Also, each user can have
+their own themes that cannot be accessed by others web sites on the server.&nbsp; </p>
+
+<p>The process of allowing for multiple users is easily done.&nbsp; Simply include the
+user parameter in the links to the HAMweather cgi.&nbsp; For example: If Bob was a user
+and had a custom HW site then he would just add &quot;user=bob&quot; to his links to the
+HW site. An example URL may look like:<br>
+<small>http://www.hamweather.com/cgi-bin/hamweather.cgi?user=bob&amp;theme=default </small></p>
+
+<p>If no user name is provided or the user doesn't exist then the name of
+&quot;default&quot; is used by HAMweather.</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Customization: User
+    Setup</strong></big></font></td>
+  </tr>
+</table>
+
+<p>When setting up a new user, you need to create a user configuration file.&nbsp; This is
+a file that gives HW specific information on the user .&nbsp; These files are stored in
+the &quot;user&quot; directory in the main HW cgi path.&nbsp; When it comes to naming the
+file you just add the extension &quot;.txt&quot; to the name of the user. Thus a user
+named &quot;bob&quot; would have a configuration file with the name &quot;bob.txt&quot;</p>
+
+<p>Actually when it comes to creating this user configuration file, the HW web
+administration can create the file and allow you to set the various settings. &nbsp;&nbsp;
+Review the HW web administration&nbsp; pages for further details.</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Customization: User
+    Administration</strong></big></font></td>
+  </tr>
+</table>
+
+<p>As stated above the HW web administration will allow you to create users and set
+various settings for them.&nbsp; As of HW 2 Beta 1 the web administration does not allow
+for users to administer their own sites, using security etc.&nbsp; This feature will be
+added before the final release.&nbsp; Currently it is suggested that you set the user up
+then provide them with information on customizing the templates etc. that you have placed
+in their own web space.</p>
+
+<p>&nbsp;</p>
+
+<p><a href="administration.html"><small>Now on to HAMweather Administration</small></a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Coastline Micro's - DTHML based Product Test Page</title>
+<style type="text/css">
+#divCont{position:absolute; overflow:hidden; left:375; top:300; clip:rect(0,530,415,0); height:320; width:780; }
+#divLoad{position:absolute; left:375; top:300; clip:rect(0,530,415,0); height:320; width:780; visibility:hidden;}
+#divIEText{position:absolute; left:0; top:0}
+#divArrows{position:absolute; left:420; top:250; z-index:10; visibility:hidden}
+#divLinks{position:absolute; left:50; top:220}
+</style>
+</HEAD>
+<BODY bgcolor="White" onLoad="javascript:ifrinit();">
+<script language="JavaScript" src="js/menu_config.js"></script>
+<script language="Javascript" src="js/menu_construct.js"></script>
+<div id="divLinks">
+<a href="#" onclick="frame.loadpage('page1.html'); return false">Load page 1</a>
+<a href="#" onclick="frame.loadpage('page2.html'); return false">Load page 2</a>
+<a href="#" onclick="frame.loadpage('page3.html'); return false">Load page 3</a>
+</div>
+
+<!-- THIS DIV IS USED BY ALL BROWSERS EXCEPT IE5.5 AND NS6 -->
+<div id="divArrows">
+<a href="#" onmouseover="frame.scroll=true; frame.up(3)" onmouseout="frame.scroll=false">Up slow</a> -
+<a href="#" onmouseover="frame.scroll=true; frame.up(8)" onmouseout="frame.scroll=false">Up medium</a> -
+<a href="#" onmouseover="frame.scroll=true; frame.up(15)" onmouseout="frame.scroll=false">Up fast</a>
+<br><br><br><br>
+<a href="#" onmouseover="frame.scroll=true; frame.down(3)" onmouseout="frame.scroll=false">Down slow</a> -
+<a href="#" onmouseover="frame.scroll=true; frame.down(8)" onmouseout="frame.scroll=false">Down medium</a> -
+<a href="#" onmouseover="frame.scroll=true; frame.down(15)" onmouseout="frame.scroll=false">Down fast</a>
+</div>
+<script language="JavaScript" src="js/pageload1.js"></script>
+<script language="Javascript" src="js/pageload2.js"></script>
+
+YOUR REGULAR BODY CONTENT GOES IN HERE
+</BODY>
+</HTML>
+
+

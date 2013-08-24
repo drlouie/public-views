@@ -1,0 +1,7 @@
+LYBE|Beograd / Surcin
+LYNI|Nis
+LYTI|Podgorica / Golubovci
+LYPG|Podgorica Titograd 
+LYPR|Pristina
+LQSA|Sarajevo / Butmir
+LYTV|Tivat

@@ -1,0 +1,112 @@
+<-begin image map->
+<MAP NAME="FrontPageMap0">
+<AREA SHAPE="CIRCLE" COORDS="312, 48, 3" HREF="%%scripturl%%?forecast=zandh&state=nc&place=raleigh">
+<AREA SHAPE="POLYGON" COORDS="479, 80, 455, 87, 479, 75" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=104" alt="Eastern Hyde">
+<AREA SHAPE="POLYGON" COORDS="473, 35, 488, 57, 491, 79, 481, 76, 482, 55" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=103" alt="Eastern Dare">
+<AREA SHAPE="POLYGON" COORDS="453, 8, 461, 7, 471, 34, 466, 34" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=102" alt="Eastern Currituck">
+<AREA SHAPE="POLYGON" COORDS="362, 128, 358, 133, 354, 136, 350, 142, 349, 131, 345, 129" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=101" alt="New Hanover">
+<AREA SHAPE="POLYGON" COORDS="345, 127, 350, 133, 350, 142, 347, 150, 317, 153, 310, 150, 318, 139, 322, 139, 336, 131, 336, 126" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=100" alt="Brunswick">
+<AREA SHAPE="POLYGON" COORDS="338, 127, 335, 133, 328, 137, 324, 139, 320, 137, 317, 141, 312, 148, 290, 128, 296, 124, 302, 121, 306, 120, 310, 120, 325, 126, 333, 124" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=099" alt="Columbus">
+<AREA SHAPE="POLYGON" COORDS="392, 110, 373, 120, 365, 109, 362, 92, 368, 92, 386, 96, 391, 101" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=098" alt="Onslow">
+<AREA SHAPE="POLYGON" COORDS="364, 108, 371, 120, 361, 129, 356, 125, 352, 126, 345, 128, 337, 126, 332, 124, 336, 113, 343, 107" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=097" alt="Pender">
+<AREA SHAPE="POLYGON" COORDS="336, 114, 334, 119, 337, 119, 330, 125, 326, 126, 310, 120, 301, 120, 301, 113, 304, 106, 300, 100, 320, 98" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=096" alt="Bladen">
+<AREA SHAPE="POLYGON" COORDS="419, 95, 426, 95, 429, 91, 433, 95, 437, 95, 431, 99, 427, 105, 419, 106, 408, 108, 397, 108, 395, 103, 395, 100, 415, 99" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=095" alt="Carteret">
+<AREA SHAPE="POLYGON" COORDS="423, 81, 421, 87, 417, 90, 410, 92, 402, 87, 407, 78" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=094" alt="Pamlico">
+<AREA SHAPE="POLYGON" COORDS="403, 78, 402, 84, 402, 87, 395, 91, 376, 81, 390, 69" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=093" alt="Craven">
+<AREA SHAPE="POLYGON" COORDS="375, 80, 394, 90, 397, 101, 394, 103, 391, 100, 387, 97, 384, 96, 382, 96, 371, 92, 364, 91" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=092" alt="Jones">
+<AREA SHAPE="POLYGON" COORDS="376, 73, 376, 81, 372, 80, 372, 83, 364, 90, 361, 84, 356, 85, 359, 71, 366, 73, 372, 70" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=091" alt="Lenoir">
+<AREA SHAPE="POLYGON" COORDS="355, 83, 361, 84, 362, 90, 364, 93, 364, 107, 355, 106, 348, 107, 337, 103, 340, 96, 340, 92, 337, 84, 344, 81" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=090" alt="Duplin">
+<AREA SHAPE="POLYGON" COORDS="336, 83, 339, 88, 340, 94, 336, 104, 341, 107, 335, 115, 324, 102, 320, 99, 313, 90, 311, 82, 313, 79, 317, 73, 324, 77, 333, 74, 333, 78" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=089" alt="Sampson">
+<AREA SHAPE="POLYGON" COORDS="312, 79, 312, 87, 311, 88, 313, 91, 320, 98, 297, 99, 290, 93, 287, 83, 296, 82, 297, 79" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=088" alt="Cumberland">
+<AREA SHAPE="POLYGON" COORDS="291, 93, 297, 100, 303, 106, 301, 111, 300, 115, 303, 121, 297, 122, 293, 123, 289, 129, 271, 113, 274, 104, 276, 101, 282, 101" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=087" alt="Robeson">
+<AREA SHAPE="POLYGON" COORDS="286, 82, 286, 87, 291, 94, 283, 100, 274, 101, 273, 94, 269, 89" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=086" alt="Hoke">
+<AREA SHAPE="POLYGON" COORDS="268, 90, 273, 93, 273, 96, 273, 101, 275, 103, 270, 112, 257, 100" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=085" alt="Scotland">
+<AREA SHAPE="POLYGON" COORDS="267, 90, 261, 92, 261, 96, 257, 101, 245, 102, 244, 98, 244, 94, 244, 90, 245, 89, 241, 85, 241, 84, 258, 83, 262, 86" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=084" alt="Richmond">
+<AREA SHAPE="POLYGON" COORDS="242, 85, 246, 88, 243, 91, 245, 96, 243, 102, 220, 102, 225, 83, 233, 83" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=083" alt="Anson">
+<AREA SHAPE="POLYGON" COORDS="223, 83, 221, 101, 196, 102, 196, 96, 194, 92, 206, 81" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=082" alt="Union">
+<AREA SHAPE="POLYGON" COORDS="461, 59, 456, 64, 454, 69, 448, 72, 444, 73, 439, 71, 433, 70, 429, 67, 431, 62, 429, 58, 426, 58, 423, 58, 422, 54, 436, 54, 441, 58, 449, 56" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=081" alt="Western Hyde">
+<AREA SHAPE="POLYGON" COORDS="422, 54, 422, 57, 432, 60, 425, 63, 422, 63, 421, 67, 418, 68, 421, 77, 421, 79, 409, 80, 391, 70, 394, 60, 391, 56, 396, 51, 402, 53, 406, 53" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=080" alt="Beaufort">
+<AREA SHAPE="POLYGON" COORDS="372, 70, 367, 72, 362, 72, 358, 73, 358, 62, 367, 56" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=079" alt="Greene">
+<AREA SHAPE="POLYGON" COORDS="357, 61, 357, 70, 357, 73, 356, 82, 352, 84, 347, 81, 343, 81, 338, 82, 333, 78, 332, 77, 335, 73, 340, 68, 342, 61" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=078" alt="Wayne">
+<AREA SHAPE="POLYGON" COORDS="318, 74, 312, 79, 307, 77, 300, 77, 296, 80, 288, 82, 281, 74, 295, 62, 300, 60, 307, 61, 308, 62" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=077" alt="Harnett">
+<AREA SHAPE="POLYGON" COORDS="294, 62, 282, 75, 274, 68, 274, 64, 281, 58, 288, 58" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=076" alt="Lee">
+<AREA SHAPE="POLYGON" COORDS="274, 64, 274, 69, 278, 72, 281, 75, 286, 81, 281, 81, 274, 84, 268, 88, 263, 89, 251, 71, 254, 65, 263, 65, 263, 64" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=075" alt="Moore">
+<AREA SHAPE="POLYGON" COORDS="252, 65, 252, 71, 255, 76, 258, 82, 244, 83, 235, 83, 235, 68, 238, 64" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=074" alt="Montgomery">
+<AREA SHAPE="POLYGON" COORDS="234, 65, 234, 70, 234, 75, 234, 81, 234, 83, 231, 83, 226, 82, 223, 82, 217, 83, 211, 80, 222, 64" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=073" alt="Stanly">
+<AREA SHAPE="POLYGON" COORDS="224, 66, 218, 69, 215, 76, 211, 81, 199, 73, 198, 65" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=072" alt="Cabarrus">
+<AREA SHAPE="POLYGON" COORDS="197, 64, 197, 70, 202, 75, 209, 80, 193, 91, 189, 87, 184, 89, 183, 85, 183, 83, 188, 71, 188, 65" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=071" alt="Mecklenburg">
+<AREA SHAPE="POLYGON" COORDS="186, 70, 185, 77, 183, 83, 169, 82, 163, 70" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=070" alt="Gaston">
+<AREA SHAPE="POLYGON" COORDS="187, 63, 187, 70, 160, 70, 156, 63, 158, 60" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=069" alt="Lincoln">
+<AREA SHAPE="POLYGON" COORDS="156, 63, 165, 75, 167, 76, 168, 82, 162, 84, 143, 82, 148, 62" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=068" alt="Cleveland">
+<AREA SHAPE="POLYGON" COORDS="148, 61, 143, 82, 132, 82, 132, 78, 128, 73, 117, 72, 117, 62, 128, 64, 135, 62, 139, 62, 141, 59" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=067" alt="Rutherford">
+<AREA SHAPE="POLYGON" COORDS="132, 81, 131, 76, 127, 72, 124, 72, 118, 71, 111, 81" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=066" alt="Polk">
+<AREA SHAPE="POLYGON" COORDS="114, 65, 117, 70, 110, 81, 99, 85, 99, 79, 99, 77, 90, 69" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=065" alt="Henderson">
+<AREA SHAPE="POLYGON" COORDS="90, 69, 96, 74, 99, 79, 99, 84, 72, 91, 78, 84, 81, 76" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=064" alt="Transylvania">
+<AREA SHAPE="POLYGON" COORDS="80, 77, 78, 83, 71, 92, 66, 82, 62, 80, 61, 77" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=063" alt="Southern Jackson">
+<AREA SHAPE="POLYGON" COORDS="59, 79, 64, 80, 66, 85, 69, 91, 49, 93, 43, 87, 36, 84, 39, 79, 44, 76, 53, 76" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=062" alt="Macon">
+<AREA SHAPE="POLYGON" COORDS="48, 93, 42, 85, 33, 85, 26, 92" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=061" alt="Clay">
+<AREA SHAPE="POLYGON" COORDS="21, 77, 24, 79, 29, 79, 37, 79, 34, 83, 30, 86, 25, 92, 6, 92, 6, 85, 9, 79, 12, 78" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=060" alt="Cherokee">
+<AREA SHAPE="POLYGON" COORDS="79, 76, 59, 77, 56, 76, 56, 69, 61, 64, 66, 63" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=059" alt="Northern Jackson">
+<AREA SHAPE="POLYGON" COORDS="29, 65, 37, 68, 43, 70, 40, 75, 37, 79, 32, 78, 27, 80, 22, 78, 21, 76, 22, 70, 23, 68" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=058" alt="Graham">
+<AREA SHAPE="POLYGON" COORDS="225, 64, 221, 67, 198, 64, 201, 46, 202, 46, 213, 48, 213, 52, 228, 62, 222, 67, 220, 67" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=057" alt="Rowan">
+<AREA SHAPE="POLYGON" COORDS="186, 62, 159, 60, 162, 53, 170, 48, 173, 47, 178, 51" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=056" alt="Catawba">
+<AREA SHAPE="POLYGON" COORDS="142, 38, 142, 41, 154, 49, 157, 49, 161, 55, 157, 62, 150, 62, 148, 60, 142, 60, 132, 42, 132, 39" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=055" alt="Burke">
+<AREA SHAPE="POLYGON" COORDS="134, 42, 135, 45, 133, 48, 137, 50, 140, 59, 140, 62, 137, 63, 133, 63, 120, 65, 116, 62, 116, 53, 127, 46" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=054" alt="McDowell">
+<AREA SHAPE="POLYGON" COORDS="116, 54, 115, 57, 116, 61, 120, 62, 118, 66, 114, 65, 106, 67, 102, 67, 98, 67, 94, 67, 89, 68, 87, 59, 87, 56, 107, 47" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=053" alt="Buncombe">
+<AREA SHAPE="POLYGON" COORDS="79, 49, 84, 52, 85, 54, 83, 55, 85, 58, 89, 61, 87, 63, 87, 66, 90, 69, 82, 76, 71, 68, 66, 63, 66, 57, 62, 54, 65, 52, 69, 51, 72, 49" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=052" alt="Haywood">
+<AREA SHAPE="POLYGON" COORDS="62, 53, 66, 56, 66, 64, 62, 64, 58, 67, 58, 75, 53, 76, 46, 76, 41, 76, 41, 74, 46, 70, 43, 69, 36, 68, 31, 67, 28, 66, 32, 62, 38, 62, 42, 61, 47, 61, 55, 58" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=051" alt="Swain">
+<AREA SHAPE="POLYGON" COORDS="126, 32, 132, 40, 130, 45, 126, 47, 122, 49, 121, 45, 121, 40, 117, 37, 112, 32, 117, 30, 120, 29" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=050" alt="Mitchell">
+<AREA SHAPE="POLYGON" COORDS="110, 32, 113, 36, 117, 37, 121, 40, 122, 44, 122, 48, 119, 52, 117, 54, 114, 50, 108, 45, 104, 37" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=049" alt="Yancey">
+<AREA SHAPE="POLYGON" COORDS="97, 36, 98, 40, 105, 38, 105, 43, 107, 47, 89, 55, 84, 55, 80, 49, 83, 44, 83, 40, 88, 40" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=048" alt="Madison">
+<AREA SHAPE="POLYGON" COORDS="464, 41, 468, 45, 468, 51, 469, 56, 466, 60, 455, 55, 456, 44, 460, 41" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=047" alt="Western Dare">
+<AREA SHAPE="POLYGON" COORDS="452, 43, 450, 46, 451, 50, 451, 55, 447, 56, 444, 58, 440, 60, 440, 55, 433, 53, 437, 40, 442, 38, 446, 38" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=046" alt="Tyrrell">
+<AREA SHAPE="POLYGON" COORDS="435, 41, 435, 46, 432, 53, 409, 54, 420, 40" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=045" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="393, 51, 390, 56, 394, 61, 391, 64, 390, 70, 382, 73, 379, 74, 374, 67, 373, 63, 366, 57, 377, 48, 383, 47" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=044" alt="Pitt">
+<AREA SHAPE="POLYGON" COORDS="363, 56, 358, 61, 343, 61, 338, 52, 357, 46" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=043" alt="Wilson">
+<AREA SHAPE="POLYGON" COORDS="338, 53, 340, 57, 342, 61, 339, 70, 328, 77, 322, 77, 320, 75, 311, 64, 331, 48" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=042" alt="Johnston">
+<AREA SHAPE="POLYGON" COORDS="334, 47, 310, 64, 308, 62, 294, 60, 296, 43, 306, 43, 308, 39, 309, 34, 314, 34" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=041" alt="Wake">
+<AREA SHAPE="POLYGON" COORDS="297, 45, 293, 57, 296, 59, 293, 63, 288, 58, 276, 63, 264, 64, 265, 47" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=040" alt="Chatham">
+<AREA SHAPE="POLYGON" COORDS="264, 44, 263, 64, 236, 65, 237, 44" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=039" alt="Randolph">
+<AREA SHAPE="POLYGON" COORDS="237, 35, 236, 65, 228, 66, 227, 60, 225, 59, 213, 50, 218, 42, 227, 40, 228, 38" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=038" alt="Davidson">
+<AREA SHAPE="POLYGON" COORDS="217, 39, 220, 41, 216, 44, 216, 47, 213, 49, 203, 45, 200, 34, 211, 34" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=037" alt="Davie">
+<AREA SHAPE="POLYGON" COORDS="200, 34, 201, 42, 200, 48, 199, 54, 198, 59, 199, 64, 187, 62, 188, 59, 184, 55, 180, 53, 182, 49, 184, 44, 184, 38, 189, 35" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=036" alt="Iredell">
+<AREA SHAPE="POLYGON" COORDS="184, 34, 184, 42, 179, 50, 173, 46, 166, 50, 167, 38, 171, 38, 174, 35, 179, 35" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=035" alt="Alexander">
+<AREA SHAPE="POLYGON" COORDS="166, 37, 167, 48, 164, 53, 160, 49, 156, 49, 142, 41, 144, 31, 157, 31" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=034" alt="Caldwell">
+<AREA SHAPE="POLYGON" COORDS="144, 32, 142, 40, 137, 36, 133, 40, 133, 42, 130, 40, 127, 35, 127, 32, 136, 22, 135, 27" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=033" alt="Avery">
+<AREA SHAPE="POLYGON" COORDS="430, 13, 435, 19, 439, 26, 437, 30, 429, 32, 424, 27, 424, 23, 432, 18" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=032" alt="Perquimans">
+<AREA SHAPE="POLYGON" COORDS="424, 20, 424, 25, 423, 26, 423, 31, 431, 34, 427, 37, 422, 36, 418, 33, 416, 25, 416, 23" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=031" alt="Chowan">
+<AREA SHAPE="POLYGON" COORDS="415, 24, 415, 30, 417, 35, 417, 41, 412, 47, 407, 48, 405, 43, 401, 45, 398, 43, 392, 43, 392, 38, 385, 34, 388, 28, 391, 24" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=030" alt="Bertie">
+<AREA SHAPE="POLYGON" COORDS="382, 34, 390, 38, 391, 42, 396, 42, 399, 45, 404, 43, 406, 48, 411, 46, 409, 53, 403, 55, 382, 47, 382, 40" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=029" alt="Martin">
+<AREA SHAPE="POLYGON" COORDS="379, 35, 383, 40, 381, 48, 376, 48, 364, 57, 358, 46, 362, 31, 365, 29, 374, 34" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=028" alt="Edgecombe">
+<AREA SHAPE="POLYGON" COORDS="362, 30, 357, 46, 337, 53, 334, 47, 346, 26, 351, 28, 355, 29" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=027" alt="Nash">
+<AREA SHAPE="POLYGON" COORDS="346, 25, 334, 48, 331, 44, 318, 36, 322, 28, 331, 24" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=026" alt="Franklin">
+<AREA SHAPE="POLYGON" COORDS="306, 33, 307, 37, 310, 38, 301, 45, 293, 45, 298, 25, 304, 25" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=025" alt="Durham">
+<AREA SHAPE="POLYGON" COORDS="296, 24, 292, 46, 278, 45, 279, 25" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=024" alt="Orange">
+<AREA SHAPE="POLYGON" COORDS="278, 25, 278, 46, 264, 46, 264, 25" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=023" alt="Alamance">
+<AREA SHAPE="POLYGON" COORDS="264, 24, 263, 43, 237, 42, 238, 24" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=022" alt="Guilford">
+<AREA SHAPE="POLYGON" COORDS="237, 25, 236, 37, 228, 37, 228, 40, 218, 39, 211, 34, 215, 29, 215, 25" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=021" alt="Forsyth">
+<AREA SHAPE="POLYGON" COORDS="214, 23, 215, 28, 212, 31, 212, 35, 191, 35, 191, 25, 197, 24, 202, 24, 204, 26, 208, 21" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=020" alt="Yadkin">
+<AREA SHAPE="POLYGON" COORDS="191, 24, 191, 35, 186, 34, 181, 35, 176, 36, 172, 36, 167, 38, 158, 32, 159, 26, 165, 20, 172, 17, 179, 16, 184, 16" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=019" alt="Wilkes">
+<AREA SHAPE="POLYGON" COORDS="159, 26, 156, 31, 154, 31, 145, 31, 144, 34, 138, 28, 136, 27, 137, 25, 137, 20, 144, 20, 147, 16" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=018" alt="Watauga">
+<AREA SHAPE="POLYGON" COORDS="452, 8, 458, 17, 466, 30, 455, 19, 439, 8" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=017" alt="Western Currituck">
+<AREA SHAPE="POLYGON" COORDS="437, 7, 447, 14, 455, 20, 457, 28, 430, 13, 426, 7" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=016" alt="Camden">
+<AREA SHAPE="POLYGON" COORDS="427, 11, 444, 19, 448, 27, 446, 28, 441, 27, 432, 19, 431, 17, 430, 13, 444, 18, 444, 23" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=015" alt="Pasquotank">
+<AREA SHAPE="POLYGON" COORDS="426, 7, 428, 12, 430, 16, 416, 22, 405, 14, 407, 7" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=014" alt="Gates">
+<AREA SHAPE="POLYGON" COORDS="406, 7, 404, 12, 405, 14, 416, 21, 416, 24, 389, 25, 395, 11, 394, 7" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=013" alt="Hertford">
+<AREA SHAPE="POLYGON" COORDS="392, 7, 396, 11, 395, 13, 391, 24, 386, 27, 378, 24, 373, 21, 371, 17, 367, 12, 360, 13, 353, 8" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=012" alt="Northampton">
+<AREA SHAPE="POLYGON" COORDS="385, 27, 389, 31, 384, 32, 380, 37, 375, 34, 372, 33, 367, 29, 362, 30, 357, 30, 355, 29, 348, 27, 352, 9, 359, 12, 365, 12, 371, 16, 370, 20, 380, 24" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=011" alt="Halifax">
+<AREA SHAPE="POLYGON" COORDS="352, 7, 352, 15, 350, 20, 347, 27, 332, 24, 331, 8" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=010" alt="Warrren">
+<AREA SHAPE="POLYGON" COORDS="330, 9, 331, 24, 327, 26, 321, 29, 319, 23, 318, 14, 323, 8" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=009" alt="Vance">
+<AREA SHAPE="POLYGON" COORDS="321, 9, 318, 14, 318, 20, 320, 27, 318, 36, 310, 33, 305, 34, 304, 8" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=008" alt="Granville">
+<AREA SHAPE="POLYGON" COORDS="303, 8, 304, 24, 284, 24, 284, 9" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=007" alt="Person">
+<AREA SHAPE="POLYGON" COORDS="284, 8, 284, 25, 265, 25, 265, 7" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=006" alt="Caswell">
+<AREA SHAPE="POLYGON" COORDS="265, 8, 264, 24, 237, 25, 236, 8" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=005" alt="Rockingham">
+<AREA SHAPE="POLYGON" COORDS="237, 8, 237, 24, 215, 24, 215, 7" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=004" alt="Stokes">
+<AREA SHAPE="POLYGON" COORDS="215, 7, 214, 23, 210, 22, 206, 22, 204, 26, 202, 23, 196, 23, 192, 26, 190, 19, 187, 16, 189, 7" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=003" alt="Surry">
+<AREA SHAPE="POLYGON" COORDS="189, 7, 187, 13, 188, 16, 183, 16, 179, 14, 176, 15, 171, 17, 166, 8, 167, 5" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=002" alt="Alleghany">
+<AREA SHAPE="POLYGON" COORDS="165, 6, 166, 10, 172, 17, 170, 18, 166, 17, 165, 22, 160, 25, 146, 16, 148, 10, 153, 5" HREF="%%scripturl%%?forecast=zandh&state=nc&zone=001" alt="Ashe">
+</MAP>
+<img src="%%stateimagesurl%%/nc-zones.gif" width="486" height="156" alt="NC" border="0" usemap="#FrontPageMap0">
+
+<-end image map->
+

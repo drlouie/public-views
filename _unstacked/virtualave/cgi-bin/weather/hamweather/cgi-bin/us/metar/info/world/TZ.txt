@@ -1,0 +1,19 @@
+HTAR|Arusha
+HTBU|Bukoba
+HTDA|Dar Es Salaam Airport
+HTDO|Dodoma
+HTIR|Iringa
+HTKA|Kigoma
+HTKJ|Kilimanjaro Airport
+HTMB|Mbeya
+HTMG|Morogoro
+HTMS|Moshi
+HTMU|Musoma
+HTMW|Mwanza
+HTPE|Pemba / Karume Airport
+HTSE|Same
+HTSY|Shinyanga
+HTSO|Songea
+HTTB|Tabora Airport
+HTTG|Tanga
+HTZA|Zanzibar / Kisauni

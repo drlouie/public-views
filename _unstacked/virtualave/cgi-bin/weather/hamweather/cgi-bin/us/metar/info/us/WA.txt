@@ -1,0 +1,37 @@
+KAWO|Arlington Municipal
+KBLI|Bellingham, Bellingham International Airport
+KPWT|Bremerton National Automatic Weather Observing / Reporting System
+K75S|Burlington / Mt Vern
+KCQV|Colville Municipal
+KDEW|Deer Park, Deer Park Airport
+KELN|Ellensburg, Ellensburg Bowers Field
+KEPH|Ephrata, Ephrata Municipal Airport
+KPAE|Everett, Snohomish County Airport
+KSKA|Fairchild Air Force Base
+KGRF|Fort Lewis / Gray U. S. Army Airfield
+KFHR|Friday Harbor, Friday Harbor Airport
+KHMS|Hanford
+KHQM|Hoquiam, Bowerman Airport
+KKLS|Kelso-Longview Automatic Weather Observing / Reporting System
+KMWH|Moses Lake, Grant County Airport
+KOLM|Olympia, Olympia Airport
+KOMK|Omak, Omak Airport
+KPSC|Pasco, Tri-Cities Airport
+KCLM|Port Angeles, William R. Fairchild International Airport
+KPUW|Pullman / Moscow, Pullman / Moscow Regional Airport
+KUIL|Quillayute, Quillayute State Airport
+KRNT|Renton, Renton Municipal Airport
+KBFI|Seattle, Seattle Boeing Field
+KSEA|Seattle, Seattle-Tacoma International Airport
+KSHN|Shelton, Shelton Sanderson Field
+KSFF|Spokane, Felts Field
+KGEG|Spokane, Spokane International Airport
+KSMP|Stampede Pass
+KTCM|Tacoma / McChord Air Force Base
+KTIW|Tacoma, Tacoma Narrows Airport
+KTDO|Toledo-Winlock Memorial
+KVUO|Vancouver, Pearson Airpark
+KALW|Walla Walla, Walla Walla Regional Airport
+KEAT|Wenatchee, Pangborn Memorial Airport
+KNUW|Whidbey Island, Naval Air Station
+KYKM|Yakima, Yakima Air Terminal

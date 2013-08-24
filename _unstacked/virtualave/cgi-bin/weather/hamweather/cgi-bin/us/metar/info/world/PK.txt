@@ -1,0 +1,4 @@
+OPRN|Islamabad Airport
+OPKC|Karachi Airport
+OPLA|Lahore Airport
+OPNH|Nawabshah

@@ -1,0 +1,258 @@
+<-begin image map->
+<MAP NAME="FrontPageMap0">
+<AREA SHAPE="CIRCLE" COORDS="284, 201, 4" HREF="%%scripturl%%?forecast=zandh&state=tx&place=austin">
+<AREA SHAPE="POLYGON" COORDS="295, 325, 296, 329, 298, 333, 302, 336, 296, 341, 287, 335, 281, 333, 283, 326" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=255" alt="Cameron">
+<AREA SHAPE="POLYGON" COORDS="293, 316, 293, 319, 296, 323, 282, 325, 280, 322, 279, 321, 280, 316" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=254" alt="Willacy">
+<AREA SHAPE="POLYGON" COORDS="279, 311, 277, 321, 281, 322, 281, 333, 272, 333, 259, 326, 267, 310" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=253" alt="Hidalgo">
+<AREA SHAPE="POLYGON" COORDS="266, 310, 259, 327, 244, 321, 243, 316, 248, 310" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=252" alt="Starr">
+<AREA SHAPE="POLYGON" COORDS="294, 298, 290, 306, 293, 315, 279, 316, 277, 296" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=251" alt="Kenedy">
+<AREA SHAPE="POLYGON" COORDS="277, 297, 276, 310, 264, 310, 264, 302, 261, 299, 261, 296" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=250" alt="Brooks">
+<AREA SHAPE="POLYGON" COORDS="259, 293, 261, 301, 263, 302, 263, 309, 248, 311, 246, 297, 253, 292" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=249" alt="Jim Hogg">
+<AREA SHAPE="POLYGON" COORDS="247, 296, 247, 310, 241, 317, 232, 302, 232, 296" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=248" alt="Zapata">
+<AREA SHAPE="POLYGON" COORDS="319, 250, 327, 258, 321, 262, 317, 259, 310, 256" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=247" alt="Calhoun">
+<AREA SHAPE="POLYGON" COORDS="309, 255, 314, 259, 314, 264, 306, 265, 307, 272, 300, 270, 293, 268, 295, 260" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=246" alt="Refugio">
+<AREA SHAPE="POLYGON" COORDS="291, 269, 299, 269, 302, 271, 305, 270, 306, 276, 299, 276, 292, 277, 285, 275, 284, 267" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=244" alt="San Patricio">
+<AREA SHAPE="POLYGON" COORDS="293, 277, 298, 282, 301, 283, 299, 287, 283, 287, 279, 283, 281, 272" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=243" alt="Nueces">
+<AREA SHAPE="POLYGON" COORDS="298, 287, 297, 295, 284, 295, 278, 296, 275, 294, 276, 283, 282, 287" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=242" alt="Kleberg">
+<AREA SHAPE="POLYGON" COORDS="282, 272, 279, 275, 278, 283, 276, 283, 274, 294, 269, 295, 268, 269" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=241" alt="Jim Wells">
+<AREA SHAPE="POLYGON" COORDS="269, 271, 269, 296, 260, 295, 260, 293, 252, 292, 251, 272" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=240" alt="Duval">
+<AREA SHAPE="POLYGON" COORDS="251, 272, 252, 296, 230, 296, 230, 293, 230, 287, 228, 285, 225, 285, 220, 278, 217, 274, 209, 265, 234, 264, 234, 271" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=239" alt="Webb">
+<AREA SHAPE="POLYGON" COORDS="371, 221, 375, 228, 367, 233, 365, 224" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=237" alt="Brazoria">
+<AREA SHAPE="POLYGON" COORDS="363, 224, 368, 233, 365, 236, 364, 240, 356, 247, 352, 243, 346, 240, 345, 236, 345, 232, 354, 232" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=237" alt="Brazoria">
+<AREA SHAPE="POLYGON" COORDS="342, 234, 345, 238, 347, 240, 351, 242, 355, 247, 350, 250, 345, 249, 341, 252, 333, 252, 333, 251, 330, 251, 332, 241" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=236" alt="Matagorda">
+<AREA SHAPE="POLYGON" COORDS="330, 242, 329, 252, 327, 250, 321, 250, 313, 240, 323, 232" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=235" alt="Jackson">
+<AREA SHAPE="POLYGON" COORDS="311, 238, 320, 249, 311, 253, 311, 255, 305, 255, 302, 244" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=234" alt="Victoria">
+<AREA SHAPE="POLYGON" COORDS="302, 245, 303, 255, 299, 259, 295, 259, 290, 256, 287, 256, 282, 249" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=233" alt="Goliad">
+<AREA SHAPE="POLYGON" COORDS="281, 250, 285, 253, 287, 255, 289, 255, 292, 259, 296, 259, 291, 268, 286, 267, 282, 266, 273, 249" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=232" alt="Bee">
+<AREA SHAPE="POLYGON" COORDS="274, 250, 282, 266, 280, 271, 266, 271, 265, 253" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=231" alt="Live Oak">
+<AREA SHAPE="POLYGON" COORDS="266, 253, 266, 271, 251, 270, 251, 252" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=230" alt="McMullen">
+<AREA SHAPE="POLYGON" COORDS="251, 252, 252, 272, 234, 271, 233, 252" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=229" alt="La Salle">
+<AREA SHAPE="POLYGON" COORDS="233, 251, 233, 265, 211, 265, 210, 251" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=228" alt="Dimmit">
+<AREA SHAPE="POLYGON" COORDS="346, 216, 358, 222, 358, 226, 352, 232, 344, 231, 337, 222, 339, 216" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=227" alt="Fort Bend">
+<AREA SHAPE="POLYGON" COORDS="338, 221, 340, 226, 344, 233, 330, 241, 321, 231, 327, 230, 328, 227" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=226" alt="Wharton">
+<AREA SHAPE="POLYGON" COORDS="314, 221, 322, 230, 311, 238, 301, 230, 302, 222" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=225" alt="Lavaca">
+<AREA SHAPE="POLYGON" COORDS="301, 229, 309, 237, 301, 245, 296, 243, 289, 246, 286, 238" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=224" alt="De Witt">
+<AREA SHAPE="POLYGON" COORDS="303, 220, 301, 229, 289, 238, 282, 230, 288, 221, 297, 214" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=223" alt="Gonzales">
+<AREA SHAPE="POLYGON" COORDS="282, 232, 287, 235, 285, 240, 289, 245, 283, 249, 275, 250, 270, 244, 281, 236" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=222" alt="Karnes">
+<AREA SHAPE="POLYGON" COORDS="281, 230, 284, 234, 271, 244, 265, 237, 269, 229" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=221" alt="Wilson">
+<AREA SHAPE="POLYGON" COORDS="263, 237, 272, 248, 269, 252, 252, 251, 251, 234" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=220" alt="Atascosa">
+<AREA SHAPE="POLYGON" COORDS="251, 238, 252, 251, 233, 252, 231, 238" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=219" alt="Frio">
+<AREA SHAPE="POLYGON" COORDS="231, 239, 233, 251, 209, 251, 209, 238" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=218" alt="Zavala">
+<AREA SHAPE="POLYGON" COORDS="209, 239, 209, 265, 194, 238" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=217" alt="Maverick">
+<AREA SHAPE="POLYGON" COORDS="412, 202, 412, 205, 407, 212, 401, 207, 401, 202" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=216" alt="Orange">
+<AREA SHAPE="POLYGON" COORDS="400, 203, 400, 207, 405, 211, 405, 215, 408, 220, 392, 221, 390, 212, 387, 211, 387, 209" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=215" alt="Jefferson">
+<AREA SHAPE="POLYGON" COORDS="391, 212, 391, 221, 388, 225, 384, 224, 378, 223, 381, 216, 373, 216, 373, 214" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=214" alt="Chambers">
+<AREA SHAPE="POLYGON" COORDS="367, 204, 375, 213, 374, 218, 371, 216, 371, 221, 369, 223, 364, 222, 360, 222, 344, 216, 346, 214, 342, 205, 350, 208, 354, 204, 363, 208" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=213" alt="Harris">
+<AREA SHAPE="POLYGON" COORDS="340, 202, 346, 214, 340, 218, 335, 209, 333, 206" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=212" alt="Waller">
+<AREA SHAPE="POLYGON" COORDS="332, 208, 336, 208, 338, 215, 339, 219, 335, 221, 325, 213, 324, 208" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=211" alt="Austin">
+<AREA SHAPE="POLYGON" COORDS="322, 213, 328, 215, 333, 220, 330, 226, 322, 232, 321, 229, 315, 222" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=210" alt="Colorado">
+<AREA SHAPE="POLYGON" COORDS="319, 203, 323, 211, 315, 221, 305, 221, 298, 215, 304, 210, 312, 206" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=209" alt="Fayette">
+<AREA SHAPE="POLYGON" COORDS="298, 215, 287, 219, 282, 212, 287, 205" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=208" alt="Caldwell">
+<AREA SHAPE="POLYGON" COORDS="281, 214, 288, 219, 282, 228, 273, 229, 271, 224, 268, 220" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=207" alt="Guadalupe">
+<AREA SHAPE="POLYGON" COORDS="265, 209, 277, 215, 269, 222, 258, 216" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=206" alt="Comal">
+<AREA SHAPE="POLYGON" COORDS="255, 216, 263, 218, 272, 226, 264, 236, 251, 232, 251, 220" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=205" alt="Bexar">
+<AREA SHAPE="POLYGON" COORDS="251, 222, 251, 237, 233, 238, 233, 222" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=204" alt="Medina">
+<AREA SHAPE="POLYGON" COORDS="232, 221, 232, 238, 210, 237, 210, 220" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=203" alt="Uvalde">
+<AREA SHAPE="POLYGON" COORDS="210, 219, 210, 237, 193, 238, 191, 234, 194, 221" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=202" alt="Kinney">
+<AREA SHAPE="POLYGON" COORDS="399, 191, 401, 201, 398, 203, 391, 205, 386, 206, 381, 195" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=201" alt="Hardin">
+<AREA SHAPE="POLYGON" COORDS="380, 194, 383, 206, 388, 205, 389, 211, 374, 211, 367, 202, 366, 199" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=200" alt="Liberty">
+<AREA SHAPE="POLYGON" COORDS="366, 196, 367, 204, 363, 207, 354, 203, 349, 206, 347, 190, 352, 194, 357, 193" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=199" alt="Montgomery">
+<AREA SHAPE="POLYGON" COORDS="335, 197, 337, 201, 334, 206, 329, 205, 322, 207, 319, 201" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=197" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="345, 182, 347, 200, 339, 202, 336, 197, 337, 196, 333, 191, 336, 181" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=198" alt="Grimes">
+<AREA SHAPE="POLYGON" COORDS="334, 185, 334, 190, 338, 195, 335, 196, 331, 196, 323, 188, 331, 179" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=196" alt="Brazos">
+<AREA SHAPE="POLYGON" COORDS="322, 187, 331, 194, 328, 197, 320, 200, 312, 192" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=195" alt="Burleson">
+<AREA SHAPE="POLYGON" COORDS="310, 191, 312, 194, 316, 197, 319, 200, 314, 205, 307, 208, 303, 201, 299, 198" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=194" alt="Lee">
+<AREA SHAPE="POLYGON" COORDS="299, 197, 304, 201, 308, 207, 301, 213, 290, 206" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=193" alt="Bastrop">
+<AREA SHAPE="POLYGON" COORDS="295, 195, 287, 207, 273, 199, 279, 188, 284, 194, 298, 195, 290, 206, 290, 205" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=192" alt="Travis">
+<AREA SHAPE="POLYGON" COORDS="272, 199, 285, 207, 277, 215, 267, 208" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=191" alt="Hays">
+<AREA SHAPE="POLYGON" COORDS="272, 195, 269, 204, 264, 211, 258, 206, 259, 192" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=190" alt="Blanco">
+<AREA SHAPE="POLYGON" COORDS="257, 204, 262, 211, 253, 217, 248, 215, 248, 204" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=189" alt="Kendall">
+<AREA SHAPE="POLYGON" COORDS="258, 192, 258, 204, 235, 205, 235, 194" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=188" alt="Gillespie">
+<AREA SHAPE="POLYGON" COORDS="252, 218, 249, 222, 246, 220, 226, 221, 226, 212, 241, 211" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=187" alt="Bandera">
+<AREA SHAPE="POLYGON" COORDS="234, 197, 235, 204, 248, 205, 248, 215, 242, 212, 226, 212, 220, 200" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=186" alt="Kerr">
+<AREA SHAPE="POLYGON" COORDS="225, 212, 225, 220, 212, 219, 218, 205, 221, 205" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=185" alt="Real">
+<AREA SHAPE="POLYGON" COORDS="221, 200, 220, 206, 216, 206, 212, 220, 194, 220, 191, 201" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=184" alt="Edwards">
+<AREA SHAPE="POLYGON" COORDS="191, 200, 194, 224, 190, 234, 184, 229, 181, 226, 177, 225, 175, 221, 172, 218, 169, 215, 164, 215, 158, 215, 158, 201" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=183" alt="Val Verde">
+<AREA SHAPE="POLYGON" COORDS="417, 172, 418, 177, 416, 182, 414, 190, 412, 194, 411, 199, 411, 202, 408, 202, 407, 174" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=182" alt="Newton">
+<AREA SHAPE="POLYGON" COORDS="405, 175, 407, 181, 407, 188, 407, 194, 407, 202, 401, 202, 400, 192, 400, 189, 396, 175" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=181" alt="Jasper">
+<AREA SHAPE="POLYGON" COORDS="394, 176, 396, 179, 399, 183, 400, 188, 401, 192, 388, 192, 381, 173, 385, 174" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=180" alt="Tyler">
+<AREA SHAPE="POLYGON" COORDS="381, 175, 388, 192, 377, 194, 367, 184" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=179" alt="Polk">
+<AREA SHAPE="POLYGON" COORDS="367, 185, 371, 188, 376, 193, 368, 198, 359, 193, 362, 183" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=178" alt="San Jancinto">
+<AREA SHAPE="POLYGON" COORDS="361, 182, 360, 192, 353, 194, 345, 190, 345, 183, 352, 178" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=177" alt="Walker">
+<AREA SHAPE="POLYGON" COORDS="353, 179, 335, 183, 333, 177, 338, 176, 343, 175, 349, 174" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=176" alt="Madison">
+<AREA SHAPE="POLYGON" COORDS="330, 166, 332, 177, 325, 185, 323, 187, 316, 178, 316, 174" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=175" alt="Robertson">
+<AREA SHAPE="POLYGON" COORDS="314, 174, 315, 179, 320, 185, 304, 194, 300, 185, 300, 182" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=174" alt="Milam">
+<AREA SHAPE="POLYGON" COORDS="299, 185, 303, 193, 299, 195, 291, 193, 284, 195, 283, 191, 278, 188, 282, 181" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=173" alt="Williamson">
+<AREA SHAPE="POLYGON" COORDS="278, 176, 283, 180, 277, 186, 275, 190, 273, 195, 266, 192, 262, 178" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=172" alt="Burnet">
+<AREA SHAPE="POLYGON" COORDS="262, 178, 263, 182, 264, 186, 264, 189, 265, 192, 246, 192, 246, 179" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=171" alt="Llano">
+<AREA SHAPE="POLYGON" COORDS="246, 179, 245, 192, 231, 193, 231, 179" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=170" alt="Mason">
+<AREA SHAPE="POLYGON" COORDS="230, 186, 230, 192, 234, 193, 234, 199, 210, 199, 210, 186" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=169" alt="Kimble">
+<AREA SHAPE="POLYGON" COORDS="230, 180, 230, 186, 210, 186, 210, 175, 227, 174" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=168" alt="Menard">
+<AREA SHAPE="POLYGON" COORDS="407, 158, 410, 161, 417, 170, 403, 174, 402, 165, 402, 161" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=167" alt="Sabine">
+<AREA SHAPE="POLYGON" COORDS="403, 159, 401, 163, 403, 167, 403, 173, 399, 174, 393, 171, 393, 158" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=166" alt="San Augustine">
+<AREA SHAPE="POLYGON" COORDS="398, 174, 392, 176, 377, 173, 376, 162, 383, 163, 388, 168" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=165" alt="Angelina">
+<AREA SHAPE="POLYGON" COORDS="374, 163, 378, 173, 368, 183, 364, 181, 361, 181, 356, 178" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=164" alt="Trinity">
+<AREA SHAPE="POLYGON" COORDS="373, 164, 354, 180, 353, 177, 349, 174, 352, 164, 350, 160, 358, 158, 364, 158" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=163" alt="Houston">
+<AREA SHAPE="POLYGON" COORDS="348, 160, 351, 166, 347, 175, 341, 175, 332, 177, 330, 166" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=162" alt="Leon">
+<AREA SHAPE="POLYGON" COORDS="327, 153, 334, 164, 323, 170, 315, 161, 312, 157, 314, 152, 318, 151" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=161" alt="Limestone">
+<AREA SHAPE="POLYGON" COORDS="312, 159, 322, 170, 305, 178, 299, 169" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=160" alt="Falls">
+<AREA SHAPE="POLYGON" COORDS="307, 149, 314, 159, 299, 169, 291, 159" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=159" alt="McLennan">
+<AREA SHAPE="POLYGON" COORDS="299, 168, 305, 178, 301, 180, 299, 184, 282, 181, 280, 177" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=158" alt="Bell">
+<AREA SHAPE="POLYGON" COORDS="287, 154, 295, 166, 278, 176, 270, 163" HREF="%%scripturl%%?fore">
+<AREA SHAPE="POLYGON" COORDS="272, 164, 278, 175, 262, 178, 261, 169" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=156" alt="Lampasas">
+<AREA SHAPE="POLYGON" COORDS="258, 169, 261, 172, 264, 179, 242, 179, 242, 164, 248, 163, 253, 165" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=155" alt="San Saba">
+<AREA SHAPE="POLYGON" COORDS="242, 162, 242, 179, 228, 180, 227, 162" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=154" alt="McCulloch">
+<AREA SHAPE="POLYGON" COORDS="400, 146, 405, 149, 409, 156, 405, 159, 398, 156, 392, 157, 388, 148" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=153" alt="Shelby">
+<AREA SHAPE="POLYGON" COORDS="387, 149, 393, 159, 393, 170, 387, 165, 375, 161, 372, 150" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=152" alt="Nacogdoches">
+<AREA SHAPE="POLYGON" COORDS="402, 135, 402, 145, 385, 147, 386, 135" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=151" alt="Panola">
+<AREA SHAPE="POLYGON" COORDS="386, 136, 384, 142, 384, 147, 389, 146, 387, 149, 372, 148, 373, 134" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=150" alt="Rusk">
+<AREA SHAPE="POLYGON" COORDS="371, 142, 372, 153, 375, 160, 373, 164, 365, 159, 358, 149, 357, 142" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=149" alt="Cherokee">
+<AREA SHAPE="POLYGON" COORDS="357, 142, 357, 147, 358, 150, 362, 155, 366, 158, 351, 160, 344, 154, 340, 145" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=148" alt="Anderson">
+<AREA SHAPE="POLYGON" COORDS="338, 146, 341, 150, 342, 154, 347, 156, 333, 164, 327, 152" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=147" alt="Freestone">
+<AREA SHAPE="POLYGON" COORDS="338, 145, 327, 152, 318, 152, 310, 143, 328, 133" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=146" alt="Navarro">
+<AREA SHAPE="POLYGON" COORDS="316, 151, 312, 154, 307, 149, 301, 152, 293, 142, 306, 137" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=145" alt="Hill">
+<AREA SHAPE="POLYGON" COORDS="291, 141, 300, 152, 290, 159, 287, 154, 283, 156, 276, 146, 287, 140" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=144" alt="Bosque">
+<AREA SHAPE="POLYGON" COORDS="276, 145, 284, 155, 271, 163, 264, 154" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=143" alt="Hamilton">
+<AREA SHAPE="POLYGON" COORDS="263, 155, 269, 163, 262, 169, 254, 165, 248, 162, 255, 155" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=142" alt="Mills">
+<AREA SHAPE="POLYGON" COORDS="271, 150, 263, 155, 255, 155, 249, 146, 259, 139" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=141" alt="Comanche">
+<AREA SHAPE="POLYGON" COORDS="247, 144, 255, 154, 252, 157, 247, 162, 240, 162, 239, 145" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=140" alt="Brown">
+<AREA SHAPE="POLYGON" COORDS="238, 144, 240, 163, 233, 163, 227, 164, 222, 159, 223, 143" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=139" alt="Coleman">
+<AREA SHAPE="POLYGON" COORDS="402, 124, 402, 134, 395, 136, 388, 134, 383, 134, 382, 117, 389, 123, 394, 122" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=138" alt="Harrison">
+<AREA SHAPE="POLYGON" COORDS="380, 123, 382, 133, 372, 134, 372, 130" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=137" alt="Gregg">
+<AREA SHAPE="POLYGON" COORDS="372, 130, 372, 141, 356, 142, 357, 131, 355, 127, 365, 127" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=136" alt="Smith">
+<AREA SHAPE="POLYGON" COORDS="356, 134, 357, 143, 340, 145, 330, 135" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=135" alt="Henderson">
+<AREA SHAPE="POLYGON" COORDS="327, 135, 313, 143, 305, 137, 305, 128, 322, 128" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=134" alt="Ellis">
+<AREA SHAPE="POLYGON" COORDS="305, 127, 305, 137, 293, 142, 288, 139, 291, 128" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=133" alt="Johnson">
+<AREA SHAPE="POLYGON" COORDS="289, 134, 289, 138, 281, 142, 280, 138" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=132" alt="Somervell">
+<AREA SHAPE="POLYGON" COORDS="289, 129, 289, 135, 285, 135, 279, 138, 276, 128" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=131" alt="Hood">
+<AREA SHAPE="POLYGON" COORDS="275, 128, 280, 142, 273, 148, 271, 147, 268, 149, 260, 138, 263, 134, 261, 130" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=130" alt="Erath">
+<AREA SHAPE="POLYGON" COORDS="262, 129, 262, 136, 248, 144, 241, 144, 242, 131" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=129" alt="Eastland">
+<AREA SHAPE="POLYGON" COORDS="241, 130, 241, 143, 226, 144, 225, 130" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=128" alt="Callahan">
+<AREA SHAPE="POLYGON" COORDS="225, 130, 226, 143, 206, 142, 208, 129" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=127" alt="Taylor">
+<AREA SHAPE="POLYGON" COORDS="402, 116, 403, 123, 399, 124, 395, 122, 390, 124, 382, 116" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=126" alt="Marion">
+<AREA SHAPE="POLYGON" COORDS="381, 117, 381, 122, 374, 130, 366, 128, 366, 117" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=125" alt="Upshur">
+<AREA SHAPE="POLYGON" COORDS="366, 116, 366, 127, 355, 126, 351, 122, 351, 114" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=124" alt="Wood">
+<AREA SHAPE="POLYGON" COORDS="349, 115, 349, 122, 342, 119, 344, 114" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=123" alt="Rains">
+<AREA SHAPE="POLYGON" COORDS="353, 124, 354, 128, 357, 134, 336, 134, 336, 121, 342, 121" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=122" alt="Van Zandt">
+<AREA SHAPE="POLYGON" COORDS="336, 120, 336, 134, 328, 135, 323, 127, 323, 121" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=121" alt="Kaufman">
+<AREA SHAPE="POLYGON" COORDS="331, 114, 331, 119, 323, 119, 323, 115" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=120" alt="Rockwall">
+<AREA SHAPE="POLYGON" COORDS="323, 114, 323, 128, 307, 128, 307, 114" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=119" alt="Dallas">
+<AREA SHAPE="POLYGON" COORDS="307, 114, 306, 128, 290, 128, 291, 115" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=118" alt="Tarrant">
+<AREA SHAPE="POLYGON" COORDS="291, 114, 290, 129, 275, 129, 276, 115" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=117" alt="Parker">
+<AREA SHAPE="POLYGON" COORDS="275, 115, 275, 129, 258, 129, 261, 115" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=116" alt="Palo Pinto">
+<AREA SHAPE="POLYGON" COORDS="259, 116, 258, 129, 242, 131, 242, 116" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=115" alt="Stephens">
+<AREA SHAPE="POLYGON" COORDS="242, 116, 242, 129, 225, 130, 225, 116" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=114" alt="Shackelford">
+<AREA SHAPE="POLYGON" COORDS="226, 115, 226, 129, 209, 130, 209, 115" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=113" alt="Jones">
+<AREA SHAPE="POLYGON" COORDS="402, 106, 402, 117, 382, 117, 382, 104" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=112" alt="Cass">
+<AREA SHAPE="POLYGON" COORDS="382, 106, 382, 117, 374, 112, 369, 115, 362, 115, 363, 101, 377, 102" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=109" alt="Titus">
+<AREA SHAPE="POLYGON" COORDS="367, 116, 378, 116, 374, 112" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=108" alt="Franklin">
+<AREA SHAPE="POLYGON" COORDS="362, 114, 345, 114, 345, 107, 355, 104, 362, 102" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=107" alt="Hopkins">
+<AREA SHAPE="POLYGON" COORDS="360, 103, 353, 104, 349, 105, 345, 107, 345, 98, 352, 99, 356, 100" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=106" alt="Delta">
+<AREA SHAPE="POLYGON" COORDS="344, 100, 344, 114, 341, 119, 339, 121, 332, 119, 332, 104, 338, 100" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=105" alt="Hunt">
+<AREA SHAPE="POLYGON" COORDS="331, 103, 331, 114, 313, 114, 313, 101" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=104" alt="Collin">
+<AREA SHAPE="POLYGON" COORDS="313, 102, 313, 114, 297, 114, 295, 100" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=103" alt="Denton">
+<AREA SHAPE="POLYGON" COORDS="296, 101, 296, 114, 278, 114, 279, 99" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=102" alt="Wise">
+<AREA SHAPE="POLYGON" COORDS="279, 101, 279, 115, 263, 114, 263, 101" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=101" alt="Jack">
+<AREA SHAPE="POLYGON" COORDS="263, 100, 263, 116, 245, 116, 245, 101" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=100" alt="Young">
+<AREA SHAPE="POLYGON" COORDS="246, 102, 246, 115, 231, 115, 231, 102" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=099" alt="Throckmorton">
+<AREA SHAPE="POLYGON" COORDS="230, 101, 230, 115, 213, 115, 214, 102" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=098" alt="Haskell">
+<AREA SHAPE="POLYGON" COORDS="401, 96, 402, 103, 400, 105, 397, 105, 392, 105, 388, 104, 385, 106, 381, 103, 380, 92, 384, 94, 388, 94, 390, 97, 393, 97" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=097" alt="Bowie">
+<AREA SHAPE="POLYGON" COORDS="379, 92, 380, 103, 377, 101, 370, 101, 366, 101, 363, 101, 363, 84, 368, 84, 370, 86, 374, 89" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=096" alt="Red River">
+<AREA SHAPE="POLYGON" COORDS="362, 86, 362, 101, 357, 101, 354, 99, 347, 99, 345, 99, 345, 86, 347, 86, 350, 85, 354, 85, 357, 86" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=095" alt="Lamar">
+<AREA SHAPE="POLYGON" COORDS="344, 87, 344, 98, 331, 103, 330, 102, 329, 91, 332, 88, 336, 89, 337, 87" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=094" alt="Fannin">
+<AREA SHAPE="POLYGON" COORDS="328, 91, 328, 101, 312, 101, 309, 86, 313, 86, 315, 87, 320, 87, 323, 90" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=093" alt="Grayson">
+<AREA SHAPE="POLYGON" COORDS="310, 85, 311, 100, 295, 100, 294, 86, 297, 86, 299, 86, 302, 86, 301, 89, 303, 90, 306, 90" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=092" alt="Cooke">
+<AREA SHAPE="POLYGON" COORDS="293, 86, 294, 100, 278, 101, 275, 84, 279, 87, 283, 86, 286, 83" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=091" alt="Montague">
+<AREA SHAPE="POLYGON" COORDS="276, 86, 277, 99, 263, 100, 263, 80, 267, 78, 270, 78, 274, 79, 274, 82" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=090" alt="Clay">
+<AREA SHAPE="POLYGON" COORDS="263, 87, 263, 102, 245, 102, 247, 87" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=089" alt="Archer">
+<AREA SHAPE="POLYGON" COORDS="246, 89, 246, 101, 230, 102, 230, 88" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=088" alt="Baylor">
+<AREA SHAPE="POLYGON" COORDS="229, 89, 231, 101, 214, 102, 214, 88" HREF="%%scripturl%%?foreca">
+<AREA SHAPE="POLYGON" COORDS="263, 81, 263, 86, 246, 88, 246, 77, 248, 78, 251, 78, 253, 78, 257, 78" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=086" alt="Wichita">
+<AREA SHAPE="POLYGON" COORDS="229, 72, 234, 69, 237, 71, 238, 74, 241, 78, 246, 77, 246, 87, 230, 89" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=085" alt="Wilbarger">
+<AREA SHAPE="POLYGON" COORDS="163, 193, 160, 199, 158, 215, 144, 214, 141, 214, 131, 208, 134, 198, 140, 198, 138, 192, 140, 189, 144, 190, 150, 190, 152, 187" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=082" alt="Terrell">
+<AREA SHAPE="POLYGON" COORDS="117, 197, 141, 213, 138, 214, 134, 215, 130, 217, 127, 220, 123, 225, 122, 230, 119, 236, 114, 241, 109, 239, 102, 236, 98, 232, 94, 231, 95, 207" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=081" alt="Big Bend Area">
+<AREA SHAPE="POLYGON" COORDS="93, 225, 93, 232, 87, 232, 83, 229, 80, 225, 75, 223, 70, 219, 67, 212, 66, 207, 66, 201, 61, 198, 59, 193, 59, 187, 62, 186, 75, 216" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=080" alt="Marfa Plateau">
+<AREA SHAPE="POLYGON" COORDS="69, 183, 71, 192, 94, 197, 94, 226, 75, 215, 70, 203, 65, 192, 62, 186" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=079" alt="Presidio Valley">
+<AREA SHAPE="POLYGON" COORDS="210, 185, 210, 199, 184, 200, 183, 186" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=078" alt="Sutton">
+<AREA SHAPE="POLYGON" COORDS="210, 174, 210, 186, 182, 187, 182, 175" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=077" alt="Schleicher">
+<AREA SHAPE="POLYGON" COORDS="182, 174, 184, 200, 160, 199, 160, 197, 163, 194, 162, 192, 158, 188, 156, 186, 156, 183, 152, 180, 145, 179, 145, 176" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=076" alt="Crockett">
+<AREA SHAPE="POLYGON" COORDS="143, 175, 144, 178, 150, 178, 154, 181, 157, 186, 149, 189, 140, 188, 138, 191, 140, 196, 139, 198, 134, 199, 131, 206, 102, 185, 120, 164, 125, 166, 133, 168, 137, 171" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=075" alt="Pecos">
+<AREA SHAPE="POLYGON" COORDS="85, 174, 117, 195, 94, 206, 95, 197, 72, 192, 71, 180" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=074" alt="Davis Mountain Area">
+<AREA SHAPE="POLYGON" COORDS="222, 159, 226, 162, 226, 174, 211, 174, 211, 160" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=073" alt="Concho">
+<AREA SHAPE="POLYGON" COORDS="210, 160, 210, 175, 192, 175, 192, 160, 188, 160, 188, 155, 206, 154" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=072" alt="Tom Green">
+<AREA SHAPE="POLYGON" COORDS="191, 160, 191, 174, 173, 173, 172, 160" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=071" alt="Irion">
+<AREA SHAPE="POLYGON" COORDS="172, 159, 172, 174, 157, 174, 157, 156" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=070" alt="Reagan">
+<AREA SHAPE="POLYGON" COORDS="157, 156, 157, 174, 142, 175, 142, 157" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=069" alt="Upton">
+<AREA SHAPE="POLYGON" COORDS="141, 156, 141, 175, 139, 171, 135, 168, 132, 169, 127, 167, 126, 155" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=068" alt="Crane">
+<AREA SHAPE="POLYGON" COORDS="126, 156, 126, 167, 119, 165, 114, 165, 107, 163, 103, 164, 103, 156" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=067" alt="Ward">
+<AREA SHAPE="POLYGON" COORDS="223, 143, 222, 160, 206, 159, 206, 143" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=066" alt="Runnels">
+<AREA SHAPE="POLYGON" COORDS="206, 143, 206, 155, 186, 155, 189, 143" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=065" alt="Coke">
+<AREA SHAPE="POLYGON" COORDS="189, 143, 186, 160, 173, 160, 173, 143" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=064" alt="Sterling">
+<AREA SHAPE="POLYGON" COORDS="173, 142, 173, 156, 158, 156, 159, 142" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=063" alt="Glasscock">
+<AREA SHAPE="POLYGON" COORDS="158, 142, 158, 156, 141, 156, 141, 142" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=062" alt="Midland">
+<AREA SHAPE="POLYGON" COORDS="141, 142, 141, 156, 126, 156, 126, 142" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=061" alt="Ector">
+<AREA SHAPE="POLYGON" COORDS="125, 142, 125, 156, 108, 157, 108, 144, 117, 144, 117, 142" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=060" alt="Winkler">
+<AREA SHAPE="POLYGON" COORDS="108, 145, 108, 156, 100, 157, 88, 145" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=059" alt="Loving">
+<AREA SHAPE="POLYGON" COORDS="88, 145, 90, 148, 94, 151, 98, 155, 101, 157, 103, 163, 107, 163, 113, 165, 118, 165, 101, 184, 84, 173, 68, 145" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=058" alt="Reeves County and  &	Upper Trans Pecos">
+<AREA SHAPE="POLYGON" COORDS="68, 145, 84, 174, 58, 188, 59, 145" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=057" alt="Van Horn">
+<AREA SHAPE="POLYGON" COORDS="58, 145, 59, 188, 53, 185, 48, 183, 42, 179, 37, 175, 31, 170, 26, 164, 24, 164, 25, 145" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=056" alt="Far West Plateau">
+<AREA SHAPE="POLYGON" COORDS="24, 144, 25, 164, 22, 162, 19, 162, 16, 158, 14, 155, 8, 151, 5, 151, 5, 146" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=055" alt="El Paso">
+<AREA SHAPE="POLYGON" COORDS="209, 129, 207, 143, 192, 142, 192, 129" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=054" alt="Nolan">
+<AREA SHAPE="POLYGON" COORDS="192, 129, 192, 142, 176, 142, 176, 129" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=053" alt="Mitchell">
+<AREA SHAPE="POLYGON" COORDS="176, 129, 176, 142, 160, 142, 160, 129" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=052" alt="Howard">
+<AREA SHAPE="POLYGON" COORDS="160, 129, 160, 143, 145, 143, 145, 129" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=051" alt="Martin">
+<AREA SHAPE="POLYGON" COORDS="144, 129, 145, 142, 118, 143, 118, 130" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=050" alt="Andrews">
+<AREA SHAPE="POLYGON" COORDS="209, 115, 209, 129, 193, 129, 193, 115" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=049" alt="Fisher">
+<AREA SHAPE="POLYGON" COORDS="193, 115, 192, 129, 176, 129, 176, 115" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=048" alt="Scurry">
+<AREA SHAPE="POLYGON" COORDS="176, 116, 176, 130, 159, 129, 159, 115" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=047" alt="Borden">
+<AREA SHAPE="POLYGON" COORDS="160, 116, 160, 129, 144, 129, 144, 116" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=046" alt="Dawson">
+<AREA SHAPE="POLYGON" COORDS="143, 115, 144, 130, 118, 130, 119, 115" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=045" alt="Gaines">
+<AREA SHAPE="POLYGON" COORDS="213, 101, 213, 115, 196, 115, 196, 101" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=044" alt="Stonewall">
+<AREA SHAPE="POLYGON" COORDS="197, 100, 197, 115, 182, 115, 181, 100" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=043" alt="Kent">
+<AREA SHAPE="POLYGON" COORDS="180, 100, 182, 115, 165, 116, 165, 101" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=042" alt="Garza	">
+<AREA SHAPE="POLYGON" COORDS="164, 100, 165, 115, 148, 115, 148, 100" HREF="%%scripturl%%?fore">
+<AREA SHAPE="POLYGON" COORDS="148, 101, 148, 115, 132, 114, 132, 103" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=040" alt="Terry">
+<AREA SHAPE="POLYGON" COORDS="132, 102, 132, 115, 118, 115, 118, 103" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=039" alt="Yoakum">
+<AREA SHAPE="POLYGON" COORDS="213, 88, 214, 101, 197, 101, 197, 88" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=038" alt="King">
+<AREA SHAPE="POLYGON" COORDS="197, 87, 197, 101, 180, 101, 180, 87" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=037" alt="Dickens">
+<AREA SHAPE="POLYGON" COORDS="180, 86, 180, 101, 164, 101, 164, 86" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=036" alt="Crosby">
+<AREA SHAPE="POLYGON" COORDS="164, 88, 164, 101, 149, 101, 148, 86" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=035" alt="Lubbock">
+<AREA SHAPE="POLYGON" COORDS="148, 86, 148, 101, 133, 103, 133, 94, 131, 94, 133, 87" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=034" alt="Hockley">
+<AREA SHAPE="POLYGON" COORDS="131, 88, 131, 94, 133, 95, 132, 102, 118, 103, 118, 90" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=033" alt="Cochran">
+<AREA SHAPE="POLYGON" COORDS="230, 80, 230, 89, 214, 89, 214, 74" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=084" alt="Foard">
+<AREA SHAPE="POLYGON" COORDS="230, 70, 230, 80, 224, 80, 214, 75, 214, 64, 218, 66, 222, 70" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=083" alt="Hardeman">
+<AREA SHAPE="POLYGON" COORDS="213, 72, 213, 80, 213, 88, 198, 87, 198, 71" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=032" alt="Cottle">
+<AREA SHAPE="POLYGON" COORDS="198, 72, 198, 87, 181, 87, 181, 71" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=031" alt="Motley">
+<AREA SHAPE="POLYGON" COORDS="180, 72, 179, 87, 165, 87, 165, 75, 168, 72" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=030" alt="Floyd">
+<AREA SHAPE="POLYGON" COORDS="165, 73, 165, 87, 148, 86, 148, 72" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=029" alt="Hale">
+<AREA SHAPE="POLYGON" COORDS="148, 72, 148, 87, 131, 87, 131, 72" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=028" alt="Lamb">
+<AREA SHAPE="POLYGON" COORDS="131, 73, 131, 88, 126, 88, 123, 89, 119, 89, 119, 72" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=027" alt="Bailey">
+<AREA SHAPE="POLYGON" COORDS="201, 58, 201, 72, 184, 72, 184, 58" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=025" alt="Hall">
+<AREA SHAPE="POLYGON" COORDS="184, 59, 184, 72, 167, 72, 167, 59" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=024" alt="Briscoe">
+<AREA SHAPE="POLYGON" COORDS="167, 58, 167, 73, 150, 73, 150, 58" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=023" alt="Swisher">
+<AREA SHAPE="POLYGON" COORDS="150, 58, 150, 72, 135, 72, 133, 59" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=022" alt="Castro">
+<AREA SHAPE="POLYGON" COORDS="134, 59, 134, 72, 119, 72, 119, 59" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=021" alt="Parmer">
+<AREA SHAPE="POLYGON" COORDS="214, 45, 214, 58, 196, 58, 196, 45" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=020" alt="Collingsworth">
+<AREA SHAPE="POLYGON" COORDS="213, 59, 215, 65, 214, 72, 201, 72, 201, 59" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=026" alt="Childress">
+<AREA SHAPE="POLYGON" COORDS="196, 46, 196, 59, 180, 59, 180, 45" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=019" alt="Donley">
+<AREA SHAPE="POLYGON" COORDS="179, 46, 179, 58, 162, 58, 162, 45" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=018" alt="Armstrong">
+<AREA SHAPE="POLYGON" COORDS="162, 46, 162, 58, 145, 58, 145, 46" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=017" alt="Randall">
+<AREA SHAPE="POLYGON" COORDS="145, 46, 145, 59, 119, 60, 119, 45" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=016" alt="Deaf Smith">
+<AREA SHAPE="POLYGON" COORDS="213, 31, 214, 45, 197, 45, 197, 32" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=015" alt="Wheeler">
+<AREA SHAPE="POLYGON" COORDS="196, 31, 197, 46, 179, 45, 180, 31" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=014" alt="Gray">
+<AREA SHAPE="RECT" COORDS="160, 31, 180, 47" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=013" alt="Carson">
+<AREA SHAPE="RECT" COORDS="144, 32, 162, 46" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=012" alt="Potter">
+<AREA SHAPE="RECT" COORDS="119, 30, 146, 46" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=011" alt="Oldham">
+<AREA SHAPE="RECT" COORDS="195, 17, 214, 33" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=010" alt="Hemphill">
+<AREA SHAPE="RECT" COORDS="179, 16, 197, 33" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=009" alt="Roberts">
+<AREA SHAPE="RECT" COORDS="161, 15, 181, 32" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=008" alt="Hutchinson">
+<AREA SHAPE="RECT" COORDS="144, 16, 162, 32" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=007" alt="Moore">
+<AREA SHAPE="RECT" COORDS="118, 16, 146, 32" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=006" alt="Hartley">
+<AREA SHAPE="RECT" COORDS="195, 2, 214, 19" HREF="%%scripturl%%?forecast=zandh&state=tx&z">
+<AREA SHAPE="RECT" COORDS="179, 2, 197, 19" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=004" alt="Ochiltree">
+<AREA SHAPE="RECT" COORDS="160, 3, 180, 18" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=003" alt="Hansford">
+<AREA SHAPE="RECT" COORDS="144, 3, 163, 19" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=002" alt="Sherman">
+<AREA SHAPE="RECT" COORDS="119, 3, 145, 19" HREF="%%scripturl%%?forecast=zandh&state=tx&zone=001" alt="Dallam">
+</MAP>
+<img src="%%stateimagesurl%%/tx-zones.gif" width="422" height="342" alt="TX" border="0" usemap="#FrontPageMap0">
+<-end image map->

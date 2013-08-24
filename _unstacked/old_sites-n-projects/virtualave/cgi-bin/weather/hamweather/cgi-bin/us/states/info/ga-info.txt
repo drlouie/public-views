@@ -1,0 +1,171 @@
+<-begin image map->
+<MAP NAME="FrontPageMap0">
+<AREA SHAPE="CIRCLE" COORDS="104, 94, 3" HREF="%%scripturl%%?forecast=zandh&state=ga&place=atlanta">
+<AREA SHAPE="POLYGON" COORDS="305, 278, 307, 289, 309, 298, 305, 305, 290, 302, 299, 275" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=166" alt="Coastal Camden">
+<AREA SHAPE="POLYGON" COORDS="300, 278, 290, 302, 279, 297, 279, 282, 289, 275" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=165" alt="Inland Camden">
+<AREA SHAPE="POLYGON" COORDS="279, 298, 279, 281, 270, 281, 266, 283, 245, 284, 245, 300, 262, 301, 257, 318, 258, 321, 259, 329, 271, 329, 271, 324, 272, 316, 269, 309, 269, 305" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=164" alt="Charlton">
+<AREA SHAPE="POLYGON" COORDS="244, 297, 244, 315, 232, 315, 232, 305, 220, 305, 213, 296, 205, 293, 205, 273, 225, 273, 240, 289, 240, 298" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=163" alt="Clinch">
+<AREA SHAPE="POLYGON" COORDS="204, 294, 214, 297, 215, 300, 219, 304, 232, 306, 232, 315, 194, 311, 194, 297" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=162" alt="Echols">
+<AREA SHAPE="POLYGON" COORDS="205, 272, 205, 296, 201, 296, 201, 289, 190, 289, 193, 276" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=161" alt="Lanier">
+<AREA SHAPE="POLYGON" COORDS="191, 282, 190, 289, 200, 289, 202, 294, 198, 297, 194, 298, 194, 311, 178, 311, 172, 304, 171, 302, 178, 291, 172, 283" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=160" alt="Lowndes">
+<AREA SHAPE="POLYGON" COORDS="172, 284, 174, 291, 178, 296, 173, 299, 171, 301, 171, 304, 179, 310, 151, 309, 151, 281" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=159" alt="Brooks">
+<AREA SHAPE="POLYGON" COORDS="152, 282, 152, 310, 129, 308, 129, 290, 126, 280, 133, 280, 133, 283" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=158" alt="Thomas">
+<AREA SHAPE="POLYGON" COORDS="126, 279, 129, 293, 129, 308, 109, 307, 109, 280" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=157" alt="Grady">
+<AREA SHAPE="POLYGON" COORDS="109, 279, 109, 293, 108, 307, 76, 305, 82, 293, 83, 280" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=156" alt="Decatur">
+<AREA SHAPE="POLYGON" COORDS="64, 279, 66, 286, 69, 294, 70, 301, 74, 305, 80, 298, 83, 292, 83, 288, 83, 284, 84, 279, 67, 277" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=155" alt="Seminole">
+<AREA SHAPE="POLYGON" COORDS="313, 262, 315, 266, 322, 267, 314, 276, 308, 275, 308, 276, 306, 280, 300, 278, 309, 261" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=154" alt="Coastal Glynn">
+<AREA SHAPE="POLYGON" COORDS="308, 260, 299, 278, 289, 274, 291, 264, 301, 256" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=153" alt="Inland Glynn">
+<AREA SHAPE="POLYGON" COORDS="292, 262, 289, 275, 286, 278, 279, 281, 271, 280, 268, 283, 262, 283, 257, 276, 262, 269, 266, 267, 273, 267, 272, 260" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=152" alt="Brantley">
+<AREA SHAPE="POLYGON" COORDS="270, 258, 274, 264, 272, 267, 266, 267, 262, 272, 260, 268, 252, 271, 245, 257, 255, 249, 263, 252, 267, 252" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=151" alt="Pierce">
+<AREA SHAPE="POLYGON" COORDS="244, 255, 247, 265, 250, 269, 252, 271, 258, 274, 258, 278, 262, 285, 245, 285, 245, 298, 241, 298, 241, 288, 234, 284, 224, 271, 224, 266, 228, 266, 229, 252" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=150" alt="Ware">
+<AREA SHAPE="POLYGON" COORDS="229, 258, 229, 266, 225, 266, 225, 273, 201, 273, 201, 264, 195, 261, 195, 257, 218, 257, 218, 260" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=149" alt="Atkinson">
+<AREA SHAPE="POLYGON" COORDS="195, 256, 195, 262, 200, 264, 200, 267, 200, 275, 193, 275, 192, 283, 185, 283, 182, 272, 175, 260, 181, 251" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=148" alt="Berrien">
+<AREA SHAPE="POLYGON" COORDS="173, 261, 177, 266, 179, 269, 181, 272, 182, 273, 181, 277, 185, 284, 165, 284, 169, 263" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=147" alt="Cook">
+<AREA SHAPE="POLYGON" COORDS="166, 262, 169, 267, 168, 271, 166, 275, 165, 283, 134, 283, 134, 260" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=146" alt="Colquitt">
+<AREA SHAPE="POLYGON" COORDS="134, 260, 134, 280, 99, 280, 103, 273, 113, 264, 118, 260, 122, 255, 134, 255" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=145" alt="Mitchell">
+<AREA SHAPE="POLYGON" COORDS="122, 254, 120, 261, 112, 265, 108, 269, 105, 273, 98, 277, 100, 266, 90, 265, 91, 255" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=144" alt="Baker">
+<AREA SHAPE="POLYGON" COORDS="69, 279, 99, 279, 99, 266, 71, 266" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=143" alt="Miller">
+<AREA SHAPE="POLYGON" COORDS="62, 248, 61, 254, 60, 259, 58, 266, 59, 272, 61, 275, 65, 280, 71, 280, 71, 267, 90, 267, 91, 256, 79, 256, 79, 252, 65, 251, 63, 251" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=142" alt="Early">
+<AREA SHAPE="POLYGON" COORDS="325, 241, 325, 248, 328, 252, 322, 261, 317, 261, 315, 263, 308, 260, 316, 239" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=141" alt="Coastal McIntosh">
+<AREA SHAPE="POLYGON" COORDS="317, 238, 309, 261, 299, 257, 299, 245" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=140" alt="Inland McIntosh">
+<AREA SHAPE="POLYGON" COORDS="318, 230, 324, 230, 332, 241, 330, 245, 323, 239, 315, 239" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=139" alt="Coastal Liberty">
+<AREA SHAPE="POLYGON" COORDS="319, 229, 315, 241, 308, 239, 290, 226, 290, 222, 286, 216, 295, 212, 300, 218, 310, 218" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=138" alt="Inland Liberty">
+<AREA SHAPE="POLYGON" COORDS="284, 216, 290, 220, 289, 225, 308, 239, 303, 244, 297, 249, 273, 228" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=137" alt="Long">
+<AREA SHAPE="POLYGON" COORDS="272, 228, 297, 247, 300, 256, 292, 263, 286, 260, 271, 260, 268, 252, 264, 252, 264, 231, 268, 228" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=136" alt="Wayne">
+<AREA SHAPE="POLYGON" COORDS="267, 226, 264, 233, 264, 253, 236, 237, 237, 229, 243, 229, 243, 220, 255, 220" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=135" alt="Appling">
+<AREA SHAPE="POLYGON" COORDS="237, 238, 258, 248, 249, 256, 246, 256, 239, 256, 239, 253, 231, 253, 231, 246, 229, 239" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=134" alt="Bacon">
+<AREA SHAPE="POLYGON" COORDS="243, 219, 243, 229, 237, 229, 237, 233, 234, 235, 238, 237, 238, 238, 214, 240, 214, 231, 228, 221" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=133" alt="Jeff Davis">
+<AREA SHAPE="POLYGON" COORDS="215, 231, 215, 240, 229, 240, 229, 246, 231, 246, 231, 253, 229, 253, 228, 260, 217, 260, 217, 258, 195, 258, 195, 254, 199, 242, 202, 241, 205, 232" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=132" alt="Coffee">
+<AREA SHAPE="POLYGON" COORDS="201, 240, 198, 250, 192, 255, 179, 253, 177, 250, 170, 244, 174, 233, 182, 233, 181, 239, 186, 240, 186, 242" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=131" alt="Irwin">
+<AREA SHAPE="POLYGON" COORDS="203, 231, 203, 241, 192, 239, 192, 241, 186, 241, 186, 239, 182, 239, 182, 232, 173, 233, 171, 226, 193, 226" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=130" alt="Ben Hill">
+<AREA SHAPE="POLYGON" COORDS="168, 244, 180, 252, 178, 257, 172, 263, 158, 262, 160, 254, 159, 245" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=129" alt="Tift">
+<AREA SHAPE="POLYGON" COORDS="169, 226, 173, 234, 171, 238, 169, 245, 157, 245, 154, 241, 149, 241, 151, 228" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=128" alt="Turner">
+<AREA SHAPE="POLYGON" COORDS="148, 228, 150, 236, 148, 237, 148, 241, 155, 243, 159, 246, 159, 251, 157, 255, 160, 255, 158, 263, 155, 263, 154, 264, 152, 264, 152, 262, 134, 262, 134, 238, 134, 236, 140, 226" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=127" alt="Worth">
+<AREA SHAPE="POLYGON" COORDS="139, 225, 132, 241, 113, 241, 113, 222" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=126" alt="Lee">
+<AREA SHAPE="POLYGON" COORDS="113, 241, 134, 241, 134, 254, 106, 255, 101, 242" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=125" alt="Dougherty">
+<AREA SHAPE="POLYGON" COORDS="109, 222, 117, 230, 114, 230, 114, 242, 98, 242, 98, 239, 94, 232, 94, 223" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=124" alt="Terrell">
+<AREA SHAPE="POLYGON" COORDS="78, 250, 79, 256, 107, 256, 103, 243, 77, 243, 79, 254" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=123" alt="Calhoun">
+<AREA SHAPE="POLYGON" COORDS="94, 222, 94, 233, 96, 235, 97, 239, 97, 243, 71, 242, 67, 232, 71, 232, 71, 221" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=122" alt="Randolph">
+<AREA SHAPE="POLYGON" COORDS="68, 231, 70, 244, 78, 244, 79, 251, 63, 251, 62, 246, 62, 243, 59, 238, 57, 231" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=121" alt="Clay">
+<AREA SHAPE="POLYGON" COORDS="71, 220, 72, 232, 57, 232, 56, 226, 60, 218" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=120" alt="Quitman">
+<AREA SHAPE="POLYGON" COORDS="335, 209, 327, 223, 316, 208, 333, 199" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=118" alt="Inland Chatham">
+<AREA SHAPE="POLYGON" COORDS="335, 208, 328, 222, 321, 229, 333, 233, 349, 217" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=117" alt="Coastal Bryan">
+<AREA SHAPE="POLYGON" COORDS="315, 208, 319, 213, 322, 218, 324, 222, 326, 222, 320, 230, 315, 226, 312, 219, 309, 218, 305, 218, 301, 218, 297, 214, 293, 210, 289, 210, 292, 202, 312, 200" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=116" alt="Inland Bryan">
+<AREA SHAPE="POLYGON" COORDS="288, 203, 293, 212, 288, 214, 276, 214, 269, 196, 283, 196" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=115" alt="Evans">
+<AREA SHAPE="POLYGON" COORDS="270, 195, 274, 209, 275, 212, 279, 214, 288, 214, 279, 220, 273, 229, 255, 220, 260, 208, 257, 196" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=114" alt="Tattnall">
+<AREA SHAPE="POLYGON" COORDS="260, 206, 256, 221, 253, 220, 239, 219, 245, 193, 257, 196" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=113" alt="Toombs">
+<AREA SHAPE="POLYGON" COORDS="244, 193, 239, 219, 234, 219, 228, 195" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=112" alt="Montgomery">
+<AREA SHAPE="POLYGON" COORDS="227, 194, 234, 220, 224, 223, 221, 214, 208, 206" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=111" alt="Wheeler">
+<AREA SHAPE="POLYGON" COORDS="207, 207, 221, 215, 225, 223, 216, 231, 204, 232, 191, 226, 189, 222" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=110" alt="Telfair">
+<AREA SHAPE="POLYGON" COORDS="206, 207, 187, 224, 179, 207, 181, 203, 178, 201, 177, 198, 194, 186" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=109" alt="Dodge">
+<AREA SHAPE="POLYGON" COORDS="181, 208, 182, 213, 184, 217, 186, 220, 189, 226, 159, 228, 161, 209" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=108" alt="Wilcox">
+<AREA SHAPE="POLYGON" COORDS="180, 194, 177, 200, 182, 203, 182, 209, 161, 209, 161, 196, 170, 188" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=107" alt="Pulaski">
+<AREA SHAPE="POLYGON" COORDS="160, 214, 160, 229, 148, 229, 139, 225, 138, 214" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=106" alt="Crisp">
+<AREA SHAPE="POLYGON" COORDS="161, 195, 161, 215, 136, 214, 132, 204, 143, 196" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=105" alt="Dooly">
+<AREA SHAPE="POLYGON" COORDS="132, 204, 136, 211, 138, 217, 140, 223, 104, 222, 103, 205" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=104" alt="Sumter">
+<AREA SHAPE="POLYGON" COORDS="104, 205, 105, 223, 91, 222, 90, 200" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=103" alt="Webster">
+<AREA SHAPE="POLYGON" COORDS="72, 200, 68, 203, 63, 207, 62, 208, 61, 216, 61, 218, 67, 218, 71, 222, 90, 221, 90, 202" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=102" alt="Stewart">
+<AREA SHAPE="POLYGON" COORDS="314, 175, 323, 178, 328, 182, 328, 186, 329, 190, 332, 193, 333, 201, 329, 201, 315, 209, 312, 199, 305, 190, 306, 182" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=101" alt="Effingham">
+<AREA SHAPE="POLYGON" COORDS="304, 181, 304, 187, 306, 190, 309, 193, 311, 197, 313, 200, 288, 205, 286, 201, 283, 197, 278, 196, 278, 191, 274, 181, 274, 176, 284, 170" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=100" alt="Bulloch">
+<AREA SHAPE="POLYGON" COORDS="270, 177, 275, 185, 279, 189, 276, 197, 257, 195, 256, 191, 265, 178" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=099" alt="Candler">
+<AREA SHAPE="POLYGON" COORDS="245, 192, 219, 197, 227, 181, 233, 181, 246, 186" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=098" alt="Treutlen">
+<AREA SHAPE="POLYGON" COORDS="229, 179, 221, 193, 221, 196, 207, 208, 188, 176, 205, 171, 208, 167, 214, 167" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=097" alt="Laurens">
+<AREA SHAPE="POLYGON" COORDS="187, 175, 193, 186, 181, 195, 169, 186" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=096" alt="Bleckley">
+<AREA SHAPE="POLYGON" COORDS="169, 184, 169, 188, 160, 197, 144, 197, 147, 186, 153, 180, 153, 170, 163, 170, 168, 172" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=095" alt="Houston">
+<AREA SHAPE="POLYGON" COORDS="153, 169, 154, 179, 151, 182, 149, 182, 146, 186, 133, 180" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=094" alt="Peach">
+<AREA SHAPE="POLYGON" COORDS="129, 179, 137, 182, 146, 186, 145, 196, 142, 196, 132, 205, 121, 202, 116, 192" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=093" alt="Macon">
+<AREA SHAPE="POLYGON" COORDS="117, 190, 118, 197, 122, 202, 121, 205, 106, 205, 106, 191" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=092" alt="Schley">
+<AREA SHAPE="POLYGON" COORDS="107, 189, 105, 208, 101, 208, 91, 201, 90, 179, 101, 179" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=091" alt="Marion">
+<AREA SHAPE="POLYGON" COORDS="90, 178, 90, 201, 72, 201, 72, 197, 67, 193, 68, 190, 76, 189, 79, 189" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=090" alt="Chattahoochee">
+<AREA SHAPE="POLYGON" COORDS="59, 175, 64, 177, 66, 180, 66, 184, 67, 187, 68, 191, 75, 189, 78, 189, 81, 186, 82, 183, 87, 177" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=089" alt="Muscogee">
+<AREA SHAPE="POLYGON" COORDS="304, 144, 307, 148, 309, 152, 312, 157, 312, 163, 312, 168, 315, 176, 306, 182, 302, 182, 283, 170, 289, 154" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=088" alt="Screven">
+<AREA SHAPE="POLYGON" COORDS="289, 153, 282, 173, 272, 175, 272, 174, 267, 170, 261, 160, 267, 153, 276, 153, 280, 151" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=087" alt="Jenkins">
+<AREA SHAPE="POLYGON" COORDS="261, 160, 266, 169, 272, 174, 272, 178, 266, 178, 262, 181, 259, 186, 256, 191, 256, 196, 250, 196, 245, 192, 247, 186, 231, 179, 246, 159, 253, 157, 257, 160" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=086" alt="Emanuel">
+<AREA SHAPE="POLYGON" COORDS="243, 164, 239, 168, 239, 170, 233, 176, 232, 180, 228, 180, 228, 174, 216, 167, 207, 167, 207, 164, 220, 159, 220, 161, 237, 160" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=085" alt="Johnson">
+<AREA SHAPE="POLYGON" COORDS="207, 163, 207, 169, 189, 176, 177, 155, 177, 152, 196, 148, 201, 159" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=084" alt="Wilkinson">
+<AREA SHAPE="POLYGON" COORDS="162, 167, 167, 174, 167, 180, 170, 182, 169, 185, 189, 176, 177, 155, 170, 158" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=083" alt="Twiggs">
+<AREA SHAPE="POLYGON" COORDS="170, 157, 167, 162, 163, 166, 162, 170, 153, 170, 142, 158, 154, 150, 157, 153" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=082" alt="Bibb">
+<AREA SHAPE="POLYGON" COORDS="142, 158, 152, 168, 133, 180, 131, 173, 122, 166, 126, 158" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=081" alt="Crawford">
+<AREA SHAPE="POLYGON" COORDS="102, 177, 107, 189, 116, 192, 116, 191, 120, 191, 129, 180, 133, 180, 130, 173, 115, 164" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=080" alt="Taylor">
+<AREA SHAPE="POLYGON" COORDS="116, 164, 112, 166, 110, 171, 108, 174, 106, 178, 103, 178, 100, 177, 96, 179, 88, 179, 87, 157, 96, 158, 99, 156" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=079" alt="Talbot">
+<AREA SHAPE="POLYGON" COORDS="86, 157, 88, 176, 74, 176, 74, 175, 59, 175, 53, 157" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=078" alt="Harris">
+<AREA SHAPE="POLYGON" COORDS="281, 128, 286, 132, 289, 132, 289, 135, 305, 144, 290, 154, 283, 150, 278, 151, 277, 152, 268, 153, 264, 156, 261, 161, 259, 161, 253, 158, 255, 151, 253, 149, 252, 138, 253, 138, 257, 126, 264, 126, 266, 129, 275, 130, 281, 123" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=077" alt="Burke">
+<AREA SHAPE="POLYGON" COORDS="254, 127, 257, 131, 255, 136, 252, 140, 252, 144, 252, 146, 254, 151, 251, 160, 246, 160, 244, 163, 244, 164, 236, 160, 237, 154, 233, 149, 232, 145, 230, 139, 230, 137, 243, 127, 249, 125" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=076" alt="Jefferson">
+<AREA SHAPE="POLYGON" COORDS="244, 125, 232, 136, 229, 142, 228, 138, 222, 137, 221, 129, 235, 124" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=075" alt="Glascock">
+<AREA SHAPE="POLYGON" COORDS="221, 129, 222, 136, 223, 139, 228, 139, 233, 147, 235, 151, 237, 152, 236, 160, 230, 162, 226, 162, 222, 163, 221, 160, 206, 164, 206, 161, 201, 159, 198, 150, 200, 148, 198, 140, 203, 140, 208, 139, 214, 133" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=074" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="200, 139, 200, 145, 201, 146, 199, 150, 195, 150, 195, 147, 192, 149, 188, 149, 180, 152, 175, 134, 187, 134" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=073" alt="Baldwin">
+<AREA SHAPE="POLYGON" COORDS="154, 150, 158, 154, 162, 154, 169, 159, 180, 152, 174, 133, 169, 135, 165, 136, 150, 139" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=072" alt="Jones">
+<AREA SHAPE="POLYGON" COORDS="150, 138, 155, 150, 142, 159, 125, 158, 126, 150, 131, 150, 131, 134, 146, 134" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=071" alt="Monroe">
+<AREA SHAPE="POLYGON" COORDS="133, 132, 131, 137, 131, 150, 125, 150, 125, 146, 115, 147, 117, 134" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=070" alt="Lamar">
+<AREA SHAPE="POLYGON" COORDS="114, 146, 126, 147, 126, 158, 121, 167, 98, 154, 100, 147" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=069" alt="Upson">
+<AREA SHAPE="POLYGON" COORDS="117, 132, 116, 147, 99, 147, 98, 140, 104, 132" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=068" alt="Pike">
+<AREA SHAPE="POLYGON" COORDS="102, 132, 100, 136, 98, 140, 98, 143, 98, 146, 98, 148, 98, 152, 98, 156, 96, 158, 77, 157, 77, 131" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=067" alt="Meriwether">
+<AREA SHAPE="POLYGON" COORDS="76, 131, 76, 157, 53, 157, 49, 139, 70, 131" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=066" alt="Troup">
+<AREA SHAPE="POLYGON" COORDS="268, 110, 274, 112, 276, 117, 279, 120, 279, 121, 279, 125, 283, 125, 283, 129, 279, 129, 276, 132, 272, 131, 267, 131, 264, 126, 258, 128, 256, 128, 250, 125" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=065" alt="Richmond">
+<AREA SHAPE="POLYGON" COORDS="257, 99, 260, 104, 263, 107, 270, 109, 255, 121, 248, 114, 246, 111, 244, 110, 245, 100" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=064" alt="Columbia">
+<AREA SHAPE="POLYGON" COORDS="241, 101, 243, 105, 243, 109, 245, 110, 245, 112, 247, 115, 250, 118, 253, 121, 248, 125, 244, 123, 236, 122, 227, 106, 232, 102" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=063" alt="McDuffie">
+<AREA SHAPE="POLYGON" COORDS="228, 105, 236, 121, 247, 125, 244, 126, 235, 124, 221, 130, 213, 116, 217, 112, 220, 112" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=062" alt="Warren">
+<AREA SHAPE="POLYGON" COORDS="213, 115, 220, 130, 213, 134, 211, 138, 206, 139, 204, 141, 201, 141, 197, 141, 197, 137, 194, 136, 191, 136, 187, 132, 191, 124, 197, 119, 203, 115" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=061" alt="Hancock">
+<AREA SHAPE="POLYGON" COORDS="193, 123, 189, 127, 187, 129, 186, 134, 167, 134, 167, 119, 181, 114" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=060" alt="Putnam">
+<AREA SHAPE="POLYGON" COORDS="167, 115, 167, 135, 150, 139, 146, 134, 148, 134, 148, 128, 145, 128, 145, 120, 156, 113" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=059" alt="Jasper">
+<AREA SHAPE="POLYGON" COORDS="144, 120, 145, 126, 148, 127, 148, 130, 148, 133, 126, 133, 129, 125, 136, 118" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=058" alt="Butts">
+<AREA SHAPE="POLYGON" COORDS="125, 134, 99, 132, 101, 129, 105, 127, 110, 119, 114, 117, 132, 121" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=056" alt="Spalding">
+<AREA SHAPE="POLYGON" COORDS="114, 117, 134, 122, 139, 116, 122, 102, 116, 104" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=057" alt="Henry">
+<AREA SHAPE="POLYGON" COORDS="107, 118, 115, 118, 115, 111, 117, 105, 117, 102, 104, 102, 102, 106, 102, 109, 103, 109" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=055" alt="Clayton">
+<AREA SHAPE="POLYGON" COORDS="102, 106, 107, 112, 109, 115, 108, 117, 109, 122, 109, 124, 106, 128, 101, 128, 100, 124, 98, 122, 93, 120, 92, 117, 93, 110" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=054" alt="Fayette">
+<AREA SHAPE="POLYGON" COORDS="92, 110, 91, 115, 91, 118, 93, 120, 95, 121, 97, 122, 101, 129, 98, 131, 98, 132, 70, 132, 65, 117, 78, 110" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=053" alt="Coweta">
+<AREA SHAPE="POLYGON" COORDS="47, 115, 50, 138, 56, 136, 58, 135, 59, 136, 70, 132, 64, 116" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=052" alt="Heard">
+<AREA SHAPE="POLYGON" COORDS="224, 105, 223, 111, 217, 111, 213, 116, 203, 116, 203, 109, 204, 105, 206, 102, 206, 93, 210, 102" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=051" alt="Taliaferro">
+<AREA SHAPE="POLYGON" COORDS="204, 98, 206, 101, 204, 105, 203, 109, 203, 115, 193, 124, 183, 114, 185, 110, 178, 105, 178, 98, 182, 97, 188, 93, 197, 99" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=050" alt="Greene">
+<AREA SHAPE="POLYGON" COORDS="177, 98, 177, 103, 178, 106, 185, 110, 183, 114, 169, 118, 156, 112, 166, 93, 172, 97" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=049" alt="Morgan">
+<AREA SHAPE="POLYGON" COORDS="158, 105, 157, 111, 144, 121, 140, 117, 138, 113, 133, 113, 130, 109, 136, 109, 143, 96" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=048" alt="Newton">
+<AREA SHAPE="POLYGON" COORDS="168, 90, 158, 106, 136, 94, 147, 85, 162, 85" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=047" alt="Walton">
+<AREA SHAPE="POLYGON" COORDS="124, 102, 124, 105, 131, 108, 135, 108, 141, 97, 135, 92" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=046" alt="Rockdale">
+<AREA SHAPE="POLYGON" COORDS="131, 94, 127, 105, 125, 103, 110, 103, 111, 80, 114, 81" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=045" alt="De Kalb">
+<AREA SHAPE="POLYGON" COORDS="75, 111, 92, 111, 102, 108, 104, 101, 94, 95" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=044" alt="South Fulton">
+<AREA SHAPE="POLYGON" COORDS="95, 94, 76, 108, 73, 108, 72, 93" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=043" alt="Douglas">
+<AREA SHAPE="POLYGON" COORDS="43, 101, 46, 117, 64, 117, 68, 116, 69, 118, 78, 108, 73, 108, 70, 93, 64, 92, 62, 98" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=042" alt="Carroll">
+<AREA SHAPE="POLYGON" COORDS="39, 83, 43, 103, 55, 97, 55, 98, 63, 97, 62, 85" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=041" alt="Haralson">
+<AREA SHAPE="POLYGON" COORDS="230, 79, 236, 82, 240, 84, 251, 91, 258, 99, 240, 102" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=040" alt="Lincoln">
+<AREA SHAPE="POLYGON" COORDS="226, 79, 240, 102, 232, 102, 230, 106, 224, 104, 218, 102, 212, 103, 206, 92, 215, 79" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=039" alt="Wilkes">
+<AREA SHAPE="POLYGON" COORDS="217, 79, 211, 85, 207, 90, 205, 93, 207, 96, 205, 99, 202, 99, 198, 99, 187, 95, 185, 76, 205, 76" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=038" alt="Oglethorpe">
+<AREA SHAPE="POLYGON" COORDS="161, 82, 163, 87, 166, 89, 170, 92, 172, 95, 173, 99, 176, 99, 181, 97, 186, 94, 183, 87, 176, 84, 165, 81" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=037" alt="Oconee">
+<AREA SHAPE="POLYGON" COORDS="185, 77, 185, 81, 185, 85, 183, 89, 177, 84, 167, 81, 175, 74" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=036" alt="Clarke">
+<AREA SHAPE="POLYGON" COORDS="168, 78, 161, 84, 158, 84, 147, 84, 147, 81, 146, 71" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=035" alt="Barrow">
+<AREA SHAPE="POLYGON" COORDS="145, 70, 144, 76, 148, 84, 131, 95, 115, 80, 118, 77, 122, 77, 126, 71, 133, 65" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=034" alt="Gwinnett">
+<AREA SHAPE="POLYGON" COORDS="94, 94, 104, 103, 110, 103, 111, 82, 107, 81" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=033" alt="North Fulton">
+<AREA SHAPE="POLYGON" COORDS="104, 71, 109, 82, 95, 95, 93, 92, 86, 92, 84, 73" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=032" alt="Cobb">
+<AREA SHAPE="POLYGON" COORDS="83, 72, 87, 91, 72, 94, 63, 91, 63, 84, 70, 72" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=031" alt="Paulding">
+<AREA SHAPE="POLYGON" COORDS="38, 85, 64, 84, 63, 82, 69, 72, 37, 72" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=030" alt="Polk">
+<AREA SHAPE="POLYGON" COORDS="216, 57, 221, 65, 221, 67, 227, 71, 230, 73, 232, 80, 219, 80, 205, 76, 205, 73, 198, 67, 198, 60, 203, 61, 205, 64" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=029" alt="Elbert">
+<AREA SHAPE="POLYGON" COORDS="199, 46, 212, 46, 217, 57, 205, 64, 204, 61, 198, 61" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=028" alt="Hart">
+<AREA SHAPE="POLYGON" COORDS="194, 60, 199, 62, 198, 66, 206, 76, 199, 77, 196, 76, 187, 78, 184, 78, 178, 74, 178, 71, 177, 62, 181, 61" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=027" alt="Madison">
+<AREA SHAPE="POLYGON" COORDS="196, 41, 200, 45, 198, 49, 197, 53, 197, 56, 196, 60, 192, 61, 189, 61, 185, 61, 182, 61, 177, 55, 179, 50, 176, 45, 176, 44, 193, 44" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=026" alt="Franklin">
+<AREA SHAPE="POLYGON" COORDS="175, 61, 180, 69, 177, 73, 168, 80, 166, 75, 163, 74, 160, 74, 154, 74, 149, 71, 161, 57, 165, 60" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=025" alt="Jackson">
+<AREA SHAPE="POLYGON" COORDS="175, 44, 178, 49, 176, 52, 176, 55, 182, 61, 178, 63, 172, 60, 166, 60, 163, 57, 159, 57, 157, 49, 165, 44" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=024" alt="Banks">
+<AREA SHAPE="POLYGON" COORDS="160, 46, 157, 52, 160, 58, 148, 71, 146, 71, 132, 65, 140, 57, 137, 53, 137, 49, 145, 43" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=023" alt="Hall">
+<AREA SHAPE="POLYGON" COORDS="136, 54, 139, 58, 136, 61, 136, 63, 132, 64, 131, 67, 129, 68, 127, 73, 118, 69, 118, 66, 118, 54" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=022" alt="Forsyth">
+<AREA SHAPE="POLYGON" COORDS="89, 72, 105, 72, 105, 69, 109, 67, 117, 65, 117, 51, 89, 51" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=021" alt="Cherokee">
+<AREA SHAPE="POLYGON" COORDS="89, 48, 90, 73, 62, 71, 63, 51" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=020" alt="Bartow">
+<AREA SHAPE="POLYGON" COORDS="34, 57, 36, 73, 46, 73, 46, 71, 53, 71, 53, 72, 55, 72, 55, 71, 62, 71, 63, 51, 59, 51, 57, 42, 54, 49" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=019" alt="Floyd">
+<AREA SHAPE="POLYGON" COORDS="178, 30, 197, 41, 192, 45, 175, 45, 174, 43" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=018" alt="Stephens">
+<AREA SHAPE="POLYGON" COORDS="180, 27, 173, 45, 165, 44, 161, 48, 159, 42, 159, 37, 158, 19, 161, 22, 166, 26" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=017" alt="Habersham">
+<AREA SHAPE="POLYGON" COORDS="157, 23, 160, 26, 159, 31, 158, 34, 158, 37, 161, 40, 157, 44, 147, 44, 145, 40, 143, 32, 143, 28, 148, 24, 151, 23" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=016" alt="White">
+<AREA SHAPE="POLYGON" COORDS="134, 50, 138, 46, 141, 44, 146, 43, 144, 38, 143, 33, 145, 27, 133, 34, 129, 32, 126, 31, 122, 35, 120, 38, 124, 43, 126, 43" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=015" alt="Lumpkin">
+<AREA SHAPE="POLYGON" COORDS="116, 50, 116, 55, 137, 54, 136, 50, 129, 47, 127, 44, 124, 43, 120, 36, 112, 40" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=014" alt="Dawson">
+<AREA SHAPE="POLYGON" COORDS="90, 49, 117, 51, 117, 46, 114, 46, 112, 40, 91, 39" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=013" alt="Pickens">
+<AREA SHAPE="POLYGON" COORDS="59, 37, 59, 49, 64, 51, 67, 51, 70, 50, 82, 50, 82, 49, 90, 49, 90, 40, 86, 36" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=012" alt="Gordon">
+<AREA SHAPE="POLYGON" COORDS="30, 34, 34, 58, 38, 58, 40, 53, 43, 52, 54, 48, 60, 36" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=011" alt="Chattooga">
+<AREA SHAPE="POLYGON" COORDS="162, 11, 198, 8, 179, 29, 176, 27, 169, 27, 166, 27, 163, 22, 159, 20" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=010" alt="Rabun">
+<AREA SHAPE="POLYGON" COORDS="137, 11, 165, 10, 162, 12, 159, 15, 157, 16, 159, 20, 157, 22, 152, 23, 149, 23, 147, 18" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=009" alt="Towns">
+<AREA SHAPE="POLYGON" COORDS="123, 10, 138, 10, 139, 14, 147, 17, 150, 24, 147, 24, 145, 29, 141, 27, 132, 34, 128, 32, 128, 27, 128, 23, 124, 22, 126, 15" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=008" alt="Union">
+<AREA SHAPE="POLYGON" COORDS="88, 35, 89, 39, 110, 39, 115, 39, 120, 35, 119, 34, 116, 25, 108, 20, 95, 20, 92, 23" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=007" alt="Gilmer">
+<AREA SHAPE="POLYGON" COORDS="90, 11, 125, 11, 122, 14, 126, 15, 123, 22, 127, 24, 127, 30, 122, 34, 120, 34, 117, 26, 112, 22, 108, 20, 101, 20, 93, 21" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=006" alt="Fannin">
+<AREA SHAPE="POLYGON" COORDS="76, 10, 91, 10, 92, 19, 95, 21, 91, 24, 89, 38, 85, 36, 80, 36, 76, 36, 71, 33" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=005" alt="Murray">
+<AREA SHAPE="POLYGON" COORDS="66, 10, 77, 10, 77, 14, 77, 17, 77, 22, 74, 25, 74, 28, 72, 29, 72, 35, 62, 35, 62, 29, 56, 25, 56, 22, 64, 17" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=004" alt="Whitfield">
+<AREA SHAPE="POLYGON" COORDS="44, 10, 67, 10, 65, 15, 65, 19, 63, 19, 63, 21, 59, 22, 55, 25" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=003" alt="Catoosa">
+<AREA SHAPE="POLYGON" COORDS="38, 10, 45, 9, 48, 19, 50, 19, 52, 24, 55, 24, 55, 27, 61, 29, 61, 36, 31, 36, 30, 34" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=002" alt="Walker">
+<AREA SHAPE="POLYGON" COORDS="23, 10, 29, 35, 32, 29, 34, 29, 35, 19, 39, 10" HREF="%%scripturl%%?forecast=zandh&state=ga&zone=001" alt="Dade">
+</MAP>
+<img src="%%stateimagesurl%%/ga-zones.gif" width="360" height="336" alt="GA" border="0" usemap="#FrontPageMap0">
+<-end image map->

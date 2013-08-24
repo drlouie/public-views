@@ -1,0 +1,10 @@
+Chattanooga|Chattanooga|99
+Dyersburg|Dyersburg|19
+Jackson|Jackson|52
+Knoxville|Knoxville|69
+MEMPHIS INT'L|Memphis|88
+Nashville|Nashville|27
+Paris|Paris|4
+Savannah|Savannah|92
+Sparta/Cookevl|Cookeville|32
+Winchester|Winchester|97

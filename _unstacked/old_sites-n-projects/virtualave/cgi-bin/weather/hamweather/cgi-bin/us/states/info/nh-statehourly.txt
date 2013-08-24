@@ -1,0 +1,8 @@
+Berlin|Berlin|2
+Concord|Concord|8
+Jaffrey|Jaffrey|11
+Keene|Keene|11
+Laconia|Laconia|9
+Lebanon|Lebanon|5
+Manchester|Manchester|12
+Portsmouth|Portsmouth|14

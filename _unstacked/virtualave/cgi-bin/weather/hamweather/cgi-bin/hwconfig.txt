@@ -1,0 +1,63 @@
+##########################################################
+# HAMweather 2.0 Pre Beta 3
+# This script is copyright(c) 1998 -2000 by HAMweather, LLC, all rights reserved.
+# It is subject to the license agreement that can be found at the following
+# URL: http://www.hamweather.com/install/licenseinfo.html
+#########################################################
+#script extension
+# set to 'cgi' if your cgi scripts use the .cgi or 'pl if you use .pl
+$cgi_ext = "cgi"; #cgi extension
+
+#use cache sets the mode for caching forecasts Mode 2(Smart Caching) is highly recommended
+# 0=no cache mode
+# 1 = full cache mode(requires another program to download weather files
+# 2 = use combination mode
+$use_cache = "2";  #cache mode
+
+#http_mode sets the mode of connecting to the weather servers
+# 0 means uses the hwhttp-lib.pl (uses plain sockets) (default) (This mode supports proxy servers)
+# 1 use the LWP::Simple modules (This mode does not support Proxy servers)
+# 2 use the LWP::UserAgent modules (This mods support proxy servers)
+$http_mode = "0";  #http mode
+
+# iwin_url is the url to the iwin site. this is used for the noncache method
+$iwin_url = "iwin.nws.noaa.gov";
+$noaa_url = "weather.noaa.gov";
+$ind_zone_path = "/pub/data/forecasts/zone/";
+$ca_domain = "weather.ec.gc.ca";
+$hamweather_url = 'www.hamweather.com';
+$allow_command_line = 1;
+
+$proxy_server = ""; #proxy server
+$port = 80; # proxy server port
+
+#Set to http_os to either UNIX or NT
+$http_os = 'UNIX';
+
+#set this to allow the debug parameter..
+#works opposite than you would think
+# thus.. 0 = on when debug=1 parameter set in url and 1 = off 2= always on
+$allow_debug = "0";  #debug mode
+
+$busy_mode =0; #busy mode
+
+$display_tz = "-5";  #time zone offset
+$display_tz_name = "EST";  #time zone display
+
+$check_warning = "0"; #check_warning
+$check_watches = "0"; #check_watches
+$check_special = "0"; #check_special
+
+# if using gd.pm verison 1.19 or lower set to 0
+# if using gd.pm version 1.20 or higher set to 1
+$gd_version = "0";  #gd version
+
+if ($gd_version == 2) { $gd_ext = '.jpg'; }
+elsif (!$gd_version) { $gd_ext = '.gif'; }
+   else { $gd_ext = '.png'; }
+
+#this controls whether the templates can use SSI simulation or not.
+#If set to 0 then no if set to 1 then yes.
+$allow_SSI =0; #allow ssi simulation
+
+1;

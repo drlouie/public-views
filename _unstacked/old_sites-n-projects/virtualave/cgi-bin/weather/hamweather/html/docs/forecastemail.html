@@ -1,0 +1,127 @@
+<html>
+
+<head>
+<title>HAMweather : Forecast Emails</title>
+
+</head>
+
+<body bgcolor='#ffffff' >
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Email Forecasts</strong></big></font></td>
+  </tr>
+</table>
+
+<p>In HW 1.1, the idea of sending custom email forecasts was developed.&nbsp; In this
+early version, users could be allowed to subscribe to a forecast.&nbsp; Then if you
+automated the email script, HAMweather could send out daily forecasts.&nbsp; Well this
+feature has been expanded somewhat in HW2.</p>
+
+<p>The HW2 software package comes with the ability to email forecasts to indivuals who
+have previously subscribed.&nbsp; HAMweather now includes the ability for users to
+unsubscribe from an email forecast.&nbsp; Along with this, support for NT based web
+servers and SMTP mail server has been added.</p>
+
+<p><font color="#000080"><strong>Subscribing &amp; Unsubscribing</strong></font></p>
+
+<p>The hw2emailstorer.cgi script is the script that performs the actual subscribing and
+unsubscribing of users to the email forecast system.&nbsp; When a user subscribes or
+unsubscribes HW will also send them a notification email.&nbsp; The templates for these
+emails are in the &quot;email&quot; directory and named &quot;subscribe.txt&quot; and
+&quot;unsubscribe.txt.&quot;</p>
+
+<p>For demostation purposes, in the HAMweather demo provided, a &quot;pass&quot; template
+is used to allow users to subscribe and unsubscribe.&nbsp; You will notice a link to thi
+on the output of the zone forecasts.</p>
+
+<p>The parameters that should be sent to the hw2emailstorer.cgi script are:</p>
+
+<table border="2" cellspacing="0" bgcolor="#FFFFD7" bordercolor="#000080" bordercolorlight="#000080" bordercolordark="#000080">
+  <tr>
+    <td width="100%"><table border="1">
+      <tr>
+        <td align="center"><font color="#000080"><big><strong>Parameter</strong></big></font></td>
+        <td><font color="#000080"><big><strong>Description</strong></big></font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>forecast</strong></td>
+        <td>This is the forecast type that is needed to send to user.&nbsp; Usually should be set
+        to 'zone'.&nbsp; Refer to the <a href="usageforecasts.html">Available Foreasts table</a>.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>place</strong></td>
+        <td>The place the forecast is needed for</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>state</strong></td>
+        <td>The state the forecast is needed for.&nbsp; This can be the whole state name or the
+        two letter abbreviation.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>pands</strong></td>
+        <td>This can be used in place of &quot;place&quot; and &quot;state&quot;.&nbsp; This is
+        the place and state in one string, with a comma separating them.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>zone </strong></td>
+        <td>This can be used in place of &quot;place&quot;.&nbsp;&nbsp; Stands for the weather
+        zone the forecast is needed for.&nbsp; <small>(Actually the &quot;place&quot; name will be
+        derived from the zone number.)</small></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>address</strong></td>
+        <td>The email address to send the forecast to.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>do</strong></td>
+        <td>Set to&quot;subscribe&quot; or &quot;unsubscribe&quot; depending on the action that
+        needs to be taken.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>user</strong></td>
+        <td>The current user.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>theme</strong></td>
+        <td>The current theme.</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+
+<p><font color="#000080"><strong>Sending of Emails</strong></font></p>
+
+<p>When it comes to the sending of the emails, the emailhw2.cgi script is used.&nbsp; The
+script can send email using a mail prog, such as sendmail on Unix systems, or by a SMTP
+server, used for NT systems.&nbsp; Refer to the Web based Email administration page for
+instrcutions on administering the needed settings.</p>
+
+<p>If you want to offer this service to your web site visitors, you will need the ability
+to automate the emailhw2.cgi script.&nbsp; On Unix systems, this is best done using a cron
+job.&nbsp; You may need to have additional access, such as telnet, to be able to set cron
+jobs.&nbsp; If you are unsure whether you have the ability to automate scripts using cron
+(or crontab) contact your system administrators.&nbsp; If you have an NT server then
+contact your system administrator on the ability to automate scripts to run at
+predetermined times.</p>
+
+<p>Finally, if you do not have the ability to automate scripts on your web server, you may
+set the email mode setting (refer to the Administration : Email page) tp allow the script
+to be ran from a web browser.&nbsp; Once this is set, you can type in the URL to the
+emailhw2.cgi script in your web browser.&nbsp; this wilkl cause the forecast emails to be
+sent.&nbsp; Remember, if you are using this method, you will need to navigate to the
+script daily to send forecasts daily.</p>
+
+<p><font color="#000080"><strong>Multiple Users</strong></font></p>
+
+<p>It should be noted that the Email Forecasts work on the user level.&nbsp; This means
+that each of the users can have their own email lists.&nbsp; Thus allowing web visitors to
+subscribe or not on each users weather site.&nbsp; This also allows the different users to
+schedule the forecasts to be sent to the emails in thier own lists at defferent time if so
+desired.&nbsp; Because of this you should provide the 'user' and 'theme' parameters when
+having the emailhw2.cgi script email out the forecasts.&nbsp; If your HW installation only
+has one user then these parameters are not needed, for HW will use the default user &amp;
+theme.
+</body>
+</html>

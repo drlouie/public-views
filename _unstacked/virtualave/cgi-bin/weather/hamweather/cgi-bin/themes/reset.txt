@@ -1,0 +1,200 @@
+##################################################################################
+##		HAMweather Theme Variables
+##################################################################################
+##########################
+# HAMweather Paths
+##########################
+$imagespath = "$hw_html_dir_url/images/fcicons/";  #images path
+$imagespath2 = "$hw_html_dir_url/images/fcicons/"; #images2 path
+#$forecast_templates = "/usr/www/users/hamnet/hamweather/cgi-bin/templates";
+
+##########################
+# VariousWeather & Image Info
+##########################
+
+#begin weather types
+
+%wxinfo = (
+"BLIZZARD" => [ "Blizzard", "blizzard.gif", "blizzard.gif" ]
+,"INCREASING CLOUDS" => [ "Increasing Clouds", "mcloudy.gif", "mcloudyn.gif" ]
+,"HAZY" => [ "Hazy", "hazy.gif", "hazy.gif" ]
+,"SUN AND CLOUD" => [ "Partly Cloudy", "pcloudy.gif", "pcloudyn.gif" ]
+,"WINDY" => [ "Windy", "wind.gif", "wind.gif" ]
+,"SLEET" => [ "Sleet", "sleet.gif", "sleet.gif" ]
+,"PARTIAL CLEARING" => [ "Partial Clearing", "mcloudy.gif", "mcloudyn.gif" ]
+,"CLEARING" => [ "Clearing", "pcloudy.gif", "pcloudyn.gif" ]
+,"CLEAR" => [ "Clear", "fair.gif", "fair.gif" ]
+,"VARIABLE CLOUDINESS" => [ "Partly Cloudy", "pcloudy.gif", "pcloudyn.gif" ]
+,"VARIABLE CLOUDS" => [ "Variable Clouds", "pcloudy.gif", "pcloudyn.gif" ]
+,"BLOWING SNOW" => [ "Blowing Snow", "blowingsnow.gif", "blowingsnow.gif" ]
+,"DRIFTING SNOW" => [ "Drifting Snow", "blowingsnow.gif", "blowingsnow.gif" ]
+,"RAIN AND SNOW" => [ "Rain and Snow", "rainandsnow.gif", "rainandsnow.gif" ]
+,"SNOW AND RAIN" => [ "Snow and Rain", "rainandsnow.gif", "rainandsnow.gif" ]
+,"RAIN SHOWER" => [ "Rain Showers", "showers.gif", "showers.gif" ]
+,"SNOW SHOWER" => [ "Snow Showers", "snowshowers.gif", "snowshowers.gif" ]
+,"SHOWER" => [ "Showers", "showers.gif", "showers.gif" ]
+,"FREEZING DRIZZLE" => [ "Freezing Drizzle", "freezingrain.gif", "freezingrain.gif" ]
+,"FREEZING RAIN" => [ "Freezing Rain", "freezingrain.gif", "freezingrain.gif" ]
+,"DRIZZLE" => [ "Drizzle", "drizzle.gif", "drizzle.gif" ]
+,"MAINLY CLOUDY" => [ "Mostly Cloudy", "mcloudy.gif", "mcloudyn.gif" ]
+,"CLOUDY PERIODS" => [ "Cloudy Periods", "pcloudy.gif", "pcloudyn.gif" ]
+,"THUNDERSTORM" => [ "Thunderstorms", "tstorm.gif", "tstormn.gif" ]
+,"FLURR" => [ "Flurries", "flurries.gif", "flurries.gif" ]
+,"FAIR" => [ "Fair", "fair.gif", "pcloudyn.gif" ]
+,"light snow" => [ "Light Snow", "snowshowers.gif", "snowshowers.gif" ]
+,"SNOW" => [ "Snow", "snow.gif", "snow.gif" ]
+,"RAIN" => [ "Rain", "rain.gif", "rain.gif" ]
+,"DRY" => [ "Dry", "sunny.gif", "sunnyn.gif" ]
+,"Variable high cloudiness" => [ "Variable Cloudiness", "pcloudy.gif", "pcloudyn.gif" ]
+,"PARTLY CLOUDY" => [ "Partly Cloudy", "pcloudy.gif", "pcloudyn.gif" ]
+,"MOSTLY CLOUDY" => [ "Mostly Cloudy", "mcloudy.gif", "mcloudyn.gif" ]
+,"MOSTLY SUNNY" => [ "Mostly Sunny", "sunny.gif", "sunnyn.gif" ]
+,"PARTLY SUNNY" => [ "Partly Sunny", "mcloudy.gif", "mcloudyn.gif" ]
+,"SUNNY" => [ "Sunny", "sunny.gif", "sunnyn.gif" ]
+,"INCREASING CLOUDINESS" => [ "Increasing Clouds", "mcloudy.gif", "mcloudyn.gif" ]
+,"CLOUDY" => [ "Cloudy", "cloudy.gif", "cloudy.gif" ]
+,"Occasional Sunshine" => [ "Occasional Sunshine", "mcloudy.gif", "mcloudyn.gif" ]
+,"Partial Sunshine" => [ "Partial Sunshine", "mcloudy.gif", "mcloudyn.gif" ]
+,"CLOUDS" => [ "Clouds", "mcloudy.gif", "mcloudyn.gif" ]
+,"FOG" => [ "Fog", "fog.gif", "fog.gif" ]
+,"SMOKE" => [ "Smoke", "smoke.gif", "smoke.gif" ]
+,"MIST" => [ "Mist", "drizzle.gif", "drizzle.gif" ]
+,"towering cumulus clouds observed" => [ "Partly Cloudy", "mcloudy.gif", "mcloudyn.gif" ]
+,"overcast" => [ "Overcast", "cloudy.gif", "cloudy.gif" ]
+);
+
+@wxtypes =(  "BLIZZARD"
+, "INCREASING CLOUDS"
+, "HAZY"
+, "SUN AND CLOUD"
+, "WINDY"
+, "SLEET"
+, "PARTIAL CLEARING"
+, "CLEARING"
+, "CLEAR"
+, "VARIABLE CLOUDINESS"
+, "VARIABLE CLOUDS"
+, "BLOWING SNOW"
+, "DRIFTING SNOW"
+, "RAIN AND SNOW"
+, "SNOW AND RAIN"
+, "RAIN SHOWER"
+, "SNOW SHOWER"
+, "SHOWER"
+, "FREEZING DRIZZLE"
+, "FREEZING RAIN"
+, "DRIZZLE"
+, "MAINLY CLOUDY"
+, "CLOUDY PERIODS"
+, "THUNDERSTORM"
+, "FLURR"
+, "FAIR"
+, "light snow"
+, "SNOW"
+, "RAIN"
+, "DRY"
+, "Variable high cloudiness"
+, "PARTLY CLOUDY"
+, "MOSTLY CLOUDY"
+, "MOSTLY SUNNY"
+, "PARTLY SUNNY"
+, "SUNNY"
+, "INCREASING CLOUDINESS"
+, "CLOUDY"
+, "Occasional Sunshine"
+, "Partial Sunshine"
+, "CLOUDS"
+, "FOG"
+, "SMOKE"
+, "MIST"
+, "towering cumulus clouds observed"
+, "overcast"
+ );
+
+#end weather types
+
+
+
+#begin day title display
+
+%day_title_display = (
+"and" => "and"
+,"this evening" => "THIS EVENING"
+,"this afternoon" => "THIS AFTERNOON"
+,"sunday" => "SUNDAY"
+,"thursday" => "THURSDAY"
+,"wednesday" => "WEDNESDAY"
+,"monday" => "MONDAY"
+,"night" => "NIGHT"
+,"tonight" => "TONIGHT"
+,"saturday" => "SATURDAY"
+,"tuesday" => "TUESDAY"
+,"friday" => "FRIDAY"
+);
+
+#end day title display
+
+#dont change this.. it sets the number of keywords and images
+$numkeywords = @wxtypes;
+
+#set these to match the icon widths & heights that you need on
+#your web page
+$iconwidth = 55;  #iconwidth
+$iconheight = 58;  #iconheight
+
+
+
+#set $max_days to the maximum number of days you want the forecast for.
+# Most places only have forecast fore the next 48 -72 hours but a few can have
+# up to a week Which may creat to many icons for your web page.
+# This will limit the number of days it will display the weather for
+$max_days = 4;  #max days
+
+##########################
+# HAMweather Templates
+##########################
+$title_html_template = "<td align='center'><b><font size='-2'>%%daytitle%%</font></b></td>\n";
+
+$icon_html_template = "<td align='center' valign='top'><img src='%%icon%%' alt='%%iconalt%%' width='$iconwidth' ";
+$icon_html_template .= " height='$iconheight'>\n<br><font size='-1'>%%iconwhat%%</font></td>\n";
+
+$temps_html_template ="<td align='center' valign='top'><font size='-1'>%%temps%%</font></td>\n";
+
+$zone_text_pre_day_title = "<b>";
+$zone_text_post_day_title = "</b>...";
+$zone_text_post_day_forecast = "";
+
+$zforecast_template = "<font size='3'><pre>%%zforecast%%</pre></zone>\n";
+
+$state_hourly_template = qq!
+<tr bgcolor="silver"><td><a href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zandh&place=%%lplace%%&state=%%state%%&zone=%%zone%%&%%hwv%%">%%place%%</a></td>
+<td align="center"><small>%%hsky%%</small></td>
+<td align="center">%%htempf%%°F</td><td align="center">%%hwind%%</td>
+<td align="center">%%hrh%%%</td></tr>
+!;
+$state_hourly_template_none = qq!<tr bgcolor="silver"><th colspan="5" align="center">Hourly round up not currently available</th></tr>!;
+
+
+
+##################################################################################
+##		HAMweather Pro Add-on Variables
+##################################################################################
+
+@map_text_color = (0, 0, 0);  #map text RGB color
+
+##########################
+# Pro Templates
+##########################
+$cc_html_template = qq!<tr><td><b>%%place%%</b></td><td>%%hsky%%</td><td>%%htempf%%°F <small>(%%htempc%%°C)</small></td></tr>\n!;
+
+$wrn_table_template = qq!<td align="center"><a href="$script_url?user=%%user%%&theme=%%theme%%&forecast=warnings&state=%%state%%&%%hwv%%">%%state%%</a></td>\n!;
+
+$active_warning_template = qq!<center><b><font color="#FF0000">%%type%%</font></b></center><br>!;
+##########################
+# Pro Paths
+##########################
+$fc_icons_path = "$hw_html_dir_path/images/fcmapicons";
+
+
+
+1;

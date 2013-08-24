@@ -1,0 +1,3 @@
+FLLI|Livingstone
+FLLS|Lusaka Internationalairport
+FLND|Ndola

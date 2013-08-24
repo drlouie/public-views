@@ -1,0 +1,13 @@
+MHAM|Amapala
+MHCA|Catacamas
+MHCH|Choluteca
+MHLC|La Ceiba Airport 
+MHLE|La Esperanza
+MHLM|La Mesa San Pedro Sula 
+MHSC|Nueva Ocotepeque
+MHPL|Puerto Lempira
+MHRO|Roatan
+MHSR|Santa Rosa De Copan
+MHTG|Tegucigalpa
+MHTE|Tela
+MHYR|Yoro

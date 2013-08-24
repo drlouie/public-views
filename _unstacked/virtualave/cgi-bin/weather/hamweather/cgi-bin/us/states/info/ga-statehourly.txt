@@ -1,0 +1,11 @@
+Albany|Albany|125
+Atlanta|Atlanta|45
+Athens|Athens|36
+Augusta-Daniel|Augusta|64
+Brunswick|Brunswick|154
+Columbus|Columbus|89
+Gainesville|Gainesville|23
+Macon|Macon|82
+Rome|Rome|19
+Savannah|Savannah|119
+Valdosta|Valdosta|160

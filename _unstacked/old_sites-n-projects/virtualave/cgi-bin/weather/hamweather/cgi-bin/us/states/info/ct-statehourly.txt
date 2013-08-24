@@ -1,0 +1,8 @@
+Bridgeport|Bridgeport|9
+Danbury|Danbury|5
+Groton|Groton|12
+Hartford|Hartford|2
+New Haven|New Haven|10
+Meriden|Meriden|6
+Oxford|Oxford|6
+Willimantic|Willimantic|4

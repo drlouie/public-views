@@ -1,0 +1,8 @@
+EPGD|Gdansk-Rebiechowo
+EPKT|Katowice
+EPKK|Krakow
+EPPO|Poznan
+EPRZ|Rzeszow-Jasionka
+EPSC|Szczecin
+EPWA|Warszawa-Okecie
+EPWR|Wroclaw Ii

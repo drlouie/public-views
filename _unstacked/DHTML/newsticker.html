@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>DynAPI Examples - News Ticker Object Demo 1</title>
+<script lanuage="JavaScript" src="js/dynlayer.js"></script>
+<script lanuage="JavaScript" src="js/newsticker.js"></script>
+<script lanuage="JavaScript">
+<!--
+
+onload = init
+function init() {
+	ticker.activate()
+}
+
+var i0 = '<br><span class="tickerstyle"><b>Today\'s Lotto Numbers:</b>'+
+'<br>Lotto 649: 3 14 18 22 34 39'+
+'<br>Encore: 1 4 7 7 9 3'+
+'<br>Pick 3: 6 9 5'+
+'</span>'
+
+var i1 = '<br><span class="tickerstyle"><b>Tomorrow\'s Lotto Numbers:</b>'+
+'<br>Lotto 649: 11 15 19 29 31 33'+
+'<br>Encore: 8 8 7 2 3 3 2'+
+'<br>Pick 3: 9 3 7'+
+'<br>(yes this is a smart news ticker)'+
+'</span>'
+
+var i2 = '<br><span class="tickerstyle"><b>This is a test Ticker:</b>'+
+'Some linesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore Lines'+
+'More LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore LinesMore Lines'+
+'<br>Even More Lines'+
+'<br>Even More Lines'+
+'<br>Even More Lines'+
+'<br>Even More Lines'+
+'<br>Even More Lines'+
+'<br>Even More Lines'+
+'</span>'
+
+ticker = new NewsTicker(50,50,400,100)
+ticker.addItem(i0)
+ticker.addItem(i1)
+ticker.addItem(i2)
+ticker.build()
+
+writeCSS(
+ticker.css
+)
+
+//-->
+</script>
+<style type="text/css">
+<!--
+.tickerstyle {font-family:"Arial"; font-size:11pt; color:#red;}
+-->
+</style>
+</head>
+
+<body bgcolor="#ffffff">
+
+<script language="JavaScript">
+document.write(ticker.div)
+</script>
+
+</body>
+</html>

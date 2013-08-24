@@ -1,0 +1,68 @@
+LFBA|Agen
+LFKJ|Ajaccio
+LFSB|Bale-Mulhouse
+LFKB|Bastia
+LFOB|Beauvais
+LFBZ|Biarritz
+LFBD|Bordeaux / Merignac
+LFLD|Bourges
+LFRB|Brest
+LFRK|Caen
+LFKC|Calvi
+LFMD|Cannes
+LFBC|Cazaux
+LFLB|Chambery / Aix-Les-Bains
+LFRC|Cherbourg / Maupertus
+LFLC|Clermont-Ferrand
+LFBG|Cognac
+LFSC|Colmar
+LFSD|Dijon
+LFRD|Dinard
+LFOE|Evreux
+LFKF|Figari
+LFLS|Grenoble / St. Geoirs
+LFTH|Hyeres
+LFOH|La Heve
+LFRH|Lann Bihoue
+LFRO|Lannion / Servel
+LFRM|Le Mans
+LFAT|Le Touquet
+LFQQ|Lille
+LFBL|Limoges
+LFSX|Luxeuil
+LFLY|Lyon / Bron
+LFLL|Lyon / Satolas
+LFML|Marseille / Marignane
+LFSF|Metz / Frescaty
+LFJL|Metz-Nancy-Lorraine
+LFBM|Mont-De-Marsan
+LFMT|Montpellier
+LFSN|Nancy / Essey
+LFSO|Nancy / Ochey
+LFRS|Nantes
+LFMN|Nice
+LFTW|Nimes / Garons
+LFPB|Paris / Le Bourget
+LFPG|Paris-Aeroport Charles De Gaulle
+LFPO|Paris-Orly
+LFBP|Pau
+LFMP|Perpignan
+LFBI|Poitiers
+LFRQ|Quimper
+LFSR|Reims
+LFRN|Rennes
+LFOP|Rouen
+LFRT|Saint-Brieuc
+LFSI|St-Dizier
+LFMH|St-Etienne Boutheon
+LFCG|St-Girons
+LFRZ|St-Nazaire
+LFST|Strasbourg
+LFBT|Tarbes / Ossun
+LFSL|Toul / Rosieres
+LFBO|Toulouse / Blagnac
+LFOT|Tours
+LFPN|Toussus Le Noble
+LFQB|Troyes
+LFLV|Vichy
+LFPV|Villacoublay

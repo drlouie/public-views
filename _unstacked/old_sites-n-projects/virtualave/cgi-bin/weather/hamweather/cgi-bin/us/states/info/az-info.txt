@@ -1,0 +1,50 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="135, 176, 6" HREF="%%scripturl%%?forecast=zandh&state=az&place=phoenix">
+<AREA SHAPE="POLYGON" COORDS="212, 229, 279, 229, 278, 279, 213, 280" HREF="%%scripturl%%?forecast=zandh&state=az&zone=035" alt="Cochise County">
+<AREA SHAPE="POLYGON" COORDS="212, 227, 217, 184, 232, 181, 236, 174, 246, 180, 257, 172, 259, 199, 264, 197, 267, 194, 269, 198, 278, 204, 278, 229" HREF="%%scripturl%%?forecast=zandh&state=az&zone=030" alt="Upper Gila River Valley">
+<AREA SHAPE="POLYGON" COORDS="129, 224, 130, 218, 147, 216, 184, 182, 198, 203, 213, 192, 211, 224" HREF="%%scripturl%%?forecast=zandh&state=az&zone=029" alt="Southeast Pinal County">
+<AREA SHAPE="POLYGON" COORDS="184, 181, 147, 215, 129, 218, 131, 187, 162, 189, 159, 179, 176, 180, 180, 185" HREF="%%scripturl%%?forecast=zandh&state=az&zone=028" alt="Central Deserts">
+<AREA SHAPE="POLYGON" COORDS="131, 154, 134, 161, 139, 161, 145, 165, 151, 177, 173, 178, 180, 187, 184, 180, 197, 203, 213, 192, 213, 186, 217, 181, 231, 180, 231, 177, 208, 164, 197, 164, 188, 164, 181, 155, 165, 153, 151, 152" HREF="%%scripturl%%?forecast=zandh&state=az&zone=024" alt="Southern Gila/Tonto NF Foothills">
+<AREA SHAPE="POLYGON" COORDS="116, 187, 121, 172, 131, 159, 138, 162, 140, 165, 144, 166, 147, 168, 149, 166, 150, 178, 158, 178, 159, 189" HREF="%%scripturl%%?forecast=zandh&state=az&zone=023" alt="Greater Phoenix Area">
+<AREA SHAPE="POLYGON" COORDS="132, 153, 132, 159, 126, 162, 121, 168, 118, 174, 115, 187, 77, 185, 76, 152, 101, 152, 120, 160" HREF="%%scripturl%%?forecast=zandh&state=az&zone=022" alt="Northwest Maricopa County">
+<AREA SHAPE="POLYGON" COORDS="172, 275, 172, 271, 180, 270, 181, 261, 213, 261, 212, 281, 184, 280" HREF="%%scripturl%%?forecast=zandh&state=az&zone=034" alt="Santa Cruz County">
+<AREA SHAPE="POLYGON" COORDS="166, 226, 212, 223, 213, 260, 181, 261, 167, 243" HREF="%%scripturl%%?forecast=zandh&state=az&zone=033" alt="Tucson Metro/Marana/Green Valley">
+<AREA SHAPE="POLYGON" COORDS="121, 227, 160, 224, 166, 225, 166, 243, 181, 261, 181, 268, 171, 270, 171, 275, 122, 259" HREF="%%scripturl%%?forecast=zandh&state=az&zone=032" alt="Tohono Oodham Nation">
+<AREA SHAPE="POLYGON" COORDS="75, 185, 130, 188, 129, 223, 121, 225, 78, 224" HREF="%%scripturl%%?forecast=zandh&state=az&zone=027" alt="Southwest Maricopa County">
+<AREA SHAPE="POLYGON" COORDS="235, 39, 237, 70, 248, 63, 244, 54, 251, 55, 246, 45" HREF="%%scripturl%%?forecast=zandh&state=az&zone=009" alt="Northwest Plateaus and Mesas">
+<AREA SHAPE="POLYGON" COORDS="78, 223, 121, 224, 119, 259, 78, 245" HREF="%%scripturl%%?forecast=zandh&state=az&zone=031" alt="Western Pima County">
+<AREA SHAPE="POLYGON" COORDS="186, 64, 220, 73, 235, 71, 248, 64, 251, 72, 243, 85, 257, 78, 259, 82, 248, 94, 248, 98, 255, 96, 265, 88, 270, 95, 262, 102, 255, 116, 201, 97, 192, 90" HREF="%%scripturl%%?forecast=zandh&state=az&zone=040" alt="Northeast Plateaus and Mesas - South of Hwy 264">
+<AREA SHAPE="POLYGON" COORDS="236, 10, 280, 12, 278, 23, 264, 20, 270, 30, 265, 40, 270, 42, 262, 42, 269, 48, 259, 48, 259, 61, 251, 72, 243, 54, 250, 53, 249, 48, 238, 40" HREF="%%scripturl%%?forecast=zandh&state=az&zone=010" alt="Chinle Valley">
+<AREA SHAPE="POLYGON" COORDS="256, 114, 260, 104, 269, 93, 266, 87, 256, 95, 246, 99, 247, 95, 260, 81, 255, 79, 246, 85, 244, 83, 250, 73, 258, 63, 258, 48, 270, 46, 262, 43, 271, 41, 264, 39, 271, 31, 262, 19, 268, 19, 279, 23, 278, 111, 271, 120, 258, 117" HREF="%%scripturl%%?forecast=zandh&state=az&zone=011" alt="Chuska Mountains and Defiance Plateau">
+<AREA SHAPE="POLYGON" COORDS="243, 112, 255, 115, 259, 118, 271, 120, 278, 111, 279, 144, 264, 143, 256, 136, 243, 136" HREF="%%scripturl%%?forecast=zandh&state=az&zone=014" alt="Little Colorado River in Apache County">
+<AREA SHAPE="POLYGON" COORDS="199, 97, 243, 112, 242, 134, 200, 115" HREF="%%scripturl%%?forecast=zandh&state=az&zone=013" alt="Little Colorado River Valley in Navajo County">
+<AREA SHAPE="POLYGON" COORDS="154, 42, 177, 42, 183, 62, 191, 90, 199, 95, 199, 116, 172, 102, 168, 80, 152, 78, 154, 61, 158, 50, 149, 50" HREF="%%scripturl%%?forecast=zandh&state=az&zone=012" alt="Little Colorado River Valley in Coconino County">
+<AREA SHAPE="POLYGON" COORDS="258, 172, 267, 166, 278, 165, 279, 202, 269, 198, 269, 195, 265, 194, 263, 198, 258, 197" HREF="%%scripturl%%?forecast=zandh&state=az&zone=019" alt="Northern Greenlee">
+<AREA SHAPE="POLYGON" COORDS="241, 136, 256, 137, 262, 142, 279, 143, 279, 164, 269, 164, 258, 171, 245, 176, 234, 172, 235, 154, 225, 154, 226, 145" HREF="%%scripturl%%?forecast=zandh&state=az&zone=017" alt="White Mountains">
+<AREA SHAPE="POLYGON" COORDS="173, 102, 241, 135, 224, 144, 224, 153, 199, 153, 198, 139, 172, 131, 169, 134, 164, 129, 162, 116" HREF="%%scripturl%%?forecast=zandh&state=az&zone=016" alt="Eastern Mogollon Rim">
+<AREA SHAPE="POLYGON" COORDS="163, 131, 171, 132, 181, 135, 199, 139, 199, 153, 235, 155, 233, 179, 212, 167, 199, 163, 189, 164, 183, 157, 167, 153, 165, 147, 155, 145" HREF="%%scripturl%%?forecast=zandh&state=az&zone=018" alt="Northern Gila">
+<AREA SHAPE="POLYGON" COORDS="75, 185, 77, 246, 23, 230, 33, 214, 33, 178, 47, 178, 46, 183" HREF="%%scripturl%%?forecast=zandh&state=az&zone=026" alt="Southwest Deserts">
+<AREA SHAPE="POLYGON" COORDS="73, 139, 76, 183, 48, 182, 47, 177, 33, 176, 32, 156, 41, 139, 65, 141" HREF="%%scripturl%%?forecast=zandh&state=az&zone=021" alt="West Central Deserts">
+<AREA SHAPE="POLYGON" COORDS="23, 201, 32, 200, 32, 213, 22, 230, 7, 223, 12, 213, 15, 215, 23, 209" HREF="%%scripturl%%?forecast=zandh&state=az&zone=025" alt="Yuma/Martinez Lake and Vicinity">
+<AREA SHAPE="POLYGON" COORDS="40, 141, 33, 157, 31, 199, 23, 200, 13, 198, 10, 184, 20, 167, 20, 155" HREF="%%scripturl%%?forecast=zandh&state=az&zone=020" alt="Lower Colorado River Valley AZ">
+<AREA SHAPE="POLYGON" COORDS="137, 151, 135, 144, 139, 131, 128, 118, 140, 121, 147, 136, 143, 150" HREF="%%scripturl%%?forecast=zandh&state=az&zone=008" alt="Yavapai County Mountains">
+<AREA SHAPE="POLYGON" COORDS="83, 98, 86, 95, 93, 100, 105, 105, 112, 124, 121, 128, 126, 143, 121, 140, 114, 146, 100, 128, 95, 144, 94, 129, 84, 126, 86, 112" HREF="%%scripturl%%?forecast=zandh&state=az&zone=008" alt="Yavapai County Mountains">
+<AREA SHAPE="POLYGON" COORDS="154, 146, 165, 146, 164, 153, 154, 153" HREF="%%scripturl%%?forecast=zandh&state=az&zone=008" alt="Yavapai County Mountains">
+<AREA SHAPE="POLYGON" COORDS="77, 81, 117, 94, 117, 99, 125, 101, 126, 107, 141, 108, 136, 110, 138, 115, 147, 117, 156, 137, 153, 146, 152, 153, 133, 150, 123, 159, 107, 153, 75, 151" HREF="%%scripturl%%?forecast=zandh&state=az&zone=037" alt="Yavapai County Valleys and Basins">
+<AREA SHAPE="POLYGON" COORDS="154, 114, 162, 115, 160, 133, 156, 135, 151, 124" HREF="%%scripturl%%?forecast=zandh&state=az&zone=008" alt="Yavapai County Mountains">
+<AREA SHAPE="POLYGON" COORDS="143, 98, 158, 100, 151, 122, 146, 116, 137, 114, 137, 110, 144, 105" HREF="%%scripturl%%?forecast=zandh&state=az&zone=038" alt="Oak Creek and Sycamore Canyons">
+<AREA SHAPE="POLYGON" COORDS="124, 107, 125, 98, 134, 83, 150, 79, 169, 80, 173, 101, 163, 113, 153, 114, 159, 99, 142, 96, 145, 106, 128, 106" HREF="%%scripturl%%?forecast=zandh&state=az&zone=015" alt="Western Mogollon Rim Including Flagstaff">
+<AREA SHAPE="POLYGON" COORDS="198, 11, 236, 10, 234, 64, 200, 48" HREF="%%scripturl%%?forecast=zandh&state=az&zone=039" alt="Black Mesa Area">
+<AREA SHAPE="POLYGON" COORDS="198, 11, 200, 49, 234, 65, 235, 73, 222, 74, 199, 69, 182, 63, 177, 41, 151, 42, 155, 39, 148, 26, 150, 19, 159, 22, 160, 17, 155, 11" HREF="%%scripturl%%?forecast=zandh&state=az&zone=009" alt="Northwest Plateaus and Mesas">
+<AREA SHAPE="POLYGON" COORDS="148, 50, 158, 52, 152, 62, 151, 80, 135, 80, 123, 99, 118, 99, 117, 94, 78, 80, 75, 63, 81, 55, 98, 49, 121, 56, 124, 62, 129, 63, 131, 54, 144, 55" HREF="%%scripturl%%?forecast=zandh&state=az&zone=007" alt="Coconino Plateau">
+<AREA SHAPE="POLYGON" COORDS="151, 43, 145, 55, 128, 55, 127, 62, 123, 61, 121, 56, 96, 48, 108, 42, 127, 45, 132, 39, 139, 41, 139, 35" HREF="%%scripturl%%?forecast=zandh&state=az&zone=006" alt="Grand Canyon Country">
+<AREA SHAPE="POLYGON" COORDS="143, 36, 147, 41, 151, 41, 155, 37, 148, 25, 151, 18, 159, 21, 159, 17, 153, 11, 147, 11, 142, 20, 133, 21, 133, 27, 143, 28" HREF="%%scripturl%%?forecast=zandh&state=az&zone=005" alt="Marble Canyon and Glen Canyon">
+<AREA SHAPE="POLYGON" COORDS="115, 10, 144, 10, 142, 21, 131, 21, 132, 26, 142, 28, 143, 34, 138, 35, 139, 42, 132, 38, 126, 44, 112, 41" HREF="%%scripturl%%?forecast=zandh&state=az&zone=004" alt="Kaibab Plateau">
+<AREA SHAPE="POLYGON" COORDS="14, 109, 8, 52, 51, 41, 50, 60, 38, 67, 26, 65, 21, 68, 23, 106" HREF="%%scripturl%%?forecast=zandh&state=az&zone=036" alt="Lake Mead National Recreation Area">
+<AREA SHAPE="POLYGON" COORDS="75, 65, 52, 61, 38, 66, 25, 64, 19, 68, 25, 106, 40, 136, 42, 139, 62, 141, 69, 137, 75, 139" HREF="%%scripturl%%?forecast=zandh&state=az&zone=003" alt="Northwest Deserts">
+<AREA SHAPE="POLYGON" COORDS="15, 109, 25, 106, 39, 137, 29, 130" HREF="%%scripturl%%?forecast=zandh&state=az&zone=002" alt="Lake Havasu and Fort Mohave">
+<AREA SHAPE="POLYGON" COORDS="42, 12, 114, 10, 109, 41, 80, 56, 77, 64, 50, 61, 52, 41, 45, 40" HREF="%%scripturl%%?forecast=zandh&state=az&zone=001" alt="Northwest Plateau">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="285" alt="AZ" src="%%stateimagesurl%%/az-zones.gif" width="286">
+<-end image map->

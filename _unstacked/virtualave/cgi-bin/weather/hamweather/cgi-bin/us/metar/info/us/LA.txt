@@ -1,0 +1,33 @@
+KESF|Alexandria, Alexandria Esler Regional Airport
+KAEX|Alexandria, Alexandria International Airport
+K7R3|Amelia / Lake Palourd
+KBAD|Barksdale Air Force Base
+KBTR|Baton Rouge, Baton Rouge Metropolitan, Ryan Field
+K1B7|Boothville Heliport
+K7R5|Cameron Heliport
+KCWF|Chenault Airpark
+K3B6|Eugene Island 330
+KPOE|Fort Polk
+K9F2|Fourchon Supplementary Aviation Weather Reporting Station
+KAXO|Grand Isle Supplementary Aviation Weather Reporting Station
+KXCN|Green Canyon 184
+KH08|High Island 264C
+KHUM|Houma-Terrebonne
+K7R4|Intracoastal City
+KLFT|Lafayette, Lafayette Regional Airport
+KLCH|Lake Charles, Lake Charles Regional Airport
+KMLU|Monroe, Monroe Regional Airport
+KARA|New Iberia, Acadiana Regional Airport
+KNBG|New Orleans, Naval Air Station
+KMSY|New Orleans, New Orleans International Airport
+KNEW|New Orleans, New Orleans Lakefront Airport
+KPTN|Patterson Memorial
+KP92|Salt Point
+KDTN|Shreveport, Shreveport Downtown Airport
+KSHV|Shreveport, Shreveport Regional Airport
+KASD|Slidell, Slidell Airport
+KSRN|South Marsh 268A
+K7R8|South Marsh Island
+KS58|South Timbalier
+KTVR|Vicksburg, Vicksburg / Tallulah Regional Airport
+K7B5|West Cameron 587A

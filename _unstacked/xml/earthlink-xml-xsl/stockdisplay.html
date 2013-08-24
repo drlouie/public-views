@@ -1,0 +1,193 @@
+<HTML>
+<HEAD>
+<STYLE type="text/css">
+.table {width:45%;border:0}
+
+.stocks {text-indent:2%;font-family:helvetica;
+font-size:20px;color:#ffffff;text-decoration:none;font-weight:bold;
+width:50%;background-color:#6666CC;
+}
+
+.personalize {text-align:right;font-family:helvetica;letter-spacing:1px;
+font-size:11.5px;color:#ffffff;text-decoration:underline;
+width:50%;background-color:#6666CC; padding-right: 12.5px;
+}
+
+.topsymbol {align:left;font-family:helvetica;text-indent:2.5%;
+font-size:11.5px;color:#000066;text-decoration:none;
+width:25%;background-color:#F7F7F7;
+}
+
+.toprest {text-align:right;font-family:helvetica;
+font-size:11.5px;color:#000066;text-decoration:underline;
+width:25%;background-color:#E7E7E7; padding-right: 12.5px;
+}
+
+.myport {font-family:helvetica;text-indent:2%;
+font-size:11.5px;font-weight:bold;color:#000066;text-decoration:underline;
+background-color:#CCCCFF;width:50%;
+}
+
+.details {text-align:right;font-family:helvetica;height:22px;
+font-size:11.5px;font-weight:bold;color:#000066;text-decoration:underline;
+background-color:#CCCCFF;width:50%; padding-right: 12.5px;
+}
+
+.symbol {font-family:helvetica;background-color:#F7F7F7;text-indent:2%;
+font-size:11.5px;color:#000000;  padding-bottom:2px;
+}
+
+.last {font-family:helvetica;letter-spacing:1px;width:25%;align:right;padding-right: 12.5px;
+font-size:11.5px; color:#000066;text-decoration:underline;background-color:#E7E7E7;padding-bottom:2px;
+}
+
+.change {font-family:helvetica;letter-spacing:1px;align:right;padding-right: 12.5px;
+font-size:11.5px;color:#000066;text-decoration:underline; background-color:#E7E7E7;padding-bottom:2px;
+}
+
+.volume {font-family:helvetica;align:right;letter-spacing:1px;align:right;padding-right: 12.5px;
+font-size:11.5px; color:#000066;text-decoration:underline;background-color:#E7E7E7;padding-bottom:2px;
+}
+
+.symbol2 {font-family:helvetica;background-color:#ffffff;text-indent:2%;
+font-size:11.5px;color:#000066;text-decoration:underline;padding-bottom:2px;
+}
+
+.last2 {font-family:helvetica;letter-spacing:1px;width:25%;align:right;padding-right: 12.5px;
+font-size:11.5px; color:#000000;background-color:#F7F7F7;padding-bottom:2px;
+}
+
+.change2 {font-family:helvetica;letter-spacing:1px;align:right;padding-right: 12.5px;
+font-size:11.5px;color:red; background-color:#F7F7F7;padding-bottom:2px;
+}
+
+.volume2 {font-family:helvetica;align:right;letter-spacing:1px;align:right;padding-right: 12.5px;
+font-size:11.5px; color:#000000;background-color:#F7F7F7;padding-bottom:2px;
+}
+
+.symbol3 {font-family:helvetica;background-color:#F7F7F7;text-indent:2%;
+font-size:11.5px;color:#000066;text-decoration:underline;padding-bottom:2px;
+}
+
+.last3 {font-family:helvetica;letter-spacing:1px;width:25%;align:right;padding-right: 12.5px;
+font-size:11.5px; color:#000000;background-color:#FFFFFF;padding-bottom:2px;
+}
+
+.change3 {font-family:helvetica;letter-spacing:1px;align:right;padding-right: 12.5px;
+font-size:11.5px;color:green; background-color:#FFFFFF;padding-bottom:2px;
+}
+
+.volume3 {font-family:helvetica;align:right;letter-spacing:1px;align:right;padding-right: 12.5px;
+font-size:11.5px; color:#000000;background-color:#FFFFFF;padding-bottom:2px;
+}
+
+.company {font-family:arial;align:left;valign:middle;
+font-size:11.5px; color:#000000;text-spacing:1;
+}
+
+.input {font-family:arial;valign:middle;
+font-size:11.5px; color:#000000; align:left
+}
+</STYLE>
+
+</HEAD>
+<BODY BGCOLOR=FFFFFF TEXT=000000 LINK=0000FF VLINK=800080>
+<!--Objects-->
+<OBJECT id="stocks" classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83" border="0" width="0" height="0">
+<param name="DataURL" value="stockdisplay.txt">
+<param name="UseHeader" value="True">
+</OBJECT>
+<OBJECT id="stocks2" classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83" border="0" width="0" height="0">
+<param name="DataURL" value="stockdisplay2.txt">
+<param name="UseHeader" value="True">
+</OBJECT>
+<OBJECT id="stocks3" classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83" border="0" width="0" height="0">
+<param name="DataURL" value="stockdisplay3.txt">
+<param name="UseHeader" value="True">
+</OBJECT>
+<OBJECT id="stocks4" classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83" border="0" width="0" height="0">
+<param name="DataURL" value="stockdisplay4.txt">
+<param name="UseHeader" value="True">
+</OBJECT>
+<OBJECT id="stocks5" classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83" border="0" width="0" height="0">
+<param name="DataURL" value="stockdisplay5.txt">
+<param name="UseHeader" value="True">
+</OBJECT>
+<OBJECT id="stocks6" classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83" border="0" width="0" height="0">
+<param name="DataURL" value="stockdisplay6.txt">
+<param name="UseHeader" value="True">
+</OBJECT>
+<!--End Objects-->
+<DIV width="45%" height="500px" style="position:absolute;left:0px;top:0px">
+<TABLE cellspacing="0" class="table" width="100%">
+<TR>
+<TD colspan="2" class="stocks">stocks</TD> 
+<TD colspan="2" class="personalize" valign="middle">personalize<img src="arrow.gif"></TD> 
+</TR>
+<TR>
+<TD colspan="2" class="myport">My Portfolios</TD> 
+<TD colspan="2" class="details">Details Page</TD> 
+</TR>
+<TR>
+<TD align="left" colspan="4" bgcolor="#FFFFFF" height="1px"> 
+</TR>
+<TR>
+<TD align="left" colspan="4" bgcolor="#FFFFFF" height="1px"> 
+</TR>
+</table>
+<TABLE cellspacing="0" class="table" width="100%" bgcolor="#E7E7E7">
+<TR>
+<TD class="symbol" align="left"><SPAN DATASRC="#stocks" DATAFLD="symbol" DATAFORMATAS="HTML"></span><br></td>
+<TD class="last" align="right"><SPAN DATASRC="#stocks" DATAFLD="last" DATAFORMATAS="HTML"></span><br></td>
+<TD class="change" align="right"><SPAN DATASRC="#stocks" DATAFLD="change" DATAFORMATAS="HTML"></span><br></td>
+<TD class="volume" align="right"><SPAN DATASRC="#stocks" DATAFLD="volume" DATAFORMATAS="HTML"></span><br></td>
+</TR>
+<TR>
+<TD class="symbol2" align="left"><SPAN DATASRC="#stocks2" DATAFLD="symbol" DATAFORMATAS="HTML"></span></td>
+<TD class="last2" align="right"><SPAN DATASRC="#stocks2" DATAFLD="last" DATAFORMATAS="HTML"></span></td>
+<TD class="change2" align="right"><SPAN DATASRC="#stocks2" DATAFLD="change" DATAFORMATAS="HTML"></span></td>
+<TD class="volume2" align="right" cellpadding="1px"><SPAN DATASRC="#stocks2" DATAFLD="volume" DATAFORMATAS="HTML"></span></td>
+</TR>
+<TR>
+<TD class="symbol3" align="left"><SPAN DATASRC="#stocks3" DATAFLD="symbol" DATAFORMATAS="HTML"></span></td>
+<TD class="last3" align="right"><SPAN DATASRC="#stocks3" DATAFLD="last" DATAFORMATAS="HTML"></span></td>
+<TD class="change3" align="right"><SPAN DATASRC="#stocks3" DATAFLD="change" DATAFORMATAS="HTML"></span></td>
+<TD class="volume3" align="right"><SPAN DATASRC="#stocks3" DATAFLD="volume" DATAFORMATAS="HTML"></span></td>
+</TR>
+<TR>
+<TD class="symbol2" align="left"><SPAN DATASRC="#stocks4" DATAFLD="symbol" DATAFORMATAS="HTML"></span></td>
+<TD class="last2" align="right"><SPAN DATASRC="#stocks4" DATAFLD="last" DATAFORMATAS="HTML"></span></td>
+<TD class="change2" align="right"><SPAN DATASRC="#stocks4" DATAFLD="change" DATAFORMATAS="HTML"></span></td>
+<TD class="volume2" align="right"><SPAN DATASRC="#stocks4" DATAFLD="volume" DATAFORMATAS="HTML"></span></td>
+</TR>
+<TR>
+<TD class="symbol3" align="left"><SPAN DATASRC="#stocks5" DATAFLD="symbol" DATAFORMATAS="HTML"></span></td>
+<TD class="last3" align="right"><SPAN DATASRC="#stocks5" DATAFLD="last" DATAFORMATAS="HTML"></span></td>
+<TD class="change3" align="right"><SPAN DATASRC="#stocks5" DATAFLD="change" DATAFORMATAS="HTML"></span></td>
+<TD class="volume3" align="right"><SPAN DATASRC="#stocks5" DATAFLD="volume" DATAFORMATAS="HTML"></span></td>
+</TR>
+<TR>
+<TD class="symbol2" align="left"><SPAN DATASRC="#stocks6" DATAFLD="symbol" DATAFORMATAS="HTML"></span><br></td>
+<TD class="last2" align="right"><SPAN DATASRC="#stocks6" DATAFLD="last" DATAFORMATAS="HTML"></span><br></td>
+<TD class="change2" align="right"><SPAN DATASRC="#stocks6" DATAFLD="change" DATAFORMATAS="HTML"></span><br></td>
+<TD class="volume2" align="right"><SPAN DATASRC="#stocks6" DATAFLD="volume" DATAFORMATAS="HTML"></span><br></td>
+</TR>
+</table>
+<TABLE class="table" width="100%" bgcolor="#CCCCFF">
+<TR>
+<TD height="34px" width="40%" class="company"><img src="space.gif">Enter a symbol or<br><img src="space.gif">company name:</TD>
+<TD height="34px" width="22%" class="input" align="left"><input type="text" name="input" size="8" height="10"></TD>
+<TD height="34px" width="38%" align="left"><input type="button" name="button" cols="10" value="Get Quote" align="left"></TD>
+</TR>
+<TR>
+<TD align="left" colspan="4" bgcolor="#FFFFFF" height="1px"> 
+</TR>
+<TR>
+<TD width="20%" align="left"><img src="space.gif"><img src="pcquote.gif"></TD>
+<TD width="40%" align="left"><font style="font-size:10px;color:#000000;font-family:helvetica;letter-spacing:.2px;">*At least 20 min. delay.</font></TD>
+<TD width="40%" align="left"><font style="font-size:11.5px;color:#000066;font-family:helvetica;text-decoration:underline">Disclaimer</TD>
+</TR>
+</table>
+</div>
+</BODY>
+</HTML>

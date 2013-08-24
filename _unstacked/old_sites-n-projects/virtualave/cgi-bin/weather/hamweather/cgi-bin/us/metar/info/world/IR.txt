@@ -1,0 +1,8 @@
+OIAW|Ahwaz
+OIKB|Bandarabbass
+OIFM|Esfahan
+OIKK|Kerman
+OIMM|Mashhad
+OISS|Shiraz
+OITT|Tabriz
+OIII|Tehran-Mehrabad

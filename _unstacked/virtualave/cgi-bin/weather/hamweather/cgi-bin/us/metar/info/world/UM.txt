@@ -1,0 +1,8 @@
+PGUM|Agana, Guam, Mariana Islands
+PGUA|Andersen Air Force Base
+PJON|Johnston Island
+NSTU|Pago Pago / Int. Airp.
+PGWT|Peipeinimaru
+PGRO|Rota Intl / Rota Island
+PGSN|Saipan / Isley Coast Guard Station
+PWAK|Wake Island Airfld

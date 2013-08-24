@@ -1,0 +1,10 @@
+Bismarck|Bismarck|35
+Devils Lake|Devils Lake|15
+Dickinson|Dickinson|33
+Fargo|Fargo|39
+Garrison|Garrison|21
+Grand Forks|Grand Forks|30
+Hettinger Arpt|Hettinger|44
+Jamestown|Jamestown|37
+Minot|Minot|11
+Williston|Williston|9

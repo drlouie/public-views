@@ -1,0 +1,765 @@
+<html>
+
+<head>
+<title>HAMweather Release History</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" bgcolor="#000080" width="100%">
+  <tr>
+    <td width="100%"><font color="#FFFFFF"><strong>HAMweather 2.0 : Changes/History</strong></font></td>
+  </tr>
+</table>
+
+<p align="left"><big><font color="#000080"><strong>Current Release HAMweather 2.036</strong></font></big></p>
+<p><font color="#000080"><strong>Changes since HAMweather 2.035</strong></font><ul>
+      <li>Fixed bug with HAMweather displaying the noforecast.html<br>
+        template twice when a forecast cannot be found.<br>
+        (changed hamweather.cgi)</li>
+      <li>Fixed a obscure bug that kept HAMweather from displaying a<br>
+        zone forecast when a states zone numbers were intertwined with<br>
+        another zone number group.<br>
+        i.e. for the zone header of:<br>
+        PAZ021-030-OHZ040-041-049-050-PAZ020-029-031-032-WVZ001&gt;003-<br>
+        HAMweather would only check the first PA group (PAZ021-030) and not the<br>
+        second PA group on the same line (PAZ020-029-031-032) thus incorrectly<br>
+        saying that the forecast was unavailable.<br>
+        This has now been corrected. (changed hamweatherlib.pl)</li>
+      <li>Included new intzandh.html in all distributions and update file.</li>
+    </ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 3.1</strong></font>
+
+<ul>
+  <li>Added support for GD.pm 1.26 jpeg support (though to lack of not having<br>
+    GD.pm 1.26 installed to test it is not totally guaranteed to work!)<br>
+    Currently it fetches the png radar from hamweather opens it as a png but then<br>
+    resaves it as a jpeg and works with it. When I am able to actually test GD.pm 1.26<br>
+    and any chnages are needed I will release an update then.<br>
+    (all the hwpro lib files chnaged)</li>
+  <li>Fixed bug with HW not giving correct temps when they read similar ot:<br>
+    &quot;Low in the mid to upper 50s except lower 60s near the coast.&quot;<br>
+    (changed gamweatherlib.pl)</li>
+  <li>Fixed bug that occured when day_begin was greater than the day_end</li>
+  <li>Changed current.html to use the %%iconheight%% and<br>
+    %%iconwidth%% properties instead of the hard coded numbers</li>
+  <li>Canadian forecasts can now show current conditions<br>
+    if they are available. when using the forecast parameter<br>
+    forecast=zandh. This feature uses the metar obs and the new<br>
+    canadial alt place files</li>
+  <li>Added support for international zipcode capabilities<br>
+    WH now has the ability to handle international zipcodes<br>
+    NOTE: ONLY the US zipcod DB is available from HW, you will<br>
+    need to create the zipcode dbs/altplace files for your country<br>
+    FOr international zipcodes, they go in the 'zipcodes' folder<br>
+    and use the naming convention:<br>
+    xx-yy-##. where xx is the countries two letter abbrev and yy<br>
+    is the state/provinces two letter abbrev. If your country does not have<br>
+    states/provinces then use the countries two letter abbrev as both<br>
+    xx and yy. ## are the first two characters of the zipcode in this file.<br>
+    thus if you are searching for the zipcode 24060 this portion would be<br>
+    24 and the file woudl hold all zipcodes from 24000 to 24999.<br>
+    The particulars:<br>
+    1) US zipcodes files use the naming convention yy-##.txt where the<br>
+    yy is the state abbrev.<br>
+    2) Each line in the zipcode file should have:<br>
+    complete zipcode, place, state<br>
+    example of the zipcode 24060 for balcksburg ,va would be<br>
+    24060,blacksburg,va<br>
+    If your country does not have states/provinces then you should use<br>
+    the countries two letter abbrev as the state<br>
+    thus for Roma Italy (zipcode 00139) you would use<br>
+    00139,Roma,IT<br>
+    3) You must then add the place to the altplace file for this country<br>
+    so that HW can find out what info to display for this place.<br>
+    4) The new International zipcode support can handle zipcodes that<br>
+    use both numbers and letters.<br>
+    5) If the zipcode entered uses spaces (i.e Canada) HW will strip the<br>
+    spaces out. and the zipcode that is in the zipcode db file must be the<br>
+    zipcode with the spaces stripped<br>
+    6) If using zipcodes that are both letters and numbers they can only be<br>
+    entered into the zipcode parameter. A zipcode that is only numbers can be<br>
+    entered into the zipcode parameter or the pands parameter</li>
+  <li>Added support for allowing a user to input<br>
+    &quot;place, state/province, country&quot;<br>
+    This has a few particulars:<br>
+    1) If your country does not have states/provinces then<br>
+    this does not work for you. You should use a seperate<br>
+    form with a hidden field setting country to match yours.<br>
+    2) The countries altplace files must be saved as<br>
+    xx-yy-altplaces.txt (where xx is the countries 2 letter abbrev,<br>
+    yy is the state/province). US does not need use the xx- portions<br>
+    3) if country portion is missing US is assumed.<br>
+    4) Country portion must be the two letter abbreviation:<br>
+    (Exception of canada which can enter 'ca' or 'canada')<br>
+    5)Canada is set up to go with this feature. You can expand on the<br>
+    canadian altplace files :)<br>
+    (changed hw2lib.pl)</li>
+  <li>Created canadian altplace files. They are labeled<br>
+    ca-xx-altplaces.txt where the xx is the provinces two<br>
+    letter abbrev. Note that canadian altplace files<br>
+    have one difference. In the alternate zone place you<br>
+    put in the file to fetch the forecast from followed by &quot;--&quot;<br>
+    then the actual text to search for it different from the<br>
+    requested name. (see files for example)</li>
+  <li>Changed the canadaian DB files. they are now altplace<br>
+    files. they now use the provinces two letter abbreviation</li>
+  <li>Added support for international associated city files.<br>
+    (this is where a person simply enters a city name into<br>
+    the search box with no state or country setting). The main<br>
+    city-all.txt supports a country filed which will work in conjunction<br>
+    of the international altplace files.) Also individual countries<br>
+    can have their own xx-city-all.txt where xx is the countries two<br>
+    letter abbreviation.<br>
+    (changed hw2lib.pl)</li>
+  <li>Added support for international altplace files<br>
+    They work the same as US altplace files except only US<br>
+    and Canada can give forecasts, but the international altplace<br>
+    files can be set up to give the current conditions using the ICAO<br>
+    identifier. international altplace files use the naming convention:<br>
+    xx-yy-altplaces. where xx is the countries two letter abbrev and yy<br>
+    is the state/provinces two letter abbrev. If your country does not have<br>
+    states/provinces then use the countries two letter abbrev as both<br>
+    xx and yy.<br>
+    Take note that if the city may be spelled differently by different users you<br>
+    should add all spellings to the file. FOr example for Venezia it maybe<br>
+    spelled as Venezia or as Venice. You would add both combinations to<br>
+    the altplace file thus giving 2 lines such as<br>
+    venezia=Venezia / Tessera|0|LIPZ|2<br>
+    venice=Venezia / Tessera|0|LIPZ|3<br>
+    (changed hw2lib.pl)</li>
+  <li>HW now only uses the zipcode,place, state from the zipcode<br>
+    database then does a look up in the altplace files for rest of<br>
+    info. This allows for less space needed &amp; allows me to just<br>
+    worry with keeping wx zone info uptodate in the altplace file<br>
+    Because of this the HWzipdb 1.0 and HWaltplaces 1.1 add-ons<br>
+    will be combined.<br>
+    (changed hw2lib.pl)</li>
+  <li>Fixed bug that only parsed 1 smart temperature variable per<br>
+    line. now parses correctly (chnaged hw2lib file)</li>
+  <li>Fixed bug with default_icao not working<br>
+    (changed hw2lib.pl)</li>
+  <li>Added image map file nd-info.txt for ND image map<br>
+    (created nd-info.txt file)</li>
+  <li>Made modifications ot the plain sockets mode library to make it<br>
+    http/1.1 compliant<br>
+    (chnaged hwhttplib0.pl file)</li>
+  <li>Fixed bug with rounding. If temp had a decimal and rounding<br>
+    was set it woudl leave it and sometime leave on windchill and heat index<br>
+    (changed hamweatherlib.pl)</li>
+  <li>rewrote the use of city files to work correctly<br>
+    and more effiecient<br>
+    (changed hw2lib.pl)</li>
+  <li>Added the ability to include perl code in your templates:<br>
+    you can go: %%perl perlcodehere %%perl and HW will perform the<br>
+    perl code in and replace it with the result of the code.<br>
+    (chnaged hw2lib.pl)</li>
+  <li>Added the ability to set User defined variables inside your<br>
+    html templates by using something similar to one of the following:<br>
+    %%let hwvvarname= 34 let%%<br>
+    %%let hwvvarname= &quot;this is text&quot; let%%<br>
+    %%let hwvvarname= $hwva = 20 + 2; $hwva let%%<br>
+    (changed hw2lib.pl)</li>
+  <li>Added some general remarks to the beginning of each of the<br>
+    vital HW routines in the hw2lib.pl library</li>
+  <li>Fixed bug with HW automatically adding the HWV variables to<br>
+    the statemap, UVI table etc links when they should not have been<br>
+    (Only occurred on some systems) (changed hwalib_hwv.pl and<br>
+    hw2lib.pl)</li>
+  <li>Fixed bug where HW would sometimes round the windchill downwards<br>
+    a degree instead of upwards when the windchill was less than 32 F<br>
+    (changed hamweatherlib.pl)</li>
+  <li>Fixed bug with some hourly reports now showing when anything in the report<br>
+    was labeled N/A</li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 3.0</strong></font>
+
+<ul>
+  <li>Corrected Quebec Canada DB file. Thanks goto Daniel Provencher<br>
+    for supplying a corrected file. (changed ca-quebec-info.txt)</li>
+  <li>Added alt tags to the image map info files so that when you mouse over<br>
+    a state map the county/weather zone will display. Thanks goto<br>
+    Jason T. Featheringham of http://www.iqonline.net for providing the<br>
+    updated files.</li>
+  <li>Added the ability to have user defined variables passed along with<br>
+    various HW links. (HW can auto add to the state map links, UVI links,<br>
+    warning links). You can set a HWV variable to be auto transfered in<br>
+    the web based admin. NOTE: It is your duty to add the<br>
+    HWV variables to normal links &amp; forms (navx.html &amp; form1.html templates<br>
+    and US map image maps) (changed hw2lib.pl, hamweatherlib.pl hw2wnlib.pl)</li>
+  <li>Corrected spelling of Minimal in the uvi.html template (changed uvi.html file)</li>
+  <li>National Summry (pro) increased effeciency. The national summary lib and GD.pm<br>
+    are now only loaded if needed and the text summary table under the map is no longer<br>
+    generated. (changed hamweather.cgi and hw2wslib.pl)</li>
+  <li>Bought the book &quot;Mastering Regular expressions&quot; and then cleaned &amp; tweaked
+    a bunch of the regular<br>
+    expressions in HW. From my initial benchmarks effeciency has been boosted.<br>
+    (change many files)</li>
+  <li>Fixed minor bug with the warning map</li>
+  <li>Added %%lcountry%% parameter that is url encoded (changed hw2lib.pl)</li>
+  <li>Added nice error if zipcode is not found in the database (changed hw2lib.pl)</li>
+  <li>Added support for weather to default to metric mode or not:<br>
+    (defaulting to metric mode makes all farenheits to become Celsius)</li>
+  <li>Added feature to set default wind unit used in metric mode</li>
+  <li>Added whole slew of wind related template variables that allow<br>
+    handling of wind gusts (chnaged hw2lib.pl)</li>
+  <li>Added ability to set day begin &amp; day end hours used to determine<br>
+    what type of icon to display for hourly/metar data</li>
+  <li>Added support for time zone &amp; time zone name parameters.<br>
+    if you supply tz=x where x is the hour difference from GMT then this will<br>
+    override the default tz hour setting. plus if you state tz_name=XXX where<br>
+    XXX is the time zone abbreviation for the TZ supplies.<br>
+    NOTE: You should provide both of these otherwise your time will be<br>
+    skewed. (changed hw2lib.pl file)</li>
+  <li>Added correct time zone stamping to the US Summary map</li>
+  <li>Updated Oregon image map info and zone file thanks to<br>
+    weatherforyou.com for providing the updated info.<br>
+    (changed or-info.txt and or-zones.txt)</li>
+  <li>Added capability for warning map to be transposed onto the<br>
+    colored us map, plus added Warning maps settings to the admin.<br>
+    (changed hw2wnlib.pl, hwalib_hwpro.pl and hwanav_hwpro.txt)</li>
+  <li>Added capability for cookie to store theme &amp; user settings. The sc parameter<br>
+    defines what is stored in the cookie:<br>
+    sc=0 : no cookie stored<br>
+    sc=1 : cookie stored with no user or theme info<br>
+    sc=2 : cookie stored with user info but no theme info<br>
+    sc=3 : cookie stored with theme info but no user info<br>
+    sc=4 : cookie stored with both user &amp; theme info<br>
+    (If the user &amp; theme paramters are provideed in a url they<br>
+    automatically override a cookie settings.)</li>
+  <li>Cleaned out the hwcalib.pl and made it start using routines from the<br>
+    hamweatherlib.pl. thus making the work easier for me to update<br>
+    (changed hwcalib.pl)</li>
+  <li>Added ability to add day_end &amp; day_begin parameters to URL to control<br>
+    the day &amp; night time for current condition icons (specify hour in 24 hour time)<br>
+    (changed hw2lib.pl)</li>
+  <li>Added line to auto turn %25 into % in template. This is a work around<br>
+    for Frontpage turning the normal HW variables (%%variablename%%<br>
+    to %25%25variablename%25%25 HW will now correct this<br>
+    before parsing. (Changed hw2lib.pl)</li>
+  <li>Fixed various bugs with temperature finding for zone forecasts</li>
+  <li>Added %%num_zone_days%% variable</li>
+  <li>Added the ability to change the day titles in the web based admin<br>
+    1) goto admin, 2) click WX info link 3) click &quot;Day titles&quot; link<br>
+    (changed hwalib_wxinfo.pl file)</li>
+  <li>Fixed bug in statehourly with &quot;N/A&quot; sky condition showing up as<br>
+    &quot;N&quot; (change hamweatherlib.pl)</li>
+  <li>Fixed bug with icon row temps not showing hi &amp; low for<br>
+    XXX night through XXXX day titles (Changed hamweatherlib .pl)</li>
+  <li>Fixed javascript bug at line 16 in the web admin for Netascape 4.50 and older users<br>
+    (Changed hwadmin.cgi)</li>
+  <li>Added a catch in case the cache date on map data is below zero</li>
+  <li>Fixed bug with HAMweather not passing the user &amp; theme parameters<br>
+    in state maps</li>
+  <li>Added the ability of the HAMweather include file name to be derived from<br>
+    hamweather variables.. i.e. can have %%hwi=current%%metric%%%%<br>
+    This would parse to %%hwi=current%% or if metric=1 then<br>
+    %%hwi=current1%%</li>
+  <li>Fixed bug with wind conversion not adding on the direction and units</li>
+  <li>Added fix to take out &quot;links (1) and (2) new graphics&quot; stuff that IWIN added<br>
+    (changed hamweatherlib.pl)</li>
+  <li>Fixed bug with National forecast map sometimes displaying low temp as high temp<br>
+    (changed hw2nflib.pl)</li>
+  <li>Added ability: When zone forecast is not available on IWIN it will try and fetch the<br>
+    individual zone forecast if possible from the NOAA thus lowering down time if a zone
+    forecast<br>
+    is missing on the IWIN or the IWIN goes down temporarily.</li>
+  <li>Added parameter &quot;round&quot; if set to a nonzero value it will round celcius
+    numbers<br>
+    thus taking away the decimal point. Also added a &quot;$default_round&quot; setting to the<br>
+    users/default.txt file to allow a default round method to be determined<br>
+    Also added default round setting to web admin<br>
+    (changed hwadmin.cgi, hamweatherlib.pl, hw2lib.pl and users/default.txt)</li>
+  <li>Added code to cgidie routine ot output the calling routine for debug purposes<br>
+    (changed hamlib.pl)</li>
+  <li>Added several new weather types to the default theme file</li>
+  <li>Fixed bug in the hourly round up link that did not always send user to<br>
+    hourly round up if a cookie had been set (changed nav2.html na dnav3.html)</li>
+  <li>Fixed bug where Mostly Sunny Current condition was displaying as<br>
+    MOSUNNY. Changed HAMweatherlib.pl</li>
+  <li>Fixed bug with parenthesis causing script faulure if in the zone DB<br>
+    (changed hamweatherlib.pl)</li>
+  <li>Fixed HW to accept SKC current condition as clear, and CAVOK as clear<br>
+    (changed the hamweatherlib.pl file)</li>
+  <li>Changed the statehourly template to use the nav2.html nav template instead of nav3</li>
+  <li>Fixed user &amp; theme info in the nav1, nav2, nav3, nf and ns.html templates</li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 2.08</strong></font>
+
+<ul>
+  <li>Updated the NV zone file and Image Map</li>
+  <li>Fixed wrong capital name for Kansas</li>
+  <li>Updated MT Zone file</li>
+  <li>Decided to split the email feature out of the core HW and make it its own<br>
+    add-on since it has become a beast of its own, which will also make it easier to<br>
+    update etc in the future. The new add-on will be called (HWemail)</li>
+  <li>Added scheduling features to forecast emails (changed all various email files)</li>
+  <li>Added support to allow user to enter a URL in the forecast types available IWIN portion.<br>
+    This will allow user to add other simple IWIN/NWS data to HW. (changed hw2lib.pl)</li>
+  <li>Added support for HW to simulate the 3 basic SSI directives:<br>
+    &quot;include file&quot;, &quot;include virtual&quot;, &quot;exec&quot;. this can be used
+    to more easily insert<br>
+    ads etc into your hw output (chaned hw2lib.pl)</li>
+  <li>Added support for &quot;forcefc&quot; paramter to override the forecastneeded<br>
+    parameter stored in a cookie.. (changed hw2lib.pl)</li>
+  <li>Added support for allowing users to enter state name and<br>
+    see a page with current conditions for places in the state.<br>
+    required addition of statehourly files, developed with help of<br>
+    weather4your.com (changed hw2lib.pl, hamweatherlib.pl)</li>
+  <li>Added support for zipcode in email forecasts<br>
+    (changed hw2lib.pl, hamweatherlib.pl, hamweather.cgi)</li>
+  <li>Added support for html email forecasts<br>
+    (changed emailstorer.cgi, emailhw2.cgi)</li>
+  <li>Fixed bug with warning map sometimes highlighting states with expired warnings <br>
+    (changed hw2wnlib.pl file)</li>
+  <li>Fixed bug with HW sometimes not displaying correct forecast when<br>
+    using a zone number and a state zone file that contained forecasts for<br>
+    other states</li>
+  <li>Modified all template pattern matches to use the 'o' operator so the <br>
+    patterns would only be compiled once, thus hopefull speeding up.</li>
+  <li>Added new variable %%imagesurl%% will be replaced with the url to <br>
+    the main HAMweather images dir</li>
+  <li>Added support for the materlists to be added to any web template by providing<br>
+    the needed args (do, country and state) simply place the variable<br>
+    %%metarlist%% in the web page.</li>
+  <li>Made the Current conditions portion in the templates into an<br>
+    include file, so that a change tothe one file would chnage it in all templates.<br>
+    (Changed zandh.html, metar.html and hourly.html Added current.html)</li>
+  <li>Added various chnages to fix temps in icon row<br>
+    (changed hamweatherlib.pl)</li>
+  <li>Added Wind Chill support, whic is caclulated fro the current conditions<br>
+    Temp and wind speed. Add %%hwcf%% for Wind Chill ein Farenheit<br>
+    and %%hwcc%% for wind chill in Celcius. If metric =1 then %%hwcf%% will<br>
+    actually be in Celsius. (Changed hamweatherlib.pl and hw2lib.pl)</li>
+  <li>Added Heat Index which is calculated from the Current conditions<br>
+    Temp and Relative Humidity. Add %%hhif%% for Heat Index in Farenheit<br>
+    and %%hhic%% for heat index in Celcius. If metric=1 then %%hhif%% will <br>
+    actually be in Celsius. (Changed hamweatherlib.pl and hw2lib.pl)</li>
+  <li>Added support for Pressure to be in in inches or millabars</li>
+  <li>Added functions to do metric conversions.<br>
+    (Changed hamweatherlib.pl and hw2lib.pl)</li>
+  <li>Added support for temps in the icons row to be <br>
+    celsius, by adding the parameter Celsius = 1 or using<br>
+    metric =1 (chnaged hamweatherlib.pl)</li>
+  <li>Fixed casing bugs (changed hamweatherlib.pl and hwcalib.pl)</li>
+  <li>Changes made to the hwcalib.pl to currectly give temps.<br>
+    Thanks goes to Robert Patel of Caninet Communication <br>
+    http://www.caninet.com/ For sending me an updated version<br>
+    with the correcttion. Thanks again Robert!</li>
+  <li>Added support for PNG graphics as well as GIF. Depending on what version of <br>
+    GD.pm you are using. (changed hamweather.cgi, hw2nflib.pl, hw2wslib.pl,<br>
+    hw2wnlib.pl, hw2radarlib.pl)</li>
+  <li>Duplicated all images and icons in PNG format for use with PNG mode</li>
+  <li>Fixed bug when using http_mode 2 and using a proxy server</li>
+  <li>Rewrote the routines that deal with the state maps.<br>
+    Pro and Standard users can add the clickable state maps to <br>
+    any HAMweather page by simply adding %%statemap%% in the template where<br>
+    you want the state map to appear. (it will display the map set by the current<br>
+    'state' parameter. You can also still use the hw2getstate.cgi as well.<br>
+    (changed the hw2lib.pl, hw2getstate, added the hw2getstatelib.pl file)</li>
+  <li>US Forecast map now supports Celcius or Farenhiet. if the parameter<br>
+    'celcius=1' is set when map is made it will use celcius temps</li>
+  <li>Fixed the City links on the National forecast Template for Honolulu and <br>
+    Great Falls (Changed the nf.html file)</li>
+  <li>Completely rewrote the core routines of the hw2nflib.pl file to be<br>
+    more efficient and useful. (Changed the hw2nflib.pl)</li>
+  <li>Corrected bug inthe ccinternational, ccus and canada templates that made them <br>
+    not fully support the userdefined variables.</li>
+  <li>Fixed the spelling of Tallahassee, FL in FL state map and fl-info.txt file (Thanks to<br>
+    Jon Reddick for his help in finding and correcting this error.)</li>
+  <li>Fixed bug in the canadian use of metarlister.cgi was not adding a closing form<br>
+    element. (changed metarlister.cgi)</li>
+  <li>Fixed bug when unsubscribing that did not properly unsubscribe if<br>
+    email case was incorrect. (changed hw2emailstorere.cgi)</li>
+  <li>Fixed casing bug with letter following &lt;br&gt;. (Changed hamweatherlib.pl)</li>
+  <li>Fixed bug that didnt put a space between perios and next word in case <br>
+    fixing (Chnaged hamweatherlib.pl)</li>
+  <li>Added the forefc parameter so you can override the forecast type in a <br>
+    a users cookie.</li>
+  <li>Fixed bug in the US warnign map (Pro version) that woudl not color in <br>
+    some states if ore than one state abbrev was in a warning header.<br>
+    (changed the hw2wnlib.pl)</li>
+  <li>US Map zone files completed: Appreciations and credit <br>
+    for these should be given too:<br>
+    Brad Vedders<br>
+    Dave at nycanal.com<br>
+    Jeremy Wrezinski<br>
+    and more (if I forgot your name let me know and I will add it immediately!)</li>
+  <li>Fixed bug that caused extra day in icon row for some<br>
+    western states (changed hamweatherlib.pl)</li>
+  <li>Fixed bug that caused failure when a places was associated to a zone<br>
+    (changed hw2lib.pl)</li>
+  <li>Fixed bug that withthe alt places and zone code 2 not working properly<br>
+    (changed hw2lib.pl)</li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 2.08</strong></font>
+
+<ul>
+  <li>Fixed bug with low temperature not showing up when no high temp was available</li>
+  <li>Fixed bug that caused 'extended forecast' to sometimes show up as a day title.</li>
+  <li>Set the debug mode to default to disabled.&nbsp; The reason was that most people did not
+    disable it and the debug mode outputs informaiton about your server.</li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 2.051</strong></font>
+
+<ul>
+  <li>Added a few more alt places files</li>
+  <li>Amended alt places files to allow ofr more hourly conditions</li>
+  <li>Did some massive code cleaning to the hw2lib.pl and hamweatherlib.pl<br>
+    files to mkae more effecient.</li>
+  <li>Modified the templates so that common settings such as page titles,<br>
+    background color, text color, table color etc.. use the User variables<br>
+    so that they may e more easily changed.</li>
+  <li>Fixed width bug in the subscribe.html and unsubscribe.html files</li>
+  <li>Fixed bug with user variables.</li>
+  <li>Fixed the Proper casing so that casing is now properly done.</li>
+  <li>Changed the way that the warnings &amp; other reports are formatted<br>
+    so that the user has more control over their output. (i.e. setting <br>
+    width and size)</li>
+  <li>Modified the Ultraviolet Index and made its own template</li>
+  <li>Fixed several bugs in the temps that go under the icons for <br>
+    zone and zandh forecasts</li>
+  <li>other bug fixes</li>
+  <li>I am sure I fixed something else too, but at this late hour I forget.</li>
+  <li>Oh yeah the promised date fixes so you can correct dates etc will be<br>
+    in the next and last beta (Beta 3).</li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 2.05</strong></font>
+
+<ul>
+  <li>Fixed version number bug in hw2http-lib1.pl and hw2http-lib2.pl</li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 2.03</strong></font>
+
+<ul>
+  <li>Developed a 'lite' version of HAMweather</li>
+  <li>added an additional debug mode to HW . set the allow_debug to 2 to <br>
+    always force debug mode on<br>
+    (changed hamlib.pl)</li>
+  <li>Added a version check parameter. When accessing the hamweather.cgi<br>
+    add the parameter 'version=1' and the current HAMweather version will<br>
+    be displayed<br>
+    (changed hamweather.cgi)</li>
+  <li>Fixed a couple bugs in the email templates.. also cleaned out some of <br>
+    then HAMweather only code form them</li>
+  <li>added the following template variables: %%main_html_url%%,<br>
+    %%admin_email%%</li>
+  <li>Added a bunch more alt-places files with thanks to Joe Torsitano.</li>
+  <li>Fixed a bug in the emailhw2.cgi that kept emailing of forecasts<br>
+    for altplaces cities. (also now lists the correct place name)<br>
+    (Changed emailhw2.cgi)</li>
+  <li>Modified the look of the warnings text pages. to correct bad alerts<br>
+    from showing up. (changed hamweaherlib.pl)</li>
+  <li>Modified the UV index once more to allow cities to be clicked to view<br>
+    their forecast. (changed hamweatherlib.pl)</li>
+  <li>Fixed bug in the default place name not displaying properly.<br>
+    (changed hamweather.cgi)</li>
+  <li>Added the missing hidden theme &amp; user fields to three templates<br>
+    that were missing them. (changed the emailstorer.html, cus.html<br>
+    and ccinternational.html)</li>
+  <li>Fixed other minor bugs</li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 2.01</strong></font>
+
+<ul>
+  <li>Added the ability for HAMweather to allow a user to just enter a major<br>
+    city name in the pands parameter. admin for this in the next release<br>
+    (change the hw2lib.pl)</li>
+  <li>Cleaned up the UV index info with thanks and code from <a href="http://www.moongear.com">www.moongear.com</a>
+    <br>
+    (changed hamwetaherlib.pl and hw2lib.pl)</li>
+  <li>Added a warning seperator to warning reports with thanks and code from<br>
+    <a href="http://www.moongear.com">www.moongear.com</a> <br>
+    (changed hamweatherlib.pl and hw2lib.pl)</li>
+  <li>Added version control.. when loading needed files it iwll check for correct<br>
+    minimum version. will supply error if file not found or wrong version.. <br>
+    Should help sin installations</li>
+  <li>Added a debug mode which willoutput ENV variables, the file versions<br>
+    all parameters, various other pertinent variables and also urls when it <br>
+    tries connecting ot the weather servers</li>
+  <li>Fixed a bug withthe extra slash in the radar image urls</li>
+  <li>Thanks to Joe Torsitano for developing many state alt place files. (added<br>
+    several xx-altplaces.txt file..where xx is the states two letter abbreviation)</li>
+  <li>Changed the way that the alt place files work.. (the old ones will still work)</li>
+  <li>Added functionality to allow you to specify wheather to use requested<br>
+    place name or the actual city name.. you can also give an alt place<br>
+    to use for hourly conditions.. you can also provide an alt weather zone and<br>
+    icao code instead of another city name (changed hamweather.cgi and <br>
+    hw2lib.pl files</li>
+  <li>Added capability for HW to use normal sockets, ot LWP::Simple or <br>
+    LWP::HTTPAgent to conect to the IWIN srevers. You define which to<br>
+    use in hwconfig.txt the (http_mode variable.) the sockets mode is the <br>
+    default. This fix will allow hypermart users to use HW</li>
+  <li>Made change to correct HAMweather to work with canadian forecasts.<br>
+    for the servers that produces the canadian forecasts had been changed.</li>
+  <li>Added Overcast as a default weather condition (equals cloudy) (changed <br>
+    /themes/default.txt file.)</li>
+  <li>Added the ability to control what icons are used for current conditions by adding<br>
+    $day_begin and $day_end variables.. ste them to the respective hour for daylight<br>
+    (changed hamweatherlib.pl and users/default.txt files)</li>
+  <li>Added the Not available icon for when current conditions are not available. Also the <br>
+    current conditions values are set to n/a as well.<br>
+    (changed hw2lib.pl and added na.gif icon)</li>
+  <li>Changed the way that the 'pands' parameter is handeled... It first check for &quot;city,
+    state&quot; <br>
+    if found then processed, if not then it check for &quot;city ST&quot; (notice no comma) if
+    found<br>
+    it parses them as is.. if not then it compares the panfds value to possible cities <br>
+    in the caty-places files. If found in these it will use the appropriate city, state<br>
+    otherwise it will error out. <br>
+    (changed hw2lib.pl file and added city-places text files)</li>
+  <li>Added a trim spaces function to the alt-places file..HW will auto trim any<br>
+    leading or lagging spaces in the city name if alt-places files (changed <br>
+    hw2lib.pl file)</li>
+  <li>FIxed bug with the HWV include variables not always properly inserting<br>
+    correct value (changed hw2lib.pl)</li>
+  <li>FIxed bug with Canadian forecasts sometimes adding space to cache file name<br>
+    which caused problems on some installations. (changes hw2lib.pl)</li>
+  <li>Added version checking capabilities to new release. (changes all .cgi and .pl files)</li>
+  <li>Added more state maps.</li>
+  <li>Added California altplaces.txt file (added ca-altplaces.txt)</li>
+  <li>me-info.txt files was missing forecast parameter. (changed me-info.txt file)</li>
+  <li>Fixed bug in the southeast info file that had a bad IL url. (changed the <br>
+    southeast-info.txt file)</li>
+  <li>Added new Hurricane infor forecast type. called as forecasttype huricane2.<br>
+    (Changed user/default.txt, hwadmin.cgi and otherinfo.html files) <br>
+  </li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 2.00</strong></font>
+
+<ul>
+  <li>Corrected ca-zones.txt file so that the California state map works <br>
+    correctly. Thanks to Joe Torsitano for this. (changed ca-zones.txt)</li>
+  <li>Fixed bug in the hwadmin that would sometime cause the metar observation <br>
+    to stop working. (changed hwadmin.cgi)</li>
+  <li>changed email forecasts to support all template variable as supported<br>
+    by everything else (changed emailhw2.cgi and hw2lib.pl files)</li>
+  <li>changed hw2lib.pl to post error to error log if it can not make a <br>
+    connection to the NWS servers</li>
+  <li>added state map link to the nav bars</li>
+  <li>added Mist weather type to use the 'drizzle' icon and for <br>
+    'towering cumulus clouds observed' to use the mostly cloudy icon<br>
+    changed /themes/default.txt)</li>
+  <li>changed HAMweather to turn TSTM and TSTRM into Thunderstorm in<br>
+    current conditions and houlry observations (changed hamweatherlib.pl)</li>
+  <li>Removed extraneous blue dot on Texas image map (tx-map.gif)</li>
+  <li>Changed default map mode to 1</li>
+  <li>Fixed bug that the alt parameter did not work with canadian forecasts<br>
+    (Changed hamweather.cgi)</li>
+  <li>Fixed bug that txt parameter did not work with Canadian forecasts<br>
+    (Changed hamweatherlib.pl file)</li>
+  <li>Fixed bug in the fetching of weather info &amp; radar map from NWS for proxy server<br>
+    changed (hw2lib.pl &amp; hw2radarlib.pl)</li>
+  <li>Fixed bug in that HW was adding an extra http:// to the radar url.. Affected<br>
+    proxy servers. Changed hamweather.cgi</li>
+  <li>Fixed bug in emailstorer.cgi that would cause HAMweather to display the template<br>
+    directory contents if someone tried unsubscribing without a place &amp; state listed<br>
+    (changed emailstorer.cgi)</li>
+  <li>changed email templates to include the place &amp; state in the unsubscribe link so<br>
+    that when a person clicks unsubscribe it will display the correct place &amp; state.<br>
+    (changed subscribe.html, subscribe.txt, unsubscribe.html, unsubscribe.txt and<br>
+    email_template.txt files)</li>
+  <li>Fixed bug with the &lt;br&gt; tag showing up in the icon alt tag for zone forecasts<br>
+    (changed /themes/default.txt and hamweatherlib.pl)</li>
+  <li>Fixed bugs in the hw2emailstorer.cgi &amp; emailhw2.cgi that would cause script to crash<br>
+    in SMTP mode if the email wasnt successful.. (changed hw2emailstorer.cgi &amp; <br>
+    emailhw2.cgi)</li>
+  <li>corrected the Oregon misspelling on that state image map.(changed or-map.gif)</li>
+  <li>Fixed bug that caused proxy server support not to work correctly (changed<br>
+    hw2lib.pl file)</li>
+  <li>Fixed current conditions so tstm would be turned into Thunder Storm<br>
+    so the icon will display correctly. (changed hamweatherlib.pl)</li>
+  <li>Fixed spelling of Indiana and oregon (changed hw2lib.pl)</li>
+  <li>Added more State maps (oh, OR, TX, KS) Thank Adam French for these</li>
+  <li>fixed a bug with cookies for current conditions (changed hw2lib.pl)</li>
+  <li>Fixed current conditions so that Culumous clouds will disyplay as mostly <br>
+    cloudy. (changed hamweatherlib.pl)<br>
+  </li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 1 Build 4</strong></font>
+
+<ul>
+  <li>added begin and expire date capabilities to the email routines</li>
+  <li>added version numbers to all major files</li>
+  <li>modified documentation to include new features</li>
+  <li>added %%icao%% template parameter (changed hw2lib.pl)</li>
+  <li>added 'Created with HAMweather' to Maps.</li>
+  <li>added %%country%% and %%lcountry%% template parameters (changed the<br>
+    hw2lib.pl)</li>
+  <li>Fixed bug with National current conditions not displaying city name if there was<br>
+    a comma in it. (chnaged hamweatherlib.pl)</li>
+  <li>Fixed bug in the themes/default.txt file that caused icon for 'cloudy periods' not to<br>
+    display.</li>
+  <li>Fixed a bug in the admin for the icons that caused the table not to display in Netscape.<br>
+    changed (hwadmin.cgi)</li>
+  <li>Redid the templates to use HWI, so now you can simply change the header.html<br>
+    and footer.html files to modify the site.. (also removed all the extra embedded<br>
+    tables that Frontpage had added to the templates..) (changed all template files)</li>
+  <li>Fixed bug with houlry forecasts not working correctly when there was a 'space'<br>
+    in the current conditions.. i.e Light Rain. (changed hamweatherlib.pl)</li>
+  <li>Fixed A major security bug that would list the contents of the template<br>
+    directory is a bad pas template name were used.</li>
+  <li>Fixed a bad id-zones.txt file.. Kept the image map from working correctly.<br>
+    (changed id-zones.txt file)</li>
+  <li>Thanks to the help of Adam French the following States image maps were<br>
+    completed: NY, GA, CO, IN, IL, ID, KS, LA<br>
+    (new files ny-info.txt, ga-info.txt, co-info.txt, in-info.txt, il-info.txt, id-info.txt,<br>
+    ks-info.txt, la-info.txt)</li>
+  <li>Added limited proxy support. If you set the variable $proxy_server with the <br>
+    proxy servers domain name or ip address and then set port to the port the<br>
+    proxy is listing on. (If there is no proxy then make $proxy_server be a null string<br>
+    and set port to '80'..this is the default.). HAMweather does not support<br>
+    proxy servers that require authorization.</li>
+  <li>Fixed a bug that when the NWS adds an extra note tothe forecast using a huge<br>
+    line of stars(*) it will chop the first 30 stars from the text forecast thus keeping<br>
+    the text forecast from stretching tables.</li>
+  <li>Added auto cache cleaning to the Smart Cache. Whenever hamweather <br>
+    goes to store a file in the cache and it has been 24 hours since the last cache<br>
+    cleaning then it will erase the entire cache. (changed the hw2lib.pl file)</li>
+  <li>Added support for cookies.. if the 'sc' parameter is set to 1 then the cookie<br>
+    will be stored. Then if user is sent to hamweather.cgi without any parameters<br>
+    set and they have a cookie it will be used to get their own default forecast,<br>
+    using the alt template (if any) specified by their cookie. Also you can turn<br>
+    this feature on or off. (changed files hamweather.cgi, hw2lib.pl, hamlib.pl)</li>
+  <li>Removed the index.html from the package because it confused people when the <br>
+    US map did not update itself.. You should now link directly to the hamweather.cgi<br>
+    It will display the same map, but update itself if needed. (removed file index.html)</li>
+  <li>Set the default forecast to be the US forecast map, with map mode set to 1<br>
+    (changed file users/default.txt)</li>
+  <li>Added output parameters. Yon can now set the output mode, 0 for web only,<br>
+    1 for web &amp; file &amp; 2 for fileonly.. parameter 'om' is the output mode.<br>
+    paramter 'of' is the actual output file nickname (predefined in web based<br>
+    administration..for security)</li>
+  <li>Fixed hwgetstate.cgi so that is a states info file contains a %25 it will turn it<br>
+    into a % (hwgetstate.cgi)</li>
+  <li>Edited the wrn_table_template in the theme file to fix a problem with handling<br>
+    themes and users. (changed the /themes/default.txt)</li>
+  <li>HAMwetaher now fetches and parses and http page for the current conditions<br>
+    (changed hw2lib.pl, hamweatherlib.pl)</li>
+  <li>Removed the need for the LWP module.. (the sockets.pm must be installed,<br>
+    but this is distibuted withthe perl Distribution and also was even needed for<br>
+    the LWP module). Added the hwhttp-lib.pl file. (changed the hw2lib.pl,<br>
+    hamweather.cgi, hamweatherlib.pl, hw2radarlib.pl)</li>
+  <li>added the ability for user defined variables.. a user can set a form element or<br>
+    pass a parameter tha begins with hwv and have the corrsponding template variable<br>
+    replaced with it.. i.e. if you pass the parameter hwvcolor then in your templates<br>
+    the variable %%hwvcolor%% will be replaced with the value of hwvcolor <br>
+    (hw2lib.pl. metarlister.cgi, hwgetstate.cgi, /user/default.txt)</li>
+  <li>Added the ability for including of files when outputting the templates.. this will<br>
+    allow for easy modification to a site.. just associate the include files names with<br>
+    thier file names in the user/default.txt (%hw_include). Then in the templates<br>
+    simply insert %%hwi=name%% where you need a file inserted. (the name is the<br>
+    name you associated with a file) (hw2lib.pl, metarlister.cgi, hwgetstate.cgi,<br>
+    /user/default.txt)</li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 1 Build 3</strong></font>
+
+<ul>
+  <li>- If a user types in the wourd &quot;county&quot; in the county name, HAMweather will
+    now<br>
+    strip the word &quot;county&quot; from the name and provide the forecast. For the NWS <br>
+    doesn't include the word &quot;county&quot; in the zone forecasts, just the county name.<br>
+    (hw2lib.pl file)<br>
+  </li>
+  <li>When the Current condition forecast cannot be reached HAMweather will now<br>
+    state that the Curren Conditions are unavailable. (hw2lib.pl file)<br>
+  </li>
+  <li>If HAMweather cannot make a connection to the IWIN or NWS servers it will no<br>
+    longer display the confusing &quot;Try another city/county&quot; message (hw2lib.pl file)<br>
+  </li>
+  <li>Fixed bug with emailhw2.cgi that would place the name of the associated city<br>
+    instead of the requested city (if associated was used.) (hw2lib.pl file)<br>
+  </li>
+  <li>emailhw2.cgi now supports the same template variable as does the normal<br>
+    hamweather.cgi So you can add these variables to your email template<br>
+    (emailhw2.cgi file)<br>
+  </li>
+  <li>fixed bug with associated cities not working correctly (hw2lib.pl file)<br>
+  </li>
+  <li>fixed bug that would not update the warning or summary maps when map_mode<br>
+    was set to 2 (hw2nslib.pl and hw2wnlib.pl files)<br>
+  </li>
+  <li>fixed bug that would display the default place name when viewing the current <br>
+    condition for an internationla city (hw2lib.pl and hamweatherlib.pl files)<br>
+  </li>
+  <li>fixed bug in HW admin that would cause logging to stop when you &quot;saved
+    options&quot;<br>
+  </li>
+  <li>fixed bug in the hw2wslib.pl that would make the US summary map update to a data<br>
+    set a few hours old (hw2wslib.pl file)<br>
+  </li>
+  <li>fixed bug with the hwadmin.cgi. In netscape the administration links did not work<br>
+    correctly.</li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 1 Build 2</strong></font>
+
+<ul>
+  <li>fixed bug in the emailhw2.cgi that would cause forecasts that were not for<br>
+    the default state to be unavailable. (emailhw2.cgi file)<br>
+  </li>
+  <li>changed the cgidie routine so that the HAMweather error message will be<br>
+    printed to the screen before trying to write it to the error file. (hamlib.pl file)<br>
+  </li>
+  <li>Changed the Demo html templates to use the %%lplace%% variable in the url links.<br>
+    This fixes the bug seen with places that had names of more than one word.<br>
+  </li>
+  <li>Added a %%lstate%% variable that can be used in the templates. It is just<br>
+    a properly URL encoded version of the %%state%% variable. (hw2lib.pl file)<br>
+  </li>
+  <li>Fixed the %%lcplace%% and %%lcstate%% variable functionality so that give<br>
+    proper casing for places &amp; states with more than one word. (hw2lib.pl file)<br>
+  </li>
+  <li>Changed the Demo html templates to use the %%lcplace%% and %%lcstate%% variables<br>
+    in the bar which states (Forecast for place, state). This fixes the bug seen <br>
+    with places that had names of more than one word.<br>
+  </li>
+  <li>Changed the $temps_html_template variable in the theme/default.txt file to<br>
+    remove the '°F'. Then changed the hamweatherlib.pl file to add the '°F' when<br>
+    needed to the temps in the zone forecast. This will prevent the stray '°F' <br>
+    from showing up when a temp is unavailable. (hamweatherlib.pl &amp; theme/default.txt
+    files)<br>
+  </li>
+  <li>Fixed a bug with Pro on some systems, especially NT. It seems that some <br>
+    servers require a 'binmode' to even open and load a graphic for GD. So the <br>
+    binmode command has been added to all graphic loads. This affects the<br>
+    hw2wslib.pl, hw2radarlib.pl, hw2wnlib.pl, hw2nflib.pl files.<br>
+  </li>
+  <li>Changed hw2nflib.pl so that during a failure to open a graphics it will use the
+    &amp;cgidie<br>
+    routines instead of just plain die.<br>
+  </li>
+  <li>Fixed a bug in the hwadmin.cgi, Administration script that would pop up when you<br>
+    tried saved a default place of more than one word. The script was not correctly <br>
+    putting quotes around the default place, state &amp; forecast tuype.. this bug would cause<br>
+    501 server errors.<br>
+  </li>
+  <li>(HAMweather PRO ONLY) fixed bug in then hamweather.cgi. NOw the script will<br>
+    only attempt to update the radar(when needed) during the checkign of zone or zandh <br>
+    forecsats when map_mode is set greater than 0.<br>
+  </li>
+</ul>
+
+<p><font color="#000080"><strong>Changes since HAMweather 2.0 Beta 1 (Build 1)</strong></font>
+
+<ul>
+  <li>Fixed bug in the cgidie routine that was causing the scriptto <br>
+    die when updating the error.txt file. (hamlib.pl file)</li>
+</ul>
+
+<p><em><small>HAMweather </small><font FACE="Verdana,Arial,Helvetica" size="1">copyright
+© 2000 by HAMweather, LLC, all rights reserved</font></em></p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+KVJI|Abingdon
+KOFP|Ashland, Hanover County Municipal Airport
+KCHO|Charlottesville, Charlottesville-Albemarle Airport
+KCPK|Chesapeake, Chesapeake Municipal Airport
+KCJR|Culpeper, Culpeper County Airport
+KDAN|Danville, Danville Regional Airport
+KPSK|Dublin / New River Valley
+KFVX|Farmville
+KDAA|Fort Belvoir
+KFAF|Fort Eustis / Felker
+KFKN|Franklin / J B Rose
+KHLX|Hillsville
+KHSP|Hot Springs / Ingalls
+KLFI|Langley Air Force Base
+KJYO|Leesburg / Godfrey
+KLYH|Lynchburg, Lynchburg Regional Airport
+KHEF|Manassas Municipal Automatic Weather Observing / Reporting System
+KMKJ|Marion / Wytheville
+KMTV|Martinsville
+KMFV|Melfa / Accomack Airport
+KPHF|Newport News, Newport News / Williamsburg International Airport
+KNGU|Norfolk, Naval Air Station
+KORF|Norfolk, Norfolk International Airport
+KPTB|Petersburg Automatic Weather Observing / Reporting System
+KNYG|Quantico, Marine Corps Air Facility
+KRIC|Richmond, Richmond International Airport
+KROA|Roanoke, Roanoke Regional Airport
+KEZF|Shannon Airport
+KAVC|South Hill, Mecklenburg-Brunswick Regional Airport
+KSHD|Staunton / Shenandoah
+KSFQ|Suffolk, Suffolk Municipal Airport
+KNTU|Virginia Beach, Oceana, Naval Air Station
+KBCB|Virginia Tech Airport
+KAKQ|Wakefield, Wakefield Municipal Airport
+KWAL|Wallops Island, Wallops Flight Facility Airport
+KDCA|Washington DC, Reagan National Airport
+KIAD|Washington DC, Washington-Dulles International Airport
+KOKV|Winchester Regional
+KLNP|Wise / Lonesome Pine

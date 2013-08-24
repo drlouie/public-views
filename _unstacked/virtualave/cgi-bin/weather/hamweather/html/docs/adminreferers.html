@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<title>HAMweather Administration : Referers</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Administration : </strong>Referrers</big></font></td>
+  </tr>
+</table>
+
+<p>HAMweather understands that once you have your HAMweather site up and running that you
+may want to provide some security to keep other web sites from linking directly to your
+scripts.&nbsp; To help stop this HAMweather allows for referrer checking.&nbsp; This means
+you can have the HAMweather script make sure that the linking URL (referrer URL) if from
+an allowed domain.&nbsp; Though this form of security is not extremely effective it can be
+used to keep the general&nbsp; web developer from linking directory into your HAMweather
+scripts.</p>
+
+<p>As stated this for of security is not 100 % effective, for some web browsers do not
+send the referrer URL&nbsp; or the referrer URL can be forged, but HAMweather did not
+include this as&nbsp; a stop all security.&nbsp; Also, if the referrer URL is not provided
+HAMweather will work normally, this will allow HAMweather to work correctly from the
+command line or with browsers that do not send the referrer URL.</p>
+
+<p>To use referrer checking you must first turn referrer checking on from the referrer
+administration page.&nbsp; To get to this page simply click on the 'referrer' link in the
+administration options of any administration page.&nbsp; The referer screen will look
+similar to:</p>
+<div align="center"><center>
+
+<table>
+  <tr>
+    <td colSpan="2"><div align="center"><center><table border="0" cellPadding="0"
+    cellSpacing="0" width="100%">
+<TBODY>
+      <tr>
+        <td align="left"><small>Referer Mode Off</small></td>
+        <td align="right"><u><font color="#0000FF"><small>Turn On</small></font></u></td>
+      </tr>
+</TBODY>
+    </table>
+    </center></div></td>
+  </tr>
+  <tr bgColor="#336699">
+    <th colSpan="2"><font color="#ffffff"><big>Referers</big></font></th>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <th><u><font color="#0000FF"><small>Add New</small></font></u></th>
+    <th>Allowed Domains</th>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td><font size="1"><font color="#0000FF"><u>Del</u></font>&nbsp;&nbsp; <font
+    color="#0000FF"><u>Edit</u></font></font></td>
+    <td><b>124.125.126.5</b></td>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td><font size="1" color="#0000FF"><u>Del</u></font><font size="1">&nbsp;&nbsp; </font><font
+    size="1" color="#0000FF"><u>Edit</u></font></td>
+    <td><b>hamweather.com</b></td>
+  </tr>
+</table>
+</center></div>
+
+<p>At the top of the table HW will state weather Referer checking is on or off. To toggle
+this click the &quot;Turn On&quot; or &quot;Turn Off&quot; link.</p>
+
+<p>Below this you will see any domain or ip addresses that have been entered as valid
+referer domains.&nbsp; To delete one simply click ont he &quot;Del&quot; link.&nbsp; TO
+edit click the &quot;Edit&quot; link and to add a new on click the &quot;Add New&quot;
+link.</p>
+
+<p><font color="#FF0000">NOTE</font>: Referrer checking is&nbsp; set on a per user basis.
+&nbsp; Thus, if you have multiple users you will need to turn on and set allowable
+referrer domains for each user.</p>
+
+<p><em><small>HAMweather </small><font FACE="Verdana,Arial,Helvetica" size="1">copyright
+© 2000 by HAMweather, LLC, all rights reserved</font></em></p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+001=Northern Coos
+002=Southern Coos
+003=Northern Grafton
+004=Northern Carroll
+005=Southern Grafton
+006=Southern Carroll
+007=Sullivan
+008=Merrimack
+009=Belknap
+010=Strafford
+011=Cheshire
+012=Hillsborough
+013=Interior Rockingham
+014=Coastal Rockingham 

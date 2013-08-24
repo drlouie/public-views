@@ -1,0 +1,10 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="61, 145, 8" HREF="%%scripturl%%?forecast=zandh&state=de&place=dover">
+<AREA SHAPE="POLYGON" COORDS="131, 219, 151, 218, 160, 290, 143, 288" HREF="%%scripturl%%?forecast=zandh&state=de&zone=004" alt="Delaware Beaches">
+<AREA SHAPE="POLYGON" COORDS="17, 215, 63, 209, 66, 199, 86, 189, 107, 189, 132, 216, 140, 290, 24, 286, 20, 211" HREF="%%scripturl%%?forecast=zandh&state=de&zone=003" alt="Inland Sussex">
+<AREA SHAPE="POLYGON" COORDS="14, 117, 26, 113, 50, 114, 53, 105, 62, 102, 86, 124, 87, 161, 102, 174, 104, 191, 87, 187, 86, 191, 65, 200, 60, 208, 20, 211" HREF="%%scripturl%%?forecast=zandh&state=de&zone=002" alt="Kent">
+<AREA SHAPE="POLYGON" COORDS="12, 117, 7, 29, 22, 13, 38, 3, 57, 5, 73, 9, 84, 15, 76, 20, 74, 26, 44, 48, 52, 61, 46, 81, 63, 102, 54, 105, 49, 115, 36, 115, 26, 115" HREF="%%scripturl%%?forecast=zandh&state=de&zone=001" alt="New Castle	">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="295" alt="DE" src="%%stateimagesurl%%/de-zones.gif" width="163">
+<-end image map->

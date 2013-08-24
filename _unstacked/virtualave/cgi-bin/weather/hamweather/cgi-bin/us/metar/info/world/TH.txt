@@ -1,0 +1,5 @@
+VTCC|Chiang Mai
+VTBD|Don Muang
+VTSS|Hat Yai
+VTSP|Phuket Airport
+VTBU|Rayong

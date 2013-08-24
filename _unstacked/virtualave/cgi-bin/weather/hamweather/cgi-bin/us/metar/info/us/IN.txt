@@ -1,0 +1,18 @@
+KAID|Anderson Municipal
+KBMG|Bloomington, Monroe County Airport
+KBAK|Columbus / Balkalar 
+KEKM|Elkhart Municipal
+KEVV|Evansville, Evansville Regional Airport
+KFWA|Fort Wayne, Fort Wayne International Airport
+KGYY|Gary Regional
+KGSH|Goshen, Goshen Municipal Airport
+KGUS|Grissom Air Force Base / Peru
+KHNB|Huntingburg
+KEYE|Indianapolis, Eagle Creek Airpark
+KIND|Indianapolis, Indianapolis International Airport
+KLAF|Lafayette, Purdue University Airport
+KMIE|Muncie, Delaware County-Johnson Field
+KGEZ|Shelbyville, Shelbyville Municipal Airport
+KSBN|South Bend, Michiana Regional Airport
+KHUF|Terre Haute, Hulman Regional Airport
+KVPZ|Valparaiso, Porter County Municipal Airport

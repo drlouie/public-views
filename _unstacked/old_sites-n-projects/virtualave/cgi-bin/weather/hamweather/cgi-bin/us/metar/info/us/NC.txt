@@ -1,0 +1,43 @@
+KASJ|Ahoskie, Tri-County Airport
+K6A3|Andrews, Andrews-Murphy Airport
+KAVL|Asheville, Asheville Regional Airport
+KBUY|Burlington, Burlington Alamance Regional Airport
+KIGX|Chapel Hill, Williams Airport
+KCLT|Charlotte, Charlotte / Douglas International Airport
+KNKT|Cherry Point, Marine Corps Air Station
+KEDE|Edenton, Northeastern Regional Airport
+KECG|Elizabeth City, Elizabeth City Coast Guard Air Station
+KHRJ|Erwin, Harnett County Airport
+KFAY|Fayetteville, Fayetteville Regional Airport
+KFBG|Fort Bragg / Simmons Army Airfield
+KAKH|Gastonia, Gastonia Municipal Airport
+KGSO|Greensboro, Piedmont Triad International Airport
+KHSE|Hatteras, Mitchell Field
+KHKY|Hickory, Hickory Regional Airport
+KOAJ|Jacksonville Automatic Weather Observing / Reporting System
+KNCA|Jacksonville, New River, Marine Corps Air Station
+KGEV|Jefferson, Ashe County Airport
+KDPL|Kenansville, Duplin County Airport
+KISO|Kinston / Stallings
+KLBT|Lumberton, Lumberton Municipal Airport
+KHFF|Mackall U. S. Army Airfield
+KMQI|Manteo / Dare County Regional
+KMEB|Maxton, Laurinburg-Maxton Airport
+KEQY|Monroe, Monroe Airport
+KMRN|Morganton, Morganton-Lenior Airport
+KMWK|Mount Airy, Mount Airy/Surry County Airport
+KEWN|New Bern, Craven County Regional Airport
+KUKF|North Wilkesboro, Wilkes County Airport
+KPGV|Pitt-Greenville Airport
+KPOB|Pope Air Force Base
+KRDU|Raleigh / Durham, Raleigh-Durham International Airport
+KRZZ|Roanoke Rapids, Halifax County Airport
+KRWI|Rocky Mount, Rocky Mount-Wilson Airport
+KFQD|Rutherfordton, Rutherford County-Marchman Field Airport
+KGSB|Seymour-Johnson Air Force Base
+KSOP|Southern Pines Automatic Weather Observing / Reporting System
+KSVH|Statesville, Statesville Municipal Airport
+KNJM|Swansboro, Bogue Field, Marine Corps Auxiliary Landing Field
+KOCW|Washington, Warren Field Airport
+KILM|Wilmington, New Hanover International Airport
+KINT|Winston Salem, Smith Reynolds Airport

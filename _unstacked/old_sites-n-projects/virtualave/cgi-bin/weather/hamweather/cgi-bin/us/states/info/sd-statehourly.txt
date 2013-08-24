@@ -1,0 +1,8 @@
+Aberdeen|Aberdeen|6
+Buffalo|Buffalo|1
+Chamberlain|Chamberlain|57
+Mobridge|Mobridge|9
+Rapid City Arp|Rapid City|31
+Sioux Falls|Sioux Falls|62
+Sisseton|Sisseton|8
+Watertown|Watertown|20

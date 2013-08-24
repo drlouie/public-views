@@ -1,0 +1,31 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="311, 82, 5" HREF="%%scripturl%%?forecast=zandh&state=md&place=annapolis">
+<AREA SHAPE="POLYGON" COORDS="454, 136, 462, 137, 436, 182, 424, 179" HREF="%%scripturl%%?forecast=zandh&state=md&zone=025" alt="Maryland Beaches">
+<AREA SHAPE="POLYGON" COORDS="432, 136, 453, 136, 422, 181, 404, 184, 404, 177, 413, 169, 404, 154, 428, 150, 436, 144" HREF="%%scripturl%%?forecast=zandh&state=md&zone=024" alt="Inland Worcester">
+<AREA SHAPE="POLYGON" COORDS="384, 155, 403, 154, 412, 165, 411, 170, 402, 176, 402, 184, 383, 183, 389, 171, 380, 162" HREF="%%scripturl%%?forecast=zandh&state=md&zone=023" alt="Somerset">
+<AREA SHAPE="POLYGON" COORDS="395, 127, 397, 134, 432, 137, 435, 143, 429, 151, 402, 154, 388, 154, 376, 154, 379, 147, 386, 136" HREF="%%scripturl%%?forecast=zandh&state=md&zone=022" alt="Wicomico	">
+<AREA SHAPE="POLYGON" COORDS="341, 121, 363, 120, 370, 114, 375, 111, 393, 112, 395, 126, 383, 133, 376, 147, 370, 151, 359, 153, 335, 135" HREF="%%scripturl%%?forecast=zandh&state=md&zone=021" alt="Dorchester">
+<AREA SHAPE="POLYGON" COORDS="353, 86, 369, 86, 373, 100, 364, 104, 371, 113, 361, 121, 353, 110, 332, 108, 335, 96, 345, 101" HREF="%%scripturl%%?forecast=zandh&state=md&zone=019" alt="Talbot">
+<AREA SHAPE="POLYGON" COORDS="369, 84, 388, 61, 394, 113, 384, 109, 370, 111, 366, 105, 370, 100, 374, 99" HREF="%%scripturl%%?forecast=zandh&state=md&zone=020" alt="Caroline">
+<AREA SHAPE="POLYGON" COORDS="356, 67, 363, 55, 387, 53, 390, 62, 384, 65, 369, 84, 356, 85, 346, 82" HREF="%%scripturl%%?forecast=zandh&state=md&zone=015" alt="Queen Annes">
+<AREA SHAPE="POLYGON" COORDS="365, 41, 388, 40, 388, 54, 364, 54, 356, 65, 345, 67, 343, 61, 345, 55, 357, 43" HREF="%%scripturl%%?forecast=zandh&state=md&zone=012" alt="Kent">
+<AREA SHAPE="POLYGON" COORDS="344, 5, 385, 4, 387, 41, 367, 39, 368, 31, 363, 20, 357, 20" HREF="%%scripturl%%?forecast=zandh&state=md&zone=008" alt="Cecil">
+<AREA SHAPE="POLYGON" COORDS="305, 5, 342, 5, 356, 22, 350, 37, 340, 40, 329, 38, 308, 19" HREF="%%scripturl%%?forecast=zandh&state=md&zone=007" alt="Harford">
+<AREA SHAPE="POLYGON" COORDS="290, 127, 329, 158, 330, 178, 309, 160, 286, 158, 277, 144" HREF="%%scripturl%%?forecast=zandh&state=md&zone=017" alt="St. Mary's">
+<AREA SHAPE="POLYGON" COORDS="295, 104, 311, 108, 312, 129, 326, 142, 321, 149, 315, 145, 311, 141, 300, 137, 292, 127" HREF="%%scripturl%%?forecast=zandh&state=md&zone=018" alt="Calvert">
+<AREA SHAPE="POLYGON" COORDS="303, 57, 319, 66, 321, 80, 310, 108, 298, 102, 293, 81, 271, 71, 290, 59, 290, 58" HREF="%%scripturl%%?forecast=zandh&state=md&zone=014" alt="Anne Arundel">
+<AREA SHAPE="POLYGON" COORDS="251, 112, 253, 119, 280, 113, 294, 127, 293, 129, 285, 129, 273, 150, 265, 146, 260, 137, 238, 141, 234, 133" HREF="%%scripturl%%?forecast=zandh&state=md&zone=016" alt="Charles">
+<AREA SHAPE="POLYGON" COORDS="273, 66, 293, 82, 294, 104, 295, 126, 290, 124, 287, 117, 276, 113, 266, 114, 256, 116, 253, 111, 258, 101, 272, 89, 261, 82" HREF="%%scripturl%%?forecast=zandh&state=md&zone=013" alt="District of Columbia">
+<AREA SHAPE="POLYGON" COORDS="272, 42, 327, 40, 323, 54, 294, 57, 276, 42" HREF="%%scripturl%%?forecast=zandh&state=md&zone=011" alt="Baltimore">
+<AREA SHAPE="POLYGON" COORDS="244, 42, 272, 41, 283, 50, 282, 54, 291, 58, 277, 69, 240, 45" HREF="%%scripturl%%?forecast=zandh&state=md&zone=010" alt="Howard">
+<AREA SHAPE="POLYGON" COORDS="241, 46, 271, 64, 261, 81, 252, 84, 237, 81, 218, 71, 209, 63, 213, 56" HREF="%%scripturl%%?forecast=zandh&state=md&zone=009" alt="Montgomery">
+<AREA SHAPE="POLYGON" COORDS="282, 6, 305, 4, 306, 16, 310, 22, 324, 32, 328, 39, 273, 40, 275, 30" HREF="%%scripturl%%?forecast=zandh&state=md&zone=006" alt="Northern Baltimore">
+<AREA SHAPE="POLYGON" COORDS="240, 7, 281, 4, 272, 42, 245, 40, 249, 28, 230, 15" HREF="%%scripturl%%?forecast=zandh&state=md&zone=005" alt="Carroll">
+<AREA SHAPE="POLYGON" COORDS="214, 5, 240, 5, 230, 15, 248, 29, 245, 43, 216, 56, 191, 47, 203, 15" HREF="%%scripturl%%?forecast=zandh&state=md&zone=004" alt="Fredrick">
+<AREA SHAPE="POLYGON" COORDS="126, 7, 211, 5, 209, 11, 203, 15, 188, 47, 185, 45, 170, 23, 160, 15, 142, 7, 126, 13" HREF="%%scripturl%%?forecast=zandh&state=md&zone=003" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="61, 6, 126, 5, 122, 13, 116, 22, 94, 24, 59, 32, 50, 28" HREF="%%scripturl%%?forecast=zandh&state=md&zone=002" alt="Allegany">
+<AREA SHAPE="POLYGON" COORDS="5, 5, 61, 6, 48, 29, 5, 57, 8, 4" HREF="%%scripturl%%?forecast=zandh&state=md&zone=001" alt="Garret">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="188" alt="MD" src="%%stateimagesurl%%/md-zones.gif" width="465">
+<-end image map->

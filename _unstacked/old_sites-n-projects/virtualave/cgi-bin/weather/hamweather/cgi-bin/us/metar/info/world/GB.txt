@@ -1,0 +1,67 @@
+EGPD|Aberdeen / Dyce
+EGJA|Alderney / Channel Island
+EGAA|Belfast / Aldergrove Airport
+EGAC|Belfast / Harbour
+EGPL|Benbecula
+EGUB|Benson
+EGKB|Biggin Hill 
+EGBB|Birmingham / Airport
+EGNH|Blackpool Airport
+EGDM|Boscombe Down
+EGQM|Boulmer
+EGHH|Bournemouth Airport
+EGGD|Bristol / Lulsgate 
+EGSC|Cambridge
+EGFF|Cardiff-Wales Airport
+EGNC|Carlisle
+EGBE|Coventry Airport 
+EGTC|Cranfield
+EGDR|Culdrose
+EGPN|Dundee / Riverside
+EGNX|East Midlands
+EGPH|Edinburgh Airport
+EGAE|Eglinton / Londonderr
+EGTE|Exeter Airport
+EGLF|Farnborough
+EGPF|Glasgow Airport
+EGJB|Guernsey Airport
+EGNJ|Humberside
+EGPE|Inverness / Dalcross
+EGNS|Isle Of Man / Ronaldsway Airport
+EGJJ|Jersey Airport
+EGQK|Kinloss
+EGNM|Leeds And Bradford
+EGQL|Leuchars
+EGGP|Liverpool Airport 
+EGKK|London / Gatwick Airport
+EGLL|London / Heathrow Airport
+EGLC|London City Airport
+EGQS|Lossiemouth
+EGGW|Luton Airport 
+EGMD|Lydd Airport 
+EGDL|Lyneham
+EGCC|Manchester Airport
+EGVP|Middle Wallop
+EGNT|Newcastle 
+EGSH|Norwich Weather Centre
+EGHD|Plymouth / Roborough
+EGDP|Portland / Rnas
+EGPK|Prestwick Airport
+EGDG|Saint Mawgan
+EGPM|Scatsa / Shetland Island
+EGHE|Scilly, Saint Mary'S
+EGOS|Shawbury
+EGKA|Shoreham Airport
+EGHI|Southampton / Weather Centre
+EGMC|Southend-On-Sea 
+EGSS|Stansted Airport
+EGBJ|Staverton Private 
+EGPO|Stornoway
+EGPB|Sumburgh Cape 
+EGFH|Swansea
+EGNV|Tees-Side
+EGPU|Tiree
+EGPW|Unst Island
+EGOV|Valley
+EGPC|Wick
+EGDY|Yeovilton

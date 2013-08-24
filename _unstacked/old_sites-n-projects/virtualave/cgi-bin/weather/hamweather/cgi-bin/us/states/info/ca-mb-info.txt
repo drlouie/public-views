@@ -1,0 +1,9 @@
+brandon|southern|fpcn11.wwg.htm|fpcn54.wwg.htm
+churchill|central|fpcn12.wwg.htm|fpcn54.wwg.htm
+dauphin|southern|fpcn11.wwg.htm|fpcn54.wwg.htm
+gimli|southern|fpcn11.wwg.htm|fpcn54.wwg.htm|INTERLAKE REGION
+lynn lake|central|fpcn12.wwg.htm|fpcn54.wwg.htm|INDIAN LAKE
+portage la prairie|southern|fpcn11.wwg.htm|fpcn54.wwg.htm|INTERLAKE REGION
+the pas|central|fpcn12.wwg.htm|fpcn54.wwg.htm|BERENS RIVER
+thompson|central|fpcn12.wwg.htm|fpcn54.wwg.htm
+winnipeg|southern|fpcn11.wwg.htm|fpcn54.wwg.htm

@@ -1,0 +1,9 @@
+Asheville|Asheville|53
+Cape Hatteras|Cape Hatteras|104
+Charlotte|Charlotte|71
+Elizabeth City|Elizabeth City|15
+Fayetteville|Fayetteville|88
+Greensboro|Greensboro|22
+New Bern|New Bern|93
+Raleigh-Durham|Raleigh-Durham|40
+Wilmington|Wilmington|101

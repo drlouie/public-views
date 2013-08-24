@@ -1,0 +1,8 @@
+LRAR|Arad
+LRBS|Bucuresti / Imh
+LROP|Bucuresti Otopeni
+LRIA|Iasi
+LRCK|Kogalniceanu
+LRTR|Timisoara
+LRTM|Tirgu Mures
+LRTC|Tulcea

@@ -1,0 +1,29 @@
+KALM|Alamogordo-White
+KABQ|Albuquerque, Albuquerque International Airport
+KAEG|Albuquerque, Double Eagle II Airport
+KATS|Artesia, Artesia Municipal Airport
+KCVS|Cannon Air Force Base / Clovis
+KCNM|Carlsbad, Cavern City Air Terminal
+KE33|Chama
+KCAO|Clayton, Clayton Municipal Airpark
+KCQC|Clines Corners
+KCVN|Clovis Municipal Automatic Weather Observing / Reporting System
+K4CR|Corona / Lincoln
+KDMN|Deming, Deming Municipal Airport
+KFMN|Farmington, Four Corners Regional Airport
+KGUP|Gallup, Gallup Municipal Airport
+KGNT|Grants, Grants-Milan Municipal Airport
+KHOB|Hobbs / Lea County
+KHMN|Holloman Air Force Base
+KLVS|Las Vegas, Las Vegas Municipal Airport
+KLAM|Los Alamos
+K4MY|Moriarty
+KRTN|Raton, Raton Municipal \ Crews Field Airport
+KROW|Roswell, Roswell Industrial Air Center Airport
+KSRR|Ruidoso Regional
+KSAF|Santa Fe, Santa Fe County Municipal Airport
+KSVC|Silver City / Grant
+KSKX|Taos Municipal Airport Automatic Weather Observing / Reporting System
+K4SL|Torreon
+KTCS|Truth Or Consequences, Truth Or Consequences Municipal Airport
+KTCC|Tucumcari, Tucumcari Municipal Airport

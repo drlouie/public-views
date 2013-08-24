@@ -1,0 +1,10 @@
+
+brandon=fpcn11.wwg.htm--|0
+churchill=fpcn12.wwg.htm--|0|CYYQ|2
+dauphin=fpcn11.wwg.htm--|0
+gimli=fpcn11.wwg.htm--INTERLAKE REGION|0
+lynn lake=fpcn12.wwg.htm--INDIAN LAKE|0
+portage la prairie=fpcn11.wwg.htm--INTERLAKE REGION|0
+the pas=fpcn12.wwg.htm--BERENS RIVER|0
+thompson=fpcn12.wwg.htm--|0|CYTH|2
+winnipeg=fpcn11.wwg.htm--|0|CYWG|2

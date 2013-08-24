@@ -1,0 +1,10 @@
+Alexandria|Alexandria|28
+Baton Rouge|Baton Rouge|48
+Lafayette|Lafayette|44
+Lake Charles|Lake Charles|41
+Monroe|Monroe|14
+N.O. Lakefront|New Orleans|62
+Patterson|Patterson|54
+Shreveport|Shreveport|1
+Tallulah|Tallulah|16
+Venice|Venice|69

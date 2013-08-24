@@ -1,0 +1,8 @@
+Ardmore|Ardmore|46
+Enid|Enid|12
+Guymon|Guymon|2
+Lawton|Lawton|38
+Muskogee|Muskogee|70
+Oklahoma City|Oklahoma City|25
+Ponca City|Ponca City|8
+Tulsa|Tulsa|60

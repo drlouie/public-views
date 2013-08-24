@@ -1,0 +1,103 @@
+<html>
+
+<head>
+<title>HAMweather Usage : Zipcodes</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><big><font color="#FFFFFF"><strong>Usage: &nbsp;
+    Zipcodes</strong></font></big></td>
+  </tr>
+</table>
+
+<p><font color="#FF0000"><strong>NOTE</strong></font>: The HWzipcode add-on is available
+that will allow most zipcodes to be used to fetch forecasts for the US.&nbsp; It can be
+downloaded from <a href="http://www.hamweather.com/downloads/">http://www.hamweather.com/downloads/</a>
+&nbsp; </p>
+
+<p><font color="#FF0000"><strong>NOTE</strong></font>: <font color="#000000">As of HW
+2.035, HAMweather can support international zipcode files. This can&nbsp; allow a person
+to enter a zipcode for a country and have the current conditions displayed. Currently
+HAMweather only has the one US zipcode database available but you are free to further
+create your own for international countries.&nbsp; The setup and usage of these is the
+same as for US usage, with any differences noted through out. </font></p>
+
+<p><big><strong><font color="#000080">Configuration</font></strong></big></p>
+
+<p>Since there is no web based administration yet for zipcode database files you will have
+to do this the hard way.&nbsp; Actually its not too hard, you will simply need to create
+and/or edit a few text files.&nbsp; You create a separate text files for each state, thus
+allowing for different associations in the different states.&nbsp; The naming convention
+for the text files is:</p>
+
+<blockquote>
+  <p>XX.txt</p>
+</blockquote>
+
+<p>Where XX is the first two characters of the zipcode. For example, the zipcode database
+file name that would contain the zipcode 24060 would be named 24.txt and would hold the
+informaiton for all zipcodes between 24000 and 24999.</p>
+
+<p>Again the US zipcode DB has already been created by HAMweather, LLC and if available
+for download at: <a href="http://www.hamweather.com/downloads/">http://www.hamweather.com/downloads/</a>
+&nbsp; </p>
+
+<p><strong><font color="#FF0000">INTERNATIONAL USAGE NOTE:</font></strong>&nbsp; For non
+US altplace files the naming convention is ZZ-XX.txt where ZZ is the countries two letter
+abbreviation and XX is the first two characters of the zipcodes in that file. For example
+for the Italian zipcode 00139, the zipcode database file which held this would be titled
+it-00.txt and woudl hold the info on all italian zipcodes between 00000 to 00999.
+&nbsp; HAMweather can support zipcodes that have characters besdies just numberas as well.
+Everythign works the same except if your zipcode has spaces when you input the information
+in the files you leave out the spaces. (the end user can still put i nthe spaces, for
+HAMweather will take care of this.)</p>
+
+<p><strong><big><font color="#000080">Zipcode Associations</font></big></strong></p>
+
+<p>In each zipcode Database file you will have a separate line for each zipcode. Each line
+will contain, the zipcode, the actual city and the actual state. HAMweather will then look
+up this actual city, state combination in the altplace files. So be aware that there must
+be an entry in the altplace files for the place you enter in the zipcode DB. (the
+exception to this is the US zipcode DB)</p>
+
+<blockquote>
+  <p><font color="#000080">zipcode|ActualPlace|ActualState</font></p>
+  <p>where:</p>
+  <div align="left"><table border="2" bgcolor="#FFFFD7" bordercolor="#000080"
+  cellpadding="2" bordercolorlight="#000080" bordercolordark="#000080" cellspacing="0">
+    <tr>
+      <td><table border="1">
+        <tr>
+          <td bgcolor="#000080" valign="top"><big><font color="#FFFFFF"><strong>Item</strong></font></big></td>
+          <td bgcolor="#000080"><big><font color="#FFFFFF"><strong>Description</strong></font></big></td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>Zipcode </strong></td>
+          <td>The zipcode requested, without any spaces.</td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>ActualPlace</strong></td>
+          <td>This is the actual place name that HW will use to look up in the altplace files to get
+          the required info for this city.</td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>ActualState</strong></td>
+          <td>This is the actual two letter state abbreviation that W will use when looking up the
+          place, state combination. For international zipcode database files that are not using
+          state/provinces this must be the countries two letter abbreviation.<br>
+          </td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+  </div>
+</blockquote>
+
+<p><em><small>HAMweather </small><font FACE="Verdana,Arial,Helvetica" size="1">copyright
+© 2000 by HAMweather, LLC, all rights reserved</font></em></p>
+</body>
+</html>

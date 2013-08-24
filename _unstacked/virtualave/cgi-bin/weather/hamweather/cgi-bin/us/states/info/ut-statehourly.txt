@@ -1,0 +1,10 @@
+Blanding|Blanding|22
+Cedar City|Cedar City|16
+Logan|Logan|1
+Milford|Milford|16
+Moab|Moab|27
+Ogden|Ogden|2
+Price|Price|12
+Provo|Provo|4
+Salt Lake City|Salt Lake City|3
+St George|St. George|19

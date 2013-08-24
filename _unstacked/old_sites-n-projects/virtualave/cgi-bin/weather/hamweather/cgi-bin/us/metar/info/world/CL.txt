@@ -1,0 +1,10 @@
+SCFA|Antofagasta
+SCAR|Arica
+SCIE|Concepcion
+SCHA|Copiapo
+SCDA|Iquique / Diego Arac
+SCIP|Isla De Pascua
+SCSE|La Serena
+SCEL|Pudahuel
+SCTE|Puerto Montt
+SCCI|Punta Arenas

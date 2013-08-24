@@ -1,0 +1,82 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="159, 33, 6" HREF="%%scripturl%%?forecast=zandh&state=fl&place=tallahassee">
+<AREA SHAPE="POLYGON" COORDS="320, 282, 339, 262, 345, 267, 332, 284" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=076" alt="Monroe/Upper Keys">
+<AREA SHAPE="POLYGON" COORDS="327, 236, 347, 234, 339, 257, 327, 271" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=074" alt="Coastal Dade">
+<AREA SHAPE="POLYGON" COORDS="312, 236, 326, 236, 327, 269, 316, 271" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=073" alt="Inland Dade">
+<AREA SHAPE="POLYGON" COORDS="283, 244, 312, 241, 315, 271, 304, 272" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=075" alt="Mainland Monroe">
+<AREA SHAPE="POLYGON" COORDS="329, 221, 347, 218, 347, 233, 331, 236" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=072" alt="Coastal Broward">
+<AREA SHAPE="POLYGON" COORDS="311, 221, 328, 221, 328, 236, 314, 235" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=071" alt="Inland Broward">
+<AREA SHAPE="POLYGON" COORDS="283, 211, 295, 212, 296, 221, 310, 222, 312, 242, 282, 242, 281, 214" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=070" alt="Inland Collier">
+<AREA SHAPE="POLYGON" COORDS="269, 221, 279, 219, 278, 216, 282, 216, 282, 237, 272, 237" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=069" alt="Coastal Collier">
+<AREA SHAPE="POLYGON" COORDS="334, 192, 347, 191, 349, 219, 334, 219" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=068" alt="Coastal Palm Beach">
+<AREA SHAPE="POLYGON" COORDS="311, 192, 334, 190, 334, 204, 334, 218, 313, 219" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=067" alt="Inland Palm Beach">
+<AREA SHAPE="POLYGON" COORDS="283, 198, 309, 198, 313, 221, 295, 221, 295, 210, 282, 210" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=066" alt="Hendry">
+<AREA SHAPE="POLYGON" COORDS="257, 202, 281, 201, 282, 215, 277, 214, 278, 219, 268, 219" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=065" alt="Lee">
+<AREA SHAPE="POLYGON" COORDS="314, 190, 325, 178, 341, 179, 349, 189" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=064" alt="Martin">
+<AREA SHAPE="POLYGON" COORDS="283, 188, 295, 187, 305, 179, 311, 185, 311, 198, 282, 199, 281, 195, 283, 194" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=063" alt="Glades">
+<AREA SHAPE="POLYGON" COORDS="246, 192, 252, 190, 252, 188, 282, 186, 281, 200, 247, 200" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=062" alt="Charlotte">
+<AREA SHAPE="POLYGON" COORDS="260, 176, 281, 174, 282, 186, 260, 188" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=061" alt="De Soto">
+<AREA SHAPE="POLYGON" COORDS="238, 174, 249, 174, 251, 180, 257, 180, 259, 188, 250, 188, 251, 190, 245, 191" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=060" alt="Sarasota">
+<AREA SHAPE="POLYGON" COORDS="322, 164, 335, 163, 342, 179, 325, 179" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=059" alt="St. Lucie">
+<AREA SHAPE="POLYGON" COORDS="301, 160, 317, 161, 318, 163, 323, 163, 322, 180, 313, 189, 313, 186, 307, 177, 299, 165" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=058" alt="Okeechobee">
+<AREA SHAPE="POLYGON" COORDS="283, 159, 300, 161, 297, 165, 302, 171, 308, 178, 301, 180, 295, 186, 282, 187" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=057" alt="Highlands">
+<AREA SHAPE="POLYGON" COORDS="259, 159, 282, 158, 282, 174, 262, 174" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=056" alt="Hardee">
+<AREA SHAPE="POLYGON" COORDS="236, 159, 260, 158, 258, 180, 252, 179, 250, 173, 237, 172, 231, 168" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=055" alt="Manatee">
+<AREA SHAPE="POLYGON" COORDS="315, 152, 330, 151, 336, 163, 317, 162" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=054" alt="Indian River">
+<AREA SHAPE="POLYGON" COORDS="278, 130, 313, 130, 314, 152, 313, 160, 302, 160, 291, 140" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=053" alt="Osceola">
+<AREA SHAPE="POLYGON" COORDS="259, 135, 258, 129, 276, 129, 288, 138, 301, 160, 260, 158" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=052" alt="Polk">
+<AREA SHAPE="POLYGON" COORDS="234, 135, 259, 135, 259, 159, 240, 157, 236, 152" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=051" alt="Hillsborough">
+<AREA SHAPE="POLYGON" COORDS="225, 138, 232, 136, 234, 154, 225, 154" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=050" alt="Pinellas">
+<AREA SHAPE="POLYGON" COORDS="228, 125, 259, 122, 256, 134, 227, 134" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=049" alt="Pasco">
+<AREA SHAPE="POLYGON" COORDS="234, 115, 251, 113, 252, 117, 258, 121, 232, 124" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=048" alt="Hernando">
+<AREA SHAPE="POLYGON" COORDS="309, 110, 316, 108, 328, 122, 331, 150, 313, 150, 313, 121" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=047" alt="Brevard">
+<AREA SHAPE="POLYGON" COORDS="284, 110, 296, 106, 305, 109, 307, 113, 292, 116" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=046" alt="Seminole">
+<AREA SHAPE="POLYGON" COORDS="278, 110, 287, 108, 288, 114, 292, 116, 308, 114, 311, 119, 312, 129, 279, 128, 279, 113" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=045" alt="Orange">
+<AREA SHAPE="POLYGON" COORDS="263, 101, 277, 100, 279, 90, 293, 100, 293, 105, 289, 106, 277, 109, 277, 127, 266, 127" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=044" alt="Lake">
+<AREA SHAPE="POLYGON" COORDS="246, 101, 263, 101, 264, 128, 260, 129, 261, 121, 253, 117, 254, 108" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=043" alt="Sumter">
+<AREA SHAPE="POLYGON" COORDS="228, 97, 240, 97, 253, 106, 251, 113, 232, 112" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=042" alt="Citrus">
+<AREA SHAPE="POLYGON" COORDS="277, 83, 287, 80, 290, 85, 304, 85, 314, 107, 310, 107, 308, 116, 304, 107, 291, 104, 293, 101" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=041" alt="Volusia">
+<AREA SHAPE="POLYGON" COORDS="239, 96, 239, 89, 244, 88, 243, 78, 253, 76, 256, 81, 261, 80, 263, 75, 274, 81, 279, 88, 278, 100, 248, 100" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=040" alt="Marion">
+<AREA SHAPE="POLYGON" COORDS="221, 72, 237, 73, 243, 76, 243, 87, 238, 88, 237, 96, 229, 96, 212, 85" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=039" alt="Levy">
+<AREA SHAPE="POLYGON" COORDS="286, 70, 296, 66, 301, 79, 301, 84, 289, 85, 288, 82" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=038" alt="Flagler">
+<AREA SHAPE="POLYGON" COORDS="261, 67, 271, 60, 282, 60, 286, 67, 284, 75, 287, 80, 277, 83, 269, 75, 262, 76" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=037" alt="Putnam">
+<AREA SHAPE="POLYGON" COORDS="238, 56, 245, 57, 257, 60, 260, 64, 260, 79, 254, 79, 252, 76, 240, 76, 238, 74, 234, 71, 235, 60, 236, 60" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=036" alt="Alachua">
+<AREA SHAPE="POLYGON" COORDS="280, 47, 288, 45, 296, 67, 286, 69, 283, 59, 284, 56, 278, 54" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=033" alt="St. Johns">
+<AREA SHAPE="POLYGON" COORDS="260, 47, 277, 46, 275, 53, 281, 55, 280, 59, 271, 60, 265, 65, 259, 64" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=032" alt="Clay">
+<AREA SHAPE="POLYGON" COORDS="258, 47, 260, 63, 255, 59, 247, 59, 245, 57" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=031" alt="Bradford">
+<AREA SHAPE="POLYGON" COORDS="244, 46, 257, 45, 246, 55, 240, 55, 238, 52" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=030" alt="Union">
+<AREA SHAPE="POLYGON" COORDS="259, 46, 258, 38, 275, 28, 284, 29, 288, 48, 278, 46" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=025" alt="Duval">
+<AREA SHAPE="POLYGON" COORDS="259, 34, 262, 28, 260, 19, 265, 14, 284, 20, 285, 30, 277, 28, 260, 37, 261, 20" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=024" alt="Nassau">
+<AREA SHAPE="POLYGON" COORDS="243, 28, 253, 27, 255, 34, 259, 35, 258, 46, 242, 46" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=023" alt="Baker">
+<AREA SHAPE="POLYGON" COORDS="230, 28, 241, 27, 241, 47, 236, 52, 237, 55, 233, 61, 228, 56, 227, 40, 230, 38, 232, 35" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=022" alt="Columbia">
+<AREA SHAPE="POLYGON" COORDS="220, 60, 224, 55, 228, 56, 229, 60, 232, 62, 231, 72, 219, 70" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=035" alt="Gilchrist">
+<AREA SHAPE="POLYGON" COORDS="203, 62, 219, 62, 219, 73, 212, 83, 200, 68" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=034" alt="Dixie">
+<AREA SHAPE="POLYGON" COORDS="197, 42, 206, 42, 208, 49, 213, 49, 218, 52, 223, 60, 202, 60" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=029" alt="Lafayette">
+<AREA SHAPE="POLYGON" COORDS="206, 40, 211, 34, 220, 36, 226, 39, 227, 55, 221, 56, 217, 49, 212, 47, 206, 49" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=021" alt="Suwannee">
+<AREA SHAPE="POLYGON" COORDS="206, 25, 229, 27, 230, 29, 232, 33, 230, 38, 227, 38, 217, 34, 210, 34" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=020" alt="Hamilton">
+<AREA SHAPE="POLYGON" COORDS="174, 51, 180, 40, 198, 41, 202, 62, 200, 68" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=028" alt="Taylor">
+<AREA SHAPE="POLYGON" COORDS="192, 25, 205, 26, 210, 34, 204, 41, 182, 39" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=019" alt="Madison">
+<AREA SHAPE="POLYGON" COORDS="170, 24, 190, 24, 174, 49, 169, 48, 168, 38" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=018" alt="Jefferson">
+<AREA SHAPE="POLYGON" COORDS="145, 41, 167, 41, 168, 53, 146, 52, 140, 41" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=027" alt="Wakulla">
+<AREA SHAPE="POLYGON" COORDS="157, 21, 172, 26, 167, 40, 143, 39" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=017" alt="Leon">
+<AREA SHAPE="POLYGON" COORDS="132, 28, 142, 37, 141, 48, 145, 53, 120, 51, 120, 48" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=026" alt="Liberty">
+<AREA SHAPE="POLYGON" COORDS="134, 21, 158, 22, 151, 32, 141, 35, 132, 26" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=016" alt="Gadsden">
+<AREA SHAPE="POLYGON" COORDS="124, 53, 154, 54, 126, 66, 129, 57" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=015" alt="Franklin">
+<AREA SHAPE="POLYGON" COORDS="108, 46, 119, 46, 119, 52, 127, 57, 122, 66, 110, 66" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=014" alt="Gulf">
+<AREA SHAPE="POLYGON" COORDS="108, 28, 130, 24, 120, 46, 109, 44" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=013" alt="Calhoun">
+<AREA SHAPE="POLYGON" COORDS="82, 39, 87, 32, 104, 33, 104, 29, 108, 28, 109, 56" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=012" alt="Bay">
+<AREA SHAPE="POLYGON" COORDS="104, 7, 128, 8, 132, 21, 130, 24, 111, 27, 103, 17" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=011" alt="Jackson">
+<AREA SHAPE="POLYGON" COORDS="88, 33, 105, 34, 105, 27, 108, 27, 107, 22, 102, 15, 98, 19, 91, 19, 86, 24" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=010" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="81, 10, 104, 7, 98, 18, 96, 18, 92, 17, 90, 18, 88, 23, 80, 23" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=009" alt="Holmes">
+<AREA SHAPE="POLYGON" COORDS="66, 22, 88, 21, 85, 23, 88, 31, 85, 34, 81, 35, 83, 39, 67, 37" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=008" alt="Coastal Walton">
+<AREA SHAPE="POLYGON" COORDS="65, 9, 82, 9, 79, 20, 64, 21" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=007" alt="Inland Walton">
+<AREA SHAPE="POLYGON" COORDS="45, 23, 64, 21, 65, 35, 48, 34" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=006" alt="Coastal Okaloosa">
+<AREA SHAPE="POLYGON" COORDS="46, 9, 64, 9, 63, 22, 46, 22" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=005" alt="Inland Okaloosa">
+<AREA SHAPE="POLYGON" COORDS="24, 23, 45, 22, 45, 36, 32, 36" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=004" alt="Coastal Santa Rosa">
+<AREA SHAPE="POLYGON" COORDS="25, 8, 46, 8, 45, 22, 25, 19" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=003" alt="Inland Santa Rosa">
+<AREA SHAPE="POLYGON" COORDS="13, 22, 24, 21, 31, 38, 17, 38" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=002" alt="Coastal Escambia">
+<AREA SHAPE="POLYGON" COORDS="8, 8, 25, 9, 24, 19, 16, 20, 8, 14" HREF="%%scripturl%%?forecast=zandh&state=fl&zone=001" alt="Inland Escambia">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="285" alt="FL" src="%%stateimagesurl%%/fl-zones.gif" width="355">
+<-end image map->

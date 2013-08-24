@@ -1,0 +1,95 @@
+<-begin image map->
+<MAP NAME="FrontPageMap0">
+<AREA SHAPE="CIRCLE" COORDS="166, 177, 5" HREF="%%scripturl%%?forecast=zandh&state=oh&place=columbus">
+<AREA SHAPE="POLYGON" COORDS="193, 277, 193, 287, 188, 287, 188, 291, 186, 291, 186, 303, 180, 300, 178, 293, 175, 285, 169, 286, 161, 290, 157, 294, 152, 296, 148, 298, 142, 297, 142, 267, 187, 268, 187, 278" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=088" alt="Scioto">
+<AREA SHAPE="POLYGON" COORDS="204, 277, 205, 285, 209, 285, 212, 292, 221, 292, 221, 297, 226, 301, 223, 313, 216, 313, 201, 315, 197, 307, 188, 302, 184, 302, 188, 298, 184, 292, 189, 291, 188, 286, 193, 286, 193, 277" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=087" alt="Lawrence">
+<AREA SHAPE="POLYGON" COORDS="243, 266, 241, 272, 237, 278, 234, 281, 236, 290, 237, 296, 230, 298, 227, 301, 222, 299, 222, 293, 212, 291, 213, 286, 210, 286, 210, 282, 204, 284, 205, 276, 213, 275, 214, 261, 224, 261, 224, 264, 246, 264, 246, 263" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=086" alt="Gallia">
+<AREA SHAPE="POLYGON" COORDS="274, 249, 274, 255, 270, 256, 267, 257, 270, 260, 270, 265, 272, 272, 267, 269, 263, 272, 259, 273, 261, 268, 259, 264, 255, 261, 245, 267, 242, 263, 225, 262, 225, 252, 228, 246" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=085" alt="Meigs">
+<AREA SHAPE="POLYGON" COORDS="225, 248, 224, 261, 215, 260, 215, 252, 207, 252, 207, 249, 201, 249, 187, 245, 187, 232, 226, 230, 226, 237, 229, 238" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=084" alt="Vinton">
+<AREA SHAPE="POLYGON" COORDS="186, 245, 196, 248, 206, 249, 206, 252, 215, 252, 212, 276, 204, 275, 202, 276, 186, 277, 187, 269, 181, 268" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=083" alt="Jackson">
+<AREA SHAPE="POLYGON" COORDS="184, 250, 181, 268, 145, 268, 143, 262, 132, 258, 134, 248" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=082" alt="Pike">
+<AREA SHAPE="POLYGON" COORDS="133, 259, 137, 259, 142, 262, 143, 298, 136, 293, 126, 293, 120, 289, 112, 291, 109, 296, 104, 296, 105, 263" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=081" alt="Adams">
+<AREA SHAPE="POLYGON" COORDS="134, 247, 131, 259, 89, 263, 91, 243, 114, 230, 133, 230, 130, 238, 137, 244" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=080" alt="Highland">
+<AREA SHAPE="POLYGON" COORDS="106, 261, 103, 295, 95, 291, 82, 282, 73, 285, 80, 243, 91, 243, 88, 262" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=079" alt="Brown">
+<AREA SHAPE="POLYGON" COORDS="80, 244, 72, 284, 59, 280, 51, 263, 54, 252, 53, 244, 59, 240" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=078" alt="Clermont">
+<AREA SHAPE="POLYGON" COORDS="56, 240, 52, 244, 54, 247, 51, 262, 44, 259, 40, 253, 27, 258, 15, 252, 8, 255, 7, 238, 18, 238, 26, 236, 34, 239" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=077" alt="Hamilton">
+<AREA SHAPE="POLYGON" COORDS="339, 214, 333, 220, 325, 225, 315, 230, 307, 233, 301, 227, 295, 230, 291, 234, 281, 241, 275, 248, 277, 238, 270, 238, 265, 231, 269, 220, 277, 220, 276, 215, 283, 211, 286, 213, 300, 206, 306, 213, 343, 213" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=076" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="265, 226, 263, 231, 265, 235, 268, 239, 275, 239, 276, 243, 274, 247, 273, 250, 229, 247, 229, 237, 226, 237, 229, 223, 239, 223, 240, 215, 250, 216, 250, 223" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=075" alt="Athens">
+<AREA SHAPE="POLYGON" COORDS="238, 215, 238, 223, 230, 221, 227, 230, 209, 229, 206, 232, 202, 232, 196, 232, 187, 232, 188, 216, 198, 216, 198, 210, 210, 210, 211, 207, 220, 207, 220, 210" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=074" alt="Hocking">
+<AREA SHAPE="POLYGON" COORDS="188, 223, 186, 234, 186, 239, 186, 246, 183, 250, 135, 247, 138, 243, 132, 239, 132, 235, 133, 228, 143, 219" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=073" alt="Ross">
+<AREA SHAPE="POLYGON" COORDS="114, 230, 94, 244, 79, 243, 78, 242, 80, 215, 114, 215" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=072" alt="Clinton">
+<AREA SHAPE="POLYGON" COORDS="81, 214, 77, 241, 49, 238, 49, 212" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=071" alt="Warren">
+<AREA SHAPE="POLYGON" COORDS="49, 212, 49, 238, 39, 238, 28, 236, 22, 236, 19, 238, 8, 238, 8, 214" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=070" alt="Butler">
+<AREA SHAPE="POLYGON" COORDS="356, 190, 351, 197, 353, 202, 349, 209, 346, 211, 340, 214, 315, 214, 314, 204, 310, 203, 311, 188, 317, 188, 319, 190" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=069" alt="Monroe">
+<AREA SHAPE="POLYGON" COORDS="320, 188, 312, 188, 310, 201, 314, 201, 314, 213, 306, 213, 303, 209, 298, 208, 289, 211, 288, 206, 282, 202, 282, 198, 280, 197, 278, 190, 293, 190, 297, 187, 303, 182, 308, 182, 319, 182" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=068" alt="Noble">
+<AREA SHAPE="POLYGON" COORDS="283, 198, 282, 203, 287, 206, 288, 213, 278, 211, 275, 214, 278, 218, 278, 221, 273, 221, 269, 219, 267, 225, 259, 223, 251, 223, 249, 223, 249, 198" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=067" alt="Morgan">
+<AREA SHAPE="POLYGON" COORDS="246, 195, 246, 200, 249, 200, 249, 216, 237, 216, 221, 210, 220, 201, 217, 201, 217, 193, 214, 193, 214, 181, 237, 186, 239, 193" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=066" alt="Perry">
+<AREA SHAPE="POLYGON" COORDS="213, 182, 212, 190, 218, 191, 217, 198, 221, 199, 221, 206, 211, 206, 210, 211, 201, 210, 198, 215, 179, 213, 179, 194, 183, 187, 183, 182" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=065" alt="Fairfield">
+<AREA SHAPE="POLYGON" COORDS="180, 194, 179, 213, 188, 215, 188, 224, 143, 219, 143, 195" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=064" alt="Pickaway">
+<AREA SHAPE="POLYGON" COORDS="143, 202, 142, 219, 133, 229, 124, 230, 115, 231, 115, 217, 107, 213, 107, 203" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=063" alt="Fayette">
+<AREA SHAPE="POLYGON" COORDS="109, 196, 106, 215, 68, 213, 71, 189, 76, 189" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=062" alt="Greene">
+<AREA SHAPE="POLYGON" COORDS="71, 188, 69, 213, 39, 212, 36, 184, 64, 183" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=061" alt="Montgomery">
+<AREA SHAPE="POLYGON" COORDS="36, 182, 38, 213, 8, 214, 9, 182" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=060" alt="Preble">
+<AREA SHAPE="POLYGON" COORDS="365, 163, 362, 170, 362, 175, 361, 180, 360, 184, 355, 183, 358, 188, 355, 190, 320, 189, 320, 163" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=059" alt="Belmont">
+<AREA SHAPE="POLYGON" COORDS="320, 163, 320, 181, 308, 180, 308, 183, 302, 183, 299, 186, 297, 186, 297, 184, 291, 190, 279, 189, 276, 163, 281, 163, 282, 158, 309, 158, 309, 164" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=058" alt="Guernsey">
+<AREA SHAPE="POLYGON" COORDS="277, 165, 276, 181, 278, 182, 279, 182, 279, 198, 246, 196, 246, 194, 238, 194, 239, 186, 232, 186, 236, 162" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=057" alt="Muskingum">
+<AREA SHAPE="POLYGON" COORDS="236, 158, 234, 181, 232, 181, 232, 185, 220, 182, 183, 182, 186, 169, 189, 165, 189, 154, 211, 154, 211, 157" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=056" alt="Licking">
+<AREA SHAPE="POLYGON" COORDS="186, 166, 184, 180, 181, 183, 183, 188, 179, 195, 143, 194, 142, 185, 144, 180, 142, 176, 144, 169, 145, 167" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=055" alt="Franklin">
+<AREA SHAPE="POLYGON" COORDS="145, 168, 145, 172, 142, 175, 144, 180, 142, 186, 144, 191, 143, 203, 109, 201, 109, 197, 112, 196, 123, 166" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=054" alt="Madison">
+<AREA SHAPE="POLYGON" COORDS="120, 174, 112, 196, 75, 188, 75, 175" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=053" alt="Clark">
+<AREA SHAPE="POLYGON" COORDS="122, 156, 122, 168, 120, 175, 76, 174, 76, 155, 91, 155, 103, 156" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=052" alt="Champaign">
+<AREA SHAPE="POLYGON" COORDS="76, 159, 74, 188, 65, 186, 65, 183, 41, 182, 41, 160" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=051" alt="Miami">
+<AREA SHAPE="POLYGON" COORDS="368, 129, 372, 138, 372, 145, 374, 146, 374, 150, 371, 154, 368, 158, 366, 163, 351, 163, 351, 142, 345, 136, 348, 130, 352, 123, 361, 125" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=050" alt="Jefferson">
+<AREA SHAPE="POLYGON" COORDS="345, 139, 352, 142, 350, 163, 309, 163, 310, 156, 315, 148, 315, 140" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=049" alt="Harrison">
+<AREA SHAPE="POLYGON" COORDS="277, 137, 277, 146, 286, 146, 286, 158, 282, 158, 282, 163, 238, 162, 236, 155, 236, 136" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=048" alt="Coshocton">
+<AREA SHAPE="POLYGON" COORDS="236, 127, 234, 157, 212, 157, 212, 154, 189, 153, 189, 144, 196, 144, 197, 127" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=047" alt="Knox">
+<AREA SHAPE="POLYGON" COORDS="189, 145, 188, 164, 150, 165, 150, 154, 144, 154, 144, 138, 164, 138, 164, 141, 174, 141, 174, 145" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=046" alt="Delaware">
+<AREA SHAPE="POLYGON" COORDS="144, 133, 145, 155, 150, 155, 150, 167, 122, 167, 121, 162, 123, 156, 119, 154, 119, 133" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=045" alt="Union">
+<AREA SHAPE="POLYGON" COORDS="120, 133, 118, 156, 77, 153, 77, 133, 81, 133, 81, 129, 88, 129, 88, 132" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=044" alt="Logan">
+<AREA SHAPE="POLYGON" COORDS="78, 133, 76, 159, 41, 159, 40, 143, 49, 143, 49, 135" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=043" alt="Shelby">
+<AREA SHAPE="POLYGON" COORDS="41, 145, 41, 183, 9, 183, 9, 146" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=042" alt="Darke">
+<AREA SHAPE="POLYGON" COORDS="380, 99, 380, 121, 374, 122, 369, 126, 352, 124, 347, 118, 347, 112, 332, 113, 332, 99, 349, 99, 349, 96, 355, 96, 355, 99" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=041" alt="Columbiana">
+<AREA SHAPE="POLYGON" COORDS="346, 112, 346, 119, 351, 122, 352, 127, 348, 127, 344, 139, 316, 138, 316, 127, 311, 127, 311, 119, 318, 119, 325, 112" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=040" alt="Carroll">
+<AREA SHAPE="POLYGON" COORDS="311, 119, 311, 127, 316, 128, 315, 149, 313, 149, 309, 158, 286, 158, 286, 145, 277, 146, 277, 137, 282, 137, 282, 119" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=039" alt="Tuscarawas">
+<AREA SHAPE="POLYGON" COORDS="282, 120, 282, 137, 237, 137, 237, 126, 235, 126, 235, 118" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=038" alt="Holmes">
+<AREA SHAPE="POLYGON" COORDS="198, 115, 196, 145, 173, 145, 174, 141, 164, 141, 164, 135, 171, 135, 171, 120, 178, 120, 178, 115" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=037" alt="Morrow">
+<AREA SHAPE="POLYGON" COORDS="177, 116, 177, 120, 170, 120, 170, 134, 165, 134, 164, 138, 144, 137, 144, 131, 130, 132, 129, 117" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=036" alt="Marion">
+<AREA SHAPE="POLYGON" COORDS="89, 120, 89, 130, 80, 130, 80, 133, 50, 135, 50, 143, 40, 143, 40, 116, 52, 116, 69, 117, 71, 120" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=035" alt="Auglaize">
+<AREA SHAPE="POLYGON" COORDS="40, 115, 40, 146, 9, 146, 11, 113" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=034" alt="Mercer">
+<AREA SHAPE="POLYGON" COORDS="380, 79, 380, 98, 356, 99, 356, 96, 350, 96, 350, 99, 333, 99, 333, 92, 338, 88, 341, 83, 341, 77" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=033" alt="Mahoning">
+<AREA SHAPE="POLYGON" COORDS="332, 91, 332, 113, 322, 113, 318, 120, 283, 120, 283, 97, 304, 97, 304, 91" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=032" alt="Stark">
+<AREA SHAPE="POLYGON" COORDS="283, 98, 283, 118, 243, 118, 243, 91, 284, 91" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=031" alt="Wayne">
+<AREA SHAPE="POLYGON" COORDS="242, 93, 242, 118, 236, 118, 235, 118, 234, 126, 225, 126, 225, 115, 221, 115, 217, 106, 217, 84, 239, 86" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=030" alt="Ashland">
+<AREA SHAPE="POLYGON" COORDS="216, 90, 216, 106, 220, 114, 224, 114, 224, 128, 198, 127, 198, 115, 190, 115, 190, 90" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=029" alt="Richland">
+<AREA SHAPE="POLYGON" COORDS="190, 90, 190, 114, 156, 116, 156, 90" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=028" alt="Crawford">
+<AREA SHAPE="POLYGON" COORDS="156, 90, 156, 116, 124, 117, 122, 101, 122, 96, 127, 92" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=027" alt="Wyandot">
+<AREA SHAPE="POLYGON" COORDS="121, 104, 123, 115, 129, 117, 130, 133, 113, 133, 89, 132, 89, 105" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=026" alt="Hardin">
+<AREA SHAPE="POLYGON" COORDS="90, 104, 88, 121, 71, 121, 71, 118, 54, 118, 54, 117, 44, 117, 44, 105, 50, 102, 70, 102, 70, 98, 89, 98" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=025" alt="Allen">
+<AREA SHAPE="POLYGON" COORDS="44, 89, 45, 97, 49, 97, 49, 104, 44, 104, 44, 115, 40, 115, 40, 113, 10, 112, 10, 90" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=024" alt="Van Wert">
+<AREA SHAPE="POLYGON" COORDS="379, 45, 380, 78, 341, 78, 338, 46" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=023" alt="Trumbull">
+<AREA SHAPE="POLYGON" COORDS="338, 58, 340, 81, 337, 91, 332, 91, 305, 90, 305, 59" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=022" alt="Portage">
+<AREA SHAPE="POLYGON" COORDS="306, 60, 306, 90, 304, 91, 304, 97, 284, 98, 284, 91, 280, 91, 280, 65, 293, 66, 289, 60" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=021" alt="Summit">
+<AREA SHAPE="POLYGON" COORDS="280, 65, 280, 91, 238, 90, 238, 77, 247, 77, 249, 70, 255, 70, 257, 67, 265, 65" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=020" alt="Medina">
+<AREA SHAPE="POLYGON" COORDS="223, 70, 223, 85, 217, 85, 216, 90, 181, 90, 180, 66, 223, 66" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=019" alt="Huron">
+<AREA SHAPE="POLYGON" COORDS="179, 67, 181, 91, 129, 90, 129, 69" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=018" alt="Seneca">
+<AREA SHAPE="POLYGON" COORDS="129, 74, 129, 90, 127, 90, 122, 97, 122, 104, 90, 104, 90, 74" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=017" alt="Hancock">
+<AREA SHAPE="POLYGON" COORDS="89, 76, 89, 96, 80, 98, 69, 98, 70, 102, 50, 102, 50, 98, 45, 98, 45, 91, 48, 91, 49, 75" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=016" alt="Putnam">
+<AREA SHAPE="POLYGON" COORDS="49, 77, 49, 89, 10, 90, 10, 68, 40, 68, 40, 72, 49, 72" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=015" alt="Paulding">
+<AREA SHAPE="POLYGON" COORDS="380, 14, 380, 46, 338, 46, 339, 22" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=014" alt="Ashtabula">
+<AREA SHAPE="POLYGON" COORDS="339, 27, 339, 59, 307, 59, 307, 39, 315, 39, 315, 33, 331, 33, 331, 27" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=013" alt="Geauga">
+<AREA SHAPE="POLYGON" COORDS="339, 15, 339, 27, 332, 27, 332, 34, 315, 34, 315, 39, 298, 39, 298, 35, 311, 24" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=012" alt="Lake">
+<AREA SHAPE="POLYGON" COORDS="297, 34, 297, 40, 307, 40, 306, 60, 289, 60, 292, 64, 264, 65, 264, 60, 255, 60, 255, 45, 275, 47" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=011" alt="Cuyahoga">
+<AREA SHAPE="POLYGON" COORDS="255, 46, 255, 59, 264, 59, 264, 65, 256, 66, 256, 71, 247, 71, 247, 77, 238, 77, 237, 85, 223, 85, 221, 52" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=010" alt="Lorain">
+<AREA SHAPE="POLYGON" COORDS="222, 52, 222, 65, 178, 64, 178, 52, 188, 50, 204, 55" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=009" alt="Erie">
+<AREA SHAPE="POLYGON" COORDS="178, 52, 178, 67, 129, 69, 128, 48, 135, 48, 163, 50, 169, 52" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=008" alt="Sandusky">
+<AREA SHAPE="POLYGON" COORDS="150, 35, 165, 43, 184, 43, 163, 50, 137, 50, 137, 48, 129, 47, 130, 35" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=007" alt="Ottawa">
+<AREA SHAPE="POLYGON" COORDS="129, 35, 129, 75, 90, 75, 90, 54, 104, 48, 106, 43, 117, 35" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=006" alt="Wood">
+<AREA SHAPE="POLYGON" COORDS="90, 53, 90, 74, 60, 75, 58, 54, 49, 53, 49, 47, 88, 46" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=005" alt="Henry">
+<AREA SHAPE="POLYGON" COORDS="57, 52, 59, 76, 49, 76, 49, 71, 40, 71" HREF="(40">
+<AREA SHAPE="POLYGON" COORDS="150, 35, 117, 35, 112, 39, 106, 42, 103, 47, 89, 54, 90, 27, 124, 26" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=003" alt="Lucas">
+<AREA SHAPE="POLYGON" COORDS="89, 28, 89, 47, 44, 47, 44, 28" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=002" alt="Fulton">
+<AREA SHAPE="POLYGON" COORDS="44, 28, 44, 46, 48, 46, 48, 53, 8, 53, 10, 30" HREF="%%scripturl%%?forecast=zandh&state=oh&zone=001" alt="Williams">
+</MAP>
+<img src="%%stateimagesurl%%/oh-zones.gif" width="388" height="319" alt="OH" border="0" usemap="#FrontPageMap0">
+
+<-end image map->

@@ -1,0 +1,12 @@
+001=Litchfield
+002=Hartford
+003=Tolland
+004=Windham
+005=Northern Fairfield
+006=Northern New Haven
+007=Northern Middlesex
+008=Northern New London
+009=Southern Fairfield
+010=Southern New Haven
+011=Southern Middlesex
+012=Southern New London 

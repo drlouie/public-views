@@ -1,0 +1,34 @@
+LTAG|Adana / Incirlik
+LTAF|Adana / Sakirpasa
+LTAH|Afyon
+LTBT|Akhisar
+LTAC|Ankara / Esenboga
+LTAD|Ankara / Etimesgut
+LTAI|Antalya
+LTBF|Balikesir
+LTBG|Bandirma
+LTCJ|Batman
+LTBE|Bursa
+LTBU|Corlu
+LTBS|Dalaman
+LTCC|Diyarbakir
+LTCA|Elazig
+LTCE|Erzurum
+LTBI|Eskisehir
+LTAJ|Gaziantep
+LTBA|Istanbul / Ataturk
+LTBJ|Izmir / Adnan Menderes
+LTBL|Izmir / Cigli
+LTAU|Kayseri / Erkilet
+LTAN|Konya
+LTAT|Malatya / Erhac
+LTAP|Merzifon
+LTAE|Murted Tur-Afb 
+LTCK|Mus Tur-Afb 
+LTAQ|Samsun
+LTAR|Sivas
+LTAV|Sivrihisar
+LTBQ|Topel Tur-Afb 
+LTCG|Trabzon
+LTCH|Urfa
+LTCI|Van

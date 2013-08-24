@@ -1,0 +1,144 @@
+albuquerque|albuquerque metro|nm
+allentown|allentown|pa
+amarillo|potter|tx
+anchorage|anchorage|ak
+asheville|asheville|nc
+atlanta|dekalb|ga
+atlantic city|atlantic city|nj
+augusta|richmond|ga
+bakersfield|bakersfield|ca
+baltimore|baltimore|md
+baton rouge|baton rouge|la
+beaumont|beaumont|tx
+billings|yellowstone|mt
+birmingham|jefferson|al
+bismarck|bismarck|nd
+blacksburg|blacksburg|va
+boise|boise|id
+boston|boston|ma
+bozeman|bozeman|mt
+bronx|bronx|ny
+brooklyn|brooklyn|ny
+buffalo|erie|ny
+casper|natrona|wy
+charlotte|charlotte|nc
+chattanooga|hamilton|tn
+cheyenne|cheyenne foothills|wy
+chicago|cook|il
+cincinnati|cincinnati|oh
+columbia|columbia|sc
+columbus|columbus|oh
+corpus christi|nueces|tx
+dallas|dallas|tx
+dayton|dayton|oh
+dc|washington|md
+d.c.|washington|md
+denver|denver metropolitan|co
+des moines|polk|ia
+detroit|detroit|mi
+duluth|duluth|mn
+el paso|el paso|tx
+eugene|eugene|or
+fairbanks|fairbanks|ak
+fayetteville|fayetteville|nc
+flagstaff|flagstaff|az
+flint|flint|mi
+fort worth|ft worth|tx
+fresno|fresno|ca
+ft worth|ft worth|tx
+ft. worth|ft worth|tx
+grand rapids|kent|mi
+great falls|great falls|mt
+green bay|brown|wi
+greensboro|greensboro|nc
+harrisburg|harrisburg|pa
+hartford|hartford|ct
+honolulu|oahu|hi
+houston|harris|tx
+indianapolis|marion|in
+jacksonville|nassau|fl
+jackson|hinds|ms
+kalamazoo|kalamazoo|mi
+kansas city|jackson|mo
+knoxville|knox|tn
+lansing|lansing|mi
+las vegas|las vegas valley|nv
+lassen park|lassen park|ca
+lexington|fayette|ky
+little rock|pulaski|ar
+long island|new york|ny
+los angeles|los angeles|ca
+louisville|jefferson|ky
+lubbock|lubbock|tx
+macon|bibb|ga
+madison|madison|wi
+manhattan|manhattan|ny
+memphis|shelby|tn
+miami|dade metropolitan|fl
+milwaukee|milwaukee|wi
+minneapolis|minneapolis|mn
+missoula|missoula|mt
+mobile|mobile|al
+montgomery|montgomery|al
+nashville|davidson|tn
+new haven|southern new haven|ct
+new orleans|plaquemines|la
+new york city|new york|ny
+new york|new york|ny
+newport news|newport news|va
+north platte|north platte|ne
+oklahoma city|oklahoma city|ok
+olympia|olympia|wa
+omaha|douglas|ne
+orlando|orange|fl
+pensacola|escambia|fl
+peoria|peoria|il
+philadelphia|philadelphia|pa
+phoenix|phoenix|az
+pittsburgh|metropolitan pittsburgh|pa
+poughkeepsie|poughkeepsie|ny
+providence|providence|ri
+queens|queens|ny
+raleigh|wake|nc
+rapid city|pennington|sd
+reno|greater reno|nv
+roanoke|roanoke|va
+rochester|rochester|ny
+rockford|winnebago|il
+sacramento|southern sacramento|ca
+saginaw|saginaw|mi
+saint louis|st louis city|mo
+saint paul|st paul|mn
+salt lake city|salt lake city|ut
+salt lake|salt lake city|ut
+san antonio|bexar|tx
+san diego|san diego|ca
+san francisco|san francisco|ca
+savannah|inland chatham|ga
+scranton|scranton|pa
+;seattle|seattle|wa
+shreveport|caddo|la
+sioux falls|lincoln|sd
+spokane|spokane area|wa
+st louis|st louis city|mo
+st paul|st paul|mn
+st. louis|st louis city|mo
+st. paul|st paul|mn
+stockton|stockton|ca
+syracuse|syracuse|ny
+tampa|hillsborough|fl
+topeka|shawnee|ks
+tucson|tucson|az
+tulsa|tulsa|ok
+tuscaloosa|tuscaloosa|al
+w palm beach|palm beach|fl
+w. palm beach|palm beach|fl
+washington|washington|md
+washington dc|washington|md
+washington d.c.
+waterbury|waterbury|ct
+west palm beach|palm beach|fl
+wichita|sedgwick|ks
+worcester|southern worcester|ma
+yellowstone|yellowstone|wy
+yosemite|yosemite|ca

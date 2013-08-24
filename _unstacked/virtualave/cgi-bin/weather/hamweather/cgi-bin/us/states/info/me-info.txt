@@ -1,0 +1,37 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="102, 223, 7" HREF="%%scripturl%%?forecast=zandh&state=me&place=augusta">
+<AREA SHAPE="POLYGON" COORDS="84, 67, 86, 57, 139, 2, 150, 5, 152, 17, 167, 25, 169, 70" HREF="%%scripturl%%?forecast=zandh&state=me&zone=001" alt="Northwest Aroostook">
+<AREA SHAPE="POLYGON" COORDS="227, 202, 297, 180, 303, 192, 285, 203, 232, 219" HREF="%%scripturl%%?forecast=zandh&state=me&zone=030" alt="Coastal Washington">
+<AREA SHAPE="POLYGON" COORDS="169, 220, 173, 229, 203, 235, 231, 219, 226, 201, 170, 214, 173, 229" HREF="%%scripturl%%?forecast=zandh&state=me&zone=029" alt="Coastal Hancock">
+<AREA SHAPE="POLYGON" COORDS="141, 223, 170, 217, 155, 232, 146, 231" HREF="%%scripturl%%?forecast=zandh&state=me&zone=028" alt="Coastal Waldo">
+<AREA SHAPE="POLYGON" COORDS="122, 230, 139, 225, 144, 232, 154, 234, 140, 254, 137, 251, 134, 235" HREF="%%scripturl%%?forecast=zandh&state=me&zone=027" alt="Knox">
+<AREA SHAPE="POLYGON" COORDS="123, 229, 125, 235, 133, 236, 134, 251, 113, 261, 106, 265, 101, 248, 105, 237, 113, 238, 113, 231" HREF="%%scripturl%%?forecast=zandh&state=me&zone=026" alt="Lincoln">
+<AREA SHAPE="POLYGON" COORDS="83, 252, 89, 242, 103, 239, 100, 247, 97, 255" HREF="%%scripturl%%?forecast=zandh&state=me&zone=025" alt="Sagadahoc">
+<AREA SHAPE="POLYGON" COORDS="54, 278, 83, 251, 98, 253, 104, 263, 97, 269, 62, 281" HREF="%%scripturl%%?forecast=zandh&state=me&zone=024" alt="Coastal Cumberland">
+<AREA SHAPE="POLYGON" COORDS="168, 200, 169, 207, 171, 215, 160, 222, 155, 233, 144, 230, 140, 223, 131, 226, 124, 228, 122, 224, 130, 208, 124, 202, 134, 196, 141, 201, 147, 204" HREF="%%scripturl%%?forecast=zandh&state=me&zone=022" alt="Interior Waldo">
+<AREA SHAPE="POLYGON" COORDS="123, 200, 128, 210, 119, 230, 114, 229, 110, 235, 110, 240, 97, 237, 91, 242, 87, 240, 77, 216, 86, 207, 99, 208, 114, 207, 110, 202" HREF="%%scripturl%%?forecast=zandh&state=me&zone=021" alt="Kennebec">
+<AREA SHAPE="POLYGON" COORDS="70, 216, 78, 218, 87, 240, 84, 252, 77, 256, 64, 247, 56, 252, 52, 247" HREF="%%scripturl%%?forecast=zandh&state=me&zone=020" alt="Adroscoggin">
+<AREA SHAPE="POLYGON" COORDS="51, 280, 77, 256, 63, 247, 55, 252, 51, 244, 43, 240, 25, 244, 33, 252, 28, 262, 37, 266, 42, 274, 51, 275" HREF="%%scripturl%%?forecast=zandh&state=me&zone=019" alt="Interior Cumberland">
+<AREA SHAPE="POLYGON" COORDS="230, 135, 250, 130, 270, 138, 297, 181, 226, 201, 223, 183, 232, 181, 224, 158, 232, 157, 225, 133, 250, 130, 250, 131" HREF="%%scripturl%%?forecast=zandh&state=me&zone=017" alt="Interior Washington">
+<AREA SHAPE="POLYGON" COORDS="208, 162, 226, 159, 229, 181, 220, 183, 226, 201, 177, 212, 169, 200, 196, 193, 194, 181, 202, 180, 200, 172, 207, 172" HREF="%%scripturl%%?forecast=zandh&state=me&zone=016" alt="Interior Hancock">
+<AREA SHAPE="POLYGON" COORDS="132, 176, 207, 161, 208, 170, 201, 172, 201, 178, 194, 181, 195, 195, 145, 202, 140, 197" HREF="%%scripturl%%?forecast=zandh&state=me&zone=015" alt="Southern Penobscot">
+<AREA SHAPE="POLYGON" COORDS="131, 175, 138, 199, 132, 196, 126, 200, 110, 200, 116, 206, 103, 206, 99, 209, 92, 206, 81, 189, 115, 178" HREF="%%scripturl%%?forecast=zandh&state=me&zone=014" alt="Southern Somerset">
+<AREA SHAPE="POLYGON" COORDS="83, 190, 85, 197, 90, 207, 81, 211, 83, 215, 72, 216, 63, 209, 51, 206" HREF="%%scripturl%%?forecast=zandh&state=me&zone=013" alt="Southern Franklin">
+<AREA SHAPE="POLYGON" COORDS="167, 142, 175, 161, 169, 162, 171, 170, 232, 156, 228, 131" HREF="%%scripturl%%?forecast=zandh&state=me&zone=011" alt="Central Penobscot">
+<AREA SHAPE="POLYGON" COORDS="116, 178, 171, 169, 168, 163, 173, 160, 167, 142, 161, 141, 162, 133, 105, 109, 108, 121, 99, 126, 108, 133, 103, 137" HREF="%%scripturl%%?forecast=zandh&state=me&zone=010" alt="Southern Piscataquis">
+<AREA SHAPE="POLYGON" COORDS="66, 108, 48, 133, 56, 169, 64, 170, 66, 171, 73, 171, 78, 184, 73, 184, 77, 191, 82, 189, 115, 177, 102, 138, 107, 133, 98, 125, 102, 123, 107, 122, 109, 117, 109, 113, 104, 108" HREF="%%scripturl%%?forecast=zandh&state=me&zone=009" alt="Central Somerset">
+<AREA SHAPE="POLYGON" COORDS="48, 207, 77, 190, 74, 184, 78, 181, 73, 169, 64, 170, 63, 168, 55, 168, 46, 132, 35, 142, 39, 150, 27, 148, 27, 158, 23, 158, 31, 178, 26, 180, 33, 201, 43, 197" HREF="%%scripturl%%?forecast=zandh&state=me&zone=008" alt="Northern Franklin">
+<AREA SHAPE="POLYGON" COORDS="52, 279, 63, 283, 38, 313, 29, 311, 27, 305" HREF="%%scripturl%%?forecast=zandh&state=me&zone=023" alt="Coastal York">
+<AREA SHAPE="POLYGON" COORDS="17, 267, 31, 262, 37, 265, 40, 273, 51, 275, 27, 305, 17, 291" HREF="%%scripturl%%?forecast=zandh&state=me&zone=018" alt="Interior York">
+<AREA SHAPE="POLYGON" COORDS="48, 207, 64, 209, 69, 216, 67, 224, 52, 245, 46, 239, 24, 244, 27, 248, 33, 251, 30, 262, 17, 264, 15, 224" HREF="%%scripturl%%?forecast=zandh&state=me&zone=012" alt="Southern Oxford">
+<AREA SHAPE="POLYGON" COORDS="7, 158, 17, 154, 26, 161, 31, 176, 26, 178, 32, 199, 42, 196, 48, 205, 15, 222" HREF="%%scripturl%%?forecast=zandh&state=me&zone=007" alt="Northern Oxford">
+<AREA SHAPE="POLYGON" COORDS="196, 83, 244, 80, 243, 131, 198, 137, 196, 78" HREF="%%scripturl%%?forecast=zandh&state=me&zone=006" alt="Southeast Aroostook">
+<AREA SHAPE="POLYGON" COORDS="170, 82, 169, 128, 161, 136, 161, 143, 199, 137, 197, 81" HREF="%%scripturl%%?forecast=zandh&state=me&zone=006" alt="Southeast Aroostook">
+<AREA SHAPE="POLYGON" COORDS="107, 109, 163, 134, 169, 129, 170, 68, 106, 67" HREF="%%scripturl%%?forecast=zandh&state=me&zone=004" alt="Northern Piscataquis">
+<AREA SHAPE="POLYGON" COORDS="84, 68, 108, 66, 106, 107, 64, 105, 67, 87" HREF="%%scripturl%%?forecast=zandh&state=me&zone=003" alt="Northern Somerset">
+<AREA SHAPE="POLYGON" COORDS="167, 23, 171, 79, 244, 80, 245, 32, 204, 10" HREF="%%scripturl%%?forecast=zandh&state=me&zone=002" alt="Northeast Aroostook">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="315" alt="ME" src="%%stateimagesurl%%/me-zones.gif" width="302">
+
+<-end image map->

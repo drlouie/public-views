@@ -1,0 +1,11 @@
+
+fort liard=fpcn11.wnt.htm--deh cho liard valley|0
+fort simpson=fpcn11.wnt.htm--deh cho liard valley|0
+fort smith=fpcn11.wnt.htm--|0
+hay river=fpcn11.wnt.htm--|0
+inuvik=fpcn12.wnt.htm--|0
+norman wells=fpcn12.wnt.htm--|0
+paulatuk=fpcn12.wnt.htm--|0
+sachs harbour=fpcn12.wnt.htm--|0
+tuktoyaktuk=fpcn12.wnt.htm--|0
+yellowknife=fpcn11.wnt.htm--|0|CYZF|2

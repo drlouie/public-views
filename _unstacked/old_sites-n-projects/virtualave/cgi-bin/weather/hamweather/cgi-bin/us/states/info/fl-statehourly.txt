@@ -1,0 +1,11 @@
+Daytona Beach|Daytona Beach|41
+Ft Myers|Ft Myers|65
+Gainesville|Gainesville|36
+Jacksonville|Jacksonville|25
+Melbourne|Melbourne|48
+Miami|Miami|74
+Orlando|Orlando|45
+Sarasota|Sarasota|60
+Tallahassee|Tallahassee|17
+Tampa|Tampa|51
+W Palm Beach|West Palm Beach|68

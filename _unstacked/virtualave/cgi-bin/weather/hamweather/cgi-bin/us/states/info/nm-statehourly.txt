@@ -1,0 +1,10 @@
+Alamogordo|Alamogordo|24
+Albuquerque|Albuquerque|9
+Clayton|Clayton|7
+Deming|Deming|31
+Farmington|Farmington|1
+Gallup|Gallup|8
+Grants|Grants|8
+Roswell|Roswell|19
+Santa Fe|Santa Fe|4
+Tucumcari|Tucumcari|13

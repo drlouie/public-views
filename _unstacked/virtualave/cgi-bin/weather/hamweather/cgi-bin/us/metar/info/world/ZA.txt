@@ -1,0 +1,14 @@
+FABM|Bethlehem Airport
+FABL|Bloemfontein J. B. M. Hertzog 
+FACT|Cape Town D. F. Malan 
+FADN|Durban Louis Botha 
+FAEL|East London
+FAGG|George Airport
+FAJS|Jan Smuts
+FALW|Langebaanweg
+FALT|Lichtenburg
+FAPB|Pietersburg
+FAPE|Port Elizabeth
+FAPR|Pretoria
+FASB|Springbok
+FAUP|Upington

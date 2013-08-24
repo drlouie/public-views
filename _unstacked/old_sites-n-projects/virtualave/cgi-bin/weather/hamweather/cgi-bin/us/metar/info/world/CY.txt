@@ -1,0 +1,4 @@
+LCRA|Akrotiri
+LCEN|Ercan
+LCLK|Larnaca Airport
+LCPH|Paphos Airport

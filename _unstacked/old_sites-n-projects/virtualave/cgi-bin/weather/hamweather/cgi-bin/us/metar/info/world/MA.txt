@@ -1,0 +1,9 @@
+GMAA|Agadir
+GMTA|Al Hoceima
+GMFF|Fes-Sais
+GMMX|Marrakech
+GMMN|Nouasseur
+GMFO|Oujda
+GMME|Rabat-Sale
+GMTT|Tanger Aerodrome 
+GMTN|Tetuan / Sania Ramel

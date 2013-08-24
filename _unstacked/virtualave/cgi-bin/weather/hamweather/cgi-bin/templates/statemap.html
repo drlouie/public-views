@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>%%hwvtitle%%</title><style>A:hover { color:red } </style>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body %%hwvbodyargs%%>
+
+%%hwi=header%%
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top" width="1%">
+<br>
+%%hwi=nav2%%
+</td><td valign="top" width="12">&nbsp;</td><td valign="top">
+
+%%hwi=form1%%
+
+<table border="0">
+      <tr>
+
+        <td width="50%" rowspan="2">
+%%imagemap%% 
+</td>
+        <td width="50%">
+Select a location from the<br>
+        Map on the Left for Forecast.<br>
+        <br>
+        Or Select a New Region on the <br>
+        Map Below.</td>
+      </tr>
+      <tr>
+        <td width="50%">
+<MAP NAME="RegionMap">
+<AREA SHAPE="POLYGON" COORDS="76, 11, 72, 40, 60, 39, 55, 35, 15, 26, 23, 1" HREF="%%getstateurl%%?state=northwest">
+<AREA SHAPE="POLYGON" COORDS="59, 89, 75, 95, 84, 106, 78, 111, 67, 105, 56, 98" HREF="%%getstateurl%%?state=hi">
+<AREA SHAPE="POLYGON" COORDS="43, 89, 50, 106, 65, 117, 61, 119, 52, 110, 40, 110, 17, 131, 7, 128, 30, 115, 21, 107, 24, 89, 32, 85" HREF="%%getstateurl%%?state=ak">
+<AREA SHAPE="POLYGON" COORDS="57, 42, 50, 78, 46, 77, 33, 68, 26, 67, 17, 56, 12, 31, 13, 28, 53, 35" HREF="%%getstateurl%%?state=southwest">
+<AREA SHAPE="POLYGON" COORDS="71, 41, 77, 41, 80, 47, 109, 43, 119, 59, 111, 71, 113, 81, 118, 87, 117, 89, 104, 87, 91, 94, 91, 102, 86, 101, 78, 87, 72, 89, 60, 77, 50, 78, 56, 40" HREF="%%getstateurl%%?state=southcentral">
+<AREA SHAPE="POLYGON" COORDS="138, 36, 134, 37, 134, 30, 129, 23, 125, 17, 118, 17, 113, 17, 112, 13, 77, 9, 71, 41, 77, 41, 77, 47, 108, 43, 119, 61, 137, 58, 138, 49, 143, 41" HREF="%%getstateurl%%?state=northcentral">
+<AREA SHAPE="POLYGON" COORDS="143, 43, 155, 45, 159, 56, 155, 66, 147, 75, 146, 81, 153, 97, 150, 100, 146, 97, 140, 85, 135, 86, 126, 82, 118, 85, 112, 82, 111, 71, 116, 62, 137, 57, 137, 49" HREF="%%getstateurl%%?state=southeast">
+<AREA SHAPE="POLYGON" COORDS="139, 35, 143, 30, 143, 28, 150, 27, 151, 24, 160, 19, 164, 12, 169, 4, 174, 14, 170, 18, 166, 23, 169, 28, 166, 31, 158, 39, 157, 47, 152, 42, 143, 42" HREF="%%getstateurl%%?state=northeast">
+</MAP>
+<img ismap usemap="#RegionMap" border="0" alt="Region Map" src="%%stateimagesurl%%/ussmallmap.gif">
+
+ </td>
+      </tr>
+    </table>
+
+</td>
+  </tr>
+</table>
+
+%%hwi=footer%%
+</body></html>

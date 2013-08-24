@@ -1,0 +1,9 @@
+Beckley|Beckley|35
+Charleston|Charleston|15
+Clarksburg|Clarksburg|31
+Elkins|Elkins|47
+Huntington|Huntington|6
+Lewisburg|Lewisburg|45
+Martinsburg|Martinsburg|52
+Parkersburg|Parkersburg|9
+Wheeling|Wheeling|3

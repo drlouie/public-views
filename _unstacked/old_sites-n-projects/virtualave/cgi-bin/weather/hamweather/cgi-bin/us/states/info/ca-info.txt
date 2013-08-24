@@ -1,0 +1,91 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<area shape="polygon" coords="18, 4, 24, 36, 18, 63, 24, 71, 19, 71, 6, 56, 14, 32, 10, 5" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=001" alt="Redwood Coast">
+<area shape="polygon" coords="26, 73, 34, 84, 34, 95, 41, 113, 35, 113, 28, 105, 25, 93, 20, 73" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=002" alt="Mendocino Coast">
+<area shape="polygon" coords="19, 5, 25, 32, 20, 62, 26, 71, 43, 72, 34, 37, 29, 18, 34, 5" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=003" alt="North Coast Interior">
+<area shape="polygon" coords="51, 88, 33, 26, 55, 37, 67, 26, 70, 32, 60, 51, 52, 61, 55, 87" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=004" alt="Upper Trinity River">
+<area shape="polygon" coords="35, 114, 58, 110, 72, 133, 73, 145, 65, 145" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=005" alt="Sonoma and Marin Counties">
+<area shape="polygon" coords="67, 146, 76, 146, 77, 152, 66, 152" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=006" alt="San Francisco">
+<area shape="polygon" coords="85, 159, 75, 138, 99, 137, 101, 156" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=007" alt="Alameda and Contra Costa Counties">
+<area shape="polygon" coords="81, 158, 83, 165, 99, 174, 113, 175, 112, 168, 106, 168, 102, 157" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=008" alt="Santa Clara County">
+<area shape="polygon" coords="96, 176, 98, 191, 117, 213, 106, 213, 84, 188" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=009" alt="Coastal Monterey County">
+<area shape="polygon" coords="119, 213, 145, 213, 131, 201, 135, 192, 113, 174, 102, 175, 99, 182, 101, 188" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=010" alt="Salinas Valley/Interior Monterey County/San Benito County">
+<area shape="polygon" coords="63, 50, 95, 50, 95, 32, 71, 32" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=013" alt="Shasta Lake Area / Northern Shasta County">
+<area shape="polygon" coords="96, 49, 108, 49, 107, 32, 97, 32" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=014" alt="Burney Basin / Eastern Shasta County">
+<area shape="polygon" coords="69, 50, 64, 60, 64, 78, 93, 75, 83, 51" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=015" alt="Northern Sacramento Valley">
+<area shape="polygon" coords="65, 79, 66, 98, 69, 98, 76, 110, 101, 108, 110, 105, 94, 79" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=016" alt="Central Sacramento Valley">
+<area shape="polygon" coords="75, 111, 84, 122, 83, 127, 112, 130, 112, 137, 128, 134, 112, 109" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=017" alt="Southern Sacramento Valley">
+<area shape="polygon" coords="82, 128, 80, 135, 101, 136, 101, 144, 111, 137, 111, 130" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=018" alt="Carniquez Strait and Delta">
+<area shape="polygon" coords="129, 136, 143, 148, 113, 167, 108, 164, 103, 156, 103, 146, 113, 139" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=019" alt="Northern San Joaquin Valley">
+<area shape="polygon" coords="223, 213, 250, 213, 211, 158, 196, 158" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=026" alt="Owens Valley and Adjacent Eastern Sierra Slopes">
+<area shape="polygon" coords="252, 214, 301, 214, 227, 158, 212, 158" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=027" alt="Death Valley National Park">
+<area shape="polygon" coords="281, 273, 277, 259, 262, 259, 254, 248, 234, 247, 234, 216, 302, 214, 334, 239, 334, 256, 339, 263, 330, 272" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=028" alt="San Bernadino County Deserts">
+<area shape="polygon" coords="335, 244, 354, 266, 343, 272, 331, 273, 340, 260, 335, 256" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=029" alt="San Bernardino County-Upper Colorado River Valley">
+<area shape="polygon" coords="280, 275, 288, 280, 312, 281, 311, 274" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=030" alt="Joshua Tree National Park/JTNP/">
+<area shape="polygon" coords="286, 282, 287, 294, 327, 295, 327, 274, 313, 275, 313, 282" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=031" alt="Lower Colorado River Valley CA">
+<area shape="polygon" coords="327, 274, 328, 319, 341, 317, 340, 307, 334, 307, 334, 295, 341, 292, 342, 275" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=032" alt="Riverside County/Eastern Deserts">
+<area shape="polygon" coords="287, 295, 287, 323, 327, 319, 327, 297" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=033" alt="Imperial County">
+<area shape="polygon" coords="109, 214, 119, 214, 129, 227, 129, 231, 140, 242, 130, 243" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=034" alt="San Luis Obispo County Central Coast">
+<area shape="polygon" coords="130, 244, 144, 243, 143, 251, 140, 260, 132, 256" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=035" alt="Santa Barbara County Central Coast">
+<area shape="polygon" coords="145, 248, 164, 251, 144, 253" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=036" alt="Santa Ynez Valley">
+<area shape="polygon" coords="120, 213, 130, 227, 152, 233, 162, 240, 172, 245, 170, 237, 143, 215" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=037" alt="San Luis Obispo County Interior Valleys">
+<area shape="polygon" coords="149, 239, 154, 244, 171, 246, 159, 239" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=038" alt="Cuyama Valley">
+<area shape="polygon" coords="142, 256, 173, 259, 171, 264, 140, 260" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=039" alt="Santa Barbara County South Coast">
+<area shape="polygon" coords="174, 259, 191, 269, 187, 274, 172, 265" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=040" alt="Ventura County Coasts">
+<area shape="polygon" coords="205, 271, 208, 281, 205, 285, 211, 287, 223, 276" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=041" alt="Los Angeles County Coasts including Downtown Los Angeles">
+<area shape="polygon" coords="216, 284, 234, 296, 239, 292, 220, 280" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=042" alt="Orange County Coastal Plain">
+<area shape="polygon" coords="236, 297, 245, 308, 247, 324, 253, 324, 251, 308, 240, 294" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=043" alt="San Diego County Coasts">
+<area shape="polygon" coords="193, 269, 200, 268, 199, 263, 174, 255, 173, 258" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=045" alt="Ventura County Coastal Valleys">
+<area shape="polygon" coords="173, 254, 199, 262, 197, 258" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=044" alt="Ventura County Interior Valleys">
+<area shape="polygon" coords="188, 274, 204, 274, 205, 269, 192, 269" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=046" alt="Santa Monica Mountains Recreational Area">
+<area shape="polygon" coords="201, 267, 224, 276, 228, 276, 233, 265, 198, 258" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=047" alt="Los Angeles County Valleys">
+<area shape="polygon" coords="232, 278, 238, 273, 248, 273, 248, 263, 234, 264, 228, 276" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=048" alt="San Bernardino County Valley -The Inland Empire">
+<area shape="polygon" coords="232, 278, 242, 286, 242, 292, 246, 294, 265, 294, 249, 275" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=049" alt="Riverside County Valley -The Inland Empire">
+<area shape="polygon" coords="245, 293, 258, 303, 263, 323, 254, 323, 251, 307" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=050" alt="San Diego County Valleys">
+<area shape="polygon" coords="130, 229, 143, 241, 155, 236" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=051" alt="San Luis Obispo County Mountains">
+<area shape="polygon" coords="149, 240, 154, 244, 172, 248, 171, 257, 144, 256, 165, 252, 147, 248" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=052" alt="Santa Barbara County Mountains">
+<area shape="polygon" coords="172, 253, 195, 256, 191, 248, 172, 244" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=053" alt="Ventura County Mountains">
+<area shape="polygon" coords="191, 248, 197, 258, 233, 264, 232, 255, 198, 248" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=054" alt="Los Angeles County Mountains excluding the Santa Monica Range">
+<area shape="polygon" coords="233, 262, 249, 263, 250, 274, 271, 273, 271, 270, 246, 254, 233, 254" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=055" alt="San Bernardino County Mountains">
+<area shape="polygon" coords="250, 275, 255, 281, 271, 280, 271, 275" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=056" alt="Riverside County Mountains">
+<area shape="polygon" coords="259, 286, 264, 293, 279, 293, 271, 287" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=056" alt="Riverside County Mountains">
+<area shape="polygon" coords="221, 279, 240, 290, 241, 284, 231, 277" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=057" alt="Santa Ana Mountains and Foothills">
+<area shape="polygon" coords="285, 323, 279, 312, 279, 302, 286, 295, 249, 295, 259, 304, 263, 324" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=058" alt="San Diego County Mountains">
+<area shape="polygon" coords="202, 248, 233, 253, 233, 247" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=059" alt="Antelope Valley">
+<area shape="polygon" coords="234, 253, 245, 253, 272, 270, 272, 273, 280, 272, 277, 259, 261, 258, 253, 248, 235, 248" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=060" alt="Apple and Yucca Valleys">
+<area shape="polygon" coords="260, 286, 273, 286, 280, 293, 287, 293, 288, 279, 279, 274, 272, 275, 272, 279, 256, 281" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=061" alt="Coachella Valley">
+<area shape="polygon" coords="286, 296, 280, 302, 280, 312, 285, 321" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=062" alt="San Diego County Deserts">
+<area shape="polygon" coords="61, 51, 53, 61, 55, 88, 51, 88, 51, 97, 65, 97, 64, 60, 70, 50" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=063" alt="Mountains Southwestern Shasta County to Northern Lake County">
+<area shape="polygon" coords="51, 98, 54, 109, 63, 117, 74, 112, 68, 98" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=064" alt="Clear Lake/Southern Lake County">
+<area shape="polygon" coords="65, 116, 76, 132, 83, 123, 75, 115" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=065" alt="Napa County">
+<area shape="polygon" coords="84, 51, 104, 93, 113, 87, 93, 50" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=066" alt="Northeast Foothills/Sacramento Valley">
+<area shape="polygon" coords="145, 147, 154, 145, 154, 133, 138, 122, 114, 89, 106, 94, 117, 110, 131, 133" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=067" alt="Motherlode">
+<area shape="polygon" coords="115, 86, 125, 79, 123, 64, 118, 64, 118, 56, 109, 55, 109, 49, 96, 51, 98, 57" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=068" alt="Western Plumas County/Lassen Park">
+<area shape="polygon" coords="154, 132, 169, 132, 167, 126, 142, 106, 137, 88, 125, 81, 116, 89, 139, 120" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=069" alt="West Slope Northern Sierra Nevada">
+<area shape="polygon" coords="139, 90, 153, 90, 153, 32, 109, 32, 111, 54, 119, 54, 120, 62, 125, 63, 127, 80" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=071" alt="Lassen-Eastern Plumas-Eastern Sierra Counties">
+<area shape="polygon" coords="139, 90, 145, 106, 169, 126, 167, 115, 154, 105, 154, 89" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=072" alt="Greater Lake Tahoe Area">
+<area shape="polygon" coords="168, 116, 170, 133, 181, 146, 193, 156, 225, 156" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=073" alt="Mono">
+<area shape="polygon" coords="74, 168, 82, 165, 99, 174, 92, 178" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=074" alt="Santa Cruz County">
+<area shape="polygon" coords="73, 167, 82, 162, 79, 153, 67, 155" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=075" alt="San Mateo County">
+<area shape="polygon" coords="42, 111, 54, 111, 50, 100, 49, 90, 44, 73, 28, 73, 35, 83, 35, 95" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=076" alt="Mendocino Interior">
+<area shape="polygon" coords="67, 26, 60, 5, 35, 6, 31, 18, 35, 25, 54, 35" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=080" alt="Western Siskiyou County">
+<area shape="polygon" coords="68, 25, 79, 24, 79, 5, 61, 6" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=081" alt="Central Siskiyou County">
+<area shape="polygon" coords="72, 31, 95, 31, 92, 25, 70, 25" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=082" alt="South Central Siskiyou County">
+<area shape="polygon" coords="96, 31, 105, 31, 105, 13, 87, 12, 87, 5, 80, 5, 80, 23, 92, 24" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=083" alt="North Central and Southeast Siskiyou County">
+<area shape="polygon" coords="87, 5, 87, 12, 112, 12, 112, 5" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=084" alt="Northeast Siskiyou and Northwest Modoc Counties">
+<area shape="polygon" coords="107, 31, 152, 31, 145, 5, 113, 5, 112, 12, 106, 13" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=085" alt="Modoc County">
+<area shape="polygon" coords="153, 30, 145, 5, 154, 4" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=070" alt="Surprise Valley California">
+<area shape="polygon" coords="127, 160, 148, 188, 164, 187, 169, 192, 156, 193, 155, 201, 143, 209, 134, 200, 137, 191, 114, 175, 115, 167" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=089" alt="West-Central San Joaquin Valley">
+<area shape="polygon" coords="141, 152, 169, 188, 164, 186, 149, 187, 130, 160" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=090" alt="East-Central San Joaquin Valley">
+<area shape="polygon" coords="167, 193, 169, 214, 183, 243, 171, 234, 178, 243, 149, 217, 146, 209, 158, 195" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=091" alt="Southwestern San Joaquin Valley">
+<area shape="polygon" coords="186, 244, 197, 246, 186, 215, 178, 189, 168, 190, 172, 213" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=092" alt="Southeastern San Joaquin Valley">
+<area shape="polygon" coords="170, 187, 187, 183, 155, 147, 142, 150" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=093" alt="Mariposa, Madera, and Fresno County Foothills">
+<area shape="polygon" coords="179, 186, 190, 184, 200, 215, 187, 214" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=094" alt="Tulare County Foothills">
+<area shape="polygon" coords="200, 245, 223, 238, 223, 214, 189, 216" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=095" alt="Kern County Mountains">
+<area shape="polygon" coords="188, 181, 206, 181, 193, 156, 168, 132, 156, 133, 156, 147" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=096" alt="Sierra Nevada from Yosemite to Kings Canyon">
+<area shape="polygon" coords="191, 182, 202, 214, 222, 213, 206, 181" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=097" alt="Tulare County Mountains">
+<area shape="polygon" coords="206, 248, 234, 246, 234, 225, 224, 228, 224, 239" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=099" alt="Southeastern Kern County Desert">
+<area shape="polygon" coords="224, 215, 225, 227, 233, 223, 233, 215" href="%%scripturl%%?user=%%user%%&theme=%%theme%%&forecast=zone&state=CA&zone=098" alt="Indian Wells Valley">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="329" alt="CA" src="%%stateimagesurl%%/ca-zones.gif" width="356">
+<-end image map->

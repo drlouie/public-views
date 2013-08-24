@@ -1,0 +1,79 @@
+KAIT|Aitkin NDB Automatic Weather Observing / Reporting System 
+KAEL|Albert Lea Automatic Weather Observing / Reporting System 
+KAXN|Alexandria, Chandler Field
+KAQP|Appleton, Appleton Municipal Airport
+KAUM|Austin Municipal
+KBDE|Baudette, Baudette International Airport
+KBJI|Bemidji
+KBBB|Benson Municipal
+KFOZ|Bigfork, Bigfork Municipal Airport
+KBRD|Brainerd, Brainerd-Crow Wing County Regional Airport
+KCBG|Cambridge Municipal
+KCOQ|Cloquet Automatic Weather Observing / Reporting System
+KCQM|Cook, Cook Municipal Airport
+KCDD|Crane Lake, Scotts Seaplane Base
+KCKN|Crookston Municipal Field
+KDTL|Detroit Lakes Automatic Weather Observing / Reporting System
+KTOB|Dodge Center, Dodge Center Airport
+KDLH|Duluth, Duluth International Airport
+KDYT|Duluth, Sky Harbor Airport
+KELO|Ely Municipal Automatic Weather Observing / Reporting System
+KEVM|Eveleth Municipal Automatic Weather Observing / Reporting System
+KFRM|Fairmont Municipal Automatic Weather Observing / Reporting System
+KFBL|Faribault Municipal Automatic Weather Observing / Reporting System
+KFFM|Fergus Falls Automatic Weather Observing / Reporting System
+KFSE|Fosston Automatic Weather Observing / Reporting System
+KGYL|Glencoe, Glencoe Municipal Airport
+KGHW|Glenwood Automatic Surface Observing System 
+KCKC|Grand Marais, Grand Marais/Cook County Airport
+KGNA|Grand Marais, The Bay of Grand Marais
+KGPZ|Grand Rapids Automatic Weather Observing / Reporting System
+KHCO|Hallock, Hallock Municipal Airport
+KHIB|Hibbing, Chisholm-Hibbing Airport
+KHCD|Hutchinson Automatic Weather Observing / Reporting System
+KINL|International Falls, Falls International Airport
+KMJQ|Jackson Municipal Automatic Weather Observing / Reporting System
+KLJF|Litchfield, Litchfield Municipal Airport
+KLXL|Little Falls Automatic Weather Observing / Reporting System
+KXVG|Longville, Longville Municipal Airport
+KDXX|Madison, Madison-Lac Qui Parle County Airport
+KMKT|Mankato Automatic Weather Observing / Reporting System
+KMGG|Maple Lake, Maple Lake Municipal Airport
+KMML|Marshall / Ryan Automatic Weather Observing / Reporting System
+KANE|Minneapolis / Blaine
+KLVN|Minneapolis, Airlake Airport
+KMIC|Minneapolis, Crystal Airport
+KFCM|Minneapolis, Flying Cloud Airport
+KMSP|Minneapolis, Minneapolis-St. Paul International Airport
+KMVE|Montevideo Automatic Weather Observing / Reporting System
+KMZH|Moose Lake, Moose Lake Carlton County Airport
+KJMR|Mora, Mora Municipal Airport
+KMOX|Morris Municipal Automatic Weather Observing / Reporting System
+KULM|New Ulm Municipal Automatic Weather Observing / Reporting System
+KORB|Orr
+KVVV|Ortonville, Ortonville Muncipal-Martinson Field Airport
+KOWA|Owatonna Automatic Weather Observing / Reporting System
+KPKD|Park Rapids, Park Rapids Municipal Airport
+KPWC|Pine River, Pine River Regional Airport
+KPQN|Pipestone Automatic Weather Observing / Reporting System
+KPNM|Princeton
+KRGK|Red Wing, Red Wing Municipal Airport
+KRWF|Redwood Falls, Redwood Falls Municipal Airport
+KRST|Rochester, Rochester Municipal Airport
+KROX|Roseau Municipal Automatic Weather Observing / Reporting System
+KROS|Rush City, Rush City Regional Airport
+KBFW|Silver Bay
+KSGS|South St. Paul, South St. Paul Municipal-Richard E. Fleming Field Airport
+KSTC|St. Cloud, St. Cloud Municipal Airport
+KJYG|St. James, St. James Municipal Airport
+KSTP|St. Paul, St. Paul Downtown Holman Field
+KSAZ|Staples, Staples Municipal Airport
+KTVF|Thief River Automatic Weather Observing / Reporting System
+KTWM|Two Harbors
+KRRT|Warroad, Warroad International-Swede Carlston Field
+KVWU|Waskish, Waskish Municipal Airport
+KETH|Wheaton NDB Automatic Weather Observing / Reporting System
+KILL|Willmar / Rice Automatic Weather Observing / Reporting System
+KMWM|Windom, Windom Municipal Airport
+KONA|Winona Municipal Automatic Weather Observing / Reporting System
+KOTG|Worthington Automatic Weather Observing / Reporting System

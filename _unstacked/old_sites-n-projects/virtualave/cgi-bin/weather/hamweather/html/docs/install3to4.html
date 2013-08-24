@@ -1,0 +1,281 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>HAMweather Installation Steps 4 and 5</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Installation : STEP
+    4 : Upload Files to the Server</strong></big></font></td>
+  </tr>
+</table>
+
+<p>In step three you will upload all the HAMweather files to your web server.&nbsp; To do
+this you will need an FTP program, You can use <a href="http://www.wsftp.com">WsFTP</a> or
+<a href="http://www.cuteftp.com">CuteFTP</a> or similar.&nbsp; You will need to upload the
+entire contents (even subdirectories) of the &quot;hamweather/cgi-bin/&quot; directory to
+the web server in the path that you specified (in step 2) to hold all the cgi scripts. (we
+used <strong><font color="#000080">/usr/www/users/hamnet/hamweather/cgi-bin </font></strong>as
+the example in <a href="install1to2.html#STEP 2">step 2</a>.)&nbsp; When uploading you
+should upload all files in ASCII mode except for the graphic images, which are denoted
+withthe '.gif' filename extension.</p>
+
+<p>While you are uploading you will also need to set the correct permissions for the
+various files and directories.&nbsp; In the directory structure below you will notice a
+bunch of letter after each directory or filename.&nbsp; These indicate the permission
+setting for that file.&nbsp; Use this chart to convert them letter pattern to the
+appropriate chmod value. NOTE:&nbsp; Most newer FTP programs allow you to set permissions
+of the files.&nbsp; Refer to your individual programs documentation for instructions on
+how to do this.&nbsp; The need to set file permissions does not usually exist for Windows
+NT, 95/98 web servers.</p>
+
+<table border="2" bordercolor="#000080" cellpadding="2" bordercolorlight="#000080"
+bordercolordark="#000080" cellspacing="0">
+  <tr>
+    <td width="100%"><table border="0" bgcolor="#FFFFD7" height="98">
+      <tr>
+        <td height="21" align="center"><strong>PERMISSION</strong></td>
+        <td height="21" align="center"><strong>COMMAND</strong></td>
+      </tr>
+      <tr>
+        <td height="19">rwxrwxrwx</td>
+        <td height="19">chmod 777 filename</td>
+      </tr>
+      <tr>
+        <td height="21">rwxrwxr-x</td>
+        <td height="21">chmod 775 filename</td>
+      </tr>
+      <tr>
+        <td height="21">rwxr-xr-x</td>
+        <td height="21">chmod 755 filename</td>
+      </tr>
+      <tr>
+        <td height="21">rw-rw-rw-</td>
+        <td height="21">chmod 666 filename</td>
+      </tr>
+      <tr>
+        <td height="21">rw-rw-r--</td>
+        <td height="21">chmod 664 filename</td>
+      </tr>
+      <tr>
+        <td height="21">rw-r--r--</td>
+        <td height="21">chmod 644 filename</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+
+<p>The directory structure for the cgi files and subdirectories should stay the same and
+look similar to this:</p>
+
+<p><font color="#FF0000"><strong><big>NOTE</big></strong>: If you are installing
+HAMweather Lite 2.0 you will not have all the files listed below, for they are not needed
+for the Lite version.</font></p>
+
+<table border="2" cellspacing="0" cellpadding="2" bordercolor="#000080"
+bordercolorlight="#000080" bordercolordark="#000080" bgcolor="#FFFFD7">
+  <tr>
+    <td width="100%"><pre><small>HAMweather CGI Directory (i.e /yourpath/cgi-bin/hamweather)</small>
+<small>  |    </small>
+<small>  |__hamlib (dir)<small>             (</small>rwxr-xr-x<small>)</small></small>
+<small>  |    |</small>
+<small>  |    |__hwadmin (dir) (rwxrwxrw-)</small>
+<small>  |    |    |__hwalib_ftype.pl (rwxr-xr-x)</small>
+<small>  |    |    |__hwalib_hwi.pl (rwxr-xr-x)</small>
+<small>  |    |    |__hwalib_hwpro.pl (rwxr-xr-x)</small>
+<small>  |    |    |__hwalib_hwv.pl (rwxr-xr-x)</small>
+<small>  |    |    |__hwalib_of.pl (rwxr-xr-x)</small>
+<small>  |    |    |__hwalib_referer.pl (rwxr-xr-x)</small>
+<small>  |    |    |__hwalib_spectemp.pl (rwxr-xr-x)</small>
+<small>  |    |    |__hwalib_system.pl (rwxr-xr-x)</small>
+<small>  |    |    |__hwalib_wxinfo.pl (rwxr-xr-x)</small>
+<small>  |    |    |__hwanav.txt (rwxr-xr-x)</small>
+<small>  |    |    |__hwanav_hwpro.txt (rwxr-xr-x)
+  |    |
+  |    |__hamweatherlib.pl  <small>(</small>rwxr-xr-x<small>)</small>
+  |    |__hamlib.pl         <small>(</small>rwxr-xr-x<small>)</small></small><big>
+</big><small>  |    |__(other files included for PRO add on)<small>(</small>rwxr-xr-x<small>)</small>
+  |</small>
+<small>  |__hwpro_info (dir)(rwxrwxrwx)(chmod 777)</small>
+<small>  |    |__us_nf_info.txt (rw-rw-rw-) (chmod 666)</small>
+<small>  |    |__us_nf_info.temp (rw-rw-rw-) (chmod 666)</small>
+<small>  |    |__us_ns_info.txt (rw-rw-rw-) (chmod 666)</small>
+<small>  |    |__us_ns_info.temp (rw-rw-rw-) (chmod 666)</small>
+<small>  |
+  |__hwadmin5340 (dir) <small>(</small>rwxrwxr-x<small>)</small>
+  |    |__hwadmin.cgi  <small>(</small>rwxr-xr-x<small>) (chmod 755)</small>
+  |
+  |__logs (dir)        <small>(</small>rwxrwxrwx<small>)</small>
+  |    |__error.txt    <small>(</small>rw-rw-rw-<small>)</small> (chmod 666)
+  |    |__log.txt      <small>(</small>rw-rw-rw-<small>)</small> (chmod 666)
+  |</small><big>
+</big><small>  |__output (dir)<small>  (</small>rwxr-xr-x<small>)</small></small>
+<small>  |</small>
+<small>  |__radar (dir)  (pro addon only)<small>               (</small>rwxr-xr-x<small>)</small></small><big>
+</big><small>  |    |__us (dir) (PRO addon only)<small>              (</small>rwxr-xr-x<small>)</small></small><big>
+</big><small>  |         |__color.gif (PRO addon only)<small>       (</small>rwxr-xr-x<small>)</small></small><big>
+</big><small>  |         |__smallradar.gif (PRO addon only) <small>(</small>rwxr-xr-x<small>)</small></small><big>
+</big><small>  |
+  |__templates (dir)) (rwxr-xr-x)</small>
+<small>  |    |__include (dir) (rwxr-xr-x)</small>
+<small>  |    |    |__header.html (rwxr-xr-x)</small>
+<small>  |    |    |__footer.html (rwxr-xr-x)</small>
+<small>  |    |    |__nav1.html (rwxr-xr-x)</small>
+<small>  |    |    |__nav2.html (rwxr-xr-x)</small>
+<small>  |    |    |__nav3.html (rwxr-xr-x)</small>
+<small>  |    |    |__form1.html (rwxr-xr-x)</small>
+<small>  |    |    |__current.html (rwxr-xr-x)</small>
+<small>  |    |
+  |    |__(various template files) (rwxr-xr-x)
+  |
+  |__themes (dir)      <small>(</small>rwxrwxrwx<small>)</small>
+  |    |__default.txt  <small>(</small>rw-rw-rw-<small>)</small> (chmod 666)
+  |
+  |__us (dir)
+  |    |__metar
+  |    |    |__forecasts (dir)  <small>(</small>rwxrwxrwx<small>) (chmod 777)</small>
+  |    |    |__info (dir)       <small>(</small>rwxr-xr-x<small>)</small>
+  |    |         |__us (dir)    <small>(</small>rwxr-xr-x<small>)</small>
+  |    |         |    |__(various info files)  <small>(</small>rwxr-xr-x<small>)</small>
+  |    |         |
+  |    |         |__world (dir) <small>(</small>rwxr-xr-x<small>)</small>
+  |    |              |__(various info files)  <small>(</small>rwxr-xr-x<small>)</small>
+  |    |
+  |    |__states (dir)          <small>(</small>rwxr-xr-x<small>)</small>
+  |         |__forecasts (dir)  <small>(</small>rwxrwxrwx<small>) (chmod 777)</small>
+  |         |__info (dir)       <small>(</small>rwxr-xr-x<small>)</small>
+  |              |_(various info files)        <small>(</small>rwxr-xr-x<small>)</small>
+  |
+  |__users (dir)       <small>(</small>rwxrwxrwx<small>) (chmod 777)</small>
+  |    |__default.txt  <small>(</small>rw-rw-rw-<small>)</small> (chmod 666)
+  |
+  |__hamweather.cgi    <small>(</small>rwxr-xr-x<small>) (chmod 755)</small></small>
+<small>  |__hwconfig.txt    <small>(</small>rwxr-xr-x<small>) (chmod 755)</small></small>
+<small>  |__hwgetstate.cgi    <small>(</small>rwxr-xr-x<small>) (chmod 755)</small>
+  |__metarlister.cgi   <small>(</small>rwxr-xr-x<small>) (chmod 755)</small>
+</small></pre>
+    </td>
+  </tr>
+</table>
+
+<p>Then upload any html files and the images directory of the &quot;hamweather/&quot;
+directory to the web server in the path you specified (in step 2) to hold the html and
+image files. (we used<strong><font color="#000080"> /usr/www/users/hamnet/hamweather </font></strong>as
+the example in step 2.)</p>
+
+<p>The directory structure for the html files and subdirectories should stay the same and
+look similar to this:</p>
+
+<p><font color="#FF0000"><strong><big>NOTE</big></strong>: If you are installing
+HAMweather Lite 2.0 you will not have all the files listed below, for they are not needed
+for the Lite version.</font></p>
+
+<table border="2" cellspacing="0" cellpadding="2" bordercolor="#000080"
+bordercolorlight="#000080" bordercolordark="#000080" bgcolor="#FFFFD7">
+  <tr>
+    <td width="100%"><pre><small>HAMweather HTML Directory (this directory structure not in CGI-BIN)
+  |__index.html  (for testign only)     (rwxr-xr-x)</small><big>
+</big><small>  |__images (dir)</small><big>    </big><small>     (rwxr-xr-x)</small><big>
+</big><small>       |__fcicons (dir)    (rwxr-xr-x)</small><big>
+</big><small>       |    |__(various image files)</small><big>   </big><small>(rwxr-xr-x)</small><big>
+</big><small>       |    </small><big>
+</big><small>       |__fcmapicons (dir)</small><big> </big><small><small><small>(</small></small>rwxrwxrwx<small>)</small></small><big>
+</big><small>       |    |__(various image files)</small><big>  </big><small>  <small><small>(</small></small>rwxrwxrwx<small>)</small></small><big>
+</big><small>       |</small><big>
+</big><small>       |__fcmaps (dir)</small><big>    </big><small><small><small>(</small></small>rwxrwxrwx<small>)</small></small><big>
+</big><small>       |    |__(various image files)</small><big>  </big><small><small><small>   (</small></small>rw-rw-rw-<small>)</small></small><big>
+</big><small>       |</small><big>
+</big><small>       |__radar (dir) (PRO addon only)</small><big> </big><small><small><small>  (</small></small>rwxrwxrwx<small>)</small></small><big>
+</big><small>       |    |__us (dir) (PRO addon only)<small>  (</small>rwxrwxrwx<small>)</small></small><big>
+</big><small>       |    |    |__(various image files) (PRO addon only)</small><big>  </big><small><small><small>(</small></small>rw-rw-rw-<small>)</small></small><big>
+</big><small>       |    |</small><big>
+</big><small>       |    |__radar.gif (PRO addon only)<small>  (</small>rw-rw-rw-<small>)</small></small><big>
+</big><small>       | </small><big>
+</big><small>       |__us (dir)</small><big>      </big><small> (rwxr-xr-x)</small><big>
+</big><small>            |__states (dir) (rwxr-xr-x)</small><big>
+</big><small>                 |__(various image files) (rwxr-xr-x)</small>
+</pre>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Installation : STEP
+    5 : Give it a Try</strong></big></font></td>
+  </tr>
+</table>
+
+<p>Now the installation is done it is the time for the big test!&nbsp; From your web
+browser access your new HAMweather site and try it out.&nbsp; To do this you can browse
+directly to the hamweather.cgi&nbsp; Actually, if using HAMweather Pro,&nbsp; during
+implementation of HAMweather on your server it is better to point directly to the
+hamweather.cgi, adding any parameters needed, to ensure that maps are updated.</p>
+
+<p><strong><font color="#FF0000">NOTE</font></strong>: To add US zipcode searching
+capability you will need to also download the HWzipdb add-on and install it per its
+instructions. It is also recommended to install the HWaltplaces add-on. This add on will
+allow for more US &quot;place, state&quot; combinations than normally available in
+HAMweather. Both of these add-ons&nbsp; can be downloaded from <a
+href="http://www.hamweather.com/downloads">http://www.hamweather.com/downloads</a> </p>
+
+<p><font color="#FF0000"><big><strong>If everything is working you should check out the <a
+href="customize_easy.html">Easy Customization page</a> to perform a quick customization.</strong></big></font></p>
+
+<p><font color="#FF0000"><strong><big>If you are experiencing problems Review the Install <a
+href="install_help.html">Trouble Shooting Page.</a></big></strong></font></p>
+
+<p><big><big><strong><font color="#000080">HAMweather Debug Mode</font></strong></big></big></p>
+
+<p>HAMweather contains a debug mode that will give you information about your server,
+parameters passed to HAMweather and other pertinent HAMweather information.&nbsp; To use
+this mode simply browse to the hamweather.cgi filr and pass the debug=1 parameter. &nbsp;
+The URL would look similiar to the following URLs:</p>
+
+<blockquote>
+  <p><font color="#000080"><em>http://www.yourdomain.com/cgi-bin/hamweather/hamweather.cgi?debug=1
+  <br>
+  http://www.yourdomain.com/cgi-bin/hamweather/hamweather.cgi?forecast=zandh&amp;place=blacksburg&amp;state=va&amp;debug=1</em></font></p>
+</blockquote>
+
+<p>When you access the debug mode of HAMweather youwill see the perl environmental
+variables, the passed parameters, versions of HAMweather and all loaded hamweather library
+files and other pertinent information.&nbsp; If for some reason you do not see this
+information then the Debug ability may have been turned off.&nbsp; in the hwconfig.txt
+file there is a variable named $allow_debug.&nbsp; This variable should be set to 0 to
+turn on debug ability or 1 to turn off.&nbsp; Changing that line the hwconfig.txt file to
+the following would turn debug ability on:</p>
+
+<blockquote>
+  <p>$allow_debug = 0;</p>
+</blockquote>
+
+<p>You can also force the debug mode to stay on with out the need for the debug parameter
+in the url.&nbsp; this can be useful when debugging forms.&nbsp; To do this set the
+'allow_debug' property to '2'.&nbsp; Changing line in the hwconfig.txt file to the value
+of two as follows would put debug into an always on mode:</p>
+
+<blockquote>
+  <p>$allow_debug = 2;</p>
+</blockquote>
+
+<p>This debug information maybe useful in solving your HAMweather problems.&nbsp; When you
+are done debugging if youwant to turn the debug ability off simply change the $allow_debug
+value to '1' in the hwconfig.txt file.</p>
+
+<p><br>
+<br>
+<a href="http://www.hamweather.com/support/">Hmmm.. I need some trouble shooting help.</a>
+</p>
+
+<p><em><small>HAMweather </small><font FACE="Verdana,Arial,Helvetica" size="1">copyright
+© 2000 by HAMweather, LLC, all rights reserved</font></em></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+KALB|Albany, Albany County Airport
+KBGM|Binghamton, Binghamton Regional Airport
+KBUF|Buffalo, Greater Buffalo International Airport
+KDKK|Dunkirk, Chautauqua County / Dunkirk Airport
+KHTO|East Hampton, East Hampton Airport
+KELM|Elmira, Elmira / Corning Regional Airport
+KFRG|Farmingdale, Republic Airport
+KGTB|Fort Drum / Wheeler-Sack U. S. Army Airfield
+KGFL|Glens Falls, Warren County Airport
+KISP|Islip, Long Island Mac Arthur Airport
+KITH|Ithaca / Tompkins County
+KJHW|Jamestown Automatic Weather Observing / Reporting System
+KMSS|Massena, Massena International-Richards Field
+KMTP|Montauk, Montauk Airport
+KMGJ|Montgomery, Orange County Airport
+KMSV|Monticello Automatic Weather Observing / Reporting System
+KJFK|New York, Kennedy International Airport
+KLGA|New York, La Guardia Airport
+KSWF|Newburgh / Stewart
+KIAG|Niagara Falls, Niagara Falls International Airport
+KOGS|Ogdensburg International
+KPEO|Penn Yan, Penn Yan Airport
+KPLB|Plattsburgh, Clinton County Airport
+KPOU|Poughkeepsie, Dutchess County Airport
+KROC|Rochester, Greater Rochester International Airport
+KSLK|Saranac Lake, Adirondack Regional Airport
+KSCH|Schenectady Airport
+KHWV|Shirley, Brookhaven Airport
+KSYR|Syracuse, Syracuse Hancock International Airport
+KUCA|Utica, Oneida County Airport
+KART|Watertown, Watertown International Airport
+KFOK|Westhampton Beach, The Gabreski Airport
+KHPN|White Plains, Westchester County Airport

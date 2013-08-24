@@ -1,0 +1,9 @@
+Elko|Elko|32
+Ely|Ely|35
+Fallon NAS|Fallon|4
+Las Vegas|Las Vegas|20
+Lovelock|Lovelock|4
+Reno|Reno|3
+S. Lake Tahoe|South Lake Tahoe|2
+Tonopah|Tonopah|13
+Winnemucca|Winnemucca|30

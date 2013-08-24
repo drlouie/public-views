@@ -1,0 +1,25 @@
+KBVX|Batesville Automatic Weather Observing / Reporting System
+KVBT|Bentonville Automatic Weather Observing / Reporting System
+KHKA|Blytheville, Blytheville Municipal Airport
+KBYH|Eaker Air Force Base
+KELD|El Dorado, South Arkansas Regional Airport
+KFYV|Fayetteville, Drake Field
+KXNA|Fayetteville/Springdale, Northwest Arkansas Regional Airport
+KFLP|Flippin Automatic Weather Observing / Reporting System
+KFSM|Fort Smith, Fort Smith Regional Airport
+KHRO|Harrison, Boone County Airport
+KHOT|Hot Springs, Memorial Field
+KJBR|Jonesboro, Jonesboro Municipal Airport
+KLRF|Little Rock Air Force Base
+KLIT|Little Rock, Adams Field
+KLLQ|Monticello, Monticello Municipal Airport
+KMWT|Mount Ida
+KBPK|Mountain Home, Baxter County Regional Airport
+KPBF|Pine Bluff, Grider Field
+KROG|Rogers Automatic Weather Observing / Reporting System
+KRUE|Russellville, Russellville Municipal Airport
+KSLG|Siloam Spring Automatic Weather Observing / Reporting System
+KASG|Springdale Municipal
+KSGT|Stuttgart Automatic Weather Observing / Reporting System
+KTXK|Texarkana, Texarkana Regional-Webb Field
+KARG|Walnut Ridge Automatic Weather Observing / Reporting System 

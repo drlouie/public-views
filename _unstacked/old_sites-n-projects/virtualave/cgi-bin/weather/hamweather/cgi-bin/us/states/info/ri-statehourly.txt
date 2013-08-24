@@ -1,0 +1,4 @@
+Newport|Newport|7
+Providence|Providence|2
+Smithfield|Smithfield|1
+Westerly|Westerly|6

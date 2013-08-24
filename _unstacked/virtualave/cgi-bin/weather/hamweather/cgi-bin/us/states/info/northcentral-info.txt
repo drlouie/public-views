@@ -1,0 +1,19 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="POLYGON" COORDS="136, 183, 198, 181, 210, 212, 220, 212, 218, 221, 232, 236, 236, 247, 240, 253, 235, 260, 230, 265, 225, 264, 219, 260, 149, 261, 148, 208" HREF="%%getstatescripturl%%?state=mo" alt="Missouri">
+<AREA SHAPE="POLYGON" COORDS="34, 192, 138, 193, 147, 209, 148, 253, 30, 249" HREF="%%getstatescripturl%%?state=ks" alt="Kansas">
+<AREA SHAPE="POLYGON" COORDS="3, 170, 32, 172, 29, 250, 1, 248" HREF="%%getstatescripturl%%?state=co" alt="Colorado">
+<AREA SHAPE="POLYGON" COORDS="120, 125, 199, 123, 202, 136, 213, 144, 216, 156, 210, 162, 203, 164, 207, 172, 198, 183, 194, 179, 133, 181, 118, 141" HREF="%%getstatescripturl%%?state=ia" alt="Iowa">
+<AREA SHAPE="POLYGON" COORDS="209, 143, 250, 139, 258, 154, 261, 207, 264, 211, 254, 235, 244, 245, 241, 244, 237, 247, 233, 243, 232, 235, 217, 222, 221, 213, 216, 211, 212, 213, 199, 191, 201, 181, 207, 171, 203, 166, 204, 163, 213, 160, 215, 149" HREF="%%getstatescripturl%%?state=il" alt="Illinois">
+<AREA SHAPE="POLYGON" COORDS="258, 156, 299, 148, 305, 204, 295, 211, 295, 215, 282, 226, 255, 231, 255, 225, 264, 211, 260, 204" HREF="%%getstatescripturl%%?state=in" alt="Indiana">
+<AREA SHAPE="POLYGON" COORDS="354, 226, 339, 207, 304, 197, 304, 203, 298, 209, 286, 225, 257, 230, 250, 239, 250, 245, 242, 243, 237, 247, 241, 251, 237, 257, 334, 246" HREF="%%getstatescripturl%%?state=ky" alt="Kentucky">
+<AREA SHAPE="POLYGON" COORDS="320, 148, 336, 151, 361, 136, 366, 166, 365, 180, 354, 192, 345, 205, 342, 210, 333, 205, 326, 208, 304, 198, 298, 151, 324, 145" HREF="%%getstatescripturl%%?state=oh" alt="Ohio">
+<AREA SHAPE="POLYGON" COORDS="210, 60, 241, 39, 307, 61, 332, 122, 318, 148, 258, 154, 251, 134, 258, 80, 252, 85, 241, 74, 211, 64" HREF="%%getstatescripturl%%?state=mi" alt="Michigan">
+<AREA SHAPE="POLYGON" COORDS="193, 54, 209, 62, 212, 66, 241, 74, 248, 87, 255, 86, 249, 138, 209, 141, 202, 134, 199, 112, 173, 94, 173, 79, 181, 66, 181, 61" HREF="%%getstatescripturl%%?state=wi" alt="Wisconsin">
+<AREA SHAPE="POLYGON" COORDS="113, 17, 139, 8, 215, 33, 180, 62, 180, 71, 172, 81, 175, 96, 198, 116, 198, 123, 119, 124" HREF="%%getstatescripturl%%?state=mn" alt="Minnesota">
+<AREA SHAPE="POLYGON" COORDS="6, 131, 95, 134, 118, 141, 138, 193, 34, 190, 33, 171, 3, 167" HREF="%%getstatescripturl%%?state=ne" alt="Nebraska">
+<AREA SHAPE="POLYGON" COORDS="12, 73, 119, 76, 119, 143, 91, 134, 7, 129" HREF="%%getstatescripturl%%?state=sd" alt="South Dakota">
+<AREA SHAPE="POLYGON" COORDS="18, 14, 112, 17, 118, 77, 12, 71" HREF="%%getstatescripturl%%?state=nd" alt="North Dakota">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="266" alt="northcentral.gif (4000 bytes)" src="%%stateimagesurl%%/northcentral.gif" width="374">
+<-end image map->

@@ -1,0 +1,20 @@
+EKYT|Aalborg
+EKBI|Billund Lufthavn
+EKEB|Esbjerg
+EKKA|Karup
+EKCH|Koebenhavn / Kastrup
+EKRK|Koebenhavn / Roskilde
+EKMB|Maribo Lufthavn
+EKOD|Odense / Beldringe
+EKRN|Roenne
+EKSN|Sindal Flyveplads
+EKSV|Skive Lufthavn
+EKSP|Skrydstrup
+EKSB|Soenderborg Lufthavn
+EKVG|Soervaag / Vagar
+EKVJ|Stauning Lufthavn
+EKTS|Thisted Lufthavn
+EKAH|Tirstrup
+EKVL|Vaerloese
+EKVD|Vamdrup
+EKVA|Vandel

@@ -1,0 +1,10 @@
+Alamosa|Alamosa|63
+Aspen|Aspen|10
+Colorado Spgs|Colorado Springs|71
+Craig|Craig|2
+Denver/Int'l|Denver|40
+Durango|Durango|22
+Grand Junction|Grand Junction|6
+Greeley Arpt|Greeley|43
+Pueblo|Pueblo|73
+Trinidad|Trinidad|75

@@ -1,0 +1,12 @@
+
+estevan=fpcn11.wxe.htm--REGINA|0
+kindersley=fpcn11.wxe.htm--|0
+la ronge=fpcn12.wxe.htm--|0
+lloydminster=fpcn11.wxe.htm--KINDERSLEY|0
+moose jaw=fpcn11.wxe.htm--|0
+north battleford=fpcn11.wxe.htm--SASKATOON|0
+prince albert=fpcn11.wxe.htm--|0
+regina=fpcn11.wxe.htm--|0
+saskatoon=fpcn11.wxe.htm--|0
+swift current=fpcn11.wxe.htm--|0|CYYN|2
+yorkton=fpcn11.wxe.htm--|0

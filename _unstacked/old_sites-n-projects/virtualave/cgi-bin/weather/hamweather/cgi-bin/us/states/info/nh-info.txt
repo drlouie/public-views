@@ -1,0 +1,20 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="157, 321, 7" HREF="%%scripturl%%?forecast=zandh&state=nh&place=concord">
+<AREA SHAPE="POLYGON" COORDS="258, 348, 268, 344, 282, 347, 269, 378, 257, 372" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=014" alt="Coastal Rockingham ">
+<AREA SHAPE="POLYGON" COORDS="205, 314, 240, 335, 234, 342, 258, 345, 255, 374, 233, 385, 216, 385, 214, 394, 203, 398, 182, 385, 175, 366, 184, 366, 180, 354" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=013" alt="Interior Rockingham">
+<AREA SHAPE="POLYGON" COORDS="86, 328, 103, 325, 110, 338, 141, 336, 146, 347, 161, 348, 178, 353, 183, 364, 175, 365, 178, 382, 188, 388, 204, 397, 198, 400, 99, 399, 89, 366, 82, 361" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=012" alt="Hillsborough">
+<AREA SHAPE="POLYGON" COORDS="25, 334, 65, 329, 63, 334, 84, 336, 82, 363, 88, 366, 100, 399, 23, 395, 10, 386, 8, 378, 13, 363, 23, 359, 23, 337, 22, 337" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=011" alt="Cheshire">
+<AREA SHAPE="POLYGON" COORDS="215, 272, 224, 270, 226, 277, 235, 276, 240, 285, 248, 276, 248, 291, 246, 298, 270, 319, 269, 338, 256, 343, 251, 342, 234, 344, 238, 334, 204, 313, 216, 303, 216, 275" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=010" alt="Strafford">
+<AREA SHAPE="POLYGON" COORDS="161, 242, 215, 273, 217, 303, 202, 313, 154, 286, 147, 288, 132, 271, 134, 267, 142, 265, 143, 256, 160, 253" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=009" alt="Belknap">
+<AREA SHAPE="POLYGON" COORDS="110, 267, 121, 273, 131, 272, 147, 285, 149, 288, 156, 287, 205, 314, 179, 354, 162, 347, 147, 347, 140, 335, 111, 338, 103, 324, 87, 327, 78, 309, 100, 272" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=008" alt="Merrimack">
+<AREA SHAPE="POLYGON" COORDS="40, 266, 100, 274, 87, 289, 84, 289, 84, 293, 76, 307, 86, 328, 86, 335, 63, 335, 66, 329, 22, 333, 36, 268" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=007" alt="Sullivan">
+<AREA SHAPE="POLYGON" COORDS="157, 223, 241, 215, 249, 274, 239, 284, 233, 275, 227, 278, 223, 271, 217, 273, 211, 271, 162, 240" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=006" alt="Southern Carroll">
+<AREA SHAPE="POLYGON" COORDS="64, 225, 156, 222, 162, 250, 145, 253, 140, 264, 134, 265, 132, 271, 122, 272, 112, 264, 96, 275, 39, 265, 45, 249, 61, 239" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=005" alt="Southern Grafton">
+<AREA SHAPE="POLYGON" COORDS="180, 174, 188, 178, 193, 190, 203, 170, 235, 168, 240, 162, 242, 214, 185, 217, 187, 197" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=004" alt="Northern Carroll">
+<AREA SHAPE="POLYGON" COORDS="124, 146, 152, 156, 155, 163, 175, 169, 178, 178, 186, 195, 186, 216, 157, 221, 64, 225, 85, 190, 80, 168, 84, 158" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=003" alt="Northern Grafton">
+<AREA SHAPE="POLYGON" COORDS="147, 94, 236, 91, 242, 161, 239, 160, 235, 167, 204, 169, 193, 191, 188, 179, 172, 167, 157, 165, 152, 158, 127, 145, 153, 129, 153, 122, 155, 101" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=002" alt="Southern Coos">
+<AREA SHAPE="POLYGON" COORDS="229, 7, 236, 92, 147, 93, 166, 66, 160, 57, 169, 38, 179, 28, 178, 17, 194, 9, 217, 15" HREF="%%scripturl%%?forecast=zandh&state=nh&zone=001" alt="Northern Coos">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="407" alt="NH" src="%%stateimagesurl%%/nh-zones.gif" width="286">
+<-end image map->

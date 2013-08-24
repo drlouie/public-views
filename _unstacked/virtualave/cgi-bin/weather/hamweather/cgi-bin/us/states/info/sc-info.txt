@@ -1,0 +1,105 @@
+<-begin image map->
+<MAP NAME="FrontPageMap0">
+<AREA
+SHAPE="POLYGON" COORDS="5,38,5,38,37,35,37,17,24,18,19,26,4,38" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=00001" alt="Northern Oconee">
+<AREA
+SHAPE="POLYGON" COORDS="38,35,38,35,5,38,17,51,28,60,42,47,37,35" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=00004" alt="Southern Oconee">
+<AREA
+SHAPE="POLYGON" COORDS="66,24,66,24,37,29,38,15,49,15,60,15,62,17,65,18,66,21" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=00002" alt="Northern Pickens">
+<AREA
+SHAPE="POLYGON" COORDS="66,23,66,23,37,29,40,39,42,46,69,33,66,24" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=00005" alt="Southern Pickens">
+<AREA
+SHAPE="POLYGON" COORDS="89,28,86,28,68,28,65,24,65,19,60,15,43,14,71,5,88,5,89,28" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=00003" alt="Northern Greenville">
+<AREA
+SHAPE="POLYGON" COORDS="82,58,82,58,88,55,94,37,87,29,68,29,70,35,74,52,81,57" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=00006" alt="Southern Greenville">
+<AREA
+SHAPE="POLYGON" COORDS="117,50,117,50,123,31,128,27,122,16,115,5,88,6,89,30,101,40,111,47,117,50" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=00007" alt="Spartanburg">
+<AREA
+SHAPE="POLYGON" COORDS="145,30,145,30,146,26,144,15,148,15,152,7,116,5,126,24,144,29" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=00008" alt="Cherokee">
+<AREA
+SHAPE="POLYGON" COORDS="146,34,146,34,189,32,188,16,186,12,177,16,174,15,179,12,176,8,153,7,149,15,144,15,147,27,143,29,147,33" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=00009" alt="York">
+<AREA
+SHAPE="POLYGON" COORDS="49,79,48,79,82,57,75,53,71,39,69,32,42,46,31,59,39,60,47,72,48,79" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0010" alt="Anderson ">
+<AREA
+SHAPE="POLYGON" COORDS="86,65,86,65,83,58,49,80,53,85,60,93,70,90,82,90,87,83,85,78,81,68" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0011" alt="Abbeville">
+<AREA
+SHAPE="POLYGON" COORDS="133,55,133,55,112,47,95,37,86,56,79,55,110,80,116,71,123,68,134,55" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0012" alt="Laurens">
+<AREA
+SHAPE="POLYGON" COORDS="141,60,141,60,148,57,146,34,144,30,127,28,123,31,118,48,136,56,139,60" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0013" alt="Union  ">
+<AREA
+SHAPE="POLYGON" COORDS="148,53,148,53,190,54,189,31,146,34,149,53" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0014" alt="Chester">
+<AREA
+SHAPE="POLYGON" COORDS="190,53,190,54,192,61,207,51,208,56,225,47,213,33,196,34,196,23,187,11,190,31,190,41,190,51" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0015" alt="Lancaster">
+<AREA
+SHAPE="POLYGON" COORDS="235,67,235,67,215,34,262,34,272,47,270,57,253,57,237,65" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0016" alt="Chesterfield">
+<AREA
+SHAPE="POLYGON" COORDS="284,71,284,71,299,49,281,33,262,34,272,48,270,58,278,55,275,61,281,65,284,71" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0017" alt="Marlboro">
+<AREA
+SHAPE="POLYGON" COORDS="97,126,98,124,98,120,92,117,96,108,94,100,103,96,91,96,87,94,83,96,81,90,59,94,73,106,82,109,90,121,96,125" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0018" alt="McCormick">
+<AREA
+SHAPE="POLYGON" COORDS="105,97,105,97,83,95,83,90,87,83,82,68,86,62,115,85,106,97" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0019" alt="Greenwood">
+<AREA
+SHAPE="POLYGON" COORDS="113,83,113,83,112,76,124,68,134,56,140,61,148,58,157,77,155,82,152,82,147,86,154,89,139,88,125,81,117,83" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0020" alt="Newberry">
+<AREA
+SHAPE="POLYGON" COORDS="190,59,190,59,195,63,198,65,196,72,169,78,168,81,156,75,149,53,190,54,190,57" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0021" alt="Fairfield">
+<AREA
+SHAPE="POLYGON" COORDS="195,74,195,74,192,78,204,89,209,88,218,86,221,84,224,74,234,66,223,49,207,56,206,52,194,60" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0022" alt="Kershaw   ">
+<AREA
+SHAPE="POLYGON" COORDS="235,68,235,68,240,71,242,69,248,79,246,82,253,88,277,75,284,70,275,60,275,57,272,57,255,57,235,66" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0023" alt="Darlington">
+<AREA
+SHAPE="POLYGON" COORDS="284,72,285,72,291,77,305,73,323,75,326,71,298,49,285,69" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0024" alt="Dillon">
+<AREA
+SHAPE="POLYGON" COORDS="105,130,104,130,97,125,97,121,91,119,97,108,95,100,113,96,116,106,131,110,105,129" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0025" alt="Edgefield">
+<AREA
+SHAPE="POLYGON" COORDS="129,110,129,110,139,105,144,89,140,88,126,82,115,82,110,96,114,97,116,104" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0026" alt="Saluda">
+<AREA
+SHAPE="POLYGON" COORDS="157,81,157,81,148,86,153,90,145,90,139,103,149,115,158,115,167,118,185,114,180,111,177,113,180,99,173,91,160,87,158,80" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0027" alt="Lexington">
+<AREA
+SHAPE="POLYGON" COORDS="211,114,211,114,187,108,180,99,174,89,159,86,157,81,162,78,165,82,169,79,192,74,202,89,211,91,210,107,211,114" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0028" alt="Richland">
+<AREA
+SHAPE="POLYGON" COORDS="243,99,244,99,257,91,246,81,248,80,242,69,240,71,234,67,223,75,222,85,234,89,238,95,243,94,244,98" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0029" alt="Lee   ">
+<AREA
+SHAPE="POLYGON" COORDS="169,119,169,119,121,156,111,143,111,136,105,130,140,104,148,116" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0030" alt="Aiken">
+<AREA
+SHAPE="POLYGON" COORDS="216,123,216,123,224,114,226,116,228,112,235,111,264,95,257,92,243,99,242,94,239,94,232,88,221,85,211,92,212,91,212,114,216,120" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0031" alt="Sumter">
+<AREA
+SHAPE="POLYGON" COORDS="308,109,308,109,296,99,293,94,293,88,291,77,285,72,254,88,264,97,261,99,266,104,291,110,307,108" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0032" alt="Florence">
+<AREA
+SHAPE="POLYGON" COORDS="322,75,322,75,307,97,313,107,317,117,308,109,297,98,294,89,292,76,307,72" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0033" alt="Marion  ">
+<AREA
+SHAPE="POLYGON" COORDS="331,128,330,128,343,114,364,105,327,72,317,88,307,99,316,106,319,116,325,127" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0034" alt="Horry">
+<AREA
+SHAPE="POLYGON" COORDS="135,164,135,164,122,156,153,132,165,137,165,157,166,161,153,162,141,159" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0035" alt="Barnwell">
+<AREA
+SHAPE="POLYGON" COORDS="153,132,153,132,198,156,219,145,232,151,237,148,239,136,233,137,213,129,208,136,189,123,184,124,181,118,167,120" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0036" alt="Orangeburg">
+<AREA
+SHAPE="POLYGON" COORDS="179,102,179,102,178,112,186,113,178,118,193,123,208,135,213,128,219,129,216,122,209,113,186,109" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0037" alt="Calhoun ">
+<AREA
+SHAPE="POLYGON" COORDS="217,120,217,120,219,129,234,138,247,135,251,131,259,113,265,105,260,99,229,113,226,115,224,115" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0038" alt="Clarendon">
+<AREA
+SHAPE="POLYGON" COORDS="303,108,303,108,308,112,299,124,291,134,281,146,271,140,260,131,250,132,267,105,278,109" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0039" alt="Williamsburg">
+<AREA
+SHAPE="POLYGON" COORDS="150,192,150,192,144,171,135,165,143,160,156,163,166,162,174,169,164,174,161,177,162,184" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0040" alt="Allendale	">
+<AREA
+SHAPE="POLYGON" COORDS="174,169,174,169,186,163,189,166,189,161,196,157,166,139,165,159,175,168" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0041" alt="Bamberg">
+<AREA
+SHAPE="POLYGON" COORDS="175,169,175,169,194,194,189,199,185,197,185,195,181,190,161,203,150,201,149,191,162,184,160,178" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0042" alt="Hampton">
+<AREA
+SHAPE="POLYGON" COORDS="228,180,228,180,184,180,176,168,185,165,190,167,191,160,200,158,209,165,227,167,226,174,227,179" HREF=" %%scripturl%%?forecast=zandh&state=sc&zone=0043" alt="Northern Colleton">
+<AREA
+SHAPE="POLYGON" COORDS="226,180,226,180,245,185,243,181,250,177,245,170,232,159,231,151,219,145,198,157,206,160,208,164,228,167,228,181" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0044" alt="Dorchester">
+<AREA
+SHAPE="POLYGON" COORDS="274,175,274,175,266,180,261,177,259,179,254,171,235,157,232,152,238,148,239,139,248,136,259,132,275,145,298,154,294,158" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0045" alt="Berkeley">
+<AREA
+SHAPE="POLYGON" COORDS="279,146,279,146,315,160,315,146,320,144,330,128,324,128,318,117,315,119,308,110,299,126" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0046" alt="Georgetown">
+<AREA
+SHAPE="POLYGON" COORDS="185,180,185,180,195,195,205,196,215,206,228,209,227,196,221,190,228,180" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0049" alt="Southern Colleton">
+<AREA
+SHAPE="POLYGON" COORDS="181,190,181,190,160,204,170,226,175,237,188,243,180,227,192,217,190,206,194,207,191,198,187,201" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0047" alt="Jasper">
+<AREA
+SHAPE="POLYGON" COORDS="194,216,194,216,183,227,190,240,205,232,198,227,196,217,200,218,212,225,223,221,220,214,207,208,218,208,205,196,192,196,197,208" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0048" alt="Beaufort">
+<AREA
+SHAPE="POLYGON" COORDS="228,181,228,181,222,191,233,209,244,204,265,193,259,181,268,183,264,188,278,187,288,177,285,172,303,171,312,160,295,156,267,181,259,180,255,172,246,169,251,179,244,182,246,185,229,184,225,191" HREF="%%scripturl%%?forecast=zandh&state=sc&zone=0050" alt="Charleston">
+</MAP>
+<img src="%%stateimagesurl%%/sc-zones.gif" width="370" height="247" alt="SC" border="0" usemap="#FrontPageMap0">
+<-end image map->

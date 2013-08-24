@@ -1,0 +1,3 @@
+LLBG|Ben-Gurion International Airport
+LLET|Eilat
+LLOV|Ovda

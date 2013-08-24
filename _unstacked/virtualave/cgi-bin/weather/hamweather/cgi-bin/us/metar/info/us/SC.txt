@@ -1,0 +1,14 @@
+KAND|Anderson, Anderson County Airport
+KNBC|Beaufort, Marine Corps Air Station
+KCHS|Charleston, Charleston Air Force Base
+KCAE|Columbia, Columbia Metropolitan Airport
+KCUB|Columbia, Columbia Owens Downtown Airport
+KFLO|Florence, Florence Regional Airport
+KGMU|Greenville, Greenville Downtown Airport
+KGSP|Greer, Greenville-Spartanburg Airport
+KMMT|McEntire Air National Guard Weather Facility Base
+KMYR|Myrtle Beach Air Force Base
+KCRE|North Myrtle Beach, Grand Strand Airport
+KOGB|Orangeburg, Orangeburg Municipal Airport
+KUZA|Rock Hill, Rock Hill - York County Airport
+KSSC|Shaw Air Force Base

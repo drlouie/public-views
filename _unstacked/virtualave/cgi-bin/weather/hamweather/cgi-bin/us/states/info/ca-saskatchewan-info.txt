@@ -1,0 +1,11 @@
+estevan|southern|fpcn11.wxe.htm|fpcn54.wxe.htm|REGINA
+kindersley|southern|fpcn11.wxe.htm|fpcn54.wxe.htm
+la ronge|northern|fpcn12.wxe.htm|fpcn54.wxe.htm
+lloydminster|southern|fpcn11.wxe.htm|fpcn54.wxe.htm|KINDERSLEY
+moose jaw|southern|fpcn11.wxe.htm|fpcn54.wxe.htm
+north battleford|southern|fpcn11.wxe.htm|fpcn54.wxe.htm|SASKATOON
+prince albert|southern|fpcn11.wxe.htm|fpcn54.wxe.htm
+regina|southern|fpcn11.wxe.htm|fpcn54.wxe.htm
+saskatoon|southern|fpcn11.wxe.htm|fpcn54.wxe.htm
+swift current|southern|fpcn11.wxe.htm|fpcn54.wxe.htm
+yorkton|southern|fpcn11.wxe.htm|fpcn54.wxe.htm

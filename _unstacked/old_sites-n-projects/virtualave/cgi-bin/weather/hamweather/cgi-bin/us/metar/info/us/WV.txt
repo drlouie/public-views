@@ -1,0 +1,11 @@
+KBKW|Beckley, Raleigh County Memorial Airport
+KBLF|Bluefield, Mercer County Airport
+KCRW|Charleston, Yeager Airport
+KCKB|Clarksburg, Clarksburg Benedum Airport
+KEKN|Elkins, Elkins-Randolph County-Jennings Randolph Field
+KHTS|Huntington, Tri-State Airport
+KLWB|Lewisburg / Greenbrier
+KMRB|Martinsburg, Eastern West Virginia Regional Airport
+KMGW|Morgantown, Morgantown Municipal-Hart Field
+KPKB|Parkersburg / Wilson
+KHLG|Wheeling, Wheeling Ohio County Airport

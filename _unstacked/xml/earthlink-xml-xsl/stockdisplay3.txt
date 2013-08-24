@@ -1,0 +1,2 @@
+symbol,last,change,volume:INT
+ELNK,72.53,+5.05,460800

@@ -1,0 +1,5 @@
+beaver creek|western|fpcn11.yxy.htm|fpcn54.yxy.htm
+dawson|western|fpcn11.yxy.htm|fpcn54.yxy.htm
+mayo|western|fpcn11.yxy.htm|fpcn54.yxy.htm
+watson lake|southeastern|fpcn12.yxy.htm|fpcn54.yxy.htm
+whitehorse|western|fpcn11.yxy.htm|fpcn54.yxy.htm

@@ -1,0 +1,374 @@
+<html>
+
+<head>
+<title>HAMweather Usage : Associated Places</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><big><font color="#FFFFFF"><strong>Usage: &nbsp;
+    Associated Places</strong></font></big></td>
+  </tr>
+</table>
+
+<p><font color="#FF0000"><strong>NOTE</strong></font>: The HWaltplaces add-on is available
+that will allow most &quot;place, state&quot; combinations for the US.&nbsp; It can be
+downloaded from <a href="http://www.hamweather.com/downloads/">http://www.hamweather.com/downloads/</a>
+&nbsp; </p>
+
+<p>When trying to obtain your local zone forecast, you may find that HW cannot provide a
+forecast for for your town, but can for your county or for a near by city.&nbsp; To
+understand why this happens you must first review how HAMweather offers the zone
+forecasts.</p>
+
+<p>HW obtains the various text based forecasts from the National Weather Services (NWS)
+Interactive Weather Information Network (IWIN).&nbsp; HW then parses these as needed and
+creates the various forecasts, with the zone forecast being the most popular.&nbsp; </p>
+
+<p>When you request the zone forecast, you supply a &quot;place&quot; and state. &nbsp;
+HAMweather then obtains the text based zone forecasts for the state.&nbsp; Then HW
+searches through the headers of the various zone forecasts for the &quot;place&quot;
+requested.&nbsp; If the place is found then that zone forecast is parsed and outputted.
+&nbsp; If the zone forecast is not found then you are prompted that the forecast was not
+available.&nbsp; Often if you try anther city or the county name you will be able to
+obtain the wanted forecast.</p>
+
+<p>This tends to work very well&nbsp; most of the time, but for those times when there is
+not a near by city or the user does not know the county name it can be hard to obtain the
+wanted forecast.&nbsp; This was one of the drawbacks with HW 1.x, but with HW 2.0 a fix to
+this has been given.&nbsp; You can associate &quot;places&quot;, so that the appropriate
+forecast is obtained.&nbsp; For example:&nbsp; If you want the forecast for Shawsville,
+Virginia, you will find that this towns forecast comes up unavailable.&nbsp; The
+Montgomery County forecast,&nbsp; of which Shawsville is located is is available. HW2 will
+allow you to associate the place &quot;Shawsville&quot; with &quot;Montgomery&quot; so
+that when someone requests the forecast for &quot;Shawsville, VA&quot; HW will obtain and
+output the forecast for &quot;Montgomery County, VA&quot;.&nbsp; Don't worry, HAMweather
+will still display &quot;Shawsville&quot; as the place name though.</p>
+
+<p><big><strong><font color="#000080">Configuration</font></strong></big></p>
+
+<p>Since there is no web based administration yet for associated places you will have to
+do this the hard way.&nbsp; Actually its not too hard, you will simply need to create
+and/or edit a few text files.&nbsp; You create a separate text files for each state, thus
+allowing for different associations in the different states.&nbsp; The naming convention
+for the text files is:</p>
+
+<blockquote>
+  <p>XX-altplaces.txt</p>
+</blockquote>
+
+<p>Where XX is the two letter abbreviation for a state, in lowercase.&nbsp; Thus the
+proper name for the Virginia associated places file would be:</p>
+
+<blockquote>
+  <p>va-altplaces.txt</p>
+</blockquote>
+
+<p>In this file you will state your associations.&nbsp; </p>
+
+<p>The HAMweather distribution comes with a small smaple of Alt-place files, but
+HAMweather also offers an extensive set of alt place files for download.&nbsp; This
+extensive set will add about 1.5 Meg of disk usage to your HW install though.&nbsp; Visit
+the HW website for more information on the HWaltplaces&nbsp; download.</p>
+
+<p><strong><font color="#FF0000">INTERNATIONAL USAGE NOTE:</font></strong>&nbsp; For non
+US altplace files the naming convention is ZZ-XX-altplaces.txt where ZZ is the countries
+two letter abbreviation and XX is the two letter abbreviation for the state. If you are
+not using state eqvialents then XX must be the two letter abbreviation for the country.
+&nbsp; For example: For the altplace file for Ontario, Canada youwoulduse the name
+ca-on-altplaces.txt.&nbsp; For a country not using states/provinces such as Italy you
+would use a name such as: it-it-altplaces.</p>
+
+<p><font color="#000080"><big><strong>Simple Associations</strong></big></font></p>
+
+<p>In the most basic form, you simply add associations using the equal sign (=).&nbsp; For
+Example: To associate Shawsville with Montgomery County, simply add a line to the file
+that reads:</p>
+
+<blockquote>
+  <p>shawsville=montgomery</p>
+</blockquote>
+
+<p>Notice that you do not need the word &quot;county&quot;.&nbsp; You can have&nbsp; one
+associate per line, thus if I wanted to have two associations you would simply have them
+on separate line. For example:</p>
+
+<blockquote>
+  <p>shawsville=montgomery<br>
+  salem=roanoke</p>
+</blockquote>
+
+<p><strong><font color="#FF0000">INTERNATIONAL USAGE NOTE:</font></strong>&nbsp; Since
+only zone forecasts are available for the US and Canada simple associations will not work
+for other countries. Also for canada there is an extra note: The place to the right of the
+equal must be the name of the html page to get the data from on Environmental Canadas web
+site, followed by &quot;--&quot; and then the associate place. For example:&nbsp; A line
+in the Nova Scotia altplace file (names ca-ns-altplaces.txt) w=may have a line for Amherst
+which would look like:</p>
+
+<blockquote>
+  <p>amherst=fpcn11.whx.htm--CENTRAL|0</p>
+</blockquote>
+
+<p>Where fpcn11.whx.htm is the html page to get the data from and CENTRAL is the
+associated place name to use when fetching the data from the page.</p>
+
+<p><strong><big><font color="#000080">Advanced Associations</font></big></strong></p>
+
+<p>You can associate a place with another cities or even a weather zone.&nbsp; Also you
+can have seperate associations for both the zone foreast and the hourly
+observations.&nbsp; An advanced association files follows the following format:</p>
+
+<blockquote>
+  <p><font color="#000080">RequestedPlace=AltZone|AltZoneCode|AltCurrent|AltCurrentCode</font></p>
+  <p>where:</p>
+  <div align="left"><table border="2" bgcolor="#FFFFD7" bordercolor="#000080"
+  cellpadding="2" bordercolorlight="#000080" bordercolordark="#000080" cellspacing="0">
+    <tr>
+      <td><table border="1">
+        <tr>
+          <td bgcolor="#000080" valign="top"><big><font color="#FFFFFF"><strong>Item</strong></font></big></td>
+          <td bgcolor="#000080"><big><font color="#FFFFFF"><strong>Description</strong></font></big></td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>RequestedPlace </strong></td>
+          <td>Place the user requested forcast for</td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>AltZone</strong></td>
+          <td>This can be either an alternate place name to use for the zone forcast or a weather
+          zone number. <strong><font color="#FF0000">INTERNATIONAL USAGE NOTE:</font></strong>
+          &nbsp; For Canada review notes in simple association section. For all countries except US
+          and CANADA this field is not technically used since HW cannot provide zone forecasts for
+          other countries. So for countries other than US and Canada simply put the requested place
+          name here.</td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>AltZoneCode</strong></td>
+          <td>This code is used to determine how the AltZone is applied.&nbsp; It can be a number
+          from 0 to 3. <br>
+          <div align="center"><center><table border="0" bgcolor="#C0C0C0">
+            <tr>
+              <td bgcolor="#000080" align="center"><strong><font color="#FFFFFF">Code</font></strong></td>
+              <td bgcolor="#000080"><strong><font color="#FFFFFF">Description</font></strong></td>
+            </tr>
+            <tr>
+              <td align="center"><strong>0</strong></td>
+              <td><strong>AltZone</strong> is a place name, output the <strong>RequestedPlace</strong>
+              name in output</td>
+            </tr>
+            <tr>
+              <td align="center"><strong>1</strong></td>
+              <td><strong>AltZone</strong> is a place name, output the <strong>AltZone</strong> name in
+              output</td>
+            </tr>
+            <tr>
+              <td align="center"><strong>2</strong></td>
+              <td><strong>AltZone</strong> is a <strong>Weather zone</strong> number, output the <strong>RequestedPlace</strong>
+              name in output</td>
+            </tr>
+            <tr>
+              <td align="center"><strong>3</strong></td>
+              <td><strong>AltZone</strong> is a <strong>Weather zone</strong> number, output the <strong>Weather
+              Zone</strong> name in output</td>
+            </tr>
+          </table>
+          </center></div><p><strong><font color="#FF0000">INTERNATIONAL USAGE NOTE:</font></strong>
+          &nbsp; For all countries besides the US set this setting to 0.</td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>AltCurrent</strong></td>
+          <td>This can be either an alternate place name to use for the current conditions or a
+          metar ICAO code to use to obtain the current condtions.<p><strong><font color="#FF0000">INTERNATIONAL
+          USAGE NOTE:</font></strong>&nbsp; For all countries besides the US only a metar ICAO code
+          is supported.</td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>AltCurrentCode</strong></td>
+          <td>This code is used to determine how the AltCurrent is applied.&nbsp; It can be a number
+          from 0 to 3. <br>
+          <div align="center"><center><table border="0" bgcolor="#C0C0C0">
+            <tr>
+              <td bgcolor="#000080" align="center"><strong><font color="#FFFFFF">Code</font></strong></td>
+              <td bgcolor="#000080"><strong><font color="#FFFFFF">Description</font></strong></td>
+            </tr>
+            <tr>
+              <td align="center"><strong>0</strong></td>
+              <td><strong>AltCurrent</strong> is a place name, output the <strong>RequestedPlace</strong>
+              name in output</td>
+            </tr>
+            <tr>
+              <td align="center"><strong>1</strong></td>
+              <td><strong>AltCurrent</strong> is a place name, output the <strong>AltCurrent</strong>
+              name in output</td>
+            </tr>
+            <tr>
+              <td align="center"><strong>2</strong></td>
+              <td><strong>AltCurrent</strong> is an <strong>ICAO code</strong>, output the <strong>RequestedPlace</strong>
+              name in output</td>
+            </tr>
+            <tr>
+              <td align="center"><strong>3</strong></td>
+              <td><strong>AltCurrent</strong> is an <strong>ICAO code</strong>, output the<strong> ICAO
+              place</strong> name in output</td>
+            </tr>
+          </table>
+          </center></div><p><strong><font color="#FF0000">INTERNATIONAL USAGE NOTE:</font></strong>
+          &nbsp; For all countries besides the US&nbsp; only codes 2 and 3 are supported.</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+  </div>
+</blockquote>
+
+<p>Following are some examples of what the advanced associations: 
+
+<ul>
+  <li>To make a request for shawsville display the Montgomery County zone forecast and the
+    Roanoke Current conditions while displaying only shawsville in the output:</li>
+</ul>
+
+<blockquote>
+  <p>shawsville=montgomery|0|ronaoke|0</p>
+</blockquote>
+
+<ul>
+  <li>To make a request for shawsville display the Montgomery County zone forecast and the
+    Roanoke Current conditions while displaying only shawsville in the output of the zone
+    portion and Roanoke in the output of the current conditions:<br>
+    <br>
+    shawsville=montgomery|0|ronaoke|1</li>
+</ul>
+
+<ul>
+  <li>To make a request for Blacksburg display the Montgomery County zone forecast and the
+    Virginia Tech Metar observation as the current condition while displaying only blacksburg
+    in the output:<br>
+    <br>
+    blacksburg=montgomery|0|KBCB|0<br>
+  </li>
+  <li>To make a request for Blacksburg display the zone forecast for virginia weather zone
+    number 14 and the Virginia Tech Metar observation as the current condition while
+    displaying only blacksburg in the output:<br>
+    <br>
+    blacksburg=14|0|KBCB|0</li>
+</ul>
+
+<p>Note that you can have&nbsp; one associate per line, thus if I wanted to have two
+associations you would simply have them on separate line. For example:</p>
+
+<blockquote>
+  <p>shawsville=montgomery|0|ronaoke|0<br>
+  blacksburg=montgomery|0|KBCB|0</p>
+</blockquote>
+
+<p>The association files go in the &quot;us/states/info/&quot; directory.&nbsp; You will
+notice that all state info for all fifty states is included in these, this is because it
+allowed for simpler installation that having 50 separate directories.</p>
+
+<p>Finally, if an association file does not exist for a state HAMweather will not fuss,
+for it will assume that there are not place associations and try to obtain the forecast
+for the &quot;place&quot; requested for.</p>
+
+<p><font color="#FF0000"><strong>NOTE</strong></font>: Currently the HAMweather Software
+package some predefined place&nbsp; simple association files, thanks to Joe Torsitano,
+&nbsp; but if you develop a file(s) that you believe would be useful to others send it to <a
+href="mailto:hamweather@hamweather.com">hamweather@hamweather.com</a> and HAMweather, LLC
+will try to make it available for others.</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><a name="Usage: &nbsp; Associated Cities"><big><font
+    color="#FFFFFF"><strong>Usage: &nbsp; Associated Cities</strong></font></big></a></td>
+  </tr>
+</table>
+
+<p>Often times in the form input of &quot;City, State&quot; used with the
+&quot;pands&quot; parameter individual will just enter a city name.&nbsp; HAMweather has
+the ability for you to create a cities association file for the major cities.&nbsp; This
+file can be used to provide the correct city and state name for&nbsp; a city, or place
+name.&nbsp; <strong>The associated Cities are different from the Assocociated places in
+that associated cities only work when just a city name is requested and the associated
+cities file only supplies the appropriate city and state names which are then follow the
+normal processing (they then go through the normal associated places processing.)</strong></p>
+
+<p><big><strong><font color="#000080">Configuration</font></strong></big></p>
+
+<p>Since there is no web based administration yet for associated cities you will have to
+do this the hard way.&nbsp; Actually its not too hard, you will simply need to create
+and/or edit a few text files.&nbsp; There is one main Cities file it uses the following
+name</p>
+
+<blockquote>
+  <p>city-places-all.txt</p>
+</blockquote>
+
+<p>If you tend to have a lot of associated cities then you can break the
+city-places-all.txt file into smaller files using the following naming convention:</p>
+
+<blockquote>
+  <p>city-places-X.txt</p>
+</blockquote>
+
+<p>Where X is the letter that is the same as the First letter of all the Cities with-in
+it.&nbsp; For instance the file name that would conatcin the City association for Ronaoke,
+Virginia would be:</p>
+
+<blockquote>
+  <p>city-places-r.txt</p>
+</blockquote>
+
+<p>Note: That if a city name is not found in the individual lettered cit-plces file then
+it will search in the city-places-all.txt file.</p>
+
+<p><strong><font color="#FF0000">INTERNATIONAL USAGE NOTE:</font></strong>&nbsp; For non
+US altplace files the naming convention is ZZ-city-places-all.txt where ZZ is the
+countries two letter abbreviation. Thus u can have seperate city-places files for differnt
+countries.</p>
+
+<p><font color="#000080"><big><strong>Actual Associations</strong></big></font></p>
+
+<p>The actual associations are simple.&nbsp; ther is one association per line as it
+follows the following format:</p>
+
+<blockquote>
+  <p>RequestedCity|ActualCity|ActualState|ActualCountry</p>
+</blockquote>
+
+<p>where: 
+
+<ul>
+  <li><strong>RequestedCity</strong> is the city name the user typed in</li>
+  <li><strong>ActualCity</strong> is the City name we will use</li>
+  <li><strong>ActualCityState</strong> is the state two letter abbreviation that the <strong>ActualCity</strong>
+    is in.</li>
+  <li><strong>ActualCountry</strong> is the two letter abbreviation for the country that the
+    Actual City is in.<br>
+    <strong><font color="#FF0000">INTERNATIONAL USAGE NOTE:</font></strong>&nbsp; If you are
+    not using state/provinces in yoru country then the ActualState and ActualCountry should
+    both be equal to the countries two letter abbreviation</li>
+</ul>
+
+<p>An example of a city associtation for Las Vegas would look like:</p>
+
+<blockquote>
+  <p>las vegas|las vegas|NV|us</p>
+</blockquote>
+
+<p>This would allow the user to enter just the name Las Vegas with out the state. For
+HAMweather would find the state name from the Cities association file.</p>
+
+<p><font color="#FF0000"><strong>NOTE</strong></font>: Currently the HAMweather Software
+package some predefined place&nbsp; simple association files, thanks to Joe Torsitano,
+&nbsp; but if you develop a file(s) that you believe would be useful to others send it to <a
+href="mailto:hamweather@hamweather.com">hamweather@hamweather.com</a> and HAMweather, LLC
+will try to make it available for others.</p>
+
+<p><em><small>HAMweather </small><font FACE="Verdana,Arial,Helvetica" size="1">copyright
+© 2000 by HAMweather, LLC, all rights reserved</font></em></p>
+</body>
+</html>

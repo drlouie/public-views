@@ -1,0 +1,3 @@
+EICK|Cork Airport
+EIDW|Dublin Airport
+EINN|Shannon Airport

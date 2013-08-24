@@ -1,0 +1,13 @@
+001=Cache Valley
+002=Great Salt Lake Deserts
+003=Wasatch Front
+004=Uinta Basin
+005=Price and Castle Valley
+006=Southwest Valleys and Deserts
+007=Sevier Valley
+008=Extreme Southeast
+009=Utah's Dixie
+010=Northern Mountains
+011=Southern Mountains and High Plateaus
+012=East Central Valleys
+013=South Central Valleys

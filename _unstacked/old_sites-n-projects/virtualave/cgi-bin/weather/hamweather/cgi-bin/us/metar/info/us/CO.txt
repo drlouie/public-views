@@ -1,0 +1,30 @@
+KAFF|Air Force Academy
+KAKO|Akron, Akron-Washington County Airport
+KALS|Alamosa, San Luis Valley Regional Airport
+KASE|Aspen, Aspen-Pitkin County Airport
+KBJC|Broomfield / Jeffco
+KBKF|Buckley Air National Guard Base / Denver
+KITR|Burlington, Carson County Airport
+KCOS|Colorado Springs, City Of Colorado Springs Municipal Airport
+KCEZ|Cortez, Cortez-Montezuma County Airport
+KCAG|Craig, Craig-Moffat Airport
+KAPA|Denver, Centennial Airport
+KDEN|Denver, Denver International Airport
+KDRO|Durango, Durango-La Plata County Airport
+KEGE|Eagle County Regional
+KFCS|Fort Carson
+KFNL|Fort Collins Automatic Weather Observing / Reporting System
+KGJT|Grand Junction, Walker Field
+KGXY|Greeley / Weld Automatic Weather Observing / Reporting System
+KGUC|Gunnison Automatic Weather Observing / Reporting System
+KHDN|Hayden / Yampa Automatic Weather Observing / Reporting System
+KLHX|La Junta, La Junta Municipal Airport
+KLAA|Lamar, Lamar Municipal Airport
+KLXV|Leadville, Lake County Airport
+KLIC|Limon, Limon Municipal Airport
+KEEO|Meeker, Meeker Airport
+KMTJ|Montrose, Montrose Regional Airport
+KPUB|Pueblo, Pueblo Memorial Airport
+KRIL|Rifle, Garfield County Regional Airport
+KSPD|Springfield, Comanche National Grassland
+KTAD|Trinidad / Animas Co.

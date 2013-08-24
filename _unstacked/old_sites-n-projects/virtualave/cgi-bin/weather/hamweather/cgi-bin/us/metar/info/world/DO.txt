@@ -1,0 +1,5 @@
+MDLR|La Romana International Airport
+MDSD|Las Americas
+MDPP|Puerto Plata International
+MDPC|Punta Cana
+MDST|Santiago

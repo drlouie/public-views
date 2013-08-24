@@ -1,0 +1,47 @@
+KAXA|Algona
+KAMW|Ames, Ames Municipal Airport
+KIKV|Ankeny, Ankeny Regional Airport
+KAIO|Atlantic
+KADU|Audubon, Audubon County Airport
+KBNW|Boone Municipal
+KBRL|Burlington, Burlington Regional Airport
+KCIN|Carroll
+KCID|Cedar Rapids, Cedar Rapids Municipal Airport
+KCNC|Chariton
+KCCY|Charles City
+KICL|Clarinda
+KCAV|Clarion
+KCWI|Clinton Municipal Automatic Weather Observing / Reporting System
+KCBF|Council Bluffs
+KCSQ|Creston
+KDVN|Davenport, Davenport Municipal Airport
+KDEH|Decorah
+KDNS|Denison
+KDSM|Des Moines, Des Moines International Airport
+KDBQ|Dubuque, Dubuque Regional Airport
+KEST|Estherville, Estherville Municipal Airport
+KFFL|Fair Field
+KFOD|Fort Dodge
+KFSW|Fort Madison
+KIOW|Iowa City, Iowa City Municipal Airport
+KEOK|Keokuk Municipal
+KOXV|Knoxville
+KLWD|Lamoni, Lamoni Municipal Airport
+KLRJ|Le Marine Aviation Reporting Station
+KMIW|Marshalltown, Marshalltown Municipal Airport
+KMCW|Mason City, Mason City Municipal Airport
+KMXO|Monticello Municipal
+KMUT|Muscatine
+KTNU|Newton Municipal
+KOLZ|Oelwen
+KORC|Orange City
+KOTM|Ottumwa, Ottumwa Industrial Airport
+KRDK|Red Oak
+KSHL|Sheldon
+KSDA|Shenandoah Municipal
+KSUX|Sioux City, Sioux Gateway Airport
+KSPW|Spencer, Spencer Municipal Airport
+KSLB|Storm Lake
+KAWG|Washington
+KALO|Waterloo, Waterloo Municipal Airport
+KEBS|Webster City

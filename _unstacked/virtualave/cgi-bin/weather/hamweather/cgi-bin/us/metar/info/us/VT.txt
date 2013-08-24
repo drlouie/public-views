@@ -1,0 +1,7 @@
+KMPV|Barre / Montpelier, Knapp State Airport
+KDDH|Bennington, Bennington Morse State Airport
+KBTV|Burlington, Burlington International Airport
+KMVL|Morrisville, Morrisville-Stowe State Airport
+KRUT|Rutland State Automatic Weather Observing / Reporting System
+K1V4|Saint Johnsbury
+KVSF|Springfield, Hartness State Springfield Airport

@@ -1,0 +1,4 @@
+UKBB|Boryspil
+UKKK|Kyiv
+UKLL|L'Viv
+UKOO|Odesa

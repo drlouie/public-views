@@ -1,0 +1,16 @@
+KEET|Alabaster, Shelby County Airport
+KANB|Anniston, Anniston Metropolitan Airport
+KAUO|Auburn-Opelika Airport
+KBHM|Birmingham, Birmingham International Airport
+KOZR|Cairns Army Air Field / Ozark
+KDCU|Decatur, Pryor Field
+KDHN|Dothan, Dothan Airport
+KGZH|Evergreen, Middleton Field
+KGAD|Gadsden Municipal Automatic Weather Observing / Reporting System
+KHSV|Huntsville, Huntsville International / Jones Field
+KMXF|Maxwell Air Force Base / Montgomery
+KBFM|Mobile, Mobile Downtown Airport
+KMOB|Mobile, Mobile Regional Airport
+KMGM|Montgomery, Dannelly Field
+KMSL|Muscle Shoals, North West Alabama Regional Airport
+KTCL|Tuscaloosa, Tuscaloosa Municipal Airport

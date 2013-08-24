@@ -1,0 +1,24 @@
+KALN|Alton / St. Louis Regional
+KARR|Aurora, Aurora Municipal Airport
+KBMI|Bloomington / Normal
+KCPS|Cahokia / St. Louis, St. Louis Downtown-Parks Airport
+KMDH|Carbondale / Murphysboro, Southern Illinois Airport
+KCMI|Champaign / Urbana, University Of Illinois-Willard Airport
+KCGX|Chicago / Meigs
+KUGN|Chicago / Waukegan, Waukegan Regional Airport
+KDPA|Chicago / West Chicago, Dupage Airport
+KPWK|Chicago / Wheeling, Pal-Waukee Airport
+KMDW|Chicago, Chicago Midway Airport
+KORD|Chicago, Chicago-O'Hare International Airport
+KDEC|Decatur, Decatur Airport
+KLWV|Lawrenceville, Lawrenceville-Vincennes International Airport
+KMWA|Marion Regional
+KMTO|Mattoon / Charleston, Coles County Memorial Airport
+KMLI|Moline, Quad-City Airport
+KMVN|Mount Vernon Automatic Weather Observing / Reporting System
+KPIA|Peoria, Greater Peoria Regional Airport
+KUIN|Quincy Municipal / Baldwin
+KRFD|Rockford, Greater Rockford Airport
+KBLV|Scott Air Force Base / Belleville
+KSPI|Springfield, Capital Airport
+KSQI|Sterling Rockfalls

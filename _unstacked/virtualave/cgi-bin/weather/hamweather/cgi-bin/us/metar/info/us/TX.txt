@@ -1,0 +1,83 @@
+KABI|Abilene, Abilene Regional Airport
+KDYS|Abilene, Dyess Air Force Base
+KALI|Alice, Alice International Airport
+KAMA|Amarillo, Amarillo International Airport
+KLBX|Angleton / Lake Jackson, Brazoria County Airport
+KGKY|Arlington, Arlington Municipal Airport
+KBPT|Beaumont / Port Arthur, Jefferson County Airport
+KAUS|Bergstrom, Austin-Bergstrom International Airport
+KBGD|Borger, Hutchinson County Airport
+KBRO|Brownsville, Brownsville / South Padre Island International Airport
+KBMQ|Burnet, Burnet Municipal Craddock Field
+KATT|Camp Mabry / Austin City
+KCDS|Childress, Childress Municipal Airport
+KCLL|College Station, Easterwood Field
+KCXO|Conroe, Montgomery County Airport
+KCRP|Corpus Christi, Corpus Christi International Airport
+KNGP|Corpus Christi, Naval Air Station
+KCRS|Corsicana, Campbell Field-Corsicana Municipal Airport
+KCOT|Cotulla, Cotulla-La Salle County Airport
+KDHT|Dalhart, Dalhart Municipal Airport
+KADS|Dallas / Addison Airport
+KDFW|Dallas / Fort Worth, Dallas / Fort Worth International Airport
+KDAL|Dallas, Dallas Love Field
+KRBD|Dallas, Redbird Airport
+KDRT|Del Rio, Del Rio International Airport
+KDTO|Denton, Denton Municipal Airport
+K6R6|Dryden, Terrel County Airport
+KELP|El Paso, El Paso International Airport
+KHLR|Fort Hood
+KGRK|Fort Hood / Gray U. S. Army Airfield
+KFST|Fort Stockton, Fort Stockton-Pecos County Airport
+KAFW|Fort Worth, Fort Worth Alliance Airport
+KFTW|Fort Worth, Meacham International Airport
+KNFW|Fort Worth, Naval Air Station
+KGLS|Galveston, Scholes Field
+KGTU|Georgetown Automatic Weather Observing / Reporting System
+KGVT|Greenville / Majors
+KHRL|Harlingen, Rio Grande Valley International Airport
+KHDO|Hondo, Hondo Municipal Airport
+KEFD|Houston / Ellington
+KLVJ|Houston, Clover Field
+KDWH|Houston, Hooks Memorial Airport
+KHOU|Houston, Houston Hobby Airport
+KIAH|Houston, Houston Intercontinental Airport
+KSGR|Houston, Sugar Land Municipal/Hull Field Airport
+KUTS|Huntsville, Huntsville Municipal Airport
+KJCT|Junction, Kimble County Airport
+KSKF|Kelly Air Force Base
+KILE|Killeen Municipal Automatic Weather Observing / Reporting System
+KNQI|Kingsville, Naval Air Station
+KLRD|Laredo International Airport
+KDLF|Laughlin, Laughlin Air Force Base Auxiliary Airfield
+KGGG|Longview, Gregg County Airport
+KLBB|Lubbock, Lubbock International Airport
+KLFK|Lufkin, Angelina County Airport
+KMRF|Marfa
+KPWG|Mc Gregor Automatic Weather Observing / Reporting System
+KMFE|McAllen, Miller International Airport
+KTKI|McKinney, McKinney Municipal Airport
+KMAF|Midland, Midland International Airport
+KMWL|Mineral Wells, Mineral Wells Airport
+KOCH|Nacogdoches Automatic Weather Observing / Reporting System
+KBAZ|New Braunfels, New Braunfels Municipal Airport
+KODO|Odessa, Odessa-Schlemeyer Field
+KPSX|Palacios Municipal
+KPRX|Paris / Cox Field
+KGDP|Pine Springs, Guadalupe Mountains National Park
+KPIL|Port Isabel, Port Isabel-Cameron County Airport
+KRND|Randolph Air Force Base
+KRKP|Rockport, Aransas County Airport
+KRPE|Sabine Pass
+KSJT|San Angelo, Mathis Field
+KSAT|San Antonio, San Antonio International Airport
+KSSF|San Antonio, Stinson Municipal Airport
+KHYI|San Marcos, San Marcos Municipal Airport
+KF39|Sherman-Denison
+KTPL|Temple / Miller Automatic Weather Observing / Reporting System
+KTRL|Terrell, Terrell Municipal Airport
+KTYR|Tyler, Tyler Pounds Field
+KVCT|Victoria, Victoria Regional Airport
+KACT|Waco, Waco Regional Airport
+KSPS|Wichita Falls, Sheppard Air Force Base
+KINK|Wink, Winkler County Airport

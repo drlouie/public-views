@@ -1,0 +1,75 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="POLYGON" COORDS="166, 225, 171, 222, 178, 220, 197, 220, 197, 225, 203, 234, 177, 235, 176, 224, 171, 224, 169, 224" HREF="%%scripturl%%?forecast=zandh&state=al&zone=069" alt="Houston">
+<AREA SHAPE="POLYGON" COORDS="137, 226, 174, 224, 175, 234, 137, 235" HREF="%%scripturl%%?forecast=zandh&state=al&zone=068" alt="Geneva">
+<AREA SHAPE="POLYGON" COORDS="179, 202, 181, 197, 189, 198, 196, 189, 196, 202, 202, 205, 198, 219, 181, 217, 182, 203, 184, 199, 183, 200" HREF="%%scripturl%%?forecast=zandh&state=al&zone=067" alt="Henry">
+<AREA SHAPE="POLYGON" COORDS="160, 203, 179, 203, 179, 219, 174, 221, 167, 220, 163, 226, 160, 223" HREF="%%scripturl%%?forecast=zandh&state=al&zone=066" alt="Dale">
+<AREA SHAPE="POLYGON" COORDS="137, 203, 159, 202, 159, 224, 137, 226, 134, 211" HREF="%%scripturl%%?forecast=zandh&state=al&zone=065" alt="Coffee	">
+<AREA SHAPE="POLYGON" COORDS="34, 253, 68, 256, 64, 262, 69, 268, 43, 281, 47, 276, 40, 270" HREF="%%scripturl%%?forecast=zandh&state=al&zone=064" alt="Lower Baldwin">
+<AREA SHAPE="POLYGON" COORDS="11, 250, 32, 251, 23, 274, 12, 270, 9, 253" HREF="%%scripturl%%?forecast=zandh&state=al&zone=063" alt="Lower Mobile">
+<AREA SHAPE="POLYGON" COORDS="36, 227, 50, 218, 55, 221, 54, 241, 65, 254, 32, 251" HREF="%%scripturl%%?forecast=zandh&state=al&zone=062" alt="Upper Baldwin">
+<AREA SHAPE="POLYGON" COORDS="9, 229, 36, 225, 31, 250, 9, 250" HREF="%%scripturl%%?forecast=zandh&state=al&zone=061" alt="Upper Mobile">
+<AREA SHAPE="POLYGON" COORDS="108, 210, 118, 209, 119, 208, 125, 210, 127, 209, 129, 214, 133, 213, 135, 235, 108, 235" HREF="%%scripturl%%?forecast=zandh&state=al&zone=060" alt="Covington">
+<AREA SHAPE="POLYGON" COORDS="57, 223, 67, 221, 69, 219, 100, 220, 104, 223, 106, 223, 106, 233, 58, 235" HREF="%%scripturl%%?forecast=zandh&state=al&zone=059" alt="Escambia">
+<AREA SHAPE="POLYGON" COORDS="121, 180, 122, 174, 130, 177, 130, 183, 137, 185, 135, 192, 138, 194, 137, 203, 133, 212, 130, 211, 130, 204, 126, 209, 123, 206, 120, 205, 119, 198, 123, 197" HREF="%%scripturl%%?forecast=zandh&state=al&zone=058" alt="Crenshaw">
+<AREA SHAPE="POLYGON" COORDS="93, 183, 119, 179, 121, 197, 118, 198, 118, 206, 101, 207, 92, 195" HREF="%%scripturl%%?forecast=zandh&state=al&zone=057" alt="Butler">
+<AREA SHAPE="POLYGON" COORDS="92, 196, 99, 207, 107, 208, 106, 224, 100, 221, 70, 221, 81, 208" HREF="%%scripturl%%?forecast=zandh&state=al&zone=056" alt="Conecuh">
+<AREA SHAPE="POLYGON" COORDS="59, 192, 92, 190, 92, 195, 84, 201, 80, 209, 67, 221, 57, 223, 49, 218, 58, 211" HREF="%%scripturl%%?forecast=zandh&state=al&zone=055" alt="Monroe">
+<AREA SHAPE="POLYGON" COORDS="53, 172, 59, 170, 61, 163, 67, 164, 82, 175, 97, 177, 97, 183, 93, 182, 93, 188, 61, 191, 60, 187, 54, 187" HREF="%%scripturl%%?forecast=zandh&state=al&zone=054" alt="Wilcox">
+<AREA SHAPE="POLYGON" COORDS="30, 180, 52, 178, 52, 186, 60, 190, 56, 212, 37, 226, 37, 205, 25, 194" HREF="%%scripturl%%?forecast=zandh&state=al&zone=053" alt="Clarke">
+<AREA SHAPE="POLYGON" COORDS="5, 198, 25, 196, 36, 206, 36, 224, 11, 230" HREF="%%scripturl%%?forecast=zandh&state=al&zone=052" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="10, 162, 32, 164, 23, 189, 27, 194, 7, 196" HREF="%%scripturl%%?forecast=zandh&state=al&zone=051" alt="Choctaw">
+<AREA SHAPE="POLYGON" COORDS="181, 171, 202, 177, 194, 191, 188, 197, 181, 196, 179, 202, 160, 202, 169, 182, 178, 180" HREF="%%scripturl%%?forecast=zandh&state=al&zone=050" alt="Barbour">
+<AREA SHAPE="POLYGON" COORDS="148, 177, 165, 189, 158, 202, 138, 201, 136, 182, 144, 184, 146, 180" HREF="%%scripturl%%?forecast=zandh&state=al&zone=049" alt="Pike">
+<AREA SHAPE="POLYGON" COORDS="179, 158, 185, 158, 187, 152, 202, 152, 208, 164, 200, 176, 179, 169" HREF="%%scripturl%%?forecast=zandh&state=al&zone=048" alt="Russell">
+<AREA SHAPE="POLYGON" COORDS="164, 148, 165, 142, 169, 138, 195, 138, 200, 152, 186, 152, 182, 156, 177, 156, 179, 152" HREF="%%scripturl%%?forecast=zandh&state=al&zone=047" alt="Lee">
+<AREA SHAPE="POLYGON" COORDS="147, 167, 177, 165, 179, 179, 170, 180, 164, 187, 160, 186, 157, 182, 153, 181, 150, 178, 147, 175" HREF="%%scripturl%%?forecast=zandh&state=al&zone=046" alt="Bullock">
+<AREA SHAPE="POLYGON" COORDS="144, 155, 157, 147, 178, 151, 177, 165, 153, 164" HREF="%%scripturl%%?forecast=zandh&state=al&zone=045" alt="Macon">
+<AREA SHAPE="CIRCLE" COORDS="129, 160, 7" HREF="%%scripturl%%?forecast=zandh&state=al&place=montgomery">
+<AREA SHAPE="POLYGON" COORDS="127, 136, 152, 139, 151, 152, 143, 154, 126, 149, 126, 139, 127, 139" HREF="%%scripturl%%?forecast=zandh&state=al&zone=043" alt="Elmore">
+<AREA SHAPE="POLYGON" COORDS="116, 159, 127, 149, 144, 155, 151, 164, 146, 166, 145, 183, 131, 181, 130, 176, 124, 175" HREF="%%scripturl%%?forecast=zandh&state=al&zone=044" alt="Montgomery">
+<AREA SHAPE="POLYGON" COORDS="101, 159, 117, 159, 120, 165, 122, 180, 99, 179, 96, 174" HREF="%%scripturl%%?forecast=zandh&state=al&zone=042" alt="Lowndes">
+<AREA SHAPE="POLYGON" COORDS="95, 144, 122, 140, 126, 152, 120, 159, 99, 157, 95, 149" HREF="%%scripturl%%?forecast=zandh&state=al&zone=041" alt="Autauga">
+<AREA SHAPE="POLYGON" COORDS="69, 152, 86, 149, 88, 143, 93, 143, 99, 161, 95, 176, 80, 176, 66, 163" HREF="%%scripturl%%?forecast=zandh&state=al&zone=040" alt="Dallas">
+<AREA SHAPE="POLYGON" COORDS="46, 148, 52, 152, 62, 152, 59, 171, 51, 171, 52, 180, 29, 177, 33, 163, 33, 159" HREF="%%scripturl%%?forecast=zandh&state=al&zone=039" alt="Marengo">
+<AREA SHAPE="POLYGON" COORDS="170, 116, 190, 114, 196, 138, 171, 139" HREF="%%scripturl%%?forecast=zandh&state=al&zone=038" alt="Chambers">
+<AREA SHAPE="POLYGON" COORDS="147, 118, 169, 117, 170, 137, 164, 140, 163, 148, 154, 153, 153, 137, 147, 135" HREF="%%scripturl%%?forecast=zandh&state=al&zone=037" alt="Tallapoosa">
+<AREA SHAPE="POLYGON" COORDS="120, 117, 147, 117, 144, 136, 128, 135, 118, 122" HREF="%%scripturl%%?forecast=zandh&state=al&zone=036" alt="Coosa">
+<AREA SHAPE="POLYGON" COORDS="94, 120, 114, 120, 124, 136, 121, 140, 106, 139, 106, 142, 89, 142, 89, 133, 93, 134" HREF="%%scripturl%%?forecast=zandh&state=al&zone=035" alt="Chilton">
+<AREA SHAPE="POLYGON" COORDS="64, 123, 72, 122, 74, 119, 77, 117, 82, 108, 95, 120, 94, 132, 75, 133, 75, 131, 69, 132" HREF="%%scripturl%%?forecast=zandh&state=al&zone=034" alt="Bibb">
+<AREA SHAPE="POLYGON" COORDS="67, 130, 75, 133, 89, 134, 84, 150, 67, 152, 66, 164, 62, 164, 60, 160" HREF="%%scripturl%%?forecast=zandh&state=al&zone=033" alt="Perry">
+<AREA SHAPE="POLYGON" COORDS="50, 123, 65, 123, 66, 132, 62, 132, 63, 142, 60, 142, 60, 152, 50, 152, 46, 146, 44, 130" HREF="%%scripturl%%?forecast=zandh&state=al&zone=032" alt="Hale">
+<AREA SHAPE="POLYGON" COORDS="22, 125, 43, 114, 49, 123, 43, 132, 46, 143, 44, 149, 36, 144, 31, 144" HREF="%%scripturl%%?forecast=zandh&state=al&zone=031" alt="Greene">
+<AREA SHAPE="POLYGON" COORDS="15, 125, 20, 126, 27, 135, 29, 141, 32, 145, 38, 144, 41, 149, 31, 158, 35, 162, 10, 162" HREF="%%scripturl%%?forecast=zandh&state=al&zone=030" alt="Sumter">
+<AREA SHAPE="POLYGON" COORDS="167, 98, 184, 96, 188, 115, 167, 115" HREF="%%scripturl%%?forecast=zandh&state=al&zone=029" alt="Randolph">
+<AREA SHAPE="POLYGON" COORDS="154, 97, 167, 97, 165, 116, 137, 116, 140, 107, 146, 105" HREF="%%scripturl%%?forecast=zandh&state=al&zone=028" alt="Clay">
+<AREA SHAPE="POLYGON" COORDS="137, 85, 160, 89, 150, 99, 146, 100, 144, 105, 140, 107, 134, 115, 120, 115" HREF="%%scripturl%%?forecast=zandh&state=al&zone=027" alt="Talladega">
+<AREA SHAPE="POLYGON" COORDS="129, 68, 145, 75, 128, 97, 117, 92, 117, 76" HREF="%%scripturl%%?forecast=zandh&state=al&zone=026" alt="St. Clair">
+<AREA SHAPE="POLYGON" COORDS="86, 109, 117, 90, 120, 96, 126, 96, 125, 105, 116, 122, 110, 118, 92, 119" HREF="%%scripturl%%?forecast=zandh&state=al&zone=025" alt="Shelby">
+<AREA SHAPE="POLYGON" COORDS="73, 94, 94, 73, 116, 77, 116, 92, 87, 109" HREF="%%scripturl%%?forecast=zandh&state=al&zone=024" alt="Jefferson">
+<AREA SHAPE="POLYGON" COORDS="44, 94, 69, 88, 71, 94, 87, 109, 81, 110, 77, 116, 73, 116, 70, 122, 43, 121" HREF="%%scripturl%%?forecast=zandh&state=al&zone=023" alt="Tuscaloosa">
+<AREA SHAPE="POLYGON" COORDS="18, 91, 43, 93, 42, 114, 21, 125, 16, 123, 17, 94" HREF="%%scripturl%%?forecast=zandh&state=al&zone=022" alt="Pickens">
+<AREA SHAPE="POLYGON" COORDS="171, 72, 180, 72, 184, 95, 155, 97" HREF="%%scripturl%%?forecast=zandh&state=al&zone=021" alt="Cleburne">
+<AREA SHAPE="POLYGON" COORDS="156, 54, 175, 38, 181, 68, 169, 69, 164, 66" HREF="%%scripturl%%?forecast=zandh&state=al&zone=020" alt="Cherokee">
+<AREA SHAPE="POLYGON" COORDS="143, 76, 161, 67, 173, 70, 159, 90, 139, 84" HREF="%%scripturl%%?forecast=zandh&state=al&zone=019" alt="Calhoun">
+<AREA SHAPE="POLYGON" COORDS="141, 54, 155, 54, 162, 67, 143, 74, 130, 65, 129, 61" HREF="%%scripturl%%?forecast=zandh&state=al&zone=018" alt="Etowah">
+<AREA SHAPE="POLYGON" COORDS="119, 50, 130, 58, 126, 72, 113, 79, 95, 74" HREF="%%scripturl%%?forecast=zandh&state=al&zone=017" alt="Blount">
+<AREA SHAPE="POLYGON" COORDS="83, 49, 117, 47, 111, 58, 93, 74, 84, 70" HREF="%%scripturl%%?forecast=zandh&state=al&zone=016" alt="Cullman">
+<AREA SHAPE="POLYGON" COORDS="57, 48, 82, 50, 83, 65, 56, 67" HREF="%%scripturl%%?forecast=zandh&state=al&zone=014" alt="Winston">
+<AREA SHAPE="POLYGON" COORDS="56, 66, 81, 66, 83, 72, 92, 76, 72, 95, 68, 84, 60, 82, 60, 72, 55, 70" HREF="%%scripturl%%?forecast=zandh&state=al&zone=015" alt="Walker">
+<AREA SHAPE="POLYGON" COORDS="39, 70, 52, 70, 54, 73, 60, 73, 60, 82, 67, 83, 64, 89, 55, 88, 51, 93, 37, 92" HREF="%%scripturl%%?forecast=zandh&state=al&zone=013" alt="Fayette">
+<AREA SHAPE="POLYGON" COORDS="22, 63, 36, 63, 35, 93, 20, 91" HREF="%%scripturl%%?forecast=zandh&state=al&zone=012" alt="Lamar">
+<AREA SHAPE="POLYGON" COORDS="25, 48, 54, 48, 52, 71, 39, 69, 37, 62, 23, 61" HREF="%%scripturl%%?forecast=zandh&state=al&zone=011" alt="Marion">
+<AREA SHAPE="POLYGON" COORDS="170, 20, 175, 36, 156, 54, 144, 53, 141, 38" HREF="%%scripturl%%?forecast=zandh&state=al&zone=010" alt="De Kalb">
+<AREA SHAPE="POLYGON" COORDS="130, 11, 169, 10, 169, 18, 143, 38, 136, 30, 129, 34" HREF="%%scripturl%%?forecast=zandh&state=al&zone=009" alt="Jackson">
+<AREA SHAPE="POLYGON" COORDS="118, 39, 128, 39, 134, 30, 142, 37, 142, 53, 132, 59, 114, 47" HREF="%%scripturl%%?forecast=zandh&state=al&zone=008" alt="Marshall">
+<AREA SHAPE="POLYGON" COORDS="84, 27, 103, 34, 116, 35, 113, 47, 83, 49" HREF="%%scripturl%%?forecast=zandh&state=al&zone=007" alt="Morgan">
+<AREA SHAPE="POLYGON" COORDS="105, 10, 131, 9, 128, 37, 119, 39, 113, 33, 106, 33, 106, 6, 134, 9, 131, 9" HREF="%%scripturl%%?forecast=zandh&state=al&zone=006" alt="Madison">
+<AREA SHAPE="POLYGON" COORDS="80, 10, 102, 9, 102, 35, 78, 22" HREF="%%scripturl%%?forecast=zandh&state=al&zone=005" alt="Limestone">
+<AREA SHAPE="POLYGON" COORDS="67, 22, 77, 22, 85, 28, 83, 49, 59, 47, 61, 33" HREF="%%scripturl%%?forecast=zandh&state=al&zone=004" alt="Lawrence">
+<AREA SHAPE="POLYGON" COORDS="25, 33, 60, 34, 59, 47, 25, 46" HREF="%%scripturl%%?forecast=zandh&state=al&zone=003" alt="Franklin">
+<AREA SHAPE="POLYGON" COORDS="66, 22, 59, 35, 26, 32, 28, 13, 43, 23" HREF="%%scripturl%%?forecast=zandh&state=al&zone=002" alt="Colbert">
+<AREA SHAPE="POLYGON" COORDS="22, 8, 80, 10, 76, 22, 60, 19, 44, 24" HREF="%%scripturl%%?forecast=zandh&state=al&zone=001" alt="Lauderdale">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="283" alt="AL" src="%%stateimagesurl%%/al-zones.gif" width="212">
+<-end image map->

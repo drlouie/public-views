@@ -1,0 +1,11 @@
+Alton|Alton|100
+Carbondale|Carbondale|84
+Champaign|Champaign|45
+ - O'Hare|Chicago|14
+Lawrenceville|Lawrenceville|73
+Macomb|Macomb|35
+Moline|Moline|15
+Mt. Vernon|Mt. Vernon|75
+Peoria|Peoria|29
+Rockford|Rockford|3
+Springfield|Springfield|51

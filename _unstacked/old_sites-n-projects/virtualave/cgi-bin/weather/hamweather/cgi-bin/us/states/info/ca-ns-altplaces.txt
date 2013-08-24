@@ -1,0 +1,10 @@
+
+amherst=fpcn11.whx.htm--CENTRAL|0
+greenwood=fpcn11.whx.htm--CENTRAL|0|CYZX|2
+halifax=fpcn11.whx.htm--HALIFAX|0
+new glasgow=fpcn11.whx.htm--CENTRAL|0
+port hawkesbury=fpcn11.whx.htm--CAPE BRETON|0
+shearwater=fpcn11.whx.htm--HALIFAX|0|CYAW|2
+sydney=fpcn11.whx.htm--CAPE BRETON|0|CYQY|2
+truro=fpcn11.whx.htm--HALIFAX|0
+yarmouth=fpcn11.whx.htm--CENTRAL|0

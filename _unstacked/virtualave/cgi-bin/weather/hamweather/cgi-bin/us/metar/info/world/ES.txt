@@ -1,0 +1,35 @@
+LEAL|Alicante / El Altet
+LEAM|Almeria / Aeropuerto
+LEAS|Asturias / Aviles
+LEBL|Barcelona / Aeropuerto
+LEBB|Bilbao / Sondica
+GCFV|Fuerteventura / Aeropuerto
+LEGE|Gerona / Costa Brava
+LEGR|Granada / Aeropuerto
+GCHI|Hierro / Aeropuerto
+LEIB|Ibiza / Es Codola
+LEJR|Jerez De La Fronteraaeropuerto
+LECO|La Coruna / Alvedro
+GCLA|La Palma / Aeropuerto
+GCRR|Lanzarote / Aeropuerto
+GCLP|Las Palmas De Gran Canaria / Gando
+LEMD|Madrid / Barajas
+LEVS|Madrid / Cuatro Vientos
+LEMG|Malaga / Aeropuerto
+GEML|Melilla
+LEMH|Menorca / Mahon
+LELC|Murcia / San Javier
+LEPA|Palma De Mallorca / Son San Juan
+LEPP|Pamplona / Noain
+LERS|Reus / Aeropuerto
+LESO|San Sebastian / Fuenterrabia
+LEXJ|Santander / Parayas
+LEST|Santiago / Labacolla
+LEZL|Sevilla / San Pablo
+GCXO|Tenerife / Los Rodeos
+GCTS|Tenerife Sur
+LEVC|Valencia / Aeropuerto
+LEVD|Valladolid / Villanubla
+LEVX|Vigo / Peinador
+LEVT|Vitoria
+LEZG|Zaragoza / Aeropuerto

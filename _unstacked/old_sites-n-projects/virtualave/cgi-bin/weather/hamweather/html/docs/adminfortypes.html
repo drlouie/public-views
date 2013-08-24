@@ -1,0 +1,165 @@
+<html>
+
+<head>
+<title>HAMweather Administration : Forecast Types</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Administration :
+    Forecast Types</strong></big></font></td>
+  </tr>
+</table>
+
+<p>HAMweather administration allows you to set what forecasts you want to be made
+available to the web visitor.&nbsp; Along with what forecasts are available, HAMweather
+will also allow you to set the name of the template used to display the forecast and the
+maximum time (in minutes) before a forecast in the HAMweather cache expires.&nbsp; To
+modify these settings, click on the &quot;Forecast Types&quot; link in the Administration
+options at the top left of any administration page. </p>
+
+<p>When viewing the main &quot;Forecast Types&quot; screen, you will see a table of all
+the available forecast types.&nbsp; Each row will look similar to this:</p>
+<div align="center"><center>
+
+<table align="center" border="0" cellPadding="2" cellSpacing="2">
+<tbody>
+  <tr bgColor="#336699">
+    <th colSpan="6"><font color="#ffffff"><big>Forecast Types</big></font></th>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <th><u><font color="#0000FF"><small>Add New</small></font></u></th>
+    <th>Forecast Type</th>
+    <th>IWIN/URL</th>
+    <th>Template</th>
+    <th>Mode</th>
+    <th>Max Age</th>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td><font color="#0000FF"><u><font size="1">Del</font></u>&nbsp;&nbsp; <u><font size="1">Edit</font></u></font></td>
+    <td><b>aviation</b></td>
+    <td>aviation.html</td>
+    <td>other.html</td>
+    <td>0</td>
+    <td align="middle">120</td>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td><font color="#0000FF"><u><font size="1">Del</font></u>&nbsp;&nbsp; <u><font size="1">Edit</font></u></font></td>
+    <td><b>crop</b></td>
+    <td>crop.html</td>
+    <td>usother.html</td>
+    <td>2</td>
+    <td align="middle">600</td>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td><font color="#0000FF"><u><font size="1">Del</font></u>&nbsp;&nbsp; <u><font size="1">Edit</font></u></font></td>
+    <td><b>discussion</b></td>
+    <td>discussion.html</td>
+    <td>other.html</td>
+    <td>0</td>
+    <td align="middle">120</td>
+  </tr>
+</tbody>
+</table>
+</center></div>
+
+<p><font color="#000080"><strong>Forecast Type Column:<br>
+</strong></font>This is the forecast type name that you will use inthe forecast=xxxx
+parameter when requesting a forecast.</p>
+
+<p><font color="#000080"><strong>IWIN/URL Column:<br>
+</strong></font>This is the either the name of the html file on the IWIN the corresponds
+to the needed weather info. Or it can be a complete URL to the information needed.</p>
+
+<p><strong><font color="#000080">Template Column:<br>
+</font></strong>The template name, to the right of the forecast type, is the name of the
+template to use when outputting this forecast.&nbsp; You may notice that several forecast
+types use the same template, this is fine.&nbsp; To change template name, simply type in
+the name of the new template you want to associate the with the forecast type.&nbsp; Then
+click the submit button at the bottom of the table.<br>
+<font color="#FF0000">NOTE</font>:&nbsp; HAMweather administration will not check to see
+if the template exits.&nbsp; If it does not, remember to create it before allowing web
+visitors to obtain this forecast type.</p>
+
+<p><font color="#000080"><strong>The Mode Column:<br>
+</strong></font>This will be expanded in the future but for now it shoudl be a number
+between 0 and 3. With:</p>
+
+<blockquote>
+  <ul>
+    <li>0 = State level general data. Simply clean up and send to output.</li>
+    <li>1 = Local level data. such as zone forecast and shortterm forecasts</li>
+    <li>2 = National Level general data. Simply clean up and output.</li>
+    <li>3 = Metar Data. Treat special as a metar current Observation.</li>
+  </ul>
+</blockquote>
+
+<p><font color="#000080"><strong>Max Age Column</strong></font>:<br>
+The max age is the right most text box on each row.&nbsp; This number is the amount of
+time a cached forecast is good for before expiring.&nbsp; </p>
+
+<p><font color="#000080"><strong>Add New Link:<br>
+</strong></font>You click on this link to make a new forecast type be available for use in
+HAmweather. When you click this you will see a new page with a form that looks similar to
+below appear. Simply enter the Forecast type, what template to use whenoutputting, the
+IWIN file or URL to use to fetch the data, function type per the info stated above and
+finally the Max age to cache the data for in the HAmweather Cache.</p>
+<div align="center"><center>
+
+<table align="center" border="0" cellPadding="3" cellSpacing="2">
+<tbody>
+  <tr>
+    <th bgColor="#336699"><font color="#ffffff"><big>Add Forecast Type</big></font></th>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td><table border="0">
+<tbody>
+      <tr>
+        <td>Forecast Type: <input name="ftype" size="20"></td>
+        <td>Template: <input name="T" size="20"></td>
+      </tr>
+      <tr>
+        <td>IWIN File/URL: <input name="IWIN" size="20"></td>
+        <td>Function Type: <select name="FN" size="1">
+          <option selected value="0">0</option>
+          <option value="0">1</option>
+          <option value="0">2</option>
+          <option value="0">3</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td colSpan="2">Max Cache Age <small>(minutes)</small>: <input name="MA" size="5" value="120"></td>
+      </tr>
+      <tr>
+        <td colSpan="2"><p align="center"><input name="Submit" type="submit" value="Submit"> <input name="Submit" type="submit" value="Cancel"> <input name="Reset" type="reset" value="Reset">
+        </td>
+      </tr>
+</tbody>
+    </table>
+    </td>
+  </tr>
+</tbody>
+</table>
+</center></div><!--webbot bot="HTMLMarkup" StartSpan --><INPUT name="user" type="hidden" value="default"><!--webbot BOT="HTMLMarkup" endspan -->
+
+<p align="left"><font color="#000080"><strong>DEL Link:</strong></font><br>
+Use this link to delete the current forecast type and it various settings.&nbsp; Be
+careful when deleting the various forecast types.</p>
+
+<p align="left"><font color="#000080"><strong>EDIT Link:</strong></font><br>
+Use this link to edit the properties of the current forecast type.</p>
+<!--webbot bot="HTMLMarkup" StartSpan --><INPUT name="do" type="hidden" value="save"><!--webbot BOT="HTMLMarkup" endspan -->
+
+<p align="center"></p>
+<!--webbot bot="HTMLMarkup" StartSpan --><INPUT name="what" type="hidden" value="ftype"><!--webbot BOT="HTMLMarkup" endspan -->
+
+<p align="center"></p>
+
+<p>&nbsp;</p>
+
+<p><a href="adminothertemplates.html"><small>Administrate those Other Templates.</small></a>
+</p>
+</body>
+</html>

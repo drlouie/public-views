@@ -1,0 +1,29 @@
+baie-comeau|eastern|fpcn14.wxk.htm|fpcn54.wxk.htm
+blanc-sablon|eastern|fpcn14.wxk.htm|fpcn54.wxk.htm
+cap-chat|eastern|fpcn14.wxk.htm|fpcn54.wxk.htm|Grande-Vallée
+chibougamau|central|fpcn13.wqb.htm|fpcn54.wqb.htm
+chicoutimi|central|fpcn13.wqb.htm|fpcn54.wqb.htm|SAGUENAY
+drummondville|central|fpcn13.wqb.htm|fpcn54.wqb.htm
+gaspe|eastern|fpcn14.wxk.htm|fpcn54.wxk.htm|Gaspé
+gatineau|western|fpcn11.wul.htm|fpcn54.wul.htm
+harrington|western|fpcn11.wul.htm|fpcn54.wul.htm|PONTIAC
+hull|southeastern|fpcn11.woz.htm|fpcn54.woz.htm
+iles-de-la-madeleine|iles|fpcn13.whx.htm|fpcn54.whx.htm|Iles de la madeleine
+inukjuak|extreme|fpcn15.wqb.htm|fpcn54.wqb.htm
+kuujjuaq|extreme|fpcn15.wqb.htm|fpcn54.wqb.htm
+la grande|northern|fpcn12.wqb.htm|fpcn54.wqb.htm|JAMES-BAY
+la tuque|central|fpcn13.wqb.htm|fpcn54.wqb.htm
+maniwaki|western|fpcn11.wul.htm|fpcn54.wul.htm|PONTIAC
+mont-joli|eastern|fpcn14.wxk.htm|fpcn54.wxk.htm
+montreal|western|fpcn11.wul.htm|fpcn54.wul.htm|Montréal métropolitain-Laval
+quebec city|central|fpcn13.wqb.htm|fpcn54.wqb.htm|Montmagny
+riviere-du-loup|eastern|fpcn14.wxk.htm|fpcn54.wxk.htm|Rivière-du-Loup
+roberval|central|fpcn13.wqb.htm|fpcn54.wqb.htm|Lac-Saint-Jean
+rouyn-noranda|western|fpcn11.wul.htm|fpcn54.wul.htm|ABITIBI
+salluit|extreme|fpcn15.wqb.htm|fpcn54.wqb.htm
+sept-iles|eastern|fpcn14.wxk.htm|fpcn54.wxk.htm|Sept-Îles
+sherbrooke|central|fpcn13.wqb.htm|fpcn54.wqb.htm|Estrie
+st-jérome|western|fpcn11.wul.htm|fpcn54.wul.htm|Saint-Jérome
+st-jovite|western|fpcn11.wul.htm|fpcn54.wul.htm|LAURENTIDES
+trois-rivieres|central|fpcn13.wqb.htm|fpcn54.wqb.htm|Mauricie
+val-d'or|western|fpcn11.wul.htm|fpcn54.wul.htm|ABITIBI

@@ -1,0 +1,18 @@
+KLEW|Auburn-Lewiston
+KAUG|Augusta, Augusta State Airport
+KBGR|Bangor, Bangor International Airport
+KBHB|Bar Harbor Automatic Weather Observing / Reporting System
+KNHZ|Brunswick, Naval Air Station
+KCAR|Caribou, Caribou Municipal Airport
+K40B|Clayton Lake
+KFVE|Frenchville, Northern Aroostook Regional Airport
+KIZG|Fryeburg, Eastern Slopes Regional Airport
+KGNR|Greenville
+KHUL|Houlton, Houlton International Airport
+KMLT|Millinocket, Millinocket Municipal Airport
+KPWM|Portland, Portland International Jetport
+KPQI|Presque Isle
+KRKD|Rockland / Knox Automatic Weather Observing / Reporting System
+KSFM|Sanford Municipal Automatic Weather Observing / Reporting System
+KWVL|Waterville Automatic Weather Observing / Reporting System
+KIWI|Wiscasset, Wiscasset Airport

@@ -1,0 +1,7 @@
+
+bathurst=fpcn11.wzf.htm--|0
+edmundston=fpcn11.wzf.htm--|0
+fredericton=fpcn11.wzf.htm--|0|CYFC|2
+miramichi=fpcn11.wzf.htm--|0
+moncton=fpcn11.wzf.htm--|0|CYQM|2
+saint john=fpcn11.wzf.htm--|0

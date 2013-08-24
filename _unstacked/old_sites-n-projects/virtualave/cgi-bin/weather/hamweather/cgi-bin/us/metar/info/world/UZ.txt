@@ -1,0 +1,3 @@
+UTSS|Samarkand
+UTTT|Tashkent
+UTST|Termez

@@ -1,0 +1,85 @@
+<-begin image map->
+<MAP NAME="FrontPageMap0">
+<AREA SHAPE="CIRCLE" COORDS="365, 148, 2" HREF="%%scripturl%%?forecast=zandh&state=ny&place=Albany">
+<AREA SHAPE="POLYGON" COORDS="432, 267, 493, 247, 484, 243, 473, 248, 461, 248, 446, 254, 431, 257" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=081" alt="Southeast Suffolk">
+<AREA SHAPE="POLYGON" COORDS="429, 256, 441, 254, 458, 242, 454, 241, 427, 251" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=079" alt="Northeast Suffolk">
+<AREA SHAPE="POLYGON" COORDS="390, 263, 428, 257, 432, 267, 374, 276, 389, 271" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=080" alt="Southwest Suffolk">
+<AREA SHAPE="POLYGON" COORDS="387, 263, 428, 256, 425, 251, 406, 252, 400, 255, 389, 255, 385, 259" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=078" alt="Northwest Suffolk">
+<AREA SHAPE="POLYGON" COORDS="388, 269, 371, 272, 371, 260, 385, 257" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=077" alt="Nassau">
+<AREA SHAPE="POLYGON" COORDS="362, 270, 370, 270, 370, 263, 364, 262, 358, 262" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=076" alt="Queens">
+<AREA SHAPE="POLYGON" COORDS="354, 273, 356, 268, 361, 269, 357, 275" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=075" alt="Kings (Brooklyn)">
+<AREA SHAPE="POLYGON" COORDS="361, 254, 368, 255, 375, 249, 372, 243, 361, 248" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=071" alt="Southern Westchester">
+<AREA SHAPE="POLYGON" COORDS="360, 247, 385, 237, 382, 228, 360, 228, 356, 232" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=070" alt="Northern Westchester">
+<AREA SHAPE="POLYGON" COORDS="382, 226, 357, 228, 356, 223, 371, 219, 374, 217, 384, 217" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=068" alt="Putnam">
+<AREA SHAPE="POLYGON" COORDS="360, 249, 344, 241, 355, 232" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=069" alt="Rockland">
+<AREA SHAPE="POLYGON" COORDS="340, 241, 311, 226, 311, 217, 324, 216, 336, 211, 355, 214, 354, 221, 356, 229" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=067" alt="Orange">
+<AREA SHAPE="POLYGON" COORDS="328, 213, 324, 218, 309, 218, 308, 223, 297, 218, 292, 212, 292, 202, 289, 198, 311, 189, 324, 195, 320, 201" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=062" alt="Sullivan">
+<AREA SHAPE="POLYGON" COORDS="336, 211, 332, 211, 331, 209, 320, 202, 326, 196, 311, 186, 326, 177, 336, 182, 346, 183" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=063" alt="Western Ulster">
+<AREA SHAPE="POLYGON" COORDS="338, 211, 348, 182, 354, 179, 360, 182, 356, 212" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=064" alt="Eastern Ulster">
+<AREA SHAPE="POLYGON" COORDS="370, 218, 356, 221, 360, 182, 373, 187" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=065" alt="Western Dutchess">
+<AREA SHAPE="POLYGON" COORDS="372, 188, 371, 217, 383, 217, 385, 187" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=066" alt="Eastern Dutchess">
+<AREA SHAPE="POLYGON" COORDS="347, 182, 355, 177, 358, 180, 368, 165, 353, 164" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=059" alt="Eastern Greene">
+<AREA SHAPE="POLYGON" COORDS="346, 182, 353, 161, 344, 164, 330, 168, 325, 177" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=058" alt="Western Greene">
+<AREA SHAPE="POLYGON" COORDS="351, 148, 353, 163, 341, 162" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=051" alt="Western Albany">
+<AREA SHAPE="POLYGON" COORDS="366, 163, 341, 163, 347, 147, 351, 147, 352, 144, 372, 143" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=052" alt="Eastern Albany">
+<AREA SHAPE="POLYGON" COORDS="370, 186, 361, 183, 360, 179, 362, 176, 371, 159, 381, 160" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=060" alt="Western Columbia">
+<AREA SHAPE="POLYGON" COORDS="394, 159, 384, 185, 382, 187, 371, 188, 383, 158" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=061" alt="Eastern Columbia">
+<AREA SHAPE="POLYGON" COORDS="377, 132, 388, 131, 382, 156, 369, 159" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=053" alt="Western Rensselaer">
+<AREA SHAPE="POLYGON" COORDS="382, 159, 390, 131, 398, 131, 398, 143, 395, 156, 386, 158" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=054" alt="Eastern Rensselaer">
+<AREA SHAPE="POLYGON" COORDS="387, 78, 392, 78, 391, 90, 391, 93, 395, 90, 400, 97, 398, 131, 377, 131, 381, 124, 378, 105, 377, 94" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=043" alt="Washington">
+<AREA SHAPE="POLYGON" COORDS="375, 133, 349, 120, 346, 108, 356, 105, 358, 105, 369, 113, 377, 110, 380, 122" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=041" alt="Northern Saratoga">
+<AREA SHAPE="POLYGON" COORDS="345, 105, 343, 84, 376, 80, 384, 80, 384, 86, 376, 96, 377, 108, 369, 113, 360, 103" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=042" alt="Warren">
+<AREA SHAPE="POLYGON" COORDS="394, 35, 397, 40, 395, 44, 396, 48, 391, 59, 390, 61, 390, 70, 392, 73, 392, 78, 374, 78, 382, 38" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=035" alt="Eastern Essex">
+<AREA SHAPE="POLYGON" COORDS="379, 42, 372, 80, 353, 81, 339, 71, 339, 60, 350, 60, 350, 42, 359, 42" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=034" alt="Western Essex">
+<AREA SHAPE="POLYGON" COORDS="304, 107, 313, 109, 327, 113, 343, 114, 344, 112, 342, 83, 351, 82, 343, 77, 335, 72, 338, 70, 338, 61, 319, 61, 303, 65, 307, 100" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=033" alt="Hamilton">
+<AREA SHAPE="POLYGON" COORDS="347, 122, 376, 132, 373, 140, 365, 141, 349, 129" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=050" alt="Southern Saratoga">
+<AREA SHAPE="POLYGON" COORDS="309, 125, 321, 128, 347, 130, 347, 113, 343, 113, 343, 116, 332, 116, 332, 115, 310, 111" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=039" alt="Fulton">
+<AREA SHAPE="POLYGON" COORDS="363, 141, 350, 130, 353, 142" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=049" alt="Eastern Schenectady">
+<AREA SHAPE="POLYGON" COORDS="350, 135, 352, 144, 342, 147, 340, 140" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=048" alt="Western Schenectady">
+<AREA SHAPE="POLYGON" COORDS="308, 136, 310, 124, 321, 129, 347, 129, 349, 132, 337, 140, 327, 142" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=040" alt="Montgomery">
+<AREA SHAPE="POLYGON" COORDS="316, 138, 313, 158, 327, 167, 330, 166, 337, 166, 345, 146, 337, 146, 339, 141, 328, 143" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=047" alt="Schoharie">
+<AREA SHAPE="POLYGON" COORDS="270, 188, 275, 192, 279, 196, 285, 196, 286, 198, 325, 178, 323, 176, 328, 168, 312, 158, 270, 170, 269, 174, 269, 176" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=057" alt="Delaware">
+<AREA SHAPE="POLYGON" COORDS="270, 168, 311, 156, 315, 154, 315, 142, 315, 139, 308, 136, 301, 135, 297, 138, 288, 132, 277, 138, 273, 153, 269, 157" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=046" alt="Otsego">
+<AREA SHAPE="POLYGON" COORDS="281, 135, 286, 134, 287, 131, 298, 136, 299, 133, 306, 135, 309, 126, 307, 119, 310, 118, 311, 111, 303, 108, 290, 107, 284, 112, 287, 115, 281, 123, 281, 131" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=038" alt="Southern Herkimer">
+<AREA SHAPE="POLYGON" COORDS="301, 107, 287, 107, 286, 65, 302, 65, 307, 99" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=032" alt="Northern Herkimer">
+<AREA SHAPE="POLYGON" COORDS="319, 61, 288, 64, 321, 48" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=029" alt="Southern St. Lawrence">
+<AREA SHAPE="POLYGON" COORDS="322, 59, 349, 58, 348, 41, 360, 40, 358, 28, 322, 48" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=030" alt="Southern Franklin">
+<AREA SHAPE="POLYGON" COORDS="379, 39, 360, 41, 358, 28, 383, 20" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=031" alt="Southwest Cliton">
+<AREA SHAPE="POLYGON" COORDS="357, 28, 384, 18, 380, 39, 395, 34, 393, 31, 392, 27, 392, 25, 395, 21, 394, 16, 394, 13, 394, 6, 354, 8" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=028" alt="Northeast Clinton">
+<AREA SHAPE="POLYGON" COORDS="321, 48, 356, 27, 354, 8, 312, 6, 317, 9" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=027" alt="Northern Franklin">
+<AREA SHAPE="POLYGON" COORDS="284, 63, 321, 47, 316, 9, 312, 10, 308, 9, 298, 9, 289, 12, 279, 15, 246, 37, 244, 42" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=026" alt="Northern St. Lawrence">
+<AREA SHAPE="POLYGON" COORDS="279, 134, 267, 134, 266, 132, 264, 131, 264, 129, 250, 116, 251, 112, 282, 112, 287, 116, 280, 123" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=037" alt="Southern Oneida">
+<AREA SHAPE="POLYGON" COORDS="283, 111, 250, 111, 247, 117, 241, 115, 241, 109, 241, 106, 248, 97, 262, 102, 286, 94" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=009" alt="Northern Onedia">
+<AREA SHAPE="POLYGON" COORDS="247, 96, 262, 101, 285, 91, 285, 63, 266, 54, 265, 59, 266, 64, 252, 74, 248, 74, 246, 79" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=008" alt="Lewis">
+<AREA SHAPE="POLYGON" COORDS="222, 87, 221, 77, 226, 69, 222, 63, 217, 64, 213, 60, 244, 44, 265, 54, 262, 59, 265, 63, 250, 74, 246, 74, 244, 77, 245, 80, 245, 87, 237, 85" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=007" alt="Jefferson">
+<AREA SHAPE="POLYGON" COORDS="195, 105, 201, 100, 221, 94, 222, 87, 231, 87, 231, 85, 244, 87, 247, 97, 244, 99, 240, 106, 241, 107, 239, 116, 225, 112, 222, 110, 218, 113, 205, 113, 205, 111, 197, 111" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=006" alt="Oswego">
+<AREA SHAPE="POLYGON" COORDS="110, 108, 111, 119, 82, 118, 84, 111, 84, 105" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=002" alt="Orleans">
+<AREA SHAPE="POLYGON" COORDS="85, 135, 106, 135, 114, 135, 119, 128, 114, 122, 110, 121, 84, 121, 82, 125" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=011" alt="Genesee">
+<AREA SHAPE="POLYGON" COORDS="111, 107, 122, 107, 124, 108, 128, 109, 136, 113, 141, 113, 149, 112, 149, 122, 144, 124, 140, 130, 127, 131, 127, 129, 119, 129, 119, 124, 117, 124, 119, 120, 112, 120" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=003" alt="Monroe">
+<AREA SHAPE="POLYGON" COORDS="150, 112, 181, 111, 188, 108, 190, 123, 176, 127, 168, 126, 170, 124, 151, 124" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=004" alt="Wayne">
+<AREA SHAPE="POLYGON" COORDS="191, 126, 191, 116, 191, 106, 194, 105, 197, 112, 203, 112, 206, 115, 203, 125" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=005" alt="Northern Cayuaga">
+<AREA SHAPE="POLYGON" COORDS="188, 127, 191, 132, 191, 144, 199, 149, 215, 149, 218, 141, 213, 137, 208, 137, 204, 125" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=017" alt="Southern Cayuga">
+<AREA SHAPE="POLYGON" COORDS="237, 140, 223, 139, 216, 139, 213, 136, 207, 136, 205, 126, 204, 120, 205, 119, 206, 115, 215, 115, 218, 115, 221, 111, 234, 117, 238, 123, 240, 130" HREF="(241,">
+<AREA SHAPE="POLYGON" COORDS="275, 143, 263, 143, 262, 143, 243, 143, 239, 138, 242, 131, 240, 129, 240, 123, 237, 120, 237, 118, 246, 118, 250, 118, 257, 125, 258, 125, 261, 131, 265, 132, 265, 134, 278, 135" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=036" alt="Madison">
+<AREA SHAPE="POLYGON" COORDS="268, 175, 245, 174, 242, 145, 259, 145, 261, 144, 275, 144, 269, 158, 270, 162" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=045" alt="Chenango">
+<AREA SHAPE="POLYGON" COORDS="217, 163, 216, 152, 217, 142, 222, 140, 233, 141, 234, 141, 239, 140, 242, 163" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=044" alt="Cortland">
+<AREA SHAPE="POLYGON" COORDS="190, 157, 193, 164, 193, 169, 200, 171, 205, 168, 208, 168, 216, 167, 216, 159, 216, 151, 199, 150" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=025" alt="Tompkins">
+<AREA SHAPE="POLYGON" COORDS="189, 157, 180, 156, 178, 160, 169, 161, 168, 170, 180, 171, 192, 170, 192, 166" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=023" alt="Schuyler">
+<AREA SHAPE="POLYGON" COORDS="179, 153, 197, 153, 189, 145, 188, 140, 189, 138, 188, 133, 188, 127, 183, 126, 180, 127, 175, 129, 175, 141" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=016" alt="Seneca">
+<AREA SHAPE="POLYGON" COORDS="153, 152, 163, 155, 166, 159, 172, 158, 173, 159, 178, 159, 179, 151, 173, 141, 153, 142, 151, 145" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=015" alt="Yates">
+<AREA SHAPE="POLYGON" COORDS="142, 152, 151, 152, 150, 146, 153, 141, 174, 141, 174, 127, 167, 127, 167, 125, 143, 125, 143, 129, 139, 132, 136, 146, 140, 145" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=014" alt="Ontario">
+<AREA SHAPE="POLYGON" COORDS="108, 157, 109, 150, 115, 146, 115, 137, 119, 130, 126, 129, 125, 132, 137, 132, 138, 134, 137, 137, 136, 141, 135, 143, 135, 146, 141, 147, 141, 151, 135, 153, 131, 154, 126, 158" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=013" alt="Livingston">
+<AREA SHAPE="POLYGON" COORDS="83, 154, 82, 140, 85, 135, 93, 136, 94, 135, 106, 135, 108, 136, 113, 137, 115, 147, 109, 152, 108, 157, 95, 156" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=012" alt="Wyoming">
+<AREA SHAPE="POLYGON" COORDS="52, 124, 46, 122, 49, 111, 83, 105, 84, 111, 81, 113, 81, 118, 81, 122, 65, 122, 58, 127" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=001" alt="Niagara">
+<AREA SHAPE="POLYGON" COORDS="43, 151, 49, 143, 61, 139, 56, 129, 58, 127, 65, 124, 74, 123, 81, 123, 84, 134, 82, 139, 83, 140, 83, 154, 78, 156, 71, 158, 59, 159, 50, 154" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=010" alt="Erie">
+<AREA SHAPE="POLYGON" COORDS="225, 188, 269, 187, 269, 176, 257, 176, 257, 175, 244, 174, 242, 164, 228, 164, 229, 170, 230, 176, 228, 179" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=056" alt="Broome">
+<AREA SHAPE="POLYGON" COORDS="200, 188, 226, 188, 227, 178, 229, 178, 229, 170, 227, 170, 226, 164, 217, 164, 218, 167, 218, 170, 210, 169, 208, 171, 202, 172" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=055" alt="Tioga">
+<AREA SHAPE="POLYGON" COORDS="173, 188, 200, 187, 201, 178, 201, 172, 198, 172, 197, 174, 191, 173, 189, 171, 181, 171, 177, 172, 176, 179" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=024" alt="Chemung">
+<AREA SHAPE="POLYGON" COORDS="123, 188, 173, 188, 175, 172, 167, 172, 167, 162, 163, 155, 157, 154, 133, 153, 133, 155, 129, 155" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=022" alt="Steuben">
+<AREA SHAPE="POLYGON" COORDS="91, 187, 124, 188, 128, 175, 129, 161, 124, 161, 124, 157, 92, 157" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=021" alt="Allegany">
+<AREA SHAPE="POLYGON" COORDS="47, 188, 92, 188, 92, 156, 84, 156, 70, 158, 59, 160, 49, 154" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=020" alt="Cattaraugus">
+<AREA SHAPE="POLYGON" COORDS="46, 187, 48, 169, 49, 153, 42, 152, 4, 172, 5, 187, 42, 187, 41, 188" HREF="%%scripturl%%?forecast=zandh&state=ny&zone=019" alt="Chautauqua">
+</MAP>
+<img src="%%stateimagesurl%%/ny-zones.gif" width="487" height="278" alt="NY" border="0" usemap="#FrontPageMap0">
+
+<-end image map->

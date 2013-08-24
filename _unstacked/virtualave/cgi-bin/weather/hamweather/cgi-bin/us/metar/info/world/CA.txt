@@ -1,0 +1,52 @@
+CYXX|Abbotsford, B. C.
+CYBG|Bagotville, Que.
+CYYC|Calgary International, Alta.
+CYCB|Cambridge Bay, N. W. T.
+CYCH|Chatham Can-Mil 
+CZUM|Churchill Falls, Nfld.
+CYYQ|Churchill, Man.
+CYOD|Cold Lake, Alta.
+CYQQ|Comox, B. C.
+CYZS|Coral Harbour, N. W. T.
+CYEG|Edmonton International, Alta.
+CYET|Edson, Alta.
+CZFM|Fort Mcpherson Airport
+CYFC|Fredericton, N. B.
+CYQX|Gander Int. Airport, Nfld.
+CYYR|Goose, Nfld.
+CYZX|Greenwood, N. S.
+CYHZ|Halifax International Airport 
+CYFB|Iqaluit, N. W. T.
+CYAH|La Grande Iv, Que.
+CYGL|La Grande Riviere, Que
+CYZY|Mackenzie, B. C.
+CYNM|Matagami, Que.
+CYXH|Medicine Hat, Alta.
+CYQM|Moncton, N. B.
+CYUL|Montreal / Dorval International, Que
+CYMX|Montreal / Mirabel
+CYBU|Nipawin, Sask.
+CYOC|Old Crow Airport
+CYOW|Ottawa Int'L. Ont.
+CYYF|Penticton, B. C.
+CYZT|Port Hardy, B. C.
+CYPG|Portage Southport A
+CYQB|Quebec, Que
+CYUY|Rouyn Airport
+CWZZ|Saglek Bay 
+CYAY|Saint Anthony Airport
+CYZV|Sept-Iles, Que.
+CYAW|Shearwater, N. S.
+CYUA|Shingle Point, Y. T.
+CYYT|St. John's, Nfld
+CYJT|Stephenville, Nfld.
+CYYN|Swift Current, Sask.
+CYQY|Sydney, N. S.
+CYTH|Thompson Weather Office, Man
+CYYZ|Toronto Pearson Int'L. Ont.
+CYTR|Trenton, Ont.
+CYVR|Vancouver International Air-Port, B. C.
+CYYJ|Victoria Int. Airportb. C.
+CYQG|Windsor, Ont.
+CYWG|Winnipeg Int. Airportman.
+CYZF|Yellowknife, N. W. T.

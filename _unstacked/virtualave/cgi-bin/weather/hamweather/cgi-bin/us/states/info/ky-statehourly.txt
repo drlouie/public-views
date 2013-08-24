@@ -1,0 +1,10 @@
+Bowling Green|Bowling Green|71
+Covington|Covington|92
+Frankfort|Frankfort|35
+Jackson|Jackson|112
+Lexington|Lexington|41
+London|London|80
+Louisville/LOU|Louisville|30
+Owensboro|Owensboro|19
+Paducah|Paducah|5
+Somerset|Somerset|79

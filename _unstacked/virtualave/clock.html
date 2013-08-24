@@ -1,0 +1,31 @@
+<html>
+<title>DynAPI Examples - Clock Demo</title>
+<script language="JavaScript" src="js/dynlayer.js"></script>
+<script language="JavaScript" src="js/clock.js"></script>
+<script language="JavaScript"> 
+<!-- 
+
+ns4 = (document.layers)? true:false
+ie4 = (document.all)? true:false
+
+function init() {
+	clock.activate()
+}
+
+clock = new Clock(30,50,30,70)
+clock.build()
+
+writeCSS (
+clock.css
+)
+
+//-->
+</script>
+<body onLoad="init()" bgcolor="#ffffff">
+
+<script language="JavaScript">
+document.write(clock.div)
+</script>
+
+</body>
+</html>

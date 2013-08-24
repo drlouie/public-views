@@ -1,0 +1,91 @@
+<html>
+
+<head>
+<title>HAMweather Quick &amp; Easy Customization</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" bgcolor="#000080" width="100%">
+  <tr>
+    <td width="100%"><font color="#FFFFFF"><strong>Quick and Easy Customization</strong></font></td>
+  </tr>
+</table>
+
+<p>I often hear that HAMweather can be hard to customize, well there is a way that you can
+do a quick and easy customization of HAMweather that only takes minutes.&nbsp; The process
+is so simple I am not sure why i put it on a page by itself but here goes:</p>
+
+<p>In the HAMweather Templates Directory you will find a subdirectory called 'include'.
+&nbsp; In this 'include' subdirectory you will find several files such as, header.html and
+footer.html.&nbsp; </p>
+
+<p>Just change these files (header.html, footer.html and nav.html) and you can quickly
+brand HAMweather to match your site. </p>
+
+<p>To make things even easier,&nbsp; as of beta 2.08 some of the most common settings can
+be set via the web based administration.&nbsp; If your browse to the web based
+administration and choose the User variables link you will see a screen that lists several
+user variable names and their values in text boxes.&nbsp; You can simply edit the values
+and submit the form to change things like the titles on the template pages, the body
+arguments (background image, color link color etc) and more.&nbsp; The complete list of
+the default user variables is below: (read below table on how to add your own new
+variables.)</p>
+<div align="left">
+
+<table border="2" bgcolor="#FFFFD7" bordercolor="#000080" cellpadding="2"
+bordercolorlight="#000080" bordercolordark="#000080" cellspacing="0">
+  <tr>
+    <td><div align="left"><table border="1">
+      <tr>
+        <td align="center"><big><strong><font color="#000080">User Variable Name</font></strong></big></td>
+        <td align="center"><big><font color="#000080"><strong>Description</strong></font></big></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>hwvbordercolor</strong></td>
+        <td>Border color.&nbsp; This value set the color of the various frame borders. The default
+        value is <font color="#000080">#000080</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>hwvheaderbgcolor</strong></td>
+        <td>This is the header background color for some of the various tables (Basically wherever
+        you see the Navy blue background)&nbsp; The default value is <font color="#000080">#000080</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>hwvheadertcolor</strong></td>
+        <td>This is the header text color for some of the various tables. (basically wherever you
+        see the white text on the Navy blue background).&nbsp; The default value is<font
+        color="#000080"> #FFFFFF</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>hwvboldtextcolor</strong></td>
+        <td>This sets the color of most of the significant'bold' text.&nbsp; (Basically wherever
+        you see the Bold, navy blue text). The default value is <font color="#000080">#000080</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>hwvtitle</strong></td>
+        <td>This is the value that will be placed in the title bar of all the pages outputted by
+        HAMweather.&nbsp; The default value is <font color="#000080">HAMweather</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>hwvbodyargs</strong></td>
+        <td>The is set to any paramters you want added into the '&lt;body&gt; tag.&nbsp; thus you
+        can set the background color, background image, text color etc of all the pages outputted
+        by HAMweather.&nbsp; Teh default value is&nbsp;&nbsp; <font color="#000080">bgcolor=&quot;#FFFFFF&quot;
+        textcolor=&quot;#000000&quot;&nbsp;&nbsp; </font>This setting will be added to the body
+        tag thus setting the bacgound to white and the text color to black.</td>
+      </tr>
+    </table>
+    </div></td>
+  </tr>
+</table>
+</div>
+
+<p>You can easily add your own additional variables for use in the templates by going to
+the web based administration, clicking on the User variables link and then adding new
+variables.&nbsp; Once you add them here, simply add the variable name surrounded by '%%'
+(i.e. hwvnewvar would be %%hwvnewvar%%)&nbsp; to your templates.&nbsp; Read the User
+Defined Variables section under Admin for more information.</p>
+</body>
+</html>

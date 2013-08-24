@@ -1,0 +1,9 @@
+Charlottesvill|Charlottesville|37
+Fort Belvoir|Fort Belvoir|53
+Lynchburg|Lynchburg|35
+Roanoke|Roanoke|22
+Richmond|Richmond|76
+Norfolk|Norfolk|95
+STAUNTON|Staunton|25
+DANVILLE|Danville|44
+HOT SPRINGS|Hot Springs|20

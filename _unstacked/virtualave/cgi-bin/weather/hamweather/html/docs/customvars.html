@@ -1,0 +1,387 @@
+<html>
+
+<head>
+<title>HAMweather Customization : User Defined Variables</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><a name="Customization: Introduction"><font
+    color="#FFFFFF"><big><strong>Customization: User Defined Variables</strong></big></font></a></td>
+  </tr>
+</table>
+
+<p>Once you have installed HAMweather and started using it, you will then want to begin
+customizing it to you specific needs.&nbsp; Customization of HAMweather comes in several
+forms. &nbsp; You can customize the various weather icons, templates, create themes and
+even allow for multiple&nbsp; users to have their own customized weather sites.&nbsp; The
+following sections review the various aspects of this customization process so that you
+can perform the customization yourself, but if you prefer, HAMweather, LLC offers
+customization services.&nbsp; These services can include custom template and icon design
+or even the creation of custom themes.&nbsp; For more information or request customization
+services refer to the HAMweather, LLC<a href="http://www.hamweather.com/install/">
+customization page</a>.</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><a name="Customization : Templates"><font
+    color="#FFFFFF"><big><strong>Customization : Templates</strong></big></font></a></td>
+  </tr>
+</table>
+
+<p>Customizing the HAMweather templates is probably the most common and easiest way to
+customize HAMweather to match you needs.&nbsp; The templates that come with the HAMweather
+distribution are in the template directory of the HAMweather CGI path. (Yes these
+templates do belong with the cgi scripts, for web visitors will not be viewing them
+directly.)&nbsp; In this directory you will find several templates that came with the
+HAMweather distribution or from the Pro .</p>
+
+<p>You may now be wondering, &quot;How do I know what each template is used for?&quot;
+&nbsp; The&nbsp; following table reviews what each template in the distribution is used
+for. You can actually modify what templates are used by using the HAMweather web
+administration.</p>
+
+<table border="2" bordercolor="#000080" cellpadding="2" bordercolorlight="#000080"
+bordercolordark="#000080" cellspacing="0">
+  <tr>
+    <td width="100%"><table border="0" bgcolor="#FFFFD7" height="98">
+      <tr>
+        <td height="21" align="center" colspan="2"><strong><font color="#000080">HAMweather
+        Templates</font></strong></td>
+      </tr>
+      <tr>
+        <td height="21" align="center"><strong>Template Name</strong></td>
+        <td height="21" align="center"><strong>Description</strong></td>
+      </tr>
+      <tr>
+        <td height="19"><strong>ccinternational.html</strong></td>
+        <td height="19">Used to display the international countries that metar observations are
+        available for..</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>ccus.html</strong></td>
+        <td height="21">Used to display the states that metar observations are available for.</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>hourly.html</strong></td>
+        <td height="21">Used to display the hourly conditions or the metar observations</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>metarlist.html</strong></td>
+        <td height="21">Used when displaying all the locations in a country or state that the
+        metar observations are available for.</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>noforecast.html</strong></td>
+        <td height="21">Used when the forecast for a city could not be found.</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>other.html</strong></td>
+        <td height="21">Generic template used when displaying state level text based reports,
+        warnings, watches, state forecasts, etc...</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>otherinfo.html</strong></td>
+        <td height="21">Used to display the other national weather information that is available.</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>statemap.html</strong></td>
+        <td height="21">Used when displaying a regional or state image map.. which is clickable
+        for individual zone forecasts</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>usother.html</strong></td>
+        <td height="21">Generic template used when displaying national level text based reports,
+        warnings,&nbsp; etc..</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>zandh.html</strong></td>
+        <td height="21">Used when displaying both the zone forecast and hourly conditions.</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>zone.html</strong></td>
+        <td height="21">Used when displaying zone forecast.</td>
+      </tr>
+      <tr>
+        <td height="21" colspan="2" align="center"><strong><font color="#000080">HAMweather Pro
+        &nbsp; Templates</font></strong></td>
+      </tr>
+      <tr>
+        <td height="21" colspan="2" align="center"><small><strong>NOTE: </strong>The HAMweather
+        Pro&nbsp; uses modified versions of the normal HAMweather templates plus the following.</small></td>
+      </tr>
+      <tr>
+        <td height="21"><strong>nf.html</strong></td>
+        <td height="21">Used when displaying the National Forecast Map.</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>ns.html</strong></td>
+        <td height="21">Used when displaying the National Summary Map.</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>radar.html</strong></td>
+        <td height="21">Used when displaying the National Radar Map.</td>
+      </tr>
+      <tr>
+        <td height="21"><strong>uswarning.html</strong></td>
+        <td height="21">Used when displaying the National Warning Map.</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+
+<p>These template can be designed using most any web authoring utility.&nbsp; The
+difference between making an html page and the template is that the templates are a
+&quot;basic&quot; design with variable names inserted where HAMweather is to insert data.</p>
+
+<p>The variables used by HAMweather use the following format:&nbsp; %%variablename%%</p>
+
+<p>Thus, If you want the current state to be outputted in the template then add %%state%%
+to the template where you would like the current state name to be placed.</p>
+
+<p>There are many variables that can be used in your HAMweather templates.&nbsp;&nbsp; The
+following table lists them.&nbsp; Some variables are only available for certain forecast
+types.&nbsp; This is indicated as well.</p>
+<div align="left">
+
+<table border="2" bgcolor="#FFFFD7" bordercolor="#000080" cellpadding="2"
+bordercolorlight="#000080" bordercolordark="#000080" cellspacing="0">
+  <tr>
+    <td><div align="left"><table border="1">
+      <tr>
+        <td align="center"><strong><big><font color="#000080">Variable Name</font></big></strong></td>
+        <td align="center"><big><font color="#000080"><strong>Description</strong></font></big></td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Standard Variables</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%scripturl%%</strong></td>
+        <td>The URL to the hamweather.cgi script</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%getstateurl%%</strong></td>
+        <td>The URL to the getstate.cgi script</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%metarlisterurl%%</strong></td>
+        <td>The URL to the metarlister.cgi script</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%emailstorerurl%%</strong></td>
+        <td>The URL to the hw2email_storer.cgi script</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%mapimagesurl%%</strong></td>
+        <td>The URL to the HAMweather Pro national maps</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%place%%</strong></td>
+        <td>Current Place needing forecast for</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%lcplace%%</strong></td>
+        <td>Current Place needing forecast for with proper casing</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%lplace%%</strong></td>
+        <td>Current place with proper html encoding (spaces turned to &quot;+&quot;, etc)</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%state%%</strong></td>
+        <td>Current State needing forecast for. (abbreviation) Note: Even is user types in the
+        full state name this variable will only be the two letter abbreviation.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%lcstate%%</strong></td>
+        <td>Current State needing forecast for with proper casing and full name.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%zone%%</strong></td>
+        <td>The weather zone number supplied by user. (Only available is supplied)</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%zforecast%%</strong></td>
+        <td>The text based portion of the forecast</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%forecastdate%%</strong></td>
+        <td>Date of the needed forecast</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%forecastneeded%%</strong></td>
+        <td>The actual forecast type requested.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%lcforecastneeded%%</strong></td>
+        <td>The actual forecast type needed with proper casing</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%user%%</strong></td>
+        <td>The current user name</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%theme%%</strong></td>
+        <td>The current theme</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Variables for use with the Zone Forecasts Only</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%iconrow%%</strong></td>
+        <td>The table row that holds all the weather icon coding for the zone forecast</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%daytitlerow%%</strong></td>
+        <td>The table row that holds the corresponding day titles for the weather icon row</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%weatherrow%%</strong></td>
+        <td>The table row that holds the corresponding weather conditions for the weather icon row</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%temprow%%</strong></td>
+        <td>The table row that holds the corresponding temperatures for the weather icon row.</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Variables for use with the Hourly and Metar
+        Observations Only</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hicon%%</strong></td>
+        <td>URL to the icon for current weather condition</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hname%%</strong></td>
+        <td>The name of the current place</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hsky%%</strong></td>
+        <td>The&nbsp; sky condition (weather condition)</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%htempf%%</strong></td>
+        <td>The temperature in Fahrenheit</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%htempc%%</strong></td>
+        <td>The temperature in Celcius</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hdewptf%%</strong></td>
+        <td>The dew point in Fahrenheit</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hdewptc%%</strong></td>
+        <td>The dew point in Celcius</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hrh%%</strong></td>
+        <td>The relative humidity</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hwind%%</strong></td>
+        <td>The wind speed and direction</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hpressure%%</strong></td>
+        <td>The barometric pressure</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hremarks%%</strong></td>
+        <td>Possible additional Hourly remarks</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hforecastdate%%</strong></td>
+        <td>The Hourly forecast date and time</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Variable for use with the hwgetstate.cgi Script
+        Only</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%getstateimagesurl%%</strong></td>
+        <td>This provides the URL to the proper state image when displaying a state image map that
+        can be clicked to get a zone forecast</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%imagemap%%</strong></td>
+        <td>This is the actual image map coding for the above map</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%placestable%%</strong></td>
+        <td>This is a table of the places in a state that the forecast can be retrieved for.. in
+        Text format (This is not fully implemented as of HW2 Beta 1)</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Variables for use with the metarlister.cgi Script
+        Only</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%list%%</strong></td>
+        <td>This is the actual list of places either in a state or country that the metar
+        observations are available for.</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Variables for use with the hw2email_storer.cgi Only</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%address%%</strong></td>
+        <td>This is the email address that is being subscribed or unsubscribed</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Variables for use with HAMweather Pro&nbsp; Only</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%nationalsummary%%</strong></td>
+        <td>Table containing the current condition summary for requested cities. Includes City
+        Name, Weather condition and temp on each row.&nbsp; Used with the national summary.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%nationalforecast%%</strong></td>
+        <td>Table containing the weather forecast for requested cities. Includes City Name,
+        Weather condition and temp on each row.&nbsp; Used with the national forecast.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%warningtable%%</strong></td>
+        <td>Table of the states that have an active warning.&nbsp; Each state is a hyperlink to
+        the individual state warnings page.&nbsp; Used with the National warning (uswarnings)
+        report.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%usradar%%</strong></td>
+        <td>The URL to the national Radar image</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%radarzoneimg%%</strong></td>
+        <td>The URL to the regional radar image</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Used Defined Variables</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hwvxxxx%%</strong></td>
+        <td>HAMweather allows user defined variables to be passed and inserted into the output.
+        &nbsp; Refer to the User Defined Variables page for more info.</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>HAMweather Include</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>%%hwi=xxxx%%</strong></td>
+        <td>HAMweather allows you to include files in the output. This can be used to have a
+        custom header or footer for all the templates.&nbsp; Thus allowing you so simply edit a
+        couple files for the entire weather site.</td>
+      </tr>
+    </table>
+    </div></td>
+  </tr>
+</table>
+</div>
+
+<p><a href="customicons.html">Now to customization of the icons.&nbsp; </a></p>
+</body>
+</html>

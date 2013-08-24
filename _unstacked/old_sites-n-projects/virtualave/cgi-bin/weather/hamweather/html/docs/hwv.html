@@ -1,0 +1,114 @@
+<html>
+
+<head>
+<title>HAMweather : User Defined Variables</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>User Defined
+    Variables</strong></big></font></td>
+  </tr>
+</table>
+
+<p>HAMweather has a full list of predefined variables that can be used in your templates,
+but at times, there may be a need for your own user defined variables.&nbsp; For instance,
+you may want to pass a variable to dictate the background color, this way you could easily
+change it.&nbsp; HAMweather will allow for these user defined variables.</p>
+
+<p>A few notes about user defined variables syntax: 
+
+<ul>
+  <li>All user defined variables must begin with 'hwv'. So if you wanted to use a variable
+    named 'bgcolor' the actual name would be 'hwvbgcolor'.</li>
+  <li>The variable name can contain letters from A to Z, numbers and the underscore (_)
+    character. Examples of valid variable names are as follows:<ul>
+      <li>hwvcar</li>
+      <li>hwvcar1</li>
+      <li>hwv2cars</li>
+      <li>hwv_cars_and_trucks</li>
+    </ul>
+  </li>
+  <li>The variable name 'hwvars' is reserved.&nbsp; This variable is used to insert all user
+    defined variables into a url.</li>
+  <li>The variable name 'hwvarshidden' is reserved.&nbsp; This variable is used to insert all
+    user defined variables into a form as hidden form elements.</li>
+</ul>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>User Defined
+    Variables : Usage</strong></big></font></td>
+  </tr>
+</table>
+
+<p>To use variables, you need to first define them.&nbsp; You can define them&nbsp; as a
+parameter in a url, command line or as a form element in a form to be submitted to
+HAMweather.</p>
+
+<p><small><strong>Defined as part of a URL</strong></small></p>
+
+<blockquote>
+  <p>Simply set the variable as if it were like any other HAMweather parameter in an URL.
+  &nbsp; <font color="#FF0000">For Example: To Set 'hwvbgcolor' in a URL use the following:</font><br>
+  <font color="#000080"><small>http://www.yourdomain.com/path/to/hamweather.cgi?forecast=zone&amp;state=va&amp;place=blacksburg&amp;hwvbgcolor=ffffff</small></font></p>
+</blockquote>
+
+<p><small><strong>Defined as a form element</strong></small></p>
+
+<blockquote>
+  <p>All that needs to be done to set a user defined variable as a form element is to just
+  name the form element with the name of the wanted variable.&nbsp; <font color="#FF0000">For
+  Example: a hidden form element for 'hwvbgcolor' would look like:</font><br>
+  <font color="#000080"><small>&lt;INPUT type='hidden' name='hwvbgcolor' value='ffffff'&gt;</small></font></p>
+</blockquote>
+
+<p><strong><small>Preset with the Web based administration</small></strong></p>
+
+<blockquote>
+  <p>HAMweather allows you to preset user defined variables using the web based
+  administration. Refer to this section on instructions on using this feature.</p>
+</blockquote>
+
+<p>Now that the variable is defined you can put them into you HAMweather templates.</p>
+
+<p>To output&nbsp; the value of a variable, enclose the variable name in '%%' and put in
+your templates.&nbsp; <font color="#FF0000">For Example: To ouput the value of the
+'hwvbgcolor' you would od as follows:</font></p>
+
+<blockquote>
+  <p><font color="#000080">&lt;body bgcolor=%%hwvbgcolor%%&gt;</font></p>
+  <p><font color="#FF0000">In this example, HAMweather will output the value of the user
+  defined variable 'hwvbgcolor' in place of the '%%hwvbgcolor%%'.</font></p>
+</blockquote>
+
+<p>As of HAMweather 2.035 you can also set the values of userdefined variables in your
+hamweather templates.&nbsp; In your templates you can use the new %%let hwvvarname= perl
+code here let%%.&nbsp; This will set the hwv variable &quot;hwvvarname&quot; to the value
+returned by the perl code between = and the &quot;let%%&quot;. Examples:</p>
+
+<p><font color="#000080">%%let hwvvarname= 34 let%%</font><br>
+Will set hwvvarname to the value 34</p>
+
+<p><font color="#000080">%%let hwvvarname= &quot;this is a test&quot; let%%</font><br>
+Will set hwvvarname to &quot;This is a test&quot;</p>
+
+<p><font color="#000080">%%let hwvvarname= my $a = 20 + 2; $a; let%%</font><br>
+Will set hwvvarname to the value of 22</p>
+
+<p><font color="#FF0000"><strong>NOTE</strong></font><font color="#400040">: </font>If you
+want a user defined variable to follow around with the HW internal links, (I.E. a shopping
+cart number etc) YOu can set this in the User defined variable admin. This will make HW
+add the user defined variable as a parameter in the UVI table, Warning table and state
+maps. But it is still your jopb to add it to the nav.html and current.html templates or
+any other normal html templates.</p>
+
+<p><br>
+<a href="hwi.html">Continue To HAMweather Include </a></p>
+
+<p><em><small>HAMweather </small><font FACE="Verdana,Arial,Helvetica" size="1">copyright
+© 2000 by HAMweather, LLC, all rights reserved</font></em></p>
+</body>
+</html>

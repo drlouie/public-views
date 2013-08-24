@@ -1,0 +1,21 @@
+KABR|Aberdeen, Aberdeen Regional Airport
+KEFC|Belle Fourche, Belle Fourche Municipal Airport
+KBKX|Brookings Automatic Weather Observing / Reporting System
+K2WX|Buffalo
+K9V9|Chamberlain, Chamberlain Municipal Airport
+KCUT|Custer, Custer County Airport
+KRCA|Ellsworth Air Force Base
+KD07|Faith
+KHON|Huron, Huron Regional Airport
+KY22|Lemmon
+KMHE|Mitchell, Mitchell Municipal Airport
+KMBG|Mobridge, Mobridge Municipal Airport
+KPHP|Philip, Philip Airport
+KPIR|Pierre, Pierre Regional Airport
+KIEN|Pine Ridge, Pine Ridge Airport
+KRAP|Rapid City, Rapid City Regional Airport
+KFSD|Sioux Falls, Foss Field
+K8D3|Sisseton, Sisseton Municipal Airport
+KATY|Watertown, Watertown Municipal Airport
+KSFD|Winner - Bob Wiley Field
+KYKN|Yankton Automatic Weather Observing / Reporting System

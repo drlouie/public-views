@@ -1,0 +1,9 @@
+KBDR|Bridgeport, Sikorsky Memorial Airport
+KDXR|Danbury, Danbury Municipal Airport
+KGON|Groton / New London, Groton-New London Airport
+KHFD|Hartford, Hartford-Brainard Airport
+KMMK|Meriden, Meriden Markham Municipal Airport
+KHVN|New Haven, Tweed-New Haven Airport
+KOXC|Oxford Automatic Weather Observing / Reporting System
+KIJD|Willimantic, Windham Airport
+KBDL|Windsor Locks, Bradley International Airport

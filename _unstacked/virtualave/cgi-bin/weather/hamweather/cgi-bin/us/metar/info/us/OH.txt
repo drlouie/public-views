@@ -1,0 +1,29 @@
+KAKR|Akron, Akron Fulton International Airport
+KCAK|Akron, Akron-Canton Regional Airport
+KLUK|Cincinnati, Cincinnati Municipal Airport Lunken Field
+KCGF|Cleveland / Cuyahoga
+KBKL|Cleveland, Burke Lakefront Airport
+KCLE|Cleveland, Cleveland-Hopkins International Airport
+KTZR|Columbus, Bolton Field Airport
+KOSU|Columbus, Ohio State University Airport
+KCMH|Columbus, Port Columbus International Airport
+KFFO|Dayton / Wright-Patterson Air Force Base
+KDAY|Dayton, Cox Dayton International Airport
+KMGY|Dayton, Dayton General Airport South Airport
+KDFI|Defiance, Defiance Memorial Airport
+KFDY|Findlay Automatic Weather Observing / Reporting System
+KHAO|Hamilton, Hamilton-Fairfield Airport
+KLHQ|Lancaster, Fairfield County Airport
+KAOH|Lima, Lima Allen County Airport
+KLPR|Lorain / Elyria, Lorain County Regional Airport
+KMFD|Mansfield, Mansfield Lahm Municipal Airport
+KMNN|Marion, Marion Municipal Airport
+KPHD|New Philadelphia, Harry Clever Field
+KVTA|Newark, Newark Heath Airport
+KLCK|Rickenbacker Air National Guard Base
+KTDZ|Toledo, Metcalf Field
+KTOL|Toledo, Toledo Express Airport
+KILN|Wilmington, Airborne Airpark Airport
+KBJJ|Wooster, Wayne County Airport
+KYNG|Youngstown, Youngstown-Warren Regional Airport
+KZZV|Zanesville, Zanesville Municipal Airport

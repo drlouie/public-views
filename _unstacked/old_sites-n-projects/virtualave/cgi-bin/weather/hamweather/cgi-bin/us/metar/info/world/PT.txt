@@ -1,0 +1,9 @@
+LPBJ|Beja
+LPFR|Faro / Aeroporto
+LPFU|Funchal / S. Catarina
+LPLA|Lajes Acores 
+LPPT|Lisboa / Portela
+LPPD|Ponta Delgada / Nordela Acores 
+LPPR|Porto / Pedras Rubras
+LPPS|Porto Santo
+LPAZ|Santa Maria Acores 

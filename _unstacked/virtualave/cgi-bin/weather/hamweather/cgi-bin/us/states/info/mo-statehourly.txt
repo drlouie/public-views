@@ -1,0 +1,9 @@
+Cape Girardeau|Cape Girardeau|87
+Columbia|Columbia|41
+Joplin|Joplin|88
+Kansas C Dtwn|Kansas City|37
+Kirksville|Kirksville|17
+Poplar Bluff|Poplar Bluff|109
+St Joseph|St. Joseph|20
+St Louis Intl|St. Louis|64
+Springfield|Springfield|90

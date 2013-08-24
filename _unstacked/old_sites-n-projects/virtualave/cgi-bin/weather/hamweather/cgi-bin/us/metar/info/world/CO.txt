@@ -1,0 +1,11 @@
+SKBQ|Barranquilla / Ernestocortissoz
+SKBO|Bogota / Eldorado
+SKBG|Bucaramanga / Palonegro
+SKCL|Cali / Alfonso Bonillaaragon
+SKCG|Cartagena / Rafael Nunez
+SKLT|Leticia / Vasquez Cobo
+SKMD|Medellin / Olaya Herrera
+SKPE|Pereira / Matecana
+SKRG|Rionegro / J. M. Cordova
+SKSP|San Andres Isla / Sesquicentenario
+SKSM|Santa Marta / Simon Bolivar

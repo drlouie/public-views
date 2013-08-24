@@ -1,0 +1,29 @@
+KIFP|Bullhead City, Laughlin/Bullhead International Airport
+KCGZ|Casa Granda Automatic Weather Observing / Reporting System
+KDMA|Davis-Monthan Air Force Base
+KDUG|Douglas Bisbee International
+KFLG|Flagstaff, Flagstaff Pulliam Airport
+KFHU|Fort Huachuca
+KGBN|Gila Bend U. S. Army Airfield
+KGEU|Glendale, Glendale Municipal Airport
+KGYR|Goodyear Municipal
+KGCN|Grand Canyon, Grand Canyon National Park Airport
+K40G|Grand Canyon, Valle Airport
+KIGM|Kingman, Kingman Airport
+KLUF|Luke Air Force Base / Phoenix
+KFFZ|Mesa / Falcon Field
+KIWA|Mesa, Williams Gateway Airport
+KOLS|Nogales, Nogales International Airport
+KPGA|Page, Page Municipal Airport
+KPHX|Phoenix, Phoenix Sky Harbor International Airport
+KDVT|Phoenix, Phoenix-Deer Valley Municipal Airport
+KPRC|Prescott, Love Field
+KSAD|Safford, Safford Municipal Airport
+KSDL|Scottsdale, Scottsdale Airport
+KSOW|Show Low Municipal
+KSJN|St. Johns, St. Johns Industrial Airpark
+KTUS|Tucson, Tucson International Airport
+KRQE|Window Rock, Window Rock Airport
+KINW|Winslow, Winslow Municipal Airport
+KYUM|Yuma / Yuma International
+KNYL|Yuma, Marine Corps Air Station

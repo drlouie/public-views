@@ -1,0 +1,30 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="POLYGON" COORDS="339, 132, 347, 127, 387, 96, 413, 114, 420, 135, 414, 145, 334, 159, 339, 135, 346, 128" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=022" alt="Barnstable">
+<AREA SHAPE="POLYGON" COORDS="306, 137, 336, 132, 338, 137, 314, 147" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=021" alt="Southern Plymouth">
+<AREA SHAPE="POLYGON" COORDS="279, 149, 305, 136, 312, 149, 282, 164" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=020" alt="Southern Bristol">
+<AREA SHAPE="POLYGON" COORDS="304, 80, 323, 78, 347, 115, 347, 128, 337, 131, 323, 109, 325, 97, 319, 88, 305, 85" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=019" alt="Eastern Plymouth">
+<AREA SHAPE="POLYGON" COORDS="304, 85, 318, 88, 324, 99, 323, 108, 336, 131, 307, 136, 303, 131, 295, 130, 293, 125, 297, 122, 283, 99" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=018" alt="Western Plymouth">
+<AREA SHAPE="POLYGON" COORDS="253, 110, 284, 97, 289, 111, 297, 122, 292, 124, 293, 133, 305, 135, 280, 147, 257, 131" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=017" alt="Northern Bristol">
+<AREA SHAPE="CIRCLE" COORDS="290, 67, 6" HREF="%%scripturl%%?forecast=zandh&state=ma&place=boston">
+<AREA SHAPE="POLYGON" COORDS="269, 72, 282, 80, 289, 75, 303, 82, 303, 88, 254, 110, 252, 104, 239, 104, 241, 88, 260, 80, 258, 72" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=013" alt="Western Norfolk">
+<AREA SHAPE="POLYGON" COORDS="303, 79, 300, 57, 290, 70, 287, 73" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=016" alt="Eastern Norfolk">
+<AREA SHAPE="POLYGON" COORDS="274, 76, 280, 67, 293, 66, 290, 73, 279, 79" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=015" alt="Suffolk">
+<AREA SHAPE="POLYGON" COORDS="289, 49, 291, 55, 280, 64, 274, 73, 269, 67" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=014" alt="Southeast Middlesex">
+<AREA SHAPE="POLYGON" COORDS="306, 6, 340, 31, 318, 42, 300, 56, 292, 53, 291, 45, 319, 27" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=007" alt="Eastern Essex">
+<AREA SHAPE="POLYGON" COORDS="263, 24, 272, 22, 277, 14, 286, 14, 299, 8, 303, 8, 319, 27, 287, 46, 288, 39, 267, 30" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=006" alt="Western Essex">
+<AREA SHAPE="POLYGON" COORDS="193, 25, 264, 23, 266, 30, 286, 38, 288, 46, 288, 45, 266, 67, 259, 70, 260, 77, 249, 85, 237, 87, 228, 83, 227, 80, 235, 75, 234, 72, 228, 68, 228, 63, 232, 56, 230, 45, 219, 46, 216, 37, 202, 33, 198, 33" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=005" alt="Western Middlesex">
+<AREA SHAPE="POLYGON" COORDS="163, 91, 224, 68, 226, 69, 237, 70, 235, 74, 227, 78, 226, 84, 240, 89, 237, 104, 165, 102" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=012" alt="Southern Worcester">
+<AREA SHAPE="POLYGON" COORDS="148, 25, 192, 25, 198, 33, 218, 37, 219, 47, 229, 46, 231, 59, 224, 68, 162, 90, 152, 84, 156, 78, 152, 72, 145, 68, 154, 34" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=004" alt="Northern Worcester">
+<AREA SHAPE="POLYGON" COORDS="91, 86, 101, 87, 108, 75, 113, 84, 134, 83, 135, 86, 139, 86, 148, 82, 163, 91, 164, 103, 82, 102" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=011" alt="Eastern Hampden">
+<AREA SHAPE="POLYGON" COORDS="101, 62, 125, 58, 137, 60, 142, 70, 152, 72, 155, 80, 137, 85, 112, 83, 111, 74, 102, 82, 100, 86, 94, 83" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=010" alt="Eastern Hampshire">
+<AREA SHAPE="POLYGON" COORDS="88, 24, 148, 25, 154, 33, 146, 65, 142, 71, 136, 59, 124, 58, 101, 61, 99, 35" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=003" alt="Eastern Franklin">
+<AREA SHAPE="POLYGON" COORDS="66, 71, 78, 69, 79, 76, 93, 82, 80, 102, 59, 102" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=009" alt="Western Hampden">
+<AREA SHAPE="POLYGON" COORDS="71, 45, 77, 46, 91, 56, 100, 56, 99, 59, 92, 83, 85, 78, 79, 79, 77, 78, 80, 68, 64, 71, 58, 67, 59, 63, 67, 63" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=008" alt="Western Hampshire">
+<AREA SHAPE="POLYGON" COORDS="66, 22, 86, 22, 99, 33, 99, 55, 91, 54, 81, 49, 77, 45, 72, 43, 71, 25" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=002" alt="Western Franklin">
+<AREA SHAPE="POLYGON" COORDS="35, 22, 64, 21, 72, 28, 65, 62, 60, 62, 61, 69, 66, 71, 61, 89, 59, 100, 9, 100" HREF="%%scripturl%%?forecast=zandh&state=ma&zone=001" alt="Berkshire">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="173" alt="MA" src="%%stateimagesurl%%/ma-zones.gif" width="423">
+<-end image map->
+
+

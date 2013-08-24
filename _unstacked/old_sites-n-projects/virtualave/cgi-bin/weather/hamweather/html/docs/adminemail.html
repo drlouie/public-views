@@ -1,0 +1,78 @@
+<html>
+
+<head>
+<title>HAMweather Administration : Email Forecasts</title>
+
+</head>
+
+<body bgcolor='#ffffff' >
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Administration :
+    Email Forecasts</strong></big></font></td>
+  </tr>
+</table>
+
+<p>If you plan on using the email forecasts feature of the HW software package, then you
+will need to configure a few settings before hand.&nbsp; To do this you can simply use the
+HW web based administration.&nbsp; Just click the &quot;Email Forecasts Settings&quot;
+link in the administration options at the top left of any administration web page.</p>
+
+<p>Following are the descriptions of the various settings that can be set once at the
+Email Forecasts administration page: 
+
+<ul>
+  <li><font color="#000080"><strong>Administrator Email</strong></font> - This is the email
+    that is used for the &quot;from&quot; address on all emails sent out by the HW package.
+    &nbsp; This should be set to an address that users can use if they are having problems.<br>
+  </li>
+  <li><font color="#000080"><strong>Email Mode</strong></font> - This determine how HW will
+    send emails.&nbsp; It should be set to either mailprog or SMTP.&nbsp; <ul>
+      <li>Unix servers will usually use mailprog mode with sendmail or such</li>
+      <li>NT servers will normally use SMTP mode and an SMTP server to send emails<br>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000080"><strong>Mailprog path or SMTP Server Name</strong></font> - If you
+    are using HW in mailprog mode set this to the full path (i.e.
+    &quot;/usr/bin/sendmail&quot; to sendmail or other such mailprog.&nbsp; If using HW in
+    SMTP mode then set this to the domain name of the SMTP server.<br>
+  </li>
+  <li><font color="#000080"><strong>Email Script Execution Method</strong></font> - The
+    determines whether the emailhw2.cgi script will be executed from the command line (cron
+    job) or from a web browser.<br>
+  </li>
+  <li><font color="#000080"><strong>Email Database Path </strong></font>-Set this to the full
+    path to the email database.&nbsp; The path will look similar to
+    &quot;/usr/www/users/hamweather/email/email_list.txt&quot;.&nbsp; For NT servers you will
+    need to include the drive letter.<br>
+  </li>
+  <li><font color="#000080"><strong>Email Templates Path</strong></font> - Set this to the
+    full path to the directory containing the email templates, both html and email templates.
+    &nbsp; For example: The path will look similar to
+    &quot;/usr/www/users/hamweather/email&quot;.&nbsp; For NT servers, you will need to
+    include the drive letter.<br>
+  </li>
+  <li><font color="#000080"><strong>Forecast Email Template</strong></font> - This is the name
+    of the template that is used when developing the email forecast to send to individuals.<br>
+  </li>
+  <li><font color="#000080"><strong>Subscribe Email Template</strong></font> - This is the
+    name of the template used to send the subscribe notification email.<br>
+  </li>
+  <li><font color="#000080"><strong>Unsubscribe Email Template</strong></font> - This is the
+    name of the template used to send the unsubscribe notification email.<br>
+  </li>
+  <li><font color="#000080"><strong>Subscribe HTML Template</strong></font> - This is the name
+    of the template used to display the successful subscribing of an email address.<br>
+  </li>
+  <li><font color="#000080"><strong>Unsubscribe HTML Template</strong></font> - This is the
+    name of the template used to display the successful unsubscribing of an email address.<br>
+  </li>
+  <li><font color="#000080"><strong>Email Error Template</strong></font> - This is the name of
+    the template used to display the unsuccessful subscribing or unsubscribing of an email
+    address..<br>
+  </li>
+</ul>
+&nbsp;</body>
+</html>

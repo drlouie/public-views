@@ -1,0 +1,35 @@
+EDMA|Augsburg
+EDQD|Bayreuth
+EDDB|Berlin-Schoenefeld
+EDDT|Berlin-Tegel
+EDDI|Berlin-Tempelhof
+EDVE|Braunschweig
+EDDW|Bremen
+ETHC|Celle
+EDLW|Dortmund / Wickede
+EDDC|Dresden-Klotzsche
+EDDL|Duesseldorf
+ETHS|Fassberg
+EDDF|Frankfurt / M-Flughafen
+EDNY|Friedrichshafen
+EDFH|Hahn
+EDHI|Hamburg-Finkenwerder
+EDDH|Hamburg-Fuhlsbuettel
+EDDV|Hannover
+EDQM|Hof
+ETHI|Itzehoe
+EDVK|Kassel / Calden
+EDDK|Koeln / Bonn
+EDDP|Leipzig-Schkeuditz
+EDWD|Lemwerder
+EDHL|Luebeck-Blankensee
+EDLN|Monchengladbach
+EDDG|Muenster / Osnabrueck
+EDDM|Munich / Riem
+EDDN|Nuernberg
+EDMO|Oberpfaffenhofen
+EDLP|Paderborn / Lippstadt
+ETHE|Rheine-Bentlage
+EDDR|Saarbruecken / Ensheim
+EDDS|Stuttgart-Echterdingen
+EDXW|Westerland / Sylt

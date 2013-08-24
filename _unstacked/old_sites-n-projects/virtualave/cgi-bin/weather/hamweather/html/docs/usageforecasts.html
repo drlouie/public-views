@@ -1,0 +1,260 @@
+<html>
+
+<head>
+<title>HAMweather Usage : Available Forecasts</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><big><font color="#FFFFFF"><strong>Usage: &nbsp;
+    Available Forecasts</strong></font></big></td>
+  </tr>
+</table>
+
+<p>Following is a table of the available weather information through HAMweather.&nbsp; The
+generic label of forecast is used but actually some of the information available is
+actually reports, summaries and observations.&nbsp; </p>
+
+<p>In the table, the &quot;forecast name&quot; column contains the values that you will
+use for the &quot;forecast&quot; parameter when accessing HAMweather.&nbsp; You can also
+click the forecast name for a demonstration of what it can output.(you will be taken to
+the&nbsp; HAMweather website.)</p>
+
+<p>In the description column you can read what the forecast type is and a general overview
+of what HAMWEATHER can output for this type. (See template customization for more
+information on outputting weather information.)</p>
+
+<p>As of HW 2.0 Beta 3 you can now add your own additional forecast types using &nbsp;
+information on the IWIN or from a URL of your choice.&nbsp; Review the &quot;Forecast
+Types&quot; section of the Admin documentation for more information on how to set up
+additional forecast types.</p>
+<div align="left">
+
+<table border="2" bgcolor="#FFFFD7" bordercolor="#000080" cellpadding="2"
+bordercolorlight="#000080" bordercolordark="#000080" cellspacing="0">
+  <tr>
+    <td><div align="left"><table border="1">
+      <tr>
+        <td align="center"><big><strong><font color="#000080">Forecast Name</font></strong></big></td>
+        <td align="center"><big><font color="#000080"><strong>Description</strong></font></big></td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>State Level Information</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>hourly</strong></td>
+        <td>Provides the hourly conditions for major cities in each state. This forecast is
+        obtained from the IWIN system and isn't always available and is not available for all
+        cities.<p><font color="#0000FF">HAMWEATHER can output icon of current hourly weather,
+        temp, wind, pressure, humidity.<br>
+        HAMWEATHER Pro Add-on can also output&nbsp; states regional radar image </font>URL</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>zone</strong></td>
+        <td>Provides the zone forecast for a city, town or county. This forecast tends to be a
+        three day forecasts.&nbsp; In some cases the extended forecast is also available as part
+        of the one forecast. <p><font color="#0000FF">HAMWEATHER can output days row, icon row,
+        condition &amp; temp row, text forecast <br>
+        HAMWEATHER Pro Add-on can also output&nbsp; states regional radar image </font>URL</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>zandh</strong></td>
+        <td>Provides both hourly and zone forecasts.&nbsp; If the both hourly and zone forecasts
+        are available for the place requested then sets of data can be outputted.&nbsp; If the
+        hourly conditions are not available then this will act just like the zone forecast.<br>
+        <br>
+        <font color="#0000FF">HAMWEATHER will output data of both hourly and zone if available,
+        otherwise it will act like zone or hourly depending on which forecast was available.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>shortterm</strong></td>
+        <td>Provides the shortterm forecast for place when available.&nbsp; This is usually a
+        three to four hour forecast.<p><font color="#0000FF">HAMWEATHER will can output the text
+        of this forecast.<br>
+        HAMWEATHER Pro Add-on can also output&nbsp; states regional radar image </font>URL</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>state</strong></td>
+        <td>Provides the forecast for the entire state. In some states it provides forecasts for
+        the different regions.&nbsp; <strong>NOTE</strong>: In versions 1.x, HAMWEATHER tried to
+        up parse icons from the state forecast.&nbsp; This has been abandoned in HAMWEATHER 2 do
+        to the complexity of several state forecasts formats used by the IWIN system. So not
+        HAMWEATHER will output the text of the state forecasts.<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.<br>
+        HAMWEATHER Pro Add-on can also output&nbsp; states regional radar image </font>URL</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>watches</strong></td>
+        <td>Provides the current active weather watches in a state<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.<br>
+        HAMWEATHER Pro Add-on can also output&nbsp; states regional radar image </font>URL</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>warnings</strong></td>
+        <td>Provides the current active weather warnings in a state<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.<br>
+        HAMWEATHER Pro Add-on can also output&nbsp; states regional radar image URL</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>special</strong></td>
+        <td>Provides the current special weather statements (i.e. advisories etc) in a state<p><font
+        color="#0000FF">HAMWEATHER will can output the text of this forecast.<br>
+        HAMWEATHER Pro Add-on can also output&nbsp; states regional radar image URL</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>public</strong></td>
+        <td>Provides the general public information (if available) from the National Weather
+        Service in a state<p><font color="#0000FF">HAMWEATHER will can output the text of this
+        forecast.<br>
+        HAMWEATHER Pro Add-on can also output&nbsp; states regional radar image URL</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>summary</strong></td>
+        <td>Provides the current weather summary (if available) for a state.<p><font
+        color="#0000FF">HAMWEATHER will can output the text of this forecast.<br>
+        HAMWEATHER Pro Add-on can also output&nbsp; states regional radar image URL</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>aviation</strong></td>
+        <td>Provides state wide aviation informaiton (if available) for a state.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>discussion</strong></td>
+        <td>Provides a general discussion of weather info (if available) for a state.</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>National Weather Information</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>crop</strong></td>
+        <td>Provides the national crop summary (if available).<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>floodsummary</strong></td>
+        <td>Provides the national flood summary (if available).<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>earthquake</strong></td>
+        <td>Provides the report on major earthquakes and tsunamis that may occur (if available).<p><font
+        color="#0000FF">HAMWEATHER will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>hurricane</strong></td>
+        <td>Provides the Report on current hurricanes that may threaten the US. (if available)<p><font
+        color="#0000FF">HAMWEATHER will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>ultraviolet</strong></td>
+        <td>Provides the Report on forecasted Ultraviolet Index for the major cities in the US.<p><font
+        color="#0000FF">HAMWEATHER will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>tornado</strong></td>
+        <td>Provides the current tornado warnings in the US.<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>thunderstorm</strong></td>
+        <td>Provides the current severe thunderstorm warnings in the US.<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>flashflood</strong></td>
+        <td>Provides the current flashflood warnings in the US.<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>flood</strong></td>
+        <td>Provides the current flood warnings in the US.<p><font color="#0000FF">HAMWEATHER will
+        can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>winterstorm</strong></td>
+        <td>Provides the current winterstorm warnings in the US.<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>marinewarning</strong></td>
+        <td>Provides the current tornado warnings in the US.<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>nonprecip</strong></td>
+        <td>Provides the national nonprecipitation summary(if available).<p><font color="#0000FF">HAMWEATHER
+        will can output the text of this forecast.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>metar</strong></td>
+        <td>Provides the current metar observations (current conditions) at a specified weather
+        facilitate through out the US.&nbsp; you also need to specify the icao parameter with the
+        wanted weather stations four digit ICAO identifier.&nbsp; <p><font color="#0000FF">HAMWEATHER
+        can output icon of current hourly weather, temp, wind, pressure, humidity.<br>
+        HAMWEATHER Pro Add-on can also output&nbsp; states regional radar image </font>URL</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>ns</strong></td>
+        <td><font color="#FF0000"><strong>NOTE</strong>: Available with HAMWEATHER Pro Add-on
+        Only.</font><br>
+        Provides the current conditions of major predetermined cities through out the US.
+        HAMweather will also create a weather map if you set the &quot;map&quot; parameter
+        appropriately.<p><font color="#0000FF">HAMWEATHER Pro Add-on can output text of current
+        weather condition and temp of preselected cities. (Cities have to be listed in the IWIN's
+        National Summary report).&nbsp; Can also dynamically generate Current Conditions map.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>nf</strong></td>
+        <td><font color="#FF0000"><strong>NOTE</strong>: Available with HAMWEATHER Pro Add-on
+        Only.</font><br>
+        Provides the forecast of major predetermined cities through out the US. HAMweather will
+        also create a weather map if you set the &quot;map&quot; parameter appropriately.<p><font
+        color="#0000FF">HAMWEATHER Pro Add-on can output text of forecasted weather condition and
+        temp of preselected cities. (Cities have to be listed in the IWIN's Travelers&nbsp;
+        report). &nbsp; Can also dynamically generate forecast map.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>radar</strong></td>
+        <td><font color="#FF0000"><strong>NOTE</strong>: Available with HAMWEATHER Pro Add-on
+        Only.</font><br>
+        Forces HAMWEATHER to generate a national radar map if needed.&nbsp; Also HAMWEATHER will
+        make regional radar maps as well.<p><font color="#0000FF">HAMWEATHER Pro Add-on will
+        generate the national and regional radar and display the national radar template as
+        specified.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>uswarnings</strong></td>
+        <td><font color="#FF0000"><strong>NOTE</strong>: Available with HAMWEATHER Pro Add-on
+        Only.</font><br>
+        Provides a list of states that have currently active weather warnings. HAMweather will
+        also create a national map that indicates which states currently have active warnings.<p><font
+        color="#0000FF">HAMWEATHER Pro Add-on can output text of the current states with warnings
+        . (Cities have to be listed in the IWIN's Travelers&nbsp; report).&nbsp; Can also
+        dynamically generate a US warning map.</font></td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>International Weather Information</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>metar</strong></td>
+        <td>This is the exact same as metar under the National weather information. If an ICAO
+        four digit identifier is provided for a weather facility throughout the world you can get
+        the current conditions of that city.<p><font color="#0000FF">HAMWEATHER can output icon of
+        current hourly weather, temp, wind, pressure, humidity.</font></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>Coming Soon</strong></td>
+        <td><font color="#0000FF">Hopefully by the final release of HW2 an add-on will be
+        available to provide forecasts for Canada.</font></td>
+      </tr>
+    </table>
+    </div></td>
+  </tr>
+</table>
+</div>
+
+<p>Now to see what Forecast Information is available through HAMweather. </p>
+</body>
+</html>

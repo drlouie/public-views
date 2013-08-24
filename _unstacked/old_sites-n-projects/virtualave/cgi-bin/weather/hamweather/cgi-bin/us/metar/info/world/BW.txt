@@ -1,0 +1,9 @@
+FBFT|Francistown
+FBGZ|Ghanzi
+FBJW|Jwaneng
+FBKE|Kasane
+FBMN|Maun
+FBSK|Seretse Khama International Airport
+FBSW|Shakawe
+FBTS|Tsabong
+FBTE|Tshane

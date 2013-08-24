@@ -1,0 +1,3 @@
+UMMS|Minsk
+EVRA|Riga Airport
+UMII|Vitebsk

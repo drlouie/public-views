@@ -1,0 +1,17 @@
+K4BL|Blanding 
+KBCE|Bryce Canyon, Bryce Canyon Airport
+KCDC|Cedar City, Cedar City Municipal Airport
+KU24|Delta
+KU28|Green River Range
+K4HV|Hanksville 
+KHIF|Hill Air Force Base / Ogden
+KLGU|Logan, Logan-Cache Airport
+KMLF|Milford, Milford Municipal Airport
+KCNY|Moab, Canyonlands Field
+KOGD|Ogden, Ogden-Hinckley Airport
+KPUC|Price, Carbon County Airport
+KPVU|Provo Municipal Automatic Weather Observing / Reporting System
+KSGU|Saint George Automatic Weather Observing / Reporting System
+KSLC|Salt Lake City, Salt Lake City International Airport
+KVEL|Vernal, Vernal Airport
+KENV|Wendover / Air Force Auxillary Field

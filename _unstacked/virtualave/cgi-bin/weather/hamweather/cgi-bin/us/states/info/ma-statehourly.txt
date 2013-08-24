@@ -1,0 +1,10 @@
+Beverly|Beverly|7
+Boston|Boston|15
+Fitchburg|Fitchburg|4
+Marthas Vnyrd|Martha's Vineyard|23
+Nantucket|Nantucket|24
+New Bedford|New Bedford|20
+North Adams|North Adams|1
+Plymouth|Plymouth|19
+Springfield|Springfield|11
+Worcester|Worcester|12

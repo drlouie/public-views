@@ -1,0 +1,10 @@
+Burlington|Burlington|89
+Cedar Rapids|Cedar Rapids|52
+Des Moines|Des Moines|60
+Dubuque|Dubuque|42
+Lamoni|Lamoni|94
+Mason City|Mason City|17
+Ottumwa|Ottumwa|86
+Spencer|Spencer|14
+Sioux City|Sioux City|31
+Waterloo|Waterloo|39

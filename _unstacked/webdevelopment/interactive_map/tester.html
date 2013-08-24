@@ -1,0 +1,225 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!--layershowhide thanks to thomas bratti http://bratta.com--> <!--Start Layer Show/Hide--> 
+<script>
+function hide(id,nest){
+        if(document.layers){
+                if(nest) document.layers[nest].document.layers[id].visibility="hidden"
+                else document.layers[id].visibility="hidden"
+        }else if(document.all) document.all[id].style.visibility="hidden"
+}
+function show(id,nest){
+        if(document.layers){
+                if(nest) document.layers[nest].document.layers[id].visibility="visible"
+                else document.layers[id].visibility="visible"
+        }else if(document.all) document.all[id].style.visibility="visible"
+}
+</script>
+<!--End Menu Show/Hide--> 
+<style type="text/css">
+<!--
+.bodytext {   font-family: Arial, Helvetica; font-style: normal; font-weight: normal; font-size: 13px; }
+.statetitle {  font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: bold; color: #000099}
+a {  font-family: Arial, Helvetica, sans-serif; color: #000099; text-decoration: none}
+A:hover { font-size:13px ; text-decoration:underline; font-family: Arial ,Verdana, Helvetica; color: #000099}
+.moreinfo {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #000099}
+td {  padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px}
+.states {position:absolute;top:20px;left:20px;visibility:hidden}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<SCRIPT LANGUAGE="JavaScript1.1">
+
+    NS4 = (document.layers) ? 1 : 0; // is it Netscape 4+
+    IE4 = (document.all) ? 1 : 0;    // is it Explorer 4+
+   ver4 = (IE4 || NS4) ? 1 : 0;      // if it's either it's version 4
+
+if (IE4) {
+    document.write ('<div id="USA" align="center" style="width:100%; height:115px; z-index:1; visibility: visible">');
+}
+
+if (NS4) { 
+	document.write ('<layer id="USA" align="center" style="width:100%; height:115px; z-index:1; visibility: visible">');
+}
+
+</script>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr align="center"><td>
+<img src="country/usa.gif" width="643" height="416" usemap="#Map" border="0">
+<map name="Map">
+<area shape="poly" coords="126,405,84,327,58,317,34,327,40,342,31,342,28,350,35,358,27,359,24,377,29,385,41,388,31,401,51,397,98,381,101,388" href="#" alt="State of Alaska" title="State of Alaska" OnClick="show('ak'),hide('USA')">
+<area shape="poly" coords="234,396,221,405,212,388,224,384" href="#" alt="State of Hawaii" title="State of Hawaii"  OnClick="show('hi'),hide('USA')">
+<area shape="poly" coords="218,378,211,378,206,370,159,350,159,356" href="#" alt="State of Hawaii" title="State of Hawaii" OnClick="show('hi'),hide('USA')">
+<area shape="poly" coords="152,354,143,361,140,357,148,351" href="#" alt="State of Hawaii" title="State of Hawaii" OnClick="show('hi'),hide('USA')">
+<area shape="poly" coords="57,112,12,99,3,122,6,148,12,165,15,184,22,207,24,222,29,226" href="#" alt="State of California" title="State of California" OnClick="show('ca'),hide('USA')">
+<area shape="poly" coords="86,264,60,262,49,240,30,225,47,156,95,227,97,242" href="#" alt="State of California" title="State of California"  OnClick="show('ca'),hide('USA')">
+<area shape="poly" coords="121,125,105,217,98,214,94,225,47,156,58,114" href="#" alt="State of Nevada" title="State of Nevada" OnClick="show('nv'),hide('USA')">
+<area shape="poly" coords="90,119,12,97,18,79,21,63,34,36,46,53,58,53,71,55,86,55,103,58,106,65" href="#" alt="State of Oregon" title="State of Oregon" OnClick="show('or'),hide('USA')">
+<area shape="poly" coords="111,14,103,56,44,51,43,39,34,35,51,26,57,18,55,12,58,1" href="#" alt="State of Washington" title="State of Washington" OnClick="show('wa'),hide('USA')">
+<area shape="poly" coords="52,11,49,27,34,35,34,2" href="#" alt="State of Washington" title="State of Washington" OnClick="show('wa'),hide('USA')">
+<area shape="poly" coords="155,133,90,118,106,43,121,45,131,59,144,93,156,93,161,94" href="#" alt="State of Idaho" title="State of Idaho" OnClick="show('id'),hide('USA')">
+<area shape="poly" coords="109,16,120,19,123,47,106,43" href="#" alt="State of Idaho" title="State of Idaho" OnClick="show('id'),hide('USA')">
+<area shape="poly" coords="120,125,106,201,166,212,174,151,152,148,153,134,153,131" href="#" alt="State of Utah" title="State of Utah" OnClick="show('ut'),hide('USA')">
+<area shape="poly" coords="169,213,156,299,129,296,84,268,96,241,93,226,98,216,105,218,107,202" href="#" alt="State of Arizona" title="State of Arizona" OnClick="show('az'),hide('USA')">
+<area shape="poly" coords="243,36,239,96,164,87,162,94,146,93,124,48,120,19" href="#" alt="State of Montana" title="State of Montana" OnClick="show('mt'),hide('USA')">
+<area shape="poly" coords="239,97,235,159,153,147,165,88" href="#" alt="State of Wyoming" title="State of Wyoming" OnClick="show('wy'),hide('USA')">
+<area shape="poly" coords="257,159,175,151,169,212,254,221" href="#" alt="State of Colorado" title="State of Colorado" OnClick="show('co'),hide('USA')">
+<area shape="poly" coords="241,220,236,298,191,294,190,296,169,296,166,300,157,300,169,212" href="#" alt="State of New Mexico" title="State of New Mexico" OnClick="show('nm'),hide('USA')">
+<area shape="poly" coords="242,35,314,39,319,59,320,85,241,82" href="#" alt="State of North Dakota" title="State of North Dakota" OnClick="show('nd'),hide('USA')">
+<area shape="poly" coords="320,86,318,91,322,96,321,122,320,126,322,129,320,134,323,137,314,133,306,134,299,130,237,127,240,82" href="#" alt="State of South Dakota" title="State of South Dakota" OnClick="show('sd'),hide('USA')">
+<area shape="poly" coords="237,127,235,157,257,159,256,174,333,176,327,167,326,155,323,153,325,150,315,135,322,137,324,145,312,134,299,130" href="#" alt="State of Nebraska" title="State of Nebraska" OnClick="show('ne'),hide('USA')">
+<area shape="poly" coords="343,225,344,190,339,184,339,179,330,177,255,174,254,218,255,221,241,220" href="#" alt="State of Kansas" title="State of Kansas" OnClick="show('ks'),hide('USA')">
+<area shape="poly" coords="240,219,241,229,278,231,279,262,284,262,300,269,305,272,314,271,337,271,346,276,343,225" href="#" alt="State of Oklahoma" title="State of Oklahoma" OnClick="show('ok'),hide('USA')">
+<area shape="poly" coords="191,296,210,317,214,331,231,342,235,339,234,332,241,332,249,334,253,333,265,344,268,355,278,366,283,384,309,394,307,373,303,371,321,355,319,351,324,352,342,341,340,335,343,334,346,339,353,336,359,315,353,303,352,279,332,270,306,271,280,263,277,231,240,230,236,299" href="#" alt="State of Texas" title="State of Texas" OnClick="show('tx'),hide('USA')">
+<area shape="poly" coords="313,38,335,39,337,35,350,47,359,46,364,50,378,50,391,52,368,74,369,82,364,86,364,105,370,108,372,113,378,114,379,122,321,123,323,97,318,92,321,85,320,60" href="#" alt="State of Minnesota" title="State of Minnesota"  OnClick="show('mn'),hide('USA')">
+<area shape="poly" coords="322,124,321,135,325,146,327,159,328,168,379,167,383,155,393,144,384,136,379,122" href="#" alt="State of Iowa" title="State of Iowa" OnClick="show('ia'),hide('USA')">
+<area shape="poly" coords="328,168,338,179,340,185,345,189,344,233,400,230,398,236,406,237,411,223,406,216,395,203,397,192,391,192,378,168" href="#" alt="State of Missouri" title="State of Missouri" OnClick="show('mo'),hide('USA')">
+<area shape="poly" coords="345,232,347,276,352,279,353,285,389,283,387,275,392,264,397,260,397,254,404,237,397,236,399,231,402,230" href="#" alt="State of Arkansas" title="State of Arkansas" OnClick="show('ar'),hide('USA')">
+<area shape="poly" coords="351,285,387,284,391,294,384,315,407,312,411,324,404,322,402,326,414,327,411,333,419,338,417,342,410,336,405,339,397,341,385,333,379,337,364,332,355,335,360,315,353,303" href="#" alt="State of Louisiana" title="State of Louisiana" OnClick="show('la'),hide('USA')">
+<area shape="poly" coords="387,72,414,80,419,88,424,79,430,81,438,75,453,75,450,69,443,69,443,65,422,71,413,66,408,68,412,58" href="#" alt="State of Michigan" title="State of Michigan" OnClick="show('mi'),hide('USA')">
+<area shape="poly" coords="469,140,433,144,437,129,432,109,439,91,442,96,448,80,463,85,467,93,462,107,463,112,474,103,481,116" href="#" alt="State of Michigan" title="State of Michigan" OnClick="show('mi'),hide('USA')">
+<area shape="poly" coords="425,92,419,132,383,134,379,115,372,113,372,108,365,104,365,86,369,82,369,73,377,72,380,69,383,73,391,72,413,78" href="#" alt="State of Wisconsin" title="State of Wisconsin" OnClick="show('wi'),hide('USA')">
+<area shape="poly" coords="420,133,426,148,427,186,428,195,423,203,424,207,419,217,412,219,397,203,397,192,392,192,380,167,388,152,393,145,385,135" href="#" alt="State of Illinois" title="State of Illinois" OnClick="show('il'),hide('USA')">
+<area shape="poly" coords="455,142,462,182,447,203,425,207,424,202,429,195,427,146" href="#" alt="State of Indiana" title="State of Indiana" OnClick="show('in'),hide('USA')">
+<area shape="poly" coords="500,133,509,163,494,174,493,181,490,181,484,187,473,189,461,184,453,144,476,141,480,145" href="#" alt="State of Ohio" title="State of Ohio" OnClick="show('oh'),hide('USA')">
+<area shape="poly" coords="428,320,425,303,425,250,398,253,397,260,388,275,389,285,392,295,386,315,408,313,412,324" href="#" alt="State of Mississippi" title="State of Mississippi" OnClick="show('ms'),hide('USA')">
+<area shape="poly" coords="458,247,470,286,468,293,470,306,438,310,441,318,430,318,426,303,424,250" href="#" alt="State of Alabama" title="State of Alabama" OnClick="show('al'),hide('USA')">
+<area shape="poly" coords="439,320,438,319,441,319,438,311,470,307,472,311,508,310,511,312,513,305,519,306,549,362,547,381,538,387,537,381,526,377,521,363,517,365,512,360,514,352,508,351,508,332,499,330,488,320,479,325,471,327,465,319,462,320,452,316" href="#" alt="State of Florida" title="State of Florida" OnClick="show('fl'),hide('USA')">
+<area shape="poly" coords="615,21,621,25,627,45,629,44,640,56,615,77,609,90,602,86,595,63,599,58,598,49,603,23" href="#" alt="State of Maine" title="State of Maine" OnClick="show('me'),hide('USA')">
+<area shape="poly" coords="608,94,590,101,588,91,589,79,594,75,592,63,595,63" href="#" alt="State of New Hampshire" title="State of New Hampshire" OnClick="show('nh'),hide('USA')">
+<area shape="poly" coords="592,66,592,74,588,80,590,100,581,104,575,89,572,72" href="#" alt="State of Vermont" title="State of Vermont" OnClick="show('vt'),hide('USA')">
+<area shape="poly" coords="580,116,580,105,608,95,609,102,615,109,620,105,621,111,610,116,606,110" href="#" alt="State of Massachusetts" title="State of Massachusetts" OnClick="show('ma'),hide('USA')">
+<area shape="poly" coords="571,71,581,103,582,116,582,135,561,120,512,129,511,125,519,119,516,110,535,106,545,100,546,89,556,76" href="#" alt="State of New York" title="State of New York" OnClick="show('ny'),hide('USA')">
+<area shape="poly" coords="602,127,584,137,585,132,599,125" href="#" alt="State of New York" title="State of New York" OnClick="show('ny'),hide('USA')">
+<area shape="poly" coords="600,113,602,121,608,114,605,111" href="#" alt="State of Rhode Island" title="State of Rhode Island" OnClick="show('ri'),hide('USA')">
+<area shape="poly" coords="583,115,599,112,602,121,583,129" href="#" alt="State of Conneticut" title="State of Conneticut" OnClick="show('ct'),hide('USA')">
+<area shape="poly" coords="510,126,502,133,509,165,566,156,571,150,567,143,568,130,561,120,512,131" href="#" alt="State of Pennsylvania" title="State of Pennsylvania" OnClick="show('pa'),hide('USA')">
+<area shape="poly" coords="567,129,582,134,580,138,583,140,583,152,579,157,578,163,574,160,569,160,567,155,571,149,567,141" href="#" alt="State of New Jersey" title="State of New Jersey" OnClick="show('nj'),hide('USA')">
+<area shape="poly" coords="567,155,563,158,568,175,578,172" href="#" alt="State of Delaware" title="State of Delaware" OnClick="show('de'),hide('USA')">
+<area shape="poly" coords="576,174,570,193,571,183,563,176,560,161,561,181,551,178,551,173,536,162,523,169,522,163,562,157,569,175" href="#" alt="State of Maryland" title="State of Maryland" OnClick="show('md'),hide('USA')">
+<area shape="poly" coords="537,170,535,162,520,169,521,163,505,164,485,186,493,201,504,208,515,199,522,181" href="#" alt="State of West Virginia" title="State of West Virginia" OnClick="show('wv'),hide('USA')">
+<area shape="poly" coords="409,229,421,228,424,224,429,227,480,219,495,204,491,199,485,187,472,189,462,184,449,204,425,206,420,217,413,219" href="#" alt="State of Kentucky" title="State of Kentucky" OnClick="show('ky'),hide('USA')">
+<area shape="poly" coords="399,252,471,246,504,217,408,230" href="#" alt="State of Tennessee" title="State of Tennessee" OnClick="show('tn'),hide('USA')">
+<area shape="poly" coords="481,220,497,204,504,208,515,201,522,182,537,170,536,164,550,172,552,178,564,185,565,193,557,197,564,200,568,197,573,203,573,205" href="#" alt="State of Virginia" title="State of Virginia" OnClick="show('va'),hide('USA')">
+<area shape="poly" coords="472,246,505,216,574,205,581,220,580,220,573,208,564,213,572,214,577,214,572,223,564,223,569,225,565,230,570,229,573,229,561,236,548,252,533,239,519,241,516,238" href="#" alt="State of North Carolina" title="State of North Carolina" OnClick="show('nc'),hide('USA')">
+<area shape="poly" coords="547,252,522,288,486,250,487,244,516,238,519,242,533,240" href="#" alt="State of South Carolina" title="State of South Carolina" OnClick="show('sc'),hide('USA')">
+<area shape="poly" coords="487,244,485,250,522,287,518,297,520,305,512,305,512,310,473,311,470,307,468,295,471,288,458,247" href="#" alt="State of Georgia" title="State of Georgia" OnClick="show('ga'),hide('USA')">
+</map></td>
+    </tr>
+  </table>
+</layer></div>
+<div ID="ak" class="states"> 
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="290" align="center" class="statetitle" rowspan="2"><font class="statetitle">Alaska, 
+        USA</font><br>
+        <img src="states/ak.gif" width="290" height="220"></td>
+      <td class="bodytext" valign="top"> 
+        <p><img src="flags/ak.gif" width="68" height="50"><br>
+          <br>
+          "Alaska holds an allure for adventurers, worldwide, for its Arctic mystic, 
+          vastness, variety of wildlife, scenery, and unique activities. Check 
+          out this site to see what makes us a world-class destination." - <a href="http://www.dced.state.ak.us/tourism/">Alaska 
+          Division of Tourisim</a><br>
+          <br>
+          Current Time:<br>
+          <br>
+          Local News:<br>
+          <br>
+          Current Weather:</p>
+      </td>
+    </tr>
+    <tr> 
+      <td class="bodytext" valign="bottom" align="center"><a href="#" OnClick="hide('ak'),show('USA')">Back to 
+        USA Country Map</a></td>
+    </tr>
+  </table>
+</div>
+<div ID="hi" class="states">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="290" align="center" class="statetitle" valign="top" rowspan="2"><font class="statetitle">Hawaii, 
+        USA</font><br>
+        <img src="states/hi.gif" width="223" height="127"> <br>
+        <font class="moreinfo">*Click on the city you would like more information 
+        about... </font> </td>
+      <td class="bodytext" valign="top"> 
+        <p><img src="flags/hi.gif" width="68" height="50"><br>
+          <br>
+          "Discover the beautiful island of Aloha, where tropical splendor fonted 
+          by the powers of nature come together to give you a dream-lover’s paradise: 
+          Hawaii. Hawaii offers vacation diversity with seven islands. Four of 
+          the islands are considered the finest to visit: Kaua’i, Moloka’i, O’ahu, 
+          and Maui." - <a href="http://www.accessamer.com/hawaii/">AccessAmerica</a><br>
+          <br>
+          Current Time:<br>
+          <br>
+          Local News:<br>
+          <br>
+          Current Weather:</p>
+      </td>
+    </tr>
+    <tr> 
+      <td class="bodytext" valign="bottom" align="center"><a href="#" OnClick="hide('hi'),show('USA')">Back to 
+        USA Country Map</a></td>
+    </tr>
+  </table>
+</div>
+<div ID="ca" class="states"> 
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="290" align="center" class="statetitle" valign="top" rowspan="2"><font class="statetitle">California, 
+        USA</font><br>
+        <img src="states/ca.gif" width="191" height="332"> <br>
+        <font class="moreinfo">*Click on the city you would like more information 
+        about... </font> </td>
+      <td class="bodytext" valign="top"> 
+        <p><img src="flags/ca.gif" width="68" height="50"><br>
+          <br>
+          California, with over a hundred miles of sun-drenched white sand beaches, 
+          is undoubtedly one of the world's greatest beach areas. In addition 
+          to its incredible coast, California is home to a vast array of enchanting 
+          playgrounds. Disneyland, Magic Mountain, Knottsberry Farm, Universal 
+          Studios, Sea World, Wild Rivers, and a host of world class museums, 
+          restautants and hotels. <br>
+          <br>
+          Current Time:<br>
+          <br>
+          Local News:<br>
+          <br>
+          Current Weather:</p>
+      </td>
+    </tr>
+    <tr> 
+      <td class="bodytext" valign="bottom" align="center"><a href="#" OnClick="hide('ca'),show('USA')">Back to 
+        USA Country Map</a></td>
+    </tr>
+  </table>
+</div>
+<div ID="nv" class="states"> 
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="290" align="center" class="statetitle" valign="top" rowspan="2"><font class="statetitle">Nevada, 
+        USA</font> <br>
+        <img src="states/nv.gif" width="149" height="232"><br>
+        <font class="moreinfo">*Click on the city you would like more information about... </font><br></td>
+<td class="bodytext" valign="top"><p><img src="flags/nv.gif" width="68" height="50"><br><br>
+          &quot;Nevada, home of adventure and entertainment. Enjoy our magnificent 
+          mountains and the breathtaking views of Lake Tahoe. Try a challenging 
+          climb at Red Rock Canyon or drive the scenic Valley of Fire. Camp, hike 
+          and fish at Great Basin National Park. Sample our great outdoors, then 
+          change pace and relax in world famous hotels. Enjoy fine dining, world-class 
+          entertainment and innovative original productions. Visit a land where 
+          pioneer spirit and pioneer hospitality are still the rule. Come see 
+          what Nevada has to offer!&quot; - <a href="http://www.state.nv.us/" style="text-decoration:underline">Nevada 
+          Official Web Site</a><br><br>Current Time:<br><br>Local News:<br><br>Current Weather:</p></td></tr>
+<tr><td class="bodytext" valign="bottom" align="center"><a href="#" OnClick="hide('nv'),show('USA')">Back to USA Country Map</a></td></tr></table>
+</div>
+</body>
+</html>

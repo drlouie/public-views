@@ -1,0 +1,22 @@
+KCGI|Cape Girardeau, Cape Girardeau Regional Airport
+KCDJ|Chillicothe, Chillicothe Agri-Science Center
+KCOU|Columbia, Columbia Regional Airport
+KFAM|Farmington Airport
+KTBN|Fort Leonard Wood
+KJEF|Jefferson City, Jefferson City Memorial Airport
+KJLN|Joplin, Joplin Regional Airport
+KAIZ|Kaiser Memorial Automatic Weather Observing / Reporting System 
+KMKC|Kansas City, Kansas City Downtown Airport
+KMCI|Kansas City, Kansas City International Airport
+KGVW|Kansas City, Richards-Gebaur Airport
+KIRK|Kirksville, Kirksville Regional Airport
+KPOF|Poplar Bluff, Poplar Bluff Municipal Airport
+KVIH|Rolla / Vichy, Rolla National Airport
+KDMO|Sedalia, Sedalia Memorial Airport
+KSGF|Springfield, Springfield Regional Airport
+KSET|St. Charles, St. Charles County Smartt Airport
+KSTJ|St. Joseph, Rosecrans Memorial Airport
+KSTL|St. Louis, Lambert-St. Louis International Airport
+KSUS|St. Louis, Spirit Of St. Louis Airport
+KUNO|West Plains, West Plains Municipal Airport
+KSZL|Whiteman Air Force Base

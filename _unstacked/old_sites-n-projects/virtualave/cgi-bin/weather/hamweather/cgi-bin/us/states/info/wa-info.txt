@@ -1,0 +1,49 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="111, 120, 6" HREF="%%scripturl%%?forecast=zandh&state=wa&place=olympia">
+<AREA SHAPE="POLYGON" COORDS="379, 9, 446, 7, 445, 80, 435, 78, 427, 71, 422, 71, 417, 75, 406, 73, 402, 71, 393, 77, 381, 71, 375, 69, 371, 63, 378, 59, 385, 50, 380, 39, 387, 25" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=037" alt="Northeast Mountains">
+<AREA SHAPE="POLYGON" COORDS="323, 8, 378, 7, 387, 28, 379, 40, 383, 53, 375, 63, 369, 62, 372, 68, 370, 72, 361, 68, 348, 70, 343, 60, 343, 45, 325, 34, 320, 28" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=038" alt="Okanogan Highlands">
+<AREA SHAPE="POLYGON" COORDS="372, 73, 373, 68, 380, 70, 389, 78, 400, 72, 405, 75, 409, 73, 418, 78, 417, 70, 427, 72, 435, 78, 446, 80, 445, 100, 431, 100, 416, 107, 403, 108, 403, 92, 380, 82" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=036" alt="Spokane Area">
+<AREA SHAPE="POLYGON" COORDS="329, 60, 341, 58, 342, 65, 347, 71, 358, 69, 368, 73, 381, 82, 401, 91, 400, 109, 393, 108, 392, 126, 387, 134, 378, 138, 346, 137, 334, 127, 334, 105, 304, 93, 308, 89, 316, 87, 328, 69" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=035" alt="Upper Columbia Basin">
+<AREA SHAPE="POLYGON" COORDS="294, 9, 323, 8, 318, 34, 324, 37, 333, 42, 342, 46, 343, 58, 325, 60, 300, 64, 289, 64, 287, 67, 276, 65, 266, 56, 285, 44, 295, 20" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=043" alt="Okanogan Valley">
+<AREA SHAPE="POLYGON" COORDS="285, 66, 288, 63, 293, 67, 310, 64, 326, 61, 327, 68, 314, 86, 303, 91, 302, 105, 281, 105, 281, 101, 268, 94, 272, 82, 281, 80" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=044" alt="Waterville Plateau">
+<AREA SHAPE="POLYGON" COORDS="277, 106, 302, 105, 303, 96, 334, 106, 333, 127, 345, 138, 316, 138, 310, 141, 305, 139, 284, 144, 278, 139, 281, 130, 275, 120" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=034" alt="Moses Lake Area">
+<AREA SHAPE="POLYGON" COORDS="379, 138, 388, 133, 393, 127, 394, 109, 413, 109, 425, 101, 432, 99, 444, 99, 446, 101, 443, 157, 434, 152, 423, 138, 416, 140, 406, 140, 395, 145, 380, 150" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=033" alt="Washington Palouse">
+<AREA SHAPE="POLYGON" COORDS="397, 146, 408, 139, 417, 141, 420, 139, 435, 155, 446, 157, 452, 179, 436, 177, 437, 169, 434, 164, 426, 157, 414, 160, 407, 154, 400, 151" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=032" alt="Lower Garfield and Asotin Counties">
+<AREA SHAPE="POLYGON" COORDS="415, 161, 425, 157, 431, 161, 435, 165, 437, 169, 436, 174, 433, 179, 417, 179, 414, 164" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=031" alt="Northeast Blue Mountains">
+<AREA SHAPE="POLYGON" COORDS="410, 162, 413, 161, 414, 179, 387, 177, 385, 174" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=030" alt="Northwest Blue Mountains">
+<AREA SHAPE="POLYGON" COORDS="379, 149, 398, 146, 399, 153, 405, 153, 412, 160, 391, 169, 381, 178, 365, 178, 378, 161" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=029" alt="Foothills of the Blue Mountains">
+<AREA SHAPE="POLYGON" COORDS="287, 144, 297, 140, 305, 139, 310, 141, 312, 138, 378, 137, 378, 147, 377, 162, 365, 179, 339, 177, 328, 183, 300, 184, 260, 196, 247, 195, 244, 191, 244, 187, 257, 177, 284, 177" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=028" alt="Lower Columbia Basin">
+<AREA SHAPE="POLYGON" COORDS="243, 131, 247, 132, 249, 135, 275, 139, 284, 144, 283, 177, 259, 176, 256, 163, 222, 154, 223, 149, 235, 142" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=027" alt="Yakima Valley">
+<AREA SHAPE="POLYGON" COORDS="251, 108, 277, 109, 274, 118, 279, 135, 275, 138, 250, 135, 242, 130, 232, 119, 232, 115, 250, 111" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=026" alt="Kittitas Valley">
+<AREA SHAPE="POLYGON" COORDS="241, 189, 250, 181, 260, 177, 260, 171, 255, 163, 234, 157, 221, 154, 222, 147, 233, 142, 239, 135, 240, 129, 236, 123, 231, 119, 231, 115, 250, 111, 252, 107, 233, 98, 225, 97, 213, 87, 196, 101, 203, 117, 190, 129, 197, 139, 196, 157, 190, 155, 191, 176, 186, 177, 182, 190, 192, 193, 228, 191" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=025" alt="East Slopes Southern Cascades">
+<AREA SHAPE="POLYGON" COORDS="263, 59, 271, 62, 274, 67, 284, 66, 286, 71, 281, 79, 271, 81, 266, 94, 281, 101, 276, 109, 270, 107, 250, 105, 233, 97, 237, 87, 240, 77, 247, 69" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=041" alt="Wenatchee Area">
+<AREA SHAPE="POLYGON" COORDS="230, 8, 291, 7, 294, 18, 291, 30, 286, 41, 273, 50, 262, 58, 253, 64, 243, 72, 236, 82, 233, 95, 229, 99, 214, 87, 217, 75, 210, 74, 214, 59, 224, 54, 219, 48, 218, 38, 226, 35, 236, 35, 233, 28, 237, 24, 232, 3, 291, 7" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=042" alt="East Slopes Northern Cascades">
+<AREA SHAPE="POLYGON" COORDS="189, 191, 212, 193, 225, 192, 241, 188, 242, 195, 211, 203, 190, 197" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=024" alt="East Columbia River Gorge">
+<AREA SHAPE="POLYGON" COORDS="146, 199, 152, 196, 181, 191, 187, 191, 187, 196, 148, 205" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=023" alt="Western Columbia River Gorge">
+<AREA SHAPE="POLYGON" COORDS="139, 158, 189, 156, 189, 177, 184, 177, 183, 189, 154, 195, 153, 181, 148, 173" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=019" alt="West Slopes Southern Washington Cascades and Passes">
+<AREA SHAPE="POLYGON" COORDS="179, 81, 214, 77, 211, 86, 196, 98, 196, 102, 202, 113, 197, 115, 198, 118, 190, 128, 192, 133, 196, 141, 194, 149, 195, 156, 139, 156, 151, 134, 177, 110" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=018" alt="West Slopes Central Cascades and Passes">
+<AREA SHAPE="POLYGON" COORDS="146, 9, 229, 7, 237, 22, 232, 27, 237, 33, 228, 34, 218, 37, 216, 47, 223, 55, 212, 61, 209, 72, 215, 77, 181, 78, 159, 39, 164, 38, 159, 31, 149, 29" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=017" alt="West Slopes Northern Cascades and Passes">
+<AREA SHAPE="POLYGON" COORDS="116, 189, 125, 187, 133, 187, 143, 192, 146, 196, 145, 207, 115, 204" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=039" alt="Greater Vancouver Area and Rural Clark County">
+<AREA SHAPE="POLYGON" COORDS="122, 159, 137, 158, 148, 177, 153, 182, 153, 195, 147, 197, 143, 189, 137, 186, 125, 185, 118, 171" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=040" alt="Southern Washington Cascade Foothills">
+<AREA SHAPE="POLYGON" COORDS="178, 77, 176, 113, 149, 137, 137, 157, 124, 157, 121, 139, 140, 131, 160, 112, 168, 77" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=004" alt="Central Cascade Foothills">
+<AREA SHAPE="POLYGON" COORDS="159, 115, 136, 131, 125, 119, 119, 109, 118, 103, 129, 99, 144, 104" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=008" alt="Tacoma Area">
+<AREA SHAPE="POLYGON" COORDS="144, 77, 169, 76, 161, 111, 154, 107, 143, 103" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=007" alt="Seattle Metropolitan Area">
+<AREA SHAPE="POLYGON" COORDS="143, 58, 152, 53, 168, 77, 145, 76, 144, 69, 149, 65" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=006" alt="Everett and Vicinity">
+<AREA SHAPE="POLYGON" COORDS="147, 29, 158, 29, 164, 37, 159, 37, 164, 49, 179, 77, 167, 77, 152, 53" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=003" alt="Northern Cascade Foothills">
+<AREA SHAPE="POLYGON" COORDS="116, 37, 138, 46, 143, 57, 148, 64, 142, 70, 144, 99, 129, 99, 132, 88, 130, 67, 108, 69" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=009" alt="Admiralty Inlet Area">
+<AREA SHAPE="POLYGON" COORDS="113, 27, 81, 26, 85, 43, 111, 44" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=001" alt="San Juan County">
+<AREA SHAPE="POLYGON" COORDS="147, 29, 146, 9, 118, 9, 118, 26" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=002" alt="Western Whatcom County">
+<AREA SHAPE="POLYGON" COORDS="141, 58, 149, 55, 146, 28, 117, 26, 114, 36, 133, 42, 142, 49" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=005" alt="Northwest Interior">
+<AREA SHAPE="POLYGON" COORDS="58, 135, 83, 134, 87, 157, 120, 157, 120, 165, 117, 171, 123, 187, 117, 187, 88, 170, 66, 162" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=022" alt="Lower Columbia Including Longview and Castle Rock">
+<AREA SHAPE="POLYGON" COORDS="47, 107, 76, 105, 103, 119, 118, 110, 124, 121, 134, 128, 126, 135, 119, 142, 119, 158, 85, 156, 82, 135, 55, 135" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=011" alt="Southwest Interior">
+<AREA SHAPE="POLYGON" COORDS="106, 70, 129, 69, 133, 93, 128, 99, 117, 100, 117, 110, 101, 118, 77, 106" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=010" alt="Hood Canal/Kitsap Peninsula">
+<AREA SHAPE="POLYGON" COORDS="106, 68, 93, 88, 83, 100, 77, 106, 47, 104, 27, 54, 50, 60, 71, 60" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=012" alt="Olympics">
+<AREA SHAPE="POLYGON" COORDS="64, 56, 97, 55, 108, 59, 106, 67" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=013" alt="Eastern Strait of Juan de Fuca">
+<AREA SHAPE="POLYGON" COORDS="26, 49, 66, 57, 65, 59, 51, 58, 28, 53" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=014" alt="Western Strait of Juan de Fuca">
+<AREA SHAPE="POLYGON" COORDS="43, 132, 58, 133, 64, 157, 63, 162, 45, 166" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=021" alt="South Washington Coast">
+<AREA SHAPE="POLYGON" COORDS="28, 92, 41, 92, 57, 134, 44, 133" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=016" alt="Central Coast">
+<AREA SHAPE="POLYGON" COORDS="6, 43, 25, 49, 40, 92, 27, 90, 6, 57" HREF="%%scripturl%%?forecast=zandh&state=wa&zone=015" alt="North Coast">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="212" alt="WA" src="%%stateimagesurl%%/wa-zones.gif" width="459">
+<-end image map->

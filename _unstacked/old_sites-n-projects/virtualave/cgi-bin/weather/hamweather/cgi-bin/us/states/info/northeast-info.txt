@@ -1,0 +1,20 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="POLYGON" COORDS="51, 303, 59, 294, 68, 284, 73, 272, 83, 277, 89, 273, 106, 281, 101, 295, 124, 303, 123, 306" HREF="%%getstatescripturl%%?state=va" alt="Viginia">
+<AREA SHAPE="POLYGON" COORDS="4, 284, 12, 281, 15, 271, 17, 250, 24, 270, 43, 267, 47, 280, 72, 265, 86, 270, 84, 276, 76, 271, 71, 273, 72, 279, 59, 293, 54, 301, 49, 299, 46, 303, 3, 303, 0, 285, 9, 282" HREF="%%getstatescripturl%%?state=wv" alt="West Virginia">
+<AREA SHAPE="POLYGON" COORDS="1, 215, 11, 210, 17, 256, 15, 274, 8, 282, 3, 282" HREF="%%getstatescripturl%%?state=oh" alt="Ohio">
+<AREA SHAPE="POLYGON" COORDS="44, 266, 125, 250, 135, 285, 149, 282, 149, 295, 137, 303, 121, 300, 101, 293, 106, 281, 92, 274, 88, 271, 80, 265, 68, 266, 50, 278" HREF="%%getstatescripturl%%?state=md" alt="Maryland">
+<AREA SHAPE="POLYGON" COORDS="124, 252, 130, 248, 140, 270, 147, 275, 149, 281, 137, 285, 135, 285" HREF="%%getstatescripturl%%?state=de" alt="Delaware">
+<AREA SHAPE="POLYGON" COORDS="140, 202, 159, 214, 155, 224, 155, 226, 159, 224, 162, 231, 162, 247, 154, 263, 152, 270, 148, 269, 148, 264, 134, 255, 133, 249, 141, 238, 144, 235, 137, 223, 134, 215" HREF="%%getstatescripturl%%?state=nj" alt="New Jersey">
+<AREA SHAPE="POLYGON" COORDS="21, 203, 12, 209, 24, 270, 124, 251, 128, 247, 136, 246, 137, 242, 144, 236, 133, 225, 135, 218, 131, 216, 135, 209, 139, 202, 129, 202, 124, 188" HREF="%%getstatescripturl%%?state=pa" alt="Pennsylvania">
+<AREA SHAPE="POLYGON" COORDS="24, 200, 42, 182, 37, 168, 49, 162, 64, 164, 85, 158, 93, 148, 86, 136, 108, 107, 139, 99, 147, 113, 145, 120, 161, 160, 163, 208, 163, 212, 179, 207, 188, 201, 196, 201, 188, 209, 178, 214, 162, 220, 155, 221, 159, 213, 138, 200, 130, 200, 122, 187, 28, 205" HREF="%%getstatescripturl%%?state=ny" alt="New York">
+<AREA SHAPE="POLYGON" COORDS="158, 179, 195, 170, 199, 189, 162, 208, 163, 204" HREF="%%getstatescripturl%%?state=ct" alt="Connecticut">
+<AREA SHAPE="POLYGON" COORDS="195, 173, 204, 168, 214, 179, 201, 191" HREF="%%getstatescripturl%%?state=ri" alt="Rhode Island">
+<AREA SHAPE="POLYGON" COORDS="159, 161, 206, 144, 211, 150, 209, 156, 214, 160, 223, 170, 228, 168, 228, 161, 234, 171, 223, 175, 220, 175, 216, 179, 203, 169, 160, 178" HREF="%%getstatescripturl%%?state=ma" alt="Massachusetts">
+<AREA SHAPE="POLYGON" COORDS="140, 99, 178, 87, 180, 91, 177, 97, 181, 102, 171, 111, 175, 120, 171, 129, 175, 156, 161, 158, 156, 149, 151, 136, 145, 122, 147, 115" HREF="%%getstatescripturl%%?state=vt" alt="Vermont">
+<AREA SHAPE="POLYGON" COORDS="182, 80, 206, 141, 201, 147, 175, 155, 174, 149, 172, 140, 171, 129, 174, 122, 172, 111, 180, 104, 181, 101, 177, 97, 180, 92, 178, 90, 178, 83, 183, 83" HREF="%%getstatescripturl%%?state=nh" alt="New Hampshire">
+<AREA SHAPE="POLYGON" COORDS="181, 78, 189, 71, 195, 58, 194, 46, 196, 42, 194, 35, 202, 12, 206, 12, 208, 19, 223, 11, 231, 14, 244, 49, 253, 54, 254, 63, 261, 62, 267, 73, 253, 88, 246, 88, 242, 94, 234, 94, 234, 98, 233, 105, 221, 113, 211, 115, 214, 121, 207, 140, 201, 132" HREF="%%getstatescripturl%%?state=me" alt="Maine">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="305" alt="northeast.gif (5662 bytes)" src="%%stateimagesurl%%/northeast.gif" width="275">
+<-end image map->
+

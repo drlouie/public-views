@@ -1,0 +1,159 @@
+<html>
+
+<head>
+<title>HAMweather : HAMweather Include</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>HAMweather Include
+    and SSI Simulation</strong></big></font></td>
+  </tr>
+</table>
+
+<p>HAMweather allows you to easily insert files into a template during output. This can be
+used to insert a common header or footer into your weather output. Thus, allowing you to
+simply change a couple files to personalize your weather site. (Those familiar with SSI
+will know the power of this option.).&nbsp; Currently there are two methods to use insert
+files/script output into HAMweather output.&nbsp; The basic most secure method bing
+HAMweather Include and the second being HAMweather Simulated Server Side Include (SSI).
+&nbsp; Basical HAMweather Include is described below, followed by information on using
+simulated SSI in HAmweather.<br>
+<br>
+<font color="#000080"><strong>Basic HAMweather Include</strong></font></p>
+
+<p>The process of using HAMweather include (HWI) is a two step process. </p>
+
+<p><strong>Step 1 Predefine Include Files</strong></p>
+
+<p>You must first predefine what files can be included and give each one a 'nickname'. The
+reason for this is better security. You can do this by using the web based administration
+HAMweather Include page. HAMweather comes with the following include files preset:</p>
+<div align="center"><center>
+
+<table border="2" bordercolor="#000080" cellpadding="2" bordercolorlight="#000080"
+bordercolordark="#000080" cellspacing="0">
+  <tr>
+    <td width="100%"><table border="0" bgcolor="#FFFFD7" height="98">
+      <tr>
+        <td height="21" align="center" colspan="2"><strong><font color="#000080">HAMweather
+        Include Presets</font></strong></td>
+      </tr>
+      <tr>
+        <td height="21" align="center"><strong>Nickname</strong></td>
+        <td height="21" align="center"><strong>Filename</strong></td>
+      </tr>
+      <tr>
+        <td height="21" align="center">header</td>
+        <td height="21" align="center">header.html</td>
+      </tr>
+      <tr>
+        <td height="21" align="center">footer</td>
+        <td height="21" align="center">footer.html</td>
+      </tr>
+      <tr>
+        <td height="21" align="center">nav1</td>
+        <td height="21" align="center">nav1.html</td>
+      </tr>
+      <tr>
+        <td height="21" align="center">nav2</td>
+        <td height="21" align="center">nav2.html</td>
+      </tr>
+      <tr>
+        <td height="21" align="center">nav3</td>
+        <td height="21" align="center">nav3.html</td>
+      </tr>
+      <tr>
+        <td height="21" align="center">form1</td>
+        <td height="21" align="center">form1.html</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+<p>The include files are set to be in the /templates/include directory of your HAMweather
+install.</p>
+
+<p><strong>Step 2 Insert HWI command into templates.</strong></p>
+
+<p>The second step to using HWI is to insert the HWI command into your templates. To do
+this, add the following in your templates where you want the file inserted:</p>
+
+<blockquote>
+  <p><font color="#000080">%%hwi=nickname%%</font></p>
+</blockquote>
+
+<p>Where 'nickname' is the predefined nickname of the file that you want to include. <font
+color="#FF0000">For Example: If we wanted to include the header file we would use the
+following:</font></p>
+
+<blockquote>
+  <p><font color="#000080">%%hwi=header%%</font></p>
+</blockquote>
+
+<p>Also, all included files go through the HAMweather parse engine, so you can include
+HAMweather variables in the files to be included as well. Actually you could even have an
+include file include a second file if needed.</p>
+
+<p><strong><font color="#000080">Simualted Server Side Include</font></strong></p>
+
+<p>Many people use Server Side include to insert ads and/or other information&nbsp; into
+their html documents.&nbsp; Many of these same users would like to do the same with the
+HAMweather Output. (i.e. add banner ads tot he HAmweather output.).&nbsp; You may think
+that you can simply add the SSI directives to the HAmweather templates and as HAmweather
+sent out the output the webv server would catch these SSI commands and parse them as well.
+Weel in an ideal world this woudl work , but becauseof security reasons etc, most web
+server will not perform SSI parsing on the output of a CGI script.&nbsp; Because of this,
+HAMweather can simulate&nbsp; three commonly used SSI commands.</p>
+
+<p>First you must turn SSI simulation capabilities on.&nbsp; To do this you will need to
+open the hwconfig.txt file and set the &quot;$allow_SSI&quot; to '1'.&nbsp; Thus the line
+would look similar to:<br>
+<font color="#000080">&nbsp;&nbsp;&nbsp; $allow_SSI = 1;</font></p>
+
+<p>To torn the SSI Simulation capability off then you simply set the value back to zero:<br>
+<font color="#000080">&nbsp;&nbsp;&nbsp; $allow_SSI = 0;</font></p>
+
+<p>Now that SSI simulation capability is turned on you will simply add the SSI commands to
+your HAMweather templates and HAmweather will parse them as it outputs your templates.
+&nbsp; The following three basic SSI directives are supported (Note they may act slightly
+different from the real SSI counterparts):</p>
+
+<p><font color="#000080">&quot;Include File&quot; Directive</font>:&nbsp; &lt;!--#include
+file=&quot;/path/to/file&quot;--&gt;</p>
+
+<blockquote>
+  <p>This command will insert a file into the HAmweather output.&nbsp; Basically it is very
+  similar to the way that the basic HAMweather include works.&nbsp; You must set file equal
+  to a complete file path or it can be set to relative path to a file that is in the users
+  'include' directory.</p>
+</blockquote>
+
+<p><font color="#000080">&quot;Include Virtual&quot; Directive:</font> &lt;!--#include
+virtual=&quot;URLtofileorscript&quot;--&gt;</p>
+
+<blockquote>
+  <p>This command will insert a file or script output into the HAmweather output.&nbsp; You
+  must set 'virtual' equal to a relative or full url to the file or script to include.</p>
+</blockquote>
+
+<p><font color="#000080">&quot;Exec CMD&quot; Directive: </font>&lt;!--#exec
+cmd=&quot;path/to/script&quot;--&gt;</p>
+
+<blockquote>
+  <p>This command willinsert theoutput of a script/program into the hamweather output.
+  &nbsp; CMD must be set equal to a full path or to a url to a script.</p>
+</blockquote>
+
+<p><font color="#FF0000"><strong>NOTE</strong></font>:&nbsp; The use of SSI simulation,
+like normal SSI,&nbsp; can lower security on yoru server, thus it should only be used when
+absolutely needed.</p>
+
+<p><br>
+<a href="customicons.html">Continue To Weather Icons</a> </p>
+</body>
+</html>

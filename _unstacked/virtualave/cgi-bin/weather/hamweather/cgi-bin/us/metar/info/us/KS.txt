@@ -1,0 +1,29 @@
+KCNU|Chanute, Chanute Martin Johnson Airport
+KCFV|Coffeyville, Coffeyville Municipal Airport
+KCNK|Concordia, Blosser Municipal Airport
+KDDC|Dodge City, Dodge City Regional Airport
+KEHA|Elkhart Automatic Weather Observing / Reporting System
+KEMP|Emporia, Emporia Municipal Airport
+KFRI|Fort Riley
+KGCK|Garden City, Garden City Regional Airport
+KGLD|Goodland, Renner Field
+KGBD|Great Bend Automatic Weather Observing / Reporting System
+KHYS|Hays Municipal Automatic Weather Observing / Reporting System
+KHLC|Hill City, Hill City Municipal Airport
+KHUT|Hutchinson, Hutchinson Municipal Airport
+KLWC|Lawrence, Lawrence Municipal Airport
+KLBL|Liberal Municipal Automatic Weather Observing / Reporting System
+KMHK|Manhattan, Manhattan Municipal Airport
+KIAB|McConnell Air Force Base
+KP28|Medicine Lodge, Medicine Lodge
+KEWK|Newton Automatic Weather Observing / Reporting System
+KOJC|Olathe, Johnson County Executive Airport
+KIXD|Olathe, New Century Aircenter
+KPPF|Parsons, Tri-City Airport
+KRSL|Russell, Russell Municipal Airport
+KSLN|Salina, Salina Municipal Airport
+KFOE|Topeka, Forbes Field
+KTOP|Topeka, Philip Billard Municipal Airport
+KAAO|Wichita, Colonel James Jabara Airport
+KICT|Wichita, Wichita Mid-Continent Airport
+KWLD|Winfield / Arkansas City, Strother Field

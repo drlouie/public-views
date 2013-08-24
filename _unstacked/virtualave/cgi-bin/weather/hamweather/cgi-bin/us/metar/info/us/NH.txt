@@ -1,0 +1,11 @@
+KBML|Berlin, Berlin Municipal Airport
+KCON|Concord, Concord Municipal Airport
+KAFN|Jaffrey, Jaffrey Municipal-Silver Ranch Airport
+KEEN|Keene / Dillant Automatic Weather Observing / Reporting System
+KLCI|Laconia Municipal Automatic Weather Observing / Reporting System
+KLEB|Lebanon, Lebanon Municipal Airport
+KMHT|Manchester, Manchester Airport
+KMWN|Mount Washington
+KASH|Nashua / Boire Field
+KPSM|Pease Air Force Base / Portsmouth
+KHIE|Whitefield, Mount Washington Regional Airport

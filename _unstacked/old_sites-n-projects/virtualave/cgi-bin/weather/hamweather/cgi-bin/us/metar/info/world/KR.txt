@@ -1,0 +1,26 @@
+RKSX|Camp Stanley / H-207
+RKPC|Cheju International Airport
+RKTU|Chongju Ab
+RKTM|Mangilsan Ab
+RKSO|Osan Ab
+RKTB|Paekado
+RKSP|Paengnyongdo Ab
+RKTH|Pohang Ab
+RKPK|Pusan / Kimhae International Airport
+RKSG|Pyongtaek Ab
+RKTS|Sangju
+RKSS|Seoul / Kimp'O International Airport
+RKSF|Seoul / Yongdungp'O Rokaf Wc
+RKSM|Seoul E Ab
+RKTE|Songmu Ab
+RKSW|Suwon Ab
+RKTT|Taegu
+RKTN|Taegu Ab
+RKTF|Taejon
+RKPU|Ulsan
+RKTW|Woong Cheon
+RKTY|Yechon Ab
+RKSU|Yeoju Range
+RKSQ|Yeonpyeungdo
+RKSY|Yongsan / H-208 Hp
+RKJY|Yosu Airport

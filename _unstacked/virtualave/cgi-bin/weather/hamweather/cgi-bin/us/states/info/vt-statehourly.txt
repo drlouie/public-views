@@ -1,0 +1,3 @@
+Burlington|Burlington|5
+Montpelier|Montpelier|8
+St Johnsbury|St. Johnsbury|7

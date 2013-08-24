@@ -1,0 +1,10 @@
+fort liard|northern|fpcn11.wnt.htm|fpcn51.wnt.htm|deh cho liard valley
+fort simpson|northern|fpcn11.wnt.htm|fpcn51.wnt.htm|deh cho liard valley
+fort smith|northern|fpcn11.wnt.htm|fpcn51.wnt.htm
+hay river|northern|fpcn11.wnt.htm|fpcn51.wnt.htm
+inuvik|northern|fpcn12.wnt.htm|fpcn52.wnt.htm
+norman wells|northern|fpcn12.wnt.htm|fpcn52.wnt.htm
+paulatuk|northern|fpcn12.wnt.htm|fpcn52.wnt.htm
+sachs harbour|northern|fpcn12.wnt.htm|fpcn52.wnt.htm
+tuktoyaktuk|northern|fpcn12.wnt.htm|fpcn52.wnt.htm
+yellowknife|northern|fpcn11.wnt.htm|fpcn51.wnt.htm

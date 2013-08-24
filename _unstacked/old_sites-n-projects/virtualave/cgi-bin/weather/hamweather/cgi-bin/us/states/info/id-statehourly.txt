@@ -1,0 +1,9 @@
+Boise|Boise|14
+Challis|Challis|32
+Coeur d'Alene|Coeur d'Alene|2
+Hailey/Sun Vly|Hailey/Sun Valley|31
+Idaho Falls|Idaho Falls|20
+Lewiston|Lewiston|26
+McCall|McCall|11
+Pocatello|Pocatello|21
+Twin Falls|Twin Falls|16

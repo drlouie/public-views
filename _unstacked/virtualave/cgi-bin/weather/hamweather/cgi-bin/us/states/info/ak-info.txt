@@ -1,0 +1,31 @@
+<-begin image map->
+<map name="Alaska">
+  <area shape="circle" coords="449,157,4" href="%%scripturl%%?forecast=zandh&state=ak&place=juneau">
+  <area shape="poly" coords="65,207,43,214,34,221,36,226,49,223,70,220,76,210,64,206" href="%%scripturl%%?forecast=zone&state=ak&zone=021" alt="Western Alaska Peninsula">
+  <area shape="poly" coords="107,192,97,199,87,201,84,205,89,207,93,204,102,203,108,203,117,198,113,192" href="%%scripturl%%?forecast=zone&state=ak&zone=021" alt="Western Alaska Peninsula">
+  <area shape="poly" coords="233,156,224,162,220,166,210,167,206,173,212,176,218,176,227,172,236,172,235,165,234,159,236,159,229,161" href="%%scripturl%%?forecast=zone&state=ak&zone=020" alt="Kodiak Island-Eastern Alaska Peninsula">
+  <area shape="poly" coords="204,139,145,179,129,185,118,187,108,193,119,196,131,194,140,190,155,185,164,181,177,177,186,172,193,166,209,162,222,151,218,143,201,142" href="%%scripturl%%?forecast=zone&state=ak&zone=020" alt="Kodiak Island-Eastern Alaska Peninsula">
+  <area shape="poly" coords="201,140,246,145,275,122,284,105,256,106,255,109,221,123,202,138" href="%%scripturl%%?forecast=zone&state=ak&zone=018" alt="Cook Inlet-Susitna Valley">
+  <area shape="poly" coords="324,128,312,145,254,155,245,145,277,120,301,122,325,127" href="%%scripturl%%?forecast=zone&state=ak&zone=019" alt="Central Gulf Coast">
+  <area shape="poly" coords="285,105,276,120,292,120,324,127,367,130,368,123,306,106,284,106" href="%%scripturl%%?forecast=zone&state=ak&zone=017" alt="Copper River Basin">
+  <area shape="poly" coords="368,132,323,128,323,134,344,139,369,141,384,141,390,146,408,150,413,147,391,136" href="%%scripturl%%?forecast=zone&state=ak&zone=016" alt="Eastern Gulf Coast">
+  <area shape="poly" coords="414,149,406,153,422,160,430,169,442,182,466,198,471,192,415,151" href="%%scripturl%%?forecast=zone&state=ak&zone=015" alt="">
+  <area shape="poly" coords="486,182,502,188,502,200,499,205,463,203,471,189,486,184" href="%%scripturl%%?forecast=zone&state=ak&zone=014" alt="Southern Southeast Alaska">
+  <area shape="poly" coords="487,182,474,187,472,193,432,159,447,147,486,183" href="%%scripturl%%?forecast=zone&state=ak&zone=013" alt="Central Southeast Alaska">
+  <area shape="poly" coords="419,147,434,139,448,147,433,160,416,149" href="%%scripturl%%?forecast=zone&state=ak&zone=012" alt="Lynn Canal-Glacier Bay">
+  <area shape="poly" coords="122,147,123,153,120,158,132,154,149,153,158,156,163,150,175,157,174,165,148,179,215,130,144,122,121,146" href="%%scripturl%%?forecast=zone&state=ak&zone=011" alt="Bristol Bay Coastal">
+  <area shape="poly" coords="68,135,57,139,63,140,72,142,79,141,77,135,67,134" href="%%scripturl%%?forecast=zone&state=ak&zone=010" alt="Yukon-Kuskokwim Delta">
+  <area shape="poly" coords="122,147,145,121,149,104,143,94,132,100,116,99,105,102,97,103,92,101,88,103,85,107,80,112,72,117,74,121,81,126,84,134,89,139,107,141,119,137,122,144" href="%%scripturl%%?forecast=zone&state=ak&zone=010" alt="Yukon-Kuskokwim Delta">
+  <area shape="poly" coords="148,104,145,123,213,128,254,110,255,103,149,104" href="%%scripturl%%?forecast=zone&state=ak&zone=009" alt="Kuskokwim Valley">
+  <area shape="poly" coords="260,71,256,85,256,103,149,106,144,97,163,93,161,82,261,71,257,83,258,83" href="%%scripturl%%?forecast=zone&state=ak&zone=008" alt="Lower Yukon Valley">
+  <area shape="poly" coords="368,126,305,106,256,106,256,84,279,82,368,119" href="%%scripturl%%?forecast=zone&state=ak&zone=007" alt="Tanana Valley">
+  <area shape="poly" coords="15,96,24,94,29,97,41,100,35,103,27,103,19,99,7,99,7,96,11,95" href="%%scripturl%%?forecast=zone&state=ak&zone=006" alt="Southern Seward Peninsula-Eastern Norton Sound">
+  <area shape="poly" coords="66,68,59,71,51,73,64,76,68,81,74,84,85,85,110,85,122,83,127,81,131,85,132,89,130,96,115,98,137,101,160,93,158,80,149,64,73,77,64,70,51,72" href="%%scripturl%%?forecast=zone&state=ak&zone=006" alt="Southern Seward Peninsula-Eastern Norton Sound">
+  <area shape="poly" coords="65,69,74,77,150,64,161,30,103,29,98,32,87,33,71,35,65,40,78,43,101,52,105,55,115,57,123,59,114,65,98,64,94,63" href="%%scripturl%%?forecast=zone&state=ak&zone=005" alt="Lower Kobuk Valley-Northern Seward Peninsula">
+  <area shape="poly" coords="160,30,150,63,158,83,260,71,289,33" href="%%scripturl%%?forecast=zone&state=ak&zone=004" alt="Upper Kobuk-Koyukuk Valley">
+  <area shape="poly" coords="369,119,278,83,256,85,259,72,289,34,368,35,368,116" href="%%scripturl%%?forecast=zone&state=ak&zone=003" alt="Upper Yukon Valley">
+  <area shape="poly" coords="122,29,369,35,369,29,331,26,271,23,221,19,186,17,153,20,126,29" href="%%scripturl%%?forecast=zone&state=ak&zone=002" alt="North Slopes of Brooks Range">
+  <area shape="poly" coords="103,29,121,29,159,19,197,16,224,20,368,29,360,23,347,19,337,19,331,21,318,22,293,16,271,17,251,15,236,14,229,10,216,10,200,10,190,9,185,4,173,6,160,10,147,15,132,16,120,19,103,27" href="%%scripturl%%?forecast=zone&state=ak&zone=001" alt="Arctic Slope Coastal">
+</map>
+<img src="%%stateimagesurl%%/ak-zones.gif" width="503" height="227" border="0" usemap="#Alaska">
+<-end image map->

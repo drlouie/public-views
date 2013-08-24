@@ -1,0 +1,231 @@
+<html>
+
+<head>
+<title>HAMweather Administration : Images</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Administration :
+    Weather and Icons</strong></big></font></td>
+  </tr>
+</table>
+
+<p>HAMweather allows you to set the icons used when displaying the zone forecasts and the
+hourly and metar observations.&nbsp; To modify these icon settings click the &quot;Weather
+and Icons&quot; link in the HAMweather administration options at the top left of any
+administration page. Before stepping through this admin it is best to discuss exactly how
+HAMweather deteremins what icons to use etc.</p>
+
+<p>When HAMweather parses a zone forecast and creates the icon row it steps through the
+individual days forecast info.&nbsp; It then runs down through a list fo weather
+conditions to look for, comparing an item in the list to the days foreacast info.&nbsp; If
+it finds a match then it sets to use that weather conditions with the conditions icon and
+then moves on to the next day.&nbsp; As you can see this is a first come first serve
+method. Because of this you should list&nbsp; conditions such as &quot;Partly Cloudy&quot;
+and &quot;Mostly Cloudy&quot; before the condition &quot;Cloudy&quot; otherise HAMweather
+will output &quot;cloudy&quot; when it is actualy &quot;Partly cloduy&quot;. (Because it
+found the word cloudy in Partly cloudy).&nbsp; The default positioning of the various
+weather types should work sufficiently but you can move them around and insert new ones as
+needed.</p>
+
+<p>When at the &quot;Weather and Icons&quot; screen, you will see a table of the various
+possible weather conditions with the associated day and night icons names.&nbsp; The table
+will look similar to:</p>
+<div align="center"><center>
+
+<table align="center" border="0" cellPadding="3" cellSpacing="2">
+<TBODY>
+  <tr>
+    <th align="left" colSpan="3"><u><font color="#0000FF">Icon Properties</font></u></th>
+    <th align="right" colSpan="3"><u><font color="#0000FF">Day Titles</font></u></th>
+  </tr>
+  <tr bgColor="#336699">
+    <th colSpan="6"><font color="#ffffff"><big>Weather Info</big></font></th>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <th width="50"><u><font size="1" color="#0000FF">Show Icons</font></u></th>
+    <th width="50">Arrange</th>
+    <th>Weather Type</th>
+    <th>Display</th>
+    <th>Day Image</th>
+    <th>Night Image</th>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td align="middle"><font color="#0000FF"><u><font size="2">D</font></u>&nbsp;&nbsp; <u><font
+    size="2">E</font></u>&nbsp;&nbsp; <u><font size="2">I</font></u></font></td>
+    <td align="middle"><u><font size="1" color="#0000FF">Up</font></u>&nbsp;&nbsp; <font
+    size="1" color="#0000FF"><u>Down</u></font></td>
+    <td><small>INCREASING CLOUDS</small></td>
+    <td><small>Increasing Clouds</small></td>
+    <td><small>mcloudy.gif</small> </td>
+    <td><small>mcloudyn.gif</small></td>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td align="middle"><font color="#0000FF" size="2"><u>D</u></font><font color="#0000FF">&nbsp;&nbsp;
+    </font><font color="#0000FF" size="2"><u>E</u></font><font color="#0000FF">&nbsp;&nbsp; </font><font
+    color="#0000FF" size="2"><u>I</u></font></td>
+    <td align="middle"><u><font size="1" color="#0000FF">Up</font></u>&nbsp;&nbsp; <font
+    size="1" color="#0000FF"><u>Down</u></font></td>
+    <td><small>HAZY</small></td>
+    <td><small>Hazy</small></td>
+    <td><small>hazy.gif</small> </td>
+    <td><small>hazy.gif</small></td>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td align="middle"><font color="#0000FF" size="2"><u>D</u></font><font color="#0000FF">&nbsp;&nbsp;
+    </font><font color="#0000FF" size="2"><u>E</u></font><font color="#0000FF">&nbsp;&nbsp; </font><font
+    color="#0000FF" size="2"><u>I</u></font></td>
+    <td align="middle"><u><font size="1" color="#0000FF">Up</font></u>&nbsp;&nbsp; <font
+    size="1" color="#0000FF"><u>Down</u></font></td>
+    <td><small>MOSTLY CLOUDY</small></td>
+    <td><small>Mostly Cloudy</small></td>
+    <td><small>mcloudy.gif</small> </td>
+    <td><small>mcloudyn.gif</small></td>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td align="middle"><font color="#0000FF" size="2"><u>D</u></font><font color="#0000FF">&nbsp;&nbsp;
+    </font><font color="#0000FF" size="2"><u>E</u></font><font color="#0000FF">&nbsp;&nbsp; </font><font
+    color="#0000FF" size="2"><u>I</u></font></td>
+    <td align="middle"><u><font size="1" color="#0000FF">Up</font></u>&nbsp;&nbsp; <font
+    size="1" color="#0000FF"><u>Down</u></font></td>
+    <td><small>PARTLY CLOUDY</small></td>
+    <td><small>Partly Cloudy</small></td>
+    <td><small>pcloudy.gif</small> </td>
+    <td><small>pcloudyn.gif</small></td>
+  </tr>
+</TBODY>
+</table>
+</center></div>
+
+<p><font color="#000080"><strong>Icons Properties Link:<br>
+</strong></font>This link will allow you to set the height and width of the icons.</p>
+
+<p><strong><font color="#000080">Day Titles Link:<br>
+</font></strong>This link allows you to set the display names/wording to use for the day
+titles in the icon row. For more information <a href="#Administration : Day Titles">Goto
+end of page:</a></p>
+
+<p><strong><font color="#000080">Show Icons Link:<br>
+</font></strong>This link will reload the page with the actual weather icons apearing in
+the day image and night image columns. Do note that this may cause the admin page to take
+longer to load in your web browser.</p>
+
+<p><strong><font color="#000080">&quot;D&quot; Link (Delete):<br>
+</font></strong>This link is used to delete the current weather type.</p>
+
+<p><strong><font color="#000080">&quot;E&quot; Link (Edit):<br>
+</font></strong>This link is used to edit the current weather type.</p>
+
+<p><strong><font color="#000080">&quot;I&quot; Link (Insert):<br>
+</font></strong>This link is used to insert a new weather type before the current row.
+&nbsp; When you click this you will see a form appear for you to enter the weather type,
+the display wording and the day and night image filenames.</p>
+
+<p><font color="#000080"><strong>Weather Type Column:<br>
+</strong></font>This is the weather type that HAmweather will look for in the actual
+forecasts.</p>
+
+<p><strong><font color="#000080">Display Column:<br>
+</font></strong>This is the text HAMweather will use to when displaying the weather
+condition for the found weather type.&nbsp; You can have fun here because you can set this
+to most anything you want.&nbsp; This setting can also be set to a word in a foriegn
+&nbsp; language to create a foriegn language version of HAMweather.</p>
+
+<p><font color="#000080"><strong>Day Image Column:<br>
+</strong></font>This is the filename of the image to use for the daytime image for the
+found weather type.</p>
+
+<p><font color="#000080"><strong>Night Image Column:<br>
+</strong></font>This is the filename of the image to use for the nighttime image for the
+found weather type.</p>
+
+<p><font color="#000080"><strong>Arrange Column:<br>
+</strong></font>This column is used to reposition a weather type up or down in the list.
+&nbsp; Remember that weather types higher in the list are compared to the forecasts before
+the ones lower inthe list.&nbsp; Simply click &quot;up&quot; to move the forecast type up
+one row or click &quot;down&quot; to move the forecast down one row.</p>
+
+<p><font color="#FF0000">NOTE</font>:&nbsp; These values are stored in the theme config
+file.&nbsp; So when you make a change you are only making the change to the current theme
+for the current user. </p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><a name="Administration : Day Titles"><font
+    color="#FFFFFF"><big><strong>Administration : Day Titles</strong></big></font></a></td>
+  </tr>
+</table>
+
+<p>HAMweather will allow you to edit the display names/text that is used for the actual
+day titles in the icon row. This allows you to control what is displayed and even easily
+make multilingual vaersions of HAMweather.&nbsp; If a daytitle is needed that is not in
+the Table then HW will use the the actual word/phrase&nbsp; given from the NWS.</p>
+
+<p>Simply click the Day Titles link on the weather and icons admin page.&nbsp; You will
+then see a table similar to:</p>
+<div align="center"><center>
+
+<table align="center" border="0" cellPadding="3" cellSpacing="2">
+<TBODY>
+  <tr>
+    <th align="left"><font color="#0000FF"><u>Weather Info</u></font></th>
+    <th align="right" colSpan="2"><u><font color="#0000FF">Icon Properties</font></u></th>
+  </tr>
+  <tr bgColor="#336699">
+    <th colSpan="3"><font color="#ffffff"><big>Day Titles</big></font></th>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <th><u><font color="#0000FF"><small>Add New</small></font></u></th>
+    <th>IWIN Day Title Name</th>
+    <th>Display</th>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td><font size="1"><u><font color="#0000FF">Del</font></u>&nbsp;&nbsp; <u><font
+    color="#0000FF">Edit</font></u></font></td>
+    <td><b>and</b></td>
+    <td>and</td>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td><font size="1"><u><font color="#0000FF">Del</font></u>&nbsp;&nbsp; <u><font
+    color="#0000FF">Edit</font></u></font></td>
+    <td><b>friday</b></td>
+    <td>FRIDAY</td>
+  </tr>
+  <tr bgColor="#eeeecc">
+    <td><font size="1"><u><font color="#0000FF">Del</font></u>&nbsp;&nbsp; <u><font
+    color="#0000FF">Edit</font></u></font></td>
+    <td><b>monday</b></td>
+    <td>MONDAY</td>
+  </tr>
+</TBODY>
+</table>
+</center></div>
+
+<p><font color="#000080"><strong>Weather Info Link:<br>
+</strong></font>Takes you to the main Weather and Icons admin page.</p>
+
+<p><font color="#000080"><strong>Icon Properties Link:<br>
+</strong></font>Allows you to set the height and width of the weather icons.</p>
+
+<p><strong><font color="#000080">Add New Link:<br>
+</font></strong>Allows you to enter a new day title and display name.</p>
+
+<p><font color="#000080"><strong>Del Link:<br>
+</strong></font>Allows you to delete the current day title row.</p>
+
+<p><font color="#000080"><strong>Edit Link:<br>
+</strong></font>Allows you to edit the current day title row.</p>
+
+<p><strong><font color="#000080">IWIN Day Title Name Column:<br>
+</font></strong>This is the actual text given by the NWS/IWIN for the day title</p>
+
+<p><font color="#000080"><strong>Display Column:<br>
+</strong></font>This is the actual text to display for the given IWIN Day title
+word/phrase.</p>
+
+<p><small>Administor Email Forecasts</small> </p>
+</body>
+</html>

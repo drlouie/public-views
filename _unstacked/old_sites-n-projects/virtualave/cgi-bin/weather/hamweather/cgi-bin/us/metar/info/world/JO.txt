@@ -1,0 +1,4 @@
+OJAM|Amman Airport
+OJAQ|Aqaba Airport
+LLJR|Jerusalem Airport
+OJAI|Queen Alia Airport

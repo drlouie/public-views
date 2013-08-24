@@ -1,0 +1,14 @@
+KBWG|Bowling Green, Bowling Green-Warren County Regional Airport
+KCVG|Covington / Cincinnati, Cincinnati / Northern Kentucky International Airport
+KHOP|Fort Campbell U. S. Army Airfield
+KFTK|Fort Knox
+KFFT|Frankfort, Capital City Airport
+KEHR|Henderson City
+KJKL|Jackson, Carroll Airport
+KLEX|Lexington, Blue Grass Airport
+KLOZ|London, London-Corbin Airport-Magee Field
+KLOU|Louisville, Bowman Field
+KSDF|Louisville, Standiford Field
+KOWB|Owensboro / Daviess
+KPAH|Paducah, Barkley Regional Airport
+KSME|Somerset Automatic Weather Observing / Reporting System

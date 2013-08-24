@@ -1,0 +1,10 @@
+Abilene|Abilene|127
+Amarillo|Amarillo|12
+Austin/Mabry|Austin|192
+Corpus Christi|Corpus Christi|243
+DFW Airport|Dallas-Ft. Worth|119
+El Paso|El Paso|55
+Houston Hobby|Houston|213
+Lubbock|Lubbock|41
+Midland|Midland|62
+San Antonio|San Antonio|205

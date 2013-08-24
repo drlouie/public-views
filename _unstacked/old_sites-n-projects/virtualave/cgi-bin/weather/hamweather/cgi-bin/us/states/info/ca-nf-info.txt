@@ -1,0 +1,16 @@
+badger|newfoundland|fpcn11.yqx.htm|fpcn54.yqx.htm|CENTRAL NEWFOUNDLAND
+cartwright|labrador|fpcn13.yqx.htm|fpcn54.yqx.htm
+churchill falls|labrador|fpcn13.yqx.htm|fpcn54.yqx.htm
+corner brook|newfoundland|fpcn11.yqx.htm|fpcn54.yqx.htm|WEST COAST
+deer lake|newfoundland|fpcn11.yqx.htm|fpcn54.yqx.htm|WEST COAST
+gander|newfoundland|fpcn11.yqx.htm|fpcn54.yqx.htm|EAST COAST
+goose bay|labrador|fpcn13.yqx.htm|fpcn54.yqx.htm
+hopedale|labrador|fpcn13.yqx.htm|fpcn54.yqx.htm
+makkovik|labrador|fpcn13.yqx.htm|fpcn54.yqx.htm|HOPEDALE
+marys harbour|labrador|fpcn13.yqx.htm|fpcn54.yqx.htm|CARTWRIGHT
+nain|labrador|fpcn13.yqx.htm|fpcn54.yqx.htm
+port aux basques|newfoundland|fpcn11.yqx.htm|fpcn54.yqx.htm|SOUTH COAST
+st. anthony|newfoundland|fpcn11.yqx.htm|fpcn54.yqx.htm|NORTHERN PENINSULA
+st. johns|newfoundland|fpcn11.yqx.htm|fpcn54.yqx.htm|ST JOHNS
+twillingate|newfoundland|fpcn11.yqx.htm|fpcn54.yqx.htm|CENTRAL NEWFOUNDLAND
+wabush lake|northern|fpcn12.wqb.htm|fpcn54.wqb.htm|FERMONT

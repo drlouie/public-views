@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Hapa Design - File Upload Tool</title>
+<meta http-equiv=Content-Type content=text/html; charset=iso-8859-1>
+<LINK REL=STYLESHEET HREF=/css/common.css Type=text/css>
+<script language="JavaScript" src="/js/dhtmllib.js"></script>
+<script language="JavaScript" src="/js/navbarconfig.js"></script>
+<script language="JavaScript" src="/js/navconstruct.js"></script>
+</head>
+<body bgcolor=#30384F text=#000000 link=#ffffff alink=#ffffff vlink=#ffffff leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 onload="init()">
+
+<p>&nbsp;</P>
+
+<table width=500 border=0 cellspacing=0 cellpadding=0 align=center>
+<tr>
+<td height=24 align=left bgcolor=#8f94a7><img src=/images/upload_file.gif></td>
+<td height=24 align=center bgcolor=#8f94a7>&nbsp;</td>
+      <td height=24 align=right bgcolor=#8f94a7><img src=/images/top_x.gif width=26 height=23 usemap=#top_x border=0><map name=top_x><area shape=rect coords=6,5,19,18 href=/def.html></map></td>
+</tr>
+  <tr>
+    <td bgcolor=#60677f colspan=3>
+<br>
+        <table width=85% border=0 cellspacing=0 cellpadding=5 align=center>
+          <tr align=center> 
+            <td><font color=#FFFFFF face=Verdana, Arial, Helvetica size=2><b>Choose a File to Upload</b></font></td>
+        </tr>
+          <tr> 
+<td align=center> 
+<FORM METHOD="POST"  ENCTYPE=multipart/form-data ACTION="/protected/tools/upload.cgi">
+<INPUT TYPE="file" NAME="file" size="20"><br><br><INPUT TYPE=Submit VALUE="Upload File" class="searchbutton" onClick="sumbit()">
+</form>
+</td>
+</tr>
+</table>
+<br>
+  </tr>
+</table>
+
+</td></tr></table>
+</BODY>
+</HTML>

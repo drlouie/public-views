@@ -1,0 +1,9 @@
+Augusta|Augusta|21
+Bangor|Bangor|15
+Caribou|Caribou|2
+Frenchville|Frenchville|2
+Fryeburg|Fryeburg|12
+Houlton|Houlton|6
+Millinocket|Millinocket|11
+Portland|Portland|24
+Wiscasset|Wiscasset|26

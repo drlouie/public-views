@@ -1,0 +1,90 @@
+<-begin image map->
+<MAP NAME="FrontPageMap0">
+<AREA SHAPE="CIRCLE" COORDS="296, 240, 5" HREF="%%scripturl%%?forecast=zandh&state=mi&place=lansing">
+<AREA SHAPE="POLYGON" COORDS="364, 273, 351, 289, 334, 289, 334, 269, 347, 269, 348, 271" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=083" alt="Monroe ">
+<AREA SHAPE="POLYGON" COORDS="334, 270, 334, 289, 306, 289, 305, 273, 320, 273, 320, 271" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=082" alt="Lenawee">
+<AREA SHAPE="POLYGON" COORDS="305, 272, 305, 290, 284, 290, 284, 280, 281, 280, 281, 272, 286, 272, 287, 273" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=081" alt="Hillsdale">
+<AREA SHAPE="POLYGON" COORDS="282, 271, 283, 286, 259, 286, 258, 271" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=080" alt="Branch">
+<AREA SHAPE="POLYGON" COORDS="259, 271, 259, 286, 236, 286, 236, 272" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=079" alt="St. Joseph">
+<AREA SHAPE="POLYGON" COORDS="236, 272, 236, 286, 215, 286, 214, 273" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=078" alt="Cass">
+<AREA SHAPE="POLYGON" COORDS="212, 263, 212, 267, 214, 267, 214, 287, 186, 286, 189, 283, 195, 280, 198, 274, 200, 269, 205, 265, 208, 262" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=077" alt="Berrien">
+<AREA SHAPE="POLYGON" COORDS="376, 254, 376, 257, 372, 260, 368, 260, 367, 264, 364, 267, 363, 272, 348, 270, 345, 253" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=076" alt="Wayne">
+<AREA SHAPE="POLYGON" COORDS="345, 253, 347, 270, 316, 270, 315, 252" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=075" alt="Washtenaw">
+<AREA SHAPE="POLYGON" COORDS="316, 252, 316, 271, 288, 272, 288, 253" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=074" alt="Jackson">
+<AREA SHAPE="POLYGON" COORDS="287, 253, 288, 271, 259, 271, 259, 253" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=073" alt="Calhoun">
+<AREA SHAPE="POLYGON" COORDS="259, 253, 259, 271, 236, 271, 236, 255, 249, 254" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=072" alt="Kalamazoo">
+<AREA SHAPE="POLYGON" COORDS="236, 254, 236, 272, 214, 271, 213, 263, 208, 263, 211, 254" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=071" alt="Van Buren">
+<AREA SHAPE="POLYGON" COORDS="386, 231, 387, 242, 386, 242, 382, 245, 379, 248, 378, 254, 369, 254, 366, 231" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=070" alt="Macomb">
+<AREA SHAPE="POLYGON" COORDS="367, 231, 367, 253, 339, 252, 338, 235" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=069" alt="Oakland">
+<AREA SHAPE="POLYGON" COORDS="338, 235, 339, 253, 317, 253, 314, 235" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=068" alt="Livingston">
+<AREA SHAPE="POLYGON" COORDS="314, 235, 316, 253, 294, 253, 293, 247, 302, 240, 302, 235" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=067" alt="Ingham">
+<AREA SHAPE="POLYGON" COORDS="270, 237, 270, 246, 272, 246, 272, 253, 293, 253, 293, 246, 289, 236" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=066" alt="Eaton">
+<AREA SHAPE="POLYGON" COORDS="270, 236, 271, 253, 248, 253, 246, 236" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=065" alt="Barry">
+<AREA SHAPE="POLYGON" COORDS="246, 238, 248, 253, 211, 255, 214, 239" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=064" alt="Allegan">
+<AREA SHAPE="POLYGON" COORDS="396, 217, 401, 225, 398, 240, 397, 244, 394, 244, 391, 242, 387, 242, 386, 230, 372, 231, 373, 218" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=063" alt="St. Clair">
+<AREA SHAPE="POLYGON" COORDS="374, 210, 373, 231, 360, 231, 349, 231, 349, 212, 359, 210" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=062" alt="Lapeer">
+<AREA SHAPE="POLYGON" COORDS="350, 213, 349, 232, 340, 232, 339, 236, 325, 236, 325, 220, 328, 220, 328, 214" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=061" alt="Genesee">
+<AREA SHAPE="POLYGON" COORDS="326, 220, 326, 229, 327, 229, 327, 236, 305, 236, 306, 219" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=060" alt="Shiawassee">
+<AREA SHAPE="POLYGON" COORDS="304, 219, 305, 236, 283, 235, 282, 219" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=059" alt="Clinton">
+<AREA SHAPE="POLYGON" COORDS="282, 218, 282, 236, 258, 236, 258, 219" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=058" alt="Ionia">
+<AREA SHAPE="POLYGON" COORDS="258, 212, 258, 236, 237, 236, 236, 210, 244, 210, 244, 212" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=057" alt="Kent">
+<AREA SHAPE="POLYGON" COORDS="234, 217, 237, 236, 214, 237, 213, 232, 213, 227, 212, 221, 230, 221, 230, 215" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=056" alt="Ottawa">
+<AREA SHAPE="POLYGON" COORDS="392, 191, 394, 199, 394, 206, 395, 210, 398, 217, 374, 217, 373, 211, 365, 211, 365, 191" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=055" alt="Sanilac">
+<AREA SHAPE="POLYGON" COORDS="367, 191, 367, 210, 357, 210, 357, 213, 338, 212, 338, 196, 346, 190, 350, 193" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=054" alt="Tuscola">
+<AREA SHAPE="POLYGON" COORDS="338, 203, 338, 214, 327, 214, 327, 218, 305, 220, 305, 204, 312, 201, 317, 197, 320, 197, 320, 200, 333, 201" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=053" alt="Saginaw">
+<AREA SHAPE="POLYGON" COORDS="305, 203, 305, 219, 282, 219, 282, 203, 292, 202, 292, 204" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=052" alt="Gratiot">
+<AREA SHAPE="POLYGON" COORDS="281, 202, 283, 219, 259, 219, 258, 211, 246, 211, 246, 202" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=051" alt="Montcalm">
+<AREA SHAPE="POLYGON" COORDS="221, 202, 221, 210, 235, 210, 235, 215, 229, 216, 229, 220, 211, 220, 202, 202" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=050" alt="Muskegon">
+<AREA SHAPE="POLYGON" COORDS="376, 174, 380, 174, 386, 177, 389, 182, 392, 187, 392, 191, 351, 193, 348, 189, 353, 185, 359, 181, 363, 179, 366, 176, 371, 174" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=049" alt="Huron">
+<AREA SHAPE="POLYGON" COORDS="327, 182, 327, 186, 327, 188, 327, 191, 330, 191, 333, 194, 335, 195, 338, 196, 338, 202, 334, 202, 331, 199, 322, 200, 320, 197, 315, 198, 315, 177, 322, 177" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=048" alt="Bay">
+<AREA SHAPE="POLYGON" COORDS="315, 183, 314, 201, 307, 201, 306, 204, 293, 202, 293, 186, 307, 187, 307, 183" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=047" alt="Midland">
+<AREA SHAPE="POLYGON" COORDS="343, 168, 344, 172, 342, 174, 338, 176, 334, 176, 331, 179, 327, 181, 323, 181, 322, 176, 315, 176, 315, 168" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=042" alt="Arenac">
+<AREA SHAPE="POLYGON" COORDS="315, 168, 315, 184, 306, 184, 306, 186, 293, 186, 293, 169" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=041" alt="Gladwin">
+<AREA SHAPE="RECT" COORDS="267, 185, 294, 203" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=046" alt="Isabella">
+<AREA SHAPE="RECT" COORDS="245, 186, 269, 203" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=045" alt="Mecosta">
+<AREA SHAPE="RECT" COORDS="221, 186, 246, 211" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=044" alt="Newaygo">
+<AREA SHAPE="POLYGON" COORDS="292, 167, 292, 186, 268, 186, 268, 167" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=040" alt="Clare">
+<AREA SHAPE="POLYGON" COORDS="269, 166, 269, 186, 246, 186, 246, 169, 257, 169, 257, 168" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=039" alt="Osceola">
+<AREA SHAPE="POLYGON" COORDS="245, 169, 245, 186, 221, 186, 221, 169" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=038" alt="Lake">
+<AREA SHAPE="POLYGON" COORDS="222, 168, 220, 187, 203, 187, 199, 175, 205, 168" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=037" alt="Mason">
+<AREA SHAPE="POLYGON" COORDS="221, 186, 221, 202, 201, 202, 197, 195, 203, 187" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=043" alt="Oceana">
+<AREA SHAPE="POLYGON" COORDS="357, 151, 356, 156, 354, 161, 349, 163, 345, 165, 344, 168, 329, 167, 328, 152" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=036" alt="Iosco">
+<AREA SHAPE="POLYGON" COORDS="329, 151, 329, 168, 304, 168, 303, 151" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=035" alt="Ogemaw">
+<AREA SHAPE="POLYGON" COORDS="304, 150, 305, 168, 282, 167, 283, 152" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=034" alt="Roscommon">
+<AREA SHAPE="POLYGON" COORDS="282, 150, 282, 167, 256, 167, 256, 152" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=033" alt="Missaukee">
+<AREA SHAPE="POLYGON" COORDS="257, 151, 257, 168, 233, 168, 233, 151" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=032" alt="Wexford">
+<AREA SHAPE="POLYGON" COORDS="233, 152, 233, 168, 206, 168, 210, 164, 212, 158, 212, 154, 213, 150" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=031" alt="Manistee">
+<AREA SHAPE="POLYGON" COORDS="356, 134, 358, 138, 360, 141, 360, 145, 357, 148, 356, 151, 329, 150, 328, 133" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=030" alt="Alcona">
+<AREA SHAPE="POLYGON" COORDS="328, 133, 329, 150, 304, 150, 303, 134" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=029" alt="Oscoda">
+<AREA SHAPE="POLYGON" COORDS="303, 134, 303, 151, 281, 151, 281, 134" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=028" alt="Crawford">
+<AREA SHAPE="POLYGON" COORDS="281, 135, 281, 151, 256, 151, 257, 133" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=027" alt="Kalkaska">
+<AREA SHAPE="POLYGON" COORDS="256, 134, 257, 151, 233, 152, 233, 139, 248, 138, 252, 133" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=026" alt="Grand Traverse">
+<AREA SHAPE="POLYGON" COORDS="233, 139, 233, 151, 214, 150, 211, 144, 213, 142, 218, 139" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=025" alt="Benzie">
+<AREA SHAPE="POLYGON" COORDS="352, 116, 356, 120, 352, 125, 349, 127, 351, 130, 356, 133, 329, 134, 329, 116" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=024" alt="Alpena">
+<AREA SHAPE="POLYGON" COORDS="329, 117, 328, 133, 304, 133, 305, 117, 311, 117, 313, 115" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=023" alt="Montmorency">
+<AREA SHAPE="POLYGON" COORDS="306, 117, 303, 134, 282, 134, 282, 122, 289, 117" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=022" alt="Otsego">
+<AREA SHAPE="POLYGON" COORDS="280, 123, 280, 133, 260, 134, 259, 135, 253, 134, 254, 129, 255, 126, 256, 122, 256, 120, 254, 119, 261, 118, 265, 124" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=021" alt="Antrim">
+<AREA SHAPE="POLYGON" COORDS="246, 118, 243, 126, 242, 133, 244, 138, 220, 137, 220, 134, 223, 131, 227, 130, 231, 127, 234, 127, 239, 121" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=020" alt="Leelanau">
+<AREA SHAPE="POLYGON" COORDS="287, 112, 287, 117, 284, 120, 265, 122, 263, 117, 256, 117, 257, 113, 260, 111, 265, 110, 270, 109, 272, 113" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=019" alt="Charlevoix">
+<AREA SHAPE="POLYGON" COORDS="353, 116, 311, 116, 311, 95, 314, 98, 318, 103, 327, 103" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=018" alt="Presque Isle">
+<AREA SHAPE="POLYGON" COORDS="311, 94, 311, 117, 288, 116, 287, 89, 298, 94, 302, 95" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=017" alt="Cheboygan">
+<AREA SHAPE="POLYGON" COORDS="286, 89, 286, 113, 274, 114, 271, 109, 276, 108, 273, 106, 269, 100, 272, 94, 276, 91" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=016" alt="Emmet">
+<AREA SHAPE="POLYGON" COORDS="331, 78, 339, 72, 343, 73, 347, 77, 347, 80, 341, 80, 336, 80" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=008" alt="Chippewa">
+<AREA SHAPE="POLYGON" COORDS="305, 68, 311, 77, 307, 79, 303, 79, 291, 76, 287, 83, 268, 76, 255, 74, 248, 73, 241, 77, 230, 78, 231, 67, 262, 66, 262, 64, 269, 63, 269, 68" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=015" alt="Mackinac">
+<AREA SHAPE="POLYGON" COORDS="229, 53, 230, 79, 226, 81, 211, 80, 202, 89, 200, 70, 195, 70, 195, 62, 205, 62, 205, 55" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=014" alt="Schoolcraft">
+<AREA SHAPE="POLYGON" COORDS="199, 70, 200, 84, 203, 83, 202, 88, 196, 92, 194, 96, 190, 94, 194, 88, 190, 86, 184, 89, 181, 91, 173, 92, 169, 94, 161, 99, 159, 90, 157, 81, 157, 78, 163, 78, 167, 70" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=013" alt="Delta">
+<AREA SHAPE="POLYGON" COORDS="157, 78, 157, 83, 159, 83, 163, 101, 145, 121, 138, 117, 142, 109, 135, 110, 133, 110, 133, 106, 137, 100, 137, 95, 137, 94, 140, 83, 144, 83, 145, 80" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=012" alt="Menominee">
+<AREA SHAPE="POLYGON" COORDS="144, 66, 145, 82, 140, 82, 139, 90, 135, 92, 131, 89, 127, 89, 120, 87, 120, 80, 120, 67" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=011" alt="Dickinson">
+<AREA SHAPE="POLYGON" COORDS="120, 79, 119, 56, 77, 56, 76, 72, 87, 76, 96, 78" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=010" alt="Iron">
+<AREA SHAPE="POLYGON" COORDS="77, 61, 77, 74, 23, 62, 18, 55, 9, 50, 24, 44, 33, 40, 33, 49, 39, 49, 40, 53, 57, 53, 58, 61" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=009" alt="Gogebic">
+<AREA SHAPE="POLYGON" COORDS="275, 40, 272, 43, 274, 46, 272, 52, 284, 56, 290, 54, 294, 57, 301, 54, 307, 54, 314, 64, 309, 67, 318, 68, 326, 77, 314, 78, 311, 75, 308, 73, 303, 69, 269, 68, 268, 65, 262, 65, 262, 40" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=008" alt="Chippewa">
+<AREA SHAPE="POLYGON" COORDS="262, 39, 262, 65, 232, 66, 230, 44, 237, 44, 244, 45, 249, 46, 253, 44" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=007" alt="Luce">
+<AREA SHAPE="POLYGON" COORDS="230, 44, 230, 53, 207, 53, 206, 60, 196, 61, 194, 70, 169, 70, 168, 53, 174, 51, 182, 56, 187, 54, 192, 56, 202, 51, 207, 47, 213, 45, 219, 44" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=006" alt="Alger">
+<AREA SHAPE="POLYGON" COORDS="169, 53, 169, 70, 164, 71, 163, 78, 145, 78, 145, 66, 120, 66, 121, 43, 128, 44, 128, 39, 122, 39, 122, 33, 132, 33, 139, 37, 145, 40, 152, 47, 157, 53" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=005" alt="Marquette">
+<AREA SHAPE="POLYGON" COORDS="123, 31, 123, 39, 127, 39, 127, 43, 120, 42, 120, 55, 92, 55, 92, 41, 96, 39, 96, 36, 99, 35, 101, 34, 103, 38, 115, 32" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=004" alt="Baraga">
+<AREA SHAPE="POLYGON" COORDS="105, 27, 104, 31, 100, 32, 99, 34, 93, 35, 91, 56, 78, 56, 78, 42, 83, 42, 83, 38, 78, 39, 78, 25, 93, 17, 93, 22" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=003" alt="Houghton">
+<AREA SHAPE="POLYGON" COORDS="78, 27, 79, 39, 84, 39, 83, 43, 78, 43, 77, 61, 60, 61, 59, 53, 42, 53, 40, 48, 35, 48, 33, 41, 39, 38, 44, 38, 47, 36, 56, 36, 72, 28" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=002" alt="Ontonagon">
+<AREA SHAPE="POLYGON" COORDS="140, 7, 136, 4, 128, 4, 128, 6, 116, 6, 97, 15, 96, 21, 99, 22, 107, 26, 114, 18, 121, 16, 129, 11" HREF="%%scripturl%%?forecast=zandh&state=mi&zone=001" alt="Keweenaw">
+</MAP>
+<img src="%%stateimagesurl%%/mi-zones.gif" width="406" height="294" alt="MI" border="0" usemap="#FrontPageMap0">
+<-end image map->

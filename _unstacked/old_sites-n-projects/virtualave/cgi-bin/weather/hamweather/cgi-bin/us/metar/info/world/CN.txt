@@ -1,0 +1,14 @@
+ZBAA|Beijing
+ZUUU|Chengdu
+ZYTL|Dalian
+ZGGG|Guangzhou
+ZSHC|Hangzhou
+ZSOF|Hefei
+ZPPP|Kunming
+ZGNN|Nanning
+ZSSS|Shanghai / Hongqiao
+ZGSZ|Shenzhen
+ZBYN|Taiyuan
+ZBTJ|Tianjin / Zhangguizhu
+ZWWW|Urum-Qi / Diwopu
+ZSAM|Xiamen

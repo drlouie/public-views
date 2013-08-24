@@ -1,0 +1,6 @@
+001=Kauai
+002=Oahu
+003=Maui
+004=Island of Hawaii
+005=Molokai
+006=Lanai

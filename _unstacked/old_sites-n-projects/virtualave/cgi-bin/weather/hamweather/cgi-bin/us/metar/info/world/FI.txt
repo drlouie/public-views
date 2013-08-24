@@ -1,0 +1,14 @@
+EFHF|Helsinki-Malmi
+EFHK|Helsinki-Vantaa
+EFIV|Ivalo
+EFJY|Jyvaskyla
+EFKE|Kemi
+EFKK|Kruunupyy
+EFKU|Kuopio
+EFMA|Mariehamn / Aland Island
+EFOU|Oulu
+EFPO|Pori
+EFRO|Rovaniemi
+EFTP|Tampere / Pirkkala
+EFTU|Turku
+EFVA|Vaasa

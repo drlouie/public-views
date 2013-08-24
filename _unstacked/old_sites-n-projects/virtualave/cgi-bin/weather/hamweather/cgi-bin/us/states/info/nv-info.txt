@@ -1,0 +1,29 @@
+<-begin image map->
+<MAP NAME="FrontPageMap">
+<AREA SHAPE="CIRCLE" COORDS="22, 138, 6" HREF="%%scripturl%%?forecast=zandh&state=nv&place=carson+city">
+<AREA SHAPE="POLYGON" COORDS="143, 238, 199, 244, 200, 242, 225, 240, 221, 248, 222, 253, 208, 261, 195, 254, 191, 258, 213, 283, 220, 294" HREF="%%scripturl%%?forecast=zone&state=nv&zone=017" alt="Western Clark and Southern Nye County">
+<AREA SHAPE="POLYGON" COORDS="207, 262, 224, 250, 229, 257, 241, 254, 251, 265, 245, 265, 239, 276, 242, 289, 226, 288, 224, 279" HREF="%%scripturl%%?forecast=zone&state=nv&zone=020" alt="Las Vegas Valley">
+<AREA SHAPE="POLYGON" COORDS="223, 288, 232, 289, 242, 288, 251, 310, 249, 317, 223, 296" HREF="%%scripturl%%?forecast=zone&state=nv&zone=022" alt="Southern Clark County">
+<AREA SHAPE="POLYGON" COORDS="242, 240, 282, 242, 282, 267, 269, 266, 269, 258, 263, 257, 255, 264, 252, 265, 238, 250" HREF="%%scripturl%%?forecast=zone&state=nv&zone=016" alt="Northeast Clark County">
+<AREA SHAPE="POLYGON" COORDS="281, 268, 268, 266, 268, 257, 260, 257, 256, 265, 244, 265, 239, 276, 242, 289, 248, 306, 249, 321, 262, 325" HREF="%%scripturl%%?forecast=zone&state=nv&zone=021" alt="Lake Mead National Recreation Area">
+<AREA SHAPE="POLYGON" COORDS="221, 298, 224, 281, 217, 271, 203, 258, 193, 252, 190, 259, 202, 271, 208, 279, 217, 285" HREF="%%scripturl%%?forecast=zone&state=nv&zone=019" alt="Spring Mountains-Red Rock Canyon">
+<AREA SHAPE="POLYGON" COORDS="240, 94, 281, 93, 283, 161, 243, 159, 200, 133, 204, 106, 203, 93, 225, 93, 226, 101, 233, 102" HREF="%%scripturl%%?forecast=zone&state=nv&zone=035" alt="White Pine County">
+<AREA SHAPE="POLYGON" COORDS="187, 51, 223, 39, 262, 39, 263, 93, 241, 92, 238, 91, 233, 53, 226, 51, 223, 54, 226, 91, 198, 92, 187, 66" HREF="%%scripturl%%?forecast=zone&state=nv&zone=032" alt="Southwest and South Central Elko County">
+<AREA SHAPE="POLYGON" COORDS="224, 51, 233, 50, 237, 98, 229, 102, 225, 100, 222, 54" HREF="%%scripturl%%?forecast=zone&state=nv&zone=034" alt="Ruby Mountains/East Humboldt Range">
+<AREA SHAPE="POLYGON" COORDS="242, 158, 283, 157, 281, 243, 242, 239, 235, 219, 229, 216, 226, 220, 226, 239, 201, 241, 200, 187, 242, 186" HREF="%%scripturl%%?forecast=zone&state=nv&zone=015" alt="Lincoln County">
+<AREA SHAPE="POLYGON" COORDS="228, 216, 235, 218, 240, 240, 236, 254, 226, 256, 221, 248, 225, 241, 227, 226, 225, 219" HREF="%%scripturl%%?forecast=zone&state=nv&zone=018" alt="Sheep Range">
+<AREA SHAPE="POLYGON" COORDS="95, 146, 113, 138, 197, 134, 241, 157, 241, 185, 141, 187" HREF="%%scripturl%%?forecast=zone&state=nv&zone=013" alt="Northern Nye County">
+<AREA SHAPE="POLYGON" COORDS="118, 168, 141, 188, 201, 187, 199, 245, 142, 236, 87, 196" HREF="%%scripturl%%?forecast=zone&state=nv&zone=014" alt="Esmeralda and Central Nye County">
+<AREA SHAPE="POLYGON" COORDS="123, 98, 199, 92, 203, 103, 198, 124, 198, 133, 112, 138, 114, 129, 126, 119" HREF="%%scripturl%%?forecast=zone&state=nv&zone=037" alt="Southern Lander County and Southern Eureka County">
+<AREA SHAPE="POLYGON" COORDS="150, 51, 187, 50, 187, 67, 196, 92, 124, 96, 138, 68, 149, 68" HREF="%%scripturl%%?forecast=zone&state=nv&zone=036" alt="Northern Lander County and Northern Eureka County">
+<AREA SHAPE="POLYGON" COORDS="261, 41, 263, 92, 283, 93, 281, 39, 265, 39" HREF="%%scripturl%%?forecast=zone&state=nv&zone=033" alt="Extreme Eastern Elko County">
+<AREA SHAPE="POLYGON" COORDS="151, 6, 282, 5, 281, 39, 224, 37, 185, 49, 150, 51" HREF="%%scripturl%%?forecast=zone&state=nv&zone=031" alt="Northern Elko County">
+<AREA SHAPE="POLYGON" COORDS="44, 9, 151, 6, 148, 67, 120, 68, 120, 59, 67, 59, 67, 55, 46, 55, 45, 12" HREF="%%scripturl%%?forecast=zone&state=nv&zone=030" alt="Humboldt County">
+<AREA SHAPE="POLYGON" COORDS="44, 55, 65, 55, 65, 59, 119, 59, 118, 68, 136, 70, 123, 99, 127, 102, 125, 119, 115, 126, 112, 138, 92, 138, 77, 131, 58, 131, 43, 138, 42, 135, 42, 123, 48, 110, 49, 99, 43, 84, 30, 76, 35, 66, 48, 68" HREF="%%scripturl%%?forecast=zone&state=nv&zone=004" alt="Western Nevada Basin and Range including Pyramid Lake">
+<AREA SHAPE="POLYGON" COORDS="11, 6, 43, 7, 44, 69, 36, 62, 27, 74, 12, 81" HREF="%%scripturl%%?forecast=zone&state=nv&zone=005" alt="Northern Washoe County">
+<AREA SHAPE="POLYGON" COORDS="44, 166, 39, 146, 42, 139, 42, 136, 38, 135, 43, 118, 50, 110, 50, 100, 41, 83, 29, 77, 20, 76, 12, 81, 13, 119, 20, 125, 18, 146" HREF="%%scripturl%%?forecast=zone&state=nv&zone=003" alt="Greater Reno-Carson City-Minden Area">
+<AREA SHAPE="POLYGON" COORDS="11, 121, 19, 120, 19, 128, 17, 146, 12, 144" HREF="%%scripturl%%?forecast=zone&state=nv&zone=002" alt="Greater Lake Tahoe Area">
+<AREA SHAPE="POLYGON" COORDS="43, 138, 58, 132, 75, 132, 86, 138, 109, 140, 92, 143, 117, 167, 86, 195, 43, 163, 40, 149, 39, 143" HREF="%%scripturl%%?forecast=zone&state=nv&zone=001" alt="Mineral and Southern Lyon Counties">
+</MAP>
+<img ismap usemap="#FrontPageMap" border="0" height="328" alt="NV" src="%%stateimagesurl%%/nv-zones.gif" width="291">
+<-end image map->

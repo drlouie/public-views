@@ -1,0 +1,11 @@
+elsmere=new castle|0|elsmere|0
+georgetown=sussex|0|georgetown|0
+harrington=kent|0|harrington|0
+laurel=sussex|0|laurel|0
+lewes=sussex|0|lewes|0
+middletown=new castle|0|middletown|0
+milford=sussex|0|milford|0
+newark=new castle|0|newark|0
+seaford=sussex|0|seaford|0
+smyrna=kent|0|smyrna|0
+wilmington manor=new castle|0|wilmington manor|0

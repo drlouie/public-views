@@ -1,0 +1,240 @@
+#!/usr/bin/perl
+
+$basedir = '/home/drlouie/public_html/';
+
+$baseurl = 'http://drlouie.virtualave.net/';
+
+@files = ('*.html','*/*.html','*/*/*.html','*/*/*/*.html');
+
+@ignore = ('DIR2IGNORE','IGNOREME');
+
+$title = "Hapa Design - Site Search";
+
+$title_url = 'http://drlouie.virtualave.net/';
+
+$search_url = 'http://drlouie.virtualave.net/cgi-bin/search/search.html';
+
+$debug = 0;    # 1 = Yes | 0 = No
+#
+# set $disp_ignore, if you want the directories listed in @ignore displayed 
+# on the final resultes page or 0 if you do not wish them displayed.
+#
+$disp_ignore = 0;    # 1 = Yes | 0 = No
+
+&parse_form;
+
+# If debug is set to yes, display files only.
+if ($debug eq "1") {
+	&debug;
+}
+else {
+	# Get Files To Search Through
+	&get_files;
+}
+
+if ($debug eq "0") {
+	# Search the files
+	&search;
+}
+
+# Print Results of Search
+&return_html;
+
+sub parse_form {
+
+   # Get the input
+   read(STDIN, $buffer, $ENV{'CONTENT_LENGTH'});
+
+   # Split the name-value pairs
+   @pairs = split(/&/, $buffer);
+
+   foreach $pair (@pairs) {
+      ($name, $value) = split(/=/, $pair);
+
+      $value =~ tr/+/ /;
+      $value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+
+      $FORM{$name} = $value;
+   }
+}
+
+sub get_files {
+   chdir($basedir);
+	$pwd=`pwd`;
+	foreach $file (@files) {
+		$ls = `ls $file`;
+		@ls = split(/\s+/,$ls);
+		foreach $temp_file (@ls) {
+			foreach $ignore (@ignore) {
+				if ($temp_file =~ $ignore) {
+					push(@SKIP,$temp_file);
+				}
+				elsif (-d $file) {
+					$filename = "$file$temp_file";
+					if (-T $filename) {
+						push(@FILES,$filename);
+					}
+				}
+				elsif (-T $temp_file) {
+					push(@FILES,$temp_file);
+				}
+			}
+		}
+	}
+}
+
+
+sub search {
+
+   @terms = split(/\s+/, $FORM{'terms'});
+
+   foreach $FILE (@FILES) {
+
+      open(FILE,"$FILE");
+      @LINES = <FILE>;
+      close(FILE);
+
+      $string = join(' ',@LINES);
+      $string =~ s/\n//g;
+      if ($FORM{'boolean'} eq 'OR') {
+         foreach $term (@terms) {
+            if ($FORM{'case'} eq 'Insensitive') {
+               if ($string =~ /$term/i) {
+                  $include{$FILE} = 'yes';
+                  last;
+               }
+               else {
+                  $include{$FILE} = 'no';
+               }
+            }
+            elsif ($FORM{'case'} eq 'Sensitive') {
+               if ($string =~ /$term/) {
+		  $include{$FILE} = 'yes';
+                  last;
+               }
+               else {
+                  $include{$FILE} = 'no';
+               }
+            }
+         }
+      }
+      if ($string =~ /<title>(.*)<\/title>/i) {
+         $titles{$FILE} = "$1";
+      }
+      else {
+         $titles{$FILE} = "$FILE";
+      }
+   }
+}
+      
+
+sub return_html {
+	$count=0;
+	foreach $key (keys %include) {
+		if ($include{$key} eq 'yes') {
+			$count++;
+		}
+	}
+	if ($count eq "0" && ($debug eq "0")) {
+		&display_no_hits;
+	}
+	else {
+	   print "Content-type: text/html\n\n";
+	   print "<html>\n <head>\n  <title>Results of Search</title>\n </head>\n";
+	   print "<body bgcolor=\"WHITE\">\n <center>\n  <h1>Results of Search in $title</h1>\n </center>\n";
+		print "Below are the results of your Search in no particular order:<p><hr size=7 width=75%><p>\n";
+		if ($debug eq "1") {
+				print "DEBUG MODE ON! SEARCH IS DISABLED!<p>\n";
+				if ($basedir =~http) {
+				   print "Your \$basedir is incorrect, it needs to be a path not a URL!\n";
+					exit;
+				}
+				chop($pwd);
+				if ($pwd eq $basedir) {
+					print "I was successfully able to change to the \$basedir: <b>$basedir</b><p>\n";
+				}
+				else {
+					print "I tried changing to: <b>$basedir</b>, which is what you defined as your \$basedir.<br>";
+					print "However, I was unable to change to that directory, (perhaps because your \$basedir is invalid),<br>instead I defaulted to <b>$pwd</b>.<br>";
+				}
+				if ($filedir eq "") {
+					print "<p>There are either no files in this directory, or authorization (permissions) will not allow me to list those files here.<p>\n";
+				}
+				else {
+					print "If the following files are not the files you are attempting to search, or there are no files listed, your \$basedir is set up incorrectly!<p>\n";
+					print "<p><pre><b>$filedir</b></pre>\n";
+				}
+			   print "Search Script written by Matt Wright and can be found at <a href=\"http://www.worldwidemart.com/scripts/\">Matt's Script Archive</a><br>\n";
+				print "Modifications to Simple Search written by The Puppet Master and can be found at <a href=\"http://www.ravensclaw.com/~pmaster/perl/my_scripts/\">Puppet Master's Scripts</a>\n";
+			}
+			else {
+			   print "<ul>\n";
+				foreach $key (keys %include) {
+					if ($include{$key} eq 'yes') {
+						print "<li><a href=\"$baseurl$key\">$titles{$key}</a>\n";
+					}
+				}
+			}   
+
+			print "</ul>\n";
+  		 print "<hr size=7 width=75%>\n";
+			if ($debug eq "0") {
+			   print "Search Information:<p>\n";
+				print "<ul>\n";
+				print "<li><b>Terms:</b> ";
+				$i = 0;
+				foreach $term (@terms) {
+					print "$term";
+			      $i++;
+					if (!($i == @terms)) {
+		   			 print ", ";
+			      }
+				}
+			   print "\n";
+			   print "<li><b>Boolean Used:</b> $FORM{'boolean'}</li>\n";
+			   print "<li><b>Case</b> $FORM{'case'}</li>\n";
+				print "<li><b>Total Hits Found:</b> $count</li>\n";
+				if ($disp_ignore eq "1") {
+					print "<li><b>Ignored The Following Directories:</b> ";
+					$h = 0;
+					foreach $ignore (@ignore) {
+						print "$ignore";
+						$h++;
+						if (!($h == @ignore)) {
+							print ", ";
+						}
+					}
+				}
+			   print "</ul><br><hr size=7 width=75%><P>\n";
+			   print "<ul>\n<li><a href=\"$search_url\">Back to Search Page</a></li>\n";
+			   print "<li><a href=\"$title_url\">$title</a></li>\n";
+			   print "</ul>\n";
+			   print "<hr size=7 width=75%>\n";
+			   print "Search Script written by Matt Wright and can be found at <a href=\"http://www.worldwidemart.com/scripts/\">Matt's Script Archive</a><br>\n";
+				print "Modifications to Simple Search written by The Puppet Master and can be found at <a href=\"http://www.ravensclaw.com/~pmaster/perl/my_scripts/\">Puppet Master's Scripts</a>\n";
+			}
+			 print "</body>\n</html>\n";
+		}
+}
+
+sub debug {
+	chdir($basedir);
+	$pwd=`pwd`;
+	$filedir=`ls -l`;
+}
+		
+
+
+sub display_no_hits {
+   print "Content-type: text/html\n\n";
+   print "<html>\n <head>\n  <title>No Hits</title>\n </head>\n";
+	print "<body>\n <center>\n  <h1>Sorry - Your Search Yielded No Results</h1>\n </center>\n";
+   print "<ul>\n<li><a href=\"$search_url\">Back to Search Page</a>\n";
+   print "<li><a href=\"$title_url\">$title</a>\n";
+   print "</ul>\n";
+   print "<hr size=7 width=75%>\n";
+   print "Search Script written by Matt Wright and can be found at <a href=\"http://www.worldwidemart.com/scripts/\">Matt's Script Archive</a><br>\n";
+	print "Modifications to Simple Search written by The Puppet Master and can be found at <a href=\"http://www.ravensclaw.com/~pmaster/perl/my_scripts/\">Puppet Master's Scripts</a>\n";
+	print "</body>\n</html>\n";
+	exit;
+}

@@ -1,0 +1,18 @@
+<table border="0" width="100%" >
+   <tr>
+     <td width="100%" bgcolor="#000080" align="center"><font color="#FFFFFF" size=-1><strong>HWpro
+     Features</strong></font></td>
+   </tr>
+   <tr>
+     <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=nf_info&lib=hwpro&user=%%user%%&theme=%%theme%%">US Foreast Map</a></font></td>
+   </tr>
+ <tr>
+     <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=ns_info&lib=hwpro&user=%%user%%&theme=%%theme%%">US Summary Map</a></font></td>
+   </tr>
+<tr>
+     <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=warning_map&lib=hwpro&user=%%user%%&theme=%%theme%%">US Warning Map</a></font></td>
+   </tr>
+ <tr>
+     <td width="100%" align="left"><font size=2><a href="%%admin_url%%?do=load&what=textcolor&lib=hwpro&user=%%user%%&theme=%%theme%%">Maps Text Color</a></font></td>
+   </tr>
+</table>

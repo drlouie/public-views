@@ -1,0 +1,106 @@
+PADK|Adak, Naval Air Station
+PAFM|Ambler
+PAKP|Anaktuvuk Pass
+PAED|Anchorage / Elmendorf Air Force Base
+PANC|Anchorage, Anchorage International Airport
+PANI|Aniak
+PANT|Annette Island
+PARC|Arctic Village
+PABR|Barrow, Post Rogers Memorial Airport
+PABE|Bethel / Bethel Airport
+PABT|Bettles
+PALV|Big River Lake
+PABV|Birchwood
+PATW|Cantwell
+PALU|Cape Lisburne Airways Facilities Sector
+PALR|Chandalar Lake
+PAEC|Chulitna
+PACD|Cold Bay, Cold Bay Airport
+PACV|Cordova / Mile 13
+PASC|Deadhorse, Deadhorse Airport
+PADE|Deering, Deering Airport
+PADL|Dillingham Municipal, Ak
+PADU|Dutch Harbor
+PAII|Egegik Automatic Weather Observing / Reporting System
+PAEL|Elfin Cove Seaplane
+PAEM|Emmonak
+PAZK|Eureka
+PAEI|Fairbanks / Eielson Air Force Base
+PAFA|Fairbanks, Fairbanks International Airport
+PABI|Fort Greely / Allen U. S. Army Airfield, Ak
+PFYU|Fort Yukon
+PAGB|Galbraith Lake
+PAGA|Galena A.
+PAGM|Gambell Automatic Weather Observing / Reporting System
+PAGK|Gulkana / Intl. Fld.
+PAGS|Gustavus
+PAHN|Haines, Haines Airport
+PAHZ|Hayes River
+PAHV|Healy River Airport
+PAHO|Homer
+PAOH|Hoonah Seaplane
+PAHP|Hooper Bay Automatic Weather Observing / Reporting System
+PAHS|Huslia
+PAHY|Hydaburg Seaplane
+PAIL|Iliamna / Iliamna Airport
+PAIM|Indian Mountain Airways Facilities Sector
+PAJN|Juneau, Juneau International Airport
+PAFE|Kake Seaplane Base
+PAKV|Kaltag, Kaltag Airport
+PAEN|Kenai, Kenai Municipal Airport
+PAKT|Ketchikan, Ketchikan International Airport
+PAKN|King Salmon, King Salmon Airport
+PAVL|Kivalina, Kivalina Airport
+PAKW|Klawock
+PADQ|Kodiak
+PAOT|Kotzebue, Wien Memorial Airport
+PALH|Lake Hood Seaplane
+PAMX|McCarthy
+PAMC|McGrath, McGrath Airport
+PAIN|McKinley Park
+PAMY|Mekoryuk
+PAMR|Merrill Field
+PAMD|Middleton Island, Ak
+PAMH|Minchumina
+PABN|Nabesna / Devil Mountain
+PANN|Nenana / Mun.
+PAWN|Noatak
+PAOM|Nome, Nome Airport
+PAOR|Northway, Northway Airport
+PAQT|Nuiqsut, Nuiqsut Airport
+PAAQ|Palmer
+PAXK|Paxson
+PAPG|Petersburg
+PAPO|Point Hope Automatic Weather Observing / Reporting System
+PALJ|Port Alsworth
+PAPH|Port Heiden
+PAPT|Puntilla
+PASM|Saint Mary's Automatic Weather Observing / Reporting System
+PASN|Saint Paul
+PASD|Sand Point
+PASA|Savoonga Airport
+PASK|Selawik
+PAWD|Seward
+PASY|Shemya, Eareckson As
+PASH|Shishmaref Automatic Weather Observing / Reporting System
+PASI|Sitka, Sitka Airport
+PAGY|Skagway
+PASW|Skwentna
+PADT|Slana Airport
+PASL|Sleetmute
+PALK|Snowshoe Lake
+PASX|Soldotna
+PAJV|Sutton
+PATK|Talkeetna
+PATA|Tanana
+PATC|Tin City Airways Facilities Sector
+PATG|Togiac Village Automatic Weather Observing / Reporting System
+PAUM|Umiat
+PAUN|Unalakleet
+PAVD|Valdez 2
+PAWI|Wainwright Distant Early Warning 
+PAFB|Wainwright U. S. Army Airfield
+PAWR|Whittier
+PAUO|Willow Airport 
+PAWG|Wrangell
+PAYA|Yakutat

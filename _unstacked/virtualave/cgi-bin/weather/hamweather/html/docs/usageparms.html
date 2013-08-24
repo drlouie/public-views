@@ -1,0 +1,294 @@
+<html>
+
+<head>
+<title>HAMweather Usage : Available Parameters</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><big><font color="#FFFFFF"><strong>Usage: &nbsp;
+    Available Parameters</strong></font></big></td>
+  </tr>
+</table>
+
+<p>Following is a table of the available parameters that you can use in your URLs and
+forms for accessing various HAMweather functions.</p>
+<div align="left">
+
+<table border="2" bgcolor="#FFFFD7" bordercolor="#000080" cellpadding="2"
+bordercolorlight="#000080" bordercolordark="#000080" cellspacing="0">
+  <tr>
+    <td><div align="left"><table border="1">
+      <tr>
+        <td align="center"><strong><font color="#000080"><big>Parameter</big><br>
+        <big>Name</big></font></strong></td>
+        <td align="center"><big><font color="#000080"><strong>Description</strong></font></big></td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Parameters Dealing with Location Forecast Needed
+        For</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>place</strong></td>
+        <td>City/Town/County forecast needed for.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>state</strong></td>
+        <td>State needing forecast for. Can be full state name or 2 letter abbreviation.<br>
+        If you need forecast info on the national level then set state to be &quot;us&quot;</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>pands</strong></td>
+        <td>Place and state together separated by a comma.State portion can be full state name or
+        2 letter abbreviation. If the HWzipdb add-on is install will allow you to enter a US
+        zipcode as well.<br>
+        NOTE: It is recommended you install the HWaltplaces add-on to allow users to enter more
+        &quot;place, state&quot; combinations. Also for the zipcode searching, the HWzipdb add-on
+        must be installed. Both add-ons can be downloaded from <a
+        href="http://www.hamweather.com/downloads">http://www.hamweather.com/downloads</a></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>zipcode</strong></td>
+        <td>If the HWzipdb add-on is installed, this parameter can be set to a US zipcode&nbsp; to
+        fetch the forecast.<br>
+        NOTE: The HWzipdb add-on must be installed to use this parameter. The add-on can be
+        downloaded from <a href="http://www.hamweather.com/downloads">http://www.hamweather.com/downloads</a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center"><strong>zone</strong></td>
+        <td>The actual weather zone number for a place you need zone or shortterm forecast for
+        within a specified state. When both the zone and place are specified the zone will be used
+        to fetch forecast and the place will be the place name outputted to user.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>icao</strong></td>
+        <td>This is the 4 digit ICAO code for a weather facility. It is used when obtaining metar
+        observations(current conditions).</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>type</strong></td>
+        <td>Used by metarlister.cgi and when obtaining metar forecast to determine weather what
+        metar forecast you need. Set to &quot;state&quot; for a metar observation in the US or set
+        to &quot;country&quot; for a metar observation in another country.</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Forecast Type and Control Parameters</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>forecast</strong></td>
+        <td>Tells HAMweather what type of forecast you need. For a complete list of available
+        forecast type check out the Available Forecasts Table.&nbsp; Also if this is set to
+        &quot;pass&quot; then HAMweather will not output a forecast but will just output the
+        template file specified in by the &quot;pass&quot; parameter.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>case</strong></td>
+        <td>If set to &quot;0&quot;(default) then forecast text will be converted to proper
+        casing.&nbsp; If set to &quot;1&quot; then the forecast text will be left in uppercase</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>txt</strong></td>
+        <td>If set to &quot;0&quot;(default) then any html coding will be left in the
+        %%zforecast%% variable.&nbsp; If set to &quot;1&quot; then all html coding will be removed
+        from the %%zforecast%% variable. This is useful if you are outputting the forecast to a
+        text file etc..</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>daysonly</strong></td>
+        <td>For the zone and zandh forecasts.&nbsp; This will control how the Weather icon row is
+        displayed.&nbsp; This parameter can be set via the web based admin for a user. If this
+        parameter is provided in the url it overrides the defautl setting. It has 4 settings:<p>daysonly=0
+        : <small>Display the weather icon row normally with day and night icons and use the day
+        titles givien.</small><br>
+        daysonly=1 : <small>Display the icon row with days only (no nights) and use the normal day
+        titles given</small><br>
+        daysonly=2 : <small>Display the icon row with days only (no nights) and use only weekday
+        names (Monday, Tuesday etc) </small><br>
+        daysonly=3 : <small>Display the icon row with days only (no nights) and use only 3 letter
+        weekday names (MON, TUE, etc)</small></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>maxdays</strong></td>
+        <td>For the zone and zandh forecasts this will control how many weather icons are included
+        in the zone forecast.Default can be set in the Administration script.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>extended</strong></td>
+        <td>If set to &quot;0&quot;(default) then the extended forecast if in the zone forecast
+        will be included.&nbsp; If set to &quot;1&quot; then the extended forecast will be ignored
+        and not displayed in the zone and zandh forecast.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>celsius</strong></td>
+        <td>If set to &quot;1&quot; will make the Temps in the icon row FOR US forecast to be in
+        Celsius instead of Farenheit</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>metric</strong></td>
+        <td>If set to &quot;1&quot; will make the various values in the icon row and hourly data
+        be in metric units.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>round</strong></td>
+        <td>Overrides the default round setting. If set to 0 HW will not round any weather
+        calculations/conversions. If set to one HW will round conversions such as Celsius temps,
+        wind chill etc..</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>day_begin</strong></td>
+        <td>Can be used to override the default day_begin hour. This is used with current
+        conditions to control whether a day or night icon should be displayed. (This ability to
+        pass this parameter allows&nbsp; users to match current conditions&nbsp; with their time
+        zones).&nbsp; Should be set to a number between 0 and 24 to the hour that is daylight.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>day_end</strong></td>
+        <td>Can be used to override the default day_end hour. This is used with current conditions
+        to control whether a day or night icon should be displayed. (This ability to pass this
+        parameter allows&nbsp; users to match current conditions&nbsp; with their time zones).
+        &nbsp; Should be set to a number between 0 and 24 to the hour that daylight ends.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>tz</strong></td>
+        <td>If set it will override the default time zone setting. This affects the US maps and
+        the current conditions obtained via the metar observations (ICAO code given). This can
+        allow International users to have their correct time/date on their current conditions. tz
+        should be set to the offset in hours from GMT time. For example to set the tz for EST time
+        you would set tz to -5 .. tz=-5.&nbsp; <p><strong><font color="#FF0000">NOTE</font></strong>:
+        The <strong>tz</strong> parameter should be used along with the <strong>tz_name</strong>
+        parameter.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>tz_name</strong></td>
+        <td>If set it will override the default time zone name setting. This affects the US maps
+        and the current conditions obtained via the metar observations (ICAO code given). This can
+        allow International users to have their correct time/date on their current conditions.
+        tz_name should be set to the time zone name to use. For example to set the tz_name for EST
+        time you would set tz_name to EST.. tz_name=EST.&nbsp; <p><strong><font color="#FF0000">NOTE</font></strong>:
+        The <strong>tz_name</strong> parameter should be used along with the <strong>tz</strong>
+        parameter.</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>HAMweather Template Override Parameters</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>alt</strong></td>
+        <td>When set to an alternate template name (as previously set using the HAMweather
+        Administrator) it will force HAMweather to use the alternate template when outputting the
+        forecast to the user.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>pass</strong></td>
+        <td>When the &quot;forecast&quot; parameter is set to &quot;pass&quot; then HAMweather
+        will use the template name specified by this parameter (possible template names need to be
+        set using the HAMweather administrator) and output it to the user.</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>User/Theme Parameters</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>user</strong></td>
+        <td>This parameter tells HAMweather what user configuration file to use.&nbsp; If not
+        specified or the indicated user configuration file does not exist then HAMweather will use
+        the default of &quot;default.txt&quot;.&nbsp; The value you use should be the same as the
+        user config file name minus the &quot;.txt&quot; extension.&nbsp; this use
+        &quot;default&quot; for the &quot;default.txt&quot; file.<p>This parameter gives you the
+        ability to have multiple Web server clients use the same HAMweather installation yet have
+        their own customized templates, graphics and themes.&nbsp; This a good option for ISP's or
+        if you want to allow a friend to use your script installation as well.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>theme</strong></td>
+        <td>This parameter tells HAMweather what theme configuration file to use.&nbsp; If not
+        specified or the indicated theme file does not exist then HAMweather will use the default
+        file &quot;default.txt&quot;&nbsp; The value you use should be the same as the user config
+        file name minus the &quot;.txt&quot; extension.&nbsp; this use &quot;default&quot; for the
+        &quot;default.txt&quot; file.<p>Themes allow you to give your HAMweather multiple looks
+        and feels just by changing the &quot;theme&quot; value in your links to HAMweather. &nbsp;
+        Themes will usually consist of alternate templates and icons to use.&nbsp; A great idea is
+        to install/create&nbsp; themes for holidays then when the holiday comes around you can
+        just change your links to your HAMweather scripts and then your weather site would be in
+        the holiday spirit :) </td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Site/User Defined Variables</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>hwvxxxx</strong></td>
+        <td>HAMweather allows for the individual site to define its own variables that can be
+        transfered from page to page and from template to template. To use them you simple add
+        'hwv' to the variable name.. thus if you wanted a variable called bgcolor you would user
+        'hwvbgcolor'.&nbsp; Refer to the User Variables Page (under Customization) for more
+        Information.</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Cookie Variables</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>sc</strong></td>
+        <td>This parameter tells HAMweather to set a cookie on the web visitors computers. &nbsp;
+        The cookie will hold the info on the current forecast, template, place, state, country,
+        icao code, zone, etc.&nbsp; Then the next time the user visits the hamweather.cgi without
+        any parameters specified it will use the cookie values to give a default forecast.<p>This
+        parameter has a total of 5 different settings that can be used:</p>
+        <p>sc=0 (or parameter not used) : No cookie stored<br>
+        sc=1 : cookie stored without the user and theme parameters (normal default when saving a
+        cookie)<br>
+        sc=2 : cookie stored with the user parameter but not the theme parameter<br>
+        sc=3 : cookie stored with the theme parameter but not the user parameter.<br>
+        sc=4 : cookie stored with both the user and theme parameters</p>
+        <p><font color="#FF0000">NOTE</font>: Even if user and theme parameters may be stored in
+        the cookie, if they are provided via the url they override the cookie user and theme
+        settings.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>forcefc</strong></td>
+        <td>This paramter is used to overide the 'forecast' setting in a user cookie.&nbsp; Thus
+        you can use the default place stored in their cookie, yet provide a different forecast
+        etc. For a complete list of available forecast type check out the Available Forecasts
+        Table.&nbsp; Also if this is set to &quot;pass&quot; then HAMweather will not output a
+        forecast but will just output the template file specified in by the &quot;pass&quot;
+        parameter.</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>For use when Sending Output to a File</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>om</strong></td>
+        <td>This parameter sets the output method used by HAMweather.<p>Set to zero (om=0) or
+        leave out to make output goto Web only.<br>
+        Set to one (om=1) to make output goto file and web.<br>
+        Set to two (om=2) to make output goto the web only.</td>
+      </tr>
+      <tr>
+        <td align="center"><strong>of</strong></td>
+        <td>This parameter is used to specify what file to send output to.&nbsp; You set to the
+        output file name that was previously set in the web based administration.</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2"><strong>Additional Parameters used by HAMweather Pro Add-on</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>map</strong></td>
+        <td>This parameter is used to tell HAMweather how to create the needed forecast map.
+        &nbsp; If it is set to &quot;0&quot; then HAMweather will output&nbsp; the needed national
+        forecast requested but not create a graphical map.&nbsp; <br>
+        Set to &quot;1&quot; HAMweather will create a new national map if&nbsp; needed (previous
+        one has expired in the cache) and output the forecast requested.<br>
+        Set to &quot;2&quot; HAMweather will create a new national map if needed&nbsp; but not
+        send out any output.&nbsp; You should use the &quot;2&quot; setting if you are updating
+        the various national maps from a cron job or command line.</td>
+      </tr>
+    </table>
+    </div></td>
+  </tr>
+</table>
+</div>
+
+<p><a href="usageforecasts.html">Now to see what Forecast Information is available through
+HAMweather. </a></p>
+</body>
+</html>

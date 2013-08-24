@@ -1,0 +1,79 @@
+<html>
+
+<head>
+<title>HAMweather Usage : Proxy Server</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Proxy Usage</strong></big></font></td>
+  </tr>
+</table>
+
+<p>HAMweather needs to be able to connect to the NWS servers so that it can get the latest
+weather information.&nbsp; When HAMweather is used on an intranet you may need to perform
+this connection using a proxy server.&nbsp; HAMweather now has basic proxy server support.
+&nbsp; You can set the proxy servers name (or IP address) and port it is listening on.
+&nbsp; However, HAMweather does not support proxy servers that require a username/password
+authorization.</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#000080"><font color="#FFFFFF"><big><strong>Poxy Usage : Setup</strong></big></font></td>
+  </tr>
+</table>
+
+<p>To set up the proxy server settings, goto the web based admin, click the 'System
+Settings' link.&nbsp; Then you can enter the proxy server address or IP.&nbsp; It may look
+similiar to: proxy.your domain.com.</p>
+
+<p>Under this setting you can set the proxy port number.&nbsp; This is the port number
+that your proxy server is listening on.&nbsp; This is usually something similiar to '80'
+or '8080'.&nbsp; </p>
+
+<p>Note: If you do not have a proxy server you should&nbsp; set the port number to '80';</p>
+
+<p>Alternatively if you do not want ot use the web based admin you can make a couple
+modifications to the hwconfig.txt file.&nbsp; </p>
+
+<p>In this file look for the lines that looks similar to:</p>
+
+<blockquote>
+  <p>$proxy_server = '';<br>
+  $port = 80;</p>
+</blockquote>
+
+<p>If the $proxy_server variable is left blank then HAMweather will not use a proxy
+server, but if set to either the proxy server name or IP address it will then use the
+proxy server when fetching the weather data. The $port variable is used to set the port
+that the proxy server is listening on.</p>
+
+<p>To set up HAMweather to work with a proxy server at proxy.yourdomain.com that is
+listenign on port 80 then you would use the following settings:</p>
+
+<blockquote>
+  <p>$proxy_server = 'proxy.yourdomain.com';<br>
+  $port = 80;</p>
+</blockquote>
+
+<p>Another example would be to set HAMweather to use a proxy at the IP addres
+123.123.123.123 listening on port 8080 you would use the following settings:</p>
+
+<blockquote>
+  <p>$proxy_server = '123.123.123.123;<br>
+  $port = 8080;</p>
+</blockquote>
+
+<p>If you need to stop using proxy support simply set $proxy_server to a blank string as
+follows:</p>
+
+<blockquote>
+  <p>$proxy_server = '';<br>
+  $port = 80;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</blockquote>
+</body>
+</html>

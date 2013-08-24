@@ -1,0 +1,61 @@
+##########################################################
+# This script is copyright(c) 1998-2000 by HAMweather, LLC, all rights reserved.
+# It is subject to the license agreement that can be found at the following
+# URL: http://www.hamweather.com/install/licenseinfo.html
+#########################################################
+
+
+# begin wx types_icons
+
+%weather = ("SUNNY", "sunny$gd_ext",
+"SHWRS", "rain$gd_ext",
+"PTCLDY", "pcloudy$gd_ext",
+"PCLDY", "pcloudy$gd_ext",
+"MCLDY","mcloudy$gd_ext",
+"MOCLDY", "mcloudy$gd_ext",
+"FAIR", "pcloudy$gd_ext",
+"CLEAR", "sunny$gd_ext",
+"RAIN", "rain$gd_ext",
+"SNOW", "snow$gd_ext",
+"CLOUDY", "cloudy$gd_ext",
+"CLDY" ,"cloudy$gd_ext",
+"MISTY", "rain$gd_ext",
+"WINDY", "wind$gd_ext",
+"TSTRMS","tstorm$gd_ext",
+"SNOSHW", "snowshowers$gd_ext",
+"RNSNOW", "rainsnow$gd_ext",
+"HAZE", "pcloudy$gd_ext",
+"FOG", "fog$gd_ext"
+);
+
+# end wx types_icons
+
+ # values are stored as follows:
+ # Display name => [Find Name, Map X, Map Y]
+ %city_names_pos = ('find_name' => 0, 'map_x' => 1, 'map_y' => 2);
+
+# begin city_names
+
+%city_names = (
+"Denver" => [ "denver", "160", "110" ]
+,"Atlanta" => [ "atlanta", "350", "166" ]
+,"Great Falls" => [ "great falls", "155", "18" ]
+,"Anchorage" => [ "anchorage", "93", "242" ]
+,"Washington DC" => [ "washington dc", "400", "121" ]
+,"Miami" => [ "miami", "384", "230" ]
+,"Los Angeles" => [ "los angeles", "33", "145" ]
+,"Chicago" => [ "chicago", "291", "84" ]
+,"New York" => [ "new york", "397", "79" ]
+,"Dallas" => [ "fort worth", "209", "187" ]
+,"Boise" => [ "boise", "100", "68" ]
+,"Seattle" => [ "seattle", "35", "13" ]
+,"Mpls/St. Paul" => [ "minneapolis/st. paul", "229", "35" ]
+,"Boston" => [ "boston", "429", "46" ]
+,"Honolulu" => [ "honolulu", "191", "276" ]
+,"San Francisco" => [ "san francisco", "20", "88" ]
+,"Kansas City" => [ "kansas city", "245", "130" ]
+,"Phoenix" => [ "phoenix", "107", "160" ]
+,"New Orleans" => [ "new orleans", "291", "218" ]
+);
+
+# end city_names

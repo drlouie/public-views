@@ -1,0 +1,10 @@
+Anniston|Anniston|19
+Birmingham|Birmingham|24
+Dothan|Dothan|69
+Evergreen|Evergreen|56
+Gadsden|Gadsden|18
+Huntsville|Huntsville|6
+Mobile|Mobile|61
+Montgomery|Montgomery|44
+Muscle Shoals|Muscle Shoals|2
+Tuscaloosa|Tuscaloosa|23

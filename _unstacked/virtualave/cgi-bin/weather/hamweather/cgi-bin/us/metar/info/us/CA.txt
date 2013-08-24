@@ -1,0 +1,105 @@
+KAAT|Alturas
+KACV|Arcata / Eureka, Arcata Airport
+KBFL|Bakersfield, Meadows Field
+KBAB|Beale Air Force Base / Marysvile
+KBUO|Beaumont
+KBIH|Bishop, Bishop Airport
+KBLH|Blythe, Blythe Airport
+KBUR|Burbank, Burbank-Glendale-Pasadena Airport
+KCMA|Camarillo, Camarillo Airport
+KCZZ|Campo
+KCRQ|Carlsbad, McClellan-Palomar Airport
+KCIC|Chico Municipal 
+KNID|China Lake, Naval Air Facility
+KCNO|Chino, Chino Airport
+KCCR|Concord, Buchanan Field
+KCEC|Crescent City
+KDAG|Daggett, Barstow-Daggett Airport
+KEDW|Edwards Air Force Base
+KNJK|El Centro, Naval Air Facility
+KEMT|El Monte
+KBLU|Emigrant Gap, Blue Canyon Nyack Airport
+KSUU|Fairfield / Travis Air Force Base
+KFAT|Fresno, Fresno Air Terminal
+KFUL|Fullerton, Fullerton Municipal Airport
+KHHR|Hawthorne, Hawthorne Municipal Airport
+KHWD|Hayward, Hayward Air Terminal
+KNRS|Imperial Beach, Naval Auxiliary Landing Field
+KIPL|Imperial, Imperial County Airport
+KIYK|Inyokern
+KPOC|La Verne / Brackett
+KWJF|Lancaster / Fox Field
+KNLC|Lemoore, Naval Air Station
+KLVK|Livermore, Livermore Municipal Airport
+KLPC|Lompoc Automatic Weather Observing / Reporting System
+KLGB|Long Beach, Long Beach Airport
+KSLI|Los Alamitos U. S. Army Airfield
+KCQT|Los Angeles / USC Campus Downtown
+KLAX|Los Angeles, Los Angeles International Airport
+KMAE|Madera, Madera Municipal Airport
+KMMH|Mammoth / June Lakes
+KMYV|Marysville, Yuba County Airport
+KMCC|McClellan Air Force Base
+KMCE|Merced, Merced Municipal Airport
+KMOD|Modesto, Modesto City-County-Sham Field
+KMHV|Mojave
+KSIY|Montague / Siskiyou
+KMRY|Monterey, Monterey Peninsula Airport
+KMHS|Mount Shasta
+KMWS|Mount Wilson
+KNUQ|Mountain View, Moffett Field
+KAPC|Napa, Napa County Airport
+KEED|Needles Airport
+KOAK|Oakland, Metropolitan Oakland International Airport
+KNFG|Oceanside, Camp Pendleton, Marine Corps Air Station
+KONT|Ontario, Ontario International Airport
+KOVE|Oroville, Oroville Municipal Airport
+KOXR|Oxnard, Oxnard Airport
+KPSP|Palm Springs, Palm Springs Regional Airport
+KTRM|Palm Springs, Thermal Airport
+KPMD|Palmdale, Palmdale Production Flight Plant
+KPAO|Palo Alto Airport
+KPRB|Paso Robles, Paso Robles Municipal Airport
+KNTD|Point Mugu, Naval Air Warfare Center
+K87Q|Point Piedras Blanca
+KPTV|Porterville Automatic Weather Observing / Reporting System
+KRNM|Ramona, Ramona Airport
+KRBL|Red Bluff, Red Bluff Municipal Airport
+KRDD|Redding, Redding Municipal Airport
+KRIV|Riverside / March Air Force Base
+KRAL|Riverside, Riverside Municipal Airport
+KSAC|Sacramento, Sacramento Executive Airport
+KSMF|Sacramento, Sacramento International Airport
+KSNS|Salinas, Salinas Municipal Airport
+KSQL|San Carlos Airport
+KSEE|San Diego / Gillespie
+KSDM|San Diego, Brown Field Municipal Airport
+KNKX|San Diego, Miramar, Naval Air Station
+KMYF|San Diego, Montgomery Field
+KNZY|San Diego, North Island, Naval Air Station
+KSAN|San Diego, San Diego International-Lindbergh Field
+KSFO|San Francisco, San Francisco International Airport
+KRHV|San Jose / Reid / Hillv
+KSJC|San Jose, San Jose International Airport
+KSBP|San Luis Obispo, San Luis Obispo County-Mc Chesney Field
+KNSI|San Nicholas Island
+KSDB|Sandberg
+KSNA|Santa Ana, John Wayne Airport-Orange County Airport
+KSBA|Santa Barbara, Santa Barbara Municipal Airport
+KSMX|Santa Maria, Santa Maria Public Airport
+KSMO|Santa Monica, Santa Monica Municipal Airport
+KSTS|Santa Rosa, Santa Rosa Sonoma County Airport
+KIZA|Santa Ynez, Santa Ynez Airport
+KO87|Shelter Cove
+KTVL|South Lake Tahoe, Lake Tahoe Airport
+KSCK|Stockton, Stockton Metropolitan Airport
+KTOA|Torrance Municipal
+KTRK|Truckee-Tahoe
+KNXP|Twenty-Nine Palms, Marine Corps Air-Ground Combat Center
+KUKI|Ukiah Municipal Automatic Weather Observing / Reporting System
+KVCB|Vacaville, Nut Tree Airport
+KVNY|Van Nuys, Van Nuys Airport
+KVBG|Vandenberg Air Force Base
+KXVW|Vandenberg Range
+KVIS|Visalia Municipal Automatic Weather Observing / Reporting System
+KWVI|Watsonville, Watsonville Municipal Airport

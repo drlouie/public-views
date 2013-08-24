@@ -1,0 +1,4 @@
+HUEN|Entebbe Airport
+HUKS|Kasese
+HUMA|Mbarara
+HUSO|Soroti

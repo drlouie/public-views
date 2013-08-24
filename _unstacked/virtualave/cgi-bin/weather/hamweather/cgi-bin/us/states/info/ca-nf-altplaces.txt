@@ -1,0 +1,17 @@
+
+badger=fpcn11.yqx.htm--CENTRAL NEWFOUNDLAND|0
+cartwright=fpcn13.yqx.htm--|0
+churchill falls=fpcn13.yqx.htm--|0|CYUM|2
+corner brook=fpcn11.yqx.htm--WEST COAST|0
+deer lake=fpcn11.yqx.htm--WEST COAST|0
+gander=fpcn11.yqx.htm--EAST COAST|0|CYQX|2
+goose bay=fpcn13.yqx.htm--|0|CYYR|2
+hopedale=fpcn13.yqx.htm--|0
+makkovik=fpcn13.yqx.htm--HOPEDALE|0
+marys harbour=fpcn13.yqx.htm--CARTWRIGHT|0
+nain=fpcn13.yqx.htm--|0
+port aux basques=fpcn11.yqx.htm--SOUTH COAST|0
+saint anthony=fpcn11.yqx.htm--NORTHERN PENINSULA|0|CYAY|2
+saint johns=fpcn11.yqx.htm--ST JOHNS|0|CYY2
+twillingate=fpcn11.yqx.htm--CENTRAL NEWFOUNDLAND|0
+wabush lake=fpcn12.wqb.htm--FERMONT|0
