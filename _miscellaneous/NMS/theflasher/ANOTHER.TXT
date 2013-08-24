@@ -1,0 +1,8 @@
+Message=Here comes another message to show that this area can be controlled dynamically via the internal flash scripting functions and capabilities. This allows for us to use only one layer/window with multiple external file access... Here comes another message to show that this area can be controlled dynamically via the internal flash scripting functions and capabilities. This allows for us to use only one layer/window with multiple external file access... Here comes another message to show that this area can be controlled dynamically via the internal flash scripting functions and capabilities. This allows for us to use only one layer/window with multiple external file access... Here comes another message to show that this area can be controlled dynamically via the internal flash scripting functions and capabilities. This allows for us to use only one layer/window with multiple external file access...
+
+Here comes another message to show that this area can be controlled dynamically via the internal flash scripting functions and capabilities. This allows for us to use only one layer/window with multiple external file access... Here comes another message to show that this area can be controlled dynamically via the internal flash scripting functions and capabilities. This allows for us to use only one layer/window with multiple external file access...
+<ul>
+<li><a href="javascript:window.open('http://www.hapasol.com');"><b>This is a test</b></font></a></li>
+<li><a href="http://www.hapasol.com"><b><u><font size="20">This is a test</font></u></b></font></a></li>
+</ul>
+

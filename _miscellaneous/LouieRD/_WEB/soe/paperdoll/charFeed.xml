@@ -1,0 +1,81 @@
+<query-flat-results xmlns="http://soe.sony.com/guilds/view">
+  <property name="result.001.id" value="1721119863389335658"/>
+  <property name="result.001.item.icon" value="592"/>
+  <property name="result.001.item.id" value="203"/>
+  <property name="result.001.item.knowledge.localizedKnowledges.en.name" value="Magic Affinity"/>
+  <property name="result.001.item.name" value="Qeynos citizenship ring"/>
+  <property name="result.001.slotId" value="9"/>
+  <property name="result.002.id" value="1721119863391432810"/>
+  <property name="result.002.item.icon" value="617"/>
+  <property name="result.002.item.id" value="393"/>
+  <property name="result.002.item.knowledge.localizedKnowledges.en.name" value="Sword"/>
+  <property name="result.002.item.name" value="Qeynos citizenship longsword"/>
+  <property name="result.002.slotId" value="0"/>
+  <property name="result.003.id" value="1724023946316088426"/>
+  <property name="result.003.item.icon" value="1506"/>
+  <property name="result.003.item.id" value="459"/>
+  <property name="result.003.item.knowledge.localizedKnowledges.en.name" value="Very Light Armor"/>
+  <property name="result.003.item.name" value="laborer's cap"/>
+  <property name="result.003.slotId" value="2"/>
+  <property name="result.004.id" value="1725442751939499114"/>
+  <property name="result.004.item.icon" value="2129"/>
+  <property name="result.004.item.id" value="1236"/>
+  <property name="result.004.item.knowledge.localizedKnowledges.en.name" value="Magic Affinity"/>
+  <property name="result.004.item.name" value="Rope Belt of Witherstraw"/>
+  <property name="result.004.slotId" value="17"/>
+  <property name="result.005.id" value="1737523218717106282"/>
+  <property name="result.005.item.icon" value="578"/>
+  <property name="result.005.item.id" value="5767"/>
+  <property name="result.005.item.knowledge.localizedKnowledges.en.name" value="Magic Affinity"/>
+  <property name="result.005.item.name" value="Bracelet of Chipped Shards"/>
+  <property name="result.005.slotId" value="14"/>
+  <property name="result.006.id" value="1737519607448672362"/>
+  <property name="result.006.item.icon" value="255"/>
+  <property name="result.006.item.id" value="2169"/>
+  <property name="result.006.item.knowledge.localizedKnowledges.en.name" value="Very Light Armor"/>
+  <property name="result.006.item.name" value="shaped tailored threadbare mitts"/>
+  <property name="result.006.slotId" value="6"/>
+  <property name="result.007.id" value="1724038687225832554"/>
+  <property name="result.007.item.icon" value="1579"/>
+  <property name="result.007.item.id" value="937"/>
+  <property name="result.007.item.knowledge.localizedKnowledges.en.name" value="Medium Armor"/>
+  <property name="result.007.item.name" value="Dagorel's Crusader Chainmail"/>
+  <property name="result.007.slotId" value="3"/>
+  <property name="result.008.id" value="1724038687224783978"/>
+  <property name="result.008.item.icon" value="596"/>
+  <property name="result.008.item.id" value="936"/>
+  <property name="result.008.item.knowledge.localizedKnowledges.en.name" value="Magic Affinity"/>
+  <property name="result.008.item.name" value="Dagorel's Ring of Faith"/>
+  <property name="result.008.slotId" value="10"/>
+  <property name="result.009.id" value="1721137368239515754"/>
+  <property name="result.009.item.icon" value="1391"/>
+  <property name="result.009.item.id" value="63"/>
+  <property name="result.009.item.knowledge.localizedKnowledges.en.name" value="Light Armor"/>
+  <property name="result.009.item.name" value="Footman Boots"/>
+  <property name="result.009.slotId" value="8"/>
+  <property name="result.010.id" value="1721137368360101994"/>
+  <property name="result.010.item.icon" value="950"/>
+  <property name="result.010.item.id" value="28"/>
+  <property name="result.010.item.knowledge.localizedKnowledges.en.name" value="Magic Affinity"/>
+  <property name="result.010.item.name" value="Dreak's finely crafted bracelet"/>
+  <property name="result.010.slotId" value="13"/>
+  <property name="result.011.id" value="1721137368643217514"/>
+  <property name="result.011.item.icon" value="254"/>
+  <property name="result.011.item.id" value="104"/>
+  <property name="result.011.item.knowledge.localizedKnowledges.en.name" value="Very Light Armor"/>
+  <property name="result.011.item.name" value="sand-covered bracers"/>
+  <property name="result.011.slotId" value="5"/>
+  <property name="result.012.id" value="1721137368817281130"/>
+  <property name="result.012.item.icon" value="1395"/>
+  <property name="result.012.item.id" value="74"/>
+  <property name="result.012.item.knowledge.localizedKnowledges.en.name" value="Light Armor"/>
+  <property name="result.012.item.name" value="Footman Leggings"/>
+  <property name="result.012.slotId" value="7"/>
+  <property name="result.013.id" value="1721137369486272618"/>
+  <property name="result.013.item.icon" value="1508"/>
+  <property name="result.013.item.id" value="72"/>
+  <property name="result.013.item.knowledge.localizedKnowledges.en.name" value="Very Light Armor"/>
+  <property name="result.013.item.name" value="finely-stitched shoulderpads"/>
+  <property name="result.013.slotId" value="4"/>
+</query-flat-results>
+

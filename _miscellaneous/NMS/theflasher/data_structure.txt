@@ -1,0 +1,94 @@
+SERVICES
+ - Internet Design
+	- Website Dev
+	- Network Apps
+	- Site Maintenance
+ - Print Design
+	- Collateral
+	- Stationary
+	- CD-ROM/Sleeve
+ - Multimedia
+	- Online/Offline Media
+	- Streaming Video
+	- DHTML Interfacing
+ - Site Analysis
+	- Meta Tags
+	- Performance
+	- Cross-Browser
+ - Logo/Identity
+	- Digitalization
+	- Re-Design
+	- New Brands
+ - Web Marketing
+	- Traffic Analysis
+	- Search Engines
+	- Banner Ads
+ - Custom Programming
+	- Extranet/LAN
+	- Internet
+	- Database Dev
+
+PORTFOLIO
+ - Public Domains
+	- NetMediaSol.com
+	- CoastlineMicro.com
+	- AD-s.com
+ - Unpublished Work
+	- Search Mobile
+	- RadioBar
+	- ICalendar
+ - Standalone Apps
+	- SimPoll
+	- SimPress
+ - Custom Programming
+	- Extranet/LAN
+	- Internet
+	- Database Dev
+ - Branding/Print
+	- Packaging
+	- Stationary
+	- Logo Design
+
+OUR PROFILE
+ - The Startup
+	- Before NMS
+	- The Inception
+	- Beyond 2001
+ - Company Vision
+	- Internet View
+	- Clients First
+	- Need To Succeed
+ - Work Ethic
+	- Client Care
+	- Quality Standards
+	- Project Control
+ - Qualifications
+	- Industry Experience
+	- Certifications
+	- Testimonials
+ - Company Info
+	- Family Operated
+	- Reasonable Pricing
+	- Personal Service
+
+INDUSTRY VIEW
+ - Software Reviews
+	- Internet Dev
+	- Multimedia
+	- Web Analysis
+ - Free Stuff
+	- NMS's Freebees
+	- Other's Freebees
+ - Interesting Sites
+	- Business Oriented
+	- Family Oriented
+	- Miscellaneous
+ - NMS NewsWire
+	- Technology News
+	- World News
+	- U.S. News
+ - Web Development
+	- Programming
+	- Design
+	- Marketing
+

@@ -1,0 +1,81 @@
+<html>
+<head>
+<script language="JavaScript">
+<!--
+function jumpDest() {
+otherfoot2 = window.document.forms[0].otherfoot2;
+otherfoot = window.document.forms[0].otherfoot; 
+var sizer = otherfoot2.length;
+for(var i = 0; i < otherfoot.length; i++) {
+if ((otherfoot.options[i] != null) && (otherfoot.options[i].selected)) {
+var there = false;
+for(var count = 0; count < sizer; count++) {
+if (otherfoot2.options[count] != null) {
+if (otherfoot.options[i].text == otherfoot2.options[count].text) {
+there = true;
+break;
+      }
+   }
+}
+if (there != true) {
+otherfoot2.options[sizer] = new Option(otherfoot.options[i].text); 
+sizer++;
+         }
+      }
+   }
+}
+function killDest() {
+var otherfoot2  = window.document.forms[0].otherfoot2;
+var sizer = otherfoot2.options.length;
+for(var i = (sizer-1); i >= 0; i--) {
+if ((otherfoot2.options[i] != null) && (otherfoot2.options[i].selected == true)) {
+otherfoot2.options[i] = null;
+      }
+   }
+}
+// End -->
+</SCRIPT>
+</head>
+<body>
+<center>
+<form method="POST">
+<table bgcolor="#FFFFCC">
+<tr>
+<td bgcolor="#FFFFCC" width="74">Available</td>
+<td bgcolor="#FFFFCC">&nbsp;</td>
+<td bgcolor="#FFFFCC" width="69">Selected</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFCC" width="85">
+<select size="8" name="otherfoot" multiple>
+<option value="00000021">Item 1
+<option value="00000022">Item 2
+<option value="00000023">Item 3
+<option value="00000024">Item 4
+<option value="00000025">Item 5
+<option value="00000026">Item 6
+<option value="00000027">Item 7
+<option value="00000028">Item 8
+</select>
+</td>
+<td bgcolor="#FFFFCC" width="74" align="center">
+<input type="button" value=" >> " onClick="javascript:jumpDest();">
+<br><br>
+<input type="button" value=" << " onclick="javascript:killDest();">
+</td>
+<td bgcolor="#FFFFCC" width="69">
+<select size="8" name="otherfoot2" multiple>
+<option value="00000027">Item 7
+<option value="00000028">Item 8
+</select>
+</td>
+</tr>
+<tr>
+<td colspan=3 align="center">
+<input type="button" value="Done">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

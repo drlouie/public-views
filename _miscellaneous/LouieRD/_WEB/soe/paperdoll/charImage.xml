@@ -1,0 +1,9 @@
+<query-flat-results xmlns="http://soe.sony.com/guilds/view">
+  <property name="result.paperDollImage.categoryId" value=""/>
+  <property name="result.paperDollImage.description" value="bio or paperdoll"/>
+  <property name="result.paperDollImage.fullSizeFile.url" value=""/>
+  <property name="result.paperDollImage.imageId" value="282"/>
+  <property name="result.paperDollImage.thumbnailFile.url" value="000/000/000/283.jpg"/>
+  <property name="result.paperDollImage.title" value="bio or paperdoll"/>
+</query-flat-results>
+

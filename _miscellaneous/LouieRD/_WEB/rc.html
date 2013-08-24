@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Untitled</title>
+<script language="JavaScript" src="meineGuiones/b4dom.js"></script>
+<script language="JavaScript" src="meineGuiones/rc.js"></script>
+<script>
+//radioControl
+on = new Image(); on.src = "unserImagenes/show_radio.gif"; 
+off = new Image(); off.src = "unserImagenes/hide_radio.gif";
+
+var doneNOW = 0;
+function playM(){dMp();doneNOW++;}
+function dMp(){if(document.musplPla || window.musplPla){if(document.musplPla){document.musplPla.Rewind();document.musplPla.Play();}}}
+</script>
+<style>
+	body { overflow:hidden; }
+	#blockDiv { filter:alpha(opacity=10);-moz-opacity:.10; visibility:visible; z-index:105; }
+	#musplLay { visibility:visible; }
+	#divLoad { visibility: hidden; border-top:#B8A27F 1px solid; border-left:#B8A27F 1px solid;  border-right:#B8A27F 1px solid; position:relative; z-index:103; top:-841px; left:-86px; width:600px; height:328px; clip:rect(0px 600px 328px 0px); }
+	#overDiv, #divLinks,#divArrows, #bground, #divCont, #divIEText, #addCommentForm { visibility: hidden; position:absolute;left:0px;top:0px;z-index:-100;width:1px; height:1px; clip:rect(0px 1px 1px 0px); overflow:hidden; }
+</style>
+</head>
+<body onLoad="runit();">
+	<div id="reldiv">
+		<DIV ID="blockDiv" STYLE="position:absolute; left:-230px; top:175px; width:250px; height:50px; clip:rect(0px 250px 50px 0px); filter:alpha(opacity=10);-moz-opacity:.10;">
+			<table width="250" cellpadding="0" cellspacing="0" align="right" border="0">
+				<tr height="50">
+					<td align="right" width="230"><div id="musplLay" bgcolor="#E8EADD" style="background-color:#E8EADD;"><script language="JavaScript" src="meineGuiones/mpl.js"></script></div></td>
+					<td align="left" width="20"><a href="javascript:void(0);" OnMouseOver="javascript:checkPos();"><img src="PacificOne_Residential_Images/show_radio.gif" name="radiobar" border="0" width="20" height="50"></a></td>
+				</tr>
+			</table>
+		</DIV>
+	</div>
+</body>
+</html>
