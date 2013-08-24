@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Americor Lending Group, Inc.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK rel="stylesheet" TYPE="text/css" href="secondaryLayout.css">
+<script language="JavaScript" type="text/javascript" src="js/miTabla.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/popwindow.js"></script>
+</head>
+
+<body bgcolor="#E2E3E5" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" style="background-image:url('Americor_Lending_Images/newHomeBacker.jpg');background-repeat: no-repeat; background-position: top center;">
+<center>
+<!--MenuStart-->
+<div style="position:relative;top:120px;left:-363px;z-index:10;">
+<!--#include virtual="/menu.html" -->
+</div>
+<!--MenuEnd-->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr> 
+    <td colspan="2"><img src="Americor_Lending_Images/spacer.gif" border="0" width="1" height="1"></td>
+  </tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0">
+  <tr> 
+    <td colspan="2"><img src="Americor_Lending_Images/spacer.gif" border="0" width="762" height="1"></td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top"><a href="/" title="Americor Lending Home"><img src="Americor_Lending_Images/spacer.gif" border="0" width="460" height="65"></a></td>
+    <td><img src="Americor_Lending_Images/spacer.gif" border="0" width="1" height="84"></td>
+  </tr>
+  <tr> 
+    <td colspan="2"><img src="Americor_Lending_Images/spacer.gif" border="0" width="1" height="15"></td>
+  </tr>
+  <tr> 
+    <td colspan="2">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="33"><img src="Americor_Lending_Images/menuLefter.gif" border="0" width="33" height="21"></td>
+				<td onmouseover="menuOver(0);closeAll();topMenu(0);" onmouseout="menuOut(0);" onclick="return false;" onfocus="if(this.blur)this.blur();" align="center" width="57" class="menuItem" valign="bottom"><a href="#" class="menuItemA" onmouseover="menuOver(0);closeAll();topMenu(0);" onmouseout="menuOut(0);" onclick="return false;" onfocus="if(this.blur)this.blur();"><u>A</u>pply Now</a></td>
+				<td width="22"><img src="Americor_Lending_Images/menuSplitter.gif" border="0" width="22" height="21"></td>
+				<td onmouseover="menuOver(1);closeAll();topMenu(1);" onmouseout="menuOut(1);" onclick="return false;" onfocus="if(this.blur)this.blur();" align="center" width="72" class="menuItem" valign="bottom"><a href="#" class="menuItemA" onmouseover="menuOver(1);closeAll();topMenu(1);" onmouseout="menuOut(1);" onclick="return false;" onfocus="if(this.blur)this.blur();"><u>I</u>nterest Rates</a></td>
+				<td width="22"><img src="Americor_Lending_Images/menuSplitter.gif" border="0" width="22" height="21"></td>
+				<td onmouseover="menuOver(2);closeAll();topMenu(2);" onmouseout="menuOut(2);" onclick="return false;" onfocus="if(this.blur)this.blur();" align="center" width="71" class="menuItem" valign="bottom"><a href="#" class="menuItemA" onmouseover="menuOver(2);closeAll();topMenu(2);" onmouseout="menuOut(2);" onclick="return false;" onfocus="if(this.blur)this.blur();"><u>L</u>oan Programs</a></td>
+				<td width="22"><img src="Americor_Lending_Images/menuSplitter.gif" border="0" width="22" height="21"></td>
+				<td onmouseover="menuOver(3);closeAll();topMenu(3);" onmouseout="menuOut(3);" onclick="return false;" onfocus="if(this.blur)this.blur();" align="center" width="71" class="menuItem" valign="bottom"><a href="#" class="menuItemA" onmouseover="menuOver(3);closeAll();topMenu(3);" onmouseout="menuOut(3);" onclick="return false;" onfocus="if(this.blur)this.blur();"><u>L</u>oan Tools</a></td>
+				<td width="22"><img src="Americor_Lending_Images/menuSplitter.gif" border="0" width="22" height="21"></td>
+				<td onmouseover="menuOver(4);closeAll();topMenu(4);" onmouseout="menuOut(4);" onclick="return false;" onfocus="if(this.blur)this.blur();" align="center" width="71" class="menuItem" valign="bottom"><a href="#" class="menuItemA" onmouseover="menuOver(4);closeAll();topMenu(4);" onmouseout="menuOut(4);" onclick="return false;" onfocus="if(this.blur)this.blur();"><u>A</u>bout ALGi</a></td>
+				<td width="22"><img src="Americor_Lending_Images/menuSplitter.gif" border="0" width="22" height="21"></td>
+				<td align="center" width="72" class="menuItem" valign="bottom"><a href="Contact_Americor_Lending_Group.shtml" class="menuItemA" onmouseover="menuOver(5);" onmouseout="menuOut(5);" onclick="closeAll();" onfocus="if(this.blur)this.blur();"><u>C</u>ontact ALGi</a></td>
+				<td width="26"><img src="Americor_Lending_Images/menuRighter.gif" border="0" width="26" height="21"></td>
+			</tr>
+		</table>
+	</td>
+  </tr>
+
+  <tr>
+	<td colspan="2">
+		<table width="762" border="0" cellpadding="0" cellspacing="0" style="background-image:url('Americor_Lending_Images/mainTableTopper.gif');background-repeat: no-repeat;">
+          <tr bgcolor="#ffffff">
+            <td width="316"><img src="Americor_Lending_Images/mainPhotos_4.jpg" border="0" width="316" height="131"></td>
+            <td valign="top" width="430" style="border-top:#999999 1px solid;" align="right"><div id="rateSheet"></div></td>
+            <td valign="bottom" width="1" style="border-top:#999999 1px solid;"><img src="Americor_Lending_Images/spacer.gif" border="0" width="1" height="1"></td>
+            <td valign="top" width="15"><img src="Americor_Lending_Images/rightTopper.gif" border="0" width="15" height="131"></td>
+          </tr>
+
+	<!--MainContent-->
+	<tr>
+		<td colspan="4" height="27" nowrap style="background-image:url('Americor_Lending_Images/middleBacker.jpg'); background-repeat: repeat-x; border-left:#999999 1px solid;border-right:#999999 1px solid;" height="27" align="right"><nobr><div id="dater" class="otherDate"></div></nobr></td>
+	</tr>
+	<tr> 
+    	<td colspan="4" bgcolor="#FFFFFF" style="border-left:#999999 1px solid;border-right:#999999 1px solid;" width="100%"><img src="Americor_Lending_Images/spacer.gif" border="0" width="1" height="1"><div id="mainContent" align="center"></div></td>
+
+	<!--MainContent-->
+	<tr>
+		<td colspan="4" bgcolor="#FFFFFF" style="border-left:#999999 1px solid;border-right:#999999 1px solid;" align="center">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr valign="bottom">
+					<td align="right" width="40%" class="footerNumbers">Call Us Toll-Free: 1(800) 339-7040</td>
+					<td align="center" width="20%"><a href="/" title="Americor Lending Home"><img src="Americor_Lending_Images/logoFooter.gif" border="0" width="28" height="32"></a></td>
+					<td align="left" width="40%" class="footerNumbers">Fax Us Toll-Free: 1(800) 953-1907</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+		<td colspan="4" height="10" bgcolor="#F97C18" style="border-left:#999999 1px solid;border-right:#999999 1px solid;" align="center"><div class="footerCompany"><b>© 2006 Americor Lending Group, Inc. - All Rights Reserved</b></div></td>
+	</tr>
+	<tr> 
+    	<td colspan="4" style="background-image:url('Americor_Lending_Images/mainTableBottomer.gif');background-repeat: no-repeat;background-position: bottom;"><img src="Americor_Lending_Images/spacer.gif" border="0" width="1" height="15"></td>
+    </tr>
+	<tr>
+		<td colspan="4" height="20" align="center" class="footerAddress" style="letter-spacing:5px;">18111 Von Karman Avenue &nbsp;&nbsp; - &nbsp;&nbsp; 7th Floor &nbsp;&nbsp; - &nbsp;&nbsp; Irvine California 92612</td>
+	</tr>
+	
+	
+        </table>
+		</td>
+  	</tr>
+	<tr> 
+		<td colspan="2" class="bottomFooter" align="center">&nbsp;</td></td>
+  	</tr>
+	<tr> 
+		<td colspan="2" align="center"><img src="Americor_Lending_Images/spacer.gif" border="0" width="1" height="15"></td></td>
+  	</tr>
+</table>
+</center>
+<div id="contentLoader" style="width:1px;height:1px;overflow:hidden;">
+
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="50" height="20"><img src="images/spacer.gif" width="50" height="20"></td>
+    <td width="792" height="20"><img src="images/spacer.gif" width="50" height="20"></td>
+  </tr>
+  <tr>
+    <td width="50"><img src="images/spacer.gif" width="50" height="50"></td>
+    <td align="left" valign="top"> 
+      <table width="700" height="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="23"><img src="images/header-policies-licensing.gif" width="224" height="23"></td>
+        </tr>
+        <tr> 
+          <td height="10"><img src="images/main-underline.gif" width="600" height="10"></td>
+        </tr>
+        <tr> 
+          <td align="left" valign="top"> 
+            <table width="600" height="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="78" height="324" background="images/back-left-divider.gif"><img src="images/spacer.gif" width="78" height="100"></td>
+                <td width="622" align="left" valign="top"><p>&nbsp;</p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>Introduction<br></strong></u></font>
+				  <font size="2" face="Arial, Helvetica, sans-serif">At Americor Lending Group, maintaining our customers’ trust and confidence is a high priority. That’s why we welcome this opportunity to describe our privacy policy and the steps we take to protect your personal information. In this notice, you will find details about these policies, as well as an opportunity to choose how your personal information will be shared. This Privacy Policy is applicable to Americor Lending Group, Inc.</font></p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>Security<br></strong></u></font>
+				  <font size="2" face="Arial, Helvetica, sans-serif">Security of our customers’ personal information is very important to Americor Lending Group. Americor Lending Group employs extensive security measures to thoroughly protect your transactions with us. Except as set forth herein, we restrict access to your non-public personal information to our employees who have a need to know that information in order to provide products and services to you. We also maintain, and require third parties with which we share your non-public personal information (as provided herein) to maintain, physical and procedural safeguards to guard your non-public personal information.</font></p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>Information Sources<br></strong></u></font>
+				  <font size="2" face="Arial, Helvetica, sans-serif">In order to provide mortgage loans and other financial products to you, we collect information from a variety of sources, such as:<ul type="circle"><li>Information you provide to us on applications or other forms, such as name, address, social security number, income, assets, etc.;</li><li>Information we receive from an outside company, such as a credit bureau or employment verification vendors;</li><li>Information about your transactions or experience with us, such as property value appraisals, your payment history with us, etc.</li></ul></font></p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>Information We Collect While You Browse Our Website<br></strong></u></font>
+				  <font size="2" face="Arial, Helvetica, sans-serif">We do not access information about your identity while you browse our website. You remain anonymous to us. While you view our site, our system tracks the pages you visit, the pages you download, and the site you came from, and notes your IP address (but not your identity). We may also place a “cookie” on your computer that tracks your use of our website. A cookie is a piece of data that is stored on your hard drive. It takes up very little room on your system and helps us estimate the number of persons that use our site and determine the areas of our site that are the most popular. The cookie does not provide us with specific, personally identifying information about you, such as your name, address, tax identification number, social security number, email address, or phone number. You can remain anonymous while you are browsing our website, but once you complete an application for a loan, we will use the information stated therein to determine if you are eligible for the loan you requested. We may retain all of the information you provide to us in that application process, including personally identifying information such as your name, income, assets, liabilities, age, social security number, and employment.</font></p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>Who We Disclose the Information To<br></strong></u></font>
+				  <font size="2" face="Arial, Helvetica, sans-serif">We may disclose the information we collect, as stated above, to:<ul type="circle"><li>Financial service providers, such as banks and investment companies, 3rd party loan servicers, or consumer credit companies.</li><li>Voluntary organizations and non-financial companies, such as appraisers, escrow agents or title companies.</li><li>Preferred providers under written joint marketing arrangements (“Preferred Providers”) which are entered into to provide you with other products or services, provided however, in such cases, these joint marketing agreements will require these Preferred Providers to keep your personal information confidential and will prohibit the use of your personal information for any other purpose other than for the purpose disclosed when the product or service is offered. Categories of Preferred Providers with which we may share your personal information include: (i) financial service companies such as insurance companies, insurance agents or brokers, registered broker-dealers, mutual fund companies, banks, and credit card companies, and (ii) non-financial companies such as retailers, direct marketers and membership clubs.</li><li>Government agencies or consumer reporting agencies for specific and limited purposes necessary to:<ul type="disc"><li>Effect a transaction authorized or requested by you</li><li>Effect, administer or enforce a transaction</li><li>Protect against fraud</li><li>Make a report to a consumer reporting agency</li><li>Comply with a legal investigation or regulatory requirement.</li></ul></ul></font></p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>Changes to Our Privacy Policy; Notices<br></strong></u></font>
+				  <font size="2" face="Arial, Helvetica, sans-serif">We reserve the right to amend (add to, delete from, or change) the terms of this Privacy Policy from time to time. Our Privacy Policy, as in effect from time to time, is continually posted on our Web site. By electing to become one of our customers or by receiving our products and related services, you agree to receive copies of our Privacy Policy and any amendments to it from our Web site, unless you notify us otherwise in writing at the address below. Notwithstanding the foregoing, we will provide you with a written copy of our Privacy Policy annually.</font></p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>Notice to New Mexico Residents<br></strong></u></font>
+				  <font size="2" face="Arial, Helvetica, sans-serif">We will not share your personal data with anyone except our service providers and third parties as required or permitted by law. We may also share your personal data with your authorization.</font></p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>Loan Submission Notice<br></strong></u></font>
+				  <font size="2" face="Arial, Helvetica, sans-serif">By uploading a borrower loan file or entering information manually, I understand that I am requesting loan qualification information, not submitting a loan file to Americor Lending Group. Only when I submit the full paper loan file to Americor Lending Group will required disclosures and notices be sent directly to my borrower(s).</font></p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>Services Use Policy<br></strong></u></font>
+				  <font size="2" face="Arial, Helvetica, sans-serif">The services that we provide to you and our other customers come at a significant cost to us, however, we do not pass on the costs for them. You can help us keep our services available by limiting your use of our system to qualified borrowers who you are targeting for Americor Lending Group. Any user who appears to be abusing the privilege of this service will have his or her access to the site blocked.</font></p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>Security<br></strong></u></font>
+				  <font size="2" face="Arial, Helvetica, sans-serif">Your file will be transmitted to Americor Lending Group using state-of-the-art SSL (Secure Socket Layer) encryption technology, which ensures the security of your file and your borrower’s information over the Internet.</font></p>
+                  <p><font size="2" face="Arial, Helvetica, sans-serif"><u><strong>License Information<br></strong></u></font>
+				  <font style="font-size:9px;" face="Arial, Helvetica, sans-serif">AZ: Mortgage Banker Licensee BK0906157 and BKBR 0107158. CA: Licensed by the Department of Corporations under the California Residential Mortgage Lending Act, and Licensed by the Department of Corporations under the California Finance Lender Law. CO: Colorado Supervised Lender License #988340; FL: Florida Correspondent Mortgage Lender License # CL0500135;  MD: licensed as a Mortgage Lender License #8977; MA: Mortgage Lender License # MC3168; ME: licensed as a Supervised Lender under license #6218;  MN: Residential Mortgage Originator License #20371826; This advertisement is not an offer to enter into an interest rate lock-in agreement under Minnesota Law. MS: Mississippi Registered Mortgage Company. NE: Mortgage Banker License #9399; NH: licensed by the New Hampshire Banking Department License # 9399MBB and as a Mortgage Home Lender license 10031-MHL; NM: loan business license #01640; ND: Mortgage Broker License #MB100773; OK: Supervised Lender License #SL005325; OR: Mortgage Lender license #ML-2776; SC: Supervised Lender license # S-5, 667; TX: Mortgage Banker Registration # 43442; VA: Mortgage Broker and Mortgage Lender license # MLB-943; WA: Licensed Consumer Loan Company license #520-CL-25540; WY: Supervised Lender license # SL-2001.<br><br>Americor Lending Group does not make &quot;high cost home loans&quot; as defined in HOEPA and Section 32 of Regulation Z. Terms and pricing subject to change without notice. Adjustable rate programs, fixed rates programs, pre-payment penalties and applicable fees apply according to individual state specific rules and regulations. Loans may not be available in all states. All loans subject to underwriting approval, including credit verification and property valuation. Not all borrowers will qualify. Equal Opportunity Lender.  Americor Lending Group, Inc. 18111 Von Karman Ave., 7th floor, Irvine, CA 92612.</font></p>
+                  <font size="2" face="Arial, Helvetica, sans-serif"><center>~~</center></font>
+				  <p></p></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+</div>
+<div id="rateLoader" style="width:1px;height:1px;overflow:hidden;"><!--#include virtual="/cgi-bin/getMainRates.cgi" --></div>
+<script language="javascript" type="text/javascript" src="cgi-bin/dater.cgi"></script>
+<script language="javascript" type="text/javascript">
+	if (document.getElementById) {
+		document.getElementById("mainContent").innerHTML = document.getElementById("contentLoader").innerHTML;
+		document.getElementById("rateSheet").innerHTML = document.getElementById("rateLoader").innerHTML;
+
+	}
+</script>
+</body>
+<LINK rel="stylesheet" TYPE="text/css" href="http://rws.mortgage101.com/templateroot/css/Template0.css">
+<LINK rel="stylesheet" TYPE="text/css" href="http://rws.mortgage101.com/templateroot/css/Global.css">
+<LINK rel="stylesheet" TYPE="text/css" href="http://rws.mortgage101.com/templateroot/css/DynamicStyles.aspx?PVLID=4868">
+<LINK rel="stylesheet" TYPE="text/css" href="secondaryLayout.css">
+</html>
+

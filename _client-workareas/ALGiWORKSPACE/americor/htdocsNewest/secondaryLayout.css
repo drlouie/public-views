@@ -1,0 +1,59 @@
+.menuItem { font-family: arial,verdana,helvetica; font-size: 10px; color: #333333; padding-bottom: 3px; padding-left: 12px; padding-right: 12px; background-image:url('Americor_Lending_Images/menuBackSpan.gif'); text-decoration:none; }
+.menuItemA { font-family: arial,verdana,helvetica; font-size: 10px; color: #333333; text-decoration:none; }
+.mainTableBack { background-image:url('Americor_Lending_Images/mainTableBackerSpan.gif'); background-repeat: repeat-y; }
+.mainTableBackRight { background-image:url('Americor_Lending_Images/mainTableBackerSpan.gif'); background-repeat: repeat-y; background-position: right; }
+.contact { font-family: arial,verdana,helvetica; font-size: 11px; color: #000000; text-align:left; padding-left: 20px; padding-right: 20px;	 padding-top: 23px; }
+.subscribe { font-family: arial,verdana,helvetica; font-size: 9px; color: #000000; text-align:left; padding-left: 20px; padding-right: 20px;	 padding-top: 23px; }
+.subscribeInput { font-family: arial,verdana,helvetica; font-size: 9px; color: #000000; width:100px; height:18px; margin-top:5px; }	
+.subscribeButton { font-family: arial,verdana,helvetica; font-size: 9px; color: #000000; width:70px; height:20px; margin-left:10px; }
+.dateHome { font-family: arial,verdana,helvetica; font-size: 9px; color: #F97C18; line-height:26px; }
+.ALGiTopMenu { border-left:#999999 1px solid; border-right:#999999 1px solid; position:absolute; width:171px; height:150px; clip:rect(0px 171px 14px 0px); layer-background-color:#FFFFFF; background-color:#FFFFFF; z-index:31; visibility:hidden;}
+.ALGiTopMenuBottom {position:absolute; width:171px; height:3px; clip:rect(0px 171px 3px 0px); top:11; layer-background-color:#999999; background-color:#999999; z-index:2;}
+.ALGiTopMenuText   {position:absolute; width:91px; left:5px; top:15px; font-family:arial,helvetica,sans-serif; font-size:11px; background-color:#FFFFFF; z-index:1;}  
+.subbie { cursor:hand; color:#000000; position:relative; left:-2px; background-color:ffffff; width:163px; line-height:25px; text-align:left; padding-left:10px;}
+.subbieA { cursor:hand; color:#000000; text-decoration:none; }
+
+.otherDate { font-family: arial,verdana,helvetica; font-size: 9px; color: #000000; letter-spacing:1px; font-style: italic;margin-right:10px;}
+
+body{ background-color:#E2E3E5;}
+
+a:hover { font-family: arial,verdana,helvetica; font-size: 10px; color: #333333; text-decoration:underline; } 
+a, a:visited, a:active { font-family: arial,verdana,helvetica; font-size: 10px; color: #333333; text-decoration:none; } 
+.bodylinks { font-family: arial,verdana,helvetica; font-size: 10px; color: #333333; text-decoration:underline; }
+
+#mainContent { margin-bottom:25px; margin-top:10px; align:center; }
+
+.calcinputTitleBar { layer-background-color:#F97C18; background-color:#F97C18; }
+
+.calcinputtable { border:#999999 1px solid; layer-background-color:#F3F4F5; background-color:#F3F4F5; padding-left:5px; padding-top:5px; padding-bottom:5px;}
+
+.calcinputtable1 { position:relative; border:#999999 1px solid; width:350px; left:30px; layer-background-color:#E4E5E8; background-color:#E4E5E8; }
+
+.calcinputtable2 { position:relative; border:#999999 1px solid; width:125px; left:250px; layer-background-color:#E4E5E8; background-color:#E4E5E8; }
+
+.calcinputtable3 { position:relative; border:#999999 1px solid; width:125px; left:250px; layer-background-color:#E4E5E8; background-color:#E4E5E8; }
+
+.calcinputtable4 { position:relative; width:620px; left:7px; layer-background-color:#FFFFFF; background-color:#FFFFFF; }
+
+.calcinputtable5 { border:#999999 1px solid; width:125px; layer-background-color:#E4E5E8; background-color:#E4E5E8; }
+
+#ControlTemplate { width:710px; position:relative; left:-7px; }
+
+.textinput101 { background-color:#ffffff; layer-background-color:#ffffff; }
+
+.theRateSheet { width:290px; overflow:hidden;border:#999999 1px solid; layer-background-color:#FFFFFF; background-color:#FFFFFF; }
+.theRateTitle { line-height:12px; margin-bottom:2px;font-family: arial,verdana,helvetica; font-size: 11px; color: #000000; font-style:italic;  }
+.theRateLink { line-height:10px; margin-top:2px; font-family: arial,verdana,helvetica; font-size: 9px; color: #000000; font-style:italic; text-decoration:underline; }
+#rateSheet { position:relative; top:-4px; z-index:1; width:430px; padding:20px;height:131px; overflow:hidden; }
+
+
+.theRateSheetB { width:650px; overflow:scroll; border:#999999 1px solid; layer-background-color:#FFFFFF; background-color:#FFFFFF; }
+.theRateTitleB { line-height:26px; text-align:left; margin-left:155px; font-weight:bold; margin-bottom:8px; font-family: arial,verdana,helvetica; font-size: 14px; color: #000000; }
+.theRateLinkB { line-height:10px; margin-top:2px; font-family: arial,verdana,helvetica; font-size: 9px; color: #000000; font-style:italic; text-decoration:underline; }
+#rateSheetB { position:relative; top:-4px; z-index:1; width:430px; padding:20px;height:131px; overflow:hidden; }
+
+.footerCompany { position:relative;top:8px; font-family: arial,verdana,helvetica; font-size: 11px; color: #000000; line-height:12px; }
+
+.footerNumbers { padding-bottom:4px; }
+
+.footerAddress { letter-spacing:5px; font-family: arial,verdana,helvetica; font-size: 9px; color: #000000; line-height:24px; }

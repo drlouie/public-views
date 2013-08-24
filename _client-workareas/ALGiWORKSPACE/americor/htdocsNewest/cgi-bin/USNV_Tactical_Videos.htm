@@ -1,0 +1,131 @@
+#!/usr/bin/perl5 -s
+
+## --> Snif cookie, if present test for logged in status
+require ("cookiesnif.nsp");
+
+## --> Parse Request Query
+require ("parse_query.nsp");
+
+#-- GET LEFT MENU
+require ("leftMenu.nsp");
+
+print "Content-type: text/html\n\n";
+
+	#-- CONNECT TO DB (GET PAGE CONTENT)
+	use DBI;
+	my $dbh = DBI->connect("DBI:mysql:unvWeb","root","19nv8n6uilPoA") or die "Unable to connect to database: <b>unvWeb</b>\n"; 
+	$dbh->{RaiseError} = 1; 
+
+		my $sth = $dbh->prepare("SELECT * FROM WebsiteContent where ContentID = '54'");
+		$sth->execute or die "Unable to execute query\n"; 
+		my @row;
+		while(@row = $sth->fetchrow_array) {
+			$PageContent = $row[1];
+			$PageHeader = $row[2];
+			$PCount++;
+		}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+	$dbh->disconnect;
+
+	if ($FORM{'VT'} eq "WM" || $FORM{'VT'} eq "QT" && $FORM{'VID'}) {
+		if ($FORM{'VT'} eq "WM") { $ext = "mpg"; }
+		else { $ext = "mov"; }
+		
+		## force mpg for this movie.. no mov avail
+		if ($FORM{'VID'} eq "15") { $ext = "mpg"; }
+
+		## find movies by number (#.title-sub _ = spaces)
+		$myList = `cat media/list.txt`;	
+		@splitList = split(/\n/,$myList);
+		push(@theVideosJS,"BLANKER");
+		foreach $sl (@splitList) {
+			$vidID = "$FORM{'VID'}" . ".";
+			if ($sl =~ "-" && $sl =~ $vidID) {
+				@splitSL = split(/\./,$sl);
+				
+				if ($ext eq "mpg") { 
+					$pre = '<OBJECT id="thyUSNVmovie" name="thyUSNVmovie" width="280" height="210" CLASSID="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6" type="application/x-oleobject"><PARAM NAME="URL" VALUE="'; $post = '"><PARAM NAME="AutoStart" VALUE="True"><PARAM name="uiMode" value="mini"><PARAM name="enableContextMenu" value="false"></OBJECT>'; 
+				}
+				else { 
+					$pre = '<embed id="thyUSNVmovie" name="thyUSNVmovie" src="'; $post = '" width="280" height="210" cache="false" AUTOPLAY="true" KIOSKMODE="TRUE"></embed>';
+				}
+
+				$miMovie = $pre . "media/" . $splitSL[1] . "." . "$ext" . $post;
+	
+				$PageContent =~ s/%%whichVideo%%/$miMovie/gi;
+			}
+		}
+		
+	}
+	else {
+		$PageContent =~ s/%%whichVideo%%/Media selector error/gi;
+	}
+	
+	
+	
+## --> USNVSiteTemplates
+require "templateMaster.nsp";
+
+## print out main template TOP from templateMaster.nsp
+print $USNVMainTemplateTop;
+
+
+
+print qq~
+
+<script language="Javascript">
+function switchVideo(cual) {
+	document.location.href = "USNV_Tactical_Videos.htm?VT=$FORM{'VT'}&VID=" + cual + "#logotop";
+}
+</script>
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td><img src="Night_Vision_Images/spacer.gif" border="0" width="1" height="1"></td>
+					</tr>
+$myTopBanner
+
+
+				</table>
+
+			<!--STARTMainLayoutTable-->
+				<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+					<tr>
+						<td width="175" height="2"><img src="Night_Vision_Images/spacer.gif" border="0" width="175" height="2"></td>
+						<td width="1" height="2" background="Night_Vision_Images/verticalDottie.gif"><img src="Night_Vision_Images/spacer.gif" border="0" width="1" height="2"></td>
+						<td width="100%" height="2"><img src="Night_Vision_Images/spacer.gif" border="0" width="1" height="2"></td>
+					</tr>
+
+					<tr>
+
+						<!--STARTLeftMenu-->
+						<td width="175" valign="top">
+							$leftMenu
+						</td>
+						<!--ENDLeftMenu-->
+
+						<!--STARTMenu/ContentDivider-->
+						<td width="1" background="Night_Vision_Images/verticalDottie.gif"><img src="Night_Vision_Images/spacer.gif" border="0" width="1" height="20"></td>
+						<!--ENDMenu/ContentDivider-->
+
+						<!--STARTMainContentArea-->
+						<td width="100%" valign="top">
+
+							$PageContent
+							
+						</td>
+						<!--ENDMainContentArea-->
+
+					</tr>
+
+
+				</table>
+			<!--ENDMainLayoutTable-->
+<br>
+
+~;
+
+## print out main template BOT from templateMaster.nsp
+print $USNVMainTemplateBot;
+
+exit;

@@ -1,0 +1,116 @@
+<hiermenu method="2">
+	<item name="Media">
+		<item name="latest media" />
+		<item name="concept art" />
+		<item name="movies" />
+		<item name="screenshots" />
+		<item name="downloads">
+			<item name="wallpaper" />
+			<item name="fan site kit" action="getURL" url="http://www.bit-101.com" />
+		</item>
+		<item name="360 degrees" />
+	</item>
+	<item name="The Game">
+		<item name="characters">
+			<item name="archetypes">
+				<item name="fighter1" />
+				<item name="mage1" />
+				<item name="priest1" />
+				<item name="scout1" />
+				<item name="artisan1" />
+			</item>
+			<item name="races">
+				<item name="barbarian1" />
+				<item name="dark elf1" />
+				<item name="dwarf1" />
+				<item name="erudite1" />
+				<item name="froglok1" />
+				<item name="gnome1" />
+				<item name="half elf1" />
+				<item name="halfling1" />
+				<item name="high elf1" />
+				<item name="human1" />
+				<item name="iksar1" />
+				<item name="kerra1" />
+				<item name="ogre1" />
+				<item name="ratonga1" />
+				<item name="troll1" />
+				<item name="wood elf1" />
+			</item />
+			<item name="artisan2" />
+		</item>
+		<item name="creatures">
+			<item name="bixie" />
+			<item name="dragonfly faerie" />
+			<item name="dryad" />
+			<item name="giant spider" />
+			<item name="goblin" />
+			<item name="golem" />
+			<item name="living statue" />
+			<item name="minotaur" />
+			<item name="nagafen" />
+			<item name="orc" />
+			<item name="skeleton" />
+			<item name="succubus" />
+			<item name="treant" />
+			<item name="zombie" />
+			<item name="siren" />
+			<item name="shadowed men" />
+			<item name="gnoll" />
+			<item name="mimic" />
+			<item name="unicorn" />
+			<item name="nightblood" />
+			<item name="lizardman" />
+			<item name="griffin" />
+		</item>
+		<item name="equipment">
+			<item name="armor" />
+			<item name="blunt weapons" />
+			<item name="piercing weapons" />
+			<item name="ranged weapons" />
+			<item name="slashing weapons" />
+			<item name="magical weapons" />
+		</item>
+		<item name="locations" />
+		<item name="lore">
+			<item name="artifacts">
+				<item name="soulfire" />
+				<item name="the cavalier" />
+				<item name="qeynos claymore" />
+			</item>
+			<item name="people" />
+			<item name="tome of destiny" />
+		</item>
+		<item name="magic" />
+		<item name="artisan3" />
+		<item name="travel" />
+	</item>
+	<item name="Characters">
+		<item name="archetypes2">
+			<item name="fighter" />
+			<item name="mage" />
+			<item name="priest" />
+			<item name="scout" />
+			<item name="artisan" />
+		</item>
+		<item name="races2">
+			<item name="barbarian" />
+			<item name="dark elf" />
+			<item name="dwarf" />
+			<item name="erudite" />
+			<item name="froglok" />
+			<item name="gnome" />
+			<item name="half elf" />
+			<item name="halfling" />
+			<item name="high elf" />
+			<item name="human" />
+			<item name="iksar" />
+			<item name="kerra" />
+			<item name="ogre" />
+			<item name="ratonga" />
+			<item name="troll" />
+			<item name="wood elf" />
+		</item />
+		<item name="artisan5" />
+	</item>
+</hiermenu>

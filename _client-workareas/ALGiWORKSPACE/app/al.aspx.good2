@@ -1,0 +1,42 @@
+<%@ Page Language="VB" %>
+
+
+<script runat="server">
+    Sub Run_Launch_Sequence
+	Dim fn = Request.QueryString("fn")
+
+    	Dim oDR as System.Data.SQLClient.SQLDataReader
+        Dim oCom As System.Data.SQLClient.SqlCommand
+        Dim oConn as System.Data.SQLClient.SQLConnection
+
+        try
+            oConn = New System.Data.SQLClient.SQLConnection ("server=localhost; initial catalog=MTG_Americor;uid=sa;pwd=lt4G-OY0409")
+			oConn.Open()
+			oCom = New System.Data.SQLClient.SqlCommand()
+			oCom.Connection = oConn
+			oCom.CommandText = "INSERT INTO LMSImport_StateTbl ( StateCode, StateName, TimeZone ) VALUES ( " & fn & ", " & fn & ", 1) "
+			oCom.ExecuteNonQuery()
+        catch
+	    	Dim errDesc = err.Description
+            Run_Update_Sequence()
+        Finally
+        	oDR = Nothing
+        	oCom = Nothing
+        	oConn.Close()
+        	oConn = Nothing
+        end try
+
+		Response.Write(fn)
+    
+	End Sub
+	
+	sub Run_Update_Sequence
+		Response.Write("Updated: ")
+	End Sub
+
+</script>
+
+
+
+<%Run_Launch_Sequence()%>
+

@@ -1,0 +1,344 @@
+<html>
+
+<head>
+<title>Insert Image</title>
+
+<script type="text/javascript" src="popup.js"></script>
+
+<script type="text/javascript">
+
+window.resizeTo(610, 530);
+
+function Init() {
+
+  __dlg_init();
+  var param = window.dialogArguments;
+  if (param) {
+      document.getElementById("f_url").value = param["f_url"];
+      document.getElementById("f_alt").value = param["f_alt"];
+      document.getElementById("f_border").value = param["f_border"];
+      document.getElementById("f_align").value = param["f_align"];
+      document.getElementById("f_vert").value = param["f_vert"];
+      document.getElementById("f_horiz").value = param["f_horiz"];
+      window.ipreview.location.replace(param.f_url);
+  }
+  document.getElementById("f_url").focus();
+};
+
+function onOK() {
+  var required = {
+    "f_url": "You must enter the URL"
+  };
+  for (var i in required) {
+    var el = document.getElementById(i);
+    if (!el.value) {
+      alert(required[i]);
+      el.focus();
+      return false;
+    }
+  }
+  // pass data back to the calling window
+  var fields = ["f_url", "f_alt", "f_align", "f_border",
+                "f_horiz", "f_vert"];
+  var param = new Object();
+  for (var i in fields) {
+    var id = fields[i];
+    var el = document.getElementById(id);
+
+	muaValue = el.value;
+	if (muaValue.indexOf("_thumb") != -1) { 
+		// no thumbnail = remove _thumb from filename
+		if (document.forms[0].thumbnail.value == 'no') {
+			finalValue = muaValue.split("_thumb");
+			param[id] = finalValue[0] +''+ finalValue[1];
+		}
+		// yes thumbnail = leave _thumb in filename
+		else {
+			param[id] = muaValue;		
+		}
+	}
+    else { param[id] = muaValue; }
+
+  }
+  __dlg_close(param);
+  return false;
+};
+
+function onCancel() {
+  __dlg_close(null);
+  return false;
+};
+
+function onPreview() {
+  var f_url = document.getElementById("f_url");
+  var url = f_url.value;
+  if (!url) {
+    alert("You have to enter an URL first");
+    f_url.focus();
+    return false;
+  }
+  window.ipreview.location.replace(url);
+  return false;
+
+
+};
+
+
+function previewMe(incoming) {
+	document.forms[0].url.value= incoming;
+	return onPreview();
+}
+
+
+var myCatLayout = new Array();
+
+function parseImages() {
+	countCatalogs = 0;
+	theseImages = window.myImages.document.body.innerHTML;
+	withoutC = theseImages.split("-C-");	
+	for (var i = 1; i < withoutC.length; ++i) {
+		if (withoutC[i]) {
+			catalogConfig = withoutC[i].split("-I-");	
+			myCatName = catalogConfig[0];
+			myCatLayout[countCatalogs] = myCatName;
+			for (var i2 = 1; i2 < catalogConfig.length; ++i2) {
+				myCatLayout[countCatalogs] = myCatLayout[countCatalogs] + '-----' + catalogConfig[i2];
+			}
+			countCatalogs++;
+		}
+	}	
+	document.forms[0].catCount.value = countCatalogs;
+	showImages();	
+}
+function showImages() {
+	FoldNumber = document.forms[0].catCount.value; // how many menu items do we have
+	writeMenu();
+}
+
+</script>
+
+<style type="text/css">
+/*** Common Document Styles ***/
+html, body { background: ButtonFace; color: ButtonText; font: 11px Tahoma,Verdana,sans-serif; margin: 0px; padding: 0px; }
+body { padding: 5px; }
+table { font: 11px Tahoma,Verdana,sans-serif; }
+form p { margin-top: 5px; margin-bottom: 5px; }
+.fl { width: 9em; float: left; padding: 2px 5px; text-align: right; }
+.fr { width: 6em; float: left; padding: 2px 5px; text-align: right; }
+fieldset { padding: 0px 10px 5px 5px; }
+select, input, button { font: 11px Tahoma,Verdana,sans-serif; }
+.space { padding: 2px; }
+.title { background: #808080; color: #fff; font-weight: bold; font-size: 13px; font-family: Tahoma,Verdana,sans-serif; padding: 3px 10px; border-bottom: 1px solid black; letter-spacing: 2px; }
+form { padding: 0px; margin: 0px; }
+.selectI { background: #808080; color: #fff; font-size: 11px; font-family: Tahoma,Verdana,sans-serif; letter-spacing: 2px; }
+.selectItable { background: #fff; border:#000000 1px solid; }
+legend { color:#808080 }
+iframe{ border : 1px solid gray; }
+
+/*** Main Foldout Menu Items ***/
+#divCont {position:relative; z-index:1; left:-10px; top:15px; height:400px; width:170px; visibility:hidden;}
+.clTop   {position:absolute; z-index:1; width:170px; line-height:17px; text-align:left;}
+.clSub   {position:absolute; z-index:1; left:0px; top:20px; width:170px; padding-left:0px;padding-top:5px;line-height:13px;}
+
+/*** Foldout Menu Items Links ***/
+#divCont .clTop a {color:#000000; font-family:verdana,arial,helvetica,sans-serif; font-size:13px; font-weight:bold; text-decoration:none;}
+#divCont .clTop a:hover {color:#000000; text-decoration:none;}
+#divCont .clTop .clSub a {color:#777777; font-family:arial,helvetica,sans-serif; font-size:13px; font-weight:normal; text-decoration:none; margin-left:5px;}
+#divCont .clTop .clSub a:hover {color:#333333; text-decoration:none;}  
+</style>
+
+
+
+<script language="JavaScript" type="text/javascript">
+/* foldout menu variables */
+
+var stayFolded = false			//Keep MAIN MENU OPEN when opening other MAIN menu items?
+mainOffsetY = 10				// How many pixels between the MAIN MENU Items
+
+
+// Arrow Image when Menu is CLOSED
+var unImg=new Image();
+unImg.src='../newImages/book_closed.gif'
+// Arrow Image when Menu is OPEN
+var exImg=new Image();
+exImg.src='../newImages/book_opened.gif'
+</script>
+<script language="JavaScript" type="text/javascript" src="fmenu1.js">
+	<!-- Foldout menu configuration file -->
+</script>
+</head>
+
+<!--<body onload="parseImages();initFoldout();Init();">-->
+<body onload="parseImages();initFoldout();Init();">
+<div class="title">Insert Image</div>
+
+
+<form action="" method="get">
+<input type="hidden" name="catCount" value="">
+<input type="text" name="url" id="f_url" style="width:1px;height:1px;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr height="15">
+		<td width="220"><img src="../newImages/spacer.gif" width="220" height="15"></td>
+		<td width="100%"><img src="../newImages/spacer.gif" width="1" height="15"></td>
+	</tr>
+	<tr valign="top">
+		<td width="220" align="center">
+			<table width="210" align="center" cellpadding="0" cellspacing="0" border="0" class="selectItable">
+				<tr class="selectI">
+					<td width="1"><img src="../newImages/spacer.gif" width="1" height="20"></td>
+					<td width="100%" height="20" align="center">Select An Image</td>
+				</tr>
+				<tr height="420">
+					<td width="1"><img src="../newImages/spacer.gif" width="1" height="420"></td>
+					<td width="100%" height="420" align="center" valign="top">
+<!-- Start foldoutmenu layers -->
+<div id="divCont"> 
+
+<div id="divTop0" class="clTop">
+	<a href="#" onclick="menu(0); return false" onfocus="this.blur()"><img src="../newImages/book_closed.gif" name="imgA0" width="16" height="15" alt="" align="top" border="0"> Graphix Catalog 1</a><br>
+	<div id="divSub0" class="clSub">
+	</div>
+</div>
+
+<div id="divTop1" class="clTop">
+	<a href="#" onclick="menu(1); return false" onfocus="this.blur()"><img src="../newImages/book_closed.gif" name="imgA1" width="16" height="15" alt="" align="top" border="0"> Character Catalog 1</a><br>
+	<div id="divSub1" class="clSub">
+	</div>
+</div>
+<script language="Javascript">
+function writeMenu(){
+myMenuLayout = "";
+mainLayers="";
+var splitMenuItem = new Array();
+	// first write out layers
+	for (var i0 = 0; i0 < myCatLayout.length; ++i0) {
+		mainLayers = mainLayers + '<div id="divTop' + i0 + '" class="clTop"></div>';
+	}
+	document.getElementById("divCont").innerHTML = mainLayers;
+	for (var i = 0; i < myCatLayout.length; ++i) {
+		splitMenuItem = myCatLayout[i].split("-----");
+		for (var i2 = 0; i2 < splitMenuItem.length; ++i2) {
+			if (i2 == 0) {
+				myMenuLayout = '<a href="#" onclick="menu(' + i + '); return false" onfocus="this.blur()"><img src="../newImages/book_closed.gif" name="imgA' + i + '" width="16" height="15" alt="" align="top" border="0"> ' + splitMenuItem[i2] + '</a><br>\n';
+				myMenuLayout = myMenuLayout + '\n<div id="divSub' + i + '" class="clSub">\n';
+			}
+			else {
+				splitImageInfo = splitMenuItem[i2].split("-");
+				imageName = splitImageInfo[0];
+				myMenuLayout = myMenuLayout + '<a href="javascript:void(0);" onClick="previewMe(\'http://guilds-test.station.sony.com/image_dir/Guild_Images/2277/' + splitImageInfo[1] + '_thumb.' + splitImageInfo[2] + '\');"><img src="../newImages/imageIcon.gif" border="0" width="13" height="18" align="top" hspace="5">'+imageName+'</a><br>';
+			}
+
+			
+			if (i2 == splitMenuItem.length) {
+				myMenuLayout = myMenuLayout + '\n</div>\n';
+			}
+		}
+		document.getElementById("divTop"+i+"").innerHTML = document.getElementById("divTop"+i+"").innerHTML + myMenuLayout;
+
+
+
+	}
+	
+}
+</script>
+
+
+
+</div> 
+<!-- End of foldoutmenu layers -->
+
+					
+					</td>
+				</tr>	
+			</table>
+		</td>
+		<td width="100%" align="center">
+
+			<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+
+					<td width="60%"><fieldset style="margin-right: 5px;margin-left: 10px;"><legend>Layout&nbsp;</legend><div class="space"></div><div class="fl">Alignment:</div><select size="1" name="align" id="f_align" title="Positioning of this image"><option value="">Not set</option><option value="left">Left</option><option value="right">Right</option><option value="texttop">Texttop</option><option value="absmiddle">Absmiddle</option><option value="baseline" selected="1">Baseline</option><option value="absbottom">Absbottom</option><option value="bottom">Bottom</option><option value="middle">Middle</option><option value="top">Top</option></select><p /><div class="fl">Border thickness:</div><input type="text" name="border" id="f_border" size="5" title="Leave empty for no border" /><div class="space"></div></fieldset></td>
+					<td width="40%"><fieldset style="margin-right: 10px;"><legend>Spacing&nbsp;</legend><div class="space"></div><div class="fr">Horizontal:</div><input type="text" name="horiz" id="f_horiz" size="5" title="Horizontal padding" /><p /><div class="fr">Vertical:</div><input type="text" name="vert" id="f_vert" size="5" title="Vertical padding" /><div class="space"></div></fieldset></td>
+				</tr>
+
+				<tr>
+					<td width="100%" align="left" colspan="2" height="10"><img src="../newImages/spacer.gif" width="1" height="10"></td>
+				</tr>
+				<tr>
+					<td width="100%" align="left" colspan="2" height="15" style="padding-left:25px;"><font class="fr"><nobr>Alternate Text</nobr></font></td>
+				</tr>
+				<tr>
+					<td width="100%" align="left" colspan="2" style="padding-left:25px;"><input type="text" name="alt" id="f_alt" style="width:325px" title="For browsers that don't support images" /></td>
+				</tr>
+
+				<tr>
+					<td width="100%" align="left" colspan="2" height="15" style="padding-left:25px;"><font class="fr"><nobr>Image Preview</nobr></font></td>
+				</tr>
+				<tr>
+					<td width="100%" align="center" height="25" colspan="2" style="padding-left:25px;"><fieldset style="margin-right: 5px;margin-left: 10px;"><legend>Image Size&nbsp;</legend>Thumbnail (<input type="radio" name="chooseSize" value="yes" onClick="javascript:document.forms[0].thumbnail.value = this.value;">) &nbsp; &nbsp; &nbsp; &nbsp; Full-Size (<input type="radio" name="chooseSize" value="no" onClick="javascript:document.forms[0].thumbnail.value = this.value; " checked>)<input type="hidden" name="thumbnail" value="no"></td>
+				</tr>
+				<tr>
+					<td width="100%" align="left" colspan="2" style="padding-left:25px;"><iframe name="ipreview" id="ipreview" frameborder="0" height="250" width="325" src=""></iframe></td>
+				</tr>
+				<tr>
+					<td width="60%" align="right" height="35"><button type="button" name="ok" onclick="return onOK();" style="width:145px;margin-right:10px;">Insert Selected Image</button></td>
+					<td width="40%" align="left" height="35"><button type="button" name="cancel" onclick="return onCancel();" style="width:70px;margin-left:10px;">Cancel</button></td>
+				</tr>
+			</table>		
+		
+		</td>
+	</tr>
+</table>
+</form>
+
+<script language="Javascript">
+	var cutURL = new Array();
+	var splitPage = new Array();
+	var splitQuery = new Array();
+	var myPageName = "";
+//	alert(document.location.href);
+	thisDocURL = document.location.href
+	cutURL = thisDocURL.split("/");
+	for (var i3 = 0; i3 < cutURL.length; ++i3) {
+		if (cutURL[i3].indexOf("insert_image") != -1) { 
+//			myPageName = cutURL[i3]; 
+			splitPage = cutURL[i3].split("?");
+			splitQuery = splitPage[1].split("&");
+			myImageFinder = splitQuery[0].split("=");
+			mySiteNumber = splitQuery[1].split("=");
+//			alert(myImageFinder[1] + ' and ' + mySiteNumber[1])
+// alert(myImageFinder[1] + '?siteID=' + mySiteNumber[1]);
+			document.write('<iframe id="myImages" style="height:1px;width:1px;z-index:-10;visibility:hidden;" src="' + myImageFinder[1] + '?siteID=' + mySiteNumber[1] +'"></iframe>');
+		}
+	}
+
+
+
+</script>
+
+
+<!--
+
+<div id="divTop0" class="clTop">
+	<a href="#" onclick="menu(0); return false" onfocus="this.blur()"><img src="../newImages/book_closed.gif" name="imgA0" width="16" height="15" alt="" align="top" border="0"> Graphix Catalog 1</a><br>
+	<div id="divSub0" class="clSub">
+		<a href="javascript:void(0);" onClick="previewMe('http://guilds-test.station.sony.com/images/admin/admin_01.jpg');"><img src="../newImages/imageIcon.gif" border="0" width="13" height="18" align="top" hspace="5">Everquest II Guild 1</a><br>
+		<a href="javascript:void(0);" onClick="previewMe('http://guilds-test.station.sony.com/images/admin/admin_02.jpg');"><img src="../newImages/imageIcon.gif" border="0" width="13" height="18" align="top" hspace="5">Everquest II Guild 2</a><br>
+	</div>
+</div>
+
+<div id="divTop1" class="clTop">
+	<a href="#" onclick="menu(1); return false" onfocus="this.blur()"><img src="../newImages/book_closed.gif" name="imgA1" width="16" height="15" alt="" align="top" border="0"> Character Catalog 1</a><br>
+	<div id="divSub1" class="clSub">
+		<a href="javascript:void(0);" onClick="previewMe('http://soei.soe.sony.com/images/news/eq2_news.jpg');"><img src="../newImages/imageIcon.gif" border="0" width="13" height="18" align="top" hspace="5">EverQuest II News</a><br>
+		<a href="javascript:void(0);" onClick="previewMe('http://planetside.station.sony.com/images/screenshots/ps_screenshot_503.jpg');"><img src="../newImages/imageIcon.gif" border="0" width="13" height="18" align="top" hspace="5">PlanetSide SS 1</a><br>
+		<a href="javascript:void(0);" onClick="previewMe('http://planetside.station.sony.com/images/screenshots/ps_screenshot_510.jpg');"><img src="../newImages/imageIcon.gif" border="0" width="13" height="18" align="top" hspace="5">PlanetSide SS 2</a><br>
+		<a href="javascript:void(0);" onClick="previewMe('http://planetside.station.sony.com/images/screenshots/ps_screenshot_510.jpg');"><img src="../newImages/imageIcon.gif" border="0" width="13" height="18" align="top" hspace="5">PlanetSide SS 3</a><br>
+		<a href="javascript:void(0);" onClick="previewMe('http://planetside.station.sony.com/images/screenshots/ps_screenshot_517.jpg');"><img src="../newImages/imageIcon.gif" border="0" width="13" height="18" align="top" hspace="5">PlanetSide SS 4</a><br>
+	</div>
+</div>
+
+-->
+
+</body>
+</html>

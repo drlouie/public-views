@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>ALGi HomeBoy</title>
+<script>
+var objtxt="";
+
+	function objrefresh()
+	{
+
+		objtxt='<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"\n codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"\n WIDTH="'+document.objgen.T1.value+'" HEIGHT="'+document.objgen.T2.value+'" id="announcer3" ALIGN="">\n <PARAM NAME=movie VALUE="announcer.swf"> <PARAM NAME=menu VALUE=false> <PARAM NAME=quality VALUE=high> <PARAM NAME=scale VALUE=noscale> <PARAM NAME=salign VALUE=LT> <PARAM NAME=wmode VALUE=opaque> <PARAM NAME=bgcolor VALUE=#'+document.objgen.T3.value+'> <EMBED src="announcer.swf" menu=false quality=high scale=noscale salign=LT wmode=opaque bgcolor=#'+document.objgen.T3.value+'  WIDTH="'+document.objgen.T1.value+'" HEIGHT="'+document.objgen.T2.value+'" NAME="announcer" ALIGN=""\n TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>\n</OBJECT>';
+		
+		document.objgen.S1.value=objtxt;						
+		
+	}
+
+	function objcopy()
+	{
+		document.objgen.S1.focus();
+		document.objgen.S1.select();
+
+	}
+	
+	
+</script>
+	
+</head>
+
+<body bgcolor="#FFFFFF" LEFTMARGIN="0" TOPMARGIN="0">
+<center>
+<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td bgcolor="#F38025" width="40%" align="center" valign="middle"><img src="newLogoFlash.png" width="300" height="196"></td>
+		<td width="60%">&nbsp;</td>
+	</tr>
+</table>
+<div style="position:absolute; left:0px; top:0px; border-bottom:#F7F7F7 1px solid; filter:alpha(opacity = 90); width:100%; background-color:#FFFFFF"><center>
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" WIDTH="800" HEIGHT="22" id="announcer3" ALIGN="">
+<PARAM NAME=movie VALUE="announcer.swf"> 
+<PARAM NAME=menu VALUE=false> 
+<PARAM NAME=quality VALUE=high> 
+<PARAM NAME=scale VALUE=noscale> 
+<PARAM NAME=salign VALUE=LT>
+<PARAM NAME=wmode VALUE=opaque>
+<EMBED src="announcer.swf" menu=false quality=high scale=noscale salign=LT wmode=opaque bgcolor=#FFFFFF  WIDTH="800" HEIGHT="22" NAME="announcer" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
+</EMBED>
+</OBJECT>
+</center></div>
+</center>	
+</body>
+</html>

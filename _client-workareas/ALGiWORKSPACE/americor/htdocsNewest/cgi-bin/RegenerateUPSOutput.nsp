@@ -1,0 +1,106 @@
+use LWP::Simple;
+use CGI;
+use CGI::Carp qw(fatalsToBrowser);
+my $url = "http://wwwapps.ups.com/WebTracking/processInputRequest?HTMLVersion=5.0&sort_by=status&term_warn=yes&tracknums_displayed=5&TypeOfInquiryNumber=T&loc=en_US&InquiryNumber1=$FORM{'Package1'}&InquiryNumber2=$FORM{'Package2'}&InquiryNumber3=$FORM{'Package3'}&InquiryNumber4=$FORM{'Package4'}&InquiryNumber5=$FORM{'Package5'}&AgreeToTermsAndConditions=yes&track=";
+my $page = get ($url);
+$page =~ s/CCCC99/9EC4ED/gi;
+
+
+#print $page;
+
+
+
+#### BAD CALL
+if ($page =~ "invalid" || $page =~ "not valid" || $page =~ "highlighted") {
+	$TrackingResults = $TrackingResults . "<div class=\"modpadbullet\"><b>Bad User Input</b><br><br>One or more of the numbers you entered are not valid UPS Tracking Numbers. If you entered more than one tracking id number and can't figure out which one is the problem number, simply submit one tracking id at a time to help you pinpoint the problem.</div><center><br><input type=\"button\" onClick=\"javascript:history.go(-1);\" value=\"Try Again\" class=\"Buttons\" style=\"font-weight:bold;\"><center>";
+}
+
+#### BAD CALL
+elsif ($page =~ "Unable" && $page =~ "track" && $page =~ "shipment") {
+	$TrackingResults = $TrackingResults . "<div class=\"modpadbullet\"><b>Unable to Track Package</b><br><br>We were unable to track the package for the number you entered. Please try again...</div><center><br><input type=\"button\" onClick=\"javascript:history.go(-1);\" value=\"Try Again\" class=\"Buttons\" style=\"font-weight:bold;\"><center>";
+}
+
+#### GOOD CALL
+elsif (($page =~ "Transit" || $page =~ "Delivered") && $page =~ "Status") {
+
+	@splittedLines = split(/\n/,$page);
+	$pStart1 = "<!--- Begin Table: Content";
+	$pStart2 = "Parent:Formatting Table";
+	$pEnd1 = "<!--- End Table: Content";
+	$pEnd2 = "Parent:Formatting Table";
+	#-->--> KILLS COLORING IN EDITOR
+
+	$clMain=0;
+	foreach $unaLin (@splittedLines) {
+		$clMain++;
+		if ($unaLin =~ $pStart1 && $unaLin =~ $pStart2) {
+			$numberStart = $clMain;
+##			$TrackingResults = $TrackingResults . "Start : $numberStart <br>";
+		}
+		if ($unaLin =~ $pEnd1 && $unaLin =~ $pEnd2) {
+			$numberEnd = $clMain; 
+##			$TrackingResults = $TrackingResults . "End : $numberEnd <br>";
+		}
+	}
+	$clMain2=0;
+	foreach $ULA (@splittedLines) {
+		$clMain2++;
+		if ($clMain2 >= $numberStart && $clMain2 <= $numberEnd) { $TrackingResults = $TrackingResults . "$ULA"; }
+	}
+
+	$removeImages1 = "<br><img alt=\"\" height=\"1\" src=\"/img/1.gif\" width=\"1\">";
+	$TrackingResults =~ s/$removeImages1//gi;
+	$removeImages2 = "<input type=\"image\" src=\"/img/en/btn_lnk_details.gif\" WIDTH=\"44\" HEIGHT=\"14\" align=\"top\" border=\"0\" alt=\"Detail\" name=\"tdts1\">";
+	$TrackingResults =~ s/$removeImages2//gi;
+	$removeImages3 = "<input type=\"image\" src=\"/img/en/btn_lnk_details.gif\" WIDTH=\"44\" HEIGHT=\"14\" align=\"top\" border=\"0\" alt=\"Detail\" name=\"tdts2\">";
+	$TrackingResults =~ s/$removeImages3//gi;
+	$removeImages4 = "<input type=\"image\" src=\"/img/en/btn_lnk_details.gif\" WIDTH=\"44\" HEIGHT=\"14\" align=\"top\" border=\"0\" alt=\"Detail\" name=\"tdts3\">";
+	$TrackingResults =~ s/$removeImages4//gi;
+	$removeImages5 = "<input type=\"image\" src=\"/img/en/btn_lnk_details.gif\" WIDTH=\"44\" HEIGHT=\"14\" align=\"top\" border=\"0\" alt=\"Detail\" name=\"tdts4\">";
+	$TrackingResults =~ s/$removeImages5//gi;
+	$removeImages6 = "<input type=\"image\" src=\"/img/en/btn_lnk_details.gif\" WIDTH=\"44\" HEIGHT=\"14\" align=\"top\" border=\"0\" alt=\"Detail\" name=\"tdts5\">";
+	$TrackingResults =~ s/$removeImages6//gi;
+	
+
+	$removeImages6 = "<img alt=\"\" border=\"0\" height=\"1\" src=\"/img/xln_544pixel_dotted_rule.gif\" vspace=\"8\" width=\"544\">";
+	$TrackingResults =~ s/$removeImages6//gi;			
+
+
+
+
+	
+	$replaceTableWidth1 = "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">";
+	$replacedTableWidth1 = "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"550\" align=\"center\" class=\"resultsTable\">";
+	$TrackingResults =~ s/$replaceTableWidth1/$replacedTableWidth1/gi;	
+
+	$replaceTableWidth2 = "100";
+	$replacedTableWidth2 = "75";
+	$TrackingResults =~ s/$replaceTableWidth2/$replacedTableWidth2/gi;	
+
+	$replaceTableWidth3 = "210";
+	$replacedTableWidth3 = "180";
+	$TrackingResults =~ s/$replaceTableWidth3/$replacedTableWidth3/gi;		
+
+	$replaceTableWidth4 = "<td bgcolor=\"#ffffff\" colspan=\"5\">  <div class=\"modulepad\">      <br>   Tracking";
+	$replacedTableWidth4 = "<td bgcolor=\"#ffffff\" colspan=\"5\" style=\"padding-left:40px;\"><div class=\"modulepad\">Tracking";
+	$TrackingResults =~ s/$replaceTableWidth4/$replacedTableWidth4/gi;		
+	
+	$addSpacing = ", 2005";
+	$addedSpacing = ", 2005 - ";
+	$TrackingResults =~ s/$addSpacing/$addedSpacing/gi;		
+
+	## add table topper and bottom parts
+	$TrackingResults = "<table width=\"550\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td align=\"center\"><img src=\"Night_Vision_Images/resultsTableTopper.jpg\" border=\"0\" width=\"550\" height=\"5\"></td></tr>" 
+						. "<tr><td>" . $TrackingResults . "</td></tr>" . 
+						"<tr><td align=\"center\"><img src=\"Night_Vision_Images/resultsTableBottom.jpg\" border=\"0\" width=\"550\" height=\"14\"></td></tr></table><center><br><input type=\"button\" onClick=\"javascript:location.href = 'Night_Vision_Order_Status.htm';\" value=\"Track Another Package\" class=\"Buttons\" style=\"font-weight:bold;\"><center>";
+
+	
+}
+
+## UNABLE TO TRACK
+else {
+	$TrackingResults = $TrackingResults . "<div class=\"modpadbullet\"><b>Unable to Track Package</b><br><br>We were unable to track the package for the number you entered. Please try again...</div><center><br><input type=\"button\" onClick=\"javascript:history.go(-1);\" value=\"Try Again\" class=\"Buttons\" style=\"font-weight:bold;\"><center>";
+}
+
+
+1;

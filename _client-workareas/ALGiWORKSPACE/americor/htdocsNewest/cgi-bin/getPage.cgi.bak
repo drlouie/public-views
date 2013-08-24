@@ -1,0 +1,107 @@
+#!/usr/local/bin/perl -w
+
+#######################################################################################################
+# Company: NetMedia Solutions                                                                         #
+# Date: Saturday, September 21, 2001                                                                  #
+# Location: Los Angeles, California, United States of America                                         #
+# Made By: Luis Rodriguez (drlouie)                                                                   #
+# Email: drlouie@tstonramp.com                                                                        #
+#                                                                                                     #
+# USNightVision.com's dynamic date generator. Dynamically driven by DHTML, HTML, Perl and MySql      #
+#                                                                                                     #
+#######################################################################################################
+
+require("parse_query.cgi");
+
+print "Content-type: text/html \n\n";
+
+#select(STDOUT); $| = 1;
+#print "Content-Type: application/pdf\n\n";
+#$commandline = "apachectl restart";
+#system($commandline);
+
+
+## loan app secure new window
+$losPages[0] = ("https://www.mortgage101.com/loan-app/startloan.asp?p=americorplen&AcctID=306998");
+## request app
+$losPages[1] = ("http://rws.mortgage101.com/templateroot/LeadForms/ZipCodeSearch.asp?p=americorplen&AcctID=306998");
+$losFProc[1] = ("http://rws.mortgage101.com/templateroot/LeadForms/");
+## curr rates
+$losPages[2] = ("http://rws.mortgage101.com/templateroot/Rates/RatesheetDotNet.asp?PVLID=4868");
+$losFProc[2] = ("http://rws.mortgage101.com/templateroot/Rates/");
+## imperfect **** BAD
+$losPages[3] = ("http://rws.mortgage101.com/content/template0/bcratesearch.asp?flag=SUBPRIME&p=americorplen&AcctID=306998");
+$losFProc[3] = ("http://rws.mortgage101.com/content/template0/");
+## market snapshot
+$losPages[4] = ("http://rws.mortgage101.com/templateroot/Articles/marketSnapshot.asp?ArticleID=1196&p=americorplen&AcctID=306998");
+## market commentary
+$losPages[5] = ("http://rws.mortgage101.com/templateroot/Articles/marketCommentary.asp?ArticleID=1197&p=americorplen&AcctID=306998");
+## fixed mortg
+$losPages[6] = ("http://rws.mortgage101.com/templateroot/Articles/LoanPrograms.asp?ArticleID=1027&PVLID=&p=americorplen&AcctID=306998");
+## adjustible mortg
+$losPages[7] = ("http://rws.mortgage101.com/templateroot/Articles/Application.asp?PVLID=4868&p=americorplen&AcctID=306998");
+## how much
+$losPages[8] = ("http://rws.mortgage101.com/templateroot/Calculators/Afford.asp?p=americorplen&AcctID=306998");
+$losFProc[8] = ("http://rws.mortgage101.com/templateroot/Calculators/");
+## pay calc
+$losPages[9] = ("http://rws.mortgage101.com/templateroot/Calculators/Payment.asp?p=americorplen&AcctID=306998");
+$losFProc[9] = ("http://rws.mortgage101.com/templateroot/Calculators/");
+## refinance?
+$losPages[10] = ("http://rws.mortgage101.com/templateroot/Calculators/Refinance.asp?p=americorplen&AcctID=306998");
+$losFProc[10] = ("http://rws.mortgage101.com/templateroot/Calculators/");
+
+
+$miPagina = $FORM{'pagina'};
+
+use LWP::Simple;
+use CGI;
+use CGI::Carp qw(fatalsToBrowser);
+my $url = $losPages[$miPagina];
+my $page = get ($url);
+
+## remove header
+@splitPage = split(/\n/,$page);
+
+$csp = 0;
+foreach $sp (@splitPage) {
+
+	$url = "http://rws.mortgage101.com/templateroot/";
+	$urlb = "/templateroot/";
+	$sp =~ s/$urlb/$url/gi;
+
+	$double ="http://rws.mortgage101.com";
+	$sp =~ s/$double$double/$double/gi;
+
+	$iURL = '"http://rws.mortgage101.com/images/';
+	$iURLb = '"/images/';
+	$sp =~ s/$iURLb/$iURL/gi;
+
+	$iFORM = " action=\"$losFProc[$miPagina]";
+	$iFORMb = ' action="';
+	$sp =~ s/$iFORMb/$iFORM/gi;
+
+	$iSCRIPT = "<img src='../Americor_Lending_Images/spacer.gif' border='0'>";
+	$iSCRIPTb = 'Find Zip Code';
+	$sp =~ s/$iSCRIPTb/$iSCRIPT/gi;
+	
+
+
+	
+	if ($sp =~ "_ctl0_HeadTag_MetaTags_TitleTag") { $skipit = 1; }
+	elsif ($sp =~ "_ctl0_HeadTag_MetaTags_DescriptionTag") { $skipit = 1; }
+	elsif ($sp =~ "_ctl0_HeadTag_MetaTags_KeywordsTag") { $skipit = 1; }
+	elsif ($sp =~ "_ctl0_HeadTag_TemplateCSS") { $skipit = 1; }
+	elsif ($sp =~ "_ctl0__ctl0_CompanyLogo") { $skipit = 1; push(@myPage,"<td height='1'><img src='../Americor_Lending_Images/spacer.gif'></td>"); }
+	
+
+	else { push(@myPage,"$sp"); }
+	
+}
+## script for document lower date
+print "@myPage";
+
+### <!--RWSBEGINHEADER-->
+### <!--RWSENDHEADER-->
+
+##return =true
+exit;

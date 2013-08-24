@@ -1,0 +1,44 @@
+<announcer>
+<parameters>
+	<rc>drlouie</rc>
+	<movie_width>800</movie_width>
+	<movie_height>40</movie_height>
+	<bgcolor>FFFFFF</bgcolor>
+	<border_color>FFFFFF</border_color>
+	<font>Arial</font>
+	<font_size>13</font_size>
+	<font_color>000000</font_color>
+	<font_bold>no</font_bold>
+	<mouseover_font_color>CC0000</mouseover_font_color>
+	<underline>no</underline>
+
+	<title_font>Arial</title_font>
+	<title_font_size>13</title_font_size>
+	<title_font_bold>yes</title_font_bold>
+	<title_underline>no</title_underline>
+
+	<text_align>center</text_align>
+	<left_margin>0</left_margin>
+	<right_margin>0</right_margin>
+	<top_space>3</top_space>
+	<pause_time>70</pause_time>
+</parameters>
+<content>
+	<subitem>
+		<but_title>ALGi Desktop Bulletin Board:     </but_title>
+		<but_text>Inter-Company Information & Message Ticker</but_text>
+	</subitem>
+	<subitem>
+		<but_title>Associate of the Month:     </but_title>
+		<but_text>Kenneth Ornelas ( 10 Loans Funded - 50% Production Increase )</but_text>
+	</subitem>
+	<subitem>
+		<but_title>Management Spotlight:     </but_title>
+		<but_text>Today shines on Mario Carmona ( Highest Team Production Per Capita )</but_text>
+	</subitem>
+	<subitem>
+		<but_title>Incentives Right Around the Corner:     </but_title>
+		<but_text>Ferrari 355 Weekend Getaway ( 1 Outstanding Associate + 1 Cool Ride = 1 Sweet Weekend )</but_text>
+	</subitem>
+</content>
+</announcer>

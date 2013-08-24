@@ -1,0 +1,316 @@
+#!/usr/bin/perl5 -s
+
+## common DB connection
+use DBI; 
+my $dbh = DBI->connect('DBI:mysql:unvWeb','root','62Ak.fi1HdBxI') or die "Unable to connect to database: <b>unvWeb</b>\n"; 
+$dbh->{RaiseError} = 1; 
+
+#########################------------------------->>>>>>>>>>>>>>>>>> GENERATE PDF & HTML
+my $sth = $dbh->prepare("SELECT * FROM newProducts WHERE ProductID='$FORM{'PID'}';");
+$sth->execute or die "Unable to execute query\n"; 
+my @row;
+while(@row = $sth->fetchrow_array) { 
+	$PartNum = $row[0];
+	$ItemName = $row[5];
+	$TechSpecs = $row[7];
+	$Description = $row[6];
+	$LargePhoto = $row[9];
+	$Accessories1 = $row[17];
+	$ProductType = $row[19];
+	$BrochureBulletPoints = $row[23];
+	$BrochurePhoto = $row[24];
+	$BrochureTitleImage = $row[25];
+	$BrochureHeaderImage = $row[26];
+	$IncludedItems = $row[28];
+	$BrochureViewedCount = $row[31];
+}
+$sth->execute or die "Unable to execute query\n"; 
+$sth->finish;
+
+
+## ADD ONE TO VIEWED AND EMAILED TALLY
+if ($BrochureViewedCount ne "" && $BrochureViewedCount ne "NULL" && $BrochureViewedCount ne "null") { $newBCount = $BrochureViewedCount + 1; }
+else { $newBCount = "1"; }
+
+my $sth = $dbh->prepare("UPDATE LOW_PRIORITY newProducts SET 
+						 BrochureViewedCount='$newBCount'
+						 WHERE ProductID='$FORM{'PID'}'");
+$sth->execute or die "Unable to execute query\n"; 
+$sth->finish; 
+
+
+$TechSpecs =~ s/>/&gt;/g;
+$TechSpecs =~ s/</&lt;/g;
+$BrochureBulletPoints =~ s/>/&gt;/g;
+$BrochureBulletPoints =~ s/</&lt;/g;
+$TechSpecs =~ s/&#8216;/'/g;
+$BrochureBulletPoints =~ s/&#8216;/'/g;
+$Description =~ s/&#8216;/'/g;
+$IncludedItems =~ s/&#8216;/'/g;
+
+## BINARY FILENAME FOR OUTGOING PDF NAMING
+$BIN = $ItemName;
+
+
+## --------- >> GET IMAGERY
+####################
+## Brochure Photo ##
+####################
+if ($BrochurePhoto > 0) { 
+	my $sth = $dbh->prepare("SELECT * FROM newImages WHERE ImageID='$BrochurePhoto';");
+	$sth->execute or die "Unable to execute query\n"; 
+		my @row;
+		while(@row = $sth->fetchrow_array) { $FNBrochurePhoto = "<a target=\"_parent\" href=\"http://www.usnightvision.com/Night_Vision_Products.htm?PID=$FORM{'PID'}\" target=\"_parent\"><img src=\"../../Night_Vision_Images/newBimages/" . $row[2] . "\" border=\"0\" width=\"574\"></a>"; }
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+}
+else { $FNBrochurePhoto = "<img src=\"../../Night_Vision_Images/newBimages/spacer.gif\" width=\"574\" height=\"270\" border=\"0\">"; }
+
+#####################
+## Brochure Header ##
+#####################
+if ($BrochureHeaderImage > 0) { 
+	my $sth = $dbh->prepare("SELECT * FROM Images WHERE ImageID='$BrochureHeaderImage';");
+	$sth->execute or die "Unable to execute query\n"; 
+		my @row;
+		while(@row = $sth->fetchrow_array) { $FNBrochureHeaderImage = "<img src=\"../../Night_Vision_Images/newBimages/" . $row[2] . "\" border=\"0\" width=\"229\" height=\"156\">"; }
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+}
+else { $FNBrochureHeaderImage = "<img src=\"../../Night_Vision_Images/newBimages/spacer.gif\" width=\"229\" height=\"156\" border=\"0\">"; }
+
+
+######################################################
+#### PREPARE VARIABLES FOR MAKING PDF BROCHURE #######
+######################################################
+
+#####################
+## TECHNICAL SPECS ##
+#####################
+if ($TechSpecs =~ ":::::") {
+
+	## techspecs start
+	$losSpecs = "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"5\"><tr><td height=\"35\" align=\"center\" valign=\"bottom\"><font color=\"#000000\" face=\"Arial\" size=\"1\"><b>S&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;S</b></font></td></tr><tr><td align=\"center\" valign=\"middle\"><table width=\"495\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">";
+
+	@splitSpecs = split(/\n\b/,$TechSpecs);
+	$countthis=0;
+	$startColor = "#9EC3A5";
+	foreach $esteSpec (@splitSpecs) {
+		$countthis++;
+		@esteSplit = split(/:::::/,$esteSpec);
+		if ($esteSpec ne 0 && $countthis <= 21) { push(@allSpecs,$esteSpec); }
+	}
+	# 3 or less
+	if ($countthis eq "1" || $countthis eq "2" || $countthis eq "3") { 
+		@sp1 = split(/:::::/,$allSpecs[0]);
+		@sp2 = split(/:::::/,$allSpecs[1]);
+		@sp3 = split(/:::::/,$allSpecs[2]);
+		$losSpecs = $losSpecs . "<tr align=\"center\" valign=\"middle\"><td width=\"165\" height=\"20\" bgcolor=\"#9EC3A5\"><font color=\"#000000\" face=\"Arial\" size=\"1\">$sp2[0]: $sp2[1]</font></td><td width=\"165\" height=\"20\" bgcolor=\"#C9DECD\"><font color=\"#000000\" face=\"Arial\" size=\"1\">$sp1[0]: $sp1[1]</font></td><td width=\"165\" height=\"20\" bgcolor=\"#9EC3A5\"><font color=\"#000000\" face=\"Arial\" size=\"1\">$sp3[0]: $sp3[1]</font></td></tr>"; 
+	}
+	# more than 3
+	else {
+		$countTD=0;
+		$countTR=0;
+		foreach $unSpec (@allSpecs) { 
+			@splitSP = split(/:::::/,$unSpec);
+			if ($countTD eq "0") { $losSpecs = $losSpecs . "<tr align=\"center\" valign=\"middle\">"; }
+
+			if ($countTD eq "0" && $countTR eq "0") { $myColor = $startColor; }
+			else {
+				if ($myColor eq "#9EC3A5") { $myColor = "#C9DECD"; }
+				else{ $myColor = "#9EC3A5"; }
+			}
+			$losSpecs = $losSpecs . "<td width=\"165\" height=\"20\" bgcolor=\"$myColor\"><font color=\"#000000\" face=\"Arial\" size=\"1\">$splitSP[0]: $splitSP[1]</font></td>";
+			$countTD++;
+
+			if ($countTD eq "3") { $countTD = "0"; $countTR++; $losSpecs = $losSpecs . "</tr>"; }
+		}
+		## if count stopped premature of tr closure make sure to close
+		if ($countTD eq "1" || $countTD eq "2") { $losSpecs = $losSpecs . "</tr>"; }
+	}
+
+	$losSpecs = $losSpecs . "</table></td></tr></table>";
+	## techspecs end
+}
+else { $losSpecs = ""; }
+
+###########################
+## PRODUCT BULLET POINTS ##
+###########################
+if ($BrochureBulletPoints =~ ":::::") {
+	$losBullets = "<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"191\"><tr><td colspan=\"2\" height=\"10\"><img src=\"../../Night_Vision_Images/newBimages/spacer.gif\" width=\"1\" height=\"10\" vspace=\"4\" border=\"0\"></td></tr>";
+	@splitBullets = split(/:::::/,$BrochureBulletPoints);
+	$countBul=0;
+	foreach $esteBullet (@splitBullets) {
+		$countBul++;
+		if ($countBul < 6) { $losBullets = $losBullets . "<tr valign=\"middle\"><td width=\"25\" height=\"30\" align=\"center\"><img src=\"../../Night_Vision_Images/newBimages/star.jpg\" width=\"10\" height=\"11\" vspace=\"4\" border=\"0\"></td><td width=\"176\" height=\"30\"><font color=\"#000000\" face=\"Arial\" size=\"2\">$esteBullet</font></td></tr>"; }
+	}
+	$losBullets = $losBullets . "<tr><td colspan=\"2\" height=\"10\"><img src=\"../../Night_Vision_Images/newBimages/spacer.gif\" width=\"1\" height=\"10\" vspace=\"4\" border=\"0\"></td></tr></table>";
+}
+
+##################################
+## PRODUCT OPTIONAL ACCESSORIES ##
+##################################
+if ($Accessories1 ne "" && $Accessories1 ne " ") {
+	$access1 = "<tr><td width=\"100%\"><img src=\"../../Night_Vision_Images/newBimages/green_optionalaccessories.png\" width=\"189\" height=\"15\" border=\"0\"></td></tr><tr><td width=\"100%\" height=\"10\"><img src=\"../../Night_Vision_Images/newBimages/spacer.gif\" width=\"1\" height=\"10\" border=\"0\"></td></tr>";
+	@Accessories = split(/,/, $Accessories1);
+	$AC1 = 0;
+	foreach $Accessory (@Accessories) {
+		my $sth = $dbh->prepare("SELECT * FROM newProducts WHERE ProductID = '$Accessory'");
+		$sth->execute or die "Unable to execute query\n"; 
+		my @row;
+		while(@row = $sth->fetchrow_array) { 
+			my $ThyItemName = $row[5];
+			if ($AC1 > 0) { $AP = $AP . ", $ThyItemName"; }
+			else { $AP = "$ThyItemName"; }
+			$AC1++;
+		}
+		$sth->finish;
+	}
+	$access1 = $access1 . "<tr><td width=\"100%\" align=\"right\"><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"165\"><tr><td width=\"100%\" align=\"left\"><font color=\"#000000\" face=\"Arial\" size=\"1\">$AP</font></td></tr></table></td></tr>";
+}
+else { $access1 = ""; }
+
+############################
+## PRODUCT INCLUDED ITEMS ##
+#############################
+# if ($IncludedItems ne "" && $IncludedItems ne " ") {
+#	$included1 = "<table width=\"250\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td align=\"left\" valign=\"bottom\" width=\"250\"><i><font face=\"Arial, Helvetica, sans-serif\" size=\"2\"><b><font color=\"#003273\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Items Included</font></b></font></i></td></tr><tr><td bgcolor=\"#003273\" width=\"250\"><img src=\"../Night_Vision_Images/spacer.gif\" width=\"1\" height=\"1\"></td></tr><tr><td height=\"10\" width=\"250\"><img src=\"../Night_Vision_Images/spacer.gif\" width=\"1\" height=\"10\"></td></tr><tr><td><table width=\"250\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr align=\"center\"><td valign=\"top\" align=\"left\" width=\"25\">&nbsp;</td><td valign=\"top\" align=\"left\" width=\"225\"><font face=\"Arial, Helvetica, sans-serif\" size=\"2\" color=\"#51739F\">$IncludedItems</font></td></tr><tr align=\"center\"><td colspan=\"2\" align=\"right\" height=\"15\"><img src=\"../Night_Vision_Images/spacer.gif\" width=\"1\" height=\"15\"></td></tr></table></td></tr></table>";
+# }
+
+## PREPARE PRODUCT DESCRIPTION
+@noEnDesc = split(/\n/,$Description);
+$muacount=0;
+foreach $estedesc (@noEnDesc) {
+	if ($muacount > 0) { 
+		push(@MuaDesc,"$estedesc");
+	}
+	$muacount++; 
+}
+
+
+$MuaDesc = "@MuaDesc";
+
+## COUNT DESCRIPTION SPACE
+@letras = split(//,$MuaDesc);
+$letraCuenta=0;
+foreach $letra (@letras) {
+	$letraCuenta++; 
+}
+
+$MuaDesc =~ s/</&lt;/gi;
+$MuaDesc =~ s/>/&gt;/gi;
+$MuaDesc =~ s/&lt;br&gt;/<br>/gi;
+
+if ($letraCuenta > 1000) { $fontSize = "1"; }
+else { $fontSize = "2"; }
+
+$MuaDesc = "<font size=\"$fontSize\">$MuaDesc</font>";
+
+if ($ProductType =~ "Accessory") { $myMenu = "<a href=\"http://www.usnightvision.com/USNightVision.cgi?ProductBrowser=Accessories\" target=\"_parent\"><img src=\"../../Night_Vision_Images/newBimages/green_botbar_access.png\" width=\"574\" height=\"120\" border=\"0\"></a>"; }
+elsif ($ProductType =~ "Goggle") { $myMenu = "<a href=\"http://www.usnightvision.com/USNightVision.cgi?ProductBrowser=Goggles\" target=\"_parent\"><img src=\"../../Night_Vision_Images/newBimages/green_botbar_goggles.png\" width=\"574\" height=\"120\" border=\"0\"></a>"; }
+elsif ($ProductType =~ "Infrared") { $myMenu = "<a href=\"http://www.usnightvision.com/USNightVision.cgi?ProductBrowser=Infrared\" target=\"_parent\"><img src=\"../../Night_Vision_Images/newBimages/green_botbar_thermal.png\" width=\"574\" height=\"120\" border=\"0\"></a>"; }
+elsif ($ProductType =~ "Binocular") { $myMenu = "<a href=\"http://www.usnightvision.com/USNightVision.cgi?ProductBrowser=Binoculars\" target=\"_parent\"><img src=\"../../Night_Vision_Images/newBimages/green_botbar_binoculars.png\" width=\"574\" height=\"120\" border=\"0\"></a>"; }
+elsif ($ProductType =~ "Weapon") { $myMenu = "<a href=\"http://www.usnightvision.com/USNightVision.cgi?ProductBrowser=WeaponSights\" target=\"_parent\"><img src=\"../../Night_Vision_Images/newBimages/green_botbar_weapon.png\" width=\"574\" height=\"120\" border=\"0\"></a>"; }
+elsif ($ProductType =~ "Digital") { $myMenu = "<a href=\"http://www.usnightvision.com/USNightVision.cgi?ProductBrowser=DigitalViewers\" target=\"_parent\"><img src=\"../../Night_Vision_Images/newBimages/green_botbar_digital.png\" width=\"574\" height=\"120\" border=\"0\"></a>"; }
+elsif ($ProductType =~ "Monocular") { $myMenu = "<a href=\"http://www.usnightvision.com/USNightVision.cgi?ProductBrowser=Monoculars\" target=\"_parent\"><img src=\"../../Night_Vision_Images/newBimages/green_botbar_monoculars.png\" width=\"574\" height=\"120\" border=\"0\"></a>"; }
+else { $myMenu = "<a href=\"http://www.usnightvision.com/USNightVision.cgi?ProductBrowser=Accessories\" target=\"_parent\"><img src=\"../../Night_Vision_Images/newBimages/green_botbar_access.png\" width=\"574\" height=\"120\" border=\"0\"></a>"; }
+
+$oldBTImage = "<img src=\"../../Night_Vision_Images/spacer.gif\" width=\"490\" height=\"138\">";
+$oldBPhoto = "<img src=\"../../Night_Vision_Images/newBimages/spacer.gif\" width=\"574\" height=\"270\" border=\"0\">";
+$oldBHImage = "<img src=\"../../Night_Vision_Images/newBimages/spacer.gif\" width=\"229\" height=\"156\" border=\"0\">";
+
+## html template file
+
+if ($FORM{'south'} eq "1") { $leTemplateN = `cat pdf/b3_pdf_south.html.nsf`; }
+else { 
+	
+	require("randomContactInfo.nsp");
+	$leTemplateN = `cat pdf/b3_pdf.html.nsf`;
+
+	if ($bothOffices[$randomContact] eq "North") {
+		$leTemplateN =~ s/%%CINFO1_1%%/Northern California/gi;
+		$leTemplateN =~ s/%%CINFO2_1%%/3845 Atherton Road, Suite 9/gi;
+		$leTemplateN =~ s/%%CINFO3_1%%/Rocklin, CA 95765/gi;
+		$leTemplateN =~ s/%%CINFO4_1%%/1(800) 500-4020/gi;
+		$leTemplateN =~ s/%%CINFO5_1%%/1(916) 663-5813/gi;
+		$leTemplateN =~ s/%%CINFO6_1%%/1(916) 663-5986/gi;
+		
+		$leTemplateN =~ s/%%CINFO1_2%%/Southern California/gi;
+		$leTemplateN =~ s/%%CINFO2_2%%/3303 Harbor Blvd., Suite E-5/gi;
+		$leTemplateN =~ s/%%CINFO3_2%%/Costa Mesa, CA 92626/gi;
+		$leTemplateN =~ s/%%CINFO4_2%%/1(800) 385-9110/gi;
+		$leTemplateN =~ s/%%CINFO5_2%%/1(714) 546-4555/gi;
+		$leTemplateN =~ s/%%CINFO6_2%%/1(714) 546-4999/gi;
+	}
+	else {
+		$leTemplateN =~ s/%%CINFO1_2%%/Northern California/gi;
+		$leTemplateN =~ s/%%CINFO2_2%%/3845 Atherton Road, Suite 9/gi;
+		$leTemplateN =~ s/%%CINFO3_2%%/Rocklin, CA 95765/gi;
+		$leTemplateN =~ s/%%CINFO4_2%%/1(800) 500-4020/gi;
+		$leTemplateN =~ s/%%CINFO5_2%%/1(916) 663-5813/gi;
+		$leTemplateN =~ s/%%CINFO6_2%%/1(916) 663-5986/gi;
+		
+		$leTemplateN =~ s/%%CINFO1_1%%/Southern California/gi;
+		$leTemplateN =~ s/%%CINFO2_1%%/3303 Harbor Blvd., Suite E-5/gi;
+		$leTemplateN =~ s/%%CINFO3_1%%/Costa Mesa, CA 92626/gi;
+		$leTemplateN =~ s/%%CINFO4_1%%/1(800) 385-9110/gi;
+		$leTemplateN =~ s/%%CINFO5_1%%/1(714) 546-4555/gi;
+		$leTemplateN =~ s/%%CINFO6_1%%/1(714) 546-4999/gi;
+
+	}
+
+	1;
+	
+}
+
+
+$leTemplateN =~ s/$oldBPhoto/$FNBrochurePhoto/g;
+$leTemplateN =~ s/$oldBTImage/$FNBrochureTitleImage/g;
+$leTemplateN =~ s/$oldBHImage/$FNBrochureHeaderImage/g;
+$leTemplateN =~ s/%%MuaDesc%%/$MuaDesc/g;
+$leTemplateN =~ s/%%MuaTechSpecs%%/$losSpecs/g;
+$leTemplateN =~ s/%%MuaBullets%%/$losBullets/g;
+$leTemplateN =~ s/%%MuaAccessories%%/$access1/g;
+# $leTemplateN =~ s/%%MuaAccessories2%%/$included1/g;
+$leTemplateN =~ s/%%MuaMenu%%/$myMenu/g;
+
+
+## temp invoice file
+
+
+
+
+if ($FORM{'south'} eq "yes") { 
+	$Rhtml = "pdf/newbrochures/$PartNum_south.html";
+	$Rpdf = "pdf/newbrochures/$PartNum_south.pdf"; 
+}
+else { 
+	$Rhtml = "pdf/newbrochures/$PartNum.html";
+	$Rpdf = "pdf/newbrochures/$PartNum.pdf"; 
+}
+
+
+
+## new PDF as per O-Num
+## write out invoice on temporary file
+open(RHTML,">$Rhtml") || &error('can not write to $Rhtml');
+flock(RHTML, 2);
+print RHTML "$leTemplateN";
+## unlock HTML
+flock(RHTML, 8);
+close(RHTML);
+## create PDF
+
+if ($FORM{'south'} eq "yes") { $commandline="htmldoc -t pdf15 --nup 1 --pagelayout document --header ... --footer ... --bottom 1px --left 36px --top 1px --webpage -f $Rpdf pdf/newbrochures/$PartNum_south.html"; }
+else { $commandline="htmldoc -t pdf15 --nup 1 --pagelayout document --header ... --footer ... --bottom 1px --left 36px --top 1px --webpage -f $Rpdf pdf/newbrochures/$PartNum.html"; }
+
+
+select(STDOUT); $| = 1;
+#print "Content-Type: application/pdf\n\n";
+system($commandline);
+
+## disconnect DB connection
+$dbh->disconnect; 
+
+1;

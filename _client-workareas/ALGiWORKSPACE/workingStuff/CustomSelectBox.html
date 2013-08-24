@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>Custom SelectBox</TITLE>
+
+
+<SCRIPT>
+<!--
+
+// -->
+</SCRIPT>
+<LINK href="CustomSelectBox_files/classic.css" type=text/css rel=STYLESHEET>
+<SCRIPT src="CustomSelectBox_files/fade.js" type=text/javascript></SCRIPT>
+<SCRIPT src="CustomSelectBox_files/select.js" type=text/javascript></SCRIPT>
+<SCRIPT src="CustomSelectBox_files/writeSelect.js" type=text/javascript></SCRIPT>
+
+</HEAD>
+<BODY bgColor=white>
+
+
+
+<SCRIPT type=text/javascript>
+<!--
+
+var optionArray = new Array();
+optionArray[0] = new Option("Item 1", "value 1", "color: blue; text-decoration: underline;");
+optionArray[1] = new Option("Item <b>2</b>", "value 2");
+optionArray[2] = new Option("Item 3", "value 3", "color: red;", "selected");
+optionArray[3] = new Option("Item 4", "value 4");
+optionArray[4] = new Option("Item 5", "value 5");
+
+writeSelectBox(optionArray, "select1", 1, "alert(this.options[this.selectedIndex].value)", "margin-left: 10;");
+
+//-->
+</SCRIPT>
+
+
+
+<SCRIPT type=text/javascript>
+<!--
+writeSelectBox(optionArray, "select3", 3, "alert(this.options[this.selectedIndex].value)", "margin-left: 10;");
+//-->
+</SCRIPT>
+
+
+</BODY></HTML>

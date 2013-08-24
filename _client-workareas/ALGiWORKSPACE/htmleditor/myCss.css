@@ -1,0 +1,37 @@
+/* Default Style for DropDown Menu - DO NOT EDIT*/
+.clCMAbs{position:absolute; visibility:hidden; left:0; top:0}
+  
+/*Style for DropDown Menu background-bar*/
+.clBar{position:absolute; width:10; height:10; background-color:#ECE9D8; border-right:#ACA899 1px solid; layer-background-color:#ECE9D8; visibility:hidden}
+
+/*Styles for level DropDown Menu 0*/
+.clLevel0,.clLevel0over { position:absolute; padding:2px; font-family:tahoma,arial,helvetica; font-size:10px; font-weight:bold }
+.clLevel0{background-color:#ECE9D8; layer-background-color:#ECE9D8; color:#000000;}
+.clLevel0over{background-color:#ACA899; layer-background-color:#ACA899; color:Yellow; cursor:pointer; cursor:hand; }
+.clLevel0border{position:absolute; visibility:hidden; background-color:#006699; layer-background-color:#006699}
+
+/*Styles for level DropDown Menu 1*/
+.clLevel1, .clLevel1over{position:absolute; padding:2px; font-family:arial, verdana,helvetica; font-size:11px; font-weight:bold}
+.clLevel1{background-color:#ECE9D8; layer-background-color:#ECE9D8; color:#000000;}
+.clLevel1over{background-color:#ACA899; layer-background-color:#ACA899; color:Yellow; cursor:pointer; cursor:hand; }
+.clLevel1border{position:absolute; visibility:hidden; background-color:#006699; layer-background-color:#006699}
+
+/*Styles for DropDown Menu level 2*/
+.clLevel2, .clLevel2over{position:absolute; padding:2px; font-family:tahoma,arial,helvetica; font-size:10px; font-weight:bold}
+.clLevel2{background-color:#ECE9D8; layer-background-color:#ECE9D8; color:white;}
+.clLevel2over{background-color:#0099cc; layer-background-color:#0099cc; color:Yellow; cursor:pointer; cursor:hand; }
+.clLevel2border{position:absolute; visibility:hidden; background-color:#006699; layer-background-color:#006699}
+
+
+/*Styles for HTML Editor level 2*/
+html, body {
+  font-family: Verdana,sans-serif;
+  color: #000;
+}
+a:link, a:visited { color: #00f; }
+a:hover { color: #048; }
+a:active { color: #f00; }
+
+textarea { background-color: #fff;}
+
+iframe {border-left: #ACA899 1px solid; border-right: #ACA899 1px solid; border-bottom: #ACA899 1px solid; }
