@@ -1,0 +1,2 @@
+symbol,last,change,volume:INT
+YHOO,151.50,-6.75,2642500

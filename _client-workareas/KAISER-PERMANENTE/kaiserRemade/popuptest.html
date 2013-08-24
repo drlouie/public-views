@@ -1,0 +1,75 @@
+<script>
+
+var windowW=214 // wide
+var windowH=398 // high
+
+// set the screen position where the popup should appear
+
+var windowX = (screen.width/2)-(windowW/2);
+var windowY = (screen.height/2)-(windowH/2);
+
+//var windowX = 260 // from left
+//var windowY = 100 // from top
+
+// set the url of the page to show in the popup
+
+var urlPop = "ConfirmDialog.html"
+
+// set the title of the page
+
+var title =  "This Is A Frameless Popup Window"
+
+// set this to true if the popup should close
+// upon leaving the launching page; else, false
+
+var autoclose = true
+
+// ============================
+// do not edit below this line
+// ============================
+
+s = "width="+windowW+",height="+windowH;
+var beIE = document.all?true:false
+
+function openFrameless(){
+if (beIE){
+    var retValue = window.showModalDialog("ConfirmDialog.html","popFrameless","fullscreen,"+s)     
+    retValue.blur()
+    window.focus()       
+    retValue.resizeTo(windowW,windowH)
+    retValue.moveTo(windowX,windowY)
+    var frameString=""+
+"<html>"+
+"<head>"+
+"<title>"+title+"</title>"+
+"</head>"+
+"<frameset rows='*,0' framespacing=0 border=0 frameborder=0>"+
+"<frame name='top' src='"+urlPop+"' scrolling=auto>"+
+"<frame name='bottom' src='about:blank' scrolling='no'>"+
+"</frameset>"+
+"</html>"
+    retValue.document.open();
+    retValue.document.write(frameString)
+    retValue.document.close()
+} 
+	else {
+    	retValue=window.open(urlPop,"popFrameless","scrollbars,"+s)
+    	retValue.blur()
+    	window.focus() 
+    	retValue.resizeTo(windowW,windowH)
+    	retValue.moveTo(windowX,windowY)
+	}   
+	retValue.focus()   
+	if (autoclose){
+    	window.onunload = function(){retValue.close()}
+	}
+}
+
+</script>
+</head>
+
+
+
+<body onload="top.window.focus()">
+<a href="javascript:openFrameless()">click here</a>
+</body>

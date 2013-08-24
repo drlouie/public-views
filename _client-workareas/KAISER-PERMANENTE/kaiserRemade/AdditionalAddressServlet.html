@@ -1,0 +1,960 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>Additional Address</TITLE>
+<STYLE>
+<!--
+.label {
+	COLOR : #0033FF; 
+	font-family: arial,verdana,sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+.input {
+	COLOR : #000000; 
+	font-family: verdana, arial, sans-serif;
+	font-size : 12px;
+	font-weight : normal;
+	font-style: normal;	
+	}
+.caption {
+	COLOR : #003333; 
+	font-family: verdana, arial, sans-serif;
+	font-size : 11px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+.submit {
+	COLOR : #0000; 
+	font-family: verdana, arial, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+
+
+.title {
+	COLOR : #cc3333; 
+	font-family: arial,verdana,sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+IMG{
+  color : olive;
+}
+
+-->
+</STYLE>
+
+
+<!--Dynamic CSS Javascript-->
+<script language="javascript" src="js/common_css.js"></script>
+
+
+
+<script language="Javascript">
+<!--
+//MOUSEOVER IMAGE PRELOAD
+
+//mreset
+// // // MOUSE OVER
+image1 = new Image();
+image1.src = "images/sreset_ov.gif";
+// // // MOUSE OFF
+image2 = new Image();
+image2.src = "images/sreset_off.gif";
+
+//medit
+image3 = new Image();
+image3.src = "images/sedit_ov.gif";
+image4 = new Image();
+image4.src = "images/sedit_off.gif";
+
+//-->
+</script>
+
+<Script src="script/ValidateAddress.js">
+</Script>
+
+
+<Script language="JavaScript">
+
+
+   var addArray = new Array();
+   var adrID = new Array();
+   var addArrayLength = 0;
+
+   var oldIndex;
+   var adrid;
+
+   var states = new Array() ;
+   var canadianStates = new Array();
+
+   var adrtype;
+   var state = "";
+   
+   var OrgEffDate = "";
+
+   function populateValues() {
+
+	OrgEffDate = "04/26/2002";
+	addArrayLength = 0;
+
+	
+			states[0] = 'AL';
+	
+			states[1] = 'AK';
+	
+			states[2] = 'AS';
+	
+			states[3] = 'AZ';
+	
+			states[4] = 'AR';
+	
+			states[5] = 'CA';
+	
+			states[6] = 'CZ';
+	
+			states[7] = 'CO';
+	
+			states[8] = 'CT';
+	
+			states[9] = 'DE';
+	
+			states[10] = 'DC';
+	
+			states[11] = 'FL';
+	
+			states[12] = 'GA';
+	
+			states[13] = 'GU';
+	
+			states[14] = 'HI';
+	
+			states[15] = 'ID';
+	
+			states[16] = 'IL';
+	
+			states[17] = 'IN';
+	
+			states[18] = 'IA';
+	
+			states[19] = 'KS';
+	
+			states[20] = 'KY';
+	
+			states[21] = 'LA';
+	
+			states[22] = 'ME';
+	
+			states[23] = 'MD';
+	
+			states[24] = 'MA';
+	
+			states[25] = 'MI';
+	
+			states[26] = 'MN';
+	
+			states[27] = 'MS';
+	
+			states[28] = 'MO';
+	
+			states[29] = 'MT';
+	
+			states[30] = 'NE';
+	
+			states[31] = 'NV';
+	
+			states[32] = 'NH';
+	
+			states[33] = 'NJ';
+	
+			states[34] = 'NM';
+	
+			states[35] = 'NY';
+	
+			states[36] = 'NC';
+	
+			states[37] = 'ND';
+	
+			states[38] = 'OH';
+	
+			states[39] = 'OK';
+	
+			states[40] = 'ON';
+	
+			states[41] = 'OR';
+	
+			states[42] = 'PA';
+	
+			states[43] = 'PR';
+	
+			states[44] = 'RI';
+	
+			states[45] = 'SC';
+	
+			states[46] = 'SD';
+	
+			states[47] = 'TN';
+	
+			states[48] = 'TX';
+	
+			states[49] = 'VI';
+	
+			states[50] = 'UT';
+	
+			states[51] = 'VT';
+	
+			states[52] = 'VA';
+	
+			states[53] = 'WA';
+	
+			states[54] = 'WV';
+	
+			states[55] = 'WI';
+	
+			states[56] = 'WY';
+		
+
+
+	
+			canadianStates[0] = 'AB';
+	
+			canadianStates[1] = 'BC';
+	
+			canadianStates[2] = 'MB';
+	
+			canadianStates[3] = 'NB';
+	
+			canadianStates[4] = 'NF';
+	
+			canadianStates[5] = 'NT';
+	
+			canadianStates[6] = 'NS';
+	
+			canadianStates[7] = 'NU';
+	
+			canadianStates[8] = 'PE';
+	
+			canadianStates[9] = 'QC';
+	
+			canadianStates[10] = 'SK';
+	
+			canadianStates[11] = 'YT';
+		
+
+
+	document.AddTypeForm.BKRBID.value = "5051";
+
+
+	adrtype = "C";
+
+	document.AddTypeForm.AddressType.focus();
+
+
+	
+	
+		var line1 = "";
+		var line2 = "";
+		var mstop = "";
+		var city = "";
+		var county = "";
+		state = "";
+		var zip = "";
+		var country = "null";
+	
+		if ( country == "" || country == "null" ) {
+			country = "USA";
+		}
+
+		adrid = "0";
+
+		adrID[addArrayLength] = adrid;
+
+
+
+		if ( adrtype == "C" && addArrayLength == 0 ) {
+
+
+				document.AddTypeForm.AddressType.value = "C";
+
+				document.AddTypeForm.AddressLine1.value = "";
+				document.AddTypeForm.AddressLine2.value = "";
+				document.AddTypeForm.MailStop.value = "";
+				document.AddTypeForm.City.value = "";
+				document.AddTypeForm.County.value = "";
+				document.AddTypeForm.State.value = "";
+				document.AddTypeForm.Zip.value = "";
+				document.AddTypeForm.Country.value = country;
+				
+				setState( document.AddTypeForm );
+
+				document.AddTypeForm.Province.value = "";				
+				document.AddTypeForm.AddressEffectiveDate.value = "05/31/2002";
+
+				document.AddTypeForm.AddressID.value = "0";
+				document.AddTypeForm.TypeChangeKey.value = "0";
+
+				document.AddTypeForm.State.disabled= true;
+				document.AddTypeForm.Country.disabled = true;
+								
+			if ( line1 == "" ) {
+				enableAll( document.AddTypeForm );
+
+			}
+
+
+		}
+		else if ( adrtype == "P" && addArrayLength == 1 ) {
+
+				document.AddTypeForm.AddressType.value = "P";
+
+				document.AddTypeForm.AddressLine1.value = "";
+				document.AddTypeForm.AddressLine2.value = "";
+				document.AddTypeForm.MailStop.value = "";
+				document.AddTypeForm.City.value = "";
+				document.AddTypeForm.County.value = "";
+				document.AddTypeForm.State.value = "";
+				document.AddTypeForm.Zip.value = "";
+				document.AddTypeForm.Country.value = country;
+
+				setState( document.AddTypeForm );
+
+				document.AddTypeForm.Province.value = "";				
+				document.AddTypeForm.AddressEffectiveDate.value = "05/31/2002";
+
+				document.AddTypeForm.AddressID.value = "0";
+				document.AddTypeForm.TypeChangeKey.value = "1";
+
+				document.AddTypeForm.State.disabled= true;
+				document.AddTypeForm.Country.disabled = true;
+
+
+			if ( line1 == "" ) {
+				enableAll( document.AddTypeForm );
+			}
+
+
+		}
+		else if ( adrtype == "R"  && addArrayLength == 2 ) {
+
+				document.AddTypeForm.AddressType.value = "R";
+
+				document.AddTypeForm.AddressLine1.value = "";
+				document.AddTypeForm.AddressLine2.value = "";
+				document.AddTypeForm.MailStop.value = "";
+				document.AddTypeForm.City.value = "";
+				document.AddTypeForm.County.value = "";
+				document.AddTypeForm.State.value = "";
+				document.AddTypeForm.Zip.value = "";
+				document.AddTypeForm.Country.value = country;
+				
+				setState( document.AddTypeForm );
+				
+				document.AddTypeForm.Province.value = "";				
+				document.AddTypeForm.AddressEffectiveDate.value = "05/31/2002";
+
+				document.AddTypeForm.AddressID.value = "0";
+				document.AddTypeForm.TypeChangeKey.value = "2";
+
+				document.AddTypeForm.State.disabled= true;
+				document.AddTypeForm.Country.disabled = true;
+
+
+			if ( line1 == "" ) {
+				enableAll( document.AddTypeForm );
+			}
+
+		}
+		
+
+
+		if ( line2 == "" )
+			line2 = "null";
+		if ( mstop == "" )
+			mstop = "null";
+		if ( county == "" )
+			county = "null";
+
+
+		addArray[addArrayLength] = line1 + "-" + line2 + "-" + mstop + "-" + city + "-" +county + "-" +  state + "-" + zip + "-" + country + "-" + adrid;
+
+
+
+		if ( "null" == "" ) {
+			oldIndex = 0;
+		}
+		else {
+			oldIndex = "null";
+		}
+
+
+		addArrayLength++;
+
+	
+	
+		var line1 = "";
+		var line2 = "";
+		var mstop = "";
+		var city = "";
+		var county = "";
+		state = "";
+		var zip = "";
+		var country = "null";
+	
+		if ( country == "" || country == "null" ) {
+			country = "USA";
+		}
+
+		adrid = "0";
+
+		adrID[addArrayLength] = adrid;
+
+
+
+		if ( adrtype == "C" && addArrayLength == 0 ) {
+
+
+				document.AddTypeForm.AddressType.value = "C";
+
+				document.AddTypeForm.AddressLine1.value = "";
+				document.AddTypeForm.AddressLine2.value = "";
+				document.AddTypeForm.MailStop.value = "";
+				document.AddTypeForm.City.value = "";
+				document.AddTypeForm.County.value = "";
+				document.AddTypeForm.State.value = "";
+				document.AddTypeForm.Zip.value = "";
+				document.AddTypeForm.Country.value = country;
+				
+				setState( document.AddTypeForm );
+
+				document.AddTypeForm.Province.value = "";				
+				document.AddTypeForm.AddressEffectiveDate.value = "05/31/2002";
+
+				document.AddTypeForm.AddressID.value = "0";
+				document.AddTypeForm.TypeChangeKey.value = "0";
+
+				document.AddTypeForm.State.disabled= true;
+				document.AddTypeForm.Country.disabled = true;
+								
+			if ( line1 == "" ) {
+				enableAll( document.AddTypeForm );
+
+			}
+
+
+		}
+		else if ( adrtype == "P" && addArrayLength == 1 ) {
+
+				document.AddTypeForm.AddressType.value = "P";
+
+				document.AddTypeForm.AddressLine1.value = "";
+				document.AddTypeForm.AddressLine2.value = "";
+				document.AddTypeForm.MailStop.value = "";
+				document.AddTypeForm.City.value = "";
+				document.AddTypeForm.County.value = "";
+				document.AddTypeForm.State.value = "";
+				document.AddTypeForm.Zip.value = "";
+				document.AddTypeForm.Country.value = country;
+
+				setState( document.AddTypeForm );
+
+				document.AddTypeForm.Province.value = "";				
+				document.AddTypeForm.AddressEffectiveDate.value = "05/31/2002";
+
+				document.AddTypeForm.AddressID.value = "0";
+				document.AddTypeForm.TypeChangeKey.value = "1";
+
+				document.AddTypeForm.State.disabled= true;
+				document.AddTypeForm.Country.disabled = true;
+
+
+			if ( line1 == "" ) {
+				enableAll( document.AddTypeForm );
+			}
+
+
+		}
+		else if ( adrtype == "R"  && addArrayLength == 2 ) {
+
+				document.AddTypeForm.AddressType.value = "R";
+
+				document.AddTypeForm.AddressLine1.value = "";
+				document.AddTypeForm.AddressLine2.value = "";
+				document.AddTypeForm.MailStop.value = "";
+				document.AddTypeForm.City.value = "";
+				document.AddTypeForm.County.value = "";
+				document.AddTypeForm.State.value = "";
+				document.AddTypeForm.Zip.value = "";
+				document.AddTypeForm.Country.value = country;
+				
+				setState( document.AddTypeForm );
+				
+				document.AddTypeForm.Province.value = "";				
+				document.AddTypeForm.AddressEffectiveDate.value = "05/31/2002";
+
+				document.AddTypeForm.AddressID.value = "0";
+				document.AddTypeForm.TypeChangeKey.value = "2";
+
+				document.AddTypeForm.State.disabled= true;
+				document.AddTypeForm.Country.disabled = true;
+
+
+			if ( line1 == "" ) {
+				enableAll( document.AddTypeForm );
+			}
+
+		}
+		
+
+
+		if ( line2 == "" )
+			line2 = "null";
+		if ( mstop == "" )
+			mstop = "null";
+		if ( county == "" )
+			county = "null";
+
+
+		addArray[addArrayLength] = line1 + "-" + line2 + "-" + mstop + "-" + city + "-" +county + "-" +  state + "-" + zip + "-" + country + "-" + adrid;
+
+
+
+		if ( "null" == "" ) {
+			oldIndex = 0;
+		}
+		else {
+			oldIndex = "null";
+		}
+
+
+		addArrayLength++;
+
+	
+	
+		var line1 = "";
+		var line2 = "";
+		var mstop = "";
+		var city = "";
+		var county = "";
+		state = "";
+		var zip = "";
+		var country = "null";
+	
+		if ( country == "" || country == "null" ) {
+			country = "USA";
+		}
+
+		adrid = "0";
+
+		adrID[addArrayLength] = adrid;
+
+
+
+		if ( adrtype == "C" && addArrayLength == 0 ) {
+
+
+				document.AddTypeForm.AddressType.value = "C";
+
+				document.AddTypeForm.AddressLine1.value = "";
+				document.AddTypeForm.AddressLine2.value = "";
+				document.AddTypeForm.MailStop.value = "";
+				document.AddTypeForm.City.value = "";
+				document.AddTypeForm.County.value = "";
+				document.AddTypeForm.State.value = "";
+				document.AddTypeForm.Zip.value = "";
+				document.AddTypeForm.Country.value = country;
+				
+				setState( document.AddTypeForm );
+
+				document.AddTypeForm.Province.value = "";				
+				document.AddTypeForm.AddressEffectiveDate.value = "05/31/2002";
+
+				document.AddTypeForm.AddressID.value = "0";
+				document.AddTypeForm.TypeChangeKey.value = "0";
+
+				document.AddTypeForm.State.disabled= true;
+				document.AddTypeForm.Country.disabled = true;
+								
+			if ( line1 == "" ) {
+				enableAll( document.AddTypeForm );
+
+			}
+
+
+		}
+		else if ( adrtype == "P" && addArrayLength == 1 ) {
+
+				document.AddTypeForm.AddressType.value = "P";
+
+				document.AddTypeForm.AddressLine1.value = "";
+				document.AddTypeForm.AddressLine2.value = "";
+				document.AddTypeForm.MailStop.value = "";
+				document.AddTypeForm.City.value = "";
+				document.AddTypeForm.County.value = "";
+				document.AddTypeForm.State.value = "";
+				document.AddTypeForm.Zip.value = "";
+				document.AddTypeForm.Country.value = country;
+
+				setState( document.AddTypeForm );
+
+				document.AddTypeForm.Province.value = "";				
+				document.AddTypeForm.AddressEffectiveDate.value = "05/31/2002";
+
+				document.AddTypeForm.AddressID.value = "0";
+				document.AddTypeForm.TypeChangeKey.value = "1";
+
+				document.AddTypeForm.State.disabled= true;
+				document.AddTypeForm.Country.disabled = true;
+
+
+			if ( line1 == "" ) {
+				enableAll( document.AddTypeForm );
+			}
+
+
+		}
+		else if ( adrtype == "R"  && addArrayLength == 2 ) {
+
+				document.AddTypeForm.AddressType.value = "R";
+
+				document.AddTypeForm.AddressLine1.value = "";
+				document.AddTypeForm.AddressLine2.value = "";
+				document.AddTypeForm.MailStop.value = "";
+				document.AddTypeForm.City.value = "";
+				document.AddTypeForm.County.value = "";
+				document.AddTypeForm.State.value = "";
+				document.AddTypeForm.Zip.value = "";
+				document.AddTypeForm.Country.value = country;
+				
+				setState( document.AddTypeForm );
+				
+				document.AddTypeForm.Province.value = "";				
+				document.AddTypeForm.AddressEffectiveDate.value = "05/31/2002";
+
+				document.AddTypeForm.AddressID.value = "0";
+				document.AddTypeForm.TypeChangeKey.value = "2";
+
+				document.AddTypeForm.State.disabled= true;
+				document.AddTypeForm.Country.disabled = true;
+
+
+			if ( line1 == "" ) {
+				enableAll( document.AddTypeForm );
+			}
+
+		}
+		
+
+
+		if ( line2 == "" )
+			line2 = "null";
+		if ( mstop == "" )
+			mstop = "null";
+		if ( county == "" )
+			county = "null";
+
+
+		addArray[addArrayLength] = line1 + "-" + line2 + "-" + mstop + "-" + city + "-" +county + "-" +  state + "-" + zip + "-" + country + "-" + adrid;
+
+
+
+		if ( "null" == "" ) {
+			oldIndex = 0;
+		}
+		else {
+			oldIndex = "null";
+		}
+
+
+		addArrayLength++;
+
+	
+
+
+	
+	if ( "" != "null" && "" != "" ) {
+		alert( "" );
+	
+		if ( parent.LeftNav.document.forms[0]!= undefined )
+			parent.LeftNav.document.forms[0].indicator.value = "1";	
+	}
+
+
+   }
+
+
+
+   function enableAll(form) { 
+
+   	var totalElements = document.AddTypeForm.elements.length;
+	var enableAdrID = document.AddTypeForm.AddressID.value;
+
+	for ( var i = 0 ; i <totalElements ; i++) {
+
+		if ( enableAdrID != "" && enableAdrID > 0 ) {
+			document.AddTypeForm.elements[i].style.background = "white";
+			document.AddTypeForm.elements[i].onfocus = null;
+			//document.AddTypeForm.AddressEffectiveDate.disabled = false;											
+		}
+		else {
+		
+			if ( document.AddTypeForm.elements[i].name != "AddressEffectiveDate" ) {
+		
+				document.AddTypeForm.elements[i].style.background = "white";
+				document.AddTypeForm.elements[i].onfocus = null;
+				
+			}
+		}
+
+		document.AddTypeForm.State.disabled= false;
+		document.AddTypeForm.Country.disabled = false;
+		
+   	}
+	//document.AddTypeForm.Country.disabled = false;
+   }
+
+
+   function storeValues() {
+
+
+	if ( validate(document.AddTypeForm) ) {
+		document.AddTypeForm.submit();
+	}
+	else {
+		document.AddTypeForm.AddressType.value = adrtype;
+		return false;
+	}
+
+   }
+
+
+   function testValidation() {
+
+	if ( validate(document.AddTypeForm) ) {
+		document.AddTypeForm.TypeChangeKey.value = "Submit";
+		document.AddTypeForm.submit();
+	}
+	else
+		return false;
+   }
+
+
+   function resetAdrForm(theForm) {
+
+	theForm.reset();
+	populateValues();
+
+	/*
+	var hkey = theForm.TypeChangeKey.value;
+	var hind = theForm.indicator.value;
+	var hbkrbid = theForm.BKRBID.value;
+	var hadrid = theForm.AddressID.value;
+	var hadrtype = theForm.AddressType.value;
+	var hcountry = theForm.Country.value;
+	var effdate = theForm.AddressEffectiveDate.value;
+
+	theForm.reset();
+	
+	
+	theForm.State.value = "";
+	theForm.TypeChangeKey.value = hkey;
+	theForm.indicator.value = hind;
+	theForm.BKRBID.value = hbkrbid;
+	theForm.AddressID.value = hadrid;
+	theForm.AddressType.value = hadrtype;
+	theForm.Country.value = hcountry;
+	theForm.AddressEffectiveDate.value = effdate;
+	*/	
+	
+   }
+
+	function setState( theForm ) {
+	
+		var country = theForm.Country.value;
+		
+		
+		if ( country == "USA" ) {
+		
+			for ( var i=0; i<states.length; i++ ) {
+				var addstate = new Option();
+				addstate.text = states[i];
+				addstate.value = states[i];
+				theForm.State.options[i] = addstate;				
+			}
+			theForm.State.disabled = false;	
+			theForm.State.value = state;
+		}
+		else if ( country == "CAN" ) {
+
+			theForm.State.length = 0;
+
+			for ( var i=0; i<canadianStates.length; i++ ) {
+				var addstate = new Option();
+				addstate.text = canadianStates[i];
+				addstate.value = canadianStates[i];
+				theForm.State.options[i] = addstate;				
+			}
+			theForm.State.disabled = false;
+			theForm.State.value = state;			
+		}
+		else {
+
+			theForm.State.length = 0;				
+			theForm.State.disabled = true;
+		}
+
+	}
+
+
+</Script>
+
+
+
+</HEAD>
+
+
+
+<BODY bgcolor="#0B5F77" OnLoad="populateValues()">
+<FORM name="AddTypeForm" action="AdditionalAddressServlet" method="POST" OnSubmit="return testValidation()">
+  <table width="670" border="0" cellspacing="0" cellpadding="2">
+    <tr align="center" valign="middle"> 
+      <td width="200"><font class="ComTitle">Choose an Address Type<br>
+        <img src="images/3downarrows.gif" width="86" height="16"><br>
+        <select name="AddressType" tabindex="1" onChange="return storeValues()" class="select1">
+          <option value = 'C'>Correspondence</option>
+          <option value = 'P'>Physical/Building</option>
+          <option value = 'R'>Residence</option>
+        </select>
+        <input type="hidden" name="TypeChangeKey" value="">
+        <input type="hidden" name="indicator" value="0">
+        <input type="hidden" name="BKRBID" value="5051">
+        <input type="hidden" name="AddressID" value="0">
+        <input type="hidden" name="SaveExitPage" value="No">
+        </font></td>
+      <td width="470"> 
+        <table width="375" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td align="left" width="3" height="20"><img src="images/tleft3.gif" width="3" height="20"></td>
+            <td bgcolor="#E6E9F0" width="184" align="left" height="20"><font class="stitle">&nbsp;&nbsp;&nbsp;Additional 
+              Addresses</font></td>
+            <td bgcolor="#E6E9F0" align="right" height="20"> 
+              <input type="button" value="Edit" name="edit" class="lebotton" OnClick="enableAll(document.AddTypeForm)">
+              <input type="button" value="Reset" name="reset" class="lebotton" OnClick="resetAdrForm(document.AddTypeForm)">
+            </td>
+          </tr>
+        </table>
+        <table width="375" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td width="398" align="center"> 
+              <table width="373" border="0" cellspacing="0" cellpadding="2">
+                <tr valign="bottom"> 
+                  <td align="center" width="120" valign="middle" height="45"><font class="ComTitle">Eff 
+                    Date </font><br>
+                    <input size="11" type="text" maxlength="10" name="AddressEffectiveDate"  class="input1" onKeyPress="checkEffDateChanged()" tabindex="2">
+                  </td>
+                  <td width="67" align="center" valign="middle">&nbsp;</td>
+                  <td width="66" align="center" valign="middle">&nbsp;</td>
+                  <td width="120" align="center" valign="middle"><font class="ComTitle">Mail 
+                    Stop# </font><br>
+                    <input size="11" type="text" maxlength="10" name="MailStop"  class="input2" onKeyPress="checkEffDateChanged()" tabindex="4">
+                  </td>
+                </tr>
+              </table>
+              <table width="373" border="0" cellspacing="0" cellpadding="2">
+                <tr valign="bottom"> 
+                  <td align="right" width="186" height="27"><nobr><font class="ComTitle">Line 
+                    1</font>&nbsp; 
+                    <input size="20" type="text" maxlength="50" name="AddressLine1"  class="input2" tabindex=3">
+                    </nobr> </td>
+                  <td width="75" height="27" align="right"><font class="ComTitle">State</font></td>
+                  <td width="37" height="27"> 
+                    <select cname="State"  class="select2" name="State" tabindex="8">
+                      <option value="">&nbsp;&nbsp;&nbsp;</option>
+                    </select>
+                  </td>
+                  <td height="27" valign="bottom" align="right" width="20"><font class="ComTitle">Zip</font></td>
+                  <td width="62" height="27"> 
+                    <input size="5" type="text" maxlength="10" name="Zip"  class="input2" onKeyPress="checkEffDateChanged()" tabindex="9">
+                  </td>
+                </tr>
+                <tr valign="bottom"> 
+                  <td align="right" width="186"><nobr><font class="ComTitle">Line 
+                    2</font>&nbsp; 
+                    <input size="20" type="text" maxlength="50" name="AddressLine2"  value="" class="input2" tabindex="5">
+                    </nobr></td>
+                  <td width="75" align="right"><font class="ComTitle">County</font></td>
+                  <td width="187" colspan="3"> 
+                    <input size="20" type="text" maxlength="20" name="County"  class="input2" tabindex="10">
+                  </td>
+                </tr>
+                <tr valign="bottom"> 
+                  <td align="right" width="186"><nobr><font class="ComTitle">Line 
+                    3</font>&nbsp; 
+                    <input size="20" type="text" maxlength="50" name="AddressLine3"  class="input2" value="" tabindex="6">
+                    </nobr> </td>
+                  <td width="75" align="right"><font class="ComTitle">Country</font></td>
+                  <td width="187" colspan="3"> 
+                    <select name="Country" onChange="setState(document.AgentMaintenance)" class="select2" tabindex="11">
+                      <option value="CAN">CAN</option>
+                      <option value="FRA">FRA</option>
+                      <option value="GDR">GDR</option>
+                      <option value="JAPAN">JAPAN</option>
+                      <option value="MEX">MEX</option>
+                      <option value="NEDER">NEDER</option>
+                      <option value="ROC">ROC</option>
+                      <option value="UK">UK</option>
+                      <option value="USA">USA</option>
+                      <option value="HUN">HUN</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr valign="bottom"> 
+                  <td align="right" width="186"><nobr><font class="ComTitle">City</font>&nbsp; 
+                    <input size="20" type="text" maxlength="25" name="City"  class="input2" tabindex="7">
+                    </nobr> </td>
+                  <td width="75" align="right"><font class="ComTitle">Province</font></td>
+                  <td width="187" colspan="3"> 
+                    <input size="20" type="text" maxlength="20" name="Province"  class="input2" value="" tabindex="12">
+                  </td>
+                </tr>
+                <tr valign="bottom"> 
+                  <td align="right" width="186"><img src="images/spacer.gif" border="0" width="5" height="5"></td>
+                  <td width="187" colspan="4"><img src="images/spacer.gif" border="0" width="5" height="5"></td>
+                </tr>
+              </table>
+              
+            </td>
+            <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</FORM>
+
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,72 @@
+function testURL(myindValue,cual) {
+
+	if ( parent.destination.document.forms[0] != undefined ) {
+
+		var retValue = cual;
+		
+			if ( retValue == "Yes" ) {
+				if ( validateDestinationForm( parent.destination.document.forms[0] ) ) {
+					document.LeftNavForm.indicator.value = myindValue;
+					parent.destination.document.forms[0].indicator.value = myindValue;
+					parent.destination.document.forms[0].TypeChangeKey.value = "Submit";
+					setFormValues();
+					parent.destination.document.forms[0].submit();
+                        
+				}
+			}
+			else if ( retValue == "No" ) {
+				// only for 2
+				if (myindValue == "2") { document.LeftNavForm.UserVisitIndicator.value = "1"; }
+		
+				document.LeftNavForm.BKRBID.value = BRKBIDValue;
+				document.LeftNavForm.indicator.value = myindValue;
+
+				// Unload only for 1
+				if (myindValue == "1") { document.LeftNavForm.TypeChangeKey.value = "UnLoad"; }
+				else { document.LeftNavForm.TypeChangeKey.value = ""; }
+
+				if (myindValue == "1") { var nextURL = "AdditionalAddressServlet.html"; }
+				else if (myindValue == "2") { var nextURL = "AgreementsServlet.html"; }
+				else if (myindValue == "3") { var nextURL = "LicenseServlet.html"; }
+				else if (myindValue == "4") { var nextURL = "PaymentControlsServlet.html"; }
+				else if (myindValue == "5") { var nextURL = "ContactPersonServlet.html"; }
+				else if (myindValue == "6") { var nextURL = "RelationshipServlet.html"; }
+
+				document.forms[0].action = nextURL;
+				document.forms[0].target="destination";
+				document.forms[0].submit();
+
+			}
+
+	}
+	else {
+		document.LeftNavForm.UserVisitIndicator.value = myindValue;
+
+		document.LeftNavForm.BKRBID.value = BRKBIDValue;
+		document.LeftNavForm.indicator.value = myindValue;
+
+		// only for 1
+		if (myindValue == "1") { document.LeftNavForm.TypeChangeKey.value = "UnLoad"; }
+		else { document.LeftNavForm.TypeChangeKey.value = ""; }
+		
+		document.forms[0].action = nextURL;
+		document.forms[0].target="destination";
+		document.forms[0].submit();
+	}
+
+
+	///////////////////////////////////////////////
+	/// ADDED BY DRLOUIE -> Menu Image Controls ///
+	///////////////////////////////////////////////
+	if ( retValue != "Cancel") {
+   		resetMenu();
+
+		if (myindValue == "1") { document.images.Address.src = menu1.src; }
+		else if (myindValue == "2") { document.images.Agreement.src = menu1.src; }
+		else if (myindValue == "3") { document.images.License.src = menu1.src; }
+		else if (myindValue == "4") { document.images.Payment.src = menu1.src; }
+		else if (myindValue == "5") { document.images.Contact.src = menu1.src; }
+		else if (myindValue == "6") { document.images.Relation.src = menu1.src; }
+	}
+
+}

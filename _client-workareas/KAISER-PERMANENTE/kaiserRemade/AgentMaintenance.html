@@ -1,0 +1,2983 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>Broker Agent(Complete Setup)</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+
+
+function showLayer(myindValue) {
+
+	document.URLer.myindValue.value = myindValue;
+
+   	// HIDE ALL BrokerMain Form Elements
+	var leTotal = document.AgentMaintenance.elements.length;
+	for ( var i = 0 ; i <leTotal ; i++) {
+		document.AgentMaintenance.elements[i].style.visibility = 'hidden';
+	}
+
+   	// DISABLE ALL Form Elements FROM Destination document
+	var leTotal = parent.destination.document.forms[0].elements.length;
+	for ( var i = 0 ; i <leTotal ; i++) {
+		parent.destination.document.forms[0].elements[i].disabled = true;
+	}
+	
+	if (document.getElementById) {  // DOM3 = IE5, NS6
+		document.getElementById('hidepage').style.visibility = 'visible';
+	}
+	else {
+		if (document.layers) {  // Netscape 4
+			document.hidepage.visibility = 'visible';
+		}
+		else {  // IE 4
+			document.all.hidepage.style.visibility = 'visible';
+		}
+	}
+}
+
+function hideLayer(cual) {
+	var myindValue = document.URLer.myindValue.value;
+	parent.LeftNav.runURL(myindValue,cual);
+	if (cual == "Cancel") {
+	   	// DISABLE ALL Form Elements FROM Destination document
+		var leTotal = parent.destination.document.forms[0].elements.length;
+		for ( var i = 0 ; i <leTotal ; i++) {
+			parent.destination.document.forms[0].elements[i].disabled = false;
+		}
+	}
+	location.href="AgentMaintenance.html"
+}
+
+//  End -->
+</script>
+<style type="text/css">
+#hidepage {z-index:2000}
+</style>
+
+<STYLE>
+<!--
+.label {
+	COLOR : #0033FF; 
+	font-family: arial,verdana,sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+
+.title {
+	COLOR : #cc3333; 
+	font-family: arial,verdana,sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+
+.button {
+	COLOR : #000000; 
+	border : 0;
+	align : left;
+	background-color: #ffcc00;
+	font-family: arial,verdana,sans-serif;
+	font-size : 13px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+
+IMG{
+  color : olive;
+}
+
+
+-->
+</STYLE>
+
+
+<!--Dynamic CSS Javascript-->
+<script language="javascript" src="js/common_css.js"></script>
+
+
+
+<script language="Javascript">
+<!--
+//MOUSEOVER IMAGE PRELOAD
+
+//mreset
+// // // MOUSE OVER
+image1 = new Image();
+image1.src = "images/mreset_ov.gif";
+// // // MOUSE OFF
+image2 = new Image();
+image2.src = "images/mreset_off.gif";
+
+//medit
+image3 = new Image();
+image3.src = "images/medit_ov.gif";
+image4 = new Image();
+image4.src = "images/medit_off.gif";
+//msearch
+image5 = new Image();
+image5.src = "images/msearch_ov.gif";
+image6 = new Image();
+image6.src = "images/msearch_off.gif";
+//msave
+image7 = new Image();
+image7.src = "images/msave_ov.gif";
+image8 = new Image();
+image8.src = "images/msave_off.gif";
+//mprint
+image9 = new Image();
+image9.src = "images/mprint_ov.gif";
+image10 = new Image();
+image10.src = "images/mprint_off.gif";
+//mexit
+image11 = new Image();
+image11.src = "images/mexit_ov.gif";
+image12 = new Image();
+image12.src = "images/mexit_off.gif";
+//mcomments
+image13 = new Image();
+image13.src = "images/mcomments_ov.gif";
+image14 = new Image();
+image14.src = "images/mcomments_off.gif";
+
+
+//add button
+image15 = new Image();
+image15.src = "images/add_ov.gif";
+image16 = new Image();
+image16.src = "images/add_off.gif";
+//delete selected button
+image17 = new Image();
+image17.src = "images/delsel_ov.gif";
+image18 = new Image();
+image18.src = "images/delsel_off.gif";
+//-->
+</script>
+
+<Script src="script/ValidateAddress.js">
+</Script>
+
+<Script src="script/ValidateDOI.js">
+</Script>
+
+
+<SCRIPT src="script/ContactRequiredFields.js">
+</SCRIPT>
+
+<Script src="script/PrintScript.js">
+</Script>
+
+<SCRIPT language="javascript">
+
+var states = new Array() ;
+var canadianStates = new Array();
+var bsnstype = new Array();
+var countries = new Array();
+var category = new Array();
+var categoryYear = new Array();
+var statusReasonText = new Array();
+var statusReasonValue = new Array();
+var statusReasonCode = new Array();
+
+var state = "";
+function init()
+  {		
+		
+	document.AgentMaintenance.PhoneList.style.fontFamily = "Courier New";	
+		
+		
+			states[0] = 'AL';
+		
+			states[1] = 'AK';
+		
+			states[2] = 'AS';
+		
+			states[3] = 'AZ';
+		
+			states[4] = 'AR';
+		
+			states[5] = 'CA';
+		
+			states[6] = 'CZ';
+		
+			states[7] = 'CO';
+		
+			states[8] = 'CT';
+		
+			states[9] = 'DE';
+		
+			states[10] = 'DC';
+		
+			states[11] = 'FL';
+		
+			states[12] = 'GA';
+		
+			states[13] = 'GU';
+		
+			states[14] = 'HI';
+		
+			states[15] = 'ID';
+		
+			states[16] = 'IL';
+		
+			states[17] = 'IN';
+		
+			states[18] = 'IA';
+		
+			states[19] = 'KS';
+		
+			states[20] = 'KY';
+		
+			states[21] = 'LA';
+		
+			states[22] = 'ME';
+		
+			states[23] = 'MD';
+		
+			states[24] = 'MA';
+		
+			states[25] = 'MI';
+		
+			states[26] = 'MN';
+		
+			states[27] = 'MS';
+		
+			states[28] = 'MO';
+		
+			states[29] = 'MT';
+		
+			states[30] = 'NE';
+		
+			states[31] = 'NV';
+		
+			states[32] = 'NH';
+		
+			states[33] = 'NJ';
+		
+			states[34] = 'NM';
+		
+			states[35] = 'NY';
+		
+			states[36] = 'NC';
+		
+			states[37] = 'ND';
+		
+			states[38] = 'OH';
+		
+			states[39] = 'OK';
+		
+			states[40] = 'ON';
+		
+			states[41] = 'OR';
+		
+			states[42] = 'PA';
+		
+			states[43] = 'PR';
+		
+			states[44] = 'RI';
+		
+			states[45] = 'SC';
+		
+			states[46] = 'SD';
+		
+			states[47] = 'TN';
+		
+			states[48] = 'TX';
+		
+			states[49] = 'VI';
+		
+			states[50] = 'UT';
+		
+			states[51] = 'VT';
+		
+			states[52] = 'VA';
+		
+			states[53] = 'WA';
+		
+			states[54] = 'WV';
+		
+			states[55] = 'WI';
+		
+			states[56] = 'WY';
+			
+
+	
+			canadianStates[0] = 'AB';
+	
+			canadianStates[1] = 'BC';
+	
+			canadianStates[2] = 'MB';
+	
+			canadianStates[3] = 'NB';
+	
+			canadianStates[4] = 'NF';
+	
+			canadianStates[5] = 'NT';
+	
+			canadianStates[6] = 'NS';
+	
+			canadianStates[7] = 'NU';
+	
+			canadianStates[8] = 'PE';
+	
+			canadianStates[9] = 'QC';
+	
+			canadianStates[10] = 'SK';
+	
+			canadianStates[11] = 'YT';
+		
+
+
+		
+				category[0] = 'B';
+				categoryYear[0] = '2002';
+				                    
+                    
+				category[1] = 'B';
+				categoryYear[1] = '2003';
+				                    
+                    
+				
+			
+			statusReasonText[0] = 'Setup incomplete';
+			statusReasonValue[0] = 'P';
+			statusReasonCode[0] = 'SETUPINC';
+				
+			
+			statusReasonText[1] = 'Required Docs Missing';
+			statusReasonValue[1] = 'P';
+			statusReasonCode[1] = 'REQDDOCS';
+				
+			
+			statusReasonText[2] = 'Valid License/Agreement on File';
+			statusReasonValue[2] = 'A';
+			statusReasonCode[2] = 'SETUPCOMP';
+				
+			
+			statusReasonText[3] = 'Expired Documents';
+			statusReasonValue[3] = 'O';
+			statusReasonCode[3] = 'EXPIRED';
+				
+			
+			statusReasonText[4] = 'Broker Deceased';
+			statusReasonValue[4] = 'O';
+			statusReasonCode[4] = 'DECEASED';
+				
+			
+			statusReasonText[5] = 'No Longer in Business';
+			statusReasonValue[5] = 'O';
+			statusReasonCode[5] = 'OUTOFBSNS';
+				
+			
+			statusReasonText[6] = 'Fraud';
+			statusReasonValue[6] = 'R';
+			statusReasonCode[6] = 'FRAUD';
+				
+			
+			statusReasonText[7] = 'Misrepresentation';
+			statusReasonValue[7] = 'R';
+			statusReasonCode[7] = 'MISREP';
+				
+			
+			statusReasonText[8] = 'Investigation';
+			statusReasonValue[8] = 'S';
+			statusReasonCode[8] = 'INVEST';
+				
+			
+			statusReasonText[9] = 'Record Setup in Error';
+			statusReasonValue[9] = 'V';
+			statusReasonCode[9] = 'VOID';
+		
+		
+		
+		
+
+	document.AgentMaintenance.BroadcastMedium.value = 'null';
+	document.AgentMaintenance.BusinessType.value = 'U';
+	document.AgentMaintenance.Country.value = 'USA';
+	document.AgentMaintenance.BrokerCategory.value = category[0];
+	
+	state = 'CA';
+	setState( document.AgentMaintenance);
+	document.AgentMaintenance.changeType[0].checked = true;					
+	
+
+  }
+
+
+//Added by Sathish
+
+function populatePhoneList() {
+
+//	document.forms[0].PhoneList.style.visibility = "hidden";
+	document.forms[0].PhoneIK.value = "0";
+	document.forms[0].OldNumberIndicator.value = "false";
+
+
+	
+
+}
+
+
+
+
+
+
+function resetForm()
+{
+
+	document.AgentMaintenance.reset();
+	document.AgentMaintenance.BroadcastMedium.value = 'null';
+	document.AgentMaintenance.BusinessType.value = 'U';
+	document.AgentMaintenance.Country.value = 'USA';
+	document.AgentMaintenance.BrokerCategory.value = category[0];
+	document.AgentMaintenance.State.value = 'CA';
+	
+}
+</SCRIPT>
+
+
+
+<SCRIPT language="javascript">
+
+
+function submitForm( theForm ) {
+
+	if ( submitDestinationForm() ) {
+		if (validateForm( theForm ) ) {
+			
+			if ( parent.destination != undefined ) {
+				if ( parent.destination.document.forms[0] != undefined ) {
+					parent.destination.document.forms[0].submit();
+				}
+			}
+			return true;
+			
+		}
+		else 
+			return false;
+	}
+	else
+		return false;
+
+}
+
+
+function submitDestinationForm() {
+
+
+	//Added by Sathish to include the SAVE functionality
+
+	if ( parent.destination != undefined ) {
+		if ( parent.destination.document.forms[0] != undefined ) {
+
+			parent.destination.document.forms[0].SaveExitPage.value = document.AgentMaintenance.SaveExitPage.value;
+
+			if ( parent.destination.document.forms[0].name == "ContactPerson" ) {
+				parent.destination.document.forms[0].chgmode.value="save";
+				parent.destination.document.forms[0].typeaction.value ="stype";
+
+				var allphn = "";
+				var allphnK = "";
+
+				for(var i = 0; i < parent.destination.document.forms[0].PhoneList.options.length; i++) {
+					allphn = allphn+" % "+parent.destination.document.forms[0].PhoneList.options[i].text;
+					allphnK =allphnK+" % "+parent.destination.document.forms[0].PhoneList.options[i].value;
+					parent.destination.document.forms[0].phoneconcat.value =allphn;
+					parent.destination.document.forms[0].phoneconcatK.value =allphnK;
+				}
+
+			}
+
+			if ( parent.destination.document.forms[0].name == "AddTypeForm" ) {
+			
+				if ( validate(parent.destination.document.forms[0]) ) {
+
+					if ( parent.destination.document.forms[0].AddressLine1.value != "" ) {
+						parent.destination.document.forms[0].TypeChangeKey.value = "Submit";
+						//parent.destination.document.forms[0].submit();
+					}
+					document.AgentMaintenance.WhereToGo.value="AdditionalAddress.jsp";					
+					return true;
+				}
+				else
+					return false;
+
+			}
+			else if ( parent.destination.document.forms[0].name == "ContactPerson" ) {
+
+				if ( validateContactForm(parent.destination.document.forms[0]) ) {
+					parent.destination.document.forms[0].TypeChangeKey.value = "Submit";
+					//parent.destination.document.forms[0].submit();
+					document.AgentMaintenance.WhereToGo.value="ContactPersonInfo.jsp";
+					return true;
+				}
+				else
+					return false;
+
+			}
+			else if ( parent.destination.document.forms[0].name == "Relationship" ) {
+				parent.destination.document.forms[0].opmode.value="save";
+				parent.destination.document.forms[0].submitField.value="submit";
+				//parent.destination.document.forms[0].submit();
+				document.AgentMaintenance.WhereToGo.value="Relationship.jsp";									
+				return true;
+			}
+			else if ( parent.destination.document.forms[0].name == "LicenseForm" ) {
+				
+				if ( validateDOIValues(parent.destination.document.forms[0]) ) {
+				
+					parent.destination.document.forms[0].TypeChangeKey.value = "Submit";
+					//parent.destination.document.forms[0].submit();
+					document.AgentMaintenance.WhereToGo.value="License_DOI.jsp";
+					return true;
+				}
+				else
+					return false;
+			
+			}
+			
+			else {
+			
+				if ( parent.destination.document.forms[0].name == "AgreementsForm" )
+					document.AgentMaintenance.WhereToGo.value="Agreements.jsp";				
+				else if ( parent.destination.document.forms[0].name == "PaymentControlsForm" )
+					document.AgentMaintenance.WhereToGo.value="PaymentControls.jsp";				
+
+				parent.destination.document.forms[0].TypeChangeKey.value = "Submit";
+				//parent.destination.document.forms[0].submit();
+				return true;
+			}
+
+		}
+		else
+			return true;
+	}
+	else
+		return true;
+
+}
+
+
+
+
+
+function validateForm(theForm)
+ {	
+
+
+
+theForm.Status.disabled = false;			
+theForm.StatusReason.disabled = false;
+theForm.BrokerCategory.disabled = false;
+theForm.BrokerCategoryYear.disabled = false;
+theForm.Country.disabled = false;
+theForm.State.disabled = false;
+theForm.BroadcastMedium.disabled = false;
+theForm.BusinessType.disabled = false;	
+var errorStatus = false;
+var errorFields ="";
+  if(theForm.TaxID.value == "")
+   {
+	errorFields+="Tax ID is a required field \n";
+	errorStatus = true;
+   }	
+  else
+   {
+   	checkCompleteSetup(theForm.TaxID.name,theForm.TaxID.value);
+   }	   
+  if(theForm.FName.value == "")
+   {
+	errorFields+="First Name is a required field \n";
+	errorStatus	= true;			
+   }
+  else
+   {
+	checkCompleteSetup(theForm.FName.name,theForm.FName.value);
+   }
+  if(theForm.LName.value == "")
+   {
+	errorFields+="Last Name is a required field \n";
+ 	errorStatus = true;		
+   }
+  else
+   {
+	checkCompleteSetup(theForm.LName.name,theForm.LName.value);
+   }  
+  if(theForm.Line1.value == "")
+   {
+	errorFields+="Line1 is a required field\n";
+	errorStatus	= true;	
+   }
+  else
+   {
+	checkCompleteSetup(theForm.Line1.name,theForm.Line1.value);
+   }
+if(theForm.Honor.value != "")
+   {
+	checkCompleteSetup(theForm.Honor.name,theForm.Honor.value);
+   }
+if(theForm.MName.value != "")
+   {
+	checkCompleteSetup(theForm.MName.name,theForm.MName.value);
+   }
+if(theForm.Suffix.value != "")
+   {
+	checkCompleteSetup(theForm.Suffix.name,theForm.Suffix.value);
+   }
+if(theForm.Title.value != "")
+   {
+	checkCompleteSetup(theForm.Title.name,theForm.Title.value);
+   }
+if(theForm.FamiliarName.value != "")
+   {
+	checkCompleteSetup(theForm.FamiliarName.name,theForm.FamiliarName.value);
+   }
+
+if(theForm.Line2.value != "")
+   {
+	checkCompleteSetup(theForm.Line2.name,theForm.Line2.value);
+   }
+if(theForm.Line3.value != "")
+   {
+	checkCompleteSetup(theForm.Line3.name,theForm.Line3.value);
+   }
+if(theForm.Province.value != "")
+   {
+	checkCompleteSetup(theForm.Province.name,theForm.Province.value);
+   }
+if(theForm.County.value != "")
+   {
+	checkCompleteSetup(theForm.County.name,theForm.County.value);
+   }
+if(theForm.MailStop.value != "")
+   {
+	checkCompleteSetup(theForm.MailStop.name,theForm.MailStop.value);
+   }
+
+  if(theForm.City.value == "")
+   {
+	errorFields+="City is a required field \n";
+	errorStatus	= true;	
+   }
+  else
+   {
+	checkCompleteSetup(theForm.City.name,theForm.City.value);
+   }
+
+
+
+//Included by Sathish
+
+	var validZipValues = "0123456789";
+	var countryvalue = theForm.Country.value;
+	var zipvalue = theForm.Zip.value;
+
+	//Included to check state, zip validation
+	if ( countryvalue != "" ) {
+
+		if ( countryvalue == "USA" || countryvalue == "CAN" ) {
+
+			if ( theForm.State.value == "" ) {
+			       	errorFields+="Address cannot be saved without state when the country is USA or Canada\n";
+				errorStatus = true;
+				
+			}
+			else {
+
+				if ( countryvalue == "USA" )
+					checkState (theForm.State.value);
+				else if ( countryvalue == "CAN" )
+					checkCanadianState (theForm.State.value);
+
+			}
+
+			if ( theForm.Zip.value == "" ) {
+		       	errorFields+="Address cannot be saved without Zip when the country is USA or Canada\n";
+				errorStatus = true;
+			}
+			else {
+				checkCountry( theForm.Country.value );
+			}
+		}
+		else {
+			if ( zipvalue != "" ) {
+				//checkForValidZip( zipvalue );
+			}
+
+		}
+
+	}
+
+
+
+	function checkState ( state ) {
+		
+		var found = false;
+		var state = state;
+		state = state.toUpperCase();	
+		for(var i = 0 ; i < states.length ; i++)
+		{	
+			if(state == states[i])
+				{					
+					found = true;		
+					break;
+				}
+			else
+				continue;
+		}
+		if(found == false)
+		{
+			errorFields+="Invalid State \n";
+			errorStatus = true;	
+		}
+
+	}
+
+	function checkCanadianState ( state ) {
+		
+		var found = false;
+		var state = state;
+		state = state.toUpperCase();	
+		for(var i = 0 ; i < canadianStates.length ; i++)
+		{	
+			if(state == canadianStates[i])
+				{					
+					found = true;		
+					break;
+				}
+			else
+				continue;
+		}
+		if(found == false)
+		{
+			errorFields+="Invalid State \n";
+			errorStatus = true;	
+		}
+
+	}
+
+
+	function checkCountry ( country ) {
+		
+		var countryvalue = country;
+		var zipvalue = theForm.Zip.value;
+
+			if (country == "USA" && zipvalue.length > 0 ) {
+			
+				if ( zipvalue.length != 5 ) {
+					
+					if ( zipvalue.length == 10 ) {
+						checkZip5Plus4( zipvalue );
+					}
+					else if ( zipvalue.length == 9 ) {
+						errorFields+= "Zip code format for USA should be XXXXX or XXXXX-XXXX\n";
+						errorStatus = true;
+						theForm.Zip.focus();
+						return false;
+					}
+					else {
+						errorFields+= "Zip code for USA should be 5 or 5+4 digits \n";
+						errorStatus = true;
+						theForm.Zip.focus();
+						return false;
+					}
+				}
+				else if ( zipvalue.length == 5 )
+					checkZip( zipvalue );
+				
+			}
+
+
+			if (country == "CAN" && zipvalue.length > 0 && zipvalue.length!=6) {
+				errorFields+= "Zip code for Canada should be 6 digits \n";
+				errorStatus = true;
+				theForm.Zip.focus();
+				return false;
+			}
+			else if ( country == "CAN" && zipvalue.length == 6 )
+				checkCanZip( zipvalue );
+
+	}
+
+
+	function checkZip ( zip ) {
+		
+		var zipvalue = zip;
+
+		for (var i=0; i < zipvalue.length; i++) {
+			temp = "" + zipvalue.substring(i, i+1);
+				if (validZipValues.indexOf(temp) == "-1") {
+					errorFields+= "Invalid characters in Zip code\n";
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+	}
+
+	function checkZip5Plus4 ( zip ) {
+		
+		var zipvalue = zip;
+		var zipFive = zipvalue.substring(0,5);
+		var zipFour = zipvalue.substring(6,10);
+		var zipDelimiter = zipvalue.substring(5,6);
+		
+		if ( zipDelimiter != "-" ) {
+			errorFields+= "Zip code format should be XXXXX-XXXX\n";
+			errorStatus = true;
+			theForm.Zip.focus();
+			return false;
+		}
+
+
+		for (var i=0; i < zipFour.length; i++) {
+			temp = "" + zipFour.substring(i, i+1);
+				if (validZipValues.indexOf(temp) == "-1") {
+					errorFields+= "Invalid characters in Zip code\n";
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+
+		for (var i=0; i < zipFive.length; i++) {
+			temp = "" + zipFive.substring(i, i+1);
+				if (validZipValues.indexOf(temp) == "-1") {
+					errorFields+= "Invalid characters in Zip code\n";
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+	}
+	
+	function checkCanZip ( zip ) {
+		
+		var zipvalue = zip;
+		var canZipValid = "1234567890QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm";
+
+		for (var i=0; i < zipvalue.length; i++) {
+			temp = "" + zipvalue.substring(i, i+1);
+				if (canZipValid.indexOf(temp) == "-1") {
+					errorFields+= "Invalid characters in Zip code\n";
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+ if(theForm.EMail.value !="")
+   {
+	checkCompleteSetup(theForm.EMail.name,theForm.EMail.value);
+	checkEmail(theForm.EMail.value);
+   }
+  if(theForm.EffDate.value =="")
+   {
+	errorFields+="Effective Date is a required field \n";
+	errorStatus = true;
+   }
+  else
+   {
+	
+	//checkCompleteSetup(theForm.EffDate.name,theForm.EffDate.value);
+	var dtSts = chkDateValidation(theForm.EffDate.name,theForm.EffDate.value);	
+
+
+	if ( dtSts ) {
+	
+		//var sysDate = theForm.CurrentDate.value;	
+		//var jspDate = theForm.EffDate.value;	
+	
+     	if(theForm.OrgEffDate.value != theForm.EffDate.value) {
+
+			var ctSts = chkCurrentDate( theForm.EffDate.name, theForm.EffDate.value );
+	
+			if( !ctSts ) {
+				errorStatus = true;	
+				errorFields+="Effective date is not valid, as it cannot be lesser than current date\n";
+			}
+		}       
+	}
+	else {
+		errorStatus = true;	
+		errorFields+="Effective date is not valid";
+	
+	}
+
+   }
+
+
+ for(var i = 0 ; i <theForm.PhoneList.options.length ; i++)
+          {
+		theForm.PhoneNumbers.value+= theForm.PhoneList.options[i].value;
+		theForm.PhoneNumbers.value+="%";
+		
+	  }
+
+
+for(var count = 0 ; count < category.length ; count++)
+	{
+		
+		var both = category[count]+"-"+categoryYear[count];
+		theForm.AllCategory.value+= both +"/"
+	}
+
+if (errorStatus==true)
+   {
+	
+	alert( "Please correct the following error(s): "+"\n"+ errorFields );
+     	return false;
+   }
+   else 
+	return true;
+
+
+	function chkDateValidation(datename, datevalue){
+
+
+		var dateStatus = true;
+		
+	 	var validdate = "1234567890/";
+         	var err=0
+         	var psj=0;
+	      var a="";
+
+         	a=datevalue;
+		
+	 	if (a.length != 10) {
+			//errorFields += "\n" +  "Invalid "+datename;
+			//errorStatus = true;
+			dateStatus = false;
+		}
+		else {
+			for (var i=0; i < a.length; i++) {
+			temp = "" + a.substring(i, i+1);
+				if (validdate.indexOf(temp) == "-1") {
+					//errorFields += "\n" +  "Invalid Characters in "+datename;
+					//errorStatus = true;
+					dateStatus = false;
+				}
+			}
+		 }
+
+   	       d = a.substring(0, 2)
+      	 c = a.substring(2, 3)
+         	 b = a.substring(3, 5)
+         	 e = a.substring(5, 6)
+         	 f = a.substring(6, 10)
+
+ 	       //basic error checking
+
+      	 if (d<1 || d>12) {
+			//errorFields += "\n" + datename + "'s month invalid";
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+         	 if (c != '/' || e != '/' ) {
+			//errorFields += "\n" + "Invalid "+datename;
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+         	 if (b<1 || b>31) {
+			//errorFields += "\n" + datename + "'s date invalid";
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+         	 if (f<1900 || f>4000) {
+			//errorFields += "\n" + datename + "'s year invalid";
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+
+         	 // months with 30 days
+         	 if (d==4 || d==6 || d==9 || d==11){
+             	if (b==31) {
+				//errorFields += "\n" + "Only 30 days are there in the month of "+datename;
+				//errorStatus = true;
+				dateStatus = false;
+			}
+         	 }
+
+	      // february, leap year
+         	 if (d==2){
+              	// feb
+              	var g=parseInt(f/4)
+              	if (isNaN(g)) {
+				//errorFields += "\n" + "Month does not match for the leap year in "+datename;
+				//errorStatus = true;
+					dateStatus = false;
+
+	            }
+
+             	if (b>29) {
+				//errorFields += "\n" + "Month and Date do not match in "+datename;
+				//errorStatus = true;
+				dateStatus = false;
+		 	}
+
+             	if (b==29 && ((f/4)!=parseInt(f/4))) {
+				//errorFields += "\n" + "Invalid "+datename;
+				//errorStatus = true;
+				dateStatus = false;
+	       	}
+		 }
+		 
+		 if ( dateStatus )
+		 	return true;
+		 else
+		 	return false;
+
+	} // end of checkValidation()
+
+
+
+	function chkCurrentDate( datename, datevalue ) {
+
+
+		var currentDtSts = true;
+
+		var sysDate = document.forms[0].CurrentDate.value;
+
+		var month = sysDate.substring(0, 2);
+		var date = sysDate.substring(3, 5);
+		var year = sysDate.substring(6, 10);
+
+
+		//month = month +1 ;
+	
+		/*
+		if ( ( month / 2 ) < 5 )
+			month = "0" + month;
+
+		if ( ( date / 2 ) < 5 )
+			date = "0" + date;
+		*/
+		
+		
+		var currentDate =  month + "/" +date+ "/" +year;
+
+		    var chmm = datevalue.substring(0, 2);
+         	var chdd = datevalue.substring(3, 5);
+         	var chyyyy = datevalue.substring(6, 10);
+
+
+		if ( chyyyy > year ) {
+		
+		}
+		else if ( chyyyy == year ) {
+
+			if ( chmm > month ) {
+			}
+			else if ( chmm == month ) {
+				if ( chdd < date ) {
+
+					//errorFields += "\n" + datename + "'s day cannot be lesser than today";
+					//errorStatus = true;
+					currentDtSts = false;
+				}
+			}
+			else {
+				currentDtSts = false;
+			}
+
+		}
+		else {
+			currentDtSts = false;
+		}
+		
+		if ( currentDtSts )
+			return true;
+		else
+			return false;
+
+	}
+
+
+	
+
+function checkCompleteSetup(name,value)
+{
+
+var TaxID = "1234567890";
+var Name = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";	
+var Line1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890, ";
+var City = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+var MailStop = "#1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+var EffDate = "1234567890/";
+var EMail = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@1234567890.";
+var valid = "";
+if(name == "TaxID" || name =="Zip")
+	{	
+		valid = TaxID;
+	}
+else if(name == "Honor" ||  name == "FName" || name == "MName" || name == "LName" || name == "Suffix" || name == "Title" || name == "FamiliarName" )
+	{
+		valid = Name;
+	}
+else if(name == "Line1" || name == "Line2" || name == "Line3")
+	{
+		valid = Line1;
+	}
+else if(name == "City" || name == "Province" || name == "County" || name == "Location")
+	{
+		valid = City;
+	}
+else if(name == "MailStop")  
+	{
+		valid = MailStop;
+	}
+else if(name == "EffDate")
+	{
+		valid = EffDate;
+	}
+else if(name == "EMail")
+	{
+		valid = EMail;
+	}
+if(name == "TaxID" && value.length < 9)
+	{
+	errorFields+=name+" should be 9 digits \n";	
+	errorStatus = true;
+     	}
+if(name == "Zip" && value.length < 5)
+	{
+	errorFields+=name+" should be 5 digits \n";	
+	errorStatus = true;
+     	}
+
+if(valid.length > 1)
+{
+ for (var i=0; i < value.length; i++) 
+  {
+   temp = "" + value.substring(i, i+1);
+   if (valid.indexOf(temp) == "-1") 
+     {
+       errorFields+="Invalid characters in "+name+" \n";
+       errorStatus=true;      
+       break;
+     }
+  }
+ }
+
+}
+
+function checkEmail(email) 
+ {
+  invalidChars = " /:,;"
+   for (i=0; i<invalidChars.length; i++) 
+     {    
+	badChar = invalidChars.charAt(i)
+	if (email.indexOf(badChar,0) > -1) 
+         {
+	   errorFields+="Invalid characters in Email\n";
+           errorStatus=true;
+	 }
+    }
+  atPos = email.indexOf("@",1)	
+  if (atPos == -1)
+   {
+  	errorFields+="Enter proper Email \n";
+       errorStatus=true;
+	return;
+	
+   }
+
+  if (email.indexOf("@",atPos+1) != -1)
+   {	
+  	errorFields+="Enter proper Email  \n";
+       errorStatus=true;
+	return;
+   }
+
+  periodPos = email.indexOf(".",atPos)
+  if (periodPos == -1)
+   {	  
+	errorFields+="Enter proper Email  \n";
+        errorStatus=true;
+	return;
+   }
+
+  if (periodPos+4 > email.length)	
+    {	
+       errorFields+="Enter proper Email  \n";
+       errorStatus=true;
+
+    } 
+ }
+
+
+}//End of validateForm function
+
+var oldNo = false;
+var phoneIK = "0000";
+var disableList = true;
+var faxFound = false;
+
+
+// Added by Sathish
+
+
+
+//Added by Sathish in 12/18/2001
+
+function addToList( theForm ) {
+
+	if ( checkAllValid(theForm.CountryCode.value, theForm.AreaCode.value, theForm.Number.value, theForm.Ext.value) ) {
+		if ( checkForDuplication( theForm ) ) {
+			if ( validateForm(theForm) ) {
+				theForm.StatusIndicator.value = "";
+				theForm.PhoneAction.value = "AddPhone";
+
+				if ( theForm.PhoneIK.value == "") 
+					theForm.PhoneIK.value = "0";
+
+				setWhereToGo( theForm );
+
+				theForm.submit();
+			}
+		}
+	}
+
+}
+
+
+
+function deleteFromList( theForm ) {
+
+	if ( theForm.OldNumberIndicator.value == "true" ) {
+
+		if ( validateForm( theForm ) ) {
+
+				theForm.StatusIndicator.value = "D";
+				theForm.PhoneAction.value = "DeletePhone";
+				setWhereToGo( theForm );
+
+				theForm.submit();
+
+
+		}
+
+	}
+	else {
+		alert( "The Phone number should be selected from the list to delete" );
+	}
+
+}
+
+
+function setWhereToGo ( theForm ) {
+
+	if ( parent.destination != undefined )  {
+	
+			if ( parent.destination.document.forms[0] != undefined ) {
+				if ( parent.destination.document.forms[0].name == "AddTypeForm" )
+					theForm.WhereToGo.value="AdditionalAddress.jsp";
+				if ( parent.destination.document.forms[0].name == "AgreementsForm" )
+					theForm.WhereToGo.value="Agreements.jsp";			
+				if ( parent.destination.document.forms[0].name == "LicenseForm" )
+					theForm.WhereToGo.value="License_DOI.jsp";			
+				if ( parent.destination.document.forms[0].name == "PaymentControlsForm" )
+					theForm.WhereToGo.value="PaymentControls.jsp";			
+				if ( parent.destination.document.forms[0].name == "ContactPerson" )
+					theForm.WhereToGo.value="ContactPersonInfo.jsp";			
+				if ( parent.destination.document.forms[0].name == "Relationship" )
+					theForm.WhereToGo.value="Relationship.jsp";			
+					
+			}
+		
+	
+	}
+
+
+}
+
+
+//Rewrote by Sathish on 11/19/2001
+
+function checkAllValid(iCountryCode,iAreaCode,iNumber,iExtension)
+ {	
+
+	var phoneErrorStatus = "false";
+	var phoneErrorFields = "Please correct the following error(s):";
+
+	if ( iCountryCode == "" ) {
+		phoneErrorFields += "\n"+"CountryCode is a required field";
+		phoneErrorStatus = "true";
+
+	}
+	else {
+		/*if ( iCountryCode.length < 3 ) {
+			phoneErrorFields += "\n"+"CountryCode should be 3 digits";
+			phoneErrorStatus = "true";
+		}
+		else {
+		*/
+			checkChar(iCountryCode);
+		//}
+
+	}
+
+	if ( iAreaCode == "" ) {
+		phoneErrorFields += "\n"+"AreaCode is a required field";
+		phoneErrorStatus = "true";
+
+	}
+	else {
+		if ( iAreaCode.length < 3 ) {
+			phoneErrorFields += "\n"+"AreaCode should be 3 digits";
+			phoneErrorStatus = "true";
+		}
+		else {
+			checkChar(iAreaCode);
+		}
+
+	}
+
+	if ( iNumber == "" ) {
+		phoneErrorFields += "\n"+"Number is a required field";
+		phoneErrorStatus = "true";
+
+	}
+	else {
+		if ( iNumber.length < 7 ) {
+			phoneErrorFields += "\n"+"Number should be 7 digits";
+			phoneErrorStatus = "true";
+		}
+		else {
+			checkChar(iNumber);
+		}
+
+	}
+
+
+	if ( iExtension != "" ) {
+		checkChar(iExtension);
+	}
+
+	
+	function checkChar(iValue) {
+
+		var valid = "0123456789";  
+
+	 	for (var i=0; i < iValue.length; i++) 
+  		{
+   			temp1 = "" + iValue.substring(i, i+1);
+   			if (valid.indexOf(temp1) == "-1") 
+     				{
+					phoneErrorFields += "\n"+"Invalid Phone Number";
+					phoneErrorStatus = "true";
+					break;
+     				}
+ 		}
+	
+	  }
+
+
+	if ( phoneErrorStatus == "true" ) {
+
+		alert( phoneErrorFields );
+		return false;
+	}
+	else
+		return true;
+		
+
+ }
+
+
+
+   function checkChar(iValue) {
+
+	var valid = "0123456789";  
+
+ 	for (var i=0; i < iValue.length; i++) 
+  		{
+   			temp1 = "" + iValue.substring(i, i+1);
+   			if (valid.indexOf(temp1) == "-1") 
+     				{
+       				alert( "Phone Number should not have character \n" );					
+					return false;
+       				break;
+     				}
+ 		}
+	
+   }
+
+
+
+
+   function popAgain( popList, popValue ) {
+
+	var values = popValue;
+
+	for( var m=0; m < popList.length; m++ ) {
+		if ( popList.options[m].selected == true ) {
+			listIndex = m;
+			break;
+		}
+	}
+
+
+	var temp;
+
+	var count = new Array();
+	var splitData = new Array();
+		
+	var j = 0;
+	for (var i=0; i < values.length; i++) {
+		temp = "" + values.substring(i, i+1);
+
+		if ( temp == (":" ) ) {
+			count[j] = i;
+			j++;
+		}
+		
+	}
+	count[j] = values.length;
+
+	var k = 0;
+	for ( i=0; i < count.length; i++ ) {
+		splitData[i] = values.substring( k, count[i] );
+		k = count[i]+1;
+	}
+	
+	
+	if ( splitData[1] == undefined || splitData[2] == undefined || splitData[3] == undefined) {
+	
+		alert( "Click on the Phone number you want to populate in the fields" );
+	}
+	else {	
+
+		document.forms[0].PhoneType.value = splitData[0];
+		document.forms[0].CountryCode.value = splitData[1];
+		document.forms[0].AreaCode.value = splitData[2];
+		document.forms[0].Number.value = splitData[3];
+		document.forms[0].Ext.value = splitData[4];
+		document.forms[0].StatusIndicator.value = splitData[5];
+		document.forms[0].PhoneIK.value = splitData[6];
+	
+		if ( splitData[7] == "Y" )
+			document.forms[0].Preference.checked = 1;
+		else
+			document.forms[0].Preference.checked = 0;
+	
+		document.forms[0].OldNumberIndicator.value = "true";
+		
+	}
+
+   }
+
+
+
+   function checkForDuplication(theForm) {
+
+	
+	var phntype = 	document.forms[0].PhoneType.value;
+	var ccode = document.forms[0].CountryCode.value;
+	var acode = document.forms[0].AreaCode.value;
+	var num = document.forms[0].Number.value;
+	var extn = document.forms[0].Ext.value;
+	var phoneIndex = "-1";
+	var phoneStatus = true;
+
+	var phoneno = phntype+"-"+ccode+"-"+acode+"-"+num+"-"+extn;
+
+
+	for( var m=0; m < theForm.PhoneList.length; m++ ) {
+		if ( theForm.PhoneList.options[m].selected == true ) {
+			phoneIndex = m;
+			break;
+		}
+	}
+
+
+	for( var s=0; s < theForm.PhoneList.length; s++ ) {
+
+		if ( s != phoneIndex ) {
+
+			var values = theForm.PhoneList.options[s].value;
+
+			var temp;
+			var count = new Array();
+			var PhoneData = new Array();
+		
+			var j = 0;
+			for (var i=0; i < values.length; i++) {
+				temp = "" + values.substring(i, i+1);
+	
+				if ( temp == (":" ) ) {
+					count[j] = i;
+					j++;
+				}
+			
+			}
+			count[j] = values.length;
+
+			var k = 0;
+			for ( i=0; i < count.length; i++ ) {
+				PhoneData[i] = values.substring( k, count[i] );
+				k = count[i]+1;
+			}
+
+			var oldphone = PhoneData[0]+"-"+PhoneData[1]+"-"+PhoneData[2]+"-"+PhoneData[3]+"-"+PhoneData[4];
+
+			if ( phoneno == oldphone ) {
+
+				alert( "Phone number already exists in the List" );
+				phoneStatus = false;
+				break;
+			}
+
+
+		}
+
+	}
+
+	if ( phoneStatus )
+		return true;
+	else
+		return false;
+
+
+   }
+
+
+
+
+
+
+
+
+function popList(list,type,ctry,area,num,ext,pref,stsind)  
+ {   
+
+	var errorStatus = false;
+	var errorMessage = "";
+	var countryCode="";
+	if(ctry != "")
+		{
+	 		countryCode = ctry
+		}
+	var areaCode = area;
+	var number	= num;
+
+	var extension = ext;	
+	
+	//Added by Sathish on 11/19/2001
+	if ( ext == "" )
+		extension = "     ";
+	else if ( ext.length == 4 )
+		extension = ext+ " ";
+	else if ( ext.length == 3 )
+		extension = ext+ "  ";
+	else if ( ext.length == 2 )
+		extension = ext+ "   ";
+	else if ( ext.length == 1 )
+		extension = ext+ "    ";
+
+
+	var prefText;
+	var prefValue;
+	var nonPrefText;
+	var nonPrefValue;
+	var check = checkAllValid(countryCode,areaCode,number,extension);
+	if(check == false)
+		{
+			return false;
+		}
+
+	var PhoneType ="";
+	
+
+	 listLength = list.options.length;
+
+
+ 	if( type == "B")
+          PhoneType =" Business";
+       else if ( type =="P")
+          PhoneType = "    Pager";
+       else if ( type == "M")
+          PhoneType ="   Mobile";
+       else if ( type == "R")
+          PhoneType = "Residence";
+       else if ( type == "F")
+          PhoneType = "      Fax";
+
+     	var prefered = pref;	
+
+	var lastHyphen ;
+
+
+	if(prefered == false)
+		{
+			nonPrefText =PhoneType+":"+countryCode+"-"+areaCode+"-"+number+"-"+extension+"-"+stsind;
+			nonPrefValue =type+":"+countryCode+"-"+areaCode+"-"+number+"-"+extension+"-"+stsind+"-"+phoneIK;			
+			lastHyphen = nonPrefValue
+		}
+	
+	if(prefered == true)	
+		{	
+			prefText = PhoneType+":"+countryCode+"-"+areaCode+"-"+number+"-"+extension+"*"+"-"+stsind;		 
+			prefValue =type+":"+countryCode+"-"+areaCode+"-"+number+"-"+extension+"*"+"-"+stsind+"-"+phoneIK;
+			lastHyphen = prefValue;	
+		}
+
+	var nonPrefNo = new Option();
+	nonPrefNo.value = nonPrefValue;
+	nonPrefNo.text = nonPrefText;
+
+	var prefNo = new Option();
+       prefNo.value = prefValue;
+       prefNo.text = prefText;
+
+
+		
+	var extraRow = new Option();
+	extraRow.value = " ";
+	extraRow.text = " ";
+
+	var found = false;
+	
+	if(prefered == true && list.options.length >= 1)
+		{
+			var checkForExistsPhone = PhoneType+":"+countryCode+"-"+areaCode+"-"+number+"-"+extension+"-"+stsind;
+		       var exists = checkForExists(list,checkForExistsPhone);			
+			if(exists == true)
+				{
+					//refresh();
+					return false;
+				}
+		}
+	else if(prefered == false && list.options.length >= 1)
+		{
+			var checkForExistsPhone = PhoneType+":"+countryCode+"-"+areaCode+"-"+number+"-"+extension+"-"+stsind;
+		       var exists = checkForExists(list,checkForExistsPhone);
+			if(exists == true)
+				{
+					//refresh();
+					return false;
+				}		
+		}
+	if(list.options.length == 0 )
+		{	
+		
+			addFirstRow(list);
+		}  	
+
+
+	var tempFirstValue = list.options[0].value;
+	var tempFirstText = list.options[0].text;	
+	
+	var tempSubValue = tempFirstValue;
+	var tempTextLength = tempFirstText.length;
+
+	var tempLastHyphen;
+ 	for( var j = 0 ; j < tempFirstValue.length ; j++)
+  		{
+   		 	if(tempFirstValue.substring(j,j+1) =="-")
+     				{
+      					tempLastHyphen=j;	
+								
+     				}
+  		}
+	//var star = tempFirstValue.substring(tempLastHyphen,tempLastHyphen-1)
+	
+	var star = tempFirstValue.substring(tempLastHyphen,tempLastHyphen-1);
+	var starlocation = 1;
+
+	alert( "Star: "+star );
+
+	if ( star == "D" ) {
+		star = tempFirstValue.substring(tempLastHyphen-2,tempLastHyphen-3);
+		starlocation = 2;
+	}
+	else if ( star == "-" ) {
+		star = tempFirstValue.substring(tempLastHyphen-1,tempLastHyphen-2);
+		starlocation = 3;
+	}
+
+	var nonStar = new Option();
+	var tempFirstPhoneIK = tempFirstValue.substring(tempLastHyphen);
+
+	var tempValueLength = tempFirstValue.length;
+
+	var count = 0;
+
+ 	for( var j = 0 ; j < tempValueLength.length ; j++)
+  		{
+   		 	if(tempValueLength.substring(j,j+1) ==":")
+     				{
+      					count=j+1;
+					break;
+     				}
+  		}
+
+	var tempType = tempFirstValue.substring(0,1);
+ 	var tempCountry =  tempFirstValue.substring(count+2,count+5);
+ 	var tempAreaCode =  tempFirstValue.substring(count+6,count+9);
+ 	var tempNumber =  tempFirstValue.substring(count+10,count+17);
+	var tempExt =  tempFirstValue.substring(count+18,count+23);
+	var extpref = tempFirstValue.substring(count+18,count+24);
+	var tempPref = extpref.substring(extpref.length-1,extpref.length);
+
+
+	var newTempValue = tempType +":"+ tempCountry +"-"+ tempAreaCode +"-"+ tempNumber +"-"+ tempExt+tempPref;
+
+	alert( "new value: "+newTempValue );
+
+	if(star == "*")
+		{
+
+/*			if ( starlocation == 1 ) {
+				nonStar.value = tempFirstValue.substring(0,tempLastHyphen-1)+"-"+tempFirstPhoneIK;
+				nonStar.text = tempFirstText.substring(0,tempTextLength-1);
+
+
+
+			}
+			nonStar.value = tempFirstValue.substring(0,tempLastHyphen-1)+"-"+tempFirstPhoneIK;
+			nonStar.text = tempFirstText.substring(0,tempTextLength-1);
+
+*/
+
+			nonStar.value = newTempValue.substring(0,newTempValue.length-1) +"-"+ tempFirstPhoneIK;
+
+			if ( starlocation == 1 ) {
+				nonStar.text = tempFirstText.substring(0,tempTextLength-1);
+			}
+			if ( starlocation == 2 ) {
+				nonStar.text = tempFirstText.substring(0,tempTextLength-3)+"-D";
+			}
+			else if ( starlocation == 3 ) {
+				nonStar.text = tempFirstText.substring(0,tempTextLength-2)+"-";
+			}
+
+			alert( "Value with star: "+ nonStar.value );
+			alert( "Text with star: "+ nonStar.text );
+
+		}
+	else
+   		{
+			nonStar.value = tempFirstValue;
+			nonStar.text = tempFirstText;
+			alert(  "Temp value wout start: "+nonStar.value );
+		}
+
+
+
+
+	if(prefered == true && oldNo == false && listLength >0)
+		{	
+		
+			pushDown(list);			
+		
+		}	
+	else if(prefered == false && oldNo == false && listLength >0)
+		{	
+				
+					addAtLast(list);
+		}
+		
+	
+	else if(prefered == true && oldNo == true && listLength >0)
+        {
+        for(var i=0 ; i < list.options.length; i++) 
+		{	
+			if(list.options[i].selected && list.options[i] != "") 
+          			{	
+					
+					list.options[i].value = "";
+					list.options[i].text = "";					
+   	   			}
+				
+		  }	
+		sortList(list);
+		oldNo = false;
+         }
+         else if(prefered == false && oldNo == true && listLength >0) 
+	   {	
+		modifyAtSame(list);
+	
+          }
+
+
+//---------------------------------------------
+function sortList(ilist) 
+	{	
+		for(var i = 0; i < ilist.options.length; i++) 
+			{
+				if(ilist.options[i].value == "")  
+					{	
+						ilist.options[0].value = nonStar.value;
+						ilist.options[0].text = nonStar.text;
+						//ilist.options[0] = nonStar;
+						for(var j = i; j > 0; j--)  
+							{
+							
+								ilist.options[j].value = ilist.options[j - 1].value;
+								ilist.options[j].text = ilist.options[j - 1].text;
+							}					
+   					}
+			}
+	ilist.options[0] = prefNo;
+	oldNo = false;
+	refresh();
+       }
+//----------------------------------------------------
+function pushDown(ilist)
+ {
+
+		alert( "inside pushdown: "+tempFirstText.substring(tempTextLength,tempTextLength-1) );
+
+		if(tempFirstText.substring(tempTextLength,tempTextLength-1)== "*")
+				{
+					
+					ilist.options[listLength] = extraRow;						
+					ilist.options[0].value = nonStar.value;
+					ilist.options[0].text = nonStar.text;	
+					//ilist.options[0] = nonStar;			
+					for(var j = ilist.options.length ; j >1 ; j--)  
+						{	
+							ilist.options[j-1].value = ilist.options[j-2].value;
+							ilist.options[j-1].text = ilist.options[j-2].text;
+											
+						}	
+							ilist.options[0] = prefNo;	
+							oldNo = false;													
+							refresh();
+   				}
+			else	if(tempFirstText.substring(tempTextLength,tempTextLength-1)!= "*")
+				{
+							
+					ilist.options[listLength] = extraRow;						
+					for(var j = ilist.options.length ; j >1 ; j--)  
+						{	
+							ilist.options[j-1].value = ilist.options[j-2].value;
+							ilist.options[j-1].text = ilist.options[j-2].text;
+											
+						}	
+							ilist.options[0] = prefNo;														
+							oldNo = false;											
+							refresh();
+
+   				}
+	
+ }
+
+//------------------------------------------------------
+function addFirstRow(ilist)
+ {
+	if(prefered == true)
+		{
+			document.AgentMaintenance.PhoneList.style.visibility = "";
+			ilist.options[0]=prefNo;
+			refresh();
+		}
+	else if (prefered == false)
+		{	
+			
+			document.AgentMaintenance.PhoneList.style.visibility = "";
+		       ilist.options[0]=nonPrefNo;									
+			refresh();			
+		}
+ }
+//--------------------------------------------------------------------
+function addAtLast(ilist)
+  {	
+	document.AgentMaintenance.PhoneList.style.visibility = "";
+	ilist.options[listLength] = nonPrefNo;
+	refresh();
+
+  }
+//----------------------------------------------------------------------
+function modifyAtSame(ilist)
+ {	
+	for(var i=0 ; i < ilist.options.length; i++) 
+		{
+			if(ilist.options[i].selected) 
+          			{
+					document.AgentMaintenance.PhoneList.style.visibility = "";
+					ilist.options[i] = nonPrefNo;
+
+					found=true;
+					oldNo = false;
+					refresh();
+					break;
+					
+   	   			}	
+		  }
+
+  }
+
+
+//Rewrote by Sathish on 11/19/2001
+
+function checkAllValid(iCountryCode,iAreaCode,iNumber,iExtension)
+ {	
+
+	var phoneErrorStatus = "false";
+	var phoneErrorFields = "Please correct the following error(s):";
+
+	if ( iCountryCode == "" ) {
+		phoneErrorFields += "\n"+"CountryCode is a required field";
+		phoneErrorStatus = "true";
+
+	}
+	else {
+		if ( iCountryCode.length < 3 ) {
+			phoneErrorFields += "\n"+"CountryCode should be 3 digits";
+			phoneErrorStatus = "true";
+		}
+		else {
+			checkChar(iCountryCode);
+		}
+
+	}
+
+	if ( iAreaCode == "" ) {
+		phoneErrorFields += "\n"+"AreaCode is a required field";
+		phoneErrorStatus = "true";
+
+	}
+	else {
+		if ( iAreaCode.length < 3 ) {
+			phoneErrorFields += "\n"+"AreaCode should be 3 digits";
+			phoneErrorStatus = "true";
+		}
+		else {
+			checkChar(iAreaCode);
+		}
+
+	}
+
+	if ( iNumber == "" ) {
+		phoneErrorFields += "\n"+"Number is a required field";
+		phoneErrorStatus = "true";
+
+	}
+	else {
+		if ( iNumber.length < 7 ) {
+			phoneErrorFields += "\n"+"Number should be 7 digits";
+			phoneErrorStatus = "true";
+		}
+		else {
+			checkChar(iNumber);
+		}
+
+	}
+
+
+	if ( iExtension != "" ) {
+		checkChar(iExtension);
+	}
+
+	
+	function checkChar(iValue)
+	  {	
+		var valid = "0123456789 ";  
+
+	 	for (var i=0; i < iValue.length; i++) 
+  		{
+   			temp1 = "" + iValue.substring(i, i+1);
+   			if (valid.indexOf(temp1) == "-1") 
+     				{
+					phoneErrorFields += "\n"+"Invalid Phone Number";
+					phoneErrorStatus = "true";
+					break;
+     				}
+ 		}
+	
+	  }
+
+
+	if ( phoneErrorStatus == "true" ) {
+
+		alert( phoneErrorFields );
+		document.AgentMaintenance.CountryCode.focus();
+		return false;
+	}
+		
+
+ }
+
+
+
+function checkForExists(ilist,iPhone)
+ 	{
+	    if(ilist.options.length >=1)
+              {
+		for(var i=0 ; i < ilist.options.length; i++) 
+			{	
+				var listPhone = ilist.options[i].text
+
+				//Added by sathish to implement delete functionality
+
+				var star = listPhone.substring(listPhone.length,listPhone.length-1);
+				if ( star == "D" )
+					star = listPhone.substring(listPhone.length-3,listPhone.length-2);
+				else if ( star == "-" )
+					star = listPhone.substring(listPhone.length-2,listPhone.length-1);
+
+
+
+				if(star == "*")
+					listPhone = listPhone.substring(0,listPhone.length-1);													
+
+				alert( "Phones from list:"+listPhone+"XXX\nPhones from list:"+iPhone+"XXX" );
+				if( listPhone == iPhone && !ilist.options[i].selected)
+					{	
+						alert("This phone no already exists in List \n");
+						document.AgentMaintenance.CountryCode.focus();												
+						return true;					
+       					
+					}
+			}				
+	       }
+	}
+
+function checkForFaxInPhoneList(ilist)
+{	
+			
+	for(var i=0 ; i < ilist.options.length; i++) 
+		{	
+			var listValue = ilist.options[i].value;
+			if(listValue.substring(0,1) == "F")
+				{	
+					faxFound = true;
+					enableFaxInBroadcastMedium();					
+					disableList = false;
+					document.AgentMaintenance.PhoneList.style.background = "white";
+				}		
+		}
+
+		if(faxFound !=true && document.AgentMaintenance.EMail.value != "")
+		{
+			enableEMailInBroadcastMedium();
+			faxFound = false;
+		}
+		else if(faxFound !=true && document.AgentMaintenance.EMail.value == "")
+		{
+			document.AgentMaintenance.BroadcastMedium.value = "";
+			faxFound = false;
+		}
+		faxFound = false;
+
+
+}
+
+function refresh()
+	{
+		document.AgentMaintenance.PhoneType.value = "B";
+		document.AgentMaintenance.CountryCode.value = "";
+		document.AgentMaintenance.AreaCode.value = "";
+		document.AgentMaintenance.Number.value = "";
+		document.AgentMaintenance.Ext.value = "";
+		document.AgentMaintenance.CountryCode.focus();
+		document.AgentMaintenance.Preference.checked =0;
+
+	}
+
+        checkForFaxInPhoneList(list);
+	phoneIK = "0000";	
+	return true;	
+}	// end of popList function
+
+//--------------------------------------------------------------------
+
+
+
+
+//-------------------------------------------------------------------------
+
+function bringBack(box,val)
+  {		
+
+	alert( "From list:"+box.options[1].text+"XXX" );
+
+	var count=0;
+	var lastHyphen = 0;
+ 	for( var j = 0 ; j < val.length ; j++)
+  		{
+   		 	if(val.substring(j,j+1) ==":")
+     				{
+      					count=j+1;
+					break;
+     				}
+  		}
+ 	for( var j = 0 ; j < val.length ; j++)
+  		{
+   		 	if(val.substring(j,j+1) =="-")
+     				{
+      					lastHyphen=j+1;					
+     				}
+  		}
+
+
+	var type=0;
+	var country=0;
+	var area=0;
+	var no=0;
+	var ext=0;
+	var pref = 0;
+
+	var fChar= val.substring(0,1);
+	
+	for(var fchar = 0 ; fchar < val.length ; fchar++)
+		{
+			if(val.substring(fchar,fchar+1) !=" ")
+				{
+					fChar = val.substring(fchar,fchar+1);
+					break;
+				}
+		}
+
+	if(fChar =="P")
+ 		{
+			type="P";
+		}
+	else if(fChar=="B")
+	 	{
+			type = "B";
+		}
+	else if(fChar=="F")
+		{
+			type = "F";
+		}
+       else if(fChar =="M")
+		{
+			type = "M";
+		}
+	else if (fChar =="R")
+		{
+			type = "R";
+		}
+
+ 	country = val.substring(count,count+3);
+	if(country == "   ")
+		country = "";
+ 	area = val.substring(count+4,count+7);
+ 	no = val.substring(count+8,count+15);
+	ext = val.substring(count+16,count+21);
+
+	var extpref = val.substring(count+16,count+22);
+
+	//pref = val.substring(lastHyphen-1,lastHyphen-2);
+	pref = extpref.substring(extpref.length-1,extpref.length);
+
+	if ( pref != "*" )
+		pref = "";
+
+	//added by sathish 11/19/2001
+	while( ext.charAt(ext.length-1)=='&nbsp;')
+		ext=ext.substring(0,ext.length-1);
+
+	while( ext.charAt(ext.length-1)==' ')
+		ext=ext.substring(0,ext.length-1);
+
+
+	phoneIK = val.substring(lastHyphen,val.length);
+
+	if(disableList !=true)
+	{
+ 	document.AgentMaintenance.PhoneType.value = type;
+	document.AgentMaintenance.CountryCode.value = country;
+	document.AgentMaintenance.AreaCode.value = area;
+	document.AgentMaintenance.Number.value = no;
+	document.AgentMaintenance.Ext.value = ext;
+	}
+	
+	if(pref == "*")
+		{
+			document.AgentMaintenance.Preference.checked = 1;
+			oldNo = true;
+		}	
+	else
+		{
+	  		document.AgentMaintenance.Preference.checked = 0;
+			oldNo = true;
+		} 
+
+}
+
+
+function setIndicatorForDelete(theForm) {
+
+	theForm.StatusIndicator.value = "D";
+
+	if ( oldNo ) {
+
+		popList(theForm.PhoneList,theForm.PhoneType.value,theForm.CountryCode.value,theForm.AreaCode.value,theForm.Number.value,theForm.Ext.value,theForm.Preference.checked,theForm.StatusIndicator.value);
+		return true;
+	}
+	else {
+
+		alert( "Select a phone from the list to delete" );
+		return false;
+	}
+	
+
+}
+
+
+function setIndicatorForAdd() {
+
+	document.AgentMaintenance.StatusIndicator.value = " ";
+
+}
+
+function listHide()			//to hide the list when nophone added to that
+ {
+//	document.AgentMaintenance.PhoneList.style.visibility = "hidden";
+ }
+
+//--------------------------------------------------------------------
+function enableAll(form)	//Enabling all the Fields when Edit clicked
+ {
+   var totalElements = document.AgentMaintenance.elements.length;
+   for ( var i = 0 ; i <totalElements ; i++)
+    {	
+	if(document.AgentMaintenance.elements[i].name != "bid" && document.AgentMaintenance.elements[i].name != "StatusDate" && document.AgentMaintenance.elements[i].name != "changeType"  && document.AgentMaintenance.elements[i].name != "TitleButton")
+		{	
+			document.AgentMaintenance.elements[i].style.background = "white";
+			document.AgentMaintenance.elements[i].onfocus = null;			
+		}
+    }
+  enableDropDowns();
+  disableList = false;
+}
+
+function checkForFaxInPhoneList()
+{	
+	
+	for(var i=0 ; i < document.AgentMaintenance.PhoneList.options.length; i++) 
+		{	
+			var listValue = document.AgentMaintenance.PhoneList.options[i].value;
+			if(listValue.substring(0,1) == "F")
+				{	
+					faxFound = true;
+					enableFaxInBroadcastMedium();					
+					disableList = false;
+					document.AgentMaintenance.PhoneList.style.background = "white";
+				}		
+		}
+	if(faxFound !=true && document.AgentMaintenance.EMail.value != "")
+		{
+			enableEMailInBroadcastMedium();
+			faxFound = false;
+		}
+	else if(faxFound !=true && document.AgentMaintenance.EMail.value == "")
+		{
+			document.AgentMaintenance.BroadcastMedium.value = "";
+			faxFound = false;
+		}
+	faxFound = false;
+}
+
+function enableFaxInBroadcastMedium()
+{	
+	document.AgentMaintenance.BroadcastMedium.value = "F";
+}
+
+function enableEMailInBroadcastMedium()
+{	
+	document.AgentMaintenance.BroadcastMedium.value = "E";
+
+}
+
+function checkForEMailAndFax(sel)
+{
+	var canSelect = false;
+	if(sel == "F")
+	{
+	for(var i=0 ; i < document.AgentMaintenance.PhoneList.options.length; i++) 
+		{	
+			var listValue = document.AgentMaintenance.PhoneList.options[i].value;
+			if(sel == listValue.substring(0,1))
+				canSelect = true;
+		}
+	}
+	else if (sel =="E")
+	{
+		if(document.AgentMaintenance.EMail.value != "")
+		canSelect = true;
+	}
+  if(canSelect != true)
+	{
+		alert("Sorry BroadcastMedium choosen is not valid");
+		document.AgentMaintenance.BroadcastMedium.value = document.AgentMaintenance.PreviousBrdcst.value;
+	}	
+}
+function checkEffDateChanged()
+{	
+	document.AgentMaintenance.EffDateChanged.value = "changed";	
+	
+}
+
+function disableDropDowns()
+{
+	document.AgentMaintenance.Status.disabled = true;			
+	document.AgentMaintenance.StatusReason.disabled = true;
+	document.AgentMaintenance.BrokerCategory.disabled = true;
+	document.AgentMaintenance.BrokerCategoryYear.disabled = true;
+	document.AgentMaintenance.Country.disabled = true;
+	document.AgentMaintenance.BroadcastMedium.disabled = true;
+	document.AgentMaintenance.BusinessType.disabled = true;	
+	document.AgentMaintenance.changeType[0].disabled = true;
+	document.AgentMaintenance.changeType[1].disabled = true;	
+}
+function enableDropDowns()
+{
+	document.AgentMaintenance.Status.disabled = false;			
+	document.AgentMaintenance.StatusReason.disabled = false;
+	document.AgentMaintenance.BrokerCategory.disabled = false;
+	document.AgentMaintenance.BrokerCategoryYear.disabled = false;
+	document.AgentMaintenance.Country.disabled = false;
+	document.AgentMaintenance.BroadcastMedium.disabled = false;
+	document.AgentMaintenance.BusinessType.disabled = false;	
+	document.AgentMaintenance.changeType[0].disabled = false;
+	document.AgentMaintenance.changeType[1].disabled = false;	
+}
+
+</SCRIPT> 
+<!-- INCLUDED BY SATHISH 10/03 -->
+
+<SCRIPT language="JavaScript">
+   function callBrokerTypeChange() {
+
+	document.AgentMaintenance.action="ChangeBrokerTypeServlet";
+	document.AgentMaintenance.target="_parent";
+	document.AgentMaintenance.submit();
+
+   }
+
+   function callComments() {
+   
+   		var funType = document.forms[0].FunctionType.value;
+   		
+   		document.AgentMaintenance.sourceId1.value = document.AgentMaintenance.bid.value;
+
+   		if ( funType == "" )
+   			funType = "DMGR";
+		
+		var url = 'Comments/CommentServlet?sourceId1='+document.AgentMaintenance.sourceId1.value+'&sourceId2=0&sourceId3=0&sourceInd=BKR&funType='+funType;
+				
+		window.open(url, 'slideWindow',false,500,700);
+   }
+
+
+/*
+   function callPrint() {
+
+
+		tempCallPrint();
+		return false;
+		
+		document.AgentMaintenance.action="PrintServlet";
+		document.AgentMaintenance.submit();
+		
+		
+
+   }
+*/
+
+function printFunction() {
+
+	callPrint();
+}
+
+
+
+   function callSearch() {
+
+		document.AgentMaintenance.action="SearchServlet";
+		document.AgentMaintenance.submit();
+
+   }
+
+
+   function callExit() {
+
+	var retValue = window.showModalDialog("ConfirmDialog.html","","dialogHeight=10;dialogWidth=20;center=1;status=0;resizable=0;help=0");
+				
+	if ( retValue == "Yes" ) {
+
+		document.AgentMaintenance.SaveExitPage.value = "Yes";
+		if ( submitForm( document.AgentMaintenance ) ) {
+			document.AgentMaintenance.target="_parent";
+			document.AgentMaintenance.submit();
+		}
+
+		//alert("after save" );		
+		/*
+		document.AgentMaintenance.action="BaseMainMenu.htm";
+		document.AgentMaintenance.target="_parent";
+		document.AgentMaintenance.submit();
+		*/
+
+	}
+	else if ( retValue == "No" ) {
+		document.AgentMaintenance.action="ExitServlet";
+		document.AgentMaintenance.target="_parent";
+		document.AgentMaintenance.submit();
+	}
+
+   }
+
+
+	function setState( theForm ) {
+	
+		var country = theForm.Country.value;
+		
+		
+		if ( country == "USA" ) {
+			
+			theForm.State.length = 0;
+			for ( var i=0; i<states.length; i++ ) {
+				var addstate = new Option();
+				addstate.text = states[i];
+				addstate.value = states[i];
+				theForm.State.options[i] = addstate;				
+			}
+			theForm.State.disabled = false;	
+			theForm.State.value = state;
+		}
+		else if ( country == "CAN" ) {
+			theForm.State.length = 0;		
+			for ( var i=0; i<canadianStates.length; i++ ) {
+				var addstate = new Option();
+				addstate.text = canadianStates[i];
+				addstate.value = canadianStates[i];
+				theForm.State.options[i] = addstate;				
+			}
+			theForm.State.disabled = false;
+			theForm.State.value = state;			
+		}
+		else{
+				theForm.State.length = 0;
+				theForm.State.disabled = true;
+		}
+
+	}
+
+
+</SCRIPT>
+
+
+</HEAD>
+<BODY bgcolor="#0B5F77" onload="init();disableDropDowns();populatePhoneList()">
+<FORM name="AgentMaintenance" method="post" action="AgentUpdate" onsubmit="return submitForm(AgentMaintenance)" target="_parent" >
+<input type="hidden" name="TitleButton" value"">
+<INPUT type="hidden" name="sourceInd" value="BKR">
+<INPUT type="hidden" name="sourceId1" value="">
+<INPUT type="hidden" name="sourceId2" value="0">
+<INPUT type="hidden" name="sourceId3" value="0">
+<INPUT type="hidden" name="GoTo" value="AgentMaintenanceAdminSys.jsp">
+<INPUT type="hidden" name="WhereToGo" value="Blank.htm">
+<INPUT type="hidden" name="SaveExitPage" value="No">
+<INPUT type="hidden" name="FunctionType" value="">			
+  <table width="850" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr> 
+      <td width="5" valign="top"><img src="images/spacer.gif" border="0" width="5" height="5"></td>
+      <td width="300" valign="top"><img src="images/spacer.gif" border="0" width="5" height="5"></td>
+      <td width="200"><img src="images/spacer.gif" border="0" width="5" height="5"></td>
+      <td width="300"><img src="images/spacer.gif" border="0" width="5" height="5"></td>
+      <td width="5"><img src="images/spacer.gif" border="0" width="5" height="5"></td>
+    </tr>
+    <tr> 
+      <td width="5" valign="top">&nbsp;</td>
+      <td width="340" valign="top"> 
+        <table width="340" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td align="left" width="3" height="20"><img src="images/tleft4.gif" width="3" height="24"></td>
+            <td bgcolor="#E6E9F0" width="334"><font class="maintitle">BKR201- Administer 
+              Broker Firm</font></td>
+            <td align="right" width="3" height="20"><img src="images/tright4.gif" width="3" height="24"></td>
+          </tr>
+        </table>
+      </td>
+      <td width="200" valign="top"> <br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr> 
+            <td bgcolor="#E6E9F0" width="100%"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+        </table>
+      </td>
+      <td width="300" align="right"> 
+        <table width="300" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="37" width="398" align="center"><a href="#" OnMouseOver="javascript:msearch.src = image5.src;" OnMouseOut="javascript:msearch.src = image6.src;" OnClick="callSearch()"><img src="images/msearch_off.gif" width="52" height="37" name="msearch" border="0"></a><a href="#" OnMouseOver="javascript:msave.src = image7.src;" OnMouseOut="javascript:msave.src = image8.src;"><img src="images/msave_off.gif" width="52" height="37" name="msave" border="0"></a><a href="#" OnMouseOver="javascript:mprint.src = image9.src;" OnMouseOut="javascript:mprint.src = image10.src;" OnClick="pri
+
+ntFunction();"><img src="images/mprint_off.gif" width="52" height="37" name="mprint" border="0"></a> 
+              <a href="#" OnMouseOver="javascript:mexit.src = image11.src;" OnMouseOut="javascript:mexit.src = image12.src;" OnClick="callExit()"><img src="images/mexit_off.gif" width="52" height="37" name="mexit" border="0"></a><a href="#" OnMouseOver="javascript:mcomments.src = image13.src;" OnMouseOut="javascript:mcomments.src = image14.src;" onclick="callComments()"><img src="images/mcomments_off.gif" width="66" height="37" name="mcomments" border="0"></a></td>
+            <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+        </table>
+      </td>
+      <td width="5">&nbsp;</td>
+    </tr>
+    <tr> 
+      <td width="5" valign="top">&nbsp;</td>
+      <td colspan="3" valign="top" height="35"> 
+        <table width="125" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="20" width="198" align="center"> 
+              <a href="#" onClick="Javascript:document.AgentMaintenance.changeType[0].checked = true;"><INPUT type="radio" checked name="changeType" value="agent"><FONT class="radiotext">Agent</FONT></a>
+              <a href="#" onClick="Javascript:document.AgentMaintenance.changeType[1].checked = true;callBrokerTypeChange();"><INPUT type="radio" name="changeType" value="firm" onClick="callBrokerTypeChange()"><FONT class="radiotext">Firm</FONT></a>
+</td>
+            <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+        </table>
+      </td>
+      <td width="5">&nbsp;</td>
+    </tr>
+  </table>
+  <table width="850" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr> 
+      <td width="5" valign="top">&nbsp;</td>
+      <td colspan="3" valign="top"> 
+        <table width="840" border="0" cellspacing="0" cellpadding="1">
+          <tr align="center"> 
+            <td width="48" align="center"><font class="ComTitle">BID</font></td>
+            <td width="75"><font class="ComTitle">Tax ID</font></td>
+            <td width="192" align="center"><font class="ComTitle">Status</font></td>
+            <td width="125" align="center"><font class="ComTitle">Status Reason</font></td>
+            <td width="71" align="center"><font class="ComTitle">Date</font></td>
+            <td width="154">&nbsp;</td>
+            <td width="56" align="center"><font class="ComTitle">BCY</font></td>
+            <td width="119" align="center"><font class="ComTitle">Broker Category</font></td>
+          </tr>
+          <tr align="left" valign="middle" bgcolor="#E6E9F0"> 
+            <td width="48" align="center"> 
+              <!--<INPUT size="12" type="text" maxlength="12" name="bid" onfocus="this.blur()" 
+
+value="5051" style="background-color : silver;"></TD> -->
+              <!-- INCLUDED BY SATHISH -->
+              <input size="6" type="text" maxlength="12" name="bid" onFocus="this.blur()" value="5051" class="input1">
+            </td>
+            <td width="75" align="center"> 
+              <input size="11" type="text" maxlength="9" name="TaxID" onFocus="this.blur()" value="112233445" class="input1" tabindex="1">
+            </td>
+            <td width="192" align="center"> 
+              <script language="Javascript">
+function populateReason(selected)
+	{	
+		var listlength = 0 ;
+		document.AgentMaintenance.StatusReason.options.length = 0;
+		for(var count = 0 ; count < statusReasonText.length ; count++)
+			{				
+				if(statusReasonValue[count] == selected)	
+					{	
+						var reason = new Option();
+						reason.text = statusReasonText[count];
+						reason.value = statusReasonCode[count];
+						document.AgentMaintenance.StatusReason.options[listlength] = reason;
+						listlength+=1;
+					}
+			}
+
+	}
+
+</script>
+              <select name="Status" class="select1" onChange="populateReason(this.value)">
+                <option value="P">Pending Completion of Setup</option>
+                <option value="V">Void/Removed</option>
+                <option value="S">Suspended</option>
+                <option value="R">Revoked/Terminated</option>
+              </select>
+            </td>
+            <td width="125" align="center"> 
+              <select name="StatusReason" class="select1" >
+                <option value="SETUPINC">Setup incomplete</option>
+              </select>
+            </td>
+            <td width="71" align="center"> 
+              <input size="11" type="text" maxlength="10" name="StatusDate" value="04/26/2002" onFocus="this.blur()" class="input1">
+            </td>
+            <td width="154">&nbsp;</td>
+            <td width="56" align="center"> 
+              <script language="javascript">
+
+function changeCategory(newValue)
+	{		
+		category[document.AgentMaintenance.BrokerCategoryYear.value]  = newValue;		
+	}
+function changeCategoryYear(id)
+	{	
+		document.AgentMaintenance.BrokerCategory.value = category[id];
+	}
+</script>
+              <select name="BrokerCategoryYear" class="select1" onChange="changeCategoryYear(this.value)">
+                <option value="0">2002</option>
+                <option value="1">2003</option>
+              </select>
+              <input type="hidden" name="AllCategory" value="">
+            </td>
+            <td width="119" align="center"> 
+              <select name="BrokerCategory" onFocus="this.blur()" class="select1" onChange="changeCategory(this.value)">
+                <option value="B">Broker</option>
+                <option value="P">Preferred Broker</option>
+                <!--                  
+                    <OPTION value="R" selected>Regular</OPTION>
+                    <OPTION value="P">Prefered</OPTION>
+                    -->
+              </select>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="5">&nbsp;</td>
+    </tr>
+  </table>
+  <table width="800" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr> 
+      <td width="5" valign="top">&nbsp;</td>
+      <td colspan="3" valign="top"> 
+        <table width="790" border="0" cellspacing="0" cellpadding="1">
+          <tr align="center"> 
+            <td><font class="ComTitle">Honor</font></td>
+            <td><font class="ComTitle">First Name</font></td>
+            <td><font class="ComTitle">Middle Name</font></td>
+            <td><font class="ComTitle">Last Name</font></td>
+            <td><font class="ComTitle">Suffix</font></td>
+            <td><font class="ComTitle">Title</font></td>
+            <td><font class="ComTitle">Familiar Name</font></td>
+            <td><font class="ComTitle">Business Type</font></td>
+          </tr>
+          <tr align="center" bgcolor="#E6E9F0"> 
+            <td> 
+              <input size="5" type="text" maxlength="10" name="Honor" onFocus="this.blur()" class="input1" value="Mr" tabindex="2">
+            </td>
+            <td> 
+              <input size="20" type="text" maxlength="25" name="FName" onFocus="this.blur()" value="Matthew" class="input1" tabindex="3">
+            </td>
+            <td> 
+              <input size="15" type="text" maxlength="25" name="MName" onFocus="this.blur()" value="" class="input1" tabindex="4">
+            </td>
+            <td> 
+              <input size="20" type="text" maxlength="25" name="LName" onFocus="this.blur()" value="Miller" class="input1" tabindex="5">
+            </td>
+            <td> 
+              <input size="10" type="text" maxlength="20" name="Suffix" onFocus="this.blur()" value="" class="input1" tabindex="6">
+            </td>
+            <td> 
+              <input size="15" type="text" maxlength="20" name="Title" onFocus="this.blur()" class="input1" value="" tabindex="7">
+            </td>
+            <td> 
+              <input size="15" type="text" maxlength="20" name="FamiliarName" onFocus="this.blur()" class="input1" value="Matt" tabindex="8">
+            </td>
+            <td> 
+              <select name="BusinessType" class="select1" tabindex="20">
+                <option value="SP">Sole Proprietor</option>
+                <option value="GP">General Partnership</option>
+                <option value="LP">Limited Partnership</option>
+                <option value="LL">LLP</option>
+                <option value="CC">Corporation (C)</option>
+                <option value="CS">Corporation (S)</option>
+                <option value="O">Other</option>
+                <option value="U">Unknown</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="5">&nbsp;</td>
+    </tr>
+  </table>
+  <table width="850" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr> 
+      <td width="5" valign="top">&nbsp;</td>
+      <td colspan="3" valign="top">
+        <table width="840" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="355" height="20"><img src="images/spacer.gif" border="0" width="1" height="5"></td>
+            <td align="center" rowspan="2" valign="middle" width="110"><a href="#" onMouseOver="mreset.src = image1.src;" onMouseOut="javascript:mreset.src = image2.src;" onClick="resetForm()"><img src="images/mreset_off.gif" width="40" height="37" name="mreset" border="0"></a><a href="#" onMouseOver="javascript:medit.src = image3.src;" onMouseOut="javascript:medit.src = image4.src;" onClick="enableAll(this.form)"><br>
+              <br>
+              <img src="images/medit_off.gif" width="40" height="37" name="medit" border="0"></a></td>
+            <td align="right" width="375" height="20"><img src="images/spacer.gif" border="0" width="1" height="5"></td>
+          </tr>
+          <tr> 
+            <td valign="top" width="355" align="left"> 
+              <table width="355" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td align="left" width="3" height="20"><img src="images/tleft3.gif" width="3" height="20"></td>
+                  <td bgcolor="#E6E9F0" width="349" align="center"><font class="stitle">&nbsp;Primary 
+                    Payment Address</font></td>
+                  <td align="right" width="3" height="20"><img src="images/tright3.gif" width="3" height="20"></td>
+                </tr>
+              </table>
+              <table width="355" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                </tr>
+                <tr> 
+                  <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td align="center"> 
+                    <table width="353" border="0" cellspacing="0" cellpadding="2">
+                      <tr valign="bottom"> 
+                        <td align="center" width="176" valign="middle" height="27"><font class="ComTitle">Eff 
+                          Date</font> 
+                          <input size="11" type="text" maxlength="10" name="EffDate" onFocus="this.blur()" value="04/26/2002" class="input1" onKeyPress="checkEffDateChanged()" tabindex="9">
+                          <input type="hidden" name="OrgEffDate" value="04/26/2002">
+                        </td>
+                        <td align="center" valign="middle"><nobr><font class="ComTitle">Mail 
+                          Stop#</font></nobr></td>
+                        <td align="left" colspan="3" valign="middle"> 
+                          <input size="11" type="text" maxlength="10" name="MailStop" onFocus="this.blur()" value="04/26/2002" class="input1" onKeyPress="checkEffDateChanged()" tabindex="11">
+                        </td>
+                      </tr>
+                      <tr valign="bottom"> 
+                        <td align="right" width="176" height="27"><nobr><font class="ComTitle">Line 
+                          1</font>&nbsp; 
+                          <input size="20" type="text" maxlength="50" name="Line1" onFocus="this.blur()" value="1500 Sunset Blvd" class="input1" tabindex="10">
+                          </nobr> </td>
+                        <td width="75" height="27" align="right"><font class="ComTitle">State</font></td>
+                        <td width="37" height="27"> 
+                          <select cname="State" onFocus="this.blur()" class="select1" tabindex="15" name="State">
+                            <option value="">&nbsp;&nbsp;&nbsp;</option>
+                          </select>
+                        </td>
+                        <td height="27" valign="bottom" align="right" width="20"><font class="ComTitle">Zip</font></td>
+                        <td width="52" height="27"> 
+                          <input size="5" type="text" maxlength="10" name="Zip" onFocus="this.blur()" class="input1" onKeyPress="checkEffDateChanged()" tabindex="16">
+                        </td>
+                      </tr>
+                      <tr valign="bottom"> 
+                        <td align="right" width="176"><nobr><font class="ComTitle">Line 
+                          2</font>&nbsp; 
+                          <input size="20" type="text" maxlength="50" name="Line2" onFocus="this.blur()" value="" class="input1" tabindex="12">
+                          </nobr></td>
+                        <td width="75" align="right"><font class="ComTitle">County</font></td>
+                        <td width="187" colspan="3"> 
+                          <input size="20" type="text" maxlength="20" name="County" onFocus="this.blur()" value="LA County" class="input1" tabindex="17">
+                        </td>
+                      </tr>
+                      <tr valign="bottom"> 
+                        <td align="right" width="176"><nobr><font class="ComTitle">Line 
+                          3</font>&nbsp; 
+                          <input size="20" type="text" maxlength="50" name="Line3" onFocus="this.blur()" class="input1" value="" tabindex="13">
+                          </nobr> </td>
+                        <td width="75" align="right"><font class="ComTitle">Country</font></td>
+                        <td width="187" colspan="3"> 
+                          <select name="Country" onChange="setState(document.AgentMaintenance)" class="select1" tabindex="18">
+                            <option value="CAN">CAN</option>
+                            <option value="FRA">FRA</option>
+                            <option value="GDR">GDR</option>
+                            <option value="JAPAN">JAPAN</option>
+                            <option value="MEX">MEX</option>
+                            <option value="NEDER">NEDER</option>
+                            <option value="ROC">ROC</option>
+                            <option value="UK">UK</option>
+                            <option value="USA">USA</option>
+                            <option value="HUN">HUN</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr valign="bottom"> 
+                        <td align="right" width="176"><nobr><font class="ComTitle">City</font>&nbsp; 
+                          <input size="20" type="text" maxlength="25" name="City" onFocus="this.blur()" value="Los Angeles" class="input1" tabindex="14">
+                          </nobr> </td>
+                        <td width="75" align="right"><font class="ComTitle">Province</font></td>
+                        <td width="187" colspan="3"> 
+                          <input size="20" type="text" maxlength="20" name="Province" onFocus="this.blur()" class="input1" value="" tabindex="19">
+                          <input type="hidden" name="CurrentDate" value='05/31/2002'>
+                          <input type="hidden" name="EffDateChanged" value="04/26/2002">
+                        </td>
+                      </tr>
+                      <tr valign="bottom"> 
+                        <td align="right" width="176"><img src="images/spacer.gif" border="0" width="5" height="5"></td>
+                        <td colspan="4"><img src="images/spacer.gif" border="0" width="5" height="5"></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                </tr>
+                <tr> 
+                  <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td height="1" bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                </tr>
+              </table>
+            </td>
+            <td align="right" valign="top" width="375"> 
+              <table width="375" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td align="left" width="3" height="20"><img src="images/tleft3.gif" width="3" height="20"></td>
+                  <td bgcolor="#E6E9F0" width="369" align="center"><font class="stitle">Contact 
+                    Information</font></td>
+                  <td align="right" width="3" height="20"><img src="images/tright3.gif" width="3" height="20"></td>
+                </tr>
+              </table>
+              <table width="375" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                </tr>
+                <tr> 
+                  <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td width="373" align="center"> 
+                    <table width="373" border="0" cellspacing="0" cellpadding="2">
+                      <tr align="center" valign="middle"> 
+                        <td width="120"><font class="ComTitle">Email</font></td>
+                        <td width="120"><font class="ComTitle">URL</font></td>
+                        <td width="133"> <font class="ComTitle">Broadcast Medium</font></td>
+                      </tr>
+                      <tr align="center" valign="middle" bgcolor="#E6E9F0"> 
+                        <td width="120"> 
+                          <input size="20" type="text" maxlength="40" name="EMail" value="" class="input1" onFocus="this.blur()" onChange="checkForFaxInPhoneList()" tabindex="21">
+                        </td>
+                        <td width="120"> 
+                          <input size="20" type="text" maxlength="40" name="WebURL" value="" class="input1" onFocus="this.blur()" tabindex="22">
+                        </td>
+                        <td width="133"> 
+                          <select name="BroadcastMedium" class="select1" onChange="checkForEMailAndFax(this.value)" onClick="document.AgentMaintenance.PreviousBrdcst.value = document.AgentMaintenance.BroadcastMedium.value;" size="1">
+                            <option value="E">E-Mail</option>
+                            <option value="F">Fax</option>
+                            <!--
+                          <OPTION value="F" selected>Fax</OPTION>
+                          <OPTION value="E">Email</OPTION>
+                         -->
+                          </select>
+                        </td>
+                      </tr>
+                    </table>
+                    <table width="373" border="0" cellspacing="0" cellpadding="2">
+                      <tr align="center" valign="bottom"> 
+                        <td width="70"><font class="ComTitle">Phone Type</font></td>
+                        <td width="25"><font class="ComTitle">Ctry</font></td>
+                        <td width="25"><font class="ComTitle">Area</font></td>
+                        <td width="30"><font class="ComTitle">Number</font></td>
+                        <td width="25"><font class="ComTitle">Ext</font></td>
+                        <td width="20"><font class="ComTitle">Pref</font></td>
+                        <td width="178" align="center"><font class="ComTitle">&nbsp;</font></td>
+                      </tr>
+                      <tr align="center" valign="bottom"> 
+                        <td width="70" bgcolor="#E6E9F0"> 
+                          <select name="PhoneType" tabindex="23"  class="select1" onFocus="this.blur()">
+                            <option value="R">Residence</option>
+                            <option value="B">Business</option>
+                            <option value="M">Mobile</option>
+                            <option value="P">Pager</option>
+                            <option value="F">Fax</option>
+                            <!--
+                                <OPTION value="B" selected>Business</OPTION>
+                                <OPTION value="M">Mobile</OPTION>
+                                <OPTION value="R">Residence</OPTION>
+                                <OPTION value="P">Pager</OPTION>
+                                <OPTION value="F">Fax</OPTION>
+                                -->
+                          </select>
+                          <input type="hidden" name="PhoneNumbers" value="">
+                        </td>
+                        <td width="25" bgcolor="#E6E9F0"> 
+                          <input size="3" type="text" maxlength="3" name="CountryCode" tabindex="24"  class="input1" onFocus="this.blur()">
+                        </td>
+                        <td width="25" bgcolor="#E6E9F0"> 
+                          <input size="3" type="text" maxlength="3" name="AreaCode" tabindex="25" class="input1" onFocus="this.blur()">
+                        </td>
+                        <td width="30" bgcolor="#E6E9F0"> 
+                          <input size="7" type="text" maxlength="7" name="Number" tabindex="26" class="input1" onFocus="this.blur()">
+                        </td>
+                        <td width="25" bgcolor="#E6E9F0"> 
+                          <input size="5" type="text" maxlength="5" name="Ext" tabindex="27" class="input1" onFocus="this.blur()">
+                        </td>
+                        <td width="20" bgcolor="#E6E9F0"> 
+                          <input type="checkbox" name="Preference" tabindex="28">
+                        </td>
+                        <td width="178" align="center" bgcolor="#E6E9F0"><a href="#" tabindex="29" onClick="addToList(document.AgentMaintenance);" OnMouseOver="javascript:add.src = image15.src;" OnMouseOut="javascript:add.src = image16.src;"><img src="images/add_off.gif" width="50" height="19" border="0" alt="Add" name="add"></a> 
+                          <input type="hidden" name="StatusIndicator" value="">
+                        </td>
+                      </tr>
+                      <tr align="center" valign="bottom"> 
+                        <td colspan="7" height="50"> 
+                          <select size="3" name="PhoneList" onClick="popAgain(PhoneList,this.form.PhoneList.value)" class="multiselect">
+                          </select>
+			<input type="hidden" name="PhoneAction" value="">
+			<input type="hidden" name="PhoneIK" value="0">
+			<input type="hidden" name="OldNumberIndicator" value="false">
+			<input type="hidden" name="StatusIndicator" value="">
+                        </td>
+                      </tr>
+                      <tr align="center" valign="bottom"> 
+                        <td colspan="7" height="30"><a href="#" onClick="deleteFromList(document.AgentMaintenance);" OnMouseOver="javascript:delsel.src = image17.src;" OnMouseOut="javascript:delsel.src = image18.src;"><img src="images/delsel_off.gif" width="138" height="19" border="0" alt="Delete Selected" name="delsel" vspace="0"></a> 
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                </tr>
+                <tr> 
+                  <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td height="1" bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                  <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="5">&nbsp;</td>
+    </tr>
+  </table>
+  <br>
+</FORM>
+<div id="hidepage" style="position: absolute; left:0px; top:0px; background-color: #0B5F77; layer-background-color: #0B5F77; height: 100%; width: 100%;visibility:hidden">
+<TABLE align="center" height="100%">
+    <TBODY>
+        <TR>
+            <TD valign="middle" align="center"><img src="images/alert.gif" border="0" vspace="15"><br><FONT class="stitle2" style="font-size:12px;">Do you want to save any unsaved information?</FONT><br><br><form name="URLer"><input type="hidden" name="myindValue" value=""><INPUT type="button" name="Yes" value="Yes" OnClick="hideLayer('Yes');" class="lebotton2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="button" name="No" value="No" OnClick="hideLayer('No');" class="lebotton2" style="font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="button" name="Cancel" value="Cancel" OnClick="hideLayer('Cancel');" class="lebotton2" style="font-size:12px;"></form></TD>
+        </TR>
+    </TBODY>
+</TABLE>
+</div> 
+</BODY>
+</HTML>

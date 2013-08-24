@@ -1,0 +1,421 @@
+<!-- Sample HTML file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+
+<HEAD>
+<!-- <SCRIPT language="JavaScript1.1" src="/javascript/changeagenttofirm.js"></SCRIPT>-->
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>Change Broker( Agent to Firm )</TITLE>
+<LINK href="Master.css" rel="stylesheet" type="text/css">
+
+<Script src="script/PrintScript.js">
+</Script>
+
+
+<Script language="JavaScript">
+
+   //Added by Sathish on 11/20/2001 to set the Business Type
+
+   function setValues() {
+
+	document.agenttofirm.businessType.value = "";
+
+	if ( "U" != null ) {
+
+		var bsnstype = "U";
+
+		if ( bsnstype == "SP" )
+			bsnstype = "Sole Proprietor"; 
+		else if ( bsnstype == "GP" )
+			bsnstype = "General Partnership"; 
+		else if ( bsnstype == "LP" )
+			bsnstype = "Limited Partnership"; 
+		else if ( bsnstype == "LL" )
+			bsnstype = "LLP"; 
+		else if ( bsnstype == "CC" )
+			bsnstype = "Corporation (C)"; 
+		else if ( bsnstype == "CS" )
+			bsnstype = "Corporation (S)"; 
+		else if ( bsnstype == "O" )
+			bsnstype = "Other"; 
+		else if ( bsnstype == "U" )
+			bsnstype = "Unknown"; 
+
+		document.agenttofirm.changeto_agent_businesstype.value = bsnstype;
+	}
+
+	document.agenttofirm.taxId.focus();
+
+   }
+
+
+   //Added by Sathish on 10/03 to call comments
+   function callComments() {
+
+
+	document.agenttofirm.sourceId1.value = document.agenttofirm.bid.value;
+	/*
+	document.agenttofirm.action="Comments/ComFrame.jsp";
+	document.agenttofirm.submit();
+	*/
+
+	var url = 'Comments/CommentServlet?sourceId1='+document.agenttofirm.sourceId1.value+'&sourceId2=0&sourceId3=0&sourceInd=BKR&funType=DMGR';
+	window.open(url, 'slideWindow',false,500,700);
+
+
+   }
+
+/*
+   function callPrint() {
+
+	document.agenttofirm.action="PrintServlet";
+	document.agenttofirm.submit();
+
+   }
+*/
+function printFunction() {
+
+	callPrint();
+}   
+   
+   
+   function callExit() {
+
+	var retValue = window.showModalDialog("ConfirmDialog.html","","dialogHeight=10;dialogWidth=20;center=1;status=0;resizable=0;help=0");
+				
+	if ( retValue == "Yes" ) {
+
+		document.agenttofirm.SaveExitPage.value = "Yes";
+		if ( validateForm(document.agenttofirm) ) {
+			document.agenttofirm.target="_parent";
+			document.agenttofirm.submit();
+		}
+
+	}
+	else if ( retValue == "No" ) {
+		document.agenttofirm.action="ExitServlet";
+		document.agenttofirm.target="_parent";
+		document.agenttofirm.submit();
+	}
+
+   }
+   
+</Script>
+
+
+</HEAD>
+<BODY bgcolor="#999999" OnLoad="setValues()">
+<Form name="agenttofirm"  method ="post" action="ChangeBrokerTypeServlet">
+<!--<input type="hidden" name="action" value="">-->
+<TABLE width="801">
+  <TBODY>
+    <TR>
+      <TD bgcolor="#ffcc00" colspan="2"><FONT size="-1"><B><FONT color="#0033cc" face="Arial" size="-1"> BRK102 - Change Broker Type ( Agent to Firm)</FONT></B></FONT></TD>
+            <TD align="right" bgcolor="#ffcc00" width="393"><INPUT type="submit" class="pbttn" name="Save"  value="Save" onClick=" return validateForm(document.agenttofirm)"><INPUT type="button" class="pbttn" name="Print" value="Print" OnClick="printFunction()"><INPUT type="button" class="pbttn" name="Exit" value="Exit" OnClick="callExit()"><INPUT type="button" class="pbttn" name="Comments" value="Comments" OnClick="callComments()">
+		<INPUT type="hidden" name="sourceInd" value="BKR">
+		<INPUT type="hidden" name="sourceId1" value="">
+		<INPUT type="hidden" name="sourceId2" value="0">
+		<INPUT type="hidden" name="sourceId3" value="0">
+		<INPUT type="hidden" name="GoTo" value="ChangeBrokerAgentFirm.jsp">
+		<INPUT type="hidden" name="SaveExitPage" value="No">		
+      </TD>
+        </TR>
+  </TBODY>
+</TABLE>
+<TABLE border="1" width="80%" bgcolor="#999999" cellpadding="0" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD bgcolor="#999999">
+      <TABLE bgcolor="#999999" cellpadding="0" cellspacing="0">
+        <TBODY>
+          <TR>
+            <TD class="label" width="72">BID</TD>
+            <TD width="62"><INPUT size="10" type="text" maxlength="10" name="bid" value ="5051" style="background-color : silver;" readonly class="input"></TD>
+            <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+            <TD><INPUT type="button" class="pbttn" name="Reset" value="Reset" onClick="clearForm(document.agenttofirm)"></TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      <TABLE border="1">
+        <TBODY>
+          <TR>
+            <TD><FONT class="title">Existing Information</FONT>
+            <TABLE cellpadding="0" cellspacing="0">
+              <TBODY>
+                <TR>
+                  <TD align="right" class="label">Broker Type</TD>
+                  <TD colspan="2"><INPUT class="input" size="10" type="text" maxlength="10" name="changeto_brokertype" value="Agent" readonly style="background-color : silver;"></TD>
+                  <TD></TD>
+                  <TD colspan="2"></TD>
+                  <TD></TD>
+                  <TD></TD>
+                </TR>
+                <TR>
+                  <TD align="right" class="label">Tax ID</TD>
+                  <TD colspan="2"><INPUT  class="input" size="10" type="text" maxlength="10" name="changeto_agent_taxid" value="112233445" style="background-color : silver;" readonly></TD>
+                  <TD class="label" align="right">Business Type</TD>
+                  <TD colspan="2"><INPUT class="input" size="20" type="text" maxlength="20" name="changeto_agent_businesstype" value="" style="background-color : silver;" readonly></TD>
+                  <TD></TD>
+                  <TD></TD>
+                </TR>
+                <TR>
+                  <TD></TD>
+                  <TD class="label">Honor</TD>
+                  <TD class="label" align="center">First</TD>
+                  <TD class="label" align="center">Middle</TD>
+                  <TD class="label" align="center">Last</TD>
+                  <TD class="label" align="center">Suffix</TD>
+                  <TD></TD>
+                  <TD></TD>
+                </TR>
+                <TR>
+                  <TD align="right" class="label">Name</TD>
+                  <TD><INPUT class="input" size="5" type="text"  maxlength="10" name="changeto_agent_honorific" value="Mr " style="background-color : silver;" readonly ></TD>
+                  <TD><INPUT class="input" size="20" type="text" maxlength="20" name="changeto_agent_firstname" value="Matthew"style="background-color : silver;" readonly></TD>
+                  <TD><INPUT class="input" size="20" type="text" maxlength="10" name="changeto_agent_middle" value="" style="background-color : silver;" readonly></TD>
+                  <TD><INPUT class="input" size="20" type="text" maxlength="20" name="changeto_agent_lastname" value="Miller" style="background-color : silver;" readonly></TD>
+                  <TD><INPUT class="input" size="10" type="text" maxlength="10" name="changeto_agent_suffix" value=""style="background-color : silver;" readonly></TD>
+                  <TD></TD>
+                  <TD></TD>
+                </TR>
+                <TR>
+                  <TD align="right" class="label">Title</TD>
+                  <TD colspan="2"><INPUT class="input" size="20" type="text" maxlength="20" name="changeto_agent_title" value=" " style="background-color : silver;" readonly></TD>
+                  <TD class="label" align="right">Familiar Name</TD>
+                  <TD colspan="2"><INPUT class="input" size="20" type="text" maxlength="20" name="chagneto_agent_familiarname" value="Matt " style="background-color : silver;" readonly></TD>
+                  <TD></TD>
+                  <TD></TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      <TABLE border="1">
+        <TBODY>
+          <TR>
+            <TD><FONT class="title">New Information</FONT>
+            <TABLE cellpadding="0" cellspacing="0">
+              <TBODY>
+                <TR>
+                  <TD class="label" align="center">Broker Type</TD>
+                  <TD><INPUT class="input" size="10" type="text"  name="brokerType" value="Firm" maxlength="10"  style="background-color : silver;"  readonly></TD>
+                  <TD></TD>
+                  <TD></TD>
+                </TR>
+                <TR>
+                  <TD class="label" align="right">Tax ID<FONT color="#ff0033"><FONT size="+1">*</FONT></FONT></TD>
+                  <TD><INPUT class="input" size="20" type="text" name="taxId" maxlength="9" tabindex="1"></TD>
+                  <TD class="label">Business Type<FONT color="#ff0033"><FONT size="+1">*</FONT></FONT></TD>
+                  <TD><SELECT class="input" name="businessType" tabindex="2">
+     
+    <OPTION value="SP">Sole Proprietor</OPTION>
+ 
+    <OPTION value="GP">General Partnership</OPTION>
+ 
+    <OPTION value="LP">Limited Partnership</OPTION>
+ 
+    <OPTION value="LL">LLP</OPTION>
+ 
+    <OPTION value="CC">Corporation (C)</OPTION>
+ 
+    <OPTION value="CS">Corporation (S)</OPTION>
+ 
+    <OPTION value="O">Other</OPTION>
+ 
+    <OPTION value="U">Unknown</OPTION>
+ 	 
+
+                </SELECT></TD>
+                </TR>
+                <TR>
+                  <TD class="label" align="right">Name<FONT color="#ff0033"><FONT size="+1">*</FONT></FONT></TD>
+                  <TD><INPUT class="input" size="30" type="text" name="firmName" maxlength="30" tabindex="3"></TD>
+                  <TD></TD>
+                  <TD></TD>
+                </TR>
+                <TR>
+                  <TD class="label" align="right">Location Name</TD>
+                  <TD><INPUT class="input" size="20" type="text" name="locName" maxlength="20" tabindex="4"></TD>
+                  <TD></TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+
+<script language="javascript">
+
+function validateForm(theForm)
+ {	
+var errorStatus = false;
+var errorFields ='Please correct the following error(s):'+'\n';
+
+  if(document.agenttofirm.taxId.value == "")
+   {
+	errorFields +='Tax ID is a required field'+'\n';
+	errorStatus = true;
+   }	
+  else
+   {
+   	checkTaxID(document.agenttofirm.taxId.value);
+   }
+
+if(document.agenttofirm.firmName.value == "")
+   {
+	errorFields +='Firm Name is a required field'+'\n';
+	errorStatus	= true;			
+   }  else
+   {
+	checkFirmName(document.agenttofirm.firmName.value);
+   }
+  if(document.agenttofirm.locName.value != "")
+   {
+   /*
+	errorFields+="Location Name is a required field\n";
+ 	errorStatus = true;		
+   }
+  else
+   {
+   */
+	checkLocName(document.agenttofirm.locName.value);
+   }  
+
+
+  if(document.agenttofirm.businessType.value == "")
+   {
+	errorFields +='Business Type is a required field'+'\n';
+ 	errorStatus = true;		
+   }
+
+
+   if ( errorStatus == true )
+   {
+	alert(errorFields);
+	return false;
+   }
+   else
+	return true;
+
+
+
+function checkTaxID(TaxID)
+ {
+   var checkOK = "0123456789";
+   var checkStr = TaxID;
+   var allValid = true;
+   var decPoints = 0;
+   var allNum = "";
+   for (i = 0;  i < checkStr.length;  i++)
+    {
+     ch = checkStr.charAt(i);
+     for (j = 0;  j < checkOK.length;  j++)
+     if (ch == checkOK.charAt(j))
+     break;
+     if (j == checkOK.length)
+      {
+      	allValid = false;
+      	break;
+      }
+     allNum += ch;
+     }
+    if (!allValid)
+     {
+		errorFields +='Invalid characters in '+'Tax ID\n';
+    	document.agenttofirm.taxId.focus();
+    	errorStatus = true;
+     }
+	
+    if (theForm.taxId.value.length<9)
+     {
+	errorFields +='Tax ID should be 9 digits'+'\n';
+	document.agenttofirm.taxId.focus();
+	errorStatus = true;
+     }
+		
+ }//End of checkTaxID function
+
+
+function checkFirmName(field)
+ {
+  var valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+  
+
+for (var i=0; i < field.length; i++) 
+ {
+  temp = "" + field.substring(i, i+1);
+  if (valid.indexOf(temp) == "-1") 
+    {
+	errorFields +='Invalid characters in '+'Firm Name\n';
+	document.agenttofirm.firmName.focus();
+      break;
+    }
+ }
+ }//End of checkFirstName function
+
+function checkLocName(field)
+ {
+  var valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+  
+
+for (var i=0; i < field.length; i++) 
+ {
+  temp = "" + field.substring(i, i+1);
+  if (valid.indexOf(temp) == "-1") 
+    {
+	errorFields +='Invalid characters in '+'Location Name\n';
+      document.agenttofirm.locName.focus();
+	break;
+    }
+ }
+ }//End of checkFirstLast function
+
+
+}//End of validateForm function
+function clearForm(form) {
+
+
+          document.agenttofirm.taxId.value="";
+	  document.agenttofirm.firmName.value ="";	
+	  document.agenttofirm.locName.value ="";
+	  document.agenttofirm.locName.value ="";	
+          document.agenttofirm.businessType.value =""
+          document.agenttofirm.taxId.text ="";
+	  document.agenttofirm.firmName.text ="";	
+	  document.agenttofirm.locName.text ="";
+	  document.agenttofirm.locName.text ="";	
+          document.agenttofirm.businessType.text =""
+           
+}
+
+
+<!--
+
+    function submit_form(action) {
+        var form = document.form_agent;
+		
+	var error_text = "";
+		
+	form.action.value = action;
+	form.submit();                
+	  
+    }
+    
+//-->
+</script>
+
+</FORM>
+
+ 
+
+</BODY>
+</HTML>

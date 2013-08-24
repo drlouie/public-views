@@ -1,0 +1,94 @@
+
+.label {
+	COLOR : #0033FF; 
+	font-family: arial,verdana,sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+.input {
+	COLOR : #000000; 
+	font-family: verdana, arial, sans-serif;
+	font-size : 12px;
+	font-weight : normal;
+	font-style: normal;	
+	}
+.caption {
+	COLOR : #003333; 
+	font-family: verdana, arial, sans-serif;
+	font-size : 11px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+.submit {
+	COLOR : #0000; 
+	font-family: verdana, arial, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+
+
+.title {
+	COLOR : #cc3333; 
+	font-family: arial,verdana,sans-serif;
+	font-size : 13px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+
+
+.pbttn {
+	font-family: arial;
+	font-size:13px;
+	color:#ffffff;height: 26px;
+	text-decoration: none;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top:2px;
+	padding-bottom: 2px;	
+	cursor: hand;
+	background-color: #5662af;
+	border-top-color: #4A4D7B;
+	border-left-style: solid;
+	border-left-width: 1px;
+	font-weight: bold;
+	border-top-style: solid;
+	border-left-color: #4A4D7B;
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: #4A4D7B;
+	border-right-color: #4A4D7B;
+	vertical-align: middle;
+	text-align: center;
+	}
+
+.readonlyfields {
+	background-color: silver;
+
+	}
+
+.listbox {
+	COLOR : #000000; 
+	font-family: Courier New;
+	background-color: silver;
+	}
+
+.button {
+	COLOR : #000000; 
+	border : 0;
+	align : left;
+	background-color: #ffcc00;
+	font-family: arial,verdana,sans-serif;
+	font-size : 13px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+
+
+IMG{
+  color : olive;
+}

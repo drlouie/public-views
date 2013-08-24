@@ -1,0 +1,2 @@
+symbol,last,change,volume:INT
+$INDU, 10866.74, -20.65, 0

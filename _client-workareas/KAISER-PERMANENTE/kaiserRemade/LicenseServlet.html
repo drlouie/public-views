@@ -1,0 +1,1062 @@
+<!-- Sample HTML file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+
+
+
+
+
+
+
+
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>License - DOI Information</TITLE>
+
+
+<!--Dynamic CSS Javascript-->
+<script language="javascript" src="js/common_css.js"></script>
+
+
+
+<script language="Javascript">
+<!--
+//MOUSEOVER IMAGE PRELOAD
+
+//add button
+image15 = new Image();
+image15.src = "images/add_ov.gif";
+image16 = new Image();
+image16.src = "images/add_off.gif";
+//delete selected button
+image17 = new Image();
+image17.src = "images/delsel_ov.gif";
+image18 = new Image();
+image18.src = "images/delsel_off.gif";
+
+//-->
+</script>
+
+
+<Script language="JavaScript">
+
+var errorStatus = false;
+var errorMessage = "Please correct the following error(s):";
+
+
+function validate() {
+	
+	errorStatus = false;
+	errorMessage = 'Please correct the following error(s):';
+	
+	doireq = document.LicenseForm.DOIRequestedDate;
+	doieff = document.LicenseForm.DOIEffectiveDate;
+	doiexp = document.LicenseForm.DOIExpirationDate;
+
+	state = document.LicenseForm.LicState;
+	licnum = document.LicenseForm.LicNumber;
+	mainname = document.LicenseForm.LicMainName;
+	dbaname = document.LicenseForm.LicDBAName;
+	issued = document.LicenseForm.LicIssuedDate;
+	renewed = document.LicenseForm.LicRenewedDate;
+	licexp = document.LicenseForm.LicExpirationDate;
+	licext = document.LicenseForm.LicExtensionDate;
+
+
+	if ( doireq.value == "" && doieff.value == "" && doiexp.value == "" && state.value == "" && licnum.value == "" &&
+		mainname.value == "" && dbaname.value == "" && issued.value == "" && renewed.value == "" && licexp == "" && licext == "") {
+
+	}
+	else {
+
+		validateDOIValues( document.LicenseForm );
+	
+		if ( state.value == "" ) {
+			errorMessage += "\n" + 'broker.license.StateRequired';
+		      errorStatus = true;
+		}
+
+		if ( licnum.value == "" ) {
+			errorMessage += "\n" + 'broker.license.LicNoRequired';
+			errorStatus = true;
+		}
+
+	
+		if ( mainname.value == "" ) {
+			errorMessage += "\n" + 'broker.license.MainNameRequired';
+		      errorStatus = true;
+		}
+		else {
+			checkName(document.LicenseForm.LicMainName.name,document.LicenseForm.LicMainName.value);
+		}
+	
+		if ( dbaname.value != "" ) {
+			checkName(document.LicenseForm.LicDBAName.name,document.LicenseForm.LicDBAName.value);
+	
+		}
+	
+	
+		if ( issued.value == "" ) {
+			errorMessage += "\n" + 'broker.license.IssuedDateRequired';
+		      errorStatus = true;
+		}
+		else {
+			checkDateValidation( document.LicenseForm.LicIssuedDate.name, document.LicenseForm.LicIssuedDate.value);
+		}
+		if ( renewed.value != "" ) {
+			checkDateValidation( document.LicenseForm.LicRenewedDate.name, document.LicenseForm.LicRenewedDate.value);
+			checkDateComparison( document.LicenseForm.LicIssuedDate, document.LicenseForm.LicRenewedDate);
+		}
+	
+		
+		if ( licexp.value == "" ) {
+			errorMessage += "\n" + 'broker.license.ExpirationDateRequired';
+	        errorStatus = true;
+		}
+		else {
+			checkDateValidation( document.LicenseForm.LicExpirationDate.name, document.LicenseForm.LicExpirationDate.value);
+			
+			if ( renewed.value != "" )
+				checkDateComparison( document.LicenseForm.LicRenewedDate, document.LicenseForm.LicExpirationDate);
+			else ( issued.value != "" )
+				checkDateComparison( document.LicenseForm.LicIssuedDate, document.LicenseForm.LicExpirationDate);
+		
+		}
+		
+		if ( licext.value != "" ) {
+			checkDateValidation( document.LicenseForm.LicExtensionDate.name, document.LicenseForm.LicExtensionDate.value);
+			checkDateComparison( document.LicenseForm.LicExpirationDate, document.LicenseForm.LicExtensionDate);
+		}
+
+
+	} //end of else
+
+
+
+
+
+    
+    if (errorStatus == true) {
+		alert( errorMessage );
+		return false;
+	}
+	else
+	   	return true;
+
+
+}
+
+
+	function validateDOIValues( theForm ) {
+	
+		var	doirequested = theForm.DOIRequestedDate;
+		var doieffective = theForm.DOIEffectiveDate;
+		var doiexpiration = theForm.DOIExpirationDate;
+
+		if ( doirequested.value != "" ) {
+
+			checkDateValidation( theForm.DOIRequestedDate.name, theForm.DOIRequestedDate.value);
+
+			if ( doieffective.value != "" ) {
+				checkDateValidation( theForm.DOIEffectiveDate.name, theForm.DOIEffectiveDate.value);
+				checkDateComparison( theForm.DOIRequestedDate, theForm.DOIEffectiveDate);
+
+				if ( doiexpiration.value != "" ) {
+					checkDateValidation( theForm.DOIExpirationDate.name, theForm.DOIExpirationDate.value);
+					checkDateComparison( theForm.DOIEffectiveDate, theForm.DOIExpirationDate);
+				}
+		
+			}
+			else {
+				if ( doiexpiration.value != "" ) {
+					alert( 'broker.license.DOIExpWithoutDOIEff' );
+					return false;
+				}
+			}
+			
+	
+		}
+		else {
+		
+			if ( doieffective.value != "" ) {
+			
+				alert( 'broker.license.DOIEffWithoutDOIReq');
+				return false;
+			}
+			else {
+				if ( doiexpiration.value != "" ) {
+					alert( 'broker.license.DOIExpWithoutDOIEff' );
+					return false;
+				}
+			}
+			
+		
+		}
+		
+	}
+
+	
+	
+	
+	function checkName(name,value) {
+
+
+		var Name = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";	
+		var EffDate = "1234567890/";
+		var valid = Name;
+
+
+		if(valid.length > 1) {
+			 for (var i=0; i < value.length; i++) {
+				temp = "" + value.substring(i, i+1);
+				if (valid.indexOf(temp) == "-1") {
+			      	errorMessage+="\n" + 'Invalid characters in '+name;
+			      	errorStatus=true;      
+			      	break;
+				}
+			}
+		}
+
+	}
+
+
+
+	function checkDateValidation(datename, datevalue){
+
+
+	 	var validdate = "1234567890/";
+         	var err=0;
+         	var psj=0;
+	      var a="";
+
+         	a=datevalue;
+		
+		
+	 	if (a.length != 10) {
+			errorMessage += "\n" +  'Invalid '+datename;
+			errorStatus = true;
+			return false;
+		}
+		else {
+			for (var i=0; i < a.length; i++) {
+			temp = "" + a.substring(i, i+1);
+				if (validdate.indexOf(temp) == "-1") {
+					errorMessage += "\n" +  'Invalid characters in '+datename;
+					errorStatus = true;
+					return false;
+				}
+			}
+		 }
+
+   	       d = a.substring(0, 2);
+      	 c = a.substring(2, 3);
+         	 b = a.substring(3, 5);
+         	 e = a.substring(5, 6);
+         	 f = a.substring(6, 10);
+
+ 	       //basic error checking
+
+      	 if (d<1 || d>12) {
+			errorMessage += "\n" + datename + '- Invalid Month';
+			errorStatus = true;
+			return false;
+		 }
+         	 if (c != '/' || e != '/' ) {
+			errorMessage += "\n" + 'Invalid '+datename;
+			errorStatus = true;
+			return false;
+		 }
+         	 if (b<1 || b>31) {
+			errorMessage += "\n" + datename + '- Invalid Date ';
+			errorStatus = true;
+			return false;
+		 }
+       
+         
+         
+         	 if (f<1900 || f>4000) {
+			errorMessage += "\n" + datename +  '- Invalid Year';
+			errorStatus = true;
+			return false;
+		 }
+
+
+
+         	 // months with 30 days
+         	 if (d==4 || d==6 || d==9 || d==11){
+             	if (b==31) {
+				errorMessage += "\n" + 'Only 30 days are there in the month of '+datename;
+				errorStatus = true;
+				return false;
+			}
+         	 }
+
+
+	      // february, leap year
+         	 if (d==2){
+              	// feb
+              	var g=parseInt(f/4)
+              	if (isNaN(g)) {
+				errorMessage += "\n" + 'Month does not match for the leap year in '+datename;
+				errorStatus = true;
+				return false;
+	            }
+
+             	if (b>29) {
+				errorMessage += "\n" + 'Month and Date do not match in '+datename;
+				errorStatus = true;
+				return false;
+		 	}
+
+             	if (b==29 && ((f/4)!=parseInt(f/4))) {
+				errorMessage += "\n" + 'Invalid '+datename;
+				errorStatus = true;
+				return false;
+	       	}
+		 }
+		 
+
+	} // end of checkValidation()
+
+
+	function checkCurrentDate( datename, datevalue ) {
+
+		var dt = new Date();
+		var month = dt.getMonth();
+		var date = dt.getDate();
+		var year = dt.getYear();
+
+		month = month +1 ;
+	
+
+		if ( ( month / 2 ) < 5 )
+			month = "0" + month;
+
+		if ( ( date / 2 ) < 5 )
+			date = "0" + date;
+
+		var currentDate =  month + "/" +date+ "/" +year;
+
+
+   	      var chmm = datevalue.substring(0, 2);
+         	var chdd = datevalue.substring(3, 5);
+         	var chyyyy = datevalue.substring(6, 10);
+
+
+		if ( chyyyy > year ) {
+		
+		}
+		else if ( chyyyy == year ) {
+
+			if ( chmm > month ) {
+			}
+			else if ( chmm == month ) {
+				if ( chdd < date ) {
+
+					errorMessage += "\n" + datename + "'s day cannot be lesser than today";
+					errorStatus = true;
+					return false;
+				}
+			}
+			else {
+				errorMessage += "\n" + datename + "'s month cannot be lesser than current month";
+				errorStatus = true;
+				return false;
+			}
+
+		}
+		else {
+			errorMessage += "\n" + datename + "'s year cannot be lesser than current year";
+			errorStatus = true;
+			return false;
+		}
+
+	}
+
+
+
+
+	function checkDateComparison( originaldate, changeddate ) {
+
+		
+		var orgmmddyyyy = originaldate.value;
+		var chmmddyyyy = changeddate.value;
+	
+   	      var orgmm = orgmmddyyyy.substring(0, 2);
+         	var orgdd = orgmmddyyyy.substring(3, 5);
+         	var orgyyyy = orgmmddyyyy.substring(6, 10);
+
+   	      var chmm = chmmddyyyy.substring(0, 2);
+         	var chdd = chmmddyyyy.substring(3, 5);
+         	var chyyyy = chmmddyyyy.substring(6, 10);
+
+
+
+
+		if ( chyyyy > orgyyyy ) {
+		
+		}
+		else if ( chyyyy == orgyyyy ) {
+
+			if ( chmm > orgmm ) {
+
+			}
+			else if ( chmm == orgmm ) {
+
+				if ( chdd < orgdd ) {
+					errorMessage += "\n" + changeddate.name + 'cannot be lesser than '+ originaldate.name;
+					errorStatus = true;
+					return false;
+				}
+			}
+			else {
+				errorMessage += "\n" + changeddate.name + 'cannot be lesser than ' + originaldate.name;
+				errorStatus = true;
+				return false;
+			}
+
+		}
+		else {
+			errorMessage += "\n" + changeddate.name + 'cannot be lesser than ' + originaldate.name;
+			errorStatus = true;
+			return false;
+		}
+
+
+	} // end of checkDateComparison
+
+
+
+</Script>
+
+<SCRIPT language="JavaScript">
+
+   var oldNo = false;
+   var listIndex = 0;
+
+   var listUILength = 0;
+   var listUIValues = new Array();
+
+   var enableList = false;
+
+   var doieff;
+   var doiexp;
+   var doireq;
+
+   var states = new Array() ;
+
+   // Function to hide list if there is no data to display
+   function addListHide() {
+
+
+	
+			states[0] = 'AL';
+	
+			states[1] = 'AK';
+	
+			states[2] = 'AS';
+	
+			states[3] = 'AZ';
+	
+			states[4] = 'AR';
+	
+			states[5] = 'CA';
+	
+			states[6] = 'CZ';
+	
+			states[7] = 'CO';
+	
+			states[8] = 'CT';
+	
+			states[9] = 'DE';
+	
+			states[10] = 'DC';
+	
+			states[11] = 'FL';
+	
+			states[12] = 'GA';
+	
+			states[13] = 'GU';
+	
+			states[14] = 'HI';
+	
+			states[15] = 'ID';
+	
+			states[16] = 'IL';
+	
+			states[17] = 'IN';
+	
+			states[18] = 'IA';
+	
+			states[19] = 'KS';
+	
+			states[20] = 'KY';
+	
+			states[21] = 'LA';
+	
+			states[22] = 'ME';
+	
+			states[23] = 'MD';
+	
+			states[24] = 'MA';
+	
+			states[25] = 'MI';
+	
+			states[26] = 'MN';
+	
+			states[27] = 'MS';
+	
+			states[28] = 'MO';
+	
+			states[29] = 'MT';
+	
+			states[30] = 'NE';
+	
+			states[31] = 'NV';
+	
+			states[32] = 'NH';
+	
+			states[33] = 'NJ';
+	
+			states[34] = 'NM';
+	
+			states[35] = 'NY';
+	
+			states[36] = 'NC';
+	
+			states[37] = 'ND';
+	
+			states[38] = 'OH';
+	
+			states[39] = 'OK';
+	
+			states[40] = 'ON';
+	
+			states[41] = 'OR';
+	
+			states[42] = 'PA';
+	
+			states[43] = 'PR';
+	
+			states[44] = 'RI';
+	
+			states[45] = 'SC';
+	
+			states[46] = 'SD';
+	
+			states[47] = 'TN';
+	
+			states[48] = 'TX';
+	
+			states[49] = 'VI';
+	
+			states[50] = 'UT';
+	
+			states[51] = 'VT';
+	
+			states[52] = 'VA';
+	
+			states[53] = 'WA';
+	
+			states[54] = 'WV';
+	
+			states[55] = 'WI';
+	
+			states[56] = 'WY';
+		
+
+
+      	// document.LicenseForm.AddList.style.visibility = "hidden";
+
+	document.LicenseForm.BKRBID.value = "5051";
+	document.LicenseForm.LicID.value = "0";
+	document.LicenseForm.DOIRequestedDate.focus();
+	document.LicenseForm.LicState.value="";
+
+	doireq = "";
+	doieff = "";
+	doiexp = "";
+
+	if ( doireq != "null" )
+		document.LicenseForm.DOIRequestedDate.value = "";
+	if ( doieff != "null" )
+		document.LicenseForm.DOIEffectiveDate.value = "";
+	if ( doiexp != "null" )
+		document.LicenseForm.DOIExpirationDate.value = "";
+
+
+	
+
+
+	if ( "Empty" != "Empty" && "Empty" != "null" ) {
+			alert("Empty");
+
+	}
+	
+   }
+
+
+
+   function validateLicense() {
+
+	if ( validate() ) {
+
+	document.LicenseForm.TypeChangeKey.value = "Submit";
+	document.LicenseForm.submit();
+
+	}
+   }
+
+
+
+
+
+   // Function add, modify and manipulate all the functionalities of the list
+   function manipulateList( list, state, licno, mname, dbaname, issued, renewed, exp, extn ) {
+
+	var doireq = document.LicenseForm.DOIRequestedDate;
+	var doieff = document.LicenseForm.DOIEffectiveDate;
+	var doiexp = document.LicenseForm.DOIExpirationDate;
+
+
+	if ( doireq.value == "" && doieff.value == "" && doiexp.value == "" && state.value == "" &&
+		licno.value == "" && mname.value == "" && dbaname.value == "" && issued.value == "" && renewed.value == "" 
+			&& exp.value == "" && extn.value == "" ) {
+
+	}
+	else {
+
+		if ( validate() ) {
+
+			if ( checkForDuplicateLicense() ) {
+				document.LicenseForm.TypeChangeKey.value = "FromList";
+				document.LicenseForm.submit(); 
+			}
+		}
+
+	} //end of else
+
+   }
+
+
+   function deleteFromList(theForm) {
+
+
+	if ( theForm.LicState.value == "" && theForm.LicNumber.value == "" && 
+		theForm.LicMainName.value == "" && theForm.LicDBAName.value == "" && 
+		theForm.LicIssuedDate.value == "" && theForm.LicRenewedDate.value == "" &&
+		theForm.LicExtensionDate.value == "" && theForm.LicExpirationDate.value == "" ) {
+
+		//alert( "A record has to be selected first, to be deleted from the list");
+		alert( 'A record has to be selected first, to be deleted from the list' );
+	}
+	else {
+
+		if ( theForm.StatusIndicator.value == "D" ) {
+			//alert( "The selected record is already marked for deletion" );
+			alert( 'The selected record is already marked for deletion' );
+			theForm.TypeChangeKey.value = "FromListDelete";
+			theForm.submit();
+
+		}
+		else {
+
+			theForm.TypeChangeKey.value = "FromListDelete";
+			theForm.submit();
+		}
+	
+	}
+
+
+
+   }
+
+   function checkForDuplicateLicense() {
+
+	var selectedIndex = "-1";
+	var addListLength = document.LicenseForm.AddList.options.length;
+
+	for( var m=0; m < addListLength; m++ ) {
+		if ( document.LicenseForm.AddList.options[m].selected == true ) {
+			selectedIndex = m;
+			break;
+		}
+	}
+
+	var st = document.LicenseForm.LicState.value;
+	st = st.toUpperCase();
+	var lic = document.LicenseForm.LicNumber.value;
+	lic = lic.toUpperCase();
+	var stlic = st + "-" + lic;
+
+	var stLicValues = "";
+	var StateLicense = "";
+	var licStatus = true;
+
+	var splitData = new Array();
+       
+	for ( var k=0; k<addListLength; k++ ) {
+		
+	
+		if ( selectedIndex != k )  {
+
+			stLicValues = document.LicenseForm.AddList.options[k].value;
+
+			var j = 0;
+			var count = new Array();
+			for (var i=0; i < stLicValues.length; i++) {
+				temp = "" + stLicValues.substring(i, i+1);
+
+				if ( temp == (":" ) ) {
+					count[j] = i;
+					j++;
+				}
+		
+			}
+			count[j] = stLicValues.length;
+
+			var x = 0;
+			for ( i=0; i < count.length; i++ ) {
+				splitData[i] = stLicValues.substring( x, count[i] );
+				x = count[i]+1;
+			}
+	
+			StateLicense = splitData[0]+ "-" + splitData[1];
+
+			if ( stlic == StateLicense ) {
+				//alert( "Cannot duplicate License. A License with the same number and state already exists" );
+				alert( 'Cannot duplicate License. A License with the same number and state already exists' );
+				licStatus = false;
+				break;
+			}
+		}
+
+	}
+
+	if ( licStatus)
+		return true;
+	else
+		return false;
+
+   }
+
+
+   function popAgain( popList, popValue ) {
+
+	if ( enableList ) {
+
+	var values = popValue;
+
+	for( var m=0; m < popList.length; m++ ) {
+		if ( popList.options[m].selected == true ) {
+			listIndex = m;
+			break;
+		}
+	}
+
+
+	var temp;
+
+	var count = new Array();
+	var splitData = new Array();
+		
+	var j = 0;
+	for (var i=0; i < values.length; i++) {
+		temp = "" + values.substring(i, i+1);
+
+		if ( temp == (":" ) ) {
+			count[j] = i;
+			j++;
+		}
+		
+	}
+	count[j] = values.length;
+
+	var k = 0;
+	for ( i=0; i < count.length; i++ ) {
+		splitData[i] = values.substring( k, count[i] );
+		k = count[i]+1;
+	}
+
+
+	if ( splitData[1] == undefined ) {
+		alert( 'Click the record you wish to populate in the fields' );
+	}
+	else {
+		document.LicenseForm.LicState.value = splitData[0];
+		document.LicenseForm.LicNumber.value = splitData[1];
+		document.LicenseForm.LicMainName.value = splitData[2];
+		document.LicenseForm.LicDBAName.value = splitData[3];
+		document.LicenseForm.LicIssuedDate.value = splitData[4];
+		
+		if ( splitData[5] == splitData[4] )
+			splitData[5] = "";
+		document.LicenseForm.LicRenewedDate.value = splitData[5];
+		document.LicenseForm.LicExpirationDate.value = splitData[6];
+		document.LicenseForm.LicExtensionDate.value = splitData[7];
+		document.LicenseForm.LicID.value = splitData[8];
+		document.LicenseForm.StatusIndicator.value = splitData[9];
+		document.LicenseForm.LipIdentifier.value = splitData[9];	
+	
+		oldNo = true;
+	
+	}
+
+	}
+   }
+
+
+   function resetForm(theForm) {
+
+	var hbkrbid = theForm.BKRBID.value;
+	var hLicID = theForm.LicID.value;
+	var hkey = theForm.TypeChangeKey.value;
+	var ind = theForm.indicator.value;
+	var stsind = theForm.StatusIndicator.value;
+	
+	var tempdoireq = "";
+	var tempdoieff = "";
+	var tempdoiexp = "";
+
+	theForm.reset();
+
+	theForm.DOIEffectiveDate.value = tempdoieff;
+	theForm.DOIExpirationDate.value = tempdoiexp;
+	theForm.DOIRequestedDate.value = tempdoireq;
+	theForm.BKRBID.value = hbkrbid;
+	
+	/*
+	theForm.LicID.value = hLicID;
+	theForm.TypeChangeKey.value = hkey;
+	theForm.indicator.value = ind;
+	theForm.StatusIndicator.value = stsind;
+	*/
+	theForm.LicState.value = "";
+
+   }
+
+   function enableLicForm(theForm) {
+
+   	var totalElements = theForm.elements.length;
+	var licID = theForm.LicID.value;
+	
+
+	for ( var i = 0 ; i <totalElements ; i++) {
+
+		if ( licID != "" && licID > 0 ) {
+		
+			if ( theForm.elements[i].type != "button" ) {
+				theForm.elements[i].style.background = "white";
+				theForm.elements[i].onfocus = null;
+			}
+		}
+    	}
+
+
+	enableList = true;
+	theForm.AddList.style.background = "white";
+
+   }
+
+</SCRIPT>
+</HEAD>
+
+
+<BODY bgcolor="#0B5F77" OnLoad="addListHide()">
+
+<FORM name="LicenseForm" method="POST" action="LicenseServlet" OnSubmit="return validateLicense()">
+  <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+    <tr align="center" valign="middle"> 
+      <td> 
+        <table width="670" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td align="left" width="3" height="20"><img src="images/tleft3.gif" width="3" height="20"></td>
+            <td bgcolor="#E6E9F0" width="332" align="left"><font class="stitle">&nbsp;&nbsp;&nbsp;License 
+              / DOI</font></td>
+            <td bgcolor="#E6E9F0" width="335" align="right"> 
+              <input type="button" value="Edit" name="Edit" class="lebotton" onClick="enableAll(document.AgreementsForm)">
+              <input type="button" value="Reset" name="Reset" onClick="resetAgrForm(document.AgreementsForm)" class="lebotton">
+            </td>
+          </tr>
+        </table>
+        <table border="0" cellspacing="0" cellpadding="0" width="670">
+          <tr> 
+            <td><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td ><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td width="668"> 
+              <table cellpadding="0" cellspacing="0" width="668" height="0">
+                <tbody> 
+                <tr>
+                  <td class="label" align="center" valign="bottom" width="121" height="25">&nbsp; 
+                  </td>
+                  <td class="label" width="125" height="25" valign="bottom"></td>
+                  <td class="label" align="center" width="100" height="25" valign="bottom"><font class="ComTitle">Requested</font></td>
+                  <td class="label" align="center" width="100" height="25" valign="bottom"><font class="ComTitle">Effective</font></td>
+                  <td class="label" align="center" width="100" height="25" valign="bottom"><font class="ComTitle">Expiration</font></td>
+                  <td class="label" align="center" valign="bottom" width="122" height="25">&nbsp; 
+                  </td>
+                </tr>
+                <tr>
+                  <td class="label" bgcolor="#E6E9F0" align="center" valign="bottom" width="121">&nbsp;</td>
+                  <td class="title" width="125" bgcolor="#E6E9F0" align="right"><font class="stitle">DOI 
+                    Appointment -&gt;</font></td>
+                  <td valign="middle" align="center" width="100" bgcolor="#E6E9F0"> 
+                    <input size="11" type="text" maxlength="10" name="DOIRequestedDate" class="input2" tabindex="1">
+                  </td>
+                  <td valign="middle" align="center" width="100" bgcolor="#E6E9F0"> 
+                    <input size="11" type="text" maxlength="10" name="DOIEffectiveDate" class="input2" tabindex="2">
+                  </td>
+                  <td valign="middle" align="center" width="100" bgcolor="#E6E9F0"> 
+                    <input size="11" type="text" maxlength="10" name="DOIExpirationDate" class="input2" tabindex="3">
+                  </td>
+                  <td class="label" bgcolor="#E6E9F0" align="center" valign="bottom" width="122">&nbsp;</td>
+                </tr>
+                </tbody> 
+              </table>
+              <table cellpadding="0" cellspacing="0" width="100%" align="center">
+                <tbody> 
+                <tr align="center" valign="bottom"> 
+                  <td class="label" height="25"><font class="ComTitle">State</font></td>
+                  <td class="label" height="25"><font class="ComTitle">License</font></td>
+                  <td class="label" height="25"><font class="ComTitle">Main Name 
+                    </font></td>
+                  <td class="label" height="25"><font class="ComTitle">DBA Name</font></td>
+                  <td class="label" height="25"><font class="ComTitle">Issued</font></td>
+                  <td class="label" height="25"><font class="ComTitle">Renewed</font></td>
+                  <td class="label" height="25"><font class="ComTitle">Expiration</font></td>
+                  <td class="label" height="25"><font class="ComTitle">Extension</font></td>
+                  <td class="label" height="25">&nbsp;</td>
+                </tr>
+                <tr align="center"> 
+                  <td bgcolor="#E6E9F0"> 
+                    <select name="LicState" class="select2" tabindex="4">
+                      <option value='AL'>AL</option>
+                      <option value='AK'>AK</option>
+                      <option value='AS'>AS</option>
+                      <option value='AZ'>AZ</option>
+                      <option value='AR'>AR</option>
+                      <option value='CA'>CA</option>
+                      <option value='CZ'>CZ</option>
+                      <option value='CO'>CO</option>
+                      <option value='CT'>CT</option>
+                      <option value='DE'>DE</option>
+                      <option value='DC'>DC</option>
+                      <option value='FL'>FL</option>
+                      <option value='GA'>GA</option>
+                      <option value='GU'>GU</option>
+                      <option value='HI'>HI</option>
+                      <option value='ID'>ID</option>
+                      <option value='IL'>IL</option>
+                      <option value='IN'>IN</option>
+                      <option value='IA'>IA</option>
+                      <option value='KS'>KS</option>
+                      <option value='KY'>KY</option>
+                      <option value='LA'>LA</option>
+                      <option value='ME'>ME</option>
+                      <option value='MD'>MD</option>
+                      <option value='MA'>MA</option>
+                      <option value='MI'>MI</option>
+                      <option value='MN'>MN</option>
+                      <option value='MS'>MS</option>
+                      <option value='MO'>MO</option>
+                      <option value='MT'>MT</option>
+                      <option value='NE'>NE</option>
+                      <option value='NV'>NV</option>
+                      <option value='NH'>NH</option>
+                      <option value='NJ'>NJ</option>
+                      <option value='NM'>NM</option>
+                      <option value='NY'>NY</option>
+                      <option value='NC'>NC</option>
+                      <option value='ND'>ND</option>
+                      <option value='OH'>OH</option>
+                      <option value='OK'>OK</option>
+                      <option value='ON'>ON</option>
+                      <option value='OR'>OR</option>
+                      <option value='PA'>PA</option>
+                      <option value='PR'>PR</option>
+                      <option value='RI'>RI</option>
+                      <option value='SC'>SC</option>
+                      <option value='SD'>SD</option>
+                      <option value='TN'>TN</option>
+                      <option value='TX'>TX</option>
+                      <option value='VI'>VI</option>
+                      <option value='UT'>UT</option>
+                      <option value='VT'>VT</option>
+                      <option value='VA'>VA</option>
+                      <option value='WA'>WA</option>
+                      <option value='WV'>WV</option>
+                      <option value='WI'>WI</option>
+                      <option value='WY'>WY</option>
+                    </select>
+                  </td>
+                  <td bgcolor="#E6E9F0"> 
+                    <input size="11" type="text" maxlength="10" name="LicNumber" class="input2" tabindex="5">
+                  </td>
+                  <td bgcolor="#E6E9F0"> 
+                    <input size="11" type="text" maxlength="30" name="LicMainName" class="input2" tabindex="6">
+                  </td>
+                  <td bgcolor="#E6E9F0"> 
+                    <input size="11" type="text" maxlength="30" name="LicDBAName" class="input2" tabindex="7">
+                  </td>
+                  <td bgcolor="#E6E9F0"> 
+                    <input size="11" type="text" maxlength="10" name="LicIssuedDate" class="input2" tabindex="8">
+                  </td>
+                  <td bgcolor="#E6E9F0"> 
+                    <input size="11" type="text" maxlength="10" name="LicRenewedDate" class="input2" tabindex="9">
+                  </td>
+                  <td bgcolor="#E6E9F0"> 
+                    <input size="11" type="text" maxlength="10" name="LicExpirationDate" class="input2" tabindex="10">
+                  </td>
+                  <td bgcolor="#E6E9F0"> 
+                    <input size="11" type="text" maxlength="10" name="LicExtensionDate" class="input2" tabindex="11">
+                  </td>
+                  <td bgcolor="#E6E9F0"><a href="#" tabindex="29" onClick="addToList(document.AgentMaintenance);" onMouseOver="javascript:add.src = image15.src;" onMouseOut="javascript:add.src = image16.src;"><img src="images/add_off.gif" width="50" height="19" border="0" alt="Add" name="add" tabindex="12"></a></td>
+                </tr>
+                </tbody> 
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                <tr align="center" valign="bottom"> 
+                  <td colspan="7"> 
+                    <select size="3" name="AddList"  onClick="return popAgain(AddList,this.form.AddList.value)"  onFocus="this.blur()" class="multiselect2" style="background-color:#ffffff">
+                    </select>
+                  </td>
+                </tr>
+                <tr align="center" valign="bottom"> 
+                  <td colspan="7"><a href="#" onClick="deleteFromList(document.AgentMaintenance);" onMouseOver="javascript:delsel.src = image17.src;" onMouseOut="javascript:delsel.src = image18.src;"><img src="images/delsel_off.gif" width="138" height="19" border="0" alt="Delete Selected" name="delsel" vspace="0"></a> 
+                    <input type="hidden" name="BKRBID" value="">
+                    <input type="hidden" name="LicID" value="0">
+                    <input type="hidden" name="TypeChangeKey">
+                    <input type="hidden" name="indicator" value="0">
+                    <input type="hidden" name="StatusIndicator" value="">
+                    <input type="hidden" name="LipIdentifier" value="-1">
+                    <input type="hidden" name="SaveExitPage" value="No">
+                  </td>
+                </tr>
+              </table>
+              
+            </td>
+            <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  </FORM>
+</BODY>
+</HTML>
+

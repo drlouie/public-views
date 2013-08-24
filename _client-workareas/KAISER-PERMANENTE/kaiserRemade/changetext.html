@@ -1,0 +1,46 @@
+<style type="text/css">
+#divLinks   {position:absolute; left:150px; top:150px; visibility:hidden;}
+#divLinks a {color:#336699; font-family:verdana,arial,helvetica,sans-serif; font-size:12px; font-weight:700;}
+#divMessage {position:absolute; left:150px; width:300px; top:180px; visibility:hidden;}
+body {background-color:#ffffff;} 
+</style>
+<script language="Javascript">
+<!--
+
+/****
+Variables for Change Text DHTML script
+****/
+
+msgFont= "verdana,arial,helvetiva"	// The font for the message
+msgFontSize= 10				// Set the fontSize in px
+msgFontColor="#0B5F77"		// Set the fontColor
+msgWidth= "350"				// Set the width of the messageblock here for netscape 4
+
+//Set the text you want to display on mouseover here.
+messages=new Array()
+messages[0]="" // 0 = Blank Text Call
+messages[1]="Correspondence"
+messages[2]="Physical/Building"
+messages[3]="Residence"
+
+//-->
+</script>
+<script language="JavaScript" type="text/javascript" src="js/changetxt.js"></script>
+</head>
+
+<body marginleft="0" marginheight="0">
+<div id="divLinks">
+<a href="#" onmouseover="changeText(1)" onmouseout="changeText(0)">Link 1</a>
+<a href="#" onmouseover="changeText(2)" onmouseout="changeText(0)">Link 2</a>
+<a href="#" onmouseover="changeText(3)" onmouseout="changeText(0)">Link 3</a>
+<a href="#" onmouseover="changeText(4)" onmouseout="changeText(0)">Link 4</a>
+<a href="#" onmouseover="changeText(5)" onmouseout="changeText(0)">Link 5</a>
+<a href="#" onmouseover="changeText(6)" onmouseout="changeText(0)">Link 6</a>
+</div>
+
+<!-- START DYNAMIC LAYER --><div id="divMessage"><font class="stitle"></font></div><!-- END DYNAMIC LAYER -->
+
+
+</body>
+</html>
+

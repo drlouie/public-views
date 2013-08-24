@@ -1,0 +1,39 @@
+<!-- Sample HTML file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>Broker Inquiry</TITLE>
+<LINK href="Master.css" rel="stylesheet" type="text/css">
+<SCRIPT language="javascript">
+ function check( click )
+  {
+	document.Bottom.clicked.value = click;
+	document.Bottom.submit();
+  }
+</SCRIPT>
+<script language="javascript" src="../script/common_css.js"></script>
+</HEAD>
+<body bgcolor="#0B5F77" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+    <tr bgcolor="#E6E9F0" height="2"> 
+      <td><img src="images/spacer.gif" height="2" width="100" border="0"></td>
+    </tr>
+    <tr> 
+      <td height="4"><img src="images/spacer.gif" height="4" width="100" border="0"></td>
+    </tr>
+  </table>
+<TABLE width="100%" border="0">
+    <TBODY> 
+    <TR>
+      <TD align="right"> 
+<FORM name="Bottom" method="post" action="BrokerInquiryServlet" target="_parent">
+        <input type="hidden" name="clicked" value="">
+        <INPUT type="button" name="AddAgent" value="Add Agent" class="lebotton" onclick="check(this.value);"> <INPUT type="button" name="AddFirm" value="Add Firm" class="lebotton" onclick="check(this.value);"></FORM></TD>
+
+    </TR>
+  </TBODY>
+</TABLE>
+</BODY>
+</HTML>

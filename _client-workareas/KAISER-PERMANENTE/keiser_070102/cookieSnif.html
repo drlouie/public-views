@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<TITLE>Change Broker( Agent to Firm )</TITLE>
+<!--Dynamic CSS Javascript-->
+<script language="Javascript" src="script/common_css.js" id="leCss"></script>
+<script language="Javascript" src="script/b4dom.js"></script>
+<script language="javascript" src="script/common_css.js"></script>
+</HEAD>
+<BODY bgcolor="#0B5F77" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="ifSetting();">
+
+<!-- FOR HIDING PAGE CONTENTS FOR COOKIE CHECK PROCEDURE -->
+<div id="CColor" style="position: absolute; left:0px; top:0px; background-color: #0B5F77; layer-background-color: #0B5F77; height: 100%; width: 100%;visibility:hidden">
+<TABLE align="center" height="100%" cellpadding="10" cellspacing="0" border="0">
+    <TBODY>
+        <TR>
+            <TD valign="middle" width="100%" bgcolor="#E6E9F0">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr> 
+        <td bgcolor="#E6E9F0" width="100%">
+        	<table cellpadding="10" cellspacing="0" border="0" width="100%">
+            	<tr>
+                	<td width="100%" align="center" valign="middle">
+<font class='stitle' id='checkerText' style='color:#EB0000'>Checking Your Interface Settings...<br><br></font>
+<font class='stitle' id='chooserText'></font>
+<font class='stitle' id='chosenText'></font>
+<font class='stitle' id='chosenText2'></font>
+					</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+          			
+			</TD>
+        </TR>
+    </TBODY>
+</TABLE>
+</div> 
+
+
+<SCRIPT language="Javascript">
+hideChooser();
+	
+cookieColor = "ThyColor";
+var today = new Date()
+var expires = new Date()
+// valid for 1 year
+expires.setTime(today.getTime() + 24*365*3600000)
+
+// CHECK TO SEE IF USER IS SETTING COLOR FOR FIRST TIME
+function ifSetting() {
+	l=this.document.location.href
+	s=this.document.location.search
+	l=l.replace(s,"")
+// if so show confirm change
+	if(s.indexOf("settingIt")>-1){
+	window.opener.document.location.reload();
+	}
+// else run cookie check
+	else { runDefaults(); imageStack(); }
+}
+
+// DEFAULT COOKIE CHECK
+function runDefaults() {
+	if (document.cookie) { elColor = document.cookie; }
+	else { elColor = -1; }
+// if no Cookie
+	if (elColor == -1) {
+		showChooser();
+		showChooserL();
+	}
+// with Cookie
+	else {
+		showChooser();
+		showChosenT();
+		setTimeout('writeChosenT()', 1000);
+		setTimeout('writeChosenT2()', 1750);
+		setTimeout('window.opener.hideHider()', 2500);
+		setTimeout('window.close()', 3500);
+	}
+}
+
+// SET NEW COLOR COOKIE USING SELECTED SELECT LIST ITEM
+function setColor() {
+	var formindex = document.selColor.leColor.selectedIndex;
+	var thisone = document.selColor.leColor.options[formindex].text;
+	document.cookie=cookieColor+"="+thisone+"; " + " expires=" + expires.toGMTString() ;
+}
+
+// HIDE CHOOSE COLOR FORM AND LAYER
+function hideChooser() {
+	if (document.getElementById) { document.getElementById('CColor').style.visibility = 'hidden'; }
+	else {
+		if (document.layers) { document.CColor.visibility = 'hidden'; }
+		else { document.all.CColor.style.visibility = 'hidden'; }
+	}
+}
+
+function showChooser() {
+	if (document.getElementById) {  // DOM3 = IE5, NS6
+		document.getElementById('CColor').style.visibility = 'visible';
+	}
+	else {
+		if (document.layers) {  // Netscape 4
+			document.CColor.visibility = 'visible';
+		}
+		else {  // IE 4
+			document.all.CColor.style.visibility = 'visible';
+		}
+	}
+}
+
+function showChooserL() {
+
+// write form and text
+	document.getElementById('chooserText').innerHTML = "You haven't set the color layout for your BASE Interface. Please select a layout from the drop down list and click 'Set My Interface'.<br><form name='selColor' onSubmit='return setColor();'><select name='leColor' class='select2'><option value='Teal'>KP Teal</option><option value='Sky'>Sky Blue</option><option value='Baby'>Baby Blue</option></select><br><br><input type='submit' value='Set My Interface' name='leSubmitter' class='lebotton'><input type='hidden' value='1' name='settingIt'></form>";
+}
+
+function showChosenT() {
+	if (document.getElementById) {  document.getElementById('chosenText').style.visibility = 'visible'; }
+	else {
+		if (document.layers) { document.chosenText.visibility = 'visible'; }
+		else { document.all.chosenText.style.visibility = 'visible'; }
+	}
+}
+
+function writeChosenT() {
+	// GET COOKIE
+	elColor = document.cookie;
+	if (elColor.indexOf('Teal') != -1) { theeColor="KP Teal/Aqua"; leDir="tface"; }
+	if (elColor.indexOf('Sky') != -1) { theeColor="Sky Blue"; leDir="sface"; }
+	if (elColor.indexOf('Baby') != -1) { theeColor="Baby Blue"; leDir="bface"; }
+
+	document.getElementById('chosenText').innerHTML = "Loading <font style='color:#EB0000'>"+theeColor+"</font> colored Interface...";
+}
+
+function writeChosenT2() {
+	document.getElementById('chosenText2').innerHTML = "<font style='color:#EB0000'><br><br>Re-drawing master interface and loading BASE...</font>";
+}
+
+</SCRIPT>
+</BODY>
+</HTML>

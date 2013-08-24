@@ -1,0 +1,14 @@
+a{color:#ffffff;text-decoration:underline}
+a:hover{color:#ffffff;text-decoration:none}
+.body{overflow:hidden}
+.third_none{font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: silver}
+.third_1{font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: silver;background-color:black}
+.itbottom { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: normal; color: #FFFFFF; background-color: #C0C0C0}
+.ittop { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: normal; color: #C0C0C0; background-color:#FFFF99}
+.pointer {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-weight: normal}
+.botpointer{font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: normal; color: #6699CC; background-color:#6699CC}.hiddenFFFF99 {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #FFFF99; background-color: #FFFF99}
+.white {  font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; color: #FFFFFF}
+.hidden000000 { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; color: #000000; background-color: #000000}
+.yellowbgyellotext {font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: normal; color: #FFFF00; text-decoration: none; background-color: #FFFF00; white-space: normal; letter-spacing: 10px; vertical-align: middle; word-spacing: 10px; line-height: 10px}
+.hiddenFFFF00 { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #FFFF00; background-color: #FFFF00}
+.drops {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold}

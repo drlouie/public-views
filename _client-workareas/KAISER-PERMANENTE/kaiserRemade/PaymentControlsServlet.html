@@ -1,0 +1,971 @@
+ <!-- Sample HTML file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+
+
+
+
+
+
+
+
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>Payment Controls</TITLE>
+<STYLE>
+<!--
+.label {
+	COLOR : #0033FF; 
+	font-family: arial,verdana,sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+.input {
+	COLOR : #000000; 
+	font-family: verdana, arial, sans-serif;
+	font-size : 12px;
+	font-weight : normal;
+	font-style: normal;	
+	}
+.caption {
+	COLOR : #003333; 
+	font-family: verdana, arial, sans-serif;
+	font-size : 11px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+.submit {
+	COLOR : #0000; 
+	font-family: verdana, arial, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+
+
+.title {
+	COLOR : #cc3333; 
+	font-family: arial,verdana,sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	font-style: normal;	
+	}
+IMG{
+  color : olive;
+}
+
+-->
+</STYLE>
+<!--<LINK href="C:/WINNT/Profiles/lxjanakiraman/Personal/Studio 3.5 Projects/Broker Commission Payment System/theme/Master.css" rel="stylesheet" type="text/css">-->
+
+
+<!--Dynamic CSS Javascript-->
+<script language="javascript" src="js/common_css.js"></script>
+
+
+
+<script language="Javascript">
+<!--
+//MOUSEOVER IMAGE PRELOAD
+
+//mreset
+// // // MOUSE OVER
+image1 = new Image();
+image1.src = "images/sreset_ov.gif";
+// // // MOUSE OFF
+image2 = new Image();
+image2.src = "images/sreset_off.gif";
+
+//medit
+image3 = new Image();
+image3.src = "images/sedit_ov.gif";
+image4 = new Image();
+image4.src = "images/sedit_off.gif";
+
+//-->
+</script>
+
+
+<Script src="script/ValidatePayment.js">
+</Script>
+
+<Script language="JavaScript">
+
+   var oldNo = false;
+   var listIndex = 0;
+
+   var listUILength = 0;
+   var listUIValues = new Array();
+   var listNameValues = new Array();
+   var listNameOriginal = new Array();
+
+   var PayDDID = new Array();
+   var NameDDID = new Array();
+
+   var enableList = false;
+
+   function disableDDEnroll() {
+	document.PaymentControlsForm.DDEnroll.disabled = true;
+
+   }
+   
+   
+   function enableAllFields() {
+   
+		for ( var i = 0 ; i <document.PaymentControlsForm.elements.length; i++) {
+			
+			if ( document.PaymentControlsForm.elements[i].name == "MinPaymentDefault" ||  document.PaymentControlsForm.elements[i].name == "PaymentAppDefault" || document.PaymentControlsForm.elements[i].name == "MinPaymentOverride"  || document.PaymentControlsForm.elements[i].name == "PaymentAppOverride"  || document.PaymentControlsForm.elements[i].name == "PaymentMethod") {
+ 			}
+			else {
+				document.PaymentControlsForm.elements[i].style.background = "white";
+				document.PaymentControlsForm.elements[i].disabled = false;
+			}
+		}
+		enableList = true;
+		//document.PaymentControlsForm.AddList.style.background = "silver";
+   
+   }
+   
+   
+   function disableAllFields() {
+   
+		for ( var i = 0 ; i <document.PaymentControlsForm.elements.length; i++) {
+			
+			if ( document.PaymentControlsForm.elements[i].name == "MinPaymentDefault" 
+				||  document.PaymentControlsForm.elements[i].name == "PaymentAppDefault" 
+				|| document.PaymentControlsForm.elements[i].name == "MinPaymentOverride"  
+				|| document.PaymentControlsForm.elements[i].name == "PaymentAppOverride"  
+				|| document.PaymentControlsForm.elements[i].name == "PaymentMethod" 
+				|| document.PaymentControlsForm.elements[i].type == "hidden") {
+ 			}
+			else {
+				document.PaymentControlsForm.elements[i].style.background = "silver";
+				document.PaymentControlsForm.elements[i].disabled = true;
+			}
+		}
+		enableList = false;
+   
+   
+   }
+   
+
+   function populateFields() {
+
+	var transtype = "";
+	var accttype = "";
+
+	// document.PaymentControlsForm.AddList.style.visibility = "hidden";
+	document.PaymentControlsForm.PayID.value = "0";
+	disableAllFields();
+
+	document.PaymentControlsForm.BKRBID.value = "5051";
+
+	if ( parent.BrokerMain.document.forms[0] != undefined ) {
+	
+		if ( parent.BrokerMain.document.forms[0].changeType[0].checked == true ) {
+		
+			document.forms[0].Honorific.value = parent.BrokerMain.document.forms[0].Honor.value;
+			document.forms[0].FirstName.value = parent.BrokerMain.document.forms[0].FName.value;
+			document.forms[0].LastName.value = parent.BrokerMain.document.forms[0].LName.value;			
+			document.forms[0].MiddleName.value = parent.BrokerMain.document.forms[0].MName.value;			
+			document.forms[0].Suffix.value = parent.BrokerMain.document.forms[0].Suffix.value;									
+		}
+	}
+
+	
+
+	document.PaymentControlsForm.TransactionType.value = "";
+	document.PaymentControlsForm.AccountType.value = "";
+
+	document.PaymentControlsForm.MinPaymentDefault.value = "5";
+	document.PaymentControlsForm.PaymentAppDefault.value = "50000";				
+	
+	document.PaymentControlsForm.MinPaymentOverride.value = "";
+	document.PaymentControlsForm.PaymentAppOverride.value = "";
+	
+
+
+	if ( "50000" != "" ) {
+		document.PaymentControlsForm.PaymentAppDefault.value = "$50,000";
+	}
+
+	if ( "5" != "" ) {
+		document.PaymentControlsForm.MinPaymentDefault.value = "$5.00";
+	}
+
+
+	if ( "" == "null" || "" == "" ) {
+	}
+	else {
+	
+		
+	
+		alert( "" );	
+	}
+	
+	
+	
+	
+	document.PaymentControlsForm.MinPaymentOverride.focus();
+
+   }
+
+
+   function submitForm() {
+
+		document.PaymentControlsForm.AddList.disabled = false;
+		document.PaymentControlsForm.TransactionType.disabled = false;
+		document.PaymentControlsForm.AccountType.disabled = false;
+
+
+	if (validate ( document.PaymentControlsForm ) ) {
+
+		document.PaymentControlsForm.TypeChangeKey.value = "Submit";
+		document.PaymentControlsForm.submit();
+	}
+
+   }
+
+   function AddToList(theForm) {
+
+
+
+	if ( theForm.AddList.length < 1 ) {
+
+		var paytypelength = theForm.PaymentMethod.length;
+		var paytype="";
+
+		for ( var i=0; i < paytypelength; i++ ) {
+	
+			if (theForm.PaymentMethod[i].checked) {
+				paytype = theForm.PaymentMethod[i].value;
+				break;
+			}
+		}
+
+		if ( paytype != "Check" ) {	
+
+
+			if ( theForm.Honorific.value == "" && theForm.FirstName.value == "" && theForm.LastName.value == "" && 
+				theForm.MiddleName.value == "" && theForm.Suffix.value == "" &&  theForm.TransactionType.value == "" && 
+			 	theForm.RoutingNo.value == "" &&  theForm.AccountType.value == "" &&  theForm.AccountNo.value == "" && 
+		 		theForm.SignedDate.value == "" &&  theForm.ReceivedDate.value == "" &&  theForm.EcomDate.value == "" && 
+		 		theForm.PreNoteDate.value == "" ) {
+
+			}
+			else {
+	
+				if (validate ( document.PaymentControlsForm ) ) {
+
+
+					if ( checkForDuplicateAccount() ) {
+
+						var payid = document.PaymentControlsForm.PayID.value;
+
+						if ( payid == "" )
+							document.PaymentControlsForm.PayID.value = "0";
+
+						document.PaymentControlsForm.TypeChangeKey.value = "FromList";
+						document.PaymentControlsForm.submit();
+					}
+				}
+
+			}//end of else
+	
+		}
+	
+	}
+	else {
+	
+		var payID = document.PaymentControlsForm.PayID.value;
+		
+		if ( payID == "" || payID == 0 ) {
+			alert( "Only one Direct Deposit setup is allowed" );
+		}
+		else {
+		
+	
+			if (validate ( document.PaymentControlsForm ) ) {
+
+				document.PaymentControlsForm.TypeChangeKey.value = "FromList";
+				document.PaymentControlsForm.submit();
+
+			}
+		
+		}
+			
+	}
+
+   }
+
+
+   function deleteFromList(theForm) {
+
+	var paytypelength = theForm.PaymentMethod.length;
+	var paytype="";
+
+	for ( var i=0; i < paytypelength; i++ ) {
+	
+		if (theForm.PaymentMethod[i].checked) {
+			paytype = theForm.PaymentMethod[i].value;
+			break;
+		}
+	}
+
+	if ( paytype != "Check" ) {	
+
+
+	if ( theForm.Honorific.value == "" && theForm.FirstName.value == "" && theForm.LastName.value == "" && 
+		theForm.MiddleName.value == "" && theForm.Suffix.value == "" &&  theForm.TransactionType.value == "" && 
+		 theForm.RoutingNo.value == "" &&  theForm.AccountType.value == "" &&  theForm.AccountNo.value == "" && 
+		 theForm.SignedDate.value == "" &&  theForm.ReceivedDate.value == "" &&  theForm.EcomDate.value == "" && 
+		 theForm.PreNoteDate.value == "" ) {
+
+
+		if ( theForm.AddList.length > 0 )
+			alert( "A record has to be selected first, to be deleted from the list");
+		else
+			alert( "There is no record available to delete" );
+
+	}
+	else {
+
+		if ( theForm.StatusIndicator.value == "D" ) {
+			alert( "The selected record is already marked for deletion" );
+			theForm.TypeChangeKey.value = "FromListDelete";
+			theForm.submit();
+
+		}
+		else {
+
+			theForm.TypeChangeKey.value = "FromListDelete";
+			theForm.submit();
+		}
+	
+	}
+	
+	}
+
+   }
+
+
+   function checkForDuplicateAccount() {
+
+	var selectedIndex = "-1";
+	var addListLength = document.PaymentControlsForm.AddList.options.length;
+
+	for( var m=0; m < addListLength; m++ ) {
+		if ( document.PaymentControlsForm.AddList.options[m].selected == true ) {
+			selectedIndex = m;
+			break;
+		}
+	}
+
+	var accno = document.PaymentControlsForm.AccountNo.value;
+
+	var NewAccNo = "";
+	var PayValues = "";
+	var PayStatus = true;
+
+	var splitData = new Array();
+       
+	for ( var k=0; k<addListLength; k++ ) {
+		
+	
+		if ( selectedIndex != k )  {
+
+			PayValues = document.PaymentControlsForm.AddList.options[k].value;
+
+			var j = 0;
+			var count = new Array();
+			for (var i=0; i < PayValues.length; i++) {
+				temp = "" + PayValues.substring(i, i+1);
+
+				if ( temp == ("-" ) ) {
+					count[j] = i;
+					j++;
+				}
+		
+			}
+			count[j] = PayValues.length;
+
+			var x = 0;
+			for ( i=0; i < count.length; i++ ) {
+				splitData[i] = PayValues.substring( x, count[i] );
+				x = count[i]+1;
+			}
+	
+			NewAccNo = splitData[2];
+
+			if ( accno == NewAccNo ) {
+				var message = "Direct Deposit information with the Account number: "+accno+ " already exists" 
+						+"This is a duplicate direct deposit setup transaction. The direct deposit setup transaction will not be added";
+				alert( message );
+				PayStatus = false;
+				break;
+			}
+		}
+
+	}
+
+	if ( PayStatus)
+		return true;
+	else
+		return false;
+
+   }
+
+
+
+   function checkDDForm( paymentmethod ) {
+
+	if ( paymentmethod == "DirectDeposit" ) {
+		document.PaymentControlsForm.DDEnroll.disabled = "";
+    	}
+	else
+		document.PaymentControlsForm.DDEnroll.disabled = true;
+
+   }
+
+
+
+   function popAgain( popList, popValue ) {
+
+	if ( enableList ) {
+
+
+	var values = popValue;
+
+	for( var m=0; m < popList.length; m++ ) {
+		if ( popList.options[m].selected == true ) {
+			listIndex = m;
+			break;
+		}
+	}
+
+
+	var temp;
+
+	var count = new Array();
+	var splitData = new Array();
+	var splitNames = new Array();
+		
+	var j = 0;
+	for (var i=0; i < values.length; i++) {
+		temp = "" + values.substring(i, i+1);
+
+		if ( temp == ("-" ) ) {
+			count[j] = i;
+			j++;
+		}
+		
+	}
+	count[j] = values.length;
+
+	var k = 0;
+	for ( i=0; i < count.length; i++ ) {
+		splitData[i] = values.substring( k, count[i] );
+
+		k = count[i]+1;
+	}
+	
+	
+	if ( splitData[1] == undefined || splitData[2] == undefined || splitData[3] == undefined) {
+	
+		alert( "Click the record you want to populate in the fields" );
+	}
+	else {	
+			
+			
+			
+			if ( splitData[0] == "Add" ) {
+				document.PaymentControlsForm.TransactionType.options[0].selected = true;
+			}
+			else if ( splitData[0] == "Change" ) {
+				document.PaymentControlsForm.TransactionType.options[1].selected = true;
+			}
+			else if ( splitData[0] == "Delete" ) {
+				document.PaymentControlsForm.TransactionType.options[2].selected = true;
+			}
+		
+			document.PaymentControlsForm.RoutingNo.value = splitData[1];
+			document.PaymentControlsForm.AccountNo.value = splitData[2];
+		
+			if ( splitData[3] == "Checking" ) {
+				document.PaymentControlsForm.AccountType.options[0].selected = true;
+			}
+			else if ( splitData[3] == "Savings" ) {
+				document.PaymentControlsForm.AccountType.options[1].selected = true;
+			}
+		
+			document.PaymentControlsForm.SignedDate.value = splitData[4];
+			document.PaymentControlsForm.ReceivedDate.value = splitData[5];
+			document.PaymentControlsForm.EcomDate.value = splitData[6];
+			document.PaymentControlsForm.PreNoteDate.value = splitData[7];
+			document.PaymentControlsForm.StatusIndicator.value = splitData[8];
+		
+		
+		
+			var listNameV = listNameValues[listIndex];
+		
+			j=0;
+			for ( i=0; i < listNameV.length; i++) {
+				temp = "" + listNameValues[listIndex].substring(i, i+1);
+		
+				if ( temp == (":" ) ) {
+					count[j] = i;
+					j++;
+				}
+				
+			}
+			count[j] = listNameV.length;
+		
+			var k = 0;
+			for ( i=0; i < listNameV.length; i++ ) {
+				splitNames[i] = listNameValues[listIndex].substring( k, count[i] );
+		
+				k = count[i]+1;
+			}
+		
+		
+		
+			if ( splitNames[0] == "null" ) {
+				splitNames[0] = "";
+			}
+			if ( splitNames[2] == "null" ) {
+				splitNames[2] = "";
+			}
+			if ( splitNames[4] == "null" ) {
+				splitNames[4] = "";
+			}
+			if ( splitNames[5] == "" ) {
+				splitNames[5] = "0";
+			}
+			if ( splitNames[4] == "null" ) {
+				splitNames[4] = "";
+			}
+		
+		
+			document.PaymentControlsForm.Honorific.value = splitNames[0];
+			document.PaymentControlsForm.FirstName.value = splitNames[1];
+			document.PaymentControlsForm.MiddleName.value = splitNames[2];
+			document.PaymentControlsForm.LastName.value = splitNames[3];
+			document.PaymentControlsForm.Suffix.value = splitNames[4];
+			document.PaymentControlsForm.PayID.value = splitNames[5];	
+			document.PaymentControlsForm.DocumentName.value = splitNames[6];
+			//document.PaymentControlsForm.MinPaymentOverride.value = splitNames[7];
+			//document.PaymentControlsForm.PaymentAppOverride.value = splitNames[8];
+		
+		
+		
+			/*
+			if ( splitNames[6] == "DIRDPST" )
+				document.PaymentControlsForm.PaymentMethod[1].checked = 1;
+			else 
+				document.PaymentControlsForm.PaymentMethod[0].checked = 1;
+			*/
+			oldNo = true;
+		}
+
+	}
+	
+   }
+
+
+   function resetPayForm(theForm) {
+
+	var paytypelength = theForm.PaymentMethod.length;
+	var paytype="";
+
+	for ( var i=0; i < paytypelength; i++ ) {
+	
+		if (theForm.PaymentMethod[i].checked) {
+			paytype = theForm.PaymentMethod[i].value;
+			break;
+		}
+	}
+
+
+	var paydflt = theForm.MinPaymentDefault.value;
+	var appdflt = theForm.PaymentAppDefault.value;
+
+	if ( paytype != "Check" ) {	
+
+
+		var hbkrbid = theForm.BKRBID.value;
+		var hline1 = theForm.Line1.value;
+		var hcitystzip = theForm.CityStZip.value;
+		var hpayid = theForm.PayID.value;
+		var hdocname = theForm.DocumentName.value;
+		var hkey = theForm.TypeChangeKey.value;
+		var hind = theForm.indicator.value;
+		var stsind = theForm.StatusIndicator.value;
+
+
+		theForm.reset();
+
+
+
+		theForm.BKRBID.value = hbkrbid;
+		theForm.Line1.value = hline1;
+		theForm.CityStZip.value = hcitystzip;
+		theForm.PayID.value = hpayid;
+		theForm.DocumentName.value = hdocname;
+		theForm.TypeChangeKey.value = hkey;
+		theForm.indicator.value = hind;
+		theForm.StatusIndicator.value = stsind;
+		theForm.TransactionType.value = "";
+		theForm.AccountType.value = "";
+		theForm.PaymentMethod[1].checked = true;
+
+		
+	}
+	
+	theForm.MinPaymentDefault.value = paydflt;
+	theForm.PaymentAppDefault.value = appdflt;
+	theForm.MinPaymentOverride.value = "";
+	theForm.PaymentAppOverride.value = "";
+	
+
+   }
+
+
+   function enablePayForm(theForm) {
+
+	var payid = theForm.PayID.value;
+	
+	var paytypelength = theForm.PaymentMethod.length;
+	var paytype="";
+
+	for ( var i=0; i < paytypelength; i++ ) {
+	
+		if (theForm.PaymentMethod[i].checked) {
+			paytype = theForm.PaymentMethod[i].value;
+			break;
+		}
+	}
+
+	//if ( payid != "0" ) {
+	if ( paytype != "Check" ) {	
+
+	   	var totalElements = theForm.elements.length;
+		for ( var i = 0 ; i <totalElements ; i++) {
+			
+			if ( theForm.elements[i].name == "MinPaymentDefault" ||  theForm.elements[i].name == "PaymentAppDefault" || theForm.elements[i].name == "MinPaymentOverride"  || theForm.elements[i].name == "PaymentAppOverride"  || theForm.elements[i].name == "PaymentMethod") {
+ 			}
+			else {
+				theForm.elements[i].style.background = "white";
+				theForm.elements[i].onfocus = null;
+			}
+		}
+		
+		enableList = true;
+		theForm.AddList.style.background = "white";
+	}
+
+   }
+
+   function genDoc() {
+
+
+
+	var payid = document.PaymentControlsForm.PayID.value;
+	var paytypelength = document.PaymentControlsForm.PaymentMethod.length;
+	var paytype="";
+
+	var docname = document.PaymentControlsForm.DocumentName.value;
+
+	for ( var i=0; i < paytypelength; i++ ) {
+	
+		if (document.PaymentControlsForm.PaymentMethod[i].checked) {
+			paytype = document.PaymentControlsForm.PaymentMethod[i].value;
+			break;
+		}
+	}
+
+	if ( paytype == "DirectDeposit" ) {
+
+
+
+
+		if ( payid < 1 ) {
+
+			if ( document.PaymentControlsForm.FirstName.value == "" ) {
+				alert( "No valid data available for printing. Please select the data to be printed" );
+			}
+			else {
+			
+				if ( document.PaymentControlsForm.AddList.length < 1 ) {
+			
+				if ( confirm( "Unsaved data has been detected. Printing Direct Deposit Enrollment Form will cause this data to be saved. Do you want to proceed with the printing of DD Enrollment Form?") ) {
+
+					if ( validate( document.PaymentControlsForm ) ) {
+
+						document.PaymentControlsForm.TypeChangeKey.value="SubmitPrint";
+						document.PaymentControlsForm.action="DDEnrollment";
+						document.PaymentControlsForm.submit();
+					}
+					else
+						return false;
+				}
+				else {
+
+
+				}
+				
+				}
+				else {
+					
+					var AddListLength = document.PaymentControlsForm.AddList.length;
+					var ListValue = false;
+					
+					for ( var i=0; i < AddListLength; i++ ) {
+	
+						if (document.PaymentControlsForm.AddList.options[i].selected) {
+							ListValue = true;
+							break;
+						}
+					}
+
+					if ( ListValue ) {
+
+						if ( validate( document.PaymentControlsForm ) ) {
+
+							document.PaymentControlsForm.TypeChangeKey.value="SubmitPrint";
+							document.PaymentControlsForm.action="DDEnrollment";
+							document.PaymentControlsForm.submit();
+						}
+						else
+							return false;
+					}
+					else
+						alert( "Only one Direct Deposit setup is allowed" );
+					
+					
+				}
+			}
+		}
+		else {
+		
+			if ( document.PaymentControlsForm.FirstName.value == "" || document.PaymentControlsForm.LastName.value == "" ) {
+				alert( "No valid data available for printing. Please select the data to be printed" );
+			}
+			else {
+
+			if ( validate( document.PaymentControlsForm ) ) {
+				document.PaymentControlsForm.Line1.value = parent.BrokerMain.document.forms[0].Line1.value+"   "+parent.BrokerMain.document.forms[0].MailStop.value;
+				document.PaymentControlsForm.CityStZip.value = parent.BrokerMain.document.forms[0].City.value+"   "+parent.BrokerMain.document.forms[0].State.value+" - "+parent.BrokerMain.document.forms[0].Zip.value;
+
+				document.PaymentControlsForm.action="DDEnrollment";
+				document.PaymentControlsForm.TypeChangeKey.value="SubmitPrint";
+				document.PaymentControlsForm.submit();
+			}
+			else {
+
+				return false;
+			}
+			}
+		}
+	}
+	else {
+
+		alert( "Payment Method should be Direct Deposit to generate DD Enrollment Form" );
+	}
+
+   }
+
+
+
+</Script>
+</HEAD>
+<BODY bgcolor="#0B5F77" OnLoad="populateFields()">
+
+<FORM name="PaymentControlsForm" method="POST" action="PaymentControlsServlet" OnSubmit="submitForm()">
+  <table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+    <tr align="center" valign="middle"> 
+      <td> 
+        <table width="670" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td align="left" width="3" height="20"><img src="images/tleft3.gif" width="3" height="20"></td>
+            <td bgcolor="#E6E9F0" width="332" align="left"><font class="stitle">&nbsp;&nbsp;&nbsp;Payment 
+              Controls </font></td>
+            <td bgcolor="#E6E9F0" width="335" align="right"> 
+              <input type="button" value="DD Enroll Form" name="DDEnroll" class="lebotton" onClick="return genDoc()">
+              <input type="button" value="Edit" name="edit" class="lebotton" onClick="enableAll(document.AgreementsForm)">
+              <input type="button" value="Reset" name="reset" onClick="resetAgrForm(document.AgreementsForm)" class="lebotton">
+            </td>
+          </tr>
+        </table>
+        <table width="670" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td width="668"> 
+              <table cellspacing="0" cellpadding="0" bordercolor="#E6E9F0" border="1">
+                <tbody> 
+                <tr> 
+                  <td width="150" bgcolor="#E6E9F0">&nbsp;</td>
+                  <td valign="bottom" width="150" bgcolor="#E6E9F0" align="center"><font class="stitle" style="color:#eb0000">Minimum 
+                    Payment</font></td>
+                  <td valign="bottom" bgcolor="#E6E9F0" align="center" width="150"><font class="stitle" style="color:#eb0000">Payment 
+                    Approval</font></td>
+                  <td valign="bottom" align="center" bgcolor="#E6E9F0" width="218"><font class="stitle" style="color:#eb0000">Payment 
+                    Method</font></td>
+                </tr>
+                <tr> 
+                  <td align="right" width="150" bgcolor="#E6E9F0"><font class="stitle">Default</font></td>
+                  <td width="150" align="center"> 
+                    <input size="10" type="text" maxlength="10" name="MinPaymentDefault" class="input1" readonly>
+                  </td>
+                  <td align="center" width="150"> 
+                    <input class="input1" size="10" type="text" maxlength="10" name="PaymentAppDefault" readonly>
+                  </td>
+                  <td rowspan="2" colspan="4" align="center"><font class="ComTitle"><nobr><a href="#" onClick="Javascript:document.PaymentControlsForm.PaymentMethod[0].checked = true;checkDDForm(document.PaymentControlsForm.PaymentMethod[0].value);disableAllFields()" class="ComTitle"><input type="radio" name="PaymentMethod" value="Check" checked tabindex="3" onClick="checkDDForm(this.value);disableAllFields()"><font class="ComTitle">Check</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onClick="Javascript:document.PaymentControlsForm.PaymentMethod[1].checked = true;checkDDForm(document.PaymentControlsForm.PaymentMethod[1].value);enableAllFields()" class="ComTitle"><input type="radio" name="PaymentMethod" value="DirectDeposit" onClick="checkDDForm(this.value);enableAllFields()" class="ComTitle">Direct Deposit</a></nobr></font>
+                    <input type="hidden" name="BKRBID" value="5051">
+                    <input type="hidden" name="Line1" value="">
+                    <input type="hidden" name="CityStZip" value="">
+                    <input type="hidden" name="PayID" value="">
+                    <input type="hidden" name="DocumentName" value="">
+                    <input type="hidden" name="TypeChangeKey" value="">
+                    <input type="hidden" name="indicator" value="0">
+                    <input type="hidden" name="StatusIndicator" value="">
+                    <input type="hidden" name="SaveExitPage" value="No">
+                  </td>
+                </tr>
+                <tr> 
+                  <td align="right" width="150" bgcolor="#E6E9F0"><font class="stitle">Override 
+                    $</font></td>
+                  <td width="150" align="center"> 
+                    <input class="input2" size="10" type="text" maxlength="10" name="MinPaymentOverride" tabindex="1">
+                  </td>
+                  <td align="center" width="150"> 
+                    <input class="input2" size="10" type="text" maxlength="10" name="PaymentAppOverride" tabindex="2">
+                  </td>
+                </tr>
+                </tbody> 
+              </table>
+              <table cellspacing="0" cellpadding="0">
+                <tbody> 
+                <tr valign="bottom"> 
+                  <td width="125" height="25"></td>
+                  <td  align="center" width="50" height="25"><font class="ComTitle">Honor</font></td>
+                  <td  align="center" width="100" height="25"><font class="ComTitle">First 
+                    *</font></td>
+                  <td  align="center" width="100" height="25"><font class="ComTitle">Middle</font></td>
+                  <td  align="center" width="100" height="25"><font class="ComTitle">Last 
+                    *</font></td>
+                  <td  align="center" width="100" height="25"><font class="ComTitle">Suffix</font></td>
+                  <td  align="center" width="98" height="25">&nbsp;</td>
+                </tr>
+                <tr bgcolor="#E6E9F0"> 
+                  <td width="125" align="center" ><font class="stitle">Signatory 
+                    -></font></td>
+                  <td  align="center" width="50"> 
+                    <input size="4" type="text" maxlength="10" name="Honorific" tabindex="4" class="input1">
+                  </td>
+                  <td width="100" align="center"> 
+                    <input class="input1" size="10" type="text" maxlength="30" name="FirstName" tabindex="5">
+                  </td>
+                  <td width="100" align="center"> 
+                    <input class="input1" size="10" type="text" maxlength="10" name="MiddleName" tabindex="6">
+                  </td>
+                  <td width="100" align="center"> 
+                    <input class="input1" size="10" type="text" maxlength="30" name="LastName" tabindex="7">
+                  </td>
+                  <td width="100" align="center"> 
+                    <input class="input1" size="10" type="text" maxlength="10" name="Suffix" tabindex="8">
+                  </td>
+                  <td width="98">&nbsp;</td>
+                </tr>
+                </tbody> 
+              </table>
+              <table cellspacing="1" cellpadding="0">
+                <tbody> 
+                <tr valign="bottom"> 
+                  <td  align="center" height="25"><font class="ComTitle">TransType 
+                    *</font></td>
+                  <td  align="center" height="25"><font class="ComTitle">Routing 
+                    # *</font></td>
+                  <td  align="center" height="25"><font class="ComTitle">Account 
+                    # *</font></td>
+                  <td  align="center" height="25"><font class="ComTitle">Acct 
+                    Type *</font></td>
+                  <td  align="center" height="25"><font class="ComTitle">Signed 
+                    *</font></td>
+                  <td  align="center" height="25"><font class="ComTitle">Received 
+                    *</font></td>
+                  <td  align="center" height="25"><font class="ComTitle">Submitted</font></td>
+                  <td  align="center" height="25"><font class="ComTitle">Pre-note</font></td>
+                  <td width="100" height="25" align="center"> 
+                    <input type="button" value="  Add   " name="Add" class="lebotton" onClick="return genDoc()">
+                  </td>
+                </tr>
+                <tr> 
+                  <td align="center"> 
+                    <select name="TransactionType" tabindex="9" class="select1">
+                      <option value="A" selected>Add</option>
+                      <option value="C">Change</option>
+                      <option value="D">Delete</option>
+                    </select>
+                  </td>
+                  <td align="center">
+                    <input class="input1" size="11" type="text" maxlength="9" name="RoutingNo" tabindex="10">
+                  </td>
+                  <td align="center">
+                    <input class="input1" size="11" type="text" maxlength="16" name="AccountNo" tabindex="11">
+                  </td>
+                  <td align="center"> 
+                    <select name="AccountType" tabindex="12" class="select1">
+                      <option value="C">Checking</option>
+                      <option value="S">Saving</option>
+                      <!--
+              	<OPTION value="C" selected>Checking</OPTION>
+              	<OPTION value="S">Savings</OPTION>
+              	-->
+                    </select>
+                  </td>
+                  <td>
+                    <input class="input1" size="11" type="text" maxlength="10" name="SignedDate" tabindex="13">
+                  </td>
+                  <td align="center">
+                    <input class="input1" size="11" type="text" maxlength="10" name="ReceivedDate" tabindex="14">
+                  </td>
+                  <td align="center">
+                    <input class="input1" size="11" type="text" maxlength="10" name="EcomDate" tabindex="15">
+                  </td>
+                  <td align="center">
+                    <input class="input1" size="11" type="text" maxlength="10" name="PreNoteDate" tabindex="16">
+                  </td>
+                  <td width="100" align="center"> 
+                    <input type="button" value="Delete" name="Delete" class="lebotton" onClick="AddToList(document.PaymentControlsForm)"></td>
+                </tr>
+                </tbody> 
+              </table>
+              <select size="3" name="AddList"  onFocus="this.blur()" onClick="return popAgain( AddList, this.form.AddList.value)" class="multiselect2">
+              </select>
+            </td>
+            <td width="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0" width="398"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0"><img src="images/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  </FORM>
+</BODY>
+</HTML>

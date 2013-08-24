@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script language="Javascript" src="script/common_css.js"></script>
+<script language="Javascript" src="script/b4dom.js"></script>
+<script language="JavaScript" src="script/dynlayer.js"></script>
+<SCRIPT>
+var da = (document.all) ? 1 : 0;
+var ns4 = ((navigator.userAgent.indexOf("Mozilla") != -1) && (navigator.userAgent.indexOf("4.") != -1)  && (navigator.userAgent.indexOf("MSIE") == -1));
+var ns6 = ((navigator.userAgent.indexOf("Netscape") != -1) && (navigator.userAgent.indexOf("6.") != -1));
+
+if (da && !ns6 && !ns4) {
+	document.write("<div id='cookieHider' style='position: absolute; left:0px; top:0px; background-color: #0B5F77; layer-background-color: #0B5F77; height: 100%; width: 100%;visibility:hidden;z-index:5000'><TABLE align='center' height='100%'><TBODY><TR><TD valign='middle' align='center'><FONT class='stitle2' style='font-size:12px;'>Loading Interface...</font></TD></TR></TBODY></TABLE></div>");
+	
+	if (document.getElementById) {  // DOM3 = IE5, NS6
+		document.getElementById('cookieHider').style.visibility = 'visible';
+	}
+	else {
+		if (document.layers) {  // Netscape 4
+			document.cookieHider.visibility = 'visible';
+		}
+		else {  // IE 4
+			document.all.cookieHider.style.visibility = 'visible';
+		}
+	}
+
+	// check for cookie window
+	var windowX = (screen.width/2)-(840/2);
+	var windowY = (screen.height/2)-(230/2);
+	window.open('cookieSnif.html','CookieCheck','width=850,height=250,left='+windowX+',top='+windowY+'');
+}
+
+// SCREEN HIDE LAYER HIDER
+function hideHider() {
+	if (document.getElementById) {  // DOM3 = IE5, NS6
+		document.getElementById('cookieHider').style.visibility = 'hidden';
+	}
+	else {
+		if (document.layers) {  // Netscape 4
+			document.cookieHider.visibility = 'hidden';
+		}
+		else {  // IE 4
+			document.all.cookieHider.style.visibility = 'hidden';
+		}
+	}
+}
+</SCRIPT>
+<META name="GENERATOR" content="IBM WebSphere Studio">
+<title>Broker Administration System Exchange - B.A.S.E.</title>
+<script language="Javascript" src="script/popwindow.js"></script>
+<script language="Javascript">
+<!--
+
+var da = (document.all) ? 1 : 0;
+var ns4 = ((navigator.userAgent.indexOf("Mozilla") != -1) && (navigator.userAgent.indexOf("4.") != -1)  && (navigator.userAgent.indexOf("MSIE") == -1));
+var ns6 = ((navigator.userAgent.indexOf("Netscape") != -1) && (navigator.userAgent.indexOf("6.") != -1));
+
+// GET COOKIE
+elColor = document.cookie;
+// if cookie run colors
+if (document.cookie) {
+	if (elColor.indexOf('Teal') != -1) { leDir="tface"; }
+	if (elColor.indexOf('Sky') != -1) { leDir="sface"; }
+	if (elColor.indexOf('Baby') != -1) { leDir="bface"; }
+
+	if (leDir == "bface") {
+		var colorUno = "003B65";
+		var colorDos = "DDDDDD";
+	}
+	else if(leDir == "sface") {
+		var colorUno = "007AA5";
+		var colorDos = "DDDDDD";
+	}
+	else {
+		var colorUno = "003B65";
+		var colorDos = "E6E9F0";
+	}
+}
+// if no cookie use default
+else {
+	var leDir = "tface";
+	var colorUno = "003B65";
+	var colorDos = "E6E9F0";
+}
+
+// browser specifics
+if (ns6) {
+	var sizeUno = "10"
+}
+else {
+	var sizeUno = "10.5"
+}
+
+with (document) {
+	writeln('<' + 'style type="text/css">');
+	writeln('.ComTitle { color:#FFFFFF; font-family:verdana,arial,helvetica; font-size:9px; font-weight:bold } '); 
+	writeln('.input2 { color:#'+colorUno+'; font-family:verdana,arial,helvetica; font-size:'+sizeUno+'px; height:18px; background-color:#'+colorDos+'; }'); 
+	writeln('.table1 { background-image: url('+leDir+'/formbg.jpg); background-repeat: no-repeat; background-position: right }');
+	writeln('.table2 { background-image: url('+leDir+'/tbbg2.png); background-repeat: no-repeat; background-position: right }');
+	writeln('.Sbutton { color:#'+colorDos+'; font-family:verdana,arial,helvetica; font-size:'+sizeUno+'px; height:18px; font-weight:bold; background-color:#'+colorUno+'; }');
+	writeln('</style>');
+}
+//-->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// QUICK CROSS-BROWSER MOUSE-OVER/OFF FUNCTIONS
+// By Drlouie @ NetMedia Solutions
+// info@NetMediaSol.com for help
+// Copyright 2001 NetMedia Solutions
+
+function imageOffDHTML2(daobject,which,thisone) {
+	var cual = 	"limages/"+which+"_"+thisone+".gif";
+	daobject.src = cual;
+}
+function imageOnDHTML2(daobject,which,thisone) {
+	var cual = 	"limages/"+which+"_"+thisone+".gif";
+	daobject.src = cual;
+}
+//-->
+</SCRIPT>
+
+
+<!-- START DHTML LAYER MOVER -->
+<style type="text/css">
+<!--
+#hiderBlock {position:absolute; left:25px; top:-98px; width:162px; height:98px; clip:rect(0px 162px 98px 0px);z-index:2;}
+--> 
+</style>
+<script language="JavaScript"> 
+<!--
+//Global Moving Layer Introduction
+function runMove() {
+	mylayer2 = new DynLayer("hiderBlock")
+	mylayer2.slideInit()
+	checkPosition();
+}
+function checkPosition() {	
+	if (mylayer2.x >= -1) {
+		moveOut();
+	}
+}
+function moveOut() {
+	javascript:mylayer2.slideTo(25,0,1,1)
+}
+
+//-->
+</script>
+
+<script language="javascript">
+function imageStack() {
+	// GET COOKIE
+	if (document.cookie) { 
+		elColor = document.cookie;
+		if (elColor.indexOf('Teal') != -1) { theeColor="KP Teal/Aqua"; leDir="tface"; }
+		if (elColor.indexOf('Sky') != -1) { theeColor="Sky Blue"; leDir="sface"; }
+		if (elColor.indexOf('Baby') != -1) { theeColor="Baby Blue"; leDir="bface"; }
+	}
+	// DEFAULT COLOR
+	else {
+		leDir="tface"; 
+	}
+	document.images.base_spelled.src = leDir+"/base_spelled.gif";
+	document.images.baselogo1.src = leDir+"/baselogo1.gif";
+}
+</script>
+<style type="text/css">
+.menu1  { font-family : verdana,arial,helvetica; font-size : 10px; text-decoration : none; font-weight : bold; }
+.menu2  { font-family : verdana,arial,helvetica; font-size : 9px; text-decoration : none; font-weight : bold; }
+.menu3  { font-family : verdana,arial,helvetica; font-size : 9px; text-decoration : none; font-weight : normal; }
+#divLoadCont	{ position:absolute; width:100%; height:98%; top:0; left:0; background-color:white; layer-background-color:white; font-family:arial,helvetica; z-index:100 }
+.menuback  { position : absolute; top : 0; left : 0; }
+</style>
+<script language="JavaScript" src="script/menu_config2.js"></script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="runMove();imageStack();" scroll="no">
+<script language="JavaScript" src="script/menu_constructor2.js"></script>
+<form method="pot">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr> 
+      <td width="100%" height="150">&nbsp; </td>
+    </tr>
+    <tr>
+      <td width="100%">
+        <table width="100%" height="31" cellpadding="0" cellspacing="0" border="0">
+          <tr> 
+            <td align="center" height="27" valign="bottom"><img src="limages/spacer.gif" width="450" height="25" name="base_spelled"></td>
+            <td align="right" width="300" rowspan="3"> 
+              <table width="300" bgcolor="#ffffff" height="31" cellpadding="0" cellspacing="0" border="0" class="table1">
+                <tr> 
+                  <td align="right"> 
+                    <table width="300" border="0" cellspacing="0" cellpadding="0" height="31">
+                      <tr align="center"> 
+                        <td width="40">&nbsp; </td>
+                        <td width="100" valign="bottom"> 
+                          &nbsp;
+                        </td>
+                        <td width="100" valign="bottom"> 
+                          <input type="text" name="Search" value="" class="input2" size="15">
+                        </td>
+                        <td width="65" align="center" valign="bottom"> 
+                          <input type="submit" value="Submit" class="Sbutton">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#0B5F77" height="2"><img src="limages/spacer.gif" width="100" height="3" border="0"></td>
+          </tr>
+          <tr> 
+            <td height="1"><img src="limages/spacer.gif" width="100" height="1" border="0"></td>
+          </tr>
+        </table>
+        <table width="100%" bgcolor="#0B5F77" height="170" cellpadding="0" cellspacing="0" border="0" class="table2">
+          <tr> 
+            <td align="right" valign="top"> 
+              <table width="100%" height="31" cellpadding="0" cellspacing="0" border="0">
+                <tr> 
+                  <td align="right" height="30">&nbsp;</td>
+                  <td align="right" width="300"> 
+                    <table width="300" border="0" cellspacing="0" cellpadding="0" height="31">
+                      <tr align="center"> 
+                        <td width="40">&nbsp;</td>
+                        <td width="100" valign="top"><font class="ComTitle">&nbsp;</font></td>
+                        <td width="100" valign="top"><font class="ComTitle">Find</font></td>
+                        <td width="65" align="center" valign="top">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr> 
+            <td height="1"><img src="limages/spacer.gif" width="100" height="1" border="0"></td>
+          </tr>
+          <tr> 
+            <td bgcolor="#0B5F77" height="2"><img src="limages/spacer.gif" width="100" height="3" border="0"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+
+<!-- IMAGE DIV -->
+<DIV ID="hiderBlock"><img src="limages/spacer.gif" border="0" width="162" height="98" name="baselogo1"></DIV>
+
+
+</form>
+
+
+</body>
+</html>

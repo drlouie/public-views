@@ -1,0 +1,57 @@
+.blueheader {
+	COLOR: #19428c; FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.bottomnavtext {
+	FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 10px; FONT-WEIGHT: normal; LINE-HEIGHT: 10px
+}
+.header {
+	COLOR: black; FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 12px; FONT-WEIGHT: bold; LINE-HEIGHT: 12px
+}
+.tabletext {
+	COLOR: black; FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 12px; FONT-WEIGHT: normal; LINE-HEIGHT: 12px
+}
+A:active {
+	COLOR: white; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #f7e629; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: white; TEXT-DECORATION: none
+}
+BODY {
+	FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 12px; LINE-HEIGHT: 14px
+}
+H1 {
+	COLOR: black; FONT-FAMILY: Times; FONT-SIZE: 24px; FONT-WEIGHT: bold
+}
+H2 {
+	COLOR: #f7e629; FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 14px; FONT-STYLE: italic; FONT-WEIGHT: bold
+}
+H3 {
+	COLOR: #19428c; FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+H4 {
+	COLOR: black; FONT-FAMILY: Times; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+H5 {
+	COLOR: black; FONT-FAMILY: Times; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+H6 {
+	COLOR: black; FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+LI {
+	COLOR: black; FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 12px; FONT-WEIGHT: normal; LINE-HEIGHT: 14px
+}
+OL {
+	COLOR: black; FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 12px; LINE-HEIGHT: 14px
+}
+P {
+	COLOR: black; FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 12px; FONT-WEIGHT: normal; LINE-HEIGHT: 14px
+}
+UL {
+	COLOR: black; FONT-FAMILY: verdana, " trebuchet ms", " trebuchet", " arial", " helvetica"; FONT-SIZE: 12px; FONT-WEIGHT: normal; LINE-HEIGHT: 14px
+}

@@ -1,0 +1,421 @@
+<!-- Sample JSP file -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE></TITLE>
+
+<Script src="script/ValidateAddress.js">
+</Script>
+
+<Script src="script/ValidateDOI.js">
+</Script>
+
+
+<SCRIPT src="script/ContactRequiredFields.js">
+</SCRIPT>
+
+<script language="javascript">
+function runURL(myindValue,cual) {
+
+	if ( parent.destination.document.forms[0] != undefined ) {
+
+		var retValue = cual;
+		
+			if ( retValue == "Yes" ) {
+				if ( validateDestinationForm( parent.destination.document.forms[0] ) ) {
+					document.LeftNavForm.indicator.value = myindValue;
+					parent.destination.document.forms[0].indicator.value = myindValue;
+					parent.destination.document.forms[0].TypeChangeKey.value = "Submit";
+					setFormValues();
+					parent.destination.document.forms[0].submit();
+                        
+				}
+			}
+			else if ( retValue == "No" ) {
+				// only for 2
+				if (myindValue == "2") { document.LeftNavForm.UserVisitIndicator.value = "1"; }
+		
+				document.LeftNavForm.BKRBID.value = BRKBIDValue;
+				document.LeftNavForm.indicator.value = myindValue;
+
+				// Unload only for 1
+				if (myindValue == "1") { document.LeftNavForm.TypeChangeKey.value = "UnLoad"; }
+				else { document.LeftNavForm.TypeChangeKey.value = ""; }
+
+				if (myindValue == "1") { var nextURL = "AdditionalAddressServlet.html"; }
+				else if (myindValue == "2") { var nextURL = "AgreementsServlet.html"; }
+				else if (myindValue == "3") { var nextURL = "LicenseServlet.html"; }
+				else if (myindValue == "4") { var nextURL = "PaymentControlsServlet.html"; }
+				else if (myindValue == "5") { var nextURL = "ContactPersonServlet.html"; }
+				else if (myindValue == "6") { var nextURL = "RelationshipServlet.html"; }
+
+				document.forms[0].action = nextURL;
+				document.forms[0].target="destination";
+				document.forms[0].submit();
+
+			}
+
+	}
+	else {
+		document.LeftNavForm.UserVisitIndicator.value = myindValue;
+
+		document.LeftNavForm.BKRBID.value = BRKBIDValue;
+		document.LeftNavForm.indicator.value = myindValue;
+
+		// only for 1
+		if (myindValue == "1") { document.LeftNavForm.TypeChangeKey.value = "UnLoad"; }
+		else { document.LeftNavForm.TypeChangeKey.value = ""; }
+		
+		document.forms[0].action = nextURL;
+		document.forms[0].target="destination";
+		document.forms[0].submit();
+	}
+
+
+	///////////////////////////////////////////////
+	/// ADDED BY DRLOUIE -> Menu Image Controls ///
+	///////////////////////////////////////////////
+	if ( retValue != "Cancel") {
+   		resetMenu();
+
+		if (myindValue == "1") { document.images.Address.src = menu1.src; }
+		else if (myindValue == "2") { document.images.Agreement.src = menu1.src; }
+		else if (myindValue == "3") { document.images.License.src = menu1.src; }
+		else if (myindValue == "4") { document.images.Payment.src = menu1.src; }
+		else if (myindValue == "5") { document.images.Contact.src = menu1.src; }
+		else if (myindValue == "6") { document.images.Relation.src = menu1.src; }
+	}
+
+}
+</script>
+<Script language="JavaScript">
+
+   var states = new Array() ;
+   var canadianStates = new Array();
+   var BRKBIDValue = "5051";
+
+   
+
+   function formURL(este) {
+
+	if ( BRKBIDValue == "" || BRKBIDValue == null ) {
+		alert( "Well! Where is the broker ID?" );
+		return this.href = "/funny.htm";
+	}
+	else {
+
+		if ( parent.destination.document.forms[0] != undefined ) {
+
+			var indValue = document.LeftNavForm.indicator.value;
+			if ( indValue != este ) {
+				parent.BrokerMain.showLayer(este);
+			}
+
+		}
+		else {
+			document.LeftNavForm.UserVisitIndicator.value = este;
+
+			document.LeftNavForm.BKRBID.value = BRKBIDValue;
+			document.LeftNavForm.indicator.value = este;
+			if (este == "1") { document.LeftNavForm.TypeChangeKey.value = "UnLoad"; }
+			else { document.LeftNavForm.TypeChangeKey.value = ""; }
+
+			if (este == "1") { document.forms[0].action = "AdditionalAddressServlet.html"; }
+			else if (este == "2") { document.forms[0].action = "AgreementsServlet.html"; }
+			else if (este == "3") { document.forms[0].action = "LicenseServlet.html"; }
+			else if (este == "4") { document.forms[0].action = "PaymentControlsServlet.html"; }
+			else if (este == "5") { document.forms[0].action = "ContactPersonServlet.html"; }
+			else if (este == "6") { document.forms[0].action = "RelationshipServlet.html"; }
+			
+			document.forms[0].target="destination";
+			document.forms[0].submit();
+
+	   		resetMenu();
+			if (este == "1") { document.images.Address.src = menu1.src; }
+			else if (este == "2") { document.images.Agreement.src = menu1.src; }
+			else if (este == "3") { document.images.License.src = menu1.src; }
+			else if (este == "4") { document.images.Payment.src = menu1.src; }
+			else if (este == "5") { document.images.Contact.src = menu1.src; }
+			else if (este == "6") { document.images.Relation.src = menu1.src; }
+		}
+	}
+
+
+}
+
+
+   function setFormValues() {
+
+	if ( parent.destination.document.forms[0].name == "ContactPerson" ) {
+		parent.destination.document.forms[0].chgmode.value="save";
+		parent.destination.document.forms[0].typeaction.value ="stype";
+
+		var allphn = "";
+		var allphnK = "";
+
+		for(var i = 0; i < parent.destination.document.forms[0].PhoneList.options.length; i++) {
+			allphn = allphn+" % "+parent.destination.document.forms[0].PhoneList.options[i].text;
+			allphnK =allphnK+" % "+parent.destination.document.forms[0].PhoneList.options[i].value;
+			parent.destination.document.forms[0].phoneconcat.value =allphn;
+			parent.destination.document.forms[0].phoneconcatK.value =allphnK;
+		}
+
+
+	}
+
+	if ( parent.destination.document.forms[0].name == "Relationship" ) {
+		parent.destination.document.forms[0].opmode.value="save";
+		parent.destination.document.forms[0].submitField.value="submit";
+	}
+
+
+   }
+
+
+   function validateDestinationForm(theForm) {
+
+	
+			states[0] = 'AL';
+	
+			states[1] = 'AK';
+	
+			states[2] = 'AS';
+	
+			states[3] = 'AZ';
+	
+			states[4] = 'AR';
+	
+			states[5] = 'CA';
+	
+			states[6] = 'CZ';
+	
+			states[7] = 'CO';
+	
+			states[8] = 'CT';
+	
+			states[9] = 'DE';
+	
+			states[10] = 'DC';
+	
+			states[11] = 'FL';
+	
+			states[12] = 'GA';
+	
+			states[13] = 'GU';
+	
+			states[14] = 'HI';
+	
+			states[15] = 'ID';
+	
+			states[16] = 'IL';
+	
+			states[17] = 'IN';
+	
+			states[18] = 'IA';
+	
+			states[19] = 'KS';
+	
+			states[20] = 'KY';
+	
+			states[21] = 'LA';
+	
+			states[22] = 'ME';
+	
+			states[23] = 'MD';
+	
+			states[24] = 'MA';
+	
+			states[25] = 'MI';
+	
+			states[26] = 'MN';
+	
+			states[27] = 'MS';
+	
+			states[28] = 'MO';
+	
+			states[29] = 'MT';
+	
+			states[30] = 'NE';
+	
+			states[31] = 'NV';
+	
+			states[32] = 'NH';
+	
+			states[33] = 'NJ';
+	
+			states[34] = 'NM';
+	
+			states[35] = 'NY';
+	
+			states[36] = 'NC';
+	
+			states[37] = 'ND';
+	
+			states[38] = 'OH';
+	
+			states[39] = 'OK';
+	
+			states[40] = 'ON';
+	
+			states[41] = 'OR';
+	
+			states[42] = 'PA';
+	
+			states[43] = 'PR';
+	
+			states[44] = 'RI';
+	
+			states[45] = 'SC';
+	
+			states[46] = 'SD';
+	
+			states[47] = 'TN';
+	
+			states[48] = 'TX';
+	
+			states[49] = 'VI';
+	
+			states[50] = 'UT';
+	
+			states[51] = 'VT';
+	
+			states[52] = 'VA';
+	
+			states[53] = 'WA';
+	
+			states[54] = 'WV';
+	
+			states[55] = 'WI';
+	
+			states[56] = 'WY';
+		
+
+
+	
+			canadianStates[0] = 'AB';
+	
+			canadianStates[1] = 'BC';
+	
+			canadianStates[2] = 'MB';
+	
+			canadianStates[3] = 'NB';
+	
+			canadianStates[4] = 'NF';
+	
+			canadianStates[5] = 'NT';
+	
+			canadianStates[6] = 'NS';
+	
+			canadianStates[7] = 'NU';
+	
+			canadianStates[8] = 'PE';
+	
+			canadianStates[9] = 'QC';
+	
+			canadianStates[10] = 'SK';
+	
+			canadianStates[11] = 'YT';
+		
+
+
+
+	if ( theForm.name == "AddTypeForm" ) {
+
+		if ( validate(theForm) ) {
+			return true;
+		}
+		else
+			return false;
+	}
+	else if ( theForm.name == "ContactPerson" ) {
+		if ( validateContactForm(theForm) )
+			return true;
+		else
+			return false;
+	}
+	else if ( theForm.name == "LicenseForm" ) {
+		if ( validateDOIValues(theForm) )
+			return true;
+		else
+			return false;
+	}
+	else
+		return true;
+
+
+
+   }
+
+
+
+</Script>
+
+<!-- START SCRIPTS/CSS BY DRLOUIE -->
+
+<!--Dynamic CSS Javascript-->
+<script language="javascript" src="js/common_css.js"></script>
+
+<script language="Javascript">
+<!--
+//MOUSEOVER IMAGE PRELOAD
+//off
+menu1 = new Image();
+menu1.src = "images/menu_arrow_on.gif";
+//on
+menu2 = new Image();
+menu2.src = "images/menu_arrow_off.gif";
+//RESETS MENU ITEMS TO NON-ACTIVE STATUS -> Called from original JS ie: formURL1()
+function resetMenu() {
+     document.images.Address.src = menu2.src;
+     document.images.Agreement.src = menu2.src;
+     document.images.License.src = menu2.src;
+     document.images.Payment.src = menu2.src;
+     document.images.Contact.src = menu2.src;
+     document.images.Relation.src = menu2.src;
+}
+//-->
+</script>
+
+<!-- END SCRIPTS/CSS BY DRLOUIE -->
+
+</HEAD>
+<BODY bgcolor="#0B5F77" vlink="#333366" alink="#333366" link="#333366">
+
+<table width="165" border="0" cellspacing="0" cellpadding="0">
+<tr><td width="165" height="31"><img name="Address" src="images/menu_arrow_off.gif" alt="Address" width="165" height="31" border="0" vspace="0"></td></tr>
+<tr><td width="165" height="31"><img name="Agreement" src="images/menu_arrow_off.gif" alt="Agreement" width="165" height="31" border="0" vspace="0"></td></tr>
+<tr><td width="165" height="31"><img name="License" src="images/menu_arrow_off.gif" alt="License" width="165" height="31" border="0" vspace="0"></td></tr>
+<tr><td width="165" height="31"><img name="Payment" src="images/menu_arrow_off.gif" alt="Payment" width="165" height="31" border="0" vspace="0"></td></tr>
+<tr><td width="165" height="31"><img name="Contact" src="images/menu_arrow_off.gif" alt="Contact" width="165" height="31" border="0" vspace="0"></td></tr>
+<tr><td width="165" height="31"><img name="Relation" src="images/menu_arrow_off.gif" alt="Relation" width="165" height="31" border="0" vspace="0"></td></tr>
+</table>
+
+
+
+
+<FORM name="LeftNavForm" method="post" action="LeftNav.html">
+<INPUT type="hidden" name="bid" value="">
+<INPUT type="hidden" name="BKRBID" value="">
+<INPUT type="hidden" name="TypeChangeKey" value="">
+<INPUT type="hidden" name="queryurl" value="">
+<INPUT type="hidden" name="indicator" value="0">
+<INPUT type="hidden" name="UserVisitIndicator" value="">
+<INPUT type="hidden" name="ImageIndicator" value="">
+
+
+<div style="position:absolute; z-index:15; left:5px; top:3px;" class="menu1"><a href="#" OnClick="formURL('1');" class="menulinks">Additional Addresses</a></div>
+<div style="position:absolute; z-index:15; left:5px; top:34px;" class="menu2"><a href="#" OnClick="formURL('2');" class="menulinks">Agreements</a></div>
+<div style="position:absolute; z-index:15; left:5px; top:65px;" class="menu3"><a href="#" OnClick="formURL('3');" class="menulinks">License / DOI</a></div>
+<div style="position:absolute; z-index:15; left:5px; top:96px;" class="menu4"><a href="#" OnClick="formURL('4');" class="menulinks">Payment Controls</a></div>
+<div style="position:absolute; z-index:15; left:5px; top:127px;" class="menu5"><a href="#" OnClick="formURL('5');" class="menulinks">Contact Person Info</a></div>
+<div style="position:absolute; z-index:15; left:5px; top:158px;" class="menu6"><a href="#" OnClick="formURL('6');" class="menulinks">Relationships</a></div>
+
+</FORM>
+
+
+
+
+</BODY>
+</HTML>

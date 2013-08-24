@@ -1,0 +1,515 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<TITLE>Broker Inquiry</TITLE>
+
+<script language="javascript" src="script/common_css.js">
+</script>
+
+
+<Script src="script/PrintScript.js">
+</Script>
+
+<SCRIPT language="javascript">
+
+function check(click)
+{
+
+	var status = true;
+	
+	
+	document.BkrInqTop.clicked.value = "Search";
+	
+	var searchbyvalue = document.BkrInqTop.searchby.value;
+	
+	var searchcriteriavalue = document.BkrInqTop.searchcriteria.value;	
+	
+	
+	if ( searchcriteriavalue == "" ) {
+	
+		//alert( '<%=org.kp.base.web.util.MessageUtil.getInstance().getText("broker.Inquiry.ValidCriteria")%>' );
+		alert( "Please enter a valid search criteria" );
+		document.BkrInqTop.searchcriteria.focus();
+		status = false;
+	}
+	else {
+		
+		if ( searchbyvalue == "1" || searchbyvalue == "4" ) {
+	
+			var valid = "1234567890";
+	
+			for (var i=0; i < searchcriteriavalue.length; i++) {
+				temp = "" + searchcriteriavalue.substring(i, i+1);
+					if (valid.indexOf(temp) == "-1") {
+						//alert( '<%=org.kp.base.web.util.MessageUtil.getInstance().getText("broker.InvalidChars")%>'+'Search Criteria');
+						alert( "Invalid characters in Search Criteria");
+						document.BkrInqTop.searchcriteria.focus();
+						status = false;
+						break;
+					}
+			}
+		}
+		
+		
+		if ( searchbyvalue == "2" ) {
+	
+			for( var i=0; i<document.forms[0].criteria.length; i++ ) {
+				if ( document.forms[0].criteria[0].checked == true	)
+					document.BkrInqTop.CriteriaType.value = "2";
+				else
+					document.BkrInqTop.CriteriaType.value = "3";
+			}
+	
+			
+		}
+		else
+			document.BkrInqTop.CriteriaType.value = searchbyvalue;
+	
+	
+	
+	
+		document.BkrInqTop.searchcriteria.focus();
+	
+	}
+
+
+	return status;
+
+	/*
+	//document.BkrInqTop.clicked.value = click;
+	document.BkrInqTop.clicked.value = "Search";
+	if( document.BkrInqTop.searchby.value != 2 )
+		document.BkrInqTop.CriteriaType.value = document.BkrInqTop.searchby.value;
+
+	var bid = document.BkrInqTop.searchcriteria.value;
+	var status = true;
+	if(bid == "")
+		{
+			alert("Please enter valid search criteria!");
+			status =  false;
+			document.BkrInqTop.CriteriaType.value = 2;
+		}
+	document.BkrInqTop.searchcriteria.focus();
+	
+	
+	alert( "Search Cri: "+ document.BkrInqTop.searchcriteria.value+ " Cri Type: "+document.BkrInqTop.CriteriaType.value );	
+	return status;
+	*/
+	
+
+
+}
+
+function radioCheck( radioValue )
+{
+	document.BkrInqTop.CriteriaType.value = radioValue;
+}
+
+
+
+/*
+function callPrint() {
+
+	document.forms[0].action = "PrintServlet";
+	document.forms[0].target = "_parent";
+	document.forms[0].submit();
+}
+*/
+function printFunction() {
+
+	callPrint();
+}
+
+function callExit() {
+
+	if ( confirm( "Do you want to exit Broker Administration / Setup ?") ) {
+		parent.window.close();
+	}
+
+}
+
+
+function setFocus() {
+
+	document.forms[0].searchcriteria.focus();
+
+	if ( document.forms[0].searchby.value != "2" ) {
+		for( var i=0; i<document.forms[0].criteria.length; i++ ) {
+
+			document.forms[0].criteria[i].disabled = true;
+		
+		}	
+	}
+
+}
+
+function setCriteria(theForm) {
+
+	var searchvalue = theForm.searchby.value;
+	var criterialength = theForm.criteria.length;
+	
+	if ( searchvalue == "2" ) {
+		for( var i=0; i<criterialength; i++ ) {
+
+			theForm.criteria[i].disabled = false;
+		
+		}	
+	}
+	else {
+
+		for( var i=0; i<criterialength; i++ ) {
+
+			theForm.criteria[i].disabled = true;
+		
+		}	
+
+	
+	}
+
+}
+
+</SCRIPT>
+<script language="Javascript">
+<!--
+//MOUSEOVER IMAGE PRELOAD
+//mprint
+image9 = new Image();
+image9.src = "limages/mprint_ov.gif";
+image10 = new Image();
+image10.src = "limages/mprint_off.gif";
+//mexit
+image11 = new Image();
+image11.src = "limages/mexit_ov.gif";
+image12 = new Image();
+image12.src = "limages/mexit_off.gif";
+
+//-->
+</script>
+</HEAD>
+<body bgcolor="#0B5F77" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" OnLoad="setFocus();parent.window.resizeTo(860,412);">
+<FORM name="BkrInqTop" method="post" action="BrokerInquiryServlet" target="BkrInqMid"  OnSubmit="return check(this.value)">
+<input type="hidden" name="clicked" value="">
+<input type="hidden" name="CriteriaType" value="2">
+<input type="hidden" name="GoTo" value="BrokerInquiryFrame.htm">
+  <table width="850" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr> 
+      <td width="5" valign="top"><img src="limages/spacer.gif" border="0" width="5" height="5"></td>
+      <td width="300" valign="top"><img src="limages/spacer.gif" border="0" width="5" height="5"></td>
+      <td width="390"><img src="limages/spacer.gif" border="0" width="5" height="5"></td>
+      <td width="110"><img src="limages/spacer.gif" border="0" width="5" height="5"></td>
+      <td width="5"><img src="limages/spacer.gif" border="0" width="5" height="5"></td>
+    </tr>
+    <tr> 
+      <td width="5" valign="top">&nbsp;</td>
+      <td width="340" valign="top"> 
+        <table width="340" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td align="left" width="3" height="20"><img src="limages/tleft4.gif" width="3" height="24"></td>
+            <td bgcolor="#E6E9F0" width="334"><font class="maintitle">BKI000 - Broker Inquiry</font></td>
+            <td align="right" width="3" height="20"><img src="limages/tright4.gif" width="3" height="24"></td>
+          </tr>
+        </table>
+      </td>
+      <td width="390" valign="top"> <br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr> 
+            <td bgcolor="#E6E9F0" width="100%"><img src="limages/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+        </table>
+      </td>
+      <td width="106" align="right"> 
+        <table width="110" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td bgcolor="#E6E9F0"><img src="limages/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0" width="398"><img src="limages/spacer.gif" border="0" width="1" height="1"></td>
+            <td bgcolor="#E6E9F0"><img src="limages/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td width="1" bgcolor="#E6E9F0"><img src="limages/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="37" width="108" align="center"> <a href="#" OnMouseOver="javascript:mprint.src = image9.src;" OnMouseOut="javascript:mprint.src = image10.src;" OnClick="printFunction();"><img src="limages/mprint_off.gif" width="52" height="37" name="mprint" border="0"></a> 
+              <a href="#" onMouseOver="javascript:mexit.src = image11.src;" onMouseOut="javascript:mexit.src = image12.src;" onClick="callExit()"><img src="limages/mexit_off.gif" width="52" height="37" name="mexit" border="0"></a></td>
+            <td width="1" bgcolor="#E6E9F0"><img src="limages/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td height="1" bgcolor="#E6E9F0"><img src="limages/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0" width="398"><img src="limages/spacer.gif" border="0" width="1" height="1"></td>
+            <td height="1" bgcolor="#E6E9F0"><img src="limages/spacer.gif" border="0" width="1" height="1"></td>
+          </tr>
+        </table>
+      </td>
+      <td width="5">&nbsp;</td>
+    </tr>
+  </table>
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tbody> 
+    <tr align="center"> 
+      <td height="25" valign="bottom"><font class="ComTitle">Search By</font></td>
+      <td class="label" height="25" valign="bottom"><font class="ComTitle">Search 
+        Criteria</font></td>
+      <td id="SearchParameter" height="25" valign="bottom"><font class="ComTitle">Name 
+        Search Parameter</font></td>
+      <td>&nbsp; </td>
+    </tr>
+    <tr> 
+      <td align="center" bgcolor="#E6E9F0"> 
+        <select name="searchby" class="select2" tabindex="1" onChange="setCriteria(this.form)">
+          <option value="1" selected>Broker ID</option>
+          <option value="2">Broker Name</option>
+          <option value="4">IRS Tax ID</option>
+          <option value="5">License Number</option>
+        </select>
+      </td>
+      <td align="center" bgcolor="#E6E9F0"> 
+        <input class="input2" size="52" type="text" name="searchcriteria" maxlength="40" tabindex="2">
+      </td>
+      <td align="center" bgcolor="#E6E9F0"><nobr><input type="radio" name="criteria" value="2" checked onClick="radioCheck( this.value )" tabindex="3"><FONT class="radiotext2">Contains</font>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="criteria" value="3" onClick="radioCheck( this.value )"><font class="radiotext2">Starts With</font></nobr></td>
+      <td align="center" bgcolor="#E6E9F0"> 
+        <input type="submit" value="Search" class="lebotton" tabindex="4">
+        <input type="button" name="Reset" value="Reset" class="lebotton" onClick="this.form.reset()">
+      </td>
+    </tr>
+    </tbody> 
+  </table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="4"><img src="limages/spacer.gif" height="4" width="100" border="0"></td>
+  </tr>
+  <tr bgcolor="#E6E9F0" height="2">
+    <td><img src="limages/spacer.gif" height="2" width="100" border="0"></td>
+  </tr>
+</table>
+</FORM>
+</BODY>
+</HTML>
+
+
+
+
+
+
+<!--<HTML>
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<TITLE>Broker Inquiry</TITLE>
+<LINK href="Master.css" rel="stylesheet" type="text/css">
+
+<Script src="script/PrintScript.js">
+</Script>
+
+<SCRIPT language="javascript">
+function check(click)
+{
+
+	var status = true;
+	
+	
+	document.BkrInqTop.clicked.value = "Search";
+	
+	var searchbyvalue = document.BkrInqTop.searchby.value;
+	
+	var searchcriteriavalue = document.BkrInqTop.searchcriteria.value;	
+	
+	
+	if ( searchcriteriavalue == "" ) {
+	
+		//alert( '<%=org.kp.base.web.util.MessageUtil.getInstance().getText("broker.Inquiry.ValidCriteria")%>' );
+		alert( "Please enter a valid search criteria" );
+		document.BkrInqTop.searchcriteria.focus();
+		status = false;
+	}
+	else {
+		
+		if ( searchbyvalue == "1" || searchbyvalue == "4" ) {
+	
+			var valid = "1234567890";
+	
+			for (var i=0; i < searchcriteriavalue.length; i++) {
+				temp = "" + searchcriteriavalue.substring(i, i+1);
+					if (valid.indexOf(temp) == "-1") {
+						//alert( '<%=org.kp.base.web.util.MessageUtil.getInstance().getText("broker.InvalidChars")%>'+'Search Criteria');
+						alert( "Invalid characters in Search Criteria");
+						document.BkrInqTop.searchcriteria.focus();
+						status = false;
+						break;
+					}
+			}
+		}
+		
+		
+		if ( searchbyvalue == "2" ) {
+	
+			for( var i=0; i<document.forms[0].criteria.length; i++ ) {
+				if ( document.forms[0].criteria[0].checked == true	)
+					document.BkrInqTop.CriteriaType.value = "2";
+				else
+					document.BkrInqTop.CriteriaType.value = "3";
+			}
+	
+			
+		}
+		else
+			document.BkrInqTop.CriteriaType.value = searchbyvalue;
+	
+	
+	
+	
+		document.BkrInqTop.searchcriteria.focus();
+	
+	}
+
+
+	return status;
+
+	/*
+	//document.BkrInqTop.clicked.value = click;
+	document.BkrInqTop.clicked.value = "Search";
+	if( document.BkrInqTop.searchby.value != 2 )
+		document.BkrInqTop.CriteriaType.value = document.BkrInqTop.searchby.value;
+
+	var bid = document.BkrInqTop.searchcriteria.value;
+	var status = true;
+	if(bid == "")
+		{
+			alert("Please enter valid search criteria!");
+			status =  false;
+			document.BkrInqTop.CriteriaType.value = 2;
+		}
+	document.BkrInqTop.searchcriteria.focus();
+	
+	
+	alert( "Search Cri: "+ document.BkrInqTop.searchcriteria.value+ " Cri Type: "+document.BkrInqTop.CriteriaType.value );	
+	return status;
+	*/
+	
+
+
+}
+
+function radioCheck( radioValue )
+{
+	document.BkrInqTop.CriteriaType.value = radioValue;
+}
+
+
+
+/*
+function callPrint() {
+
+	document.forms[0].action = "PrintServlet";
+	document.forms[0].target = "_parent";
+	document.forms[0].submit();
+}
+*/
+function printFunction() {
+
+	callPrint();
+}
+
+function callExit() {
+
+	if ( confirm( "Do you want to exit Broker Administration / Setup ?") ) {
+		document.forms[0].action = "BaseMainMenu.htm";
+		document.forms[0].target = "_parent";
+		document.forms[0].submit();	
+	}
+
+}
+
+
+function setFocus() {
+
+	document.forms[0].searchcriteria.focus();
+
+	if ( document.forms[0].searchby.value != "2" ) {
+		for( var i=0; i<document.forms[0].criteria.length; i++ ) {
+
+			document.forms[0].criteria[i].disabled = true;
+		
+		}	
+	}
+
+}
+
+function setCriteria(theForm) {
+
+	var searchvalue = theForm.searchby.value;
+	var criterialength = theForm.criteria.length;
+	
+	if ( searchvalue == "2" ) {
+		for( var i=0; i<criterialength; i++ ) {
+
+			theForm.criteria[i].disabled = false;
+		
+		}	
+	}
+	else {
+
+		for( var i=0; i<criterialength; i++ ) {
+
+			theForm.criteria[i].disabled = true;
+		
+		}	
+
+	
+	}
+
+}
+
+</SCRIPT>
+
+
+</HEAD>
+<BODY bgcolor="#999999" OnLoad="setFocus()">
+<FORM name="BkrInqTop" method="post" action="BrokerInquiryServlet" target="BkrInqMid"  OnSubmit="return check(this.value)">
+<INPUT type="hidden" name="clicked" value="">
+<INPUT type="hidden" name="CriteriaType" value="2">
+<INPUT type="hidden" name="GoTo" value="BrokerInquiryFrame.htm">
+<TABLE width="910">
+  <TBODY>
+    <TR>
+            <TD bgcolor="#ffcc00" width="510"><B><FONT color="#0033cc" face="Arial" size="-1"> BKI000 - Broker Inquiry</FONT></B></TD>
+            <TD align="right" bgcolor="#ffcc00" width="384"><INPUT type="button" name="Print" value="Print" class="pbttn" OnClick="printFunction()"><INPUT type="button" name="Exit" value="Exit" class="pbttn"  OnClick="callExit()"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE border="1" width="687" bgcolor="#999999">
+  <TBODY>
+    <TR>
+      <TD align="center">
+            <TABLE bgcolor="#999999" width="903">
+        <TBODY>
+          <TR>
+            <TD align="center" class="label">Search By</TD>
+            <TD align="center" class="label">Search Criteria</TD>
+            <TD align="center" class="label" id="SearchParameter">Name Search Parameter</TD>
+            <TD align="right"><INPUT type="submit" name="Search" value="Search" class="pbttn" tabindex="4"> <INPUT type="button" name="Reset" value="Reset" class="pbttn" OnClick="document.forms[0].reset()"></TD>
+          </TR>
+          <TR>
+            <TD><SELECT name="searchby" class="input" tabindex="1" OnChange="setCriteria(document.forms[0])">
+                            <OPTION value="1" selected>Broker ID</OPTION>
+                            <OPTION value="2">Broker Name</OPTION>
+                            <OPTION value="4">IRS Tax ID</OPTION>
+                            <OPTION value="5">License Number</OPTION>
+                        </SELECT></TD>
+            <TD><INPUT class="input" size="52" type="text" name="searchcriteria" maxlength="40" tabindex="2"></TD>
+            <TD><INPUT type="radio" name="criteria" value="2" checked onclick="radioCheck( this.value )" tabindex="3"> <FONT class="label">Contains</FONT> <BR>
+                        <INPUT type="radio" name="criteria" value="3" onclick="radioCheck( this.value )">
+                        <FONT class="label">Starts With</FONT></TD>
+            <TD align="center"></TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+            </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</FORM>
+</BODY>
+</HTML>--><HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Studio">
+</HEAD>
+</HTML>

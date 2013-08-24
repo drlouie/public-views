@@ -1,0 +1,2620 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><!-- Sample HTML file -->
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>Broker Firm(Maintenance)</TITLE>
+<LINK href="Master.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+
+
+
+
+
+<Script language="JavaScript">
+
+
+
+function go(loc) {
+	window.location.href = loc;
+}
+
+
+//Loads the current date for date field
+
+function defaultValue() {
+	var dt = new Date();
+	var month = dt.getMonth();
+	var date = dt.getDate();
+	var year = dt.getYear();
+
+
+	if ( OrgEffDate == "" || OrgEffDate == "null" )
+	 	document.AddTypeForm.AddressEffectiveDate.value =  (month+1) + "/" +date+ "/" +year;
+	else
+		document.AddTypeForm.AddressEffectiveDate.value = OrgEffDate;
+
+}
+
+
+//Function clears all the values on changing the Address Type
+
+function validate( theForm ) {
+
+	var clearFlag = 0;
+	var line1value = theForm.AddressLine1.value;
+	var line2value = theForm.AddressLine2.value;
+	var line3value = theForm.AddressLine3.value;
+	var mailstop = theForm.MailStop.value;
+	var cityvalue = theForm.City.value;
+	
+	theForm.State.disabled = false;
+	theForm.Country.disabled = false;
+	theForm.AddressEffectiveDate.disabled = false;
+	
+	var statevalue = theForm.State.value;
+	var zipvalue = theForm.Zip.value;	
+	var datevalue = theForm.AddressEffectiveDate.value;
+	var countryvalue = theForm.Country.value;
+	var countyvalue = theForm.County.value;
+	var provincevalue = theForm.Province.value;
+
+	var valid = "1234567890"
+
+	var invalid = "0123456789$";
+
+	var validdate = "0123456789/";
+	var slashcount = 0;
+
+
+	var dt = new Date();
+	var month = dt.getMonth();
+	var date = dt.getDate();
+	var year = dt.getYear();
+
+
+	var errorStatus = false;
+	var errorFields ="";
+	var errorEntry = "";
+
+	if (line1value == "" && line2value == "" && line3value == "" && mailstop == "" && 
+		cityvalue == "" && statevalue == "" && zipvalue == "" && 
+			countyvalue == "" && provincevalue == "" )  {
+
+		errorStatus = false;
+
+	}
+	else  {
+
+
+		if (line1value == "" ) {
+ 	      	errorFields+='Line1 is a required field'+"\n";
+			errorStatus = true;
+		}
+		if (cityvalue == "" ) {
+  	     	errorFields+='City  is a required field'+"\n";
+			errorStatus = true;
+		}
+		else {
+			checkCity ( theForm.City.value);
+		}
+
+
+		if ( countryvalue != "" ) {
+
+			if ( countryvalue == "USA" || countryvalue == "CAN" ) {
+
+				if ( theForm.State.value == "" ) {
+			       	errorFields+='Address cannot be saved without state when the country is USA or Canada'+"\n";
+					errorStatus = true;
+				}
+				else {
+
+					if ( countryvalue == "USA" )
+						checkState (theForm.State.value);
+					else if ( countryvalue == "CAN" )
+						checkCanadianState (theForm.State.value);
+				}
+
+				if ( theForm.Zip.value == "" ) {
+			       	errorFields+='Address cannot be saved without Zip when the country is USA or Canada'+"\n";
+					errorStatus = true;
+				}
+				else {
+					checkCountry( theForm.Country.value );
+				}
+			}
+			else {
+				if ( zipvalue != "" ) {
+					//checkForValidZip( zipvalue );
+				}
+
+			}
+
+		}
+		if (datevalue != "" ) {
+			var effDtSts = checkDateValidation (theForm.AddressEffectiveDate.name,theForm.AddressEffectiveDate.value);
+	
+			if ( !effDtSts ) {
+		       	errorFields+='Additional Address Effective date is not valid'+"\n";
+				errorStatus = true;
+			}
+			
+		}
+		if (countyvalue != "" ) {
+			checkCounty (theForm.County.value);
+		}
+		if (provincevalue != "" ) {
+			checkProvince (theForm.Province.value);
+		}
+	
+	} // else 
+
+
+	if (errorStatus == true){
+		alert('Please correct the following error(s):' + "\n" + errorFields);
+		return false;
+	}
+	else
+		return true;
+
+ 
+
+	function checkZip ( zip ) {
+		
+		var zipvalue = zip;
+
+		for (var i=0; i < zipvalue.length; i++) {
+			temp = "" + zipvalue.substring(i, i+1);
+				if (valid.indexOf(temp) == "-1") {
+					errorFields+= 'Invalid characters in Zip Code' + "\n";
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+	}
+
+
+	function checkZip5Plus4 ( zip ) {
+		
+		var zipvalue = zip;
+		var zipFive = zipvalue.substring(0,5);
+		var zipFour = zipvalue.substring(6,10);
+		var zipDelimiter = zipvalue.substring(5,6);
+		
+		if ( zipDelimiter != "-" ) {
+			errorFields+= 'Zip code format should be XXXXX-XXXX' + "\n";
+			errorStatus = true;
+			theForm.Zip.focus();
+			return false;
+		}
+
+
+		for (var i=0; i < zipFour.length; i++) {
+			temp = "" + zipFour.substring(i, i+1);
+				if (valid.indexOf(temp) == "-1") {
+					errorFields+= 'Invalid characters in Zip Code' + "\n";
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+
+		for (var i=0; i < zipFive.length; i++) {
+			temp = "" + zipFive.substring(i, i+1);
+				if (valid.indexOf(temp) == "-1") {
+					errorFields+= 'Invalid characters in Zip Code' + "\n";
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+
+
+	}
+
+
+	function checkCanZip ( zip ) {
+		
+		var zipvalue = zip;
+		var canZipValid = "1234567890QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm";
+
+		for (var i=0; i < zipvalue.length; i++) {
+			temp = "" + zipvalue.substring(i, i+1);
+				if (canZipValid.indexOf(temp) == "-1") {
+					errorFields+= 'Invalid characters in Zip Code' + "\n";
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+	}
+
+
+	function checkState ( state ) {
+		
+		var found = false;
+		var state = state;
+		state = state.toUpperCase();	
+		for(var i = 0 ; i < states.length ; i++)
+		{	
+			if(state == states[i])
+				{					
+					found = true;		
+					break;
+				}
+			else
+				continue;
+		}
+		if(found == false)
+		{
+			errorFields+='Invalid State' + "\n";
+			errorStatus = true;	
+		}
+
+	}
+
+	function checkCanadianState ( state ) {
+		
+		var found = false;
+		var state = state;
+		state = state.toUpperCase();	
+		for(var i = 0 ; i < canadianStates.length ; i++)
+		{	
+			if(state == canadianStates[i])
+				{					
+					found = true;		
+					break;
+				}
+			else
+				continue;
+		}
+		if(found == false)
+		{
+			errorFields+='Invalid State' + "\n";
+			errorStatus = true;	
+		}
+
+	}
+
+
+	function checkCountry ( country ) {
+		
+		var countryvalue = country;
+		var zipvalue = theForm.Zip.value;
+
+			if (country == "USA" && zipvalue.length > 0 ) {
+			
+				if ( zipvalue.length != 5 ) {
+					
+					if ( zipvalue.length == 10 ) {
+						checkZip5Plus4( zipvalue );
+					}
+					else if ( zipvalue.length == 9 ) {
+						errorFields+= 'Zip code format for USA should be XXXXX or XXXXX-XXXX' + "\n";
+						errorStatus = true;
+						theForm.Zip.focus();
+						return false;
+					}
+					else {
+						errorFields+= 'Zip code for USA should be 5 or 5+4 digits' + "\n";
+						errorStatus = true;
+						theForm.Zip.focus();
+						return false;
+					}
+				}
+				else if ( zipvalue.length == 5 )
+					checkZip( zipvalue );
+				
+			}
+
+
+			if (country == "CAN" && zipvalue.length > 0 && zipvalue.length!=6) {
+				errorFields+= 'Zip code for Canada should be 6 digits' + "\n";
+				errorStatus = true;
+				theForm.Zip.focus();
+				return false;
+			}
+			else if ( country == "CAN" && zipvalue.length == 6 )
+				checkCanZip( zipvalue );
+
+	}
+
+
+	function checkCity ( city ) {
+		
+
+		var cityvalue = city;
+
+		for (var i=0; i < cityvalue.length; i++) {
+			temp = "" + cityvalue.substring(i, i+1);
+			if (invalid.indexOf(temp) != "-1") {
+				errorFields += 'Invalid entry in City' + "\n";
+				errorStatus = true;
+				theForm.City.focus();
+				return false;
+			}
+		}
+	}
+
+	function checkDate ( date ) {
+		var dateval = date;
+		
+		for (var i=0; i < dateval.length; i++) {
+			temp = "" + dateval.substring(i, i+1);
+			if (temp == "/") 
+				slashcount++;
+			if (validdate.indexOf(temp) == "-1") {
+				errorFields += 'Additional Address Effective date is not valid' + "\n";
+				errorStatus = true;
+				theForm.AddressEffectiveDate.focus();
+				return false;
+			}
+		}
+	}
+
+	function checkCounty ( county ) {
+		var countyvalue = county;
+	
+		for (var i=0; i < countyvalue.length; i++) {
+			temp = "" + countyvalue.substring(i, i+1);
+			if (invalid.indexOf(temp) != "-1") {
+				errorFields += 'Invalid entry in County' + "\n";
+				errorStatus = true;
+				theForm.County.focus();
+				return false;
+			}
+		}
+	}
+
+	function checkProvince ( province ) {
+		var provincevalue = province;
+
+			for (var i=0; i < provincevalue.length; i++) {
+			temp = "" + provincevalue.substring(i, i+1);
+			if (invalid.indexOf(temp) != "-1") {
+				errorFields += 'Invalid entry in Province' + "\n";
+				errorStatus = true;
+				theForm.Province.focus();
+				clearFlag = 1;
+				return false;
+			}
+		}
+	}
+	
+	
+	function checkDateValidation(datename, datevalue){
+
+
+		var dateStatus = true;
+		
+	 	var validdate = "1234567890/";
+         	var err=0
+         	var psj=0;
+	      var a="";
+
+         	a=datevalue;
+		
+	 	if (a.length != 10) {
+			//errorFields += "\n" +  "Invalid "+datename;
+			//errorStatus = true;
+			dateStatus = false;
+		}
+		else {
+			for (var i=0; i < a.length; i++) {
+			temp = "" + a.substring(i, i+1);
+				if (validdate.indexOf(temp) == "-1") {
+					//errorFields += "\n" +  "Invalid Characters in "+datename;
+					//errorStatus = true;
+					dateStatus = false;
+				}
+			}
+		 }
+
+   	       d = a.substring(0, 2)
+      	 c = a.substring(2, 3)
+         	 b = a.substring(3, 5)
+         	 e = a.substring(5, 6)
+         	 f = a.substring(6, 10)
+
+ 	       //basic error checking
+
+      	 if (d<1 || d>12) {
+			//errorFields += "\n" + datename + "'s month invalid";
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+         	 if (c != '/' || e != '/' ) {
+			//errorFields += "\n" + "Invalid "+datename;
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+         	 if (b<1 || b>31) {
+			//errorFields += "\n" + datename + "'s date invalid";
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+         	 if (f<1900 || f>4000) {
+			//errorFields += "\n" + datename + "'s year invalid";
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+
+         	 // months with 30 days
+         	 if (d==4 || d==6 || d==9 || d==11){
+             	if (b==31) {
+				//errorFields += "\n" + "Only 30 days are there in the month of "+datename;
+				//errorStatus = true;
+				dateStatus = false;
+			}
+         	 }
+
+	      // february, leap year
+         	 if (d==2){
+              	// feb
+              	var g=parseInt(f/4)
+              	if (isNaN(g)) {
+				//errorFields += "\n" + "Month does not match for the leap year in "+datename;
+				//errorStatus = true;
+					dateStatus = false;
+
+	            }
+
+             	if (b>29) {
+				//errorFields += "\n" + "Month and Date do not match in "+datename;
+				//errorStatus = true;
+				dateStatus = false;
+		 	}
+
+             	if (b==29 && ((f/4)!=parseInt(f/4))) {
+				//errorFields += "\n" + "Invalid "+datename;
+				//errorStatus = true;
+				dateStatus = false;
+	       	}
+		 }
+		 
+		 if ( dateStatus )
+		 	return true;
+		 else
+		 	return false;
+
+	} // end of checkValidation()
+	
+
+}
+
+
+
+</Script>
+
+
+<Script src="script/ValidateDOI.js">
+</Script>
+
+<Script language="JavaScript">
+
+
+function validateContactForm(theForm)
+ {	
+var errorStatus = false;
+var errorFields ='Please correct the following error(s):'+'\n';
+if(theForm.firstName.value == "")
+   {
+	errorFields+='FirstName is a required field'+'\n';
+	errorStatus	= true;			
+   }  else
+   {
+	checkFirstName(theForm.firstName.value);
+   }
+  if(theForm.lastName.value == "")
+   {
+	errorFields+='LastName is a required field'+'\n';
+ 	errorStatus = true;		
+   }
+  else
+   {
+	checkLastName(theForm.lastName.value);
+   }  
+
+if (theForm.honorific.value != "")
+	checkHonor(theForm.honorific.value);
+
+if (theForm.middleName.value != "")
+	checkMiddleName(theForm.middleName.value);
+
+if (theForm.suffix.value != "")
+	checkSuffix(theForm.suffix.value);
+
+if (theForm.title.value != "")
+	checkTitle(theForm.title.value);
+
+if (theForm.familiarName.value != "")
+	checkFamiliarName(theForm.familiarName.value);
+
+
+if(theForm.email.value !="")
+   {
+	 isEmail(theForm.email)
+   }
+
+
+if ((errorStatus == true))
+{
+	alert(errorFields);
+	return false;
+}
+else
+	return true;
+
+
+function checkFirstName(field)
+ {
+  var valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+  
+
+for (var i=0; i < field.length; i++) 
+ {
+  temp = "" + field.substring(i, i+1);
+  if (valid.indexOf(temp) == "-1") 
+    {
+      errorFields+='Invalid characters in '+'First Name \n';
+	errorStatus = true;
+      break;
+    }
+ }
+ }//End of checkFirstName function
+
+function checkLastName(field)
+ {
+  var valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+  
+
+for (var i=0; i < field.length; i++) 
+ {
+  temp = "" + field.substring(i, i+1);
+  if (valid.indexOf(temp) == "-1") 
+    {
+      errorFields+='Invalid characters in '+'Last Name \n';
+	errorStatus = true;
+      break;
+    }
+ }
+ }//End of checkFirstLast function
+// Check for email address: look for [@] and [.]
+function isEmail(elm) {
+    if (elm.value.indexOf("@") + "" != "-1" &&
+        elm.value.indexOf(".") + "" != "-1" && elm.value != "") 
+        return true;
+    else{ 
+	errorFields+='Invalid '+'Email \n';
+       errorStatus=true;
+ 	};
+}
+function checkMiddleName(field)
+{
+ var valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+  
+for (var i=0; i < field.length; i++)
+ {
+  temp = "" + field.substring(i, i+1);
+  if (valid.indexOf(temp) == "-1") 
+    {
+      errorFields+='Invalid characters in '+'Middle Name \n';
+	errorStatus = true;
+      break;
+    }
+ } 
+} //End of checkmiddle function
+
+function checkHonor(field)
+{
+ var valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .";
+  
+for (var i=0; i < field.length; i++) 
+ {
+  temp = "" + field.substring(i, i+1);
+  if (valid.indexOf(temp) == "-1") 
+    {
+      errorFields+='Invalid characters in '+'Honor\n';
+	errorStatus = true;
+      break;
+    }
+ } 
+} //End of checkHonor function
+function checkSuffix(field)
+{
+ var valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+  
+for (var i=0; i < field.length; i++)
+ {
+  temp = "" + field.substring(i, i+1);
+  if (valid.indexOf(temp) == "-1") 
+    {
+      errorFields+='Invalid characters in '+'Suffix\n';
+	errorStatus = true;
+      break;
+    }
+ } 
+} //End of checkSuffix function
+function checkFamiliarName(field)
+{
+ var valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+  
+for (var i=0; i < field.length; i++)
+ {
+  temp = "" + field.substring(i, i+1);
+  if (valid.indexOf(temp) == "-1") 
+    {
+      errorFields+='Invalid characters in '+'Familiar Name \n';
+	errorStatus = true;
+      break;
+    }
+ } 
+} //End of FamiliarName function
+function checkTitle(field)
+{
+ var valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+  
+for (var i=0; i < field.length; i++)
+ {
+  temp = "" + field.substring(i, i+1);
+  if (valid.indexOf(temp) == "-1") 
+    {
+      errorFields+='Invalid characters in '+'Title\n';
+	errorStatus = true;
+      break;
+    }
+ } 
+} //End of title function
+
+
+}//End of validateForm function
+
+</Script>
+
+<Script src="script/PrintScript.js">
+</Script>
+
+<SCRIPT language="javascript">
+var states = new Array() ;
+var canadianStates = new Array();
+var bsnstype = new Array();
+var countries = new Array();
+var category = new Array();
+var categoryYear = new Array();
+var statusReasonText = new Array();
+var statusReasonValue = new Array();
+var statusReasonCode = new Array();
+var state = "";
+function init()
+  {
+	
+		
+	  document.FirmMaintenance.PhoneList.style.fontFamily = "Courier New";
+
+		
+			states[0] = 'AL';
+		
+			states[1] = 'AK';
+		
+			states[2] = 'AS';
+		
+			states[3] = 'AZ';
+		
+			states[4] = 'AR';
+		
+			states[5] = 'CA';
+		
+			states[6] = 'CZ';
+		
+			states[7] = 'CO';
+		
+			states[8] = 'CT';
+		
+			states[9] = 'DE';
+		
+			states[10] = 'DC';
+		
+			states[11] = 'FL';
+		
+			states[12] = 'GA';
+		
+			states[13] = 'GU';
+		
+			states[14] = 'HI';
+		
+			states[15] = 'ID';
+		
+			states[16] = 'IL';
+		
+			states[17] = 'IN';
+		
+			states[18] = 'IA';
+		
+			states[19] = 'KS';
+		
+			states[20] = 'KY';
+		
+			states[21] = 'LA';
+		
+			states[22] = 'ME';
+		
+			states[23] = 'MD';
+		
+			states[24] = 'MA';
+		
+			states[25] = 'MI';
+		
+			states[26] = 'MN';
+		
+			states[27] = 'MS';
+		
+			states[28] = 'MO';
+		
+			states[29] = 'MT';
+		
+			states[30] = 'NE';
+		
+			states[31] = 'NV';
+		
+			states[32] = 'NH';
+		
+			states[33] = 'NJ';
+		
+			states[34] = 'NM';
+		
+			states[35] = 'NY';
+		
+			states[36] = 'NC';
+		
+			states[37] = 'ND';
+		
+			states[38] = 'OH';
+		
+			states[39] = 'OK';
+		
+			states[40] = 'ON';
+		
+			states[41] = 'OR';
+		
+			states[42] = 'PA';
+		
+			states[43] = 'PR';
+		
+			states[44] = 'RI';
+		
+			states[45] = 'SC';
+		
+			states[46] = 'SD';
+		
+			states[47] = 'TN';
+		
+			states[48] = 'TX';
+		
+			states[49] = 'VI';
+		
+			states[50] = 'UT';
+		
+			states[51] = 'VT';
+		
+			states[52] = 'VA';
+		
+			states[53] = 'WA';
+		
+			states[54] = 'WV';
+		
+			states[55] = 'WI';
+		
+			states[56] = 'WY';
+			
+		
+
+	
+			canadianStates[0] = 'AB';
+	
+			canadianStates[1] = 'BC';
+	
+			canadianStates[2] = 'MB';
+	
+			canadianStates[3] = 'NB';
+	
+			canadianStates[4] = 'NF';
+	
+			canadianStates[5] = 'NT';
+	
+			canadianStates[6] = 'NS';
+	
+			canadianStates[7] = 'NU';
+	
+			canadianStates[8] = 'PE';
+	
+			canadianStates[9] = 'QC';
+	
+			canadianStates[10] = 'SK';
+	
+			canadianStates[11] = 'YT';
+		
+
+		
+				category[0] = 'B';
+				categoryYear[0] = '2002';
+				                    
+                    
+				category[1] = 'B';
+				categoryYear[1] = '2003';
+				                    
+                    
+				
+			
+			statusReasonText[0] = 'Setup incomplete';
+			statusReasonValue[0] = 'P';
+			statusReasonCode[0] = 'SETUPINC';
+				
+			
+			statusReasonText[1] = 'Required Docs Missing';
+			statusReasonValue[1] = 'P';
+			statusReasonCode[1] = 'REQDDOCS';
+				
+			
+			statusReasonText[2] = 'Valid License/Agreement on File';
+			statusReasonValue[2] = 'A';
+			statusReasonCode[2] = 'SETUPCOMP';
+				
+			
+			statusReasonText[3] = 'Expired Documents';
+			statusReasonValue[3] = 'O';
+			statusReasonCode[3] = 'EXPIRED';
+				
+			
+			statusReasonText[4] = 'Broker Deceased';
+			statusReasonValue[4] = 'O';
+			statusReasonCode[4] = 'DECEASED';
+				
+			
+			statusReasonText[5] = 'No Longer in Business';
+			statusReasonValue[5] = 'O';
+			statusReasonCode[5] = 'OUTOFBSNS';
+				
+			
+			statusReasonText[6] = 'Fraud';
+			statusReasonValue[6] = 'R';
+			statusReasonCode[6] = 'FRAUD';
+				
+			
+			statusReasonText[7] = 'Misrepresentation';
+			statusReasonValue[7] = 'R';
+			statusReasonCode[7] = 'MISREP';
+				
+			
+			statusReasonText[8] = 'Investigation';
+			statusReasonValue[8] = 'S';
+			statusReasonCode[8] = 'INVEST';
+				
+			
+			statusReasonText[9] = 'Record Setup in Error';
+			statusReasonValue[9] = 'V';
+			statusReasonCode[9] = 'VOID';
+		
+		
+		
+
+
+	document.FirmMaintenance.BroadcastMedium.value = 'null';
+	document.FirmMaintenance.BusinessType.value = 'U';
+	document.FirmMaintenance.Country.value = 'USA';
+	document.FirmMaintenance.BrokerCategory.value = category[0];	
+	
+	state = 'CA';
+	setState( document.FirmMaintenance);
+	
+	document.FirmMaintenance.changeType[1].checked = true;
+	
+  }
+
+
+
+
+//Added by Sathish
+
+function populatePhoneList() {
+
+	document.forms[0].PhoneList.style.visibility = "hidden";
+	document.forms[0].PhoneIK.value = "0";
+	document.forms[0].OldNumberIndicator.value = "false";
+
+
+	
+
+}
+
+
+
+
+
+
+
+
+
+function resetForm()
+{
+	document.FirmMaintenance.reset();
+	document.FirmMaintenance.BroadcastMedium.value = 'null';
+	document.FirmMaintenance.BusinessType.value = 'U';
+	document.FirmMaintenance.Country.value = 'USA';
+	document.FirmMaintenance.BrokerCategory.value = category[0];	
+	document.FirmMaintenance.State.value = 'CA';
+}
+</SCRIPT>
+
+
+
+<SCRIPT language="javascript">
+
+
+function submitForm( theForm ) {
+
+	if ( submitDestinationForm() ) {
+		if (validateForm( theForm ) ) {
+			if ( parent.destination != undefined ) {
+				if ( parent.destination.document.forms[0] != undefined ) {
+					parent.destination.document.forms[0].submit();
+				}
+			}
+			return true;
+		}			
+		else 
+			return false;
+	}
+	else
+		return false;
+
+}
+
+
+function submitDestinationForm() {
+
+
+	//Added by Sathish to include the SAVE functionality
+
+	if ( parent.destination != undefined ) {
+		if ( parent.destination.document.forms[0] != undefined ) {
+
+			parent.destination.document.forms[0].SaveExitPage.value = document.FirmMaintenance.SaveExitPage.value;
+			
+			if ( parent.destination.document.forms[0].name == "ContactPerson" ) {
+				parent.destination.document.forms[0].chgmode.value="save";
+				parent.destination.document.forms[0].typeaction.value ="stype";
+
+				var allphn = "";
+				var allphnK = "";
+
+				for(var i = 0; i < parent.destination.document.forms[0].PhoneList.options.length; i++) {
+					allphn = allphn+" % "+parent.destination.document.forms[0].PhoneList.options[i].text;
+					allphnK =allphnK+" % "+parent.destination.document.forms[0].PhoneList.options[i].value;
+					parent.destination.document.forms[0].phoneconcat.value =allphn;
+					parent.destination.document.forms[0].phoneconcatK.value =allphnK;
+				}
+
+			}
+
+			if ( parent.destination.document.forms[0].name == "AddTypeForm" ) {
+
+				if ( validate(parent.destination.document.forms[0]) ) {
+					if ( parent.destination.document.forms[0].AddressLine1.value != "" ) {
+						parent.destination.document.forms[0].TypeChangeKey.value = "Submit";
+						//parent.destination.document.forms[0].submit();
+					}
+					document.FirmMaintenance.WhereToGo.value="AdditionalAddress.jsp";					
+					return true;
+				}
+				else
+					return false;
+
+			}
+			else if ( parent.destination.document.forms[0].name == "ContactPerson" ) {
+
+				if ( validateContactForm(parent.destination.document.forms[0]) ) {
+					parent.destination.document.forms[0].TypeChangeKey.value = "Submit";
+					//parent.destination.document.forms[0].submit();
+					document.FirmMaintenance.WhereToGo.value="ContactPersonInfo.jsp";					
+					return true;
+				}
+				else
+					return false;
+
+			}
+			else if ( parent.destination.document.forms[0].name == "Relationship" ) {
+				parent.destination.document.forms[0].opmode.value="save";
+				parent.destination.document.forms[0].submitField.value="submit";
+				//parent.destination.document.forms[0].submit();
+				document.FirmMaintenance.WhereToGo.value="Relationship.jsp";				
+				return true;
+			}
+			else if ( parent.destination.document.forms[0].name == "LicenseForm" ) {
+				
+				if ( validateDOIValues(parent.destination.document.forms[0]) ) {
+				
+					parent.destination.document.forms[0].TypeChangeKey.value = "Submit";
+					//parent.destination.document.forms[0].submit();
+					document.FirmMaintenance.WhereToGo.value="License_DOI.jsp";
+					return true;
+				}
+				else
+					return false;
+			
+			}			
+			else {
+			
+				if ( parent.destination.document.forms[0].name == "AgreementsForm" )
+					document.FirmMaintenance.WhereToGo.value="Agreements.jsp";				
+				else if ( parent.destination.document.forms[0].name == "PaymentControlsForm" )
+					document.FirmMaintenance.WhereToGo.value="PaymentControls.jsp";				
+			
+				parent.destination.document.forms[0].TypeChangeKey.value = "Submit";
+				//parent.destination.document.forms[0].submit();
+				return true;
+			}
+
+		}
+		else
+			return true;
+	}
+	else
+		return true;
+
+}
+
+
+
+function validateForm(theForm)
+ {	
+
+
+
+theForm.Status.disabled = false;			
+theForm.StatusReason.disabled = false;
+theForm.BrokerCategory.disabled = false;
+theForm.BrokerCategoryYear.disabled = false;
+theForm.Country.disabled = false;
+theForm.State.disabled = false;
+theForm.BroadcastMedium.disabled = false;
+theForm.BusinessType.disabled = false;	
+
+var errorStatus = false;
+var errorFields ="";
+  if(theForm.TaxID.value == "")
+   {
+	errorFields+='Tax ID is a required field'+'\n';
+	errorStatus = true;
+   }	
+  else
+   {
+   	checkCompleteSetup(theForm.TaxID.name,theForm.TaxID.value)
+   }	   
+  if(theForm.FirmName.value == "")
+   {
+	errorFields+='Firm Name is a required field'+'\n';
+	errorStatus = true;			
+   }
+  else
+   {
+	checkCompleteSetup(theForm.FirmName.name,theForm.FirmName.value);
+   }
+   
+  /*
+  if(theForm.Location.value == "")
+   {
+	errorFields+="Location is a required field \n";
+	errorStatus = true;			
+   }
+  else
+   {
+	checkCompleteSetup(theForm.Location.name,theForm.Location.value)
+   }
+   */
+
+if(theForm.Location.value != "")
+	checkCompleteSetup(theForm.Location.name,theForm.Location.value)   
+   
+if(theForm.Line1.value == "")
+   {
+	errorFields+='Line1 is a required field'+'\n';
+	errorStatus = true;	
+   }
+else
+   {
+	checkCompleteSetup(theForm.Line1.name,theForm.Line1.value);
+   }
+if(theForm.Line2.value != "")
+	{
+		checkCompleteSetup(theForm.Line2.name,theForm.Line2.value);
+	}
+if(theForm.Line3.value != "")
+	{
+		checkCompleteSetup(theForm.Line3.name,theForm.Line3.value);
+	}
+if(theForm.City.value == "")
+   {
+	errorFields+='City  is a required field'+'\n';
+	errorStatus = true;	
+   }
+else
+   {
+	checkCompleteSetup(theForm.City.name,theForm.City.value);
+   }
+if(theForm.County.value != "")
+	{
+		checkCompleteSetup(theForm.County.name,theForm.County.value);
+	}
+if(theForm.Province.value != "")
+	{
+		checkCompleteSetup(theForm.Province.name,theForm.Province.value);
+	}
+if(theForm.MailStop.value != "")
+	{
+		checkCompleteSetup(theForm.MailStop.name,theForm.MailStop.value);
+	}
+
+
+
+
+//Included by Sathish
+
+	var validZipValues = "0123456789";
+	var countryvalue = theForm.Country.value;
+	var zipvalue = theForm.Zip.value;
+
+	//Included to check state, zip validation
+	if ( countryvalue != "" ) {
+
+		if ( countryvalue == "USA" || countryvalue == "CAN" ) {
+
+			if ( theForm.State.value == "" ) {
+				errorFields+='Address cannot be saved without state when the country is USA or Canada'+'\n';
+				errorStatus = true;
+				
+			}
+			else {
+
+				if ( countryvalue == "USA" )
+					checkState (theForm.State.value);
+				else if ( countryvalue == "CAN" )
+					checkCanadianState (theForm.State.value);
+
+			}
+
+			if ( theForm.Zip.value == "" ) {
+				errorFields+='Address cannot be saved without Zip when the country is USA or Canada'+'\n';
+				errorStatus = true;
+			}
+			else {
+				checkCountry( theForm.Country.value );
+			}
+		}
+		else {
+			if ( zipvalue != "" ) {
+				//checkForValidZip( zipvalue );
+			}
+
+		}
+
+	}
+
+
+
+
+	function checkState ( state ) {
+		
+		var found = false;
+		var state = state;
+		state = state.toUpperCase();	
+		for(var i = 0 ; i < states.length ; i++)
+		{	
+			if(state == states[i])
+				{					
+					found = true;		
+					break;
+				}
+			else
+				continue;
+		}
+		if(found == false)
+		{
+			errorFields+='Invalid State'+'\n';
+			errorStatus = true;	
+		}
+
+	}
+
+	function checkCanadianState ( state ) {
+		
+		var found = false;
+		var state = state;
+		state = state.toUpperCase();	
+		for(var i = 0 ; i < canadianStates.length ; i++)
+		{	
+			if(state == canadianStates[i])
+				{					
+					found = true;		
+					break;
+				}
+			else
+				continue;
+		}
+		if(found == false)
+		{
+			errorFields+='Invalid State'+'\n';
+			errorStatus = true;	
+		}
+
+	}
+
+
+	function checkCountry ( country ) {
+		
+		var countryvalue = country;
+		var zipvalue = theForm.Zip.value;
+
+			if (country == "USA" && zipvalue.length > 0 ) {
+			
+				if ( zipvalue.length != 5 ) {
+					
+					if ( zipvalue.length == 10 ) {
+						checkZip5Plus4( zipvalue );
+					}
+					else if ( zipvalue.length == 9 ) {
+						errorFields+='Zip code format for USA should be XXXXX or XXXXX-XXXX'+'\n';
+						errorStatus = true;
+						theForm.Zip.focus();
+						return false;
+					}
+					else {
+						errorFields+='Zip code for USA should be 5 or 5+4 digits'+'\n';
+						errorStatus = true;
+						theForm.Zip.focus();
+						return false;
+					}
+				}
+				else if ( zipvalue.length == 5 )
+					checkZip( zipvalue );
+				
+			}
+
+
+			if (country == "CAN" && zipvalue.length > 0 && zipvalue.length!=6) {
+				errorFields+='Zip code for Canada should be 6 digits'+'\n';
+				errorStatus = true;
+				theForm.Zip.focus();
+				return false;
+			}
+			else if ( country == "CAN" && zipvalue.length == 6 )
+				checkCanZip( zipvalue );
+
+	}
+
+
+	function checkZip ( zip ) {
+		
+		var zipvalue = zip;
+
+		for (var i=0; i < zipvalue.length; i++) {
+			temp = "" + zipvalue.substring(i, i+1);
+				if (validZipValues.indexOf(temp) == "-1") {
+					errorFields+='Invalid characters in Zip Code'+'\n';
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+	}
+
+	function checkZip5Plus4 ( zip ) {
+		
+		var zipvalue = zip;
+		var zipFive = zipvalue.substring(0,5);
+		var zipFour = zipvalue.substring(6,10);
+		var zipDelimiter = zipvalue.substring(5,6);
+		
+		if ( zipDelimiter != "-" ) {
+			errorFields+='Zip code format should be XXXXX-XXXX'+'\n';
+			errorStatus = true;
+			theForm.Zip.focus();
+			return false;
+		}
+
+
+		for (var i=0; i < zipFour.length; i++) {
+			temp = "" + zipFour.substring(i, i+1);
+				if (validZipValues.indexOf(temp) == "-1") {
+					errorFields+='Invalid characters in Zip Code'+'\n';
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+
+		for (var i=0; i < zipFive.length; i++) {
+			temp = "" + zipFive.substring(i, i+1);
+				if (validZipValues.indexOf(temp) == "-1") {
+					errorFields+='Invalid characters in Zip Code'+'\n';
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+	}
+	
+	function checkCanZip ( zip ) {
+		
+		var zipvalue = zip;
+		var canZipValid = "1234567890QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm";
+
+		for (var i=0; i < zipvalue.length; i++) {
+			temp = "" + zipvalue.substring(i, i+1);
+				if (canZipValid.indexOf(temp) == "-1") {
+					errorFields+='Invalid characters in Zip Code'+'\n';
+					errorStatus = true;
+					theForm.Zip.focus();
+					return false;
+				}
+		}
+	}
+
+
+
+
+
+
+ if(theForm.EMail.value !="")
+   {
+	checkCompleteSetup(theForm.EMail.name,theForm.EMail.value);
+	checkEmail(theForm.EMail.value);
+   }
+  if(theForm.EffDate.value =="")
+   {
+	errorFields+='Payment/Main address effective date is required field'+'\n';
+	errorStatus = true;
+   }
+  else
+   {
+   
+	var dtSts = chkDateValidation(theForm.EffDate.name,theForm.EffDate.value);	
+
+
+	if ( dtSts ) {
+	
+	
+     	if(theForm.OrgEffDate.value != theForm.EffDate.value) {
+
+			var ctSts = chkCurrentDate( theForm.EffDate.name, theForm.EffDate.value );
+	
+			if( !ctSts ) {
+				errorStatus = true;	
+				errorFields+='Payment/Main address effective date is invalid, as it cannot be lesser than current date'+'\n';
+			}
+		}       
+	}
+	else {
+		errorStatus = true;	
+		errorFields+='Payment/Main address effective date is invalid'+'\n';
+	
+	}
+     
+
+   }
+
+
+	for(var i = 0 ; i <theForm.PhoneList.options.length ; i++)
+          {
+		theForm.PhoneNumbers.value+= theForm.PhoneList.options[i].value;
+		theForm.PhoneNumbers.value+="%";
+	  }
+
+
+
+for(var count = 0 ; count < category.length ; count++)
+	{
+		
+		var both = category[count]+"-"+categoryYear[count];
+		theForm.AllCategory.value+= both +"/"
+	}
+
+if (errorStatus==true)
+   {
+	alert( 'Please correct the following error(s):'+'\n'+ errorFields );
+	return false;
+   }
+   else
+	return true;
+
+
+	function chkDateValidation(datename, datevalue){
+
+
+		var dateStatus = true;
+		
+	 	var validdate = "1234567890/";
+         	var err=0
+         	var psj=0;
+	      var a="";
+
+         	a=datevalue;
+		
+	 	if (a.length != 10) {
+			//errorFields += "\n" +  "Invalid "+datename;
+			//errorStatus = true;
+			dateStatus = false;
+		}
+		else {
+			for (var i=0; i < a.length; i++) {
+			temp = "" + a.substring(i, i+1);
+				if (validdate.indexOf(temp) == "-1") {
+					//errorFields += "\n" +  "Invalid Characters in "+datename;
+					//errorStatus = true;
+					dateStatus = false;
+				}
+			}
+		 }
+
+   	       d = a.substring(0, 2)
+      	 c = a.substring(2, 3)
+         	 b = a.substring(3, 5)
+         	 e = a.substring(5, 6)
+         	 f = a.substring(6, 10)
+
+ 	       //basic error checking
+
+      	 if (d<1 || d>12) {
+			//errorFields += "\n" + datename + "'s month invalid";
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+         	 if (c != '/' || e != '/' ) {
+			//errorFields += "\n" + "Invalid "+datename;
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+         	 if (b<1 || b>31) {
+			//errorFields += "\n" + datename + "'s date invalid";
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+         	 if (f<1900 || f>4000) {
+			//errorFields += "\n" + datename + "'s year invalid";
+			//errorStatus = true;
+			dateStatus = false;
+		 }
+
+         	 // months with 30 days
+         	 if (d==4 || d==6 || d==9 || d==11){
+             	if (b==31) {
+				//errorFields += "\n" + "Only 30 days are there in the month of "+datename;
+				//errorStatus = true;
+				dateStatus = false;
+			}
+         	 }
+
+	      // february, leap year
+         	 if (d==2){
+              	// feb
+              	var g=parseInt(f/4)
+              	if (isNaN(g)) {
+				//errorFields += "\n" + "Month does not match for the leap year in "+datename;
+				//errorStatus = true;
+					dateStatus = false;
+
+	            }
+
+             	if (b>29) {
+				//errorFields += "\n" + "Month and Date do not match in "+datename;
+				//errorStatus = true;
+				dateStatus = false;
+		 	}
+
+             	if (b==29 && ((f/4)!=parseInt(f/4))) {
+				//errorFields += "\n" + "Invalid "+datename;
+				//errorStatus = true;
+				dateStatus = false;
+	       	}
+		 }
+		 
+		 if ( dateStatus )
+		 	return true;
+		 else
+		 	return false;
+
+	} // end of checkValidation()
+
+
+
+	function chkCurrentDate( datename, datevalue ) {
+
+
+		var currentDtSts = true;
+
+		var sysDate = document.forms[0].CurrentDate.value;
+
+		var month = sysDate.substring(0, 2);
+		var date = sysDate.substring(3, 5);
+		var year = sysDate.substring(6, 10);
+
+
+		//month = month +1 ;
+	
+		/*
+		if ( ( month / 2 ) < 5 )
+			month = "0" + month;
+
+		if ( ( date / 2 ) < 5 )
+			date = "0" + date;
+		*/
+		
+		
+		var currentDate =  month + "/" +date+ "/" +year;
+
+		    var chmm = datevalue.substring(0, 2);
+         	var chdd = datevalue.substring(3, 5);
+         	var chyyyy = datevalue.substring(6, 10);
+
+
+		if ( chyyyy > year ) {
+		
+		}
+		else if ( chyyyy == year ) {
+
+			if ( chmm > month ) {
+			}
+			else if ( chmm == month ) {
+				if ( chdd < date ) {
+
+					//errorFields += "\n" + datename + "'s day cannot be lesser than today";
+					//errorStatus = true;
+					currentDtSts = false;
+				}
+			}
+			else {
+				currentDtSts = false;
+			}
+
+		}
+		else {
+			currentDtSts = false;
+		}
+		
+		if ( currentDtSts )
+			return true;
+		else
+			return false;
+
+	}
+
+
+
+function checkCompleteSetup(name,value)
+ {
+
+var TaxID = "1234567890";
+var FirmName = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'& " ;	
+var Line1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890, ";
+var City = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ " ;
+var MailStop = "#1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+var EffDate = "1234567890/";
+var EMail = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@1234567890.";
+var valid = "";
+if(name == "TaxID" || name =="Zip")
+	{	
+		valid = TaxID;
+	}
+else if(name == "FirmName")
+	{
+		valid = FirmName;
+	}
+else if(name == "Line1" || name =="Line2" || name =="Line3")
+	{
+		valid = Line1;
+	}
+else if(name == "City" || name =="Province" || name =="County" || name =="Location")
+	{
+		valid = City;
+	}
+else if(name == "MailStop")  
+	{
+		valid = MailStop;
+	}
+else if(name == "EffDate")
+	{
+		valid = EffDate;
+	}
+else if(name == "EMail")
+	{
+		valid = EMail;
+	}
+if(name == "TaxID" && value.length < 9)
+	{
+	errorFields+='Tax ID should be 9 digits'+'\n';
+	errorStatus = true;
+     	}
+if(name == "Zip" && value.length < 5)
+	{
+	errorFields+='base.Address.Zip5Digits'+'\n';
+	errorStatus = true;
+     	}
+
+if(valid.length > 1)
+{
+ for (var i=0; i < value.length; i++) 
+  {
+   temp = "" + value.substring(i, i+1);
+   if (valid.indexOf(temp) == "-1") 
+     {
+       errorFields+='Invalid characters in '+name+" \n";
+       errorStatus=true;      
+       break;
+     }
+  }
+ }
+}
+
+function checkEmail(email) 
+ {
+  invalidChars = " /:,;"
+   for (i=0; i<invalidChars.length; i++) 
+     {    
+	badChar = invalidChars.charAt(i)
+	if (email.indexOf(badChar,0) > -1) 
+         {
+       errorFields+='Invalid characters in '+"Email \n";
+           errorStatus=true;
+	 }
+    }
+  atPos = email.indexOf("@",1)	
+  if (atPos == -1)
+   {
+       errorFields+='Invalid characters in '+"Email \n";
+       errorStatus=true;
+	return;
+	
+   }
+
+  if (email.indexOf("@",atPos+1) != -1)
+   {	
+		errorFields+='Invalid '+'Email \n';
+       errorStatus=true;
+	return;
+   }
+
+  periodPos = email.indexOf(".",atPos)
+  if (periodPos == -1)
+   {	  
+		errorFields+='Invalid '+'Email \n';
+        errorStatus=true;
+	return;
+   }
+
+  if (periodPos+4 > email.length)	
+    {	
+		errorFields+='Invalid '+'Email \n';
+       errorStatus=true;
+
+    } 
+ }
+
+}//End of validateForm function
+
+
+
+//Added by Sathish in 12/18/2001
+
+function addToList( theForm ) {
+
+	if ( checkAllValid(theForm.CountryCode.value, theForm.AreaCode.value, theForm.Number.value, theForm.Ext.value) ) {
+		if ( checkForDuplication( theForm ) ) {
+			if ( validateForm(theForm) ) {
+				theForm.StatusIndicator.value = "";
+				theForm.PhoneAction.value = "AddPhone";
+
+				if ( theForm.PhoneIK.value == "") 
+					theForm.PhoneIK.value = "0";
+
+				setWhereToGo( theForm );
+				theForm.submit();
+			}
+		}
+	}
+
+}
+
+
+
+function deleteFromList( theForm ) {
+
+	if ( theForm.OldNumberIndicator.value == "true" ) {
+
+		if ( validateForm( theForm ) ) {
+
+				theForm.StatusIndicator.value = "D";
+				theForm.PhoneAction.value = "DeletePhone";
+
+				setWhereToGo( theForm );
+				theForm.submit();
+
+
+		}
+
+	}
+	else {
+		alert( 'A record has to be selected first, to be deleted from the list');
+	}
+
+}
+
+
+function setWhereToGo ( theForm ) {
+
+	if ( parent.destination != undefined )  {
+	
+			if ( parent.destination.document.forms[0] != undefined ) {
+				if ( parent.destination.document.forms[0].name == "AddTypeForm" )
+					theForm.WhereToGo.value="AdditionalAddress.jsp";
+				if ( parent.destination.document.forms[0].name == "AgreementsForm" )
+					theForm.WhereToGo.value="Agreements.jsp";			
+				if ( parent.destination.document.forms[0].name == "LicenseForm" )
+					theForm.WhereToGo.value="License_DOI.jsp";			
+				if ( parent.destination.document.forms[0].name == "PaymentControlsForm" )
+					theForm.WhereToGo.value="PaymentControls.jsp";			
+				if ( parent.destination.document.forms[0].name == "ContactPerson" )
+					theForm.WhereToGo.value="ContactPersonInfo.jsp";			
+				if ( parent.destination.document.forms[0].name == "Relationship" )
+					theForm.WhereToGo.value="Relationship.jsp";			
+					
+			}
+		
+	
+	}
+
+
+}
+
+
+
+//Rewrote by Sathish on 11/19/2001
+
+function checkAllValid(iCountryCode,iAreaCode,iNumber,iExtension)
+ {	
+
+	var phoneErrorStatus = "false";
+	var phoneErrorFields = 'Please correct the following error(s):';
+
+	if ( iCountryCode == "" ) {
+		phoneErrorFields += "\n"+'CountryCode is a required field';
+		phoneErrorStatus = "true";
+
+	}
+	else {
+			checkChar(iCountryCode);
+	}
+
+	if ( iAreaCode == "" ) {
+		phoneErrorFields += "\n"+'AreaCode is a required field';
+		phoneErrorStatus = "true";
+
+	}
+	else {
+		if ( iAreaCode.length < 3 ) {
+			phoneErrorFields += "\n"+'AreaCode should be 3 digits';
+			phoneErrorStatus = "true";
+		}
+		else {
+			checkChar(iAreaCode);
+		}
+
+	}
+
+	if ( iNumber == "" ) {
+		phoneErrorFields += "\n"+'Number is a required field';
+		phoneErrorStatus = "true";
+
+	}
+	else {
+		if ( iNumber.length < 7 ) {
+			phoneErrorFields += "\n"+'Number should be 7 digits.';
+			phoneErrorStatus = "true";
+		}
+		else {
+			checkChar(iNumber);
+		}
+
+	}
+
+
+	if ( iExtension != "" ) {
+		checkChar(iExtension);
+	}
+
+	
+	function checkChar(iValue) {
+
+		var valid = "0123456789";  
+
+	 	for (var i=0; i < iValue.length; i++) 
+  		{
+   			temp1 = "" + iValue.substring(i, i+1);
+   			if (valid.indexOf(temp1) == "-1") 
+     				{
+					phoneErrorFields += "\n"+'Invalid '+'Phone Number';
+					phoneErrorStatus = "true";
+					break;
+     				}
+ 		}
+	
+	  }
+
+
+	if ( phoneErrorStatus == "true" ) {
+
+		alert( phoneErrorFields );
+		return false;
+	}
+	else
+		return true;
+		
+
+ }
+
+
+
+   function checkChar(iValue) {
+
+	var valid = "0123456789";  
+
+ 	for (var i=0; i < iValue.length; i++) 
+  		{
+   			temp1 = "" + iValue.substring(i, i+1);
+   			if (valid.indexOf(temp1) == "-1") 
+     				{
+       				alert( 'Invalid characters in '+ 'Phone Number' );
+					return false;
+       				break;
+     				}
+ 		}
+	
+   }
+
+
+
+
+   function popAgain( popList, popValue ) {
+
+	var values = popValue;
+
+	for( var m=0; m < popList.length; m++ ) {
+		if ( popList.options[m].selected == true ) {
+			listIndex = m;
+			break;
+		}
+	}
+
+
+	var temp;
+
+	var count = new Array();
+	var splitData = new Array();
+		
+	var j = 0;
+	for (var i=0; i < values.length; i++) {
+		temp = "" + values.substring(i, i+1);
+
+		if ( temp == (":" ) ) {
+			count[j] = i;
+			j++;
+		}
+		
+	}
+	count[j] = values.length;
+
+	var k = 0;
+	for ( i=0; i < count.length; i++ ) {
+		splitData[i] = values.substring( k, count[i] );
+		k = count[i]+1;
+	}
+
+
+	if ( splitData[1] == undefined || splitData[2] == undefined || splitData[3] == undefined) {
+	
+		alert( 'Click the record you wish to populate in the fields');
+	}
+	else {	
+	
+		document.forms[0].PhoneType.value = splitData[0];
+		document.forms[0].CountryCode.value = splitData[1];
+		document.forms[0].AreaCode.value = splitData[2];
+		document.forms[0].Number.value = splitData[3];
+		document.forms[0].Ext.value = splitData[4];
+		document.forms[0].StatusIndicator.value = splitData[5];
+		document.forms[0].PhoneIK.value = splitData[6];
+	
+		if ( splitData[7] == "Y" )
+			document.forms[0].Preference.checked = 1;
+		else
+			document.forms[0].Preference.checked = 0;
+	
+		document.forms[0].OldNumberIndicator.value = "true";
+	}
+   }
+
+
+
+   function checkForDuplication(theForm) {
+
+	
+	var phntype = 	document.forms[0].PhoneType.value;
+	var ccode = document.forms[0].CountryCode.value;
+	var acode = document.forms[0].AreaCode.value;
+	var num = document.forms[0].Number.value;
+	var extn = document.forms[0].Ext.value;
+	var phoneIndex = "-1";
+	var phoneStatus = true;
+
+	var phoneno = phntype+"-"+ccode+"-"+acode+"-"+num+"-"+extn;
+
+	for( var m=0; m < theForm.PhoneList.length; m++ ) {
+		if ( theForm.PhoneList.options[m].selected == true ) {
+			phoneIndex = m;
+			break;
+		}
+	}
+
+
+	for( var s=0; s < theForm.PhoneList.length; s++ ) {
+
+		if ( s != phoneIndex ) {
+
+			var values = theForm.PhoneList.options[s].value;
+
+			var temp;
+			var count = new Array();
+			var splitData = new Array();
+		
+			var j = 0;
+			for (var i=0; i < values.length; i++) {
+				temp = "" + values.substring(i, i+1);
+	
+				if ( temp == (":" ) ) {
+					count[j] = i;
+					j++;
+				}
+			
+			}
+			count[j] = values.length;
+
+			var k = 0;
+			for ( i=0; i < count.length; i++ ) {
+				splitData[i] = values.substring( k, count[i] );
+				k = count[i]+1;
+			}
+
+			var oldphone = splitData[0]+"-"+splitData[1]+"-"+splitData[2]+"-"+splitData[3]+"-"+splitData[4];
+
+			if ( phoneno == oldphone ) {
+
+				alert( 'Phone number entered already exists');
+				phoneStatus = false;
+				break;
+			}
+
+
+		}
+
+	}
+
+	if ( phoneStatus )
+		return true;
+	else
+		return false;
+
+
+   }
+
+
+
+var oldNo = false;
+var phoneIK = "0000";
+var disableList = true;
+var faxFound = false;
+
+function listHide()			//to hide the list when nophone added to that
+ {
+	document.FirmMaintenance.PhoneList.style.visibility = "hidden";	
+ }
+
+//--------------------------------------------------------------------
+function enableAll(form)	//Enabling all the Fields when Edit clicked
+ {
+	
+   var totalElements = document.FirmMaintenance.elements.length;
+   for ( var i = 1 ; i <totalElements ; i++)
+    {
+	
+        if(document.FirmMaintenance.elements[i].name != "bid" && document.FirmMaintenance.elements[i].name != "StatusDate"  && document.FirmMaintenance.elements[i].name != "changeType"  && document.FirmMaintenance.elements[i].type != "button"   && document.FirmMaintenance.elements[i].type != "submit")
+		{			
+			document.FirmMaintenance.elements[i].style.background = "white";
+			document.FirmMaintenance.elements[i].onfocus = null;
+		}
+    }
+   enableDropDowns();
+   disableList = false;
+}
+function checkForFaxInPhoneList()
+{	
+	
+	for(var i=0 ; i < document.FirmMaintenance.PhoneList.options.length; i++) 
+		{	
+			var listValue = document.FirmMaintenance.PhoneList.options[i].value;
+			if(listValue.substring(0,1) == "F")
+				{	
+					faxFound = true;
+					enableFaxInBroadcastMedium();					
+					disableList = false;
+					document.FirmMaintenance.PhoneList.style.background = "white";
+				}		
+		}
+	if(faxFound !=true && document.FirmMaintenance.EMail.value != "")
+		{
+			enableEMailInBroadcastMedium();
+			faxFound = false;
+		}
+	else if(faxFound !=true && document.FirmMaintenance.EMail.value == "")
+		{
+			document.FirmMaintenance.BroadcastMedium.value = "";
+			faxFound = false;
+		}
+	faxFound = false;
+}
+
+function enableFaxInBroadcastMedium()
+{	
+	document.FirmMaintenance.BroadcastMedium.value = "F";
+}
+function enableEMailInBroadcastMedium()
+{	
+	document.FirmMaintenance.BroadcastMedium.value = "E";
+
+}
+function checkForEMailAndFax(sel)
+{
+	var canSelect = false;
+	if(sel == "F")
+	{
+	for(var i=0 ; i < document.FirmMaintenance.PhoneList.options.length; i++) 
+		{	
+			var listValue = document.FirmMaintenance.PhoneList.options[i].value;
+			if(sel == listValue.substring(0,1))
+				canSelect = true;
+		}
+	}
+	else if (sel =="E")
+	{
+		if(document.FirmMaintenance.EMail.value != "")
+		canSelect = true;
+	}
+  if(canSelect != true)
+	{
+		alert('BroadcastMedium choosen is not valid');
+		document.FirmMaintenance.BroadcastMedium.value = document.FirmMaintenance.PreviousBrdcst.value;
+	}	
+}
+function checkEffDateChanged()
+{	
+	document.FirmMaintenance.EffDateChanged.value = "changed";	
+	
+}
+
+function disableDropDowns()
+{
+	document.FirmMaintenance.Status.disabled = true;			
+	document.FirmMaintenance.StatusReason.disabled = true;
+	document.FirmMaintenance.BrokerCategory.disabled = true;
+	document.FirmMaintenance.BrokerCategoryYear.disabled = true;
+	document.FirmMaintenance.Country.disabled = true;
+	document.FirmMaintenance.BroadcastMedium.disabled = true;
+	document.FirmMaintenance.BusinessType.disabled = true;	
+	document.FirmMaintenance.changeType[0].disabled = true;
+	document.FirmMaintenance.changeType[1].disabled = true;	
+	
+}
+function enableDropDowns()
+{
+	document.FirmMaintenance.Status.disabled = false;			
+	document.FirmMaintenance.StatusReason.disabled = false;
+	document.FirmMaintenance.BrokerCategory.disabled = false;
+	document.FirmMaintenance.BrokerCategoryYear.disabled = false;
+	document.FirmMaintenance.Country.disabled = false;
+	document.FirmMaintenance.BroadcastMedium.disabled = false;
+	document.FirmMaintenance.BusinessType.disabled = false;	
+	document.FirmMaintenance.changeType[0].disabled = false;
+	document.FirmMaintenance.changeType[1].disabled = false;	
+
+}
+</SCRIPT>
+
+
+<!-- INCLUDED BY SATHISH 10/03 -->
+<Script language="JavaScript">
+   function callBrokerTypeChange() {
+
+//	if ( validateForm(FirmMaintenance) ) {
+		document.FirmMaintenance.action="ChangeBrokerTypeServlet";
+		document.FirmMaintenance.target="_parent";
+		document.FirmMaintenance.submit();
+//	}
+   }
+
+   function callComments() {
+   
+   		var funType = document.forms[0].FunctionType.value;
+   		
+   		document.FirmMaintenance.sourceId1.value = document.FirmMaintenance.bid.value;
+
+   		if ( funType == "" )
+   			funType = "DMGR";
+		
+		var url = 'Comments/CommentServlet?sourceId1='+document.FirmMaintenance.sourceId1.value+'&sourceId2=0&sourceId3=0&sourceInd=BKR&funType='+funType;
+				
+		window.open(url, 'slideWindow',false,500,700);
+   }
+
+
+/*
+   function callPrint() {
+
+	document.FirmMaintenance.action="PrintServlet";
+	document.FirmMaintenance.submit();
+
+   }
+*/
+
+function printFunction() {
+
+	callPrint();
+}
+
+
+   function callSearch() {
+
+		document.FirmMaintenance.action="SearchServlet";
+		document.FirmMaintenance.submit();
+
+   }
+
+   function callExit() {
+
+	var retValue = window.showModalDialog("ConfirmDialog.html","","dialogHeight=10;dialogWidth=20;center=1;status=0;resizable=0;help=0");
+				
+	if ( retValue == "Yes" ) {
+
+		document.FirmMaintenance.SaveExitPage.value = "Yes";
+		if ( submitForm( document.FirmMaintenance) ) {
+			document.FirmMaintenance.target="_parent";
+			document.FirmMaintenance.submit();
+		}
+
+
+	}
+	else if ( retValue == "No" ) {
+		document.FirmMaintenance.action="ExitServlet";
+		document.FirmMaintenance.target="_parent";
+		document.FirmMaintenance.submit();
+	}
+
+   }
+
+	function setState( theForm ) {
+	
+		var country = theForm.Country.value;
+		
+		
+		if ( country == "USA" ) {
+			theForm.State.length = 0;		
+			for ( var i=0; i<states.length; i++ ) {
+				var addstate = new Option();
+				addstate.text = states[i];
+				addstate.value = states[i];
+				theForm.State.options[i] = addstate;				
+			}
+			theForm.State.disabled = false;	
+			theForm.State.value = state;
+		}
+		else if ( country == "CAN" ) {
+			theForm.State.length = 0;		
+			for ( var i=0; i<canadianStates.length; i++ ) {
+				var addstate = new Option();
+				addstate.text = canadianStates[i];
+				addstate.value = canadianStates[i];
+				theForm.State.options[i] = addstate;				
+			}
+			theForm.State.disabled = false;
+			theForm.State.value = state;			
+		}
+		else {
+				theForm.State.length = 0;		
+				theForm.State.disabled = true;
+		}
+
+	}
+
+
+
+</Script>
+
+
+
+</HEAD>
+<BODY bgcolor="#999999" onload="init();disableDropDowns();populatePhoneList()">
+<FORM name="FirmMaintenance" method="post" onsubmit="return submitForm(FirmMaintenance)" action="FirmUpdate"  target="_parent">
+
+<TABLE border="1" width="955">
+  <TBODY>
+    <TR>
+      <TD>
+            <TABLE cellpadding="0" cellspacing="0" bgcolor="#3333cc" width="100%">
+        <TBODY>
+          <TR>
+            <TD bgcolor="#ffcc00" style="color : white;" colspan="2"><B><INPUT type="BUTTON" name="TitleButton" value=" BKR201-Administer Broker Firm" class="button"></B></TD>
+                        <TD bgcolor="#ffcc00" align="right" valign="middle"><INPUT type="button" name="Search" value="Search" class="pbttn" OnClick="callSearch()"><INPUT type="submit" name="Save" value="Save" class="pbttn"><INPUT type="button" name="Print" value="Print" class="pbttn" OnClick="printFunction()"><INPUT type="button" class="pbttn" name="Exit" value="Exit" OnClick="callExit()"><INPUT type="button" class="pbttn" name="Comments" value="Comments" OnClick="callComments()">
+            
+	<INPUT type="hidden" name="sourceInd" value="BKR">
+	<INPUT type="hidden" name="sourceId1" value="">
+	<INPUT type="hidden" name="sourceId2" value="0">
+	<INPUT type="hidden" name="sourceId3" value="0">
+	<INPUT type="hidden" name="GoTo" value="FirmMaintenanceAdminSys.jsp">
+	<INPUT type="hidden" name="WhereToGo" value="Blank.htm">	
+	<INPUT type="hidden" name="SaveExitPage" value="No">
+	<INPUT type="hidden" name="FunctionType" value="">	
+            </TD>
+                    </TR>
+        </TBODY>
+      </TABLE>
+            <TABLE cellpadding="0" cellspacing="0" bgcolor="#999999" border="1" width="100%">
+        <TBODY>
+          <TR>
+            <TD>
+            <TABLE cellpadding="0" cellspacing="0" bgcolor="#999999" width="100%">
+              <TBODY>
+                <TR>
+                  <TD class="label" align="right">BID</TD>
+                  <TD><INPUT size="12" type="text" maxlength="12" name="bid" onfocus="this.blur()" value="5050" style="background-color : silver;"></TD>
+                  <TD class="label" align="right">Status<FONT color="#ff0033" size="+1">*</FONT></TD>
+<INPUT type="hidden" name="StatusReasonCode">
+<SCRIPT Language = "Javascript">
+function populateReason(selected)
+	{	
+		var listlength = 0 ;
+		document.FirmMaintenance.StatusReason.options.length = 0;
+		for(var count = 0 ; count < statusReasonText.length ; count++)
+			{				
+				if(statusReasonValue[count] == selected)	
+					{	
+						
+						var reason = new Option();
+						reason.text = statusReasonText[count];
+						reason.value = statusReasonCode[count];
+						document.FirmMaintenance.StatusReason.options[listlength] = reason;
+						listlength+=1;						
+					}
+				
+			}		
+	}
+
+</SCRIPT>
+                  <TD><SELECT name="Status" onfocus="this.blur()" style="background-color : silver;" onChange="populateReason(this.value)">
+                    
+					<OPTION value = 'P'>Pending Completion of Setup</OPTION>
+		
+					<OPTION value = 'V'>Void/Removed</OPTION>
+		
+					<OPTION value = 'S'>Suspended</OPTION>
+		
+					<OPTION value = 'R'>Revoked/Terminated</OPTION>
+		
+                  </SELECT></TD>
+                  <TD class="label" align="right">Status Reason</TD>
+                  <TD><SELECT name="StatusReason" style="background-color : silver;">
+		
+				<OPTION value = 'SETUPINC'>Setup incomplete</OPTION>	
+		
+</SELECT></TD>
+                  <TD class="label" align="right">Status Date</TD>
+                  <TD class="label" align="right"><INPUT size="10" type="text" maxlength="10" name="StatusDate" 
+value = '04/26/2002' onfocus="this.blur()" style="background-color : silver;"></TD>
+                  <TD align="right"><INPUT type="button" class="pbttn" name="Edit" value="Edit" OnClick="enableAll(this.form)"> <INPUT type="button" class="pbttn" name="Reset" value="Reset" OnClick="resetForm()"></TD>
+                </TR>
+                <TR>
+                  <TD colspan="2" align="left">
+                  <TABLE border="1" cellpadding="0" cellspacing="0">
+                    <TBODY>
+                      <TR>
+<!--                        <TD><INPUT type="radio" name="BrokerType" value="Agent" onclick="go('Broker_type_changeto_agent.htm');" onfocus="this.blur()"><FONT class="title">Agent</FONT><INPUT type="radio" checked name="BrokerType" value="Firm" onfocus="this.blur()"><FONT class="title">Firm</FONT></TD> -->
+<!-- INCLUDED BY SATHISH ON 10/03 -->  <TD><INPUT type="radio" name="changeType" value="agent"  onclick="callBrokerTypeChange()"><FONT class="title">Agent</FONT><INPUT type="radio" checked name="changeType" value="firm"><FONT class="title">Firm</FONT></TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                  </TD>
+                  <TD align="right" class="label">Tax ID<FONT color="#ff0033"> <FONT size="+1">*</FONT></FONT></TD>
+                  <TD align="left"><INPUT size="11" type="text" maxlength="9" name="TaxID" value="556677889" onfocus="this.blur()" style="background-color : silver;"></TD>
+                  <TD align="right" colspan="2" class="label">Broker Category Year<FONT color="#ff0033"><FONT size="+1">*</FONT></FONT></TD>
+                  <TD align="left"><SCRIPT language="javascript">
+
+function changeCategory(newValue)
+	{		
+		category[document.FirmMaintenance.BrokerCategoryYear.value]  = newValue;		
+	}
+function changeCategoryYear(id)
+	{	
+		document.FirmMaintenance.BrokerCategory.value = category[id];
+	}
+</SCRIPT> <SELECT name="BrokerCategoryYear" style="background-color : silver;" onchange="changeCategoryYear(this.value)">
+		 		
+                    <OPTION value="0">2002</OPTION>
+                    		
+                    <OPTION value="1">2003</OPTION>
+                                       
+                  </SELECT><INPUT type = "hidden" name = "AllCategory" value = ""></TD>
+                  <TD align="right" class="label">Broker Category</TD>
+                  <TD class="label"><SELECT name="BrokerCategory" style="background-color : silver;" onfocus="this.blur()" onchange="changeCategory(this.value)">
+                  
+                  				
+								
+        				            <OPTION value="B">Broker</OPTION>
+     			               
+								
+        				            <OPTION value="P">Preferred Broker</OPTION>
+     			               
+					<!--                  
+                    <OPTION value="R" selected>Regular</OPTION>
+                    <OPTION value="P">Prefered</OPTION>
+                    -->
+                    
+                  </SELECT></TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+            <TABLE cellpadding="0" cellspacing="0" bgcolor="#999999" width="100%">
+              <TBODY>
+                <TR>
+                  <TD class="label" align="right">Name <FONT color="#ff0033" size="+1">*</FONT></TD>
+                  <TD colspan="5"><INPUT size="60" type="text" maxlength="80" name="FirmName" value="Broker's Inc" onfocus="this.blur()" style="background-color : silver;"></TD>
+                  <TD class="label"></TD>
+                  <TD colspan="2"></TD>
+                  <TD class="label" align="right"></TD>
+                  <TD align="left"></TD>
+                </TR>
+                <TR>
+                  <TD align="right" class = "label">Location</TD>
+                  <TD><INPUT size="40" type="text" maxlength="40" name="Location" onfocus="this.blur()" style="background-color : silver;" value="Pasadena"></TD>
+                  <TD align="right" class = "label">Busn Type<FONT color="#ff0033"><FONT size="+1">*</FONT></FONT></TD>
+                  <TD><SELECT name="BusinessType" tabindex="1" style="background-color : silver;">
+                    					
+					<OPTION value = 'SP'>Sole Proprietor</OPTION>							
+					<OPTION value = 'GP'>General Partnership</OPTION>							
+					<OPTION value = 'LP'>Limited Partnership</OPTION>							
+					<OPTION value = 'LL'>LLP</OPTION>							
+					<OPTION value = 'CC'>Corporation (C)</OPTION>							
+					<OPTION value = 'CS'>Corporation (S)</OPTION>							
+					<OPTION value = 'O'>Other</OPTION>							
+					<OPTION value = 'U'>Unknown</OPTION>		
+                  </SELECT></TD>
+                  <TD></TD>
+                  <TD></TD>
+                  <TD></TD>
+                  <TD colspan="2"></TD>
+                  <TD></TD>
+                  <TD></TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+                        <TABLE width="940">
+              <TBODY>
+                <TR>
+                  <TD valign="top" height="253">
+                  <TABLE border="1" cellpadding="0" cellspacing="0">
+                    <TBODY>
+                      <TR>
+                        <TD><FONT class="title">Primary/Payment Address</FONT><BR>
+                        <TABLE cellpadding="0" cellspacing="0">
+                          <TBODY>
+                            <TR>
+                              <TD></TD>
+                              <TD></TD>
+                              <TD align="right"><FONT class="label">Eff Date</FONT></TD>
+                              <TD>
+                              <INPUT size="10" type="text" maxlength="10" name="EffDate" onfocus="this.blur()" style="background-color : silver;" value="05/21/2002">
+                              <INPUT type="hidden" name="OrgEffDate" value="05/21/2002">
+                              </TD>
+                            </TR>
+                            <TR>
+                              <TD class="label" align="right">Line 1<FONT color="#ff0033"> <FONT size="+1">*</FONT></FONT></TD>
+                              <TD><INPUT size="50" type="text" maxlength="50" name="Line1" onfocus="this.blur()" value="2500 Colorado Blvd" style="background-color : silver;"></TD>
+                              <TD><FONT class="label">Mail Stop</FONT></TD>
+                              <TD><INPUT size="10" type="text" maxlength="15" name="MailStop" onfocus="this.blur()" value="#711" style="background-color : silver;"></TD>
+                            </TR>
+                            <TR>
+                              <TD class="label" align="right">Line 2</TD>
+                              <TD colspan="3"><INPUT size="50" type="text" maxlength="50" name="Line2" onfocus="this.blur()" value="" style="background-color : silver;"></TD>
+                            </TR>
+                            <TR>
+                              <TD class="label" align="right">Line 3</TD>
+                              <TD colspan="3"><INPUT size="50" type="text" maxlength="50" name="Line3" onfocus="this.blur()" style="background-color : silver;" value=""></TD>
+                            </TR>
+                            <TR>
+                              <TD class="label" align="right">City <FONT color="#ff0033"><FONT size="+1">*</FONT></FONT></TD>
+                              <TD class="label" align="left" colspan="3"><INPUT size="50" type="text" maxlength="50" name="City" onfocus="this.blur()" value="Pasadena" style="background-color : silver;"></TD>
+                            </TR>
+                            <TR>
+                              <TD align="right"><FONT class="label">State </FONT></TD>
+                              <TD colspan="3"><FONT class="label">
+            <SELECT class="input" name="State"  style="background-color : silver;" OnFocus="this.blur()">
+            <option value="">&nbsp;&nbsp;&nbsp;</option>
+            </SELECT>
+                              
+                              Zip<FONT color="#ff0033"> </FONT></FONT><INPUT size="11" type="text" maxlength="10" name="Zip" onfocus="this.blur()" value="91105" style="background-color : silver;"> <FONT class="label">Country</FONT> <SELECT name="Country" OnChange="setState(document.FirmMaintenance)" style="background-color : silver;">		
+					<option value = 'CAN'>CAN</option>
+				
+					<option value = 'FRA'>FRA</option>
+				
+					<option value = 'GDR'>GDR</option>
+				
+					<option value = 'JAPAN'>JAPAN</option>
+				
+					<option value = 'MEX'>MEX</option>
+				
+					<option value = 'NEDER'>NEDER</option>
+				
+					<option value = 'ROC'>ROC</option>
+				
+					<option value = 'UK'>UK</option>
+				
+					<option value = 'USA'>USA</option>
+				
+					<option value = 'HUN'>HUN</option>
+		
+</SELECT></TD>
+                            </TR>
+                            <TR>
+                              <TD class="label" align="right">County</TD>
+                              <TD colspan="3"><INPUT size="20" type="text" maxlength="20" name="County" onfocus="this.blur()" value="LA County" style="background-color : silver;"><FONT class="label">Province</FONT><INPUT size="20" type="text" maxlength="20" name="Province" onfocus="this.blur()" style="background-color : silver;" value=""><INPUT type="hidden" name="CurrentDate" value='06/14/2002'><INPUT type="hidden" name="EffDateChanged" value="05/21/2002"></TD>
+                            </TR>
+                          </TBODY>
+                        </TABLE>
+                        </TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+
+                  </TD>
+                  <TD height="253">
+                  <TABLE cellpadding="0" cellspacing="0">
+                    <TBODY>
+                      <TR>
+                        <TD>
+                        <TABLE cellpadding="0" cellspacing="0" width="100%">
+                          <TBODY>
+                            <TR>
+                              <TD class="label" align="right">Email</TD>
+                              <TD><INPUT size="40" type="text" maxlength="40" name="EMail" tabindex="3" value="" style="background-color : silver;" onfocus="this.blur()" onchange = "checkForFaxInPhoneList()" ></TD>
+                            </TR>
+                            <TR>
+                              <TD class="label" align="right">Web URL</TD>
+                              <TD><INPUT size="40" type="text" maxlength="60" name="WebURL" tabindex="4" value="" style="background-color : silver;" onfocus="this.blur()"></TD>
+                            </TR>
+                          </TBODY>
+                        </TABLE>
+                        </TD>
+                      </TR>
+                      <TR>
+                        <TD>
+                                                <TABLE border="1" cellpadding="0" cellspacing="0" width="309">
+                          <TBODY>
+                            <TR>
+                                                            <TD width="349"><FONT class="title">Phone(s)</FONT>
+                                                            <TABLE cellpadding="0" cellspacing="0" width="306">
+                                <TBODY>
+                                  <TR>
+                                    <TD class="label" align="center">Type<FONT color="#ff0033"><FONT size="+1">*</FONT></FONT></TD>
+                                    <TD class="label" align="center" width="24">Ctry<FONT color="#ff0033"><FONT size="+1">*</FONT></FONT></TD>
+                                    <TD class="label" align="center" width="28">Area<FONT color="#ff0033"><FONT size="+1">*</FONT></FONT></TD>
+                                    <TD class="label" align="center">Number<FONT color="#ff0033"><FONT size="+1">*</FONT></FONT></TD>
+                                    <TD class="label" align="center">Ext</TD>
+                                    <TD class="label">Pref</TD>
+                                    <TD><INPUT type=button" class="pbttn" name="Delete" value="Delete"  OnClick="deleteFromList(document.FirmMaintenance);" ></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD><INPUT type="hidden" name="PhoneNumbers"><SELECT name="PhoneType" tabindex="5"  style="background-color : silver;" onfocus="this.blur()"> 
+
+			                    
+								
+        				            <OPTION value="R">Residence</OPTION>
+     			               
+								
+        				            <OPTION value="B">Business</OPTION>
+     			               
+								
+        				            <OPTION value="M">Mobile</OPTION>
+     			               
+								
+        				            <OPTION value="P">Pager</OPTION>
+     			               
+								
+        				            <OPTION value="F">Fax</OPTION>
+     			               
+							
+                                    </SELECT>
+					<INPUT type="hidden" name="StatusIndicator" value="">
+					<INPUT type="hidden" name="OldNumberIndicator" value="false">
+					<INPUT type="hidden" name="PhoneIK" value="0">
+					<INPUT type="hidden" name="PhoneAction" value="">
+
+					</TD>
+                                    <TD align="center" width="24"><INPUT size="3" type="text" maxlength="3" name="CountryCode" tabindex="6"  style="background-color : silver;" onfocus="this.blur()"></TD>
+                                    <TD align="center" width="28"><INPUT size="3" type="text" maxlength="3" name="AreaCode" tabindex="7"  style="background-color : silver;" onfocus="this.blur()"></TD>
+                                    <TD align="center"><INPUT size="7" type="text" maxlength="7" name="Number" tabindex="8"  style="background-color : silver;" onfocus="this.blur()"></TD>
+                                    <TD align="center"><INPUT size="5" type="text" maxlength="5" name="Ext" tabindex="9"  style="background-color : silver;" onfocus="this.blur()"></TD>
+                                    <TD align="center"><INPUT type="checkbox" name="Preference" tabindex="10"></TD>
+									<TD><INPUT type="button" class="pbttn" name="Add" value="  Add  " OnClick="addToList(document.FirmMaintenance);"></TD>
+									</TR>
+                                </TBODY>
+                              </TABLE>
+                                                            <SELECT size="5" name="PhoneList" onclick="popAgain(PhoneList,this.form.PhoneList.value)" style="background-color : silver;">
+</SELECT></TD>
+                                                        </TR>
+                          </TBODY>
+                        </TABLE>
+                                                </TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                  <TABLE width="100%" cellpadding="1" cellspacing="1">
+                    <TBODY>
+                      <TR>
+                        <TD align="right" class = "label">Broadcast Medium</TD>
+			<INPUT type = "hidden" name = "PreviousBrdcst" > 
+                        <TD><SELECT name="BroadcastMedium" tabindex="2" style="background-color : silver;" onchange = "checkForEMailAndFax(this.value)" 
+onclick = "document.FirmMaintenance.PreviousBrdcst.value = document.FirmMaintenance.BroadcastMedium.value;">
+
+			                    
+								
+        				            <OPTION value="E">E-Mail</OPTION>
+     			               
+								
+        				            <OPTION value="F">Fax</OPTION>
+     			               
+				
+					<!--
+                    <OPTION value="F" selected >Fax</OPTION>
+                    <OPTION value="E">EMail</OPTION>
+                    -->
+                  </SELECT></TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                  </TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+                        </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</FORM>
+</BODY>
+</HTML>

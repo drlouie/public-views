@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>Broker Administration System Exchange</TITLE>
+
+<Script language="JavaScript">
+
+   function setTitle() {
+
+	if ( parent.BrokerMain.document.forms[0] != undefined )
+		parent.BrokerMain.document.AgentMaintenance.TitleButton.value = "BKR101 Administer Broker Agent";
+   }
+
+   function setTabTitle() {
+
+// MOUSEOVER IMAGES FOR LEFTNAV
+menu1 = new Image();
+menu1.src = "images/menu_arrow_on.gif";
+//on
+menu2 = new Image();
+menu2.src = "images/menu_arrow_off.gif";
+
+	if ( parent.destination.document.forms[0] != undefined ) {
+
+		var formname = parent.destination.document.forms[0].name;
+
+		if ( parent.BrokerMain.document.forms[0] != undefined ) {		
+
+			if ( formname == "AddTypeForm" ) {
+				parent.BrokerMain.document.AgentMaintenance.TitleButton.value = "BKR102 Administer Broker Agent (Additional Addresses)";
+				parent.BrokerMain.document.AgentMaintenance.FunctionType.value = "DMGR";
+				parent.LeftNav.resetMenu();
+				parent.LeftNav.document.images.Address.src = menu1.src;
+			}
+			else if ( formname == "AgreementsForm" ) {
+				parent.BrokerMain.document.AgentMaintenance.TitleButton.value = "BKR103 Administer Broker Agent (Agreements)";
+				parent.BrokerMain.document.AgentMaintenance.FunctionType.value = "AGRMT";
+				parent.LeftNav.resetMenu();
+				parent.LeftNav.document.images.Agreement.src = menu1.src;
+			}
+			else if ( formname == "LicenseForm" ) {
+				parent.BrokerMain.document.AgentMaintenance.TitleButton.value = "BKR104 Administer Broker Agent (License / DOI)";
+				parent.BrokerMain.document.AgentMaintenance.FunctionType.value = "LIC";				
+				parent.LeftNav.resetMenu();
+				parent.LeftNav.document.images.License.src = menu1.src;
+			}				
+			else if ( formname == "PaymentControlsForm" ) {
+				parent.BrokerMain.document.AgentMaintenance.TitleButton.value = "BKR105 Administer Broker Agent (Payment Controls)";
+				parent.BrokerMain.document.AgentMaintenance.FunctionType.value = "PMTCNTL";				
+				parent.LeftNav.resetMenu();
+				parent.LeftNav.document.images.Payment.src = menu1.src;
+			}
+			else if ( formname == "ContactPerson" ) {
+				parent.BrokerMain.document.AgentMaintenance.TitleButton.value = "BKR106 Administer Broker Agent (Contact Person)";
+				parent.BrokerMain.document.AgentMaintenance.FunctionType.value = "CNTCT";				
+				parent.LeftNav.resetMenu();
+				parent.LeftNav.document.images.Contact.src = menu1.src;
+			}
+			else if ( formname == "Relationship" ) {
+				parent.BrokerMain.document.AgentMaintenance.TitleButton.value = "BKR107 Administer Broker Agent (Relationships)";
+				parent.BrokerMain.document.AgentMaintenance.FunctionType.value = "RLSHP";
+				parent.LeftNav.resetMenu();
+				parent.LeftNav.document.images.Relation.src = menu1.src;
+			}
+		}
+
+	}
+
+   }
+
+
+	function setDestination() {
+	
+
+		
+			frames['destination'].window.location.href = "Blank.htm";
+		
+	}
+	
+	
+/*	function setImage(theForm,TabIndicator) {
+	
+	
+		if ( TabIndicator == "1" ) {
+	
+			theForm.Address.src = "../images/add_z.gif";	
+			theForm.Agreement.src = "../images/agg_y.gif";	
+			theForm.License.src = "../images/lic_y.gif";	
+			theForm.Payment.src = "../images/pay_y.gif";	
+			theForm.Contact.src = "../images/cont_y.gif";	
+			theForm.Relation.src = "../images/rel_y.gif";	
+		}
+		else if ( TabIndicator == "2" ) {
+	
+			theForm.Address.src = "../images/add_y.gif";	
+			theForm.Agreement.src = "../images/agg_z.gif";	
+			theForm.License.src = "../images/lic_y.gif";	
+			theForm.Payment.src = "../images/pay_y.gif";	
+			theForm.Contact.src = "../images/cont_y.gif";	
+			theForm.Relation.src = "../images/rel_y.gif";	
+		}
+		else if ( TabIndicator == "3" ) {
+	
+			theForm.Address.src = "../images/add_y.gif";	
+			theForm.Agreement.src = "../images/agg_y.gif";	
+			theForm.License.src = "../images/lic_z.gif";	
+			theForm.Payment.src = "../images/pay_y.gif";	
+			theForm.Contact.src = "../images/cont_y.gif";	
+			theForm.Relation.src = "../images/rel_y.gif";	
+		}
+		else if ( TabIndicator == "4" ) {
+	
+			theForm.Address.src = "../images/add_y.gif";	
+			theForm.Agreement.src = "../images/agg_y.gif";	
+			theForm.License.src = "../images/lic_y.gif";	
+			theForm.Payment.src = "../images/pay_z.gif";	
+			theForm.Contact.src = "../images/cont_y.gif";	
+			theForm.Relation.src = "../images/rel_y.gif";	
+		}
+		else if ( TabIndicator == "5" ) {
+	
+			theForm.Address.src = "../images/add_y.gif";	
+			theForm.Agreement.src = "../images/agg_y.gif";	
+			theForm.License.src = "../images/lic_y.gif";	
+			theForm.Payment.src = "../images/pay_y.gif";	
+			theForm.Contact.src = "../images/cont_z.gif";	
+			theForm.Relation.src = "../images/rel_y.gif";	
+		}
+		else if ( TabIndicator == "6" ) {
+	
+			theForm.Address.src = "../images/add_y.gif";	
+			theForm.Agreement.src = "../images/agg_y.gif";	
+			theForm.License.src = "../images/lic_y.gif";	
+			theForm.Payment.src = "../images/pay_y.gif";	
+			theForm.Contact.src = "../images/cont_y.gif";	
+			theForm.Relation.src = "../images/rel_z.gif";	
+		}
+
+	}
+*/
+</Script>
+
+</HEAD>
+<FRAMESET rows="375,*" FRAMESPACING="0" frameborder="1" border="3">
+  <FRAME name="BrokerMain" src="AgentMaintenance.html" OnFocus="setTitle()" noresize scrolling="No" marginheight="0" marginwidth="0" TOPMARGIN="0">
+  <FRAMESET cols="165,*" FRAMESPACING="0" frameborder="1" OnLoad="setDestination()" border="3">
+    <FRAME name="LeftNav" src="LeftNav.html" noresize scrolling="No" marginheight="0" marginwidth="0" TOPMARGIN="0">
+    <FRAME name="destination" src="Blank.htm" OnFocus="setTabTitle()" snoresize scrolling="No" marginheight="0" marginwidth="0" TOPMARGIN="0">
+  </FRAMESET>
+  <NOFRAMES>
+  <BODY>
+  <P>To view this page, you need a browser that supports frames.</P>
+  </BODY>
+  </NOFRAMES>
+</FRAMESET>
+</HTML>

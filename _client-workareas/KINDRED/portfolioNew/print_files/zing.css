@@ -1,0 +1,27 @@
+BODY {
+	FONT-SIZE: 10px; COLOR: #ffffff; LINE-HEIGHT: 16px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.body {
+	FONT-SIZE: 10px; COLOR: #ffffff; LINE-HEIGHT: 16px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A {
+	FONT-SIZE: 10px; COLOR: #e5d10d; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A:hover {
+	COLOR: #c51c1f
+}
+.footer {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.arrowColor {
+	COLOR: #f8b904
+}
+.form {
+	FONT-SIZE: 12px
+}
+.mover:hover {
+	COLOR: #93c33a; TEXT-DECORATION: underline
+}
+.mover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}

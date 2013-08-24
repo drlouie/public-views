@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM WebSphere Studio">
+<META http-equiv="Content-Style-Type" content="text/css">
+
+<TITLE>Choose your option:</TITLE>
+<STYLE type="text/css">
+<!--
+INPUT {
+	font-style: normal;
+	text-transform: none;
+	font-variant: normal;
+	font-weight: bold
+}
+-->
+
+</STYLE>
+<Script language="JavaScript">
+
+	function retValueYes() {
+		window.returnValue = "Yes";
+		self.close();
+	}
+	function retValueNo() {
+		window.returnValue = "No";
+		self.close();
+	}
+	function retValueCancel() {
+		window.returnValue = "Cancel";
+		self.close();
+	}
+
+</Script>
+
+</HEAD>
+<BODY bgcolor="#cccccc">
+<TABLE width="308" height="117" bgcolor="#cccccc">
+    <TBODY>
+        <TR>
+            <TD colspan="3" valign="middle" align="center" height="61"><FONT color="#000000" size="+1" face="Comic Sans MS">Do you want to save any unsaved information?</FONT></TD>
+        </TR>
+        <TR>
+            <TD width="134" valign="middle" align="center" height="40"><INPUT type="button" name="Yes" value="Yes" OnClick="retValueYes()"></TD>
+            <TD width="100" valign="middle" align="center" height="40"><INPUT type="button" name="No" value="No" OnClick="retValueNo()"></TD>
+            <TD width="142" valign="middle" align="center" height="40"><INPUT type="button" name="Cancel" value="Cancel" OnClick="retValueCancel()"></TD>
+        </TR>
+    </TBODY>
+</TABLE>
+</BODY>
+</HTML>

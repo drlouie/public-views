@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META name="GENERATOR" content="IBM WebSphere Studio">
+<title>Broker Administration System Exchange Login Page</title>
+<script language="Javascript">
+<!--
+// QUICK CROSS-BROWSER STYLE-SHEET GENERATOR
+
+var da = (document.all) ? 1 : 0;
+var ns4 = ((navigator.userAgent.indexOf("Mozilla") != -1) && (navigator.userAgent.indexOf("4.") != -1)  && (navigator.userAgent.indexOf("MSIE") == -1));
+var ns6 = ((navigator.userAgent.indexOf("Netscape") != -1) && (navigator.userAgent.indexOf("6.") != -1));
+
+	if (ns6) with (document) {
+		writeln('<' + 'style type="text/css">');
+		writeln('.ComTitle { color:#FFFFFF; font-family:verdana,arial,helvetica; font-size:9px; font-weight:bold } '); 
+		writeln('.input2 { color:#003B65; font-family:verdana,arial,helvetica; font-size:10px; height:18px; background-color:#E6E9F0; margin-bottom:4px; }'); 
+		writeln('</style>');
+	}
+	else with (document) {
+		writeln('<' + 'style type="text/css">');
+		writeln('.ComTitle { color:#FFFFFF; font-family:verdana,arial,helvetica; font-size:9px; font-weight:bold } '); 
+		writeln('.input2 { color:#003B65; font-family:verdana,arial,helvetica; font-size:10.5px; height:18px; background-color:#E6E9F0; margin-bottom:4px; }'); 
+		writeln('</style>');
+	}
+//-->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// QUICK CROSS-BROWSER MOUSE-OVER/OFF FUNCTIONS
+
+function imageOffDHTML2(daobject,which,thisone) {
+	var cual = 	"limages/"+which+"_"+thisone+".gif";
+	daobject.src = cual;
+}
+function imageOnDHTML2(daobject,which,thisone) {
+	var cual = 	"limages/"+which+"_"+thisone+".gif";
+	daobject.src = cual;
+}
+//-->
+</SCRIPT>
+
+
+<!-- START DHTML LAYER MOVER -->
+<script language="JavaScript" src="script/dynlayer.js"></script>
+<style type="text/css">
+<!--
+#hiderBlock {
+	position: absolute;
+	left: 25px;
+	top: -98px;
+	width: 162px;
+	height: 98px;
+	clip: rect(0px 162px 98px 0px);
+	z-index: 2;
+}
+-->
+</style>
+<script language="JavaScript"> 
+<!--
+///////////////////////////////////////////////////////////////////
+// This script and its counterparts are ©2001 NetMedia Solutions //
+///////////////////////////////////////////////////////////////////
+//Global Moving Layer Introduction
+function runMove() {
+	mylayer2 = new DynLayer("hiderBlock")
+	mylayer2.slideInit()
+	checkPosition();
+}
+function checkPosition() {	
+	if (mylayer2.x >= -1) {
+		moveOut();
+	}
+}
+function moveOut() {
+	javascript:mylayer2.slideTo(25,0,1,1)
+}
+//-->
+</script>
+
+
+<style type="text/css">
+.menu1 {
+	font-family: verdana, arial, helvetica;
+	font-size: 10px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.menu2 {
+	font-family: verdana, arial, helvetica;
+	font-size: 9px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.menu3 {
+	font-family: verdana, arial, helvetica;
+	font-size: 9px;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#divLoadCont {
+	position: absolute;
+	width: 100%;
+	height: 98%;
+	top: 0;
+	left: 0;
+	background-color: white;
+	layer-background-color: white;
+	font-family: arial, helvetica;
+	z-index: 100
+}
+
+.menuback {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="runMove();" scroll="no">
+<form name="Login" method="get" action="BaseLoginServlet">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="100%" height="150">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="100%">
+        <table width="100%" height="31" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td align="center" height="27" valign="bottom"><img src="limages/base_spelled.gif" width="450" height="25"></td>
+                <td align="right" width="300" rowspan="3">
+                <table width="300" bgcolor="#ffffff" height="31" cellpadding="0" cellspacing="0" border="0" style="background-image: url(limages/formbg.jpg); background-repeat: no-repeat; background-position: right">
+                    <tr>
+                        <td align="right">
+                        <table width="300" border="0" cellspacing="0" cellpadding="0" height="31">
+                            <tr align="center">
+                                <td width="40">&nbsp;</td>
+                                <td width="100" valign="bottom"><input type="text" name="UserID" value="" class="input2" size="15"></td>
+                                <td width="100" valign="bottom"><input type="password" name="Password" value="" class="input2" size="15"></td>
+                                <td width="65" align="center" valign="bottom"><input type="image" name="submit" src="limages/login_off.gif" width="49" height="19" border="0" style="margin-top: 8px" onMouseOver="javascript:imageOnDHTML2(this,'login','ov');" onMouseOut="javascript:imageOffDHTML2(this,'login','off');"></td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#0B5F77" height="2"><img src="limages/spacer.gif" width="100" height="3" border="0"></td>
+            </tr>
+            <tr>
+                <td height="1"><img src="limages/spacer.gif" width="100" height="1" border="0"></td>
+            </tr>
+        </table>
+        <table width="100%" bgcolor="#0B5F77" height="170" cellpadding="0" cellspacing="0" border="0" style="background-image: url(limages/tbbg1.png); background-repeat: no-repeat; background-position: right">
+            <tr>
+                <td align="right" valign="top">
+                <table width="100%" height="31" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td align="right" height="30">&nbsp;</td>
+                        <td align="right" width="300">
+                        <table width="300" border="0" cellspacing="0" cellpadding="0" height="31">
+                            <tr align="center">
+                                <td width="40">&nbsp;</td>
+                                <td width="100" valign="top"><font class="ComTitle">Username</font></td>
+                                <td width="100" valign="top"><font class="ComTitle">Password</font></td>
+                                <td width="65" align="center" valign="top">&nbsp;</td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td height="1"><img src="limages/spacer.gif" width="100" height="1" border="0"></td>
+            </tr>
+            <tr>
+                <td bgcolor="#0B5F77" height="2"><img src="limages/spacer.gif" width="100" height="3" border="0"></td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+
+
+<!-- IMAGE DIV -->
+<DIV ID="hiderBlock"><img src="limages/baselogo1.gif" border="0" width="162" height="98" name="baselogo"></DIV>
+
+
+</form>
+</body>
+</html>
+

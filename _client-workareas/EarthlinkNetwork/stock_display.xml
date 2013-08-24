@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<?xml:stylesheet type="text/xsl" href="stocks_display.xsl"?>
+<stocks_data xmlns:dt="urn:schemas-microsoft-com:datatypes" xml:space="preserve">
+<stock>
+  <name>Dow Jones Industrial</name> 
+  <symbol>$INDU</symbol> 
+  <last>10,866.74</last> 
+  <change>-20.65</change> 
+  <volume>0</volume> 
+</stock>
+<stock2>
+  <name>EarthLink Network</name> 
+  <symbol>ELNK</symbol> 
+  <last>72.53</last> 
+  <change>+5.05</change> 
+  <volume>406,800</volume> 
+</stock2>
+<stock3>
+  <name>Apple Computers</name> 
+  <symbol>AAPL</symbol> 
+  <last>42.50</last> 
+  <change>-2.69</change> 
+  <volume>3,729,600</volume> 
+</stock3>
+<stock4>
+  <name>Microsoft Corp.</name> 
+  <symbol>MSFT</symbol> 
+  <last>78.44</last> 
+  <change>-0.88</change> 
+  <volume>21,193,100</volume> 
+</stock4>
+<stock5>
+  <name>Yahoo!</name> 
+  <symbol>YHOO</symbol> 
+  <last>151.50</last> 
+  <change>-6.75</change> 
+  <volume>2,642,500</volume> 
+  </stock5>
+<stock6>
+  <text>*At least 20 min. delay.</text>
+  <disclaimer>Disclaimer</disclaimer>
+</stock6>
+  </stocks_data>

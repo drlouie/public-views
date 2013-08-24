@@ -1,0 +1,45 @@
+<BODY>
+
+<SCRIPT language="Javascript">
+cookieColor = "ThyColor";
+var today = new Date()
+var expires = new Date()
+// valid for 1 year
+expires.setTime(today.getTime() + 24*365*3600000)
+
+	if (document.cookie) { elColor = document.cookie; }
+	else { elColor = -1; }
+// no Cookie
+	if (elColor == -1) {
+		document.write("<font class='stitle'>You haven't set the color layout for your BASE Interface. Please select a layout from the drop down list and click 'Set My Interface'.<br></font>"+
+		"<form name='selColor' onSubmit='return setColor();'>"+
+		"<select name='leColor' class='CSelector'>"+
+		"<option value='Teal'>KP Teal</option>"+
+		"<option value='Sky'>Sky Blue</option>"+
+		"<option value='Baby'>Baby Blue</option>"+
+		"</select>"+
+		"<input type='submit' value='Set My Interface'>"+
+		"</form>");
+//    	document.cookie=cookieColor+"=1; " + " expires=" + expires.toGMTString() ; 
+	}
+	else {
+		if (elColor.indexOf('Teal') != -1) { theeColor="Teal/Aqua"; leDir="timages"; }
+		if (elColor.indexOf('Sky') != -1) { theeColor="Sky Blue"; leDir="simages"; }
+		if (elColor.indexOf('Baby') != -1) { theeColor="Baby Blue"; leDir="bimages"; }
+		muaColor = theeColor;
+//    	spliteq = (document.cookie.indexOf("=", index) + 1);
+//		splitcol = document.cookie.indexOf(";", index);
+//		if (spliteq == -1) { countend = document.cookie.length; }
+//		count = eval(document.cookie.substring(countbegin, countend)) + 1;
+//		document.cookie=cookieColor+"="+count+"; " + " expires=" + expires.toGMTString();
+		document.write("You have chosen the <b>"+muaColor+"</b> colored interface.");
+	}
+
+ function setColor() {
+	var formindex = document.selColor.leColor.selectedIndex;
+	var thisone = document.selColor.leColor.options[formindex].text;
+	document.cookie=cookieColor+"="+thisone+"; " + " expires=" + expires.toGMTString() ;
+}
+
+ </SCRIPT>
+</body>

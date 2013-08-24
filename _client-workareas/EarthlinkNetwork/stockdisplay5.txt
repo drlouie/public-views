@@ -1,0 +1,2 @@
+symbol,last,change,volume:INT
+MSFT,78.44,<font color="red">-0.88</font>,21193100
