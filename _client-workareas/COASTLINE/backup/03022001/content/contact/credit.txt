@@ -1,0 +1,195 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//Check Search field for completion
+function checkForm() {
+	if (document.emailform.First_Name.value == "") {
+	alert('Your First Name is missing.');
+	document.emailform.First_Name.focus();
+	return false;
+	}	
+	
+	if (document.emailform.Last_Name.value == "") {
+	alert('Your Last Name is missing.')
+	document.emailform.Last_Name.focus();
+	return false;
+	}	
+
+	if (document.emailform.Company_Name.value == "") {
+	alert('Your Company\'s Name is missing.')
+	document.emailform.Company_Name.focus();
+	return false;
+	}	
+	
+	var x= document.emailform.email.value;
+	if( x.indexOf('@')==-1 || x.indexOf('.')==-1 || x.indexOf(' ')!=-1 || x.length<7)
+	{
+    alert('Your Email Address is invalid or missing. Please enter a valid email address.');
+	document.emailform.email.focus();
+    return false;
+    }
+	
+	else {
+	return true;
+	}
+}
+-->
+</SCRIPT>
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Credit 
+            Application</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr> 
+                      
+                <td colspan="5"> 
+                  <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr> 
+                            <td width=10>&nbsp;</td>
+                            <td colspan="3" align="left" valign="top"> 
+                              <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+                                <tr> 
+                                  <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                                  <td width="200"><font  class="regtextnobold">1-800-729-6809</font></td>
+                                </tr>
+                                <tr> 
+                                  <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                                  <td width="200"><font class="regtextnobold">1-949-450-9977</font></td>
+                                </tr>
+                                <tr> 
+                                  <td width="65">&nbsp;</td>
+                                  <td width="200">&nbsp;</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width=10>&nbsp;</td>
+                            <td colspan="3"> 
+                              <p><font class="regtextnobold">For security purposes, we have created our credit application in PDF format. In order to obtain the credit application, please complete the information below.<br><br>
+                                <b>Note: </b>Once the file is downloaded, please 
+                                print the form, fill it out and <b>fax</b> it 
+                                back to our credit department at <b>949-450-9977</b>.</font></p>
+                            </td>
+                            <td width=10>&nbsp;</td>
+                          </tr>
+                        </table>
+
+<br>
+                  <form method="post" action="sitemailer.cgi" name="emailform" onSubmit="return checkForm()">
+                    <input type="hidden" name="recipient" value="email">
+                    <input type="hidden" name="subject" value="Online_Credit_Application">
+                    <input type=hidden name="required" value="First_Name,Last_Name,Company_Name,email">
+                    <input type=hidden name="sort" value="order:First_Name,Last_Name,Company_Name,email">
+                          <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center">
+                            
+                      <tr align="center" valign="middle"> 
+                        <td colspan="4" height="29" bgcolor="#8f8fab"><b><font class="secondhead">Company 
+                          Information</font></b></td>
+                            </tr>
+                            <tr align="center" valign="middle">
+                              <td height="20" colspan="4">&nbsp;</td>
+                            </tr>
+                            
+                      <tr align="center" valign="middle"> 
+                        <td colspan="4"> 
+                          <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#8f8fab">
+                            <tr valign="middle"> 
+                              <td width="2%" align="left" height="35">&nbsp;</td>
+                              <td width="32%" align="right" valign="middle"><nobr><b><font class="star">*</font><font class="formbold">First 
+                                Name&nbsp;&nbsp;</font></b></nobr></td>
+                              <td width="15%" valign="middle" align="left"> 
+                                <input type="text" name="First_Name">
+                              </td>
+                              <td width="2%" align="right">&nbsp;</td>
+                              <td width="15%" align="right"> 
+                                <input type="text" name="Last_Name">
+                              </td>
+                              <td width="32%" align="left" valign="middle"><nobr><b><font class="formbold">&nbsp;&nbsp;Last 
+                                Name<font class="star">*</font></font></b></nobr></td>
+                              <td width="2%" align="left" valign="middle" height="35">&nbsp;</td>
+                            </tr>
+                            <tr valign="middle"> 
+                              <td width="2%" height="10" align="left"><font size="-4">&nbsp;</font></td>
+                              <td align="right" height="10" width="32%" valign="middle" bgcolor="#333366"><font size="-4">&nbsp;</font></td>
+                              <td bgcolor="#333366" height="10" width="15%" valign="middle" align="left"><font size="-4">&nbsp;</font></td>
+                              <td bgcolor="#333366" height="10" width="2%" align="right"><font size="-4">&nbsp;</font></td>
+                              <td bgcolor="#333366" height="10" width="15%" align="right"><font size="-4">&nbsp;</font></td>
+                              <td width="32%" height="10"align="left" valign="middle" bgcolor="#333366"><font size="-4">&nbsp;</font></td>
+                              <td width="2%" height="10" align="left" valign="middle"><font size="-4">&nbsp;</font></td>
+                            </tr>
+                            <tr valign="middle"> 
+                              <td width="2%" align="left" height="35">&nbsp;</td>
+                              <td align="right" width="32%" valign="middle"><nobr><b><font class="formbold"><font class="star">*</font>Company 
+                                Name&nbsp;&nbsp;</font></b></nobr></td>
+                              <td width="15%" valign="middle" align="left"> 
+                                <input type="text" name="Company_Name">
+                              </td>
+                              <td width="2%" align="right">&nbsp;</td>
+                              <td width="15%" align="right"> 
+                                <input type="text" name="email">
+                              </td>
+                              <td width="32%" align="left" valign="middle"><nobr><b><font class="formbold">&nbsp;&nbsp;Email 
+                                Address <font class="star">*</font></font></b></nobr></td>
+                              <td width="2%" align="left" valign="middle" height="35">&nbsp;</td>
+                            </tr>
+                          </table>
+                        </td>
+                            </tr>
+                            <tr align="center" valign="middle"> 
+                              <td height="40" colspan="4">&nbsp;</td>
+                            </tr>
+                            <tr align="center" valign="middle"> 
+                              <td height="40" colspan="4">
+                                <input type="image" border="0" name="submit" src="images/submit_but.gif" width="53" height="17">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:location.reload()"><img src="images/clear_but.gif" width="53" height="17" border=0></a> 
+                                <br>
+                                <br>
+                                <center>
+                                  <b><font class="formbold"><font class="star">*</font> 
+                                  Required Fields</font></b> 
+                                </center>
+                              </td>
+                            </tr>
+                          </table>
+                  </form>
+				  
+                      </td>
+                    </tr>
+                  </table>
+          </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

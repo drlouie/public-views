@@ -1,0 +1,41 @@
+TOTAL: 14 Fields
+
+// Username = The username of the person sending message
+
+// (*)ID = If this message is intended to be a Quote, Order or Configuration alert
+// to the Coastline Micro staff, the associated field is tagged either the Quote, 
+// Order or Configuration ID as necessary. Only one at a time of course.
+// If not then nothing is tagged and message is just plainly sent.
+
+// Recipients = All intended recipients of this message, up to 250 characters allowed
+
+// Subject = Subject of message, up to 100 characters allowed
+
+// Body = Body of message, Plain text for now, unlimited characters allowed
+
+// Attachment(*) = Message attachments of any type, up to 3 seperate files at once
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Copy (CopyID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Title VARCHAR(250), 
+BodyText TEXT, 
+LinksTitle VARCHAR(150), 
+Links TEXT, 
+EmailSubject VARCHAR(150), 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10));
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Copy (CopyID, Title, BodyText, LinksTitle, 
+Links, EmailSubject, AddedBy, AddedOn, ModifiedBy, ModifiedOn)
+
+VALUES (Null, "NMUSD School District Program (Customer Testimonials)", 
+"text", "linkstitle", "links", 
+"Coastline Micro, Inc. - NMUSD School District Program (Customer Testimonials)", 
+"drlouie", Null, "", "");

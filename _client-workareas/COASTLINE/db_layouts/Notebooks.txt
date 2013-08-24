@@ -1,0 +1,73 @@
+TOTAL: 36 Fields
+
+// Follow notations on Desktops table layout
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Notebooks (NotebookID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CMPartNumber VARCHAR(25),
+CMSeries ENUM('GreatWhite','Mako','Reef','Tiger','Thresher',
+'None') DEFAULT 'Reef',
+PricingClass ENUM('Desktop','Notebook','Server','Monitor',
+'Memory','HardDrive','VideoCard','Peripheral','Printer',
+'Software') DEFAULT 'Notebook', 
+ProductType ENUM('Desktop','Notebook','Server','Audio',
+'CDROM','CDRW','DigitalCam','DVDROM','Floppy','HardDrive',
+'InternetCam','Joystick','Keyboard','Memory','Modem',
+'Monitor','Networking','NIC','NoteExtra','Pointer','UPS',
+'Printer','Processor','Scanner','Software','Speaker',
+'Storage','SystemBoard','SystemChassis','VideoCard',
+'WirelessNet','ZipDrive','Peripheral') DEFAULT 'Peripheral', 
+ItemName TEXT, 
+Description TEXT, 
+Keynotes TEXT, 
+Keywords VARCHAR(100), 
+Reconfig ENUM('Y','N') DEFAULT 'Y',  
+SneakPeak VARCHAR(50), 
+SmallPhoto VARCHAR(50), 
+LargePhoto VARCHAR(250), 
+Warranty VARCHAR(250), 
+SystemBase INT, 
+Processor INT, 
+ProcTypes TEXT, 
+HardDrive INT, 
+NetworkCard INT,
+Memory INT, 
+OperatingSys INT, 
+Software VARCHAR(250), 
+Video INT, 
+CDDrive INT, 
+Floppy INT, 
+Sound INT, 
+ExStorBack VARCHAR(250), 
+UPS VARCHAR(250), 
+RelatedProd VARCHAR(250), 
+Accessories VARCHAR(250), 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10), 
+DeletedBy VARCHAR(25),
+DeletedOn Timestamp(10));
+
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Notebooks (NotebookID, CMPartNumber, CMSeries, 
+PricingClass, ProductType, ItemName, Description, Keynotes, 
+Keywords, Reconfig, SneakPeak, SmallPhoto, LargePhoto, 
+Warranty, SystemBase, Processor, ProcTypes, HardDrive, 
+NetworkCard, Memory, OperatingSys, Software, Video, CDDrive, 
+Floppy, Sound, ExStorBack, UPS, Accessories, AddedBy, 
+AddedOn, ModifiedBy, ModifiedOn, DeletedBy, DeletedOn)
+
+VALUES (Null, Null, "Reef", "Notebook", "Notebook", 
+"The Intruder", "This is a reef series laptop...", 
+"Keynotes for this product", "Reef Series Coastline Notebook", 
+"Y", "Sneak peak image if any for sneak peak needs", 
+"Small Photo Location/URL", "Same as small photo", 
+"Warranty Stuff", "0000000003", "0000000003", 
+"0000000003, 0000000004, 0000000005, 0000000006", 
+"0000000003", "0000000003", "0000000003", 
+"0000000003", "0000000003", "0000000003", "0000000003", 
+"0000000003", "0000000003", "0000000003", "0000000003", 
+"0000000003", "drlouie", Null, "", "", "", "");

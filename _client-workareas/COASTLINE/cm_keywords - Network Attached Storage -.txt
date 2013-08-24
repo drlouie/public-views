@@ -1,0 +1,115 @@
+KEYWORDS: Network Attached Storage
+
+
+
+
+ENGINE: AltaVista
+
+
+DOMAIN PAGE: index.html?PartnerID=eprofessional (#1)
+<title>Sun Microsystems GmbH: Produkte &amp; Service</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta name="title" content="Sun Microsystems GmbH: Produkte">
+<meta name="keywords" content="sun microsystems, Sun Microsystems, Sun, Microsystems, sun, microsystems, Produkte, java, java computing,solaris, sparc, unix, jini, computer systems, server, mission critical, RAS, high availability, cluster, workgroup server, desktop, workstation, storage, backup solutions, network computer, network computing, hardware, software, service, consulting, support, training, schulung, compiler, jdk, technical computing, high performance, enterprise computing, staroffice, sun ray, sun fire">
+<meta name="description" content="Sun Microsystems GmbH. The Network Is The Computer. Produkte">
+<meta name="generator" content="Sun Microsystems GmbH">
+
+
+DOMAIN: FirstStorage.com (#2 Also: AllTheWeb #5)
+<title>FIRST STORAGE provides RAID, network attached storage, fibre channel, cd server, electronic document storage, fault tolerant, raid system, document management.</title>
+<meta name="VI60_DTCScriptingPlatform" content="Server (ASP)">
+<meta name="description" content="First Storage market leaders in US and UK, providing network attached storage, RAID system, fibre channel, solid state disk storage, CD servers, DNAS-FC, Data Storage Solutions for high data availability and network fault tolerance.">
+<meta name="KEYWORDS" content="network attached storage, RAID, fibre channel, document management, cd servers, RAID SYSTEM, DNAS-FC, document storage, raid system, solid state disk storage, RAID Array, RAID RAM, data backup storage solution, RAID LEVEL, drive arrays, network storage, cd rom, akiod, electronic document storage, document archive, qadl">
+<meta name="revisit-after" content="8 days">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+
+
+
+
+
+ENGINE: AllTheWeb
+
+
+DOMAIN: rare.com (#1 Also: Lycos #1)
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="AUTHOR" content="David N. Iven">
+<meta name="DESCRIPTION" content="RARE Systems is a leading manufacturer of high performance, high capacity Network Attached Storage, RAID and Tape Library systems.">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="KEYWORDS" content="RARE, NAS, network attached storage, RAID, RAZOR, razor, system, storage, tape, library, performance, disk, data, computer, imaging, graphics, UNIX, NT, backup">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>RARE Systems, Inc. Network Attached Storage, RAID and Tape Libraries, backup and disaster recovery</title>
+
+
+DOMAIN: bigstorage.com (#2)
+<META NAME="description" CONTENT="BigStorage develops, integrates and supports open source systems storage.">
+<META NAME="keywords" CONTENT="RAID, RAID 0, RAID 1, RAID 3, RAID 4, RAID 5, RAID 0/1, RAID 0+1, storage, storage network, open source storage, open systems, open systems storage, open source systems, Linux, linux, Linux storage, storage hardware, data storage, enterprise storage, ReiserFS, NAS, nearline, near-line, optical storage, tape storage, appliance, network, file, servers, native, file systems, GFS, NFS, kernel, OpenXDSM, HSM">
+
+
+
+
+
+
+
+
+
+ENGINE: Metacralwer
+
+
+DOMAIN: RaidZone.com (#1)
+<TITLE>RAIDZONE - High performance disk arrays using Ultra ATA disks.</TITLE>
+<META NAME="Keywords" CONTENT="ide, raid, nas, raidzone, consensys, storewidth, opennas, disk array, ultra ata, ide raid">
+<META NAME="Description" CONTENT="RAIDZONE - NAS Server Appliances">
+
+
+
+
+
+
+
+ENGINE: Google
+
+
+>>>>****<<<<
+DOMAIN: www.storage.ibm.com ( #1 Also: AOL #1/Netscape #1)
+<title> IBM Network Attached Storage | IBM TotalStorage NAS| IBM otalStorage</title>
+<!--INPUT META TAGS-->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta name="keywords" content="network attached storage,NAS,nas,nas 200,nas gateway 300,Network Attached Storage, LAN, gateway, fault-tolerance, networking, affordable, open, nas, network attached storage, RAID" />
+<meta name="dc.language" scheme="rfc1766" content="en-us"/>
+<meta name="robots" content="index, follow"/>
+<meta name="dc.date" scheme="iso8601" content="2003-07-17"/>
+<meta name="title" content="IBM TotalStorage Network Attached Storage - IBM offers high quality, affordable NAS appliances for your network."/>
+<meta name="abstract" content="IBM TotalStorage Network Attached Storage are high-performance storage appliances that provide shared data to clients and other servers on a Local Area Network (LAN)."/>
+<meta name="description" content="IBM TotalStorage Network Attached Storage are high-performance storage appliances that provide shared data to clients and other servers on a Local Area Network (LAN). (NAS)."/>
+<meta name="security" content="Public"/>
+<meta name="source" content="v11 Template Generator, Template 11.3.2"/>
+<meta name="format" content="text/xhtml"/>
+<meta name="charset" content="ISO-8859-1"/>
+<meta name="owner" content="tstorage@us.ibm.com"/>
+<meta name="dc.rights" content="Copyright (c) 1999, 2002 by IBM Corporation" />
+<meta name="ibm.country" content="zz"/>
+<meta name="dc.language" scheme="rfc1766" content="en-us"/>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+
+
+
+
+
+
+
+ENGINE: HotBot/Inktomi
+
+
+DOMAIN: www.chicorporation.com (#1)
+<title>Chi Corporation - Data Storage Solutions</title>
+<meta name="ROBOTS" content="ALL">
+<!--Chi Corporation specializes in SAN, RAID, NAS, Network Attached Storage, 4mm, 8mm, AIT, DLT, 9-track tapedrives, 18-track tapedrives, 36-track tapedrives, 9 track, 18 track, 36 track, CD, Data Storage, Data Interchange, 9-trk, 3480, 3490, 3490E, 3590, and Outright Software-->
+<META NAME="DESCRIPTION" CONTENT="Chi Storage Solutions is the leading provider of SAN, RAID, NAS, Network Attached Storage, DLT tape drives, SLR, LTO, AIT, 3480, 3480 tapedrive, 3480 tape drive, 3480 tapedrives, 3480 tape drives, 3490, 3490 tape drive, 3490 tapedrive, 3490 tape drives, 3490 tapedrives, 3490e, 3490E, 3490E tape drive, 3490E tapedrive, 3490E tape drives, 3490E tapedrives, DLT, DLT tape drive, DLT tapedrive, DLT tape drives, DLT tapedrives, 9-track tape drives, 9-track tapedrives, nine-track tape drives, nine-track tapedrives, 4mm, 8mm, CDR, 18-track, 36-track, data interchange and data storage.">
+<META NAME="KEYWORDS" CONTENT="SAN, RAID, NAS, Network Attached Storage, DLT tape drives, SLR, LTO, AIT, 3480, 3480 tapedrive, 3480 tape drive, 3480 tapedrives, 3480 tape drives, 3490, 3490 tape drive, 3490 tapedrive, 3490 tape drives, 3490 tapedrives, 3490e, 3490E, 3490E tape drive, 3490E tapedrive, 3490E tape drives, 3490E tapedrives, DLT, DLT tape drive, DLT tapedrive, DLT tape drives, DLT tapedrives, 9-track tape drives, 9-track tapedrives, nine-track tape drives, nine-track tapedrives, 4mm, 8mm, CDR, 18-track, 36-track, data interchange, data storage">
+
+
+

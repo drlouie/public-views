@@ -1,0 +1,136 @@
+.menuBack {
+  z-index:100;
+  position: absolute;
+  visibility: hidden;
+  border: solid 1px;
+  border-left-color:#333366;
+  border-top-color:#333366;
+  border-bottom-color:#333366;
+  border-right-color:#333366;
+  margin: 0px 0px 0px 0px;
+  overflow:none;
+  }
+
+.menuBorder {
+  z-index:100;
+  position: relative;
+  left:0px;
+  top:0px;
+  visibility: inherit;
+  background-color:#333366;
+  color: #ffffff;
+  border: solid 1px;
+  border-left-color:#333366;
+  border-top-color:#333366;
+  border-bottom-color:#333366;
+  border-right-color:#333366;
+  margin: 0px 0px 0px 0px;
+  overflow:none;
+  }
+
+.menuItem {
+  z-index:100;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+  text-align: left;
+  background-color: transparent;
+  color: #ffffff;
+  visibility: inherit;
+  font-family : Arial; 
+  font-size : 9 pt;
+  font-weight: bold;
+  margin: 0px 0px 0px 0px;
+  cursor: default;
+  overflow:none;
+}
+
+.menuTitle {
+  z-index:100;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width:0;
+  text-align: center;
+  background-color: #333366;
+  color: #333366;
+  visibility: inherit;
+  font-family : Arial; 
+  font-size : 10 pt;
+  font-weight: bold;
+  margin: 0px 0px 0px 0px;
+  cursor: hand;
+  overflow:none;
+}
+
+.separator {
+  z-index:100;
+  position: relative;
+  left: 2px;
+  top: 0px;
+  margin: -5px 0px -5px 0px;
+  padding-right: 2px;
+  visibility: inherit;
+  cursor: default;
+}
+
+.sepclr {
+  z-index:100;
+  color: #ffffff;
+  border-bottom: 1px solid #333366;
+  width:96%;
+}
+
+all.netmenuBorder {
+  z-index:100;
+  border-style: outset;
+  border-width: 2pt;
+  border-color:#333366;
+  }
+
+all.netmenuItem {
+  z-index:100;
+  color:#ffffff;
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.orange {
+  z-index:100;
+  color:#FF6600;
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+all.netmenuTitle{
+  z-index:100;
+  font-family : Arial; 
+  text-decoration: none;
+  text-align:center;
+  font-size: 10pt;
+  font-weight: bold;
+  background-color:#333366;
+  color: #FFFFFF;
+}
+
+all.netseparator {
+ z-index:100;
+ margin-top: 5pt;
+}
+
+all.ttip {
+  z-index:100;
+  color:#ffffff;
+  font-family: Arial;
+  font-size: 9pt;
+  font-weight:bold;
+  border-style: solid;
+  border-width: 1pt;
+  border-color:#333366;
+}
+body {  background-color: #FFFFFF}

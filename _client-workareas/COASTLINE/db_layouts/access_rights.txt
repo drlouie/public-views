@@ -1,0 +1,69 @@
+CMManage - CM Management and Directors - TOP LEVEL USER
+  Access to all administrative and logging systems
+
+
+CMAdmin - CM Accounting - MID/HIGH LEVEL USER
+  Payment Options - Grant or Deny Payment Options on all Customer accounts
+  Customers - Admin Access to all Customer accounts
+  Users - Admin Access to all User profiles except those User accounts that belong to HIGHER LEVEL users
+  Messages - Access to all Message Depot messages except those messages that belong to HIGHER LEVEL users
+  Products - Can view all products, configurations an pricing as seen by any given customer account for quick quoting
+  Configurators - NO ACCESS
+  Orders - Has full access to all orders in the system
+  Quotes - Has admin full access to all quotes in the system - Can change quotes made by CMSales
+  Warranties - Has full admin access to all warranties in the system
+
+
+CMSales - Sales and Marketing Personnel - MID LEVEL USER
+  Customers - Admin Access to his/her Represented Customer Profiles
+  	    - NO Customer Payment Info Declared IE: CC or checking account #
+  	    - Payment Options - No Access
+  	    - Markup Pricing - Can alter Markup Pricing for all products
+  Users - Can alter his/her own user account
+  	- Can add new user accounts only to his/her Represented Customer Accounts - Better if done by customer
+  Configurators - Can add new configs to system and can only alter his/her added configs
+  Quotes - Can track only quotes being managed by user
+  Orders -  - Can track only orders being managed by user
+  Message Depot - Can view messages to and from user only
+
+
+CMUser - All other Personnel - LOW LEVEL USER
+  Products - Can view all products, configurations an pricing as seen by any given customer account for quick quoting
+  Customers - Can view customer profiles except for CC numbers and the like
+  Users - Can only change his/her own account
+  Messages - Can view messages sent to or from him/her
+  Configurators - Can view configs all in system, cannot alter
+  Orders - Can view parameters of all orders in system
+
+
+CustAdmin
+	Users - Can change, add or delete system users that are company's set of users
+	      - Can grant or deny purchasing power to the company's set of users
+	Customers - Can change Customer account's information
+	ShipDets - Can add, change or delete Customer account's shipping destinations
+	Messages - Can view messages sent to or from company's set of users
+  	Configurators - Full Customer Access
+  	Quotes - Can view, change or delete quote reqests made by company's set of users
+  	Orders - Can view orders made by company's set of users
+
+
+CustUser
+	Users - Can alter their own account's login information only
+	Customers - Can dynamically access Customer account's information for Ecom needs
+	Quotes - If given access to quoting system by customer account's admin user
+	Configurators - If given access to configurators by customer account's admin user
+	Orders - If given access to ordering system by customer account's admin user
+
+PayOptions
+MarkupValues
+Passwords
+OrderReview
+AdminCust
+AdminUser
+ConfigDef
+ConfigOwn
+AdminProd
+AdminMess
+AdminWeb
+AdminPress
+AdminQISV

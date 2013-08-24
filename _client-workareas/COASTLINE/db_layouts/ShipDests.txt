@@ -1,0 +1,55 @@
+TOTAL: 21 Fields
+
+// CustomerID = The customer to which this shipping destination 
+// belongs to
+
+// Courier = One of the two either FEXED or UPS 
+
+// ShipType = Type of shipping package this order will be sent by 
+
+// ShipPrice = The full price for shipping for this shipping
+// destination per pound
+
+// Contact = The contact person's first and last name, the person to whom we 
+// will deliver shipments
+
+// Instructions = Any special instructions for the delivery driver made by 
+// the customer
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE ShipDests (ShippingID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CMCustNum VARCHAR(100), 
+Courier ENUM('FEDEX','UPS') DEFAULT 'UPS', 
+ShipType VARCHAR(100), 
+ShipPrice DECIMAL(8,2), 
+Contact VARCHAR(100), 
+Instructions TEXT, 
+Phone VARCHAR(100), 
+Extension VARCHAR(100), 
+Fax VARCHAR(100), 
+Address1 VARCHAR(100), 
+Address2 VARCHAR(100), 
+City CHAR(100), 
+State CHAR(100), 
+Zip VARCHAR(100), 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10), 
+DeletedBy VARCHAR(25), 
+DeletedOn Timestamp(10));
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO ShipDests (ShippingID, CMCustNum, Courier, 
+ShipType, ShipPrice, Contact, Instructions, Phone, Extension, 
+Fax, Address1, Address2, City, State, Zip, AddedBy, AddedOn, 
+ModifiedBy, ModifiedOn, DeletedBy, DeletedOn)
+
+VALUES (Null, "2147483647", "FEDEX", "Package1", "19.63", "drlouie", "instructions", 
+"9996369636", "456", "9994445556", "Address Line 1", "Address Line 2", 
+"The City", "The Golden State", "Zip Code", "drlouie", 
+Null, "", "", "", "");

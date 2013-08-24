@@ -1,0 +1,229 @@
+TOTAL: 50 Fields
+
+
+// CMSeries = Used on pre-configured systems only. 
+// Must choose one of the 5 predefined series types
+// IE: Thresher, Tiger, Reef, Great White or Mako
+
+// PricingClass = Price markup classification setting
+// Must choose on of the 10 preset values 
+
+// ProductType = Product classification for searching purposes
+// Must choose one of the 33 preset values, Desktop being DEFAULT for this table
+
+// Description = Descriptive information about product for use throughout the site's interface
+
+// Keynotes = Used to present descriptive product information to the user as keynotes
+// Templated HTML information stored in DB
+
+// Keywords = As many descriptive keywords as necessary. Will be used in
+// keyword searches within the store's inventory
+
+// Reconfig = Is this system re-configurarble or is it sold as is?
+// One of 2 options Y or N
+
+// SneakPeak = Product sneak peak image, if any, if none this product is not considered for
+// random sneak peaks
+
+// SmallPhoto = Location of small photo, for use in the system specifications screen
+
+// LargePhoto = The locations of all large photos available for this product
+// Up to t0 250 char
+
+// Weight = Weight of product in Pounds and Ounces
+
+// SystemBase = This is the base of the system; Chassis/Power Supply/Motherboard 
+// This must be Kit from the database in order to call it up from this level
+// Suggestion = Bases should be saved to the system as Kits and then called called from
+// the configuration of a system
+
+// ProcTypes = The types of processors this SystemBase can take, for system reconfig purposes
+
+// Processor = Thw actual processor chosen for this system
+
+// ProcQuantity = If necessary this count can be changed, this will not be an option for the user,
+// Unless a kit's motherboard has capabilities for multiple processors
+
+// All Other Components
+// If VARCHAR(25) = 1 Product call
+// If VARCHAR(250) = More than one product can be elected as part of component
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Systems (SystemID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Parent VARCHAR(25),
+CMSeries ENUM('GreatWhite','Mako','Reef','Tiger','Thresher') DEFAULT 'Thresher', 
+Reconfig ENUM('Y','N') DEFAULT 'Y', 
+MainCategory VARCHAR(100), 
+MainType ENUM('HIDE','SHOW') Default 'SHOW', 
+MainCharacter ENUM('Single','Multiple','All') Default 'Single', 
+MainParts TEXT, 
+Sub1Category VARCHAR(25), 
+Sub1Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub1Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub1Parts TEXT, 
+Sub2Category VARCHAR(25), 
+Sub2Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub2Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub2Parts TEXT, 
+Sub3Category VARCHAR(25), 
+Sub3Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub3Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub3Parts TEXT, 
+Sub4Category VARCHAR(25), 
+Sub4Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub4Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub4Parts TEXT, 
+Sub5Category VARCHAR(25), 
+Sub5Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub5Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub5Parts TEXT, 
+Sub6Category VARCHAR(25), 
+Sub6Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub6Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub6Parts TEXT, 
+Sub7Category VARCHAR(25), 
+Sub7Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub7Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub7Parts TEXT, 
+Sub8Category VARCHAR(25), 
+Sub8Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub8Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub8Parts TEXT, 
+Sub9Category VARCHAR(25), 
+Sub9Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub9Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub9Parts TEXT, 
+Sub10Category VARCHAR(25), 
+Sub10Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub10Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub10Parts TEXT, 
+Sub11Category VARCHAR(25), 
+Sub11Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub11Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub11Parts TEXT, 
+Sub12Category VARCHAR(25), 
+Sub12Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub12Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub12Parts TEXT, 
+Sub13Category VARCHAR(25), 
+Sub13Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub13Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub13Parts TEXT, 
+Sub14Category VARCHAR(25), 
+Sub14Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub14Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub14Parts TEXT, 
+Sub15Category VARCHAR(25), 
+Sub15Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub15Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub15Parts TEXT, 
+Sub16Category VARCHAR(25), 
+Sub16Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub16Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub16Parts TEXT, 
+Sub17Category VARCHAR(25), 
+Sub17Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub17Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub17Parts TEXT, 
+Sub18Category VARCHAR(25), 
+Sub18Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub18Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub18Parts TEXT, 
+Sub19Category VARCHAR(25), 
+Sub19Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub19Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub19Parts TEXT, 
+Sub20Category VARCHAR(25), 
+Sub20Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub20Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub20Parts TEXT, 
+Sub21Category VARCHAR(25), 
+Sub21Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub21Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub21Parts TEXT, 
+Sub22Category VARCHAR(25), 
+Sub22Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub22Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub22Parts TEXT, 
+Sub23Category VARCHAR(25), 
+Sub23Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub23Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub23Parts TEXT, 
+Sub24Category VARCHAR(25), 
+Sub24Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub24Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub24Parts TEXT, 
+Sub25Category VARCHAR(25), 
+Sub25Type ENUM('HIDE','SHOW') Default 'SHOW', 
+Sub25Character ENUM('Single','Multiple','All') Default 'Single', 
+Sub25Parts TEXT, 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10));
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Systems (SystemID, Parent, CMSeries, Reconfig, 
+MainCategory, MainType, MainCharacter, MainParts, 
+Sub1Category, Sub1Type, Sub1Character, Sub1Parts, 
+Sub2Category, Sub2Type, Sub2Character, Sub2Parts, 
+Sub3Category, Sub3Type, Sub3Character, Sub3Parts, 
+Sub4Category, Sub4Type, Sub4Character, Sub4Parts, 
+Sub5Category, Sub5Type, Sub5Character, Sub5Parts, 
+Sub6Category, Sub6Type, Sub6Character, Sub6Parts, 
+Sub7Category, Sub7Type, Sub7Character, Sub7Parts, 
+Sub8Category, Sub8Type, Sub8Character, Sub8Parts, 
+Sub9Category, Sub9Type, Sub9Character, Sub9Parts, 
+Sub10Category, Sub10Type, Sub10Character, Sub10Parts, 
+Sub11Category, Sub11Type, Sub11Character, Sub11Parts, 
+Sub12Category, Sub12Type, Sub12Character, Sub12Parts, 
+Sub13Category, Sub13Type, Sub13Character, Sub13Parts, 
+Sub14Category, Sub14Type, Sub14Character, Sub14Parts, 
+Sub15Category, Sub15Type, Sub15Character, Sub15Parts, 
+Sub16Category, Sub16Type, Sub16Character, Sub16Parts, 
+Sub17Category, Sub17Type, Sub17Character, Sub17Parts, 
+Sub18Category, Sub18Type, Sub18Character, Sub18Parts, 
+Sub19Category, Sub19Type, Sub19Character, Sub19Parts, 
+Sub20Category, Sub20Type, Sub20Character, Sub20Parts, 
+Sub21Category, Sub21Type, Sub21Character, Sub21Parts, 
+Sub22Category, Sub22Type, Sub22Character, Sub22Parts, 
+Sub23Category, Sub23Type, Sub23Character, Sub23Parts, 
+Sub24Category, Sub24Type, Sub24Character, Sub24Parts, 
+Sub25Category, Sub25Type, Sub25Character, Sub25Parts, 
+AddedBy, AddedOn, ModifiedBy, ModifiedOn)
+
+VALUES (Null, "CED850GB2C", "Thresher", "Y", 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+Null, Null, Null, Null, 
+"drlouie", Null, "", "");
+
+

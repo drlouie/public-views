@@ -1,0 +1,338 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//Check Search field for completion
+function checkForm() {
+	if (document.emailform.First_Name.value == "") {
+	alert('Your First Name is missing.');
+	document.emailform.First_Name.focus();
+	return false;
+	}	
+	
+	if (document.emailform.Last_Name.value == "") {
+	alert('Your Last Name is missing.')
+	document.emailform.Last_Name.focus();
+	return false;
+	}	
+
+	var x= document.emailform.email.value;
+	if( x.indexOf('@')==-1 || x.indexOf('.')==-1 || x.indexOf(' ')!=-1 || x.length<7)
+	{
+    alert('Your Email Address is invalid or missing. Please enter a valid email address.');
+	document.emailform.email.focus();
+    return false;
+    }
+
+	if (document.emailform.Mailing_Address.value == "") {
+	alert('Your Mailing Address is missing.')
+	document.emailform.Mailing_Address.focus();
+	return false;
+	}	
+	
+	if (document.emailform.City.value == "") {
+	alert('The City field is blank.')
+	document.emailform.City.focus();
+	return false;
+	}	
+
+	if (document.emailform.State.value == "") {
+	alert('The State field is blank.')
+	document.emailform.State.focus();
+	return false;
+	}	
+
+	if (document.emailform.Zip_Code.value == "") {
+	alert('The Zip Code field is blank.')
+	document.emailform.Zip_Code.focus();
+	return false;
+	}
+
+
+	if (document.emailform.Phone_Number.value == "") {
+	alert('Your Phone Number is missing.')
+	document.emailform.Phone_Number.focus();
+	return false;
+	}
+
+	if (document.emailform.Where_Hear.value == "") {
+	alert('Where did you hear of Coastline Micro?')
+	document.emailform.Where_Hear.focus();
+	return false;
+	}
+
+	else {
+	return true;
+	}
+}
+-->
+</SCRIPT>
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Store 
+            Access Request</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+                                  
+            <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                            <td width=10>&nbsp;</td>
+                            <td colspan="3" align="left" valign="top"> 
+                              <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+                                <tr> 
+                                  <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                                  <td width="200"><font  class="regtextnobold">1-800-729-6809</font></td>
+                                </tr>
+                                <tr> 
+                                  <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                                  <td width="200"><font class="regtextnobold">1-949-450-9977</font></td>
+                                </tr>
+                                <tr> 
+                                  <td width="65">&nbsp;</td>
+                                  <td width="200">&nbsp;</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width=10>&nbsp;</td>
+                            <td colspan="3"> 
+                              <p><font class="regtextnobold">If you would like to access our product pricing, please fill in the following form completely. A dedicated Coastline Micro account representative will be assigned to service your account. We will e-mail you access information within one business day. Please be sure to fill in your correct e-mail address and phone number to successfully receive your login information in a timely manner.</font></p>
+                            </td>
+                            <td width=10>&nbsp;</td>
+                          </tr>
+ 
+                        </table>
+
+<br>
+                  <form method="post" action="sitemailer.cgi" name="emailform" onSubmit="return checkForm()">
+                    <input type="hidden" name="recipient" value="email">
+                          <input type="hidden" name="subject" value="Store_Access_Request">
+                          
+              <input type=hidden name="required" value="First_Name,Last_Name,email,Mailing_Address,City,State,Zip_Code,Phone_Number,Where_Hear">
+                          
+              <input type=hidden name="sort" value="order:First_Name,Last_Name,Company_Name,email,Customer_Number,Sales_Rep,Mailing_Address,Address2,City,State,Zip_Code,Phone_Number,Fax_Number,Where_Hear">
+                          
+              <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center">
+                <tr align="center" valign="middle" bgcolor="#8f8fab"> 
+                  <td colspan="4" height="29"><b><font class="secondhead">Contact 
+                    Information </font></b></td>
+                            </tr>
+                            <tr align="center" valign="middle">
+                              <td height="20" colspan="4">&nbsp;</td>
+                            </tr>
+                            
+                <tr align="center" valign="middle"> 
+                  <td colspan="4"> 
+                    <table width="95%" border="0" cellspacing="0" cellpadding="1" align="center" bgcolor="#8f8fab">
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="35">&nbsp;</td>
+                        <td width="27%" align="right" valign="middle"><b><font class="star">*</font><font class="formbold">First 
+                          Name&nbsp;&nbsp;</font></b></td>
+                        <td width="21%" valign="middle" align="left"> 
+                          <input type="text" name="First_Name">
+                        </td>
+                        <td width="0%" align="right" valign="middle">&nbsp;</td>
+                        <td width="21%" align="right" valign="middle"> 
+                          <input type="text" name="Last_Name">
+                        </td>
+                        <td width="26%" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;Last 
+                          Name</font><font class="star">*</font></b></td>
+                        <td width="5%" align="right" valign="middle" height="35">&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="27%" align="right" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" valign="middle" align="left" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="26%" align="left" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="5%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="35">&nbsp;</td>
+                        <td align="right" width="27%" valign="middle"><b><font class="formbold">Company 
+                          Name&nbsp;&nbsp;</font></b></td>
+                        <td width="21%" valign="middle" align="left"> 
+                          <input type="text" name="Company_Name">
+                        </td>
+                        <td width="0%" align="right" valign="middle">&nbsp;</td>
+                        <td width="21%" align="right" valign="middle"> 
+                          <input type="text" name="email">
+                        </td>
+                        <td width="26%" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;Email 
+                          Address</font><font class="star">*</font></b></td>
+                        <td width="5%" align="right" valign="middle" height="35">&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="27%" align="right" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" valign="middle" align="left" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="26%" align="left" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="5%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="35">&nbsp;</td>
+                        <td align="right" width="27%" valign="middle"><b><font class="formbold">CM 
+                          Customer #&nbsp;&nbsp;</font></b></td>
+                        <td width="21%" valign="middle" align="left"> 
+                          <input type="text" name="Customer_Number">
+                        </td>
+                        <td width="0%" align="right" valign="middle">&nbsp;</td>
+                        <td width="21%" align="right" valign="middle"> 
+                          <input type="text" name="Sales_Rep">
+                        </td>
+                        <td width="26%" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;CM 
+                          Sales Rep</font></b></td>
+                        <td width="5%" align="right" valign="middle" height="35">&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="27%" align="right" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" valign="middle" align="left" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="26%" align="left" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="5%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="35">&nbsp;</td>
+                        <td align="right" width="27%" valign="middle"><b><font class="star">*</font><font class="formbold">Mailing 
+                          Address &nbsp;&nbsp;</font></b></td>
+                        <td width="21%" valign="middle" align="left"> 
+                          <input type="text" name="Mailing_Address">
+                        </td>
+                        <td width="0%" align="right" valign="middle">&nbsp;</td>
+                        <td width="21%" align="right" valign="middle"> 
+                          <input type="text" name="Address2">
+                        </td>
+                        <td width="26%" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;Address 
+                          2</font></b></td>
+                        <td width="5%" align="right" valign="middle" height="35">&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="27%" align="right" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" valign="middle" align="left" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="26%" align="left" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="5%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="35">&nbsp;</td>
+                        <td align="right" width="27%" valign="middle"><b><font class="star">*</font><font class="formbold">City 
+                          &nbsp;&nbsp;</font></b></td>
+                        <td width="21%" valign="middle" align="left"> 
+                          <input type="text" name="City">
+                        </td>
+                        <td width="0%" align="right" valign="middle">&nbsp;</td>
+                        <td width="21%" align="right" valign="middle"> 
+                          <input type="text" name="State">
+                        </td>
+                        <td width="26%" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;State</font><font class="star">*</font></b></td>
+                        <td width="5%" align="right" valign="middle" height="35">&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="27%" align="right" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" valign="middle" align="left" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="26%" align="left" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="5%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="35">&nbsp;</td>
+                        <td align="right" width="27%" valign="middle"><b><font class="star">*</font><font class="formbold">Zip 
+                          Code &nbsp;&nbsp;</font></b></td>
+                        <td height="35" width="21%" valign="middle" align="left"> 
+                          <input type="text" name="Zip_Code">
+                        </td>
+                        <td width="0%" align="right" valign="middle">&nbsp;</td>
+                        <td height="35" width="21%" align="right" valign="middle"> 
+                          <input type="text" name="Phone_Number">
+                        </td>
+                        <td width="26%" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;Phone 
+                          Number</font><font class="star">*</font></b></td>
+                        <td width="5%" align="right" valign="middle" height="35">&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="27%" align="right" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" valign="middle" align="left" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="0%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td bgcolor="#333366" width="21%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="26%" align="left" valign="middle" bgcolor="#333366" height="10"><font size="-4">&nbsp;</font></td>
+                        <td width="5%" align="right" valign="middle" height="10"><font size="-4">&nbsp;</font></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" height="35" width="0%">&nbsp;</td>
+                        <td align="right" width="27%"><b><font class="formbold">Fax 
+                          Number &nbsp;&nbsp;</font></b></td>
+                        <td width="21%" align="left" height="35"> 
+                          <input type="text" name="Fax_Number">
+                        </td>
+                        <td align="right" width="0%">&nbsp;</td>
+                        <td align="right" width="21%" height="35"> 
+                          <input type="text" name="Where_Hear">
+                        </td>
+                        <td align="left" width="26%"><b><font class="formbold">&nbsp;&nbsp;Where 
+                          did you hear of us?</font><font class="star">*</font></b></td>
+                        <td align="right" height="35" width="5%">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                            </tr>
+                            <tr align="center" valign="middle"> 
+                              <td height="40" colspan="4">&nbsp;</td>
+                            </tr>
+                            <tr align="center" valign="middle"> 
+                              <td height="40" colspan="4">
+                                <input type="image" border="0" name="submit" src="images/submit_but.gif" width="53" height="17">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:location.reload()"><img src="images/clear_but.gif" width="53" height="17" border=0></a> 
+                                <br>
+                                <br>
+                                <center>
+                                  <b><font class="formbold"><font class="star">*</font> 
+                                  Required Fields</font></b> 
+                                </center>
+                              </td>
+                            </tr>
+                          </table>
+                  </form>
+          </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

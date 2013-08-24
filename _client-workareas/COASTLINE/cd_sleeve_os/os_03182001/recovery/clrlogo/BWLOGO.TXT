@@ -1,0 +1,197 @@
+     Release and User Notes for ROM BIOS Logo Processing Utility X001
+     ----------------------------------------------------------------
+
+
+     1.0 Description.
+
+     The BWLOGO utility can be used to take an OEM logo and convert it into
+     a format suitable for flashing into BIOS memory on an Intel
+     motherboard.  After flashing into memory, the logo wil be displayed in
+     the top right hand corner of the screen each time the system is booted.
+
+     BWLOGO takes a monochrome .bmp file (generated using a scanner or a
+     graphics application like Windows Paint) and converts it into a .usr
+     file.  The .usr file is used by a FLASH update utility such as
+     FMUP.EXE to store the information into the FLASH ROM.
+
+     Note: Not all Intel motherboards support this feature.  Check the
+     documentation for the specific motherboard being used.
+
+     Note: BWLOGO automatically places logo image in upper right corner of
+     boot screen, there is no need to specify starting column for image. 
+
+
+     2.0 Invocation.
+
+     BWLOGO is invoked using the following syntax:
+
+        BWLOGO [/options] bitmapfile
+
+     where bitmapfile is the name of the .bmp file containing the logo image
+     and options may be any of the following:
+    
+
+     /Fu<file>
+
+     Specifies the filename of .usr file output by BWLOGO.  Specified filename
+     must have .usr extension.  If this option is not specified or if filename
+     does not have .usr extension then the name of the resulting .usr file 
+     defaults to logodata.usr.
+    
+
+     /Fa[file]
+
+     Specifies that BWLOGO should generate an assembly language file
+     containing logo data in addition to the .usr file.  If file is not
+     specified then the name of the assembly language file defaults to
+     logodata.asm.  This option is used when the logo is being built into
+     the BIOS at generation time and is not normally used by an end user.
+  
+
+     /b<num> and /f<num>
+
+     Specifies the background and foreground colors of the logo.  The colors
+     are indicated by the following numbers:
+
+        0  --  BLACK
+        1  --  BLUE
+        2  --  GREEN
+        3  --  CYAN
+        4  --  RED
+        5  --  MAGENTA
+        6  --  BROWN
+        7  --  WHITE
+
+     If these options are not specified the logo will default to white on
+     black.
+
+
+     /s<num>
+
+     Specifies the size, in kilobytes, of the area reserved in the BIOS for
+     storing logo data.  If this option is not specified, then the logo area
+     size defaults to 4K, which is correct for most platforms.
+
+
+     /t<string>
+
+     Specifies a string which will be embedded into the .usr file for
+     identification purposes.  This string will be displayed along with the
+     date and time when the .usr file is read by FMUP prior to flashing the
+     logo into BIOS memory.  The maximum string length is 16 characters and
+     the string must not contain any spaces.
+
+
+     /nologo
+
+     Suppresses the copyright information displayed by BWLOGO when it is
+     invoked.
+
+
+     /v
+
+     Forces additional information to be displayed during processing of the
+     .bmp file containing the logo image.
+
+
+     /?
+
+     Forces BWLOGO to display help information.
+
+
+     Note that command line options are case sensitive.
+
+    
+     3.0 Sample Invocations.
+
+     The following examples indicate typical BWLOGO invocations:
+
+
+        BWLOGO /tCustom_Logo1 /f2 logo1.bmp
+
+     Invoking BWLOGO with this syntax would take the file logo1.bmp and
+     produce an output file called logodata.usr containing a green on black
+     logo.  The title 'Custom_Logo1' would be embedded within logodata.usr.
+
+
+        BWLOGO /tLogo2 /f4 /b1 logo2.bmp
+
+     Invoking BWLOGO with this syntax would take the file logo2.bmp and
+     produce an output file called logodata.usr containing a red on blue
+     logo.  The title 'Logo2' would be embedded within logodata.usr.
+
+
+        BWLOGO /tOEM_Logo /Fuoem_logo.usr /Fa oem_logo.bmp
+
+     Invoking BWLOGO with this syntax would take the file oem_logo.bmp and
+     produce two output files.  The first would be called oem_logo.usr and
+     would contain a default white on black logo with the title 'OEM_Logo'
+     embedded within it.  The second file would be called logodata.asm and
+     would contain logo data ready for assembly.
+
+
+     4.0 Error Messages.
+
+     BWLOGO can display the following error messages:
+
+
+     'Logo data too big for specified logo area size'
+
+     This error message indicates that the logo image is too large to be
+     stored in the area reserved by the BIOS for logo data.  If the BIOS
+     supports more than 4K of logo data try using the /s<num> option.
+
+
+     'Bitmap is not BI_RGB format'
+
+     This error message indicates that the .bmp file was probably saved as a
+     Run Length Encoded (RLE) file.  BWLOGO currently only supports
+     monochrome RGB bitmap files.
+
+
+     'Image size must not exceed 64K'
+
+     This error message indicates that the .bmp file is too large.  Make the
+     logo image smaller and retry.
+
+
+     'Image width must be multiple of 8 and height multiple of 16'
+
+     The compression algorithm used to store the logo image requires that
+     the image height should be a multiple of 16 and the height should be a
+     multiple of 8.  Resize the logo image and retry.
+
+
+     'Premature end of file'
+
+     This error message probably indicates that the bitmap file containing
+     the logo image is corrupted.
+
+
+     'Cannot malloc colortable' 'Cannot malloc character array buffer'
+     'Cannot malloc bitmap buffer' 'Cannot malloc bitmap file buffer'
+
+     These errors indicate that BWLOGO does not have enough memory to
+     process the logo image.  Increase the memory available to BWLOGO and
+     retry.
+
+
+     'Bitmap must be monochrome'
+
+     This error message indicates that the .bmp file was probably saved as a
+     Color file.  BWLOGO currently only support monochrome RGB bitmap
+     files.
+
+
+     'Unrecognized bitmap filetype'
+
+     This error message indicates that BWLOGO did not recognize the bitmap
+     file type.
+
+
+     'Logo image too complicated'
+
+     This error message indicates that the logo image is too complicated for
+     the compression algorithm used to store the logo image.  Simplify the
+     image and retry.
+

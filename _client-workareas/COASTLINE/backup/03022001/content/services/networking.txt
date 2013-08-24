@@ -1,0 +1,118 @@
+ 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Networking 
+            Services</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td width=10>&nbsp;</td>
+          <td colspan="3" align="left" valign="top"> 
+            <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+              <tr> 
+                <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                <td width="200"><font  class="regtextnobold">1-800-729-6809</font></td>
+              </tr>
+              <tr> 
+                <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                <td width="200"><font class="regtextnobold">1-949-450-9977</font></td>
+              </tr>
+              <tr> 
+                <td width="65">&nbsp;</td>
+                <td width="200">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width=10>&nbsp;</td>
+          <td colspan="3"> <font class="regtextnobold"> 
+            <p>Our technicians and engineers can provide comprehensive design, integration, and management and support services for all of your networking needs. Whether implementing new networks or expanding existing networks, we ensure that the infrastructures we design are reliable, fully scalable and cost-effective. We also provide detailed documentation for enhanced ease of maintenance and configuration. Offering services like these, bundled with our award-winning Customer Service and state-of-the-art manufacturing capabilities, Coastline Micro is sure to please you continuously by being on time and within budget.<br>
+              <br>
+            </p>
+            </font> 
+            <table width="80%" border="1" cellspacing="0" cellpadding="0" align="center" bordercolor="#8f8fab">
+              <tr> 
+                <td align="center" width="50%" bgcolor="#8f8fab"><font class="regtextnobold"><b>Network 
+                  Implementation</b></font></td>
+                <td align="center" width="50%" bgcolor="#8f8fab"><font class="regtextnobold"><b>Network 
+                  Architecture</b></font></td>
+              </tr>
+              <tr> 
+                <td align="left" height="59" valign="top"> <font class="regtextnobold"> 
+                  <ul>
+                    <li>Client workstations</li>
+                    <li>Databases</li>
+                    <li>LAN/WAN/VPN</li>
+                    <li>Client/server</li>
+                    <li>Peer-to-peer</li>
+                    <li>Data/voice</li>
+                  </ul>
+                  </font> </td>
+                <td height="59" valign="top"> <font class="regtextnobold"> 
+                  <ul>
+                    <li>10Base2Ethernet</li>
+                    <li>10/100/1000BaseT Shared</li>
+                    <li>10/100/1000BaseT Switched</li>
+                    <li>10/100BaseFX</li>
+                  </ul>
+                  </font> </td>
+              </tr>
+              <tr> 
+                <td align="center" bgcolor="#8f8fab"><font class="regtextnobold"><b>Cabling</b></font></td>
+                <td align="center" bgcolor="#8f8fab"><font class="regtextnobold"><b>Network 
+                  Connectivity</b></font></td>
+              </tr>
+              <tr> 
+                <td valign="top"> <font class="regtextnobold"> 
+                  <ul>
+                    <li>CAT 5,5e,6 Twisted-pair cable</li>
+                    <li>Coaxial cable</li>
+                    <li>Fiber-optic cable</li>
+                    <li>Wireless</li>
+                  </ul>
+                  </font> </td>
+                <td valign="top"> <font class="regtextnobold"> 
+                  <ul>
+                    <li> Active and/or passive hubs</li>
+                    <li>Intelligent/switched hubs</li>
+                    <li>Repeaters</li>
+                    <li>Routers </li>
+                  </ul>
+                  </font> </td>
+              </tr>
+            </table>
+          </td>
+          <td width=10>&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

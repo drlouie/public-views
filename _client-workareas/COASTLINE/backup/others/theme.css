@@ -1,0 +1,25 @@
+a {font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; color: #333366; text-decoration:underline}
+a:hover {text-decoration:none}
+.paragraph{font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; color: #000000}
+BODY {margin: 0pt; color: #000000}
+.productname {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FF6600; line-height: 11px}
+.text {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; line-height: 12pt; vertical-align: top; white-space: normal}
+.bluebackground {  background-color: #333366; padding-right: 10px; font-size: 11px; font-weight: bold; color: #ffffff}
+.productcontenttd {  padding-left: 10px; padding-top: 10px; vertical-align: bottom}
+.productnamelarge { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #FF6600; line-height: 11px }
+.bluetext { font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #333366}
+.pdflink {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #FF6600; text-decoration: underline}
+.topbord {  border-color: #333366 black black; border-top-width: 4px}
+.paratd { vertical-align: bottom ; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px}
+.tabletitle {  font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; background-color: #333366; color: #ffffff}
+.nonproducttd {  border-color: #333366 black black; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #333366}
+.non { border-color: #333366 black black; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #333366 ; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px}
+.subbies{font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; color: #333366; font-weight:bold}
+.supersubs{font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; color: #333366;text-indent:25px;font-weight:bold}
+.leftindent {  padding-left: 10px}
+.boldorange {  font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #FF6600}
+.top {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FF6600}
+.formtext {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #333366; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px}
+.input {  font-family: Arial, Helvetica, sans-serif;font-size:13px;color:#339933;border-color:#333366; border: #333366 double; font-weight: bold}
+.button { font-family: Arial, Helvetica, sans-serif;font-size:13px;color:#003366;background-color:#99CC99;border-color:#333366; border: #333366 double; font-weight: bold }
+.dontknow {  font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #FF6600; text-decoration: underline}

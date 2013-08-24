@@ -1,0 +1,43 @@
+TOTAL: 11 Fields
+
+// PageName =  Loose naming convention to be used for CM personel 
+// to track generated site links by name. No two names can be the same, 
+// this is the actual field tracked when a Pointer is followed into the DB
+// IE: tiger_main or gw_main or thresher2_main
+
+// PageTitle = Title of page as will be listed in search, try to be accurate with the title.
+
+// PageContent = Templated HTML information stored as TEXT for use as a page's main 
+// content drop, IE: Old .nsf and .txt files
+
+// PageKeywords = As many descriptive keywords as necessary in order. Will be used in
+// keyword searches of the website's content
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Tankpages (PageID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+PageName VARCHAR(100), 
+PageTitle VARCHAR(100), 
+PageConent BLOB, 
+PageKeywords VARCHAR(250), 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10), 
+DeletedBy VARCHAR(25),
+DeletedOn Timestamp(10));
+
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Products (PageID, PageName, PageTitle, 
+PageConent, PageKeywords, AddedBy, AddedOn, ModifiedBy, 
+ModifiedOn, DeletedBy, DeletedOn)
+
+VALUES (Null, "Page name", "Title of Page", 
+"HTML based content for dynamic site driving", 
+"Keywords for this section page", "drlouie", Null, "", 
+"", "", "");

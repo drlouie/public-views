@@ -1,0 +1,596 @@
+
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Thresher 
+            Series&#153; Desktop PCs</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td colspan="3"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr align="left"> 
+                      <td colspan="3" height="40">&nbsp;</td>
+                    </tr>
+                    <tr align="center"> 
+                      <td colspan="3"> 
+                        <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                          <tr> 
+                            <td><font class="regtextnobold"> 
+                              <p>Coastline Micro's Thresher Series&#153; Desktop 
+                                PCs provide a cost-effective answer to your personal 
+                                computing needs. These systems come equipped with 
+                                an Intel&reg; Celeron&#153; or Intel&reg; Pentium&reg; 
+                                III processor. Although our Thresher Series&#153; 
+                                Desktop PCs are priced competitively, they are 
+                                built from the highest quality components available. 
+                                These systems consist of Intel&reg; system boards 
+                                and processors, Kingston memory, Seagate and IBM 
+                                hard drives, and your choice of ATI, Matrox or 
+                                ELSA graphics cards. All these top-shelf components 
+                                are assembled in the highest quality chassis and 
+                                powered by the best in power supplies by PC Power 
+                                and Cooling. Thresher Series&#153; Desktop PCs 
+                                are the perfect answer for the daily grind of 
+                                business computing.</p>
+                              <p>All this power comes bundled with our award-winning 
+                                Customer Service and Technical Support. Our knowledgeable 
+                                sales team will make purchasing your new Thresher 
+                                Series&#153; Desktop PC an enjoyable experience.<br>
+                              </p>
+                              </font>
+<table width="75%" align="center" border=1 bordercolor="8f8fab" cellpadding=3 cellspacing=0>
+                                <tr> 
+                                  <td width="100%" align="center"><br>
+                                    <font class="regtextnobold">Interested in 
+                                    buying one of these systems or looking for 
+                                    more product information? Simply request access 
+                                    to our online store by filling out the <a href="cont_temp.cgi?sub_link=access_request">Store 
+                                    Access Request Form</a>.</font><br>
+                                    <br>
+                                  </td>
+                                </tr>
+                              </table>
+                              
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr align="left"> 
+                      <td colspan="3" height="25">&nbsp;</td>
+                    </tr>
+                    <tr align="center"> 
+                      <td width="65%" height="300" valign="middle"> 
+                        <table width="575" border="0" cellspacing="0" cellpadding="0" bgcolor="#8f8fab">
+                          <tr align="center"> 
+                            <td colspan="3" height="40" bgcolor="#333366"> <font class="regtextnobold"> 
+                              <b>MODEL CE810E-A</b> </font></td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="25" bgcolor="#333366"><font class="prodmenu">TECHNICAL 
+                              SPECS | SYSTEM DRIVERS | <a href="http://www.flashecom.com/coastlinemicro/">BUY 
+                              ONLINE</A></font></td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width="20">&nbsp;</td>
+                            <td> 
+                              <table width="545" border="0" cellspacing="0" cellpadding="0" bgcolor="#333366">
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20">&nbsp;</td>
+                                  <td width="270" height="20" align="left">&nbsp;</td>
+                                  <td rowspan="14" height="240" align="center" width="20" valign="middle" bgcolor="#8f8fab">&nbsp;</td>
+                                  <td rowspan="14" height="240" align="center" width="225" valign="middle"><img src="images/mini_tower_right.jpg" border=0 width="198" height="250"></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                                    CA810EA Motherboard</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Coastline 
+                                    Micro Micro Mini Tower Chassis W/145 <br>
+                                    Watt PS</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                                    Celeron&#153; 633MHz FC-PGA </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Kingston 
+                                    64MB PC-100 SDRAM </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">15.3GB 
+                                    EIDE 7200RPM </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                                    Intel&reg; 3D Graphics </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">TEAC 
+                                    3.5 1.44MB Floppy </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Sony 
+                                    CD-ROM 48X </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                                    Creative Lab PCI 128 Sound Card </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Internet Keyboard PS2 </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Intellimouse Web PS2 </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Windows 2000 Professional </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20">&nbsp;</td>
+                                  <td width="270" height="20" align="left">&nbsp;</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr align="left"> 
+                      <td colspan="3" height="40">&nbsp;</td>
+                    </tr>
+                    <tr align="center"> 
+                      <td width="65%" height="300" valign="middle"> 
+                        <table width="575" border="0" cellspacing="0" cellpadding="0" bgcolor="#8f8fab">
+                          <tr align="center"> 
+                            <td colspan="3" height="40" bgcolor="#333366"> <font class="regtextnobold"> 
+                              <b>MODEL CE810E-AN</b> </font></td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="25" bgcolor="#333366"><font class="prodmenu">TECHNICAL 
+                              SPECS | SYSTEM DRIVERS | <a href="http://www.flashecom.com/coastlinemicro/">BUY 
+                              ONLINE</A></font></td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width="20">&nbsp;</td>
+                            <td> 
+                              <table width="545" border="0" cellspacing="0" cellpadding="0" bgcolor="#333366">
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20">&nbsp;</td>
+                                  <td width="270" height="20" align="left">&nbsp;</td>
+                                  <td rowspan="15" height="240" align="center" width="20" valign="middle" bgcolor="#8f8fab">&nbsp;</td>
+                                  <td rowspan="15" height="240" align="center" width="225" valign="middle"><img src="images/mid_tower_flat_right.jpg" border=0 width="198" height="250"></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                                    CA810EAL Motherboard</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Coastline 
+                                    Micro Mid Tower Chassis W/250 Watt <br>
+                                    PCPI PS </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                                    Pentium&reg III 800MHz FC-PGA </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Kingston 
+                                    128MB PC-100 SDRAM </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">20.4GB 
+                                    EIDE 5400RPM </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                                    3D Graphicshics </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                                    Intel&reg; 10/100 NIC </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">TEAC 
+                                    3.5 1.44MB FloppyX </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Sony 
+                                    CD-ROM 48X</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                                    Creative Lab PCI 128 Sound Card </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Internet Keyboard PS2</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Intellimouse Web PS2</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Windows 2000 Professional</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20">&nbsp;</td>
+                                  <td width="270" height="20" align="left">&nbsp;</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr align="left"> 
+                      <td colspan="3" height="40">&nbsp;</td>
+                    </tr>
+                    <tr align="center"> 
+                      <td width="65%" height="300" valign="middle"> 
+                        <table width="575" border="0" cellspacing="0" cellpadding="0" bgcolor="#8f8fab">
+                          <tr align="center"> 
+                            <td colspan="3" height="40" bgcolor="#333366"> <font class="regtextnobold"> 
+                              <b>MODEL CE815E-A</b> </font></td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="25" bgcolor="#333366"><font class="prodmenu">TECHNICAL 
+                              SPECS | SYSTEM DRIVERS | <a href="http://www.flashecom.com/coastlinemicro/">BUY 
+                              ONLINE</A></font></td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width="20">&nbsp;</td>
+                            <td> 
+                              <table width="545" border="0" cellspacing="0" cellpadding="0" bgcolor="#333366">
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20">&nbsp;</td>
+                                  <td width="270" height="20" align="left">&nbsp;</td>
+                                  <td rowspan="15" height="240" align="center" width="20" valign="middle" bgcolor="#8f8fab">&nbsp;</td>
+                                  <td rowspan="15" height="240" align="center" width="225" valign="middle"><img src="images/mid_tower_flat_left.jpg" border=0 width="198" height="250"></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                                    D815E System Board</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Mid-Tower 
+                                    ATX Chassis W/ 250 Watt PS<br>
+                                    PCPI PS </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                                    PIII 800MHz Processor</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Kingston 
+                                    128MB PC133 SDRAM</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Teac 
+                                    1.44 Floppy</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Sony 
+                                    48X CD-ROM</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Ultra 
+                                    ATA/100 IDE Controller</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">30GB 
+                                    ATA/100 IDE Hard Drive</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                                    3D Graphics</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                                    Ceative Labs PCI Audio</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Intellimouse WEB PS2</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Internet Keyboard</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Windows 2000 OS</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20">&nbsp;</td>
+                                  <td width="270" height="20" align="left">&nbsp;</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr align="left"> 
+                      <td colspan="3" height="40">&nbsp;</td>
+                    </tr>
+                    <tr align="center"> 
+                      <td width="65%" height="300" valign="middle"> 
+                        <table width="575" border="0" cellspacing="0" cellpadding="0" bgcolor="#8f8fab">
+                          <tr align="center"> 
+                            <td colspan="3" height="40" bgcolor="#333366"> <font class="regtextnobold"> 
+                              <b>MODEL CE815E-AN</b> </font></td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="25" bgcolor="#333366"><font class="prodmenu">TECHNICAL 
+                              SPECS | SYSTEM DRIVERS | <a href="http://www.flashecom.com/coastlinemicro/">BUY 
+                              ONLINE</A></font></td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr align="center"> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width="20">&nbsp;</td>
+                            <td> 
+                              <table width="545" border="0" cellspacing="0" cellpadding="0" bgcolor="#333366">
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20">&nbsp;</td>
+                                  <td width="270" height="20" align="left">&nbsp;</td>
+                                  <td rowspan="16" height="240" align="center" width="20" valign="middle" bgcolor="#8f8fab">&nbsp;</td>
+                                  <td rowspan="16" height="240" align="center" width="225" valign="middle"><img src="images/mid_tower_flat_right.jpg" border=0 width="198" height="250"></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                                    D815E System Board</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Mid-Tower 
+                                    ATX Chassis W/ 250 Watt PS<br>
+                                    PCPI PS </font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                                    PIII 933MHz Processor</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Kingston 
+                                    128MB PC133 SDRAM</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Teac 
+                                    1.44 Floppy</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Sony 
+                                    48X CD-ROM</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Ultra 
+                                    ATA/100 IDE Controller</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">20GB 
+                                    5400RPM IDE Hard Drive</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">ATI 
+                                    8MB AGP Xpert 98</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                                    PCI Audio</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                                    Intel&reg; 10/100 NIC</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Intellimouse WEB PS2</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Internet Keyboard</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                                  <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                                    Windows 2000 OS</font></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td width="20" align="right" height="20">&nbsp;</td>
+                                  <td width="270" height="20" align="left">&nbsp;</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width="20">&nbsp;</td>
+                            <td height="20">&nbsp;</td>
+                            <td width="20">&nbsp;</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr align="left"> 
+                      <td colspan="3" height="25">&nbsp;</td>
+                    </tr>
+                    <tr align="left"> 
+                      <td colspan="3" height="40"> 
+                        <table width="75%" align="center" border=1 bordercolor="8f8fab" cellpadding=3 cellspacing=0>
+                          <tr> 
+                            <td width="100%" align="center"><br>
+                              <font class="regtextnobold">Interested in buying 
+                              one of these systems or looking for more product 
+                              information? Simply request access to our online 
+                              store by filling out the <a href="cont_temp.cgi?sub_link=access_request">Store 
+                              Access Request Form</a>.</font><br>
+                              <br>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr align="left"> 
+                      <td colspan="3" height="40">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

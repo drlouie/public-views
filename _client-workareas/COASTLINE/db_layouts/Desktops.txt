@@ -1,0 +1,147 @@
+TOTAL: 50 Fields
+
+
+// CMSeries = Used on pre-configured systems only. 
+// Must choose one of the 5 predefined series types
+// IE: Thresher, Tiger, Reef, Great White or Mako
+
+// PricingClass = Price markup classification setting
+// Must choose on of the 10 preset values 
+
+// ProductType = Product classification for searching purposes
+// Must choose one of the 33 preset values, Desktop being DEFAULT for this table
+
+// Description = Descriptive information about product for use throughout the site's interface
+
+// Keynotes = Used to present descriptive product information to the user as keynotes
+// Templated HTML information stored in DB
+
+// Keywords = As many descriptive keywords as necessary. Will be used in
+// keyword searches within the store's inventory
+
+// Reconfig = Is this system re-configurarble or is it sold as is?
+// One of 2 options Y or N
+
+// SneakPeak = Product sneak peak image, if any, if none this product is not considered for
+// random sneak peaks
+
+// SmallPhoto = Location of small photo, for use in the system specifications screen
+
+// LargePhoto = The locations of all large photos available for this product
+// Up to t0 250 char
+
+// Weight = Weight of product in Pounds and Ounces
+
+// SystemBase = This is the base of the system; Chassis/Power Supply/Motherboard 
+// This must be Kit from the database in order to call it up from this level
+// Suggestion = Bases should be saved to the system as Kits and then called called from
+// the configuration of a system
+
+// ProcTypes = The types of processors this SystemBase can take, for system reconfig purposes
+
+// Processor = Thw actual processor chosen for this system
+
+// ProcQuantity = If necessary this count can be changed, this will not be an option for the user,
+// Unless a kit's motherboard has capabilities for multiple processors
+
+// All Other Components
+// If VARCHAR(25) = 1 Product call
+// If VARCHAR(250) = More than one product can be elected as part of component
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Desktops (DesktopID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CMPartNumber VARCHAR(25), 
+CMSeries ENUM('GreatWhite','Mako','Reef','Tiger','Thresher',
+'None') DEFAULT 'Thresher', 
+PricingClass ENUM('Desktop','Notebook','Server','Monitor',
+'Memory','HardDrive','VideoCard','Peripheral','Printer',
+'Software') DEFAULT 'Desktop', 
+ProductType ENUM('Desktop','Notebook','Server','Audio',
+'CDROM','CDRW','DigitalCam','DVDROM','Floppy','HardDrive',
+'InternetCam','Joystick','Keyboard','Memory','Modem',
+'Monitor','Networking','NIC','NoteExtra','Pointer','UPS',
+'Printer','Processor','Scanner','Software','Speaker',
+'Storage','SystemBoard','SystemChassis','VideoCard',
+'WirelessNet','ZipDrive','Peripheral') DEFAULT 'Peripheral', 
+ItemName VARCHAR(50), 
+Description TEXT, 
+Keynotes TEXT, 
+Keywords VARCHAR(100), 
+Reconfig ENUM('Y','N') DEFAULT 'Y', 
+SneakPeak VARCHAR(50), 
+SmallPhoto VARCHAR(50), 
+LargePhoto VARCHAR(250), 
+Warranty VARCHAR(250), 
+SystemBase INT, 
+ProcTypes TEXT, 
+Processor INT, 
+ProcQuantity INT, 
+HardDrive1 INT, 
+HardDrive2 INT, 
+Memory VARCHAR(250), 
+Monitor INT, 
+OperatingSys INT, 
+Software VARCHAR(250), 
+VideoCard INT, 
+CDDrive1 INT, 
+CDDrive2 INT, 
+Floppy INT, 
+ZipDrive INT, 
+SoundCard INT, 
+Speakers INT, 
+Microphone INT, 
+Modem INT, 
+NetworkCard INT, 
+WirelessLAN INT, 
+Keyboard  INT, 
+Mouse INT, 
+InternetCam INT, 
+DigitalCam INT, 
+Scanner INT, 
+Printer INT, 
+ExStorBack VARCHAR(250), 
+UPS VARCHAR(250), 
+RelatedProd VARCHAR(250), 
+Accessories VARCHAR(250), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10), 
+DeletedBy VARCHAR(25),
+DeletedOn Timestamp(10));
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Desktops (DesktopID, CMPartNumber, CMSeries, 
+PricingClass, ProductType, ItemName, Description, Keynotes, 
+Keywords, Reconfig, SneakPeak, SmallPhoto, LargePhoto, 
+Warranty, SystemBase, ProcTypes, Processor, ProcQuantity, 
+HardDrive1, HardDrive2, Memory, Monitor, OperatingSys, Software, 
+VideoCard, CDDrive1, CDDrive2, Floppy, ZipDrive, SoundCard, 
+Speakers, Microphone, Modem, NetworkCard, WirelessLAN, Keyboard, 
+Mouse, InternetCam, DigitalCam, Scanner, Printer, ExStorBack, 
+UPS, Accessories, AddedBy, AddedOn, ModifiedBy, ModifiedOn, 
+DeletedBy, DeletedOn)
+
+VALUES (Null, Null, "Thresher", "Desktop", 
+"Desktop", "Name of product", 
+"This is a desktop pc description for this product", 
+"Desktop PC System Thresher Peripheral Coastline Configured", 
+"Keynotes for this item", "Y", 
+"Sneak Peak image location", "Smallphoto server location", 
+"Location for large photos", "Warranty Stuff", "0000000001", 
+"0000000003, 0000000002, 0000000005", "0000000003", "1", 
+"0000000003", "0000000003", "0000000003", "0000000003", 
+"0000000003", "0000000003", "0000000003", "0000000003", 
+"0000000003", "0000000003", "0000000003", "0000000003", 
+"0000000003", "0000000003", "0000000003", "0000000003", 
+"0000000003", "0000000003", "0000000003", "0000000003", 
+"0000000003", "0000000003", "0000000003", "0000000003", 
+"0000000003", "0000000003", "drlouie", Null, "", "", 
+"", "");
+
+
+

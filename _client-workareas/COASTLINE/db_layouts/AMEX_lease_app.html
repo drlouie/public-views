@@ -1,0 +1,1818 @@
+
+<HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+
+
+<script src="wizard3.js"></script>
+<script Language="JavaScript">
+
+var gClientLeadID = parseInt("161200");
+var gSignerNewID = -1;
+var gWindow = null;
+var gNewVendorWindow = null;	
+var VendorRepWindow = null;
+var TradeLineWindow = null;
+var m_city;
+var m_zip;
+var m_index;
+var m_state;
+var m_cityid;
+
+var gVendorID = "28835";
+var gBrokerNo = "3352"
+var g_brokerid = "3352";
+var g_userid = "LOSTERLING";
+var g_saved = "";
+var g_type = "0";
+var g_submitted = "";
+var gAccessLevel = "30";
+var vDealerFlag = "";
+var vCountExpressUsers = "1";
+var gUserIdentity = "7813"; 
+
+</script>
+
+<!----------MAIN PAGE CONTENT HERE------------->
+<html>
+<head>
+<meta HTTP-EQUIV="Expires" CONTENT="Tue, 04 Dec 1996 21:29:02 GMT">
+<title>Rockford Express Wizard</title>
+</head>
+<body background='images/bgw2.gif' onLoad="checkForMsg()">
+
+<script language="JavaScript"><!--
+
+var VendorName = "28835";
+var DealerFlag = "";
+var AccessLevel = "30"
+
+
+function CheckForSalesRep()
+{
+	var sMissing = "";
+	var sMessage = "";
+	var sData = "";
+
+
+	sData = document.forms[0].txtAppInputFor.value;
+	
+	
+	if (sData.length < 1 && AccessLevel==30)
+	{	
+		sMissing += "A Sales Rep should be selected ";
+	alert(sMissing);
+	return false;
+	}
+	
+	else	
+	{
+	return true;
+	}
+}
+
+
+function Agreement()
+{
+	var loc;
+	var sPass = "";
+	var sData = "";
+	var brokeridpass = "3352";
+
+	
+		
+		if (AppNo() == 0)
+		window.alert("Please save Application first!")
+		else
+		{
+		DoSave();
+		
+		
+		//if (ssno2.length)
+		sData = document.forms[0].ssno2.value;
+		if (sData.length > 1)
+		
+		
+		{
+
+			sPass= document.forms[0].clientlastname.value + ", " + document.forms[0].clientfirstname.value + "^";
+		
+		}
+		
+		//if (ssno3.length)
+		sData = document.forms[0].ssno3.value;
+		if (sData.length > 1)
+		
+		{
+			sPass += document.forms[0].owner3last.value + ", " + document.forms[0].owner3.value +  "^";
+		}
+		//loc = "AgreeFrame.asp?appNo=" + AppNo();
+		//loc = "AgreeFrame.asp?appPass=" + AppNo()+ "^" + sPass;
+		
+		//loc = "AgreeFrame.asp?appPass=" + AppNo()+ "^" + sPass + getSigner();
+		loc = "AgreeFrame.asp?brokeridpass=" + brokeridpass + "&appPass=" + AppNo()+ "^" + sPass + getSignerECOA();
+		top.location = loc
+		}
+}
+
+
+
+function AppNo()
+{
+	
+	return "161200";
+	
+
+}
+
+function Bookmark(bk)
+{
+
+	window.location.hash = bk;
+	
+}
+
+function SendApp()
+{
+
+if (CheckForSalesRep())
+{
+
+	DoSubmit();
+}	
+//	parent.application.window.document.forms[0].submit();
+	
+}
+
+function DoSave()
+{
+
+
+if  (CheckForSalesRep())
+{
+
+	CheckSubmit(3);
+}	
+}
+
+function SameInformation()
+{
+
+	var pos;
+	var data;
+	var first;
+	var last;
+
+
+	
+/****** lessee name				
+	data = document.forms[0].clientname.value;
+	
+	for (pos = 0, first = "", last = ""; pos < data.length; pos++)
+		{
+		if (data.charAt(pos) == " ")
+			{
+			last = data.slice(pos + 1);
+			break;
+			}
+		first = first + data.charAt(pos);
+		}
+		
+		
+	document.forms[0].clientfirstname.value = first;
+	document.forms[0].clientlastname.value = last;
+******/
+
+
+	
+	/* street number			*/
+
+	document.forms[0].clienthomestreetno.value= document.forms[0].clientstreetno.value;;
+
+	/* street name				*/
+	document.forms[0].clienthomeaddress.value = document.forms[0].clientaddress.value;
+
+	
+	/* street type				*/
+	document.forms[0].clienthomestreettype.value  = document.forms[0].clientstreettype.value;
+
+	/* city						*/
+	document.forms[0].clienthomecity.value = document.forms[0].clientcity.value;
+		
+	/* state 					*/
+	document.forms[0].clienthomestate.value = document.forms[0].clientstate.value;
+
+	/* zip						*/
+	document.forms[0].clienthomezip.value = document.forms[0].clientzip.value;
+
+}
+
+function DoSubmit()
+{
+
+	CheckSubmit(1);
+	
+}
+
+function CheckSubmit(iButton){
+	if (iButton == 1) 
+	{
+		if (ValidateInput()) 
+		{
+			document.forms[0].Signer.value = getSigner();
+		//	document.forms[0].SignerDelete.value = getSignerDelete();
+			g_leaseType = document.forms[0].lease_type.value
+			document.forms[0].action = "wizard6.asp?submit=1"
+			document.forms[0].submit();
+			return true;
+		}
+		else
+		{
+			return false;
+		} 
+	}
+	else 
+	{
+			
+			document.forms[0].Signer.value = getSigner();
+		//	document.forms[0].SignerDelete.value = getSignerDelete();
+			g_leaseType = document.forms[0].lease_type.value
+			document.forms[0].action = "wizard6.asp" ///?where=" & iButton
+			document.forms[0].submit();
+			return true;
+	}
+
+}
+
+function CheckPrint(){
+	if (ValidateInput()) {
+		document.forms[0].submit;
+		//? location.href='xt_wizard5.asp?savedappid=161200';
+		location.href='xt_wizard5.asp?savedappid=161200';
+	}
+}
+
+function ValidateInput(){
+	var sReturn = "\r\n";
+	var sMessage = "";
+	var sMissing = "";
+	var sData = "";
+	var sData1="";
+	var sData2="";
+	var list = "";
+
+	/* lessee name				*/
+	sData = document.forms[0].clientname.value;
+	if (sData.length < 1){	
+		sMissing = "Lesseee Name " + sReturn;
+	}
+	/* telephone */
+	sData = document.forms[0].clientphone.value;
+	if (sData.length < 1){	
+		sMissing += "Lessee Telephone " + sReturn;
+	}
+	
+
+	/* street name				*/
+	sData = document.forms[0].clientaddress.value;
+	if (sData.length < 1){	
+		sMissing += "Lessee Street Name " + sReturn;
+	}
+
+	
+	/* street type				
+	sData = document.forms[0].clientstreettype.value;
+	if (sData.length < 1){	
+		sMissing += "Lessee Street Type " + sReturn;
+	} */
+
+
+	/* Business Description				*/
+	sData = document.forms[0].businessdescription.value;
+	if (sData.length < 1){	
+		sMissing += "Business Description " + sReturn;
+	}
+
+
+
+	/* Business Type				*/
+	//"1" CORPORATION
+	//"5" LLC
+	//"4" NON-PROFIT
+	//"3" PARTNERSHIP
+	//"2" PROPRIETORSHIP
+	ssno2 = document.forms[0].ssno2.value;
+	ssno3 = document.forms[0].ssno3.value;
+
+	bType = document.forms[0].businesstype.value;
+	if (bType.length < 1)
+		{	
+		sMissing += "Business Type " + sReturn;
+		}
+	else if (document.forms[0].businesstype.value == 2)
+		// PROPRIETORSHIP
+		{
+			// we require certain information
+
+			// dba
+			// DBA no longer required. Per Jeanette 12/22/99 ALR
+			//sData = document.forms[0].clientnamedba.value;
+			//if (sData.length < 1)
+			//	{	
+			//	sMissing += "DBA must be specified " + sReturn;
+			//	}
+		}
+
+	if (document.forms[0].guarantor2.checked != 0 || document.forms[0].businesstype.value == 2)
+		{
+		// need guarantor information 
+		
+		
+			//ALR 06/01/99
+			if (document.forms[0].guarantor2.checked == 0) 
+				{	
+				// PROPRIETORSHIP requires guarantor
+				sMissing += "A Guarantor is required " + sReturn;
+				}
+		
+			sData = document.forms[0].clientfirstname.value;
+			if (sData.length < 1)
+				{	
+				sMissing += "Principal First Name " + sReturn;
+				}
+
+			sData = document.forms[0].clientlastname.value;
+			if (sData.length < 1)
+				{	
+				sMissing += "Principal Last Name " + sReturn;
+				}
+
+			/* street name				*/
+			sData = document.forms[0].clienthomeaddress.value;
+			if (sData.length < 1){	
+				sMissing += "Principal Street Name " + sReturn;
+			}
+
+			/* city						*/
+			sData = document.forms[0].clienthomecity.value;
+			if (sData.length < 1){	
+				sMissing += "Principal City " + sReturn;
+			}
+			/* state 					*/
+			sData = document.forms[0].clienthomestate.value;
+			if (sData.length < 1){	
+				sMissing += "Principal State " + sReturn;
+			}
+			/* zip						*/
+			sData = document.forms[0].clienthomezip.value;
+			if (sData.length < 1){	
+				sMissing += "Principal Zip Code " + sReturn;
+			}
+				
+			/* SSN						*/
+			if (ssno2.length < 1){	
+				sMissing += "SSN for Principal required." + sReturn;
+			}
+		}
+					
+	if (document.forms[0].guarantor3.checked != 0)
+		{
+		// need guarantor information
+		
+			sData = document.forms[0].owner3.value;
+			if (sData.length < 1)
+				{	
+				sMissing += "Additional Principal First Name " + sReturn;
+				}
+
+			sData = document.forms[0].owner3last.value;
+			if (sData.length < 1)
+				{	
+				sMissing += "Additional Principal Last Name " + sReturn;
+				}
+
+			/* street name				*/
+			sData = document.forms[0].address3.value;
+			if (sData.length < 1){	
+				sMissing += "Additional Principal Street Name " + sReturn;
+			}
+
+			/* city						*/
+			sData = document.forms[0].city3.value;
+			if (sData.length < 1){	
+				sMissing += "Additional Principal City " + sReturn;
+			}
+			/* state 					*/
+			sData = document.forms[0].state3.value;
+			if (sData.length < 1){	
+				sMissing += "Additional Principal State " + sReturn;
+			}
+			/* zip						*/
+			sData = document.forms[0].zip3.value;
+			if (sData.length < 1){	
+				sMissing += "Additional Principal Zip Code " + sReturn;
+			}
+				
+			/* SSN						*/
+			if (ssno3.length < 1){	
+				sMissing += "SSN for Additional Prinicpal required." + sReturn;
+			}
+		}
+
+
+	/*if (ssno2.length || ssno3.length)
+		{
+		Authorized to pull CBRs		
+		if (document.forms[0].ordercbrs.checked == 0){	
+			sMissing += "You must obtain authorization to pull CBRs from lessee" + sReturn;
+		}
+		}
+	*/
+		
+	if (ssno2.length || ssno3.length)
+		{
+		/* Authorized for ECOA			*/
+		//if (document.forms[0].ecoaflag.checked ==0){	
+		if (document.forms[0].ecoaflag.value!= 1){
+		//if (document.forms[0].ecoaflag.value!= 1){
+			sMissing += "You must click the ECOA agreement button to complete the application process." + sReturn;
+		}
+		}
+	
+		/* Vendor name	*/
+	if (VendorName != 0)
+	{
+		sData = document.forms[0].vendor_name.value;
+		if (sData.length < 1){	
+		sMissing += "Vendor Name " + sReturn;
+		}
+	}
+	//lucy add per Jeanette on 10/18/99.
+	//lucy deleted per Al on 3/27/00. For businesstype <> 2(PROPRIETORSHIP), user do not need to put signer check and principal
+	//name.  The system will automatically put it for him.(signerfirsname - authorized, signerlastname - signer with
+	// signer checked)
+/*	if (document.forms[0].signer2.checked == 0 & document.forms[0].signer3.checked == 0) 
+		{	
+		
+			sMissing += "A signer is required for the principal" + sReturn;
+		}
+*/	
+/*	if (document.forms[0].businesstype.value !=2)
+	{
+		sData = document.forms[0].clientfirstname.value;
+			if (sData.length < 1)
+					{	
+					sMissing += "Principal First Name " + sReturn;
+					}
+
+				sData = document.forms[0].clientlastname.value;
+			if (sData.length < 1)
+					{	
+					sMissing += "Principal Last Name " + sReturn;
+					}
+	}	*/
+	
+	if (document.forms[0].signer3.checked != 0)
+		{
+		// need signer name
+		
+			sData = document.forms[0].owner3.value;
+			if (sData.length < 1)
+				{	
+				sMissing += "Additional Principal First Name " + sReturn;
+				}
+
+			sData = document.forms[0].owner3last.value;
+			if (sData.length < 1)
+				{	
+				sMissing += "Additional Principal Last Name " + sReturn;
+				}		
+		}	
+	//add end
+				
+	/* Equipment Type				*/
+	sData = document.forms[0].generalequipdesc.value;
+	if (sData.length < 1 || sData == 0){	
+		sMissing += "Equipment Type " + sReturn;
+	}
+
+	/* Equipment Description				*/
+	sData = document.forms[0].equipdesc.value;
+	if (sData.length < 1 || sData == " "){	
+		sMissing += "Equipment Description " + sReturn;
+	}
+
+	/* Equipment Total				*/
+	sData = document.forms[0].origleaseamt.value;
+	if (sData.length < 1 || sData <= 0)
+	{	
+		sMissing += "Equipment Total " + sReturn;
+	}
+
+	
+	/* Term							*/
+	sData = document.forms[0].term.value;
+	if (sData.length < 1 || sData <= 0)
+	{	
+		sMissing += "Term " + sReturn;
+	}
+	
+	/* city						*/
+	sData = document.forms[0].clientcity.value;
+	if (sData.length < 1){	
+		sMissing += "Lessee City " + sReturn;
+	}
+	/* state 					*/
+	sData = document.forms[0].clientstate.value;
+	if (sData.length < 1){	
+		sMissing += "Lessee State " + sReturn;
+	}
+	/* zip						*/
+	sData = document.forms[0].clientzip.value;
+	if (sData.length < 1){	
+		sMissing += "Lessee Zip Code " + sReturn;
+	}
+
+	if (DealerFlag == 1)
+	{
+	
+	if (document.forms[0].txtdealerid.value == "")
+	{
+		sMissing += "Dealer should be selected " + sReturn;
+	}
+	}
+	
+	
+	if (sMissing.length > 1){
+		sMessage = "The following required fields need to be filled out before application can be saved:" + 
+					  sReturn + 
+					  sReturn + 
+					  sMissing;
+		alert(sMessage);
+		return false;
+	}
+	else{
+		sMissing = "";
+		sMissing = CheckState(document.forms[0].clientstate, "Lessee State");
+		
+		if (document.forms[0].businesstype.value ==2 )
+		{
+		sMissing += CheckState(document.forms[0].clienthomestate, "Principal State");
+		}
+		
+		if (sMissing.length > 1) {
+			alert("You have entered an invalid state for the following field(s)" + 
+			    	sReturn + 
+				 	sReturn + 
+				 	sMissing);
+			return false;
+		}
+		sMissing = "";
+		sMissing = CheckPhone(document.forms[0].clientphone, "Lessee Phone");	
+		sMissing += CheckPhone(document.forms[0].clientfax, "Lessee Fax2");
+		if (VendorName != 0)
+		{
+		sMissing += CheckPhone(document.forms[0].vendor_phone, "Vendor Phone");
+		}
+		if (sMissing.length > 1) {
+			alert("You must enter a complete phone number in this ###-###-#### format" +
+					sReturn +
+					"for the following field(s)" +
+				   sReturn +
+				   sReturn +
+				   sMissing);
+			return false;
+		}
+		return true;
+	}
+}
+
+function CheckPhone(txtPhone, sName) {
+	var sData = "";
+	var sReturn = "\r\n";
+
+	sData = txtPhone.value;
+	if (sData.length >0 && sData.length < 10 && sData != " ") {
+		return sName + "," + sData + "," + sReturn ;  
+	}	
+	else{
+		return "";
+	}
+}
+
+function CheckSSN(txtSSN, sName) {
+	var sData = "";
+	var sReturn = "\r\n";
+
+	sData = txtSSN.value;
+//	sData = validateSSN(sData);
+	if (sData.length >0 && sData.length < 11 ||sData.length >0 && sData.length > 11) {
+		return sName + sReturn;  
+	}	
+	else{
+		return "";
+	}
+}
+
+
+
+function CheckState(txtState, sName) {
+	var sData = "";
+	var sReturn = "\r\n";
+
+	sData = txtState.value.toUpperCase();
+
+	/*	now check to see if it is a valid state	*/
+	switch (sData) {
+		case "AL":
+			break;
+		case "AK":
+			break;
+		case "AZ":
+			break;
+		case "AR":
+			break;
+		case "CA":
+			break;
+		case "CO":
+			break;
+		case "CT":
+			break;
+		case "DE":
+			break;
+		case "DC":
+			break;
+		case "FL":
+			break;
+		case "GA":
+			break;
+		case "HI":
+			break;
+		case "ID":
+			break;
+		case "IL":
+			break;
+		case "IN":
+			break;
+		case "IA":
+			break;
+		case "KS":
+			break;
+		case "KY":
+			break;
+		case "LA":
+			break;
+		case "ME":
+			break;
+		case "MD":
+			break;
+		case "MA":
+			break;
+		case "MI":
+			break;
+		case "MN":
+			break;
+		case "MS":
+			break;
+		case "MO":
+			break;
+		case "MT":
+			break;
+		case "NE":
+			break;
+		case "NV":
+			break;
+		case "NH":
+			break;
+		case "NJ":
+			break;
+		case "NM":
+			break;
+		case "NY":
+			break;
+		case "NC":
+			break;
+		case "ND":
+			break;
+		case "OH":
+			break;
+		case "OK":
+			break;
+		case "OR":
+			break;
+		case "PA":
+			break;
+		case "RI":
+			break;
+		case "SC":
+			break;
+		case "SD":
+			break;
+		case "TN":
+			break;
+		case "TX":
+			break;
+		case "UT":
+			break;
+		case "VT":
+			break;
+		case "VA":
+			break;
+		case "WA":
+			break;
+		case "WV":
+			break;
+		case "WI":
+			break;
+		case "WY":
+			break;
+		case "PR":
+			break;	
+		default:
+			return sName + sReturn;  
+	}	
+	return "";
+
+}
+
+// --></script>
+
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body background='images/bgw2.gif'>
+</body>
+</html>
+
+
+<form method="POST" action="wizard6.asp" name="Wizard3">
+	<input type="hidden" name="Signer"> 
+	<input type="hidden" name="wizard" value="3">
+	<input type="hidden" name="clientleadid" value="161200">
+	<input type="hidden" name="signerctrmax" value="">
+	<!--<input type="hidden" name="signerctrtotalmax" value="">-->
+	<input type="hidden" name="vendortext"  value="COASTLINE MICRO,  INC.">
+	<input type="hidden" name="clientid" value="">
+		
+	<!--<input type="TEXT" name="vendord">-->
+	
+		<input type="hidden" name="vendord" id="vendord" value="28835">
+		
+	<input type="hidden" name=hidden1 value="Print Saved Application" id=hidden1>
+
+	<table border="0" cellpadding="0" width="100%">				
+		<tr>
+			<td align="CENTER" width="100%"><font face="Times New Roman" size="5" color="#0000ff"><blockquote>
+				
+				<p>Lease Application</p>
+				</font></blockquote></td>
+		</tr>
+	</table>
+	
+	<table border="0" cellpadding="0" width="100%">				
+		<tr>
+			<td align="LEFT" height="40" width="100%"><font size="2" face="arial">
+			Required Information must be filled out before submitting.  Additional information may be required based on other data entered.  When finished, please click save
+			 or submit .  To enter the Equipment/Lease structure information, please click on 
+			<input type="textarea" value="Next." readonly style="font-size: 10pt; color: rgb(0,0,255); border: medium none; 
+			font-weight: bolder; text-decoration: underline; cursor: hand" size="3" onClick="Structure()" id=textarea1 name=textarea1><br><br></font>
+			<font color="#FF0000"><b> Required information</b> </font>must be filled out before submitting.<br>
+			<font color="#800000"><b> Dependent information</b></font> may be required based on other data entered.</td>
+		</tr>
+		<tr>
+			<td><br></td>
+		</tr>
+		
+	</table>
+    
+    <table border="0 cellpadding="0" width="100%">
+		<tr align="center">
+			
+			<td align="LEFT" height="40" width="100%"><font size="2" face="arial" color = "blue"><b>App already submitted on !</font></b></td>
+						
+			<td align="left" valign="top">
+			
+			
+										
+			<td align="center" valign="top">
+			
+			
+			<td align="right" valign="top">
+			
+			
+			<td align="right" valign="top">
+			
+						
+		</tr>
+	</table>
+    <br>
+
+<!--  ********   Start Business Information Section   ********  -->
+<!--  ********   Start Business Information Section   ********  -->
+<!--  ********   Start Business Information Section   ********  -->
+	
+	
+	<table border="0" cellpadding="0" width="100%">
+		<tr align="center">
+			<td background="Back4.gif" colspan="3" width="100%"><div align="left"><a name="Business">
+				<font face="Arial" color="#000000" size="4"><strong>Business Information</strong></font></a></td>
+		</tr>
+		<tr>
+			<td>
+				<table border="0" cellpadding="0" cellspacing="4">
+					<tr>
+						<td>
+							<font face="Arial" size="2" color="#FF0000"><b>Lessee Name</b></font><br>
+							<input type="text" name="clientname" size="40" value="ACI COMMERCIAL INSURANCE BROKER, INC." maxlength="50">
+						</td>
+						<td>
+							<font face="Arial" size="2" color="#FF0000"><b>Telephone</b></font><br>
+							<input type="text" name="clientphone" size="15" value="714-755-1575" maxlength="12">
+						</td>
+						<td>
+							<font face="Arial" size="2"><b>Fax</b></font><br>
+							<input type="text" name="clientfax" size="15" value="714-755-4124" maxlength="12">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table border="0" cellpadding="0" cellspacing="4">
+					<tr>
+						<td>
+							<font face="Arial" size="2"><b>Street No.</b></font><br>
+							<input type="text" name="clientstreetno" size="8" value="505" maxlength="10">
+						</td>
+						<td>
+							<font face="Arial" size="2" color="#FF0000"><b>Street Name</b></font><br>
+							<input type="text" name="clientaddress" size="26" value="E. FIRST ST" maxlength="35">
+						</td>
+						<td align="left">
+							<font face="Arial" size="2" color="#000000"><b>Street Type</b></font><br>
+							<input type="text" name="clientstreettype" size="10" maxlength="10" value="">
+						</td>
+						<td>
+							<font face="Arial" size="2"><b>Suite</b></font><br>
+							<input type="text" name="clientstreetapt" size="11" maxlength="10" value="E">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="50">
+				<table border="0" cellpadding="0" cellspacing="4">
+					<tr>
+						<td width="144">
+							<font face="Arial" size="2" color="#FF0000"><b>Zip Code</b></font><br>
+							<input type="text" name="clientzip" size="10" maxlength="10" value="92780" onBlur="LookupZip(this, clientcity, clientstate, cityid)">
+							<input type="hidden" name="cityid" id="cityid">
+						</td>
+						<td width="44">
+							<font face="Arial" size="2" color="#FF0000"><b>City</b></font><br>
+							<input type="text" name="clientcity" size="35" readonly onClick='javascript:window.alert("Please enter a zip code.")'value= "TUSTIN" maxlength="20">
+							
+						</td>
+						<td width="85">
+							<font face="Arial" size="2" color="#FF0000"><b>State</b></font><br>
+							<input type="text" name="clientstate" size="2" readonly onClick='javascript:window.alert("Please enter a zip code.")'value="CA" maxlength="2"></td>
+						
+						<td align="left" width="211"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="100%" height="49">
+
+
+<!--  ********   Start Headquarter Section   ********  -->
+<!--  ********   Start Headquarter Section   ********  -->
+<!--  ********   Start Headquarter Section   ********  -->				
+				
+				<table border="0" cellpadding="0" cellspacing="4">
+					
+					<tr align="center">
+					<td background="Back4.gif" colspan="3" width="100%"><div align="left"><a name="Headquarter">
+					<font face="Arial" color="#000000" size="4"><strong>Headquarters Address (If different)</strong></font></a></td>
+					</tr>
+									
+					<tr>
+						<td>
+							<font face="Arial" size="2"><b>Street No.</b></font><br>
+							<input type="text" name="hqstreetno" size="8" value="" maxlength="10">
+						</td>
+						
+						<td>
+							<font face="Arial" size="2"><b>Street Name</b></font><br>
+							<input type="text" name="hqaddress" size="26" value="" maxlength="35">
+						</td>
+						
+						<td>
+							<font face="Arial" size="2"><b>Street Type</b></font><br>
+							<input type="text" name="hqstreettype" size="10" maxlength="10" value="">
+						</td>
+						<td>
+							<font face="Arial" size="2"><b>Suite</b></font><br>
+							<input type="text" name="hqstreetapt" size="11" maxlength="10" value="">
+						</td>
+					</tr>
+				</table>
+				
+				<table border="0" cellpadding="0" cellspacing="4">
+					<tr>
+						<td width="144">
+							<font face="Arial" size="2"><b>Zip Code</b></font><br>
+							<input type="text" name="hqzip" size="10" maxlength="10" value="" onBlur="LookupZip(this, hqcity, hqstate, cityid)"></td>
+						<td width="44">
+							<font face="Arial" size="2"><b>City</b></font><br>							
+							<input type="text" name="hqcity" size="35" readonly onClick='javascript:window.alert("Please enter a zip code.")'value= ""maxlength="20">
+						</td>
+						<td width="85">
+							<font face="Arial" size="2"><b>State</b></font><br>
+							<input type="text" name="hqstate" size="2" readonly onClick='javascript:window.alert("Please enter a zip code.")'value="" maxlength="2"></td>
+						
+						<td align="left" width="211"></td>
+					</tr>
+				</table>
+				<table>	
+					<tr>
+						<td valign="top" width="148">
+							<font face="Arial" size="2"><font color="#FF0000"><b>Business Type</b></font><br>
+							<!--Convert this later-->
+							</font><select name="businesstype" size=1>
+<option value="1" >CORPORATION</option>
+<option value="5" >LLC</option>
+<option value="4" >NON-PROFIT</option>
+<option value="3" >PARTNERSHIP</option>
+<option value="2" >PROPRIETORSHIP</option>
+</select>
+ 
+						</td>
+						<td>
+							<font face="Arial" size="2" color="#800000"><b>Does Business As</b></font><br>
+							<input type="text" name="clientnamedba" size="40" value="DBA AMERICAN CLASSIC INSURANCE AGENCY" maxlength="50">
+						</td>
+					</tr>
+					<tr>
+						<td valign="top" width="213">
+							<font face="Arial" size="2"><b>Years In Business</b><br>
+							</font><input type="text" name="yearsinbus" size="17" value="18" maxlength="2">
+						</td>
+						<td valign="top" width="164">
+							<font face="Arial" size="2"><font color="#FF0000"><b>Business Description</b></font><br>
+							<!--Convert this later -->
+							</font><select name="businessdescription" size=1>
+<option value=""><option value="ACCOUNTANT/ACCOUNTING FIRM" >ACCOUNTANT/ACCOUNTING FIRM</option>
+<option value="ALLERGIST" >ALLERGIST</option>
+<option value="AMBULANCE SVC" >AMBULANCE SVC</option>
+<option value="ANESTHESIOLOGIST" >ANESTHESIOLOGIST</option>
+<option value="AUDIOLOGIST/DISPENSER" >AUDIOLOGIST/DISPENSER</option>
+<option value="CARDIOLOGIST" >CARDIOLOGIST</option>
+<option value="CHIROPRACTOR" >CHIROPRACTOR</option>
+<option value="CONSTRUCTION" >CONSTRUCTION</option>
+<option value="DATA PROCESSING SERVICE" >DATA PROCESSING SERVICE</option>
+<option value="DENTIST" >DENTIST</option>
+<option value="DERMATOLOGIST" >DERMATOLOGIST</option>
+<option value="EMERGENCY MEDICAL CARE" >EMERGENCY MEDICAL CARE</option>
+<option value="ENT" >ENT</option>
+<option value="EXCAVATION" >EXCAVATION</option>
+<option value="FITNESS/GYM" >FITNESS/GYM</option>
+<option value="FOOD SERVICES/COURIER" >FOOD SERVICES/COURIER</option>
+<option value="GENERAL SURGEON" >GENERAL SURGEON</option>
+<option value="GENERAL/FAMILY PRACTITIONER" >GENERAL/FAMILY PRACTITIONER</option>
+<option value="HEMATOLOGY" >HEMATOLOGY</option>
+<option value="HOME HEALTHCARE" >HOME HEALTHCARE</option>
+<option value="HOSPITAL" >HOSPITAL</option>
+<option value="IMAGING TECHNICIAN" >IMAGING TECHNICIAN</option>
+<option value="INTERNIST" >INTERNIST</option>
+<option value="LABORATORY" >LABORATORY</option>
+<option value="LAW FIRM/ATTORNEY" >LAW FIRM/ATTORNEY</option>
+<option value="MANUFACTURING" >MANUFACTURING</option>
+<option value="MULTI-SPECIALTY ( 5+ DRS)" >MULTI-SPECIALTY ( 5+ DRS)</option>
+<option value="MULTI-SPECIALTY (2-4 DRS)" >MULTI-SPECIALTY (2-4 DRS)</option>
+<option value="MUNICIPAL" >MUNICIPAL</option>
+<option value="NEPHROLOGIST" >NEPHROLOGIST</option>
+<option value="NEUROLOGIST" >NEUROLOGIST</option>
+<option value="NON-PHYSICIAN PROVIDER" >NON-PHYSICIAN PROVIDER</option>
+<option value="NUCLEAR MEDICINE" >NUCLEAR MEDICINE</option>
+<option value="NURSE/RN" >NURSE/RN</option>
+<option value="NURSING HOME" >NURSING HOME</option>
+<option value="OB/GYN" >OB/GYN</option>
+<option value="OCCULIST" >OCCULIST</option>
+<option value="ONCOLOGY" >ONCOLOGY</option>
+<option value="OPHTHALMOLOGIST" >OPHTHALMOLOGIST</option>
+<option value="OPTICIAN" >OPTICIAN</option>
+<option value="OPTOMETRIST" >OPTOMETRIST</option>
+<option value="ORAL SURGEON" >ORAL SURGEON</option>
+<option value="ORTHOPAEDICS" >ORTHOPAEDICS</option>
+<option value="OSTEOPATH" >OSTEOPATH</option>
+<option value="OTOLARNGOLOGY" >OTOLARNGOLOGY</option>
+<option value="PATHOLOGIST" >PATHOLOGIST</option>
+<option value="PATHOLOGY" >PATHOLOGY</option>
+<option value="PEDIATRICIAN" >PEDIATRICIAN</option>
+<option value="PHARMACIST" >PHARMACIST</option>
+<option value="PHARMACY" >PHARMACY</option>
+<option value="PHYSICAL THERAPIST" >PHYSICAL THERAPIST</option>
+<option value="PHYSICIAN ASSISTANT" >PHYSICIAN ASSISTANT</option>
+<option value="PLASTIC SURGEON" >PLASTIC SURGEON</option>
+<option value="PODIATRIST" >PODIATRIST</option>
+<option value="PRINTING" >PRINTING</option>
+<option value="PSYCHIATRIST" >PSYCHIATRIST</option>
+<option value="PSYCHOLOGIST" >PSYCHOLOGIST</option>
+<option value="PULMONOLOGIST" >PULMONOLOGIST</option>
+<option value="RADIOLOGIST" >RADIOLOGIST</option>
+<option value="RECYCLING PLANT" >RECYCLING PLANT</option>
+<option value="RETAIL" >RETAIL</option>
+<option value="SERVICE" SELECTED>SERVICE</option>
+<option value="SUPPORT SERVICES FOR ATTORNEYS" >SUPPORT SERVICES FOR ATTORNEYS</option>
+<option value="TRANSPORTATION" >TRANSPORTATION</option>
+<option value="UROLOGIST" >UROLOGIST</option>
+<option value="VETERINARIAN" >VETERINARIAN</option>
+</select>
+ 
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<font face="Arial" size="2"><b>Contact Person</b></font><br>
+							<input type="text" name="contactperson" size="30" maxlength="50" value="VAUGHN EDWARDS">
+						</td>
+						<td>
+							<font face="Arial" size="2"><b>Contact Person's Title</b></font><br>
+							<input type="text" name="contacttitle" size="30" maxlength="25" value="PRESIDENT">
+						</td>
+					</tr>
+						<tr>
+						<td>
+							<font face="Arial" size="2"><b>Email Address</b></font><br>
+							<input type="text" name="clientemail" size="30" maxlength="100" value="">
+						</td>
+						
+						<td>
+							<font face="Arial" size="2"><b>Amex Representative</b></font><br>
+							<input type="text" name="amexrep" size="30" maxlength="100" value="LAURA OSTERLING">
+						</td>
+						</tr>
+						<tr>
+						<td>
+							<font face="Arial" size="2"><b># of Employees</b></font><br>
+							<input type="text" name="employees" size="14" onKeyPress="return isInteger(event)" value="0">
+						</td>
+						</tr>
+				</table>
+				
+				<p><font face="Arial" size="2"><b>WriteUps</b></font><br><textarea rows="5" name="memo" cols="50"></textarea>				
+				
+			</td>
+		</tr>
+		<tr>
+			<td><br></td>
+		</tr>
+	</table>
+
+
+<!--  ********   Start Vendor Section   ********  -->
+<!--  ********   Start Vendor Section   ********  -->
+<!--  ********   Start Vendor Section   ********  -->		
+	
+	
+	<table border="0" cellpadding="0" width="100%">
+		<tr>
+			<td width="100%" background="Back4.gif" colspan="3">
+				<a name="Vendor"><font face="Arial" color="#000000" size="4"><strong>Vendor Information</strong></font></a></td>
+		</tr>
+		<tr>
+			<td height="50" valign="center">
+				&nbsp
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table border="0" cellpadding="0" cellspacing="0">
+				
+				</TD>
+				
+					
+				
+				
+				
+				
+				</tr>
+					<tr>
+						<td width="100%">
+							<table border="0" cellpadding="0" cellspacing="4">
+								<tr>
+									<td>
+										<font face="Arial" size="2" color="#FF0000"><b>Vendor Name</b></font><br>
+										<input type="text" name="vendor_name" size="40" 
+										value='COASTLINE MICRO,  INC.'readonly>										
+									</td>
+									<td>
+										<font face="Arial" size="2" color="#000000"><b>Telephone</b></font><br>
+										<input type="text" name="vendor_phone" size="15" 
+										value='9494509966'readonly>		
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				<tr>
+					<td width="100%">
+						<table border="0" cellpadding="0" cellspacing="4">
+							<tr>
+								<td>
+									<font face="Arial" size="2"><b>Vendor Address</b></font><br>
+									<input type="text" name="vendor_address" size="40"
+									value='60 TECHNOLOGY'readonly>		
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td height="50" width="100%">
+						<table border="0" cellpadding="0" cellspacing="4">
+							<tr>
+								<td>
+									<font face="Arial" size="2"><b>City</b></font><br>
+									<input type="text" name="vendor_city" size="30"
+									value='IRVINE'readonly>		
+								</td>
+							    <td align="left">
+									<font face="Arial" size="2"><b>ST</b>&nbsp;&nbsp;</font><br>
+									<input type="text" name="vendor_state" size="2"
+									value='CA'readonly>	
+								</td>
+							    <td align="left">
+									<font face="Arial" size="2"><b>Zip Code</b></font><br>
+									<input type="text" name="vendor_zip" size="10" maxlength="5"
+									value='92618'readonly>	
+								</td>
+							</tr>
+						</table>
+						
+					</td>
+				</tr>
+				<tr>
+					<td width="100%" height="49">
+						<table border="0" cellpadding="0" cellspacing="4">
+							<tr>
+								<td>
+									<font face="Arial" size="2"><b>Contact Person</b></font><br>
+									<input type="text" name="vendor_contact" size="30"
+									value=''readonly>
+								</td>
+								<!-- Andy, 3/29/2000, remove Vendor Salesperson 
+								<td>
+									<font face="Arial" size="2"><b>Vendor Salesperson</b></font><br>
+									<input type="text" name="brokername" size="20" value="" readonly>
+								</td>
+								-->
+								<td>
+									<input  type="hidden"name="txtSource" id=txtSource value="">
+									
+								</td>
+								
+								
+								<td>
+									<input  type="hidden"name="txtRegion" id=txtRegion value="">
+								</td>					
+								
+								
+								
+									
+								<td>
+									<input type="hidden" name="txtpersona" id=txtpersona value="0">
+								</td>
+								
+								<td>								
+									<input type="hidden" name="txtAppInputFor" id="txtAppInputFor" value="">
+								</td>								
+								
+								
+								
+								<td>
+									<input type="hidden" name="txtvendorpersona" id=txtvendorpersona  value="0">
+								</td>
+								<td>
+									<input type="hidden" name="txtdealerid" id=txtdealerid  value="0">
+								</td>
+							<tr>	
+								<td>
+									<INPUT type="button" value="Vendor Sales Rep" onclick="OpenVendorRepWindow()" id=cmdVendorRep name=cmdVendorRep>
+								</td>								
+							</tr>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td><br></td>
+		</tr>
+	</table>
+
+	
+<!--  ********   Start Personal Section   ********  -->
+<!--  ********   Start Personal Section   ********  -->
+<!--  ********   Start Personal Section   ********  -->		
+	
+	
+	<table border="0" cellpadding="0" width="100%">
+		<tr align="center">
+			<td background="Back4.gif" colspan="3" width="100%"><div align="left"><a name="Personal"><font face="Arial" color="#000000" size="4"><strong>Personal Information</strong></font></a></td>
+		</tr>
+
+		<tr>
+			<td width="605"><br>
+				<input type="hidden" name="ecoaflag"  value="3">
+			</td>
+		</tr>
+		
+		<tr>
+			<td width="605"><fieldset><legend><b><small>Principal</small></b></legend>
+				<table border="0">
+					<tr>
+						<td width="33%"><b><font face="Arial" size="2"><font color="#800000"><b>First Name</b></font><br></font>
+							<input type="text" name="clientfirstname" size="25" value="VAUGHN" maxlength="30"></td>
+						<td width="33%"><font color="#800000" face="Arial" size="2"><b>Last Name</b></font>
+							<input type="text" name="clientlastname" size="20" value="EDWARDS" maxlength="30"></td>
+						<td width="34%"><font face="Arial" size="2"><b>Title</b></font><br>
+							<input type="text" name="clienttitle" size="15" value="PRESIDENT" maxlength="15"></td>
+					</tr>
+				</table>
+				<table border="0" cellpadding="3" cellspacing="0">
+					<tr>
+						
+						<td width="44" valign="top" align="center"><font face="Arial" color="#000000" size="2"><b>Signer</b></font><br>
+							<input type="checkbox" name="signer2" value="1"  " checked " ></td>
+						<td width="43" valign="top" align="center"><font color="#800000" face="Arial" size="2"><b>Guarantor</b></font><br>
+							<input type="checkbox" name="guarantor2" value="1" ></td>
+						<td width="50" valign="top" colspan="3"><font color="#800000" face="Arial" size="2"><b>SSN</b></font><br>							
+							<input type="text" name="ssno2" size="15" value="" maxlength="12"></td>
+						<td valign="top"width="50"><font face="Arial" size="2"><b>Yrs Lic</b></font><br>
+							<input type="text" name="yrslic2" size="7" value="0" maxlength="15"></td>
+						<td valign="top" width="100">
+							<font face="Arial" size="2"><b>Speciality</b></font><br>
+							<!--Convert this later -->
+							</font><select name="medicallicensespecialty2" size=1>
+<option value=""><option value="ALLERGY & IMMUNOLOGY" >ALLERGY & IMMUNOLOGY</option>
+<option value="ANESTHESIOLOGY" >ANESTHESIOLOGY</option>
+<option value="COLON & RECTAL" >COLON & RECTAL</option>
+<option value="DERMATOLOGY" >DERMATOLOGY</option>
+<option value="EMERGENCY MEDICINE" >EMERGENCY MEDICINE</option>
+<option value="ENDOCRINOLOGIST" >ENDOCRINOLOGIST</option>
+<option value="FAMILY PRACTICE" >FAMILY PRACTICE</option>
+<option value="GENERAL MEDICINE" >GENERAL MEDICINE</option>
+<option value="INTERNAL MEDICINE" >INTERNAL MEDICINE</option>
+<option value="INTERNAL MEDICINE 800 #" >INTERNAL MEDICINE 800 #</option>
+<option value="MEDICAL GENETICS" >MEDICAL GENETICS</option>
+<option value="NEUROLOGICAL SURGERY" >NEUROLOGICAL SURGERY</option>
+<option value="NUCLEAR MEDICINE" >NUCLEAR MEDICINE</option>
+<option value="NURSE" >NURSE</option>
+<option value="OBSTETRICS & GYNECOLOGY" >OBSTETRICS & GYNECOLOGY</option>
+<option value="OCCUPATIONAL THERAPIST" >OCCUPATIONAL THERAPIST</option>
+<option value="OPHTHAMOLOGY" >OPHTHAMOLOGY</option>
+<option value="OPTICIANS" >OPTICIANS</option>
+<option value="OPTOMETRY" >OPTOMETRY</option>
+<option value="ORAL SURGERY" >ORAL SURGERY</option>
+<option value="ORTHOPAEDIC SURGERY" >ORTHOPAEDIC SURGERY</option>
+<option value="OTOLARYNGOLOGY" >OTOLARYNGOLOGY</option>
+<option value="PATHOLOGY" >PATHOLOGY</option>
+<option value="PEDIATRICS" >PEDIATRICS</option>
+<option value="PHYSCIAL MEDICINE & REHAB" >PHYSCIAL MEDICINE & REHAB</option>
+<option value="PLASTIC SURGERY" >PLASTIC SURGERY</option>
+<option value="PODIATRY" >PODIATRY</option>
+<option value="POLYSOMNOGRAPHER" >POLYSOMNOGRAPHER</option>
+<option value="PREVENTIVE MEDICINE" >PREVENTIVE MEDICINE</option>
+<option value="PSYCHIATRY & NEUROLOGY" >PSYCHIATRY & NEUROLOGY</option>
+<option value="RADIOLOGY" >RADIOLOGY</option>
+<option value="RESPIRATORY THERAPIST" >RESPIRATORY THERAPIST</option>
+<option value="RHEUMATOLOGIST" >RHEUMATOLOGIST</option>
+<option value="SURGERY" >SURGERY</option>
+<option value="THORACIC SURGERY" >THORACIC SURGERY</option>
+<option value="UROLOGY" >UROLOGY</option>
+</select>
+
+						</td>
+					
+					</tr>
+				</table>
+				<table border="0" cellpadding="3" cellspacing="0">
+					<tr>
+						<td width="83" colspan="2"><p align="center"><font color="#000000" face="Arial" size="2"><b>Street No.</b></font><br>
+							<input type="text" name="clienthomestreetno" size="8" value=" " maxlength="10"></td>
+						<td colspan="3" width="169"><font face="Arial" color="#800000" size="2"><b>Street Name</b></font><br>
+							<input type="text" name="clienthomeaddress" size="26" value=" " maxlength="35"></td>
+						
+						<td align="left" width="89"><font face="Arial" color="#000000" size="2"><b>Street Type</b></font><br>
+							<input type="text" name="clienthomestreettype" size="10" maxlength="10" value=" "></td>
+						<td width="100"><font face="Arial" color="#000000" size="2"><b>Apt. Number</b></font><br>
+							<input type="text" name="clienthomestreetapt" size="11" maxlength="10" value=" "></td>
+						
+					</tr>
+				</table>
+				<table border="0" cellpadding="3" cellspacing="0">
+					<tr align="center">
+						<td width="83" valign="top"><p align="left"><font color="#800000" face="Arial" size="2"><b>Zip Code<b></font><br>
+							<input type="text" name="clienthomezip" size="10" maxlength="10" value=" " onBlur="LookupZip(this, clienthomecity, clienthomestate, cityid)"></td>
+						
+						<td width="171" valign="top" colspan="2"><p align="left"><font color="#800000" face="Arial" size="2"><b>City</b></font><br>
+							<input type="text" name="clienthomecity" size="20" readonly onClick='javascript:window.alert("Please enter a zip code.")' value=" " maxlength="20"></td>
+						<td width="32" valign="top"><p align="left"><font color="#800000" face="Arial" size="2"><b>State</b></font><br>
+							<input type="text" name="clienthomestate" size="2" readonly onClick='javascript:window.alert("Please enter a zip code.")' value=" " maxlength="2"></td>
+						<td width="89" valign="top" colspan="2"><p align="center"><font face="Arial" color="#000000" size="2"><b>Same as Business</b></font>
+							<input type="button" value="Yes" onClick="SameInformation()" id=button1 name=button1></td>
+						<td width="100" valign="top" align="center"></td>
+						
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td><br></td>
+		</tr>
+		<tr align="center">
+			<td width="605"><fieldset><legend><b><small>Additional Principal</small></b></legend> 
+				<table border="0">
+					<tr>
+						<td width="33%"><font face="Arial" size="2"color="#800000" ><b>First Name</b></font><br>
+						<input type="text" name="owner3" size="25" value="" maxlength="50"></td>
+						<td width="41%"><font face="Arial" size="2"color="#800000" ><b>Last Name</b></font><br>
+						<input type="text" name="owner3last" size="20" value="" maxlength="50"></td>
+						<td width="27%"><font face="Arial" size="2"><b>Title</b></font><br>
+						<input type="text" name="title3" size="15" value=" " maxlength="10"></td>
+					</tr>
+				</table>
+				<table border="0" cellpadding="3" cellspacing="0">
+					<tr>
+						<td width="42" valign="top"></td>
+						<td width="41" valign="top"></td>
+						<td width="44" valign="top" align="center"><font face="Arial" color="#000000" size="2"><b>Signer</b></font><br>
+						<input type="checkbox" name="signer3" value="1" ></td>
+						<td width="43" valign="top" align="center"><font color="#800000" face="Arial" size="2"><b>Guarantor</b></font><br>
+						<input type="checkbox" name="guarantor3" value="1" ></td>
+						<td width="311" valign="top" colspan="3"><font color="#800000" face="Arial" size="2"><b>SSN</b></font><br>
+						<input type="text" name="ssno3" size="15" value="" maxlength="12"></td>
+						<td valign="top"width="50"><font face="Arial" size="2"><b>Yrs Lic</b></font><br>
+							<input type="text" name="yrslic3" size="7" value="0" maxlength="15"></td>
+						<td valign="top" width="100">
+							<font face="Arial" size="2"><b>Speciality</b></font><br>
+							<!--COM method  Repeat -->
+							</font><select name="medicallicensespeciality3" size=1>
+<option value=""><option value="ALLERGY & IMMUNOLOGY" >ALLERGY & IMMUNOLOGY</option>
+<option value="ANESTHESIOLOGY" >ANESTHESIOLOGY</option>
+<option value="COLON & RECTAL" >COLON & RECTAL</option>
+<option value="DERMATOLOGY" >DERMATOLOGY</option>
+<option value="EMERGENCY MEDICINE" >EMERGENCY MEDICINE</option>
+<option value="ENDOCRINOLOGIST" >ENDOCRINOLOGIST</option>
+<option value="FAMILY PRACTICE" >FAMILY PRACTICE</option>
+<option value="GENERAL MEDICINE" >GENERAL MEDICINE</option>
+<option value="INTERNAL MEDICINE" >INTERNAL MEDICINE</option>
+<option value="INTERNAL MEDICINE 800 #" >INTERNAL MEDICINE 800 #</option>
+<option value="MEDICAL GENETICS" >MEDICAL GENETICS</option>
+<option value="NEUROLOGICAL SURGERY" >NEUROLOGICAL SURGERY</option>
+<option value="NUCLEAR MEDICINE" >NUCLEAR MEDICINE</option>
+<option value="NURSE" >NURSE</option>
+<option value="OBSTETRICS & GYNECOLOGY" >OBSTETRICS & GYNECOLOGY</option>
+<option value="OCCUPATIONAL THERAPIST" >OCCUPATIONAL THERAPIST</option>
+<option value="OPHTHAMOLOGY" >OPHTHAMOLOGY</option>
+<option value="OPTICIANS" >OPTICIANS</option>
+<option value="OPTOMETRY" >OPTOMETRY</option>
+<option value="ORAL SURGERY" >ORAL SURGERY</option>
+<option value="ORTHOPAEDIC SURGERY" >ORTHOPAEDIC SURGERY</option>
+<option value="OTOLARYNGOLOGY" >OTOLARYNGOLOGY</option>
+<option value="PATHOLOGY" >PATHOLOGY</option>
+<option value="PEDIATRICS" >PEDIATRICS</option>
+<option value="PHYSCIAL MEDICINE & REHAB" >PHYSCIAL MEDICINE & REHAB</option>
+<option value="PLASTIC SURGERY" >PLASTIC SURGERY</option>
+<option value="PODIATRY" >PODIATRY</option>
+<option value="POLYSOMNOGRAPHER" >POLYSOMNOGRAPHER</option>
+<option value="PREVENTIVE MEDICINE" >PREVENTIVE MEDICINE</option>
+<option value="PSYCHIATRY & NEUROLOGY" >PSYCHIATRY & NEUROLOGY</option>
+<option value="RADIOLOGY" >RADIOLOGY</option>
+<option value="RESPIRATORY THERAPIST" >RESPIRATORY THERAPIST</option>
+<option value="RHEUMATOLOGIST" >RHEUMATOLOGIST</option>
+<option value="SURGERY" >SURGERY</option>
+<option value="THORACIC SURGERY" >THORACIC SURGERY</option>
+<option value="UROLOGY" >UROLOGY</option>
+</select>
+
+						</td>
+					</tr>
+				</table>
+				<table border="0" cellpadding="3" cellspacing="0">
+					<tr>
+						<td width="86" colspan="2"><font face="Arial" color="#000000" size="2"><b>Street No.</b></font><br>
+						<input type="text" name="owner3streetno" size="8" value=" " maxlength="10"></td>
+						<td colspan="3" width="79"><font face="Arial" size="2" color="#800000"><b>Street Name</b></font><br>
+						<input type="text" name="address3" size="26" value=" " maxlength="35"></td>
+						<td align="left" width="126"><font face="Arial" color="#000000" size="2"><b>Street Type</b></font><br>
+						<input type="text" name="owner3streettype" size="10" maxlength="10" value=" "></td>
+						<td width="188"><font face="Arial" size="2"><b>Apt. Number</b></font><br>
+						<input type="text" name="owner3streetapt" size="11" maxlength="10" value=" "></td>
+					</tr>
+				</table>
+				<table border="0" cellpadding="3" cellspacing="0">
+					<tr align="left">
+						
+						<td width="83" valign="top"><p align="left"><font face="Arial" size="2"color="#800000" ><b>Zip Code</b></font><br>
+						<input type="text" name="zip3" size="10" maxlength="10" value=" " onBlur="LookupZip(this, city3, state3, cityid)"></td>
+						<td width="171" valign="top" colspan="2"><p align="left"><font face="Arial" size="2"color="#800000" ><b>City</b></font><br>
+						<input type="text" name="city3" size="20" readonly onClick='javascript:window.alert("Please enter a zip code.")' value=" " maxlength="20"></td>
+						<td width="32" valign="top"><font face="Arial" size="2"color="#800000" ><b>State</b></font><br>
+						<input type="text" name="state3" size="2" readonly onClick='javascript:window.alert("Please enter a zip code.")' value=" " maxlength="2"></td>
+						
+						<td width="189" valign="top" align="center"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr align="center">
+			<td width="605"><fieldset><legend><b><small>Additional Principals</small></b></legend> 
+				
+				<table border="0">
+					<tr>					
+					<td width="100%" colspan="2">Full Name <select name="add_name"
+					id="add_name" size="1" onChange="NameChange()">
+				<option value="">
+				</select></td>
+						
+				</tr>
+					
+					<tr>
+						<INPUT Type=hidden Name="name">
+						<INPUT Type=hidden Name="signerctr">
+						<td width="33%"><font face="Arial" size="2"color="#800000" ><b>First Name</b></font><br>
+						<input type="text" name="owner4first" size="25" maxlength="50"></td>
+						<td width="41%"><font face="Arial" size="2"color="#800000" ><b>Last Name</b></font><br>
+						<input type="text" name="owner4last" size="20" maxlength="50"></td>
+						<td width="27%"><font face="Arial" size="2"><b>Title</b></font><br>
+						<input type="text" name="title4" size="15" maxlength="10"></td>
+					</tr>
+				</table>
+				<table border="0" cellpadding="3" cellspacing="0">
+					<tr>
+						<td width="42" valign="top"></td>
+						<td width="41" valign="top"></td>
+						<td width="44" valign="top" align="center"><font face="Arial" color="#000000" size="2"><b>Signer</b></font><br>
+						<input type="checkbox" name="signer4" value="0" ></td>
+						<td width="43" valign="top" align="center"><font color="#800000" face="Arial" size="2"><b>Guarantor</b></font><br>
+						<input type="checkbox" name="guarantor4" value="0" ></td>
+						<td width="311" valign="top" colspan="3"><font color="#800000" face="Arial" size="2"><b>SSN</b></font><br>
+						<input type="text" name="ssno4" size="15" maxlength="12"></td>
+						<td valign="top"width="50"><font face="Arial" size="2"><b>Yrs Lic</b></font><br>
+							<input type="text" name="yrslic" size="7" maxlength="15"></td>
+						<td valign="top" width="100">
+							<font face="Arial" size="2"><b>Speciality</b></font><br>
+							<!-- Convert this later -->
+							</font><select name="medicallicensespecialty" size=1>
+<option value=""><option value="ALLERGY & IMMUNOLOGY" >ALLERGY & IMMUNOLOGY</option>
+<option value="ANESTHESIOLOGY" >ANESTHESIOLOGY</option>
+<option value="COLON & RECTAL" >COLON & RECTAL</option>
+<option value="DERMATOLOGY" >DERMATOLOGY</option>
+<option value="EMERGENCY MEDICINE" >EMERGENCY MEDICINE</option>
+<option value="ENDOCRINOLOGIST" >ENDOCRINOLOGIST</option>
+<option value="FAMILY PRACTICE" >FAMILY PRACTICE</option>
+<option value="GENERAL MEDICINE" >GENERAL MEDICINE</option>
+<option value="INTERNAL MEDICINE" >INTERNAL MEDICINE</option>
+<option value="INTERNAL MEDICINE 800 #" >INTERNAL MEDICINE 800 #</option>
+<option value="MEDICAL GENETICS" >MEDICAL GENETICS</option>
+<option value="NEUROLOGICAL SURGERY" >NEUROLOGICAL SURGERY</option>
+<option value="NUCLEAR MEDICINE" >NUCLEAR MEDICINE</option>
+<option value="NURSE" >NURSE</option>
+<option value="OBSTETRICS & GYNECOLOGY" >OBSTETRICS & GYNECOLOGY</option>
+<option value="OCCUPATIONAL THERAPIST" >OCCUPATIONAL THERAPIST</option>
+<option value="OPHTHAMOLOGY" >OPHTHAMOLOGY</option>
+<option value="OPTICIANS" >OPTICIANS</option>
+<option value="OPTOMETRY" >OPTOMETRY</option>
+<option value="ORAL SURGERY" >ORAL SURGERY</option>
+<option value="ORTHOPAEDIC SURGERY" >ORTHOPAEDIC SURGERY</option>
+<option value="OTOLARYNGOLOGY" >OTOLARYNGOLOGY</option>
+<option value="PATHOLOGY" >PATHOLOGY</option>
+<option value="PEDIATRICS" >PEDIATRICS</option>
+<option value="PHYSCIAL MEDICINE & REHAB" >PHYSCIAL MEDICINE & REHAB</option>
+<option value="PLASTIC SURGERY" >PLASTIC SURGERY</option>
+<option value="PODIATRY" >PODIATRY</option>
+<option value="POLYSOMNOGRAPHER" >POLYSOMNOGRAPHER</option>
+<option value="PREVENTIVE MEDICINE" >PREVENTIVE MEDICINE</option>
+<option value="PSYCHIATRY & NEUROLOGY" >PSYCHIATRY & NEUROLOGY</option>
+<option value="RADIOLOGY" >RADIOLOGY</option>
+<option value="RESPIRATORY THERAPIST" >RESPIRATORY THERAPIST</option>
+<option value="RHEUMATOLOGIST" >RHEUMATOLOGIST</option>
+<option value="SURGERY" >SURGERY</option>
+<option value="THORACIC SURGERY" >THORACIC SURGERY</option>
+<option value="UROLOGY" >UROLOGY</option>
+</select>
+
+						</td>
+					</tr>
+				</table>
+				<table border="0" cellpadding="3" cellspacing="0">
+					<tr>
+						<td width="86" colspan="2"><font face="Arial" color="#000000" size="2"><b>Street No.</b></font><br>
+						<input type="text" name="owner4streetno" size="8" maxlength="10"></td>
+						<td colspan="3" width="79"><font face="Arial" size="2" color="#800000"><b>Street Name</b></font><br>
+						<input type="text" name="address4" size="26" maxlength="35"></td>
+						<td align="left" width="126"><font face="Arial" color="#000000" size="2"><b>Street Type</b></font><br>
+						<input type="text" name="owner4streettype" size="10" maxlength="10"></td>
+						<td width="188"><font face="Arial" size="2"><b>Apt. Number</b></font><br>
+						<input type="text" name="owner4streetapt" size="11" maxlength="10"></td>
+					</tr>
+				</table>
+				<table border="0" cellpadding="3" cellspacing="0">
+					<tr align="left">
+						
+						<td width="83" valign="top"><p align="left"><font face="Arial" size="2"color="#800000" ><b>Zip Code</b></font><br>
+						<input type="text" name="zip4" size="10" maxlength="10" onBlur="LookupZip(this, city4, state4, cityid)"></td>
+						<td width="171" valign="top" colspan="2"><p align="left"><font face="Arial" size="2"color="#800000" ><b>City</b></font><br>
+						<input type="text" name="city4" size="20" maxlength="20" readonly onClick='javascript:window.alert("Please enter a zip code.")'></td>
+						<td width="32" valign="top"><font face="Arial" size="2"color="#800000" ><b>State</b></font><br>
+						<input type="text" name="state4" size="2" maxlength="2" readonly onClick='javascript:window.alert("Please enter a zip code.")'></td>
+						
+						<td width="189" valign="top" align="center"></td>
+					</tr>
+					<tr align="center">
+						<td width="86" valign="top" colspan="2"></td>
+						<td width="34" valign="top" colspan="2"><p align="left"><font face="Arial" size="2"color="#800000" ><b></b></font><br>
+						<input type="button" name="signer_add" id="signer_add" value="  Add  " onClick="SignerClick(0)">
+						<td width="39" valign="top"><p align="middle"><font face="Arial" size="2"color="#800000" ><b></b></font><br>
+						<input type="button" name="signer_update" id="signer_update" value="Update" onClick="SignerClick(1)"></td>
+						
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><br></td>
+		</tr>
+	</table>
+	
+<!--  ********   Start References Section   ********  -->
+<!--  ********   Start References Section   ********  -->
+<!--  ********   Start References Section   ********  -->
+		
+	<table border="0" cellpadding="0" width="100%">
+    <tr align="center">
+      <td background="Back4.gif" colspan="3" width="100%"><div align="left"><p><a name="References"><font face="Arial" color="#000000"><strong>References</strong></font></a></td>
+    </tr>
+    <tr align="center">
+      <td width="751" colspan="3"><fieldset><legend><b><small>Company Bank References</small><b></legend>
+				<table border="0" width="93%">
+					<tr>
+						<td width="50%" valign="top"><b><font face="Arial" color="#000000" size="2">Name Of Bank/Branch<br></font></b>
+						<input type="text" name="bank1" size="30" value="WELLS FARGO" maxlength="30"></td>
+						<td width="25%" valign="top"><b><font face="Arial" color="#000000" size="2">Account #<br></font></b>
+						<input type="text" name="bank1acct" size="25" value="" maxlength="15"></td>
+					</tr>
+					<tr>
+						<td width="33%" valign="top"><b><font face="Arial" color="#000000" size="2">Contact Officer<br></font></b>
+						<input type="text" name="bank1contact" size="30" value="LINDA" maxlength="35"></td>
+						<td width="33%" valign="top"><b><font face="Arial" color="#000000" size="2">Phone #<br></font></b>
+						<input type="text" name="bank1phone" size="15" value="" maxlength="50"></td>
+						<td width="33%" valign="top"><b><font face="Arial" color="#000000" size="2">How long?<br></font><b>
+						<input type="text" name="bank1howlong" size="3" value="" maxlength="10"></font></b></b></td>
+					</tr>
+					<tr>
+						<td><br></td>
+					</tr>
+					<tr>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">Name Of Bank/Branch<br></font></b>
+						<input type="text" name="bank2" size="30" value="" maxlength="30"></td>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">Account #<br></font></b>
+						<input type="text" name="bank2acct" size="25" value="" maxlength="15"></td>
+					</tr>
+					<tr>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">Contact Officer<br></font></b>
+						<input type="text" name="bank2contact" size="20" value="" maxlength="35"></td>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">Phone #<br></font></b>
+						<input type="text" name="bank2phone" size="15" value="" maxlength="50"></td>
+						<td  valign="top"><b><font face="Arial" color="#000000" size="2">How long?<br></font></b>
+					  <input type="text" name="bank2howlong" size="5" value="" maxlength="10"></font></td>
+					</tr>
+				</table>
+      </td>
+    </tr>    
+			<td><br></td>  
+		<tr  align="center">
+			<td width="751" colspan="3"><fieldset><legend><small><b>Trade References</b></small></legend>
+				<table border="0" width="93%">
+					<tr>
+						<td width="50%" valign="top"><b><font face="Arial" color="#000000" size="2">Name Of Supplier<br></font></b>
+						<input type="text" name="supplier1" size="30" value="" maxlength="50"></td>
+						<td width="25%" valign="top"><b><font face="Arial" color="#000000" size="2">Account #<br></font></b>
+						<input type="text" name="supplier1account" size="25" value="" maxlength="15"></td>
+					</tr>
+					<tr>
+						<td valign="top" width="33%"><b><font face="Arial" color="#000000" size="2">Contact Person<br></font></b>
+						<input type="text" name="supplier1contact" size="20" value="" maxlength="35"></td>
+						<td valign="top" width="33%"><b><font face="Arial" color="#000000" size="2">Phone #<br></font></b>
+						<input type="text" name="supplier1phone" size="15" value="" maxlength="50"></td>
+						<td valign="top" width="33%"><b><font face="Arial" color="#000000" size="2">How Long?<br></font></b>
+						<input type="text" name="supplier1howlong" size="5" value="" maxlength="10"></td>
+					</tr>
+					<tr>
+						<td><br></td>
+					</tr>
+					<tr>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">Name Of Supplier<br></font></b>
+						<input type="text" name="supplier2" size="30" value="" maxlength="50"></td>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">Account #<br></font></b>
+						<input type="text" name="supplier2account" size="25" value="" maxlength="15"></td>
+					</tr>
+					<tr>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">Contact Person<br></font></b>
+						<input type="text" name="supplier2contact" size="20" value="" maxlength="35"></td>
+						<td valign="top" valign="top"><b><font face="Arial" color="#000000" size="2">Phone #<br></font></b>
+						<input type="text" name="supplier2phone" size="15" value="" maxlength="50"></td>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">How Long?<br></font></b>
+						<input type="text" name="supplier2howlong" size="5" value="" maxlength="10"></td>
+					</tr>
+					<tr>
+						<td><br></td>
+					</tr>
+					<tr>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">Name Of Supplier<br></font></b>
+						<input type="text" name="supplier3" size="30" value="" maxlength="50"></td>
+						<td valign="top" valign="top"><b><font face="Arial" color="#000000" size="2">Account #<br></font></b>
+						<input type="text" name="supplier3account" size="25" value="" maxlength="15"></td>
+					</tr>
+					<tr>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">Contact Person<br></font></b>
+						<input type="text" name="supplier3contact" size="20" value="" maxlength="35"></td>
+						<td valign="top" valign="top"><b><font face="Arial" color="#000000" size="2">Phone #<br></font></b>
+						<input type="text" name="supplier3phone" size="15" value="" maxlength="50"></td>
+						<td valign="top"><b><font face="Arial" color="#000000" size="2">How Long?<br></font></b>
+						<input type="text" name="supplier3howlong" size="5" value="" maxlength="10"></td>
+					</tr>
+				</table>
+      </td></fieldset>
+    </tr>
+		<tr>
+			<td><br></td>
+		</tr>
+		<tr>
+			<td><br></td>
+		</tr>
+	</table>    
+    
+	<!--  ********   Start Lease Program Section   ********  -->
+	<!--  ********   Start Lease Program Section   ********  -->
+	<!--  ********   Start Lease Program Section   ********  -->
+	
+	<table border="0" cellpadding="0" width="100%">
+		<tr align="center">
+			<td background="Back4.gif" colspan="3"><div align="left"><p><strong><font face="Arial">&nbsp;<font color="#000000">Lease Program</font></font></strong></td>
+				<tr align="center">
+					<td width="751" colspan="3"><fieldset><legend><small><b>Lease Programs</b></small></legend>
+						<table cellpadding="0" cellspacing="0" border="0" width="100%">
+						<tr>
+						<td width="90" align="middle" nowrap height="27"><div align="right"><p><strong><small>Residual Type</small></strong></p></div></td>
+						<td width="109" align="left" nowrap height="27"><div align="left"><p><small><select name="lease_type" size=1>
+<option value="10% PURCHASE OPTION" >10% PURCHASE OPTION</option>
+<option value="$1.00 BUYOUT" >$1.00 BUYOUT</option>
+</select>
+
+						</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+			</td>
+		</tr>
+	</table>
+
+	<table border="0" cellpadding="0" width="100%">
+		<tr align="center">
+			<td align="center" width="751" colspan="3"><fieldset><legend><small><b>Lease Payments</b></small></legend>
+				<table width="75%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="350" align="center"><font face="Arial" size="2" color="#FF0000">Advanced monthly payments</font><br>
+							<select name="advanced_payments" size="1">
+								<option  selected >0</option>
+								<option >1</option>
+								<option >2</option>
+								<option >3</option>
+							</select></td>
+						<td width="200" align="center"><font face="Arial" size="2" color="#FF0000">Lease Amount<br>
+							<input type="text" name="origleaseamt" size="10" value="10000">
+							<input type="hidden" name="estmonthlypymt" size="10" value=""></font></td>
+					</tr>
+					<tr>
+						<td width="200" align="center"><font face="Arial" size="2" color="#FF0000">Term<br>
+							<input type="text" name="term" size="10" value="36" maxlength="4">	
+						<td width="200" align="center"><font face="Arial" size="2">#Mo. @ $0<br>
+							<input type="text" name="deferred" size="10" value=" " maxlength="10">	
+						<td width="200" align="center"><font face="Arial" size="2">Other Structuring<br>
+							<input type="text" name="deferredstep" size="10" value=" " maxlength="10">	
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	<table border="0" cellpadding="0" width="100%">
+		<tr align="center">
+			<td align="center" height="15" width="751" colspan="3"><fieldset><legend><small><b>Lease Equipment</b></small></legend>
+				<table>
+					<tr>
+						<td background="back4.gif" width="150" nowrap><strong><small><font face="Arial" color="#FF0000">Equipment Type</font><font face="Arial" color="#000000"> </small><br>
+							<!--COM method-->
+							<select name="generalequipdesc" size=1>
+<option value="0" ></option>
+<option value="33" >ASTHMA AND ALLERGY</option>
+<option value="43" >ATM</option>
+<option value="81" >AUDIO/VIDEO BROADCASTING</option>
+<option value="44" >AUDIOLOGY/HEARING AID</option>
+<option value="3" >CARDIOLOGY</option>
+<option value="19" >CAT SCAN/MRI</option>
+<option value="36" >CATHETERS</option>
+<option value="8" >CHIROPRACTIC EQUIPMENT</option>
+<option value="20" >COMPUTER - GENERAL</option>
+<option value="5" >COMPUTERS - HEALTH CARE</option>
+<option value="6" >DENTAL (INCL. IMAGING)</option>
+<option value="2" >DIAGNOSTIC ULTRASOUND</option>
+<option value="17" >DIALYSIS EQUIPMENT</option>
+<option value="53" >FITNESS EQUIPMENT</option>
+<option value="18" >FURNITURE</option>
+<option value="23" >GEN. OFFICE - FAX/COPY</option>
+<option value="45" >IMAGING</option>
+<option value="52" >INDUSTRIAL EQUIPMENT</option>
+<option value="4" >LAB EQUIPMENT</option>
+<option value="9" >LASERS</option>
+<option value="22" >MACHINE TOOLS</option>
+<option value="13" >MAMMOGRAPHY</option>
+<option value="24" >MANUFACTURING</option>
+<option value="30" >MILL & MACHINERY</option>
+<option value="80" >MISC. GENERAL</option>
+<option value="27" >MISC. MEDICAL</option>
+<option value="14" >MONITORING EQUIPMENT</option>
+<option value="28" >OPTHALMIC EQUIPMENT</option>
+<option value="40" >OPTICAL</option>
+<option value="7" >OPTOMETRIC</option>
+<option value="16" >PODIATARY EQUIPMENT</option>
+<option value="21" >PRINTING</option>
+<option value="82" >PROJECTOR(S)</option>
+<option value="11" >REHAB - ISOKENETIC</option>
+<option value="12" >REHAB - PT EQUIPMENT</option>
+<option value="32" >RESPIRATORY</option>
+<option value="42" >ROLLOVER/SALE LEASEBACK</option>
+<option value="10" >SCOPES</option>
+<option value="46" >SECURITY SYSTEM</option>
+<option value="31" >SLEEP DISORDER</option>
+<option value="37" >TELECOM</option>
+<option value="35" >VEHICLE</option>
+<option value="15" >VETERINARY EQUIP</option>
+<option value="25" >VIDEO</option>
+<option value="41" >WORKING CAPITAL</option>
+<option value="1" >X-RAY</option>
+</select>
+ </font></strong></td></td>
+						<td background="back4.gif" width="150" nowrap><strong><small><font face="Arial" color="#FF0000">Equipment Description</font><font face="Arial" color="#000000"> </small><br>
+							</font></strong><input type="text" name="equipdesc" value="COMPUTER HW & SW" size="25" maxlength="75"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<p>
+	<table border="0" cellpadding="3" cellspacing="0" width="100%">
+		
+	</table>
+	<p>
+	<table border="0 cellpadding="0" width="100%">
+		<tr align="center">
+			
+			<td align="left" valign="top">
+			
+										
+			<td align="center" valign="top">
+			
+				
+			<td align="right" valign="top">
+			
+			
+			<td align="right" valign="top">
+			
+							
+		</tr>
+	</table>
+  
+  <input  type="hidden" name="txtuseridpass" id=txtuseridpass  value="LOSTERLING">
+  <input  type="hidden" name="txtbrokeridpass" id=txtbrokeridpass  value="3352">
+  
+</form>
+
+</body>
+
+</html>

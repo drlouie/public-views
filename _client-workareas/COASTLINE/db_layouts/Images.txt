@@ -1,0 +1,33 @@
+TOTAL: 46 Fields
+
+// Follow notations on Desktops table layout
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Images (ImageID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Type VARCHAR(50), 
+SubType VARCHAR(50), 
+FileName VARCHAR(50), 
+Width VARCHAR(25), 
+Height VARCHAR(25), 
+InnerURL VARCHAR(250), 
+OuterURL VARCHAR(250), 
+Description VARCHAR(100), 
+Keywords VARCHAR(100), 
+UseCount VARCHAR(25), 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10));
+
+
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Images (ImageID, Type, SubType, FileName, Width, 
+Height, InnerURL, OuterURL, Description, Keywords, 
+UseCount, AddedBy, AddedOn, ModifiedBy, ModifiedOn)
+
+VALUES (Null, "mfg", "small", "emblem.jpg", "85", "40", 
+"/pointers/tiger.html", "www.intel.com", 
+"Microsoft Corporation", "Microsoft, Windows, 2000", 
+"2", "drlouie", Null, "", "");

@@ -1,0 +1,432 @@
+
+
+<SCRIPT Language="JavaScript">
+
+function AppNo()
+{
+	return "";
+}
+
+function isNumber(inValue, msgAlert)
+{
+	var oneDecimal = false;
+	var inputStr = inValue.toString();
+		
+	if (inputStr == "")
+		return false;
+			
+	for (var i = 0; i < inputStr.length; i++)
+	{
+		var oneChar = inputStr.charAt(i);
+		if (i == 0 && oneChar == "-")
+			continue;			
+		if (oneChar == "." && !oneDecimal)
+		{
+			oneDecimal = true;
+			continue;
+		}
+		if (oneChar < "0" || oneChar > "9")
+		{
+			if (msgAlert)
+				window.alert(inputStr + " is not a valid number");
+			return false;
+		}
+	}
+	return true;
+}
+
+function isFloat(inEvent)
+{
+	var charCode = (navigator.appName == "Netscape") ? inEvent.which : inEvent.keyCode;
+		
+	if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46)
+		return false;
+	return true;	
+}
+	
+function isInteger(inEvent)
+{
+	var charCode = (navigator.appName == "Netscape") ? inEvent.which : inEvent.keyCode;
+		
+	if (charCode > 31 && (charCode < 48 || charCode > 57))
+		return false;
+	return true;
+}
+
+function checkNumber(inValue)
+{ 
+	var sValid = "0123456789.";
+	var sValue;
+	
+	for (var iLoop = 0; iLoop < inValue.length; iLoop++)
+	{
+		sValue = "" + inValue.substring(iLoop, iLoop + 1);
+		if (sValid.indexOf(sValue) == "-1")
+			return 0;
+	}
+	return 1;
+}
+
+function getDollarAmount(inValue, bShowComma)
+{
+	var sNumber = inValue.toString();
+	var iDecimal = sNumber.indexOf(".");
+	var sDecimalValue = ((iDecimal > -1) ? "" + sNumber.substring(iDecimal,sNumber.length) : ".00");
+	
+	sNumber = "" + parseInt(sNumber);
+
+	var sTempValue1 = "";
+	var sTempValue2 = "";
+
+	if (checkNumber(sNumber) == 0)
+	{
+		window.alert("This does not appear to be a valid number.  Please try again.");
+	}
+	else
+	{ 
+		if (sDecimalValue.length == 2) sDecimalValue += "0";
+		if (sDecimalValue.length == 1) sDecimalValue += "00";
+		if (sDecimalValue.length > 3) sDecimalValue = "." + Math.round(sDecimalValue.substr(1,2) + "." + sDecimalValue.substr(3));
+		if (sDecimalValue == "") sDecimalValue += ".00";
+		
+		var iCount = 0;
+		for (var i = sNumber.length-1; i >= 0; i--)
+		{
+			var sOneChar = sNumber.charAt(i);
+			if (iCount == 3)
+			{
+				if (bShowComma == true)
+					sTempValue1 += ",";
+				sTempValue1 += sOneChar;
+				iCount = 1;
+				continue;
+			}
+			else
+			{
+				sTempValue1 += sOneChar;
+				iCount++;
+			}
+		}
+		for (var i = sTempValue1.length-1; i >= 0; i--)
+		{
+			var sOneChar = sTempValue1.charAt(i);
+			sTempValue2 += sOneChar;
+		}
+		sTempValue2 = sTempValue2 + sDecimalValue;
+		
+		return sTempValue2;
+	}
+}
+</script>
+
+<script language="javascript">
+function loadSettings()
+{
+	var mTerm;
+	var mLeaseIndex;
+	
+	if ("" == "")
+	{
+		if ("0" == "")
+			mTerm = 0;
+		else
+		{
+			mTerm = 0;
+			var listObj = document.forms[0].selTerm;
+			var listLength = listObj.length;
+			for (var i=0; i < listLength; i++)
+			{
+				if ("0" == listObj.options[i].text)
+					mTerm = i;
+			}
+		}	
+	}
+	else
+		mTerm = parseInt("")
+		
+	if ("" == "")
+		mLeaseType = 0;
+	else
+	{
+		mLeaseType = 0;
+		var listObj = document.forms[0].selResidualType;
+		var listLength = listObj.length;
+		for (var i=0; i < listLength; i++)
+		{
+			if ("" == listObj.options[i].text)
+				mLeaseType = i;
+		}
+		document.forms[0].selResidualType.options[mLeaseType].selected = true;
+		
+	}
+	if ("0" ==0)
+	{
+	if ("0" == "")
+		mReferralFactor = 0;
+	else
+	{
+		mReferralFactor = 0;
+		var listObj = document.forms[0].selReferral;
+		var listLength = listObj.length;
+		for (var i=0; i < listLength; i++)
+		{
+			if ("0" == listObj.options[i].text)
+				mReferralFactor = i;
+		}
+	}
+	document.forms[0].selReferral.options[mReferralFactor].selected = true;
+	}
+	//document.forms[0].selResidualType.options[mLeaseType].selected = true;
+	//document.forms[0].selReferral.options[mReferralFactor].selected = true;
+	document.forms[0].selTerm.options[mTerm].selected = true;
+	
+	if ("" == "2")
+		window.alert("The Equipment/Lease Structure has been submitted.");
+	else if ("" == "1")
+		window.alert("The Equipment/Lease Structure has been saved.");
+	else if ("" == "99")
+		window.alert("Previous submitted structure is still being processed.\r\nPlease wait and resubmit the structure.");	
+}
+
+function calcIt(intType)
+{
+	var cmdLine;
+	
+	document.forms[0].txtResidualTypeText.value = document.forms[0].selResidualType.options[document.forms[0].selResidualType.selectedIndex].text;
+	if ("0" ==0)
+	{
+	document.forms[0].txtReferralFactorText.value = document.forms[0].selReferral.options[document.forms[0].selReferral.selectedIndex].text;
+	}		
+	cmdLine = "LeaseScenarioVendor.asp?";
+	cmdLine += "StandAlone=0";
+	cmdLine += "&Solve=1";
+	cmdLine += "&AppNo=";
+	cmdLine += "&ApplyData=" + intType;
+	cmdLine += "&Term=" + document.forms[0].selTerm.options[document.forms[0].selTerm.selectedIndex].text;
+	cmdLine += "&TermIndex=" + document.forms[0].selTerm.options[document.forms[0].selTerm.selectedIndex].value;
+	cmdLine += "&VendorProgID=" + document.forms[0].selResidualType.options[document.forms[0].selResidualType.selectedIndex].value;
+	cmdLine += "&Brokeridpass=" + "3352";
+	
+	//cmdLine += "&ReferralFactor=" + document.forms[0].selReferral.options[document.forms[0].selReferral.selectedIndex].value;
+	if ("0" ==0)
+	cmdLine += "&Referral=" + document.forms[0].selReferral.options[document.forms[0].selReferral.selectedIndex].value;
+	else
+	cmdLine += "&Referral=" + document.forms[0].txtReferral.value;
+	document.forms[0].action = cmdLine;
+	document.forms[0].submit();
+}
+
+function Structure()
+{
+
+sBrokerVendorID = "3352";
+
+	loc = "structureFrame.asp?appNo=" + AppNo()+ "&Brokeridpass=" + sBrokerVendorID;
+	top.location = loc
+}
+
+
+</script>
+
+<html>
+<head>
+<title>Lease Scenario</title>
+<meta HTTP-EQUIV="Expires" CONTENT="Tue, 04 Dec 1996 21:29:02 GMT">
+<meta name="GENERATOR" content="Microsoft Visual Studio 6.0">
+</head>
+<body  background='images/bgw2.gif' onLoad="loadSettings()">
+
+<br><P align="center"><font face="Times New Roman" size="5" color="#0000FF">Lease Structure-Scenario</font></P>
+
+<table border="0" width="100%">
+	<tr>
+		<td align="LEFT"><font size="2" face="arial">
+		Please complete as much of the following form as possible.  When finished, please click CALC, 
+		to calculate the monthly payments, click on SAVE to save the data, or click SUBMIT to submit 
+		the Equipment/Lease Structure.  Please click on the <input type="textbox" value="Back" readonly style="font-size:
+		10pt; color: rgb(0,0,255); border: medium none; font-weight: bolder; text-decoration: underline; cursor: hand"
+		size="4" onClick="Structure()" id=textbox name=textbox>button to return to the Equipment Strucutre page.
+		<br></font></td>
+	<tr>
+</table>
+
+<form method="post" action="LeaseScenarioVendor.asp" id="LeaseScenarioVendor" name="LeaseScenarioVendor">
+  <font face="Arial">
+  <table border="0" width="70%">
+    <tr align="center">
+      <td width="125" align="right"><strong><small>Equipment</small></strong></td>
+      <td width="85"  align="left" ><small><input id="txtEquipment" name="txtEquipment"  onKeyPress="return isFloat(event)" onBlur="isNumber(this.value, true)" size="11" value="0"></small></td>
+      <td width="120" align="right"></td>
+      <td colspan="2" align="left" ></td>
+    </tr>
+    <tr align="center">
+      <td width="125" align="right"><strong><small>Shipping</small></strong></td>
+      <td width="85"  align="left" ><small><input id="txtShipping" name="txtShipping"  onKeyPress="return isFloat(event)" onBlur="isNumber(this.value, true)" size="11" value="0"></small></td>
+      <td width="120" align="right"></td>
+      <td width="115" align="left" ></td>
+    </tr>
+    <tr align="center">
+      <td width="125" align="right"><strong><small>Other</small></strong></td>
+      <td width="85"  align="left" ><small><input id="txtOther" name="txtOther"  onKeyPress="return isFloat(event)" onBlur="isNumber(this.value, true)" size="11" value="0"></small></td>
+      <td width="120" align="right"></td>
+      <td width="115" align="left" ></td>
+    </tr>
+    <tr align="center">
+      <td width="125" align="right"><strong><small>Vendor Discount</small></strong></td>
+      <td width="85"  align="left" ><small><input id="txtVendDisc" name="txtVendDisc"  onKeyPress="return isFloat(event)" onBlur="isNumber(this.value, true)" size="11" value="0"></small></td>
+      <td width="120" align="right"></td>
+      <td width="115" align="left" ></td>
+    </tr>
+        <tr align="center">
+      <td width="125" align="right"><br></td>
+      <td width="85"  align="left" ></td>
+      <td width="120" align="right"></td>
+      <td width="110" align="right"></td>
+      <td width="115" align="right"></td>
+    </tr>
+    </tr>
+        <tr align="center">
+      <td width="125" align="right"><strong><small>Vendor Comm Pct</small></strong></td>
+      
+      
+      <td width = "85" align="left">
+     
+      <select name="selReferral" size=1>
+<option value=""><option value="0" >0</option>
+<option value="1" >1</option>
+<option value="2" >2</option>
+<option value="3" >3</option>
+<option value="4" >4</option>
+<option value="5" >5</option>
+<option value="6" >6</option>
+<option value="7" >7</option>
+<option value="8" >8</option>
+<option value="9" >9</option>
+<option value="10" >10</option>
+</select>
+
+	  </td>
+	  
+      <td width="120" align="right"></td>
+      <td width="110" align="right"></td>
+      <td width="115" align="right"></td>
+    </tr>
+     <tr align="center">
+      <td width="125" align="right"><strong><small>Vendor Due</small></strong></td>
+      <td width="85"  align="left" ><small><input id="txtVendorDue" name="txtVendorDue" onFocus="this.blur()" size="11" value="0"></small></td>
+      <td width="120" align="right"></td>
+      <td width="110" align="right"></td>
+      <td width="115" align="right"></td>
+    </tr>
+    <tr align="center">
+      <td width="119" align="right"><strong><small>Vendor Received</small></strong></td>
+      <td width="85"  align="left" ><small><input id="txtVendRecd" name="txtVendRecd"  onKeyPress="return isFloat(event)" onBlur="isNumber(this.value, true)" size="11" value="0"></small></td>
+      <td width="120" align="right"></td>
+      <td width="110" align="right"></td>
+	  <td width="115" align="right"></td>	
+    </tr>
+    <tr align="center">
+      <td width="125" align="right"><br></td>
+      <td width="85"  align="left" ></td>
+      <td width="120" align="right"></td>
+      <td width="110" align="right"></td>
+      <td width="115"  align="right"></td>
+    </tr>
+    <tr align="center">
+      <td width="125" align="right"><strong><small>Financed Amt</small></strong></td>
+      <td width="85"  align="left" ><small><input id="txtFinancedAmt" name="txtFinancedAmt" onFocus="this.blur()" size="11" value="0"></small></td>
+      <td width="120" align="right"></td>
+      <td width="110" align="left" ></td>
+      <td width="115"  align="right"></td>
+    </tr>
+    <tr align="middle">
+      <td width="125" align="right" nowrap height="29"><strong><small>Notes</small></strong></td>
+      <td align="left" colspan="4" nowrap height="29"><small><textarea rows="3" cols="40" id="txtNotes" name="txtNotes"></textarea></small></td>
+    </tr>
+    <tr align="center">
+      <td width="125" align="right"><br></td>
+      <td width="85"  align="right"></td>
+      <td width="120" align="right"></td>
+      <td width="110" align="right"></td>
+      <td width="115"  align="left" ></td>
+    </tr>
+    <tr align="center">
+      <td width="125" align="right" ><strong><small>Term</small></strong></td>
+      <td width="85"  align="center"><strong><small>Pymt</small></strong></td>
+      <td width="120" align="center"><strong><small># Adv Pymt</small></strong></td>
+      <td width="110" align="center"><strong><small>Lease Type</small></strong></td>
+      <td width="115" align="center"></td>
+    </tr>
+    <tr align="center">
+      <td width="125" align="right" ><small><select id="selTerm" name="selTerm" size="1">
+        <option value=0>12
+        <option value=1>24
+        <option value=2>36
+        <option value=3>48
+        <option value=4>60
+        <option value=5>72
+        <option value=6>84</select></small></td>
+      <td width="85"  align="center"><small><input id="txt1stPymt" onFocus="this.blur()" name="txt1stPymt" onKeyPress="return isFloat(event)" onBlur="isNumber(this.value, true)" size="11" value="0"></small></td>
+      <td width="120" align="center"><small><input id="txtAdvFirstPymtNo" name="txtAdvFirstPymtNo" onKeyPress="return isInteger(event)" onBlur="isNumber(this.value, true)" size="11" value="1"></small></td>
+      <td width="110" align="center"><small><select id="selResidualType" name="selResidualType" size="1">
+        <option value=3597>10% PURCHASE OPTION<option value=3598>$1.00 BUYOUT
+        </select></small></td>
+      <td width="115" align="center"><input type="hidden" id="txt1stPymtFactor" onFocus="this.blur()" name="txt1stPymtFactor" onKeyPress="return isFloat(event)" onBlur="isNumber(this.value, true)" size="13" value="0"></small></td>
+    </tr>
+	<tr align="center">
+      <td width="125" align="right"><br><small><input type="button" value="   Calc  " name="cmdCalc" onClick="calcIt(0)"></small></td>
+      <td width="85" align="left"></td>
+      <td width="120" align="center"></td>
+      <td width="110" align="center"></td>
+      <td width="100"  align="center"></td>
+    </tr>
+</table>
+<table border="0" cellpadding="0" width="100%">
+		
+		
+		
+		<tr>
+			<td align="left" width="100%"><font face="Times New Roman" size="3" color="red"><blockquote>
+				
+					<p>Notes: Commission may be changed in accordance with state laws if your lessee/customer is located in Texas, Arkansas or Louisiana.  Please contact your American Express Representative for clarification.</p>
+				
+				
+				</font></blockquote></td>
+		</tr>
+</table>
+</font>
+<input type=hidden name=txtResidualTypeText>
+<input type=hidden name=txtReferralFactorText>
+
+</form>
+<P>
+
+<HR NOSHADE>
+
+<CENTER>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=480>
+   <TR>
+      <TD ALIGN=center>
+         <P><FONT SIZE="-1" FACE="Arial, Helvetica">View
+         </FONT><A HREF="http://www.americanexpress.com/shared/copyright/corp_ent_disclosures.shtml"><FONT SIZE="-1" FACE="Arial, Helvetica">
+         Corporate Entities and Important
+         Disclosures</FONT></A><FONT SIZE="-1" FACE="Arial, Helvetica">,
+         </FONT><A HREF="http://www.americanexpress.com/shared/copyright/webrules.html"><FONT SIZE="-1" FACE="Arial, Helvetica">Web
+         Site Rules and Regulations</FONT></A><FONT SIZE="-1" FACE="Arial, Helvetica">,
+         </FONT><A HREF="http://www.americanexpress.com/shared/copyright/trademark.html"><FONT SIZE="-1" FACE="Arial, Helvetica">Trademarks</FONT></A><FONT SIZE="-1" FACE="Arial, Helvetica">,
+         </FONT><A HREF="http://www6.americanexpress.com/corp/corpinfo/y2k_faq.asp"><FONT SIZE="-1" FACE="Arial, Helvetica">Y2K
+         information</FONT></A><FONT SIZE="-1" FACE="Arial, Helvetica">
+         and </FONT><A HREF="http://www6.americanexpress.com/corp/consumerinfo/privacy/privacystatement.asp"><FONT SIZE="-1" FACE="Arial, Helvetica">Privacy
+         Statement</FONT></A><FONT SIZE="-1" FACE="Arial, Helvetica">.
+         Copyright &copy; 1999 </FONT><A HREF="http://www.americanexpress.com/homepage/home.shtml"><FONT SIZE="-1" FACE="Arial, Helvetica">American
+         Express Company</FONT></A><FONT SIZE="-1" FACE="Arial, Helvetica">.
+         All Rights Reserved. Users of this site agree to be bound by
+         the terms of the American Express Web Site Rules and
+         Regulations.</FONT>
+      </TD>
+   </TR>
+</TABLE>
+</CENTER>
+</body>
+</html>
+

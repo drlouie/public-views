@@ -1,0 +1,459 @@
+
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Great 
+      White Series&#153; Servers</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr align="left"> 
+          <td colspan="3" height="40">&nbsp;</td>
+        </tr>
+        <tr align="center"> 
+          <td colspan="3"> 
+            <table width="95%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td> 
+                  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td><font class="regtextnobold"> 
+                        <p>The newly designed Coastline Micro Great White Series&#153; 
+                          Servers bring forth the power necessary to drive your 
+                          enterprise into the new millennium. Each Great White 
+                          Series&#153; Server is built from Intel&reg; server 
+                          building blocks. They are capable of running up to Four 
+                          Intel&reg; Xeon&#153; Processors simultaneously. Every 
+                          Great White Series&reg; Server comes with Kingston memory, 
+                          insuring reliability and increased performance levels. 
+                        </p>
+                        <p>Great White Series&#153; Xeon&#153; Servers are built 
+                          strong from the start. These processing engines will 
+                          successfully take you through each day with confidence. 
+                          Their expandability makes these systems a must-have 
+                          for your long-term networking plans and daily processing 
+                          demands. Each Great White Series&#153; Server runs the 
+                          Microsoft 2000 Windows Server operating system, providing 
+                          a robust fault-tolerant computing platform. As with 
+                          all Coastline Micro Systems, the Great White Xeon&#153; 
+                          Server is fully customizable to your ever-changing workload 
+                          needs. </p>
+                        </font> 
+                        <table width="75%" align="center" border=1 bordercolor="8f8fab" cellpadding=3 cellspacing=0>
+                          <tr> 
+                            <td width="100%" align="center"><br>
+                              <font class="regtextnobold">Interested in buying 
+                              one of these systems or looking for more product 
+                              information? Simply request access to our online 
+                              store by filling out the <a href="cont_temp.cgi?sub_link=access_request">Store 
+                              Access Request Form</a>.</font><br>
+                              <br>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr align="left"> 
+          <td colspan="3" height="25">&nbsp;</td>
+        </tr>
+        <tr align="center"> 
+          <td width="65%" height="300" valign="middle"> 
+            <table width="575" border="0" cellspacing="0" cellpadding="0" bgcolor="#8f8fab">
+              <tr align="center"> 
+                <td colspan="3" height="40" bgcolor="#333366"> <font class="regtextnobold"> 
+                  <b>MODEL CSKOA</b> </font></td>
+              </tr>
+              <tr align="center"> 
+                <td width="20">&nbsp;</td>
+                <td height="20">&nbsp;</td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr align="center"> 
+                <td width="20">&nbsp;</td>
+                <td height="25" bgcolor="#333366"><font class="prodmenu">TECHNICAL 
+                  SPECS | SYSTEM DRIVERS | <a href="http://mm.flashecom.com/intel/video/100k/SRKA4/SRKA4_320_100.asf">INTEL&reg; 
+                  MULTIMEDIA</a> | <a href="http://www.flashecom.com/coastlinemicro/">BUY 
+                  ONLINE</A></font></td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr align="center"> 
+                <td width="20">&nbsp;</td>
+                <td height="20">&nbsp;</td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td> 
+                  <table width="545" border="0" cellspacing="0" cellpadding="0" bgcolor="#333366">
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20">&nbsp;</td>
+                      <td width="270" height="20" align="left">&nbsp;</td>
+                      <td rowspan="13" height="240" align="center" width="20" valign="middle" bgcolor="#8f8fab">&nbsp;</td>
+                      <td rowspan="13" height="240" align="center" width="225" valign="middle"><img src="images/gw_csk0a.jpg" border=0 width="198" height="250"></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                        KOA Server Board W/ Cabrillo ll Chassis</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                        Pentium&reg; III Xeon&#153; 700MHz 1MB CACHE<b> </b> Watt 
+                        PS</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Kingston 
+                        (4) 128MB PC-100 ECC SDRAM (512MB Kit)</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                        Adaptec U2 and Ultra 160 <br>
+                        Wide SCSI Controller</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">(1) 
+                        18GB Ultra 160 SCSI LP 10K RPM</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                        Intel&reg; 10/100 Server Adapter</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                        PCI 2MB Video</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">TEAC 
+                        1.44MB Floppy</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                        Internet Keyboard PS2</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                        Intellimouse Web PS2</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><font class="regtextnobold"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</font></td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                        Windows 2000 Server 5 User</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20">&nbsp;</td>
+                      <td width="270" height="20" align="left">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td height="20">&nbsp;</td>
+                <td width="20">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr align="left"> 
+          <td colspan="3" height="40">&nbsp;</td>
+        </tr>
+        <tr align="center"> 
+          <td width="65%" height="300" valign="middle"> 
+            <table width="575" border="0" cellspacing="0" cellpadding="0" bgcolor="#8f8fab">
+              <tr align="center"> 
+                <td colspan="3" height="40" bgcolor="#333366"> <font class="regtextnobold"> 
+                  <b>MODEL RM4U4400-B</b> </font></td>
+              </tr>
+              <tr align="center"> 
+                <td width="20">&nbsp;</td>
+                <td height="20">&nbsp;</td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr align="center"> 
+                <td width="20">&nbsp;</td>
+                <td height="25" bgcolor="#333366"><font class="prodmenu">TECHNICAL 
+                  SPECS | SYSTEM DRIVERS | <a href="#" onclick="javascript:window.open('http://mm.flashecom.com/intel/flash/4400/isp4400flash.htm','flash','width=550,height=440')">INTEL&reg; 
+                  MULTIMEDIA</a> | <a href="http://www.flashecom.com/coastlinemicro/">BUY 
+                  ONLINE</A></font></td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr align="center"> 
+                <td width="20">&nbsp;</td>
+                <td height="20">&nbsp;</td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td> 
+                  <table width="545" border="0" cellspacing="0" cellpadding="0" bgcolor="#333366">
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20">&nbsp;</td>
+                      <td width="270" height="20" align="left">&nbsp;</td>
+                      <td rowspan="14" height="240" align="center" width="20" valign="middle" bgcolor="#8f8fab">&nbsp;</td>
+                      <td rowspan="14" height="240" align="center" width="225" valign="middle"><img src="images/gw_rm4u4400b.jpg" border=0 width="198" height="250"></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                        4U Pentium&reg; lll Xeon&#153; Quad-Processor Rackmount 
+                        Server</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">(2) 
+                        Intel&reg; Pentium&reg; III Xeon&#153; 700MHz 1MB CACHE 
+                        <br>
+                        PCPI PS </font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Kingston 
+                        (4) 128MB PC-100 ECC SDRAM (512MB Kit)</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                        Adaptect U2 and Ultra 160 Wide SCSI Controller</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Mylex 
+                        Acceleraid 170 Ultra 160 64MB 1 Channel</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">(2) 
+                        18GB Ultra 160 SCSI LP 10K RPM</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                        Intel&reg; 10/100 Server Adapter</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                        PCI 2MB Video</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">TEAC 
+                        1.44MB Floppy</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                        Internet Keyboard PS2</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                        Intellimouse Web PS2</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                        Windows 2000 Server 5 User</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20">&nbsp;</td>
+                      <td width="270" height="20" align="left">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td height="20">&nbsp;</td>
+                <td width="20">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr align="left"> 
+          <td colspan="3" height="40">&nbsp;</td>
+        </tr>
+        <tr align="center"> 
+          <td width="65%" height="300" valign="middle"> 
+            <table width="575" border="0" cellspacing="0" cellpadding="0" bgcolor="#8f8fab">
+              <tr align="center"> 
+                <td colspan="3" height="40" bgcolor="#333366"> <font class="regtextnobold"> 
+                  <b>MODEL RM4U4400-W</b> </font></td>
+              </tr>
+              <tr align="center"> 
+                <td width="20">&nbsp;</td>
+                <td height="20">&nbsp;</td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr align="center"> 
+                <td width="20">&nbsp;</td>
+                <td height="25" bgcolor="#333366"><font class="prodmenu">TECHNICAL 
+                  SPECS | SYSTEM DRIVERS | <a href="http://mm.flashecom.com/intel/video/100k/SRKA4/SRKA4_320_100.asf">INTEL&reg; 
+                  MULTIMEDIA</a> | <a href="http://www.flashecom.com/coastlinemicro/">BUY 
+                  ONLINE</A></font></td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr align="center"> 
+                <td width="20">&nbsp;</td>
+                <td height="20">&nbsp;</td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td> 
+                  <table width="545" border="0" cellspacing="0" cellpadding="0" bgcolor="#333366">
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20">&nbsp;</td>
+                      <td width="270" height="20" align="left">&nbsp;</td>
+                      <td rowspan="15" height="240" align="center" width="20" valign="middle" bgcolor="#8f8fab">&nbsp;</td>
+                      <td rowspan="15" height="240" align="center" width="225" valign="middle"><img src="images/gw_rm4u4400w.jpg" border=0 width="198" height="250"></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                        4U Pentium&reg; lll Xeon&#153; Quad-Processor Rackmount 
+                        Server</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                        Pentium&reg; III Xeon&#153; 700MHz 1MB CACHE<br>
+                        PCPI PS </font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Kingston 
+                        (4) 256MB PC-100 ECC SDRAM (1GB Kit)</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                        Adaptec U2 and Ultra 160<br>
+                        Wide SCSI Controller</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Mylex 
+                        Acceleraid 352 Ultra 160 64MB 2 Channel</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">(4) 
+                        36GB Ultra 160 SCSI LP 10K RPM</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                        Intel&reg; 10/100 Server Adapter</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Intel&reg; 
+                        8490 10/100/1000 Gigabit Cat5 Adapter</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Integrated 
+                        PCI 2MB Video</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">TEAC 
+                        1.44MB Floppy</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                        Internet Keyboard PS2</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                        Intellimouse Web PS2</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20"><img src="images/dot.gif" border=0 width="4" height="12">&nbsp;&nbsp;</td>
+                      <td width="270" height="20" align="left"><font class="regtextnobold">Microsoft 
+                        Windows 2000 Server 5 User</font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="20" align="right" height="20">&nbsp;</td>
+                      <td width="270" height="20" align="left">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="20">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="20">&nbsp;</td>
+                <td height="20">&nbsp;</td>
+                <td width="20">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr align="left"> 
+          <td colspan="3" height="25">&nbsp;</td>
+        </tr>
+        <tr align="left"> 
+          <td colspan="3" height="40"> 
+            <table width="75%" align="center" border=1 bordercolor="8f8fab" cellpadding=3 cellspacing=0>
+              <tr> 
+                <td width="100%" align="center"><br>
+                  <font class="regtextnobold">Interested in buying one of these 
+                  systems or looking for more product information? Simply request 
+                  access to our online store by filling out the <a href="cont_temp.cgi?sub_link=access_request">Store 
+                  Access Request Form</a>.</font><br>
+                  <br>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr align="left"> 
+          <td colspan="3" height="40">&nbsp; </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

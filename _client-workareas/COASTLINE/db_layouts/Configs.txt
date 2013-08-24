@@ -1,0 +1,24 @@
+TOTAL: 18 Fields
+
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Configs (ConfigID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Parent VARCHAR(25), 
+Username VARCHAR(25), 
+CMCustNum VARCHAR(25), 
+OrderIDs TEXT, 
+CMSeries ENUM('GreatWhite','Mako','Reef','Tiger','Thresher','NONE') DEFAULT 'NONE', 
+ProductIDs TEXT, 
+TotalPrice DECIMAL(8,2), 
+TotalWeight DECIMAL(8,2), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10));
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Configs (ConfigID, Parent, Username, CMCustNum, OrderIDs, 
+CMSeries, ProductIDs, TotalPrice, TotalWeight, AddedOn, ModifiedBy, ModifiedOn)
+
+VALUES (Null, "CEK815EAN", "drlouie", "a9878skka2", Null, "Thresher", 
+"1365263-WH", "923.63", "903.00", Null, Null, "");

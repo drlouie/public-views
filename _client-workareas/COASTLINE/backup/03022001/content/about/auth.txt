@@ -1,0 +1,58 @@
+ 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Product 
+            Authorizations</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> <font class="regtextnobold"> 
+                              <p>With in-depth knowledge of a wide range of computing solutions, we can assist you with the selection, procurement, installation, configuration and support of hardware and software elements, including systems and add-on components at competitive pricing. Our hardware and software authorizations include:</p>
+                              <ul>
+                                <li>Intel&reg; Premire Provider</li>
+                                <li>Intel&reg; Product Dealer</li>
+                                <li>Intel&reg; ISP Program Memeber</li>
+                                <li>Microsoft Certified Solutions Provider</li>
+                                <li>Microsoft OEM System Builder</li>
+                                <li>3Com netWorking Partners Program</li>
+                                <li>Kingston Direct OEM Partner</li>
+                                <li>Sage MAS 90 Authorized Reseller</li>
+                                <li>Symantec Solutions Alliance Program</li>
+                                <li>Tivoli Authorized Reseller - IT Director</li>
+                                <li>Citrix Solutions Network - Silver Partner</li>
+                                <li>Elron Software - Diamond Partner</li>
+                                <li>Liebert Authorized Reseller</li>
+                                <li>Wyse Winterm Authorized Reseller</li>
+                              </ul>
+                              </font>  </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

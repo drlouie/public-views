@@ -1,0 +1,45 @@
+TOTAL: 18 Fields
+
+// UserAccess = The user access is granted at the top administration level
+// Only Coastline Micro personnel/users can get CM based rights to the system.
+
+// ExtraAccess = Extra user access levels, defined and controlled by script
+// Only Coastline Micro personnel/users can get CM based rights to the system.
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Users (UserID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CustomerID VARCHAR(100),
+EmailType ENUM('HTML','TEXT') DEFAULT 'HTML', 
+Username VARCHAR(25), 
+Password VARCHAR(25), 
+Email VARCHAR(50), 
+FirstName VARCHAR(25), 
+LastName VARCHAR(25), 
+Position VARCHAR(50), 
+Phone VARCHAR(100), 
+Extension VARCHAR(100), 
+UserAccess ENUM('CMManage','CMAdmin','CMSales','CMUser','CustAdmin','CustUser') DEFAULT 'CustUser', 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10), 
+DeletedBy VARCHAR(25),
+DeletedOn Timestamp(10),
+ExtraAccess TEXT);
+
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Users (UserID, CustomerID, EmailType, 
+Username, Password, Email, FirstName, LastName, 
+Position, Phone, Extension, UserAccess, AddedBy, 
+AddedOn, ModifiedBy, ModifiedOn, DeletedBy, DeletedOn, 
+ExtraAccess)
+
+VALUES (Null, "4589656326", "HTML", "testing", "password", 
+"mastermind@hapasol.com", "Luis", "Rodriguez", 
+"Webmaster", "6263903657", "", "CMManage", 
+"drlouie", Null, "", "", "", "", "");

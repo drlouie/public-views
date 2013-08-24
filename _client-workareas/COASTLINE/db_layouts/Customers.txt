@@ -1,0 +1,85 @@
+TOTAL: 31 Fields
+
+
+// ShippingID = Tracks company's shipping locations by appending 
+// the ShippingID number to this field everytime a new shipping location
+// is made for the customer. The ShippingID is from the ShipDests table
+
+// RepID = The usernames for the reps that service customer account
+
+// AdminID = The username of the administrator for this customer 
+// account, mainly the first company user
+
+// MessageID = Tracks all company's email messages appending every 
+// sent message's MessageID to this field. The MessageID is from the 
+// Messages table
+
+// (*)Value = The markup value for customer's purchasing power
+
+// PayOption = Stores company's PayOptions as configured by
+// CMManage or CMAdmin
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+<!-- MAKE TABLE STRUCTURE -->
+INSERT INTO Customers (CustomerID, CMCustNum, ShippingID, 
+RepID, AdminID, MessageID, CompanyName, CompanyType, 
+Phone, Fax, MailAdd, MailAdd2, MailCity, MailState, MailZip, PayOption, 
+ccVisaName, ccVisa, ccVisaExp, CCMasterName, CCMaster, CCMasterExp, 
+CCAmexName, CCAmex, CCAmexExp, DesktopValue, ServerValue, NotebookValue, 
+MonitorValue, MemoryValue, HDriveValue, VideoValue, PeriphValue, 
+PrinterValue, SoftwareValue, AddedBy, AddedOn, ModifiedBy, 
+ModifiedOn, DeletedBy, DeletedOn)
+
+VALUES (Null, "0000000001", Null, Null, Null, Null, 
+"Coastline Micro, Inc.", "Corp", "8007296809", "8004509977", 
+"60 Technology Drive", "", "Irvine", "CA", "92618", 
+"CCAmex, CCVisa, CCMaster, Cash", "", "", "", "", "", "", "", 
+"", "", "27", "99", "1", "56", "22", "31", "69", "56", "36", "65", 
+"drlouie", Null, "", "", "", "");
+
+
+
+<!-- ADD DATA STRUCTURE -->
+CREATE TABLE Customers (CustomerID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+CMCustNum VARCHAR(100), 
+ShippingID TEXT, 
+RepID TEXT, 
+AdminID VARCHAR(25), 
+MessageID TEXT, 
+CompanyName VARCHAR(100), 
+CompanyType ENUM('Small','Medium','Corp','Reseller','Consult') DEFAULT 'Consult', 
+Phone VARCHAR(100), 
+Fax VARCHAR(100), 
+MailAdd VARCHAR(100), 
+MailAdd2 VARCHAR(100), 
+MailCity CHAR(100), 
+MailState CHAR(100), 
+MailZip VARCHAR(100), 
+PayOption TEXT, 
+CCVisaName VARCHAR(100), 
+CCVisa VARCHAR(100), 
+CCVisaExp VARCHAR(100), 
+CCMasterName VARCHAR(100), 
+CCMaster VARCHAR(100), 
+CCMasterExp VARCHAR(100), 
+CCAmexName VARCHAR(100), 
+CCAmex VARCHAR(100), 
+CCAmexExp VARCHAR(100), 
+DesktopValue INT, 
+ServerValue INT, 
+NotebookValue INT, 
+MonitorValue INT, 
+MemoryValue INT, 
+HDriveValue INT, 
+VideoValue INT, 
+PeriphValue INT, 
+PrinterValue INT, 
+SoftwareValue INT, 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10), 
+DeletedBy VARCHAR(25), 
+DeletedOn Timestamp(10));

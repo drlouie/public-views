@@ -1,0 +1,34 @@
+TOTAL: 10 Fields
+
+// Title = Title for warranty, be articulate in phrasing
+
+
+// Description = Full and fluent description of warranty
+// Link to legal information is automatically implemented to the viewing user
+
+// Term = Length of warranty in months
+
+// Price = Price of warranty if applies
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Warranties (WarrantyID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Title VARCHAR(250),
+Description TEXT, 
+Term INT, 
+Price DECIMAL(8,2), 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10));
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Warranties (WarrantyID, Title, Description, 
+Term, Price, AddedBy, AddedOn, ModifiedBy, ModifiedOn)
+
+VALUES (Null, "Title of warranty", "Description of warranty", 
+"24", "22.93", "drlouie", Null, "", "");

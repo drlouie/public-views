@@ -1,0 +1,70 @@
+TOTAL: 18 Fields
+
+// Username = The username of the person sending message
+
+// CustomerID = For quicker filtering of orders by customer
+
+// TotalPrice = This price is the actual full COST of this configuration
+// at time of creation. This price is stamped automatically and will not
+// change unless the configuration is changed. This price is without markup
+
+// SellingPrice = This price is the customer's cost with markup in place
+// If a quote was made in the case of a configuration that price will be placed
+// here as the selling price.
+
+// Tax = This price is calculated from the SellingPrice for customers in
+// the state of California only. Tax is calculated according to current 
+// regulations
+
+// FinalPrice = This price is the SellingPrice plus shipping, handling
+// and Tax. Basically the final out-the door cost of this order. Shipping 
+// costs are stored in the ShipDests table as selected by customer at
+// time of order. Shipping price is added on after Tax has been computed
+
+// PaymentType = The type of payment this order is being processed under.
+// Payments can only be made with the specific types of payment methods 
+// approved by CM for the customer making the order
+
+// Instructions = Special request, instructions or message to the person(s)
+// processing the order
+
+// TakenBy = When an order is placed an email is generated to all CM reps
+// chosen to service the customer's account. The first rep to flag the order
+// as taken, fullfilled, will be set sales rep for the order
+// Once the order is TAKEN by a CM Rep the order becomes inactive
+// and When other CM Reps view the order they will know the order was 
+// fullfilled
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Orders (OrderID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Username VARCHAR(25), 
+CMCustNum VARCHAR(25), 
+ConfigIDs TEXT, 
+ProductIDs TEXT, 
+ShippingID VARCHAR(25), 
+TotalPrice DECIMAL(8,2), 
+Tax DECIMAL(8,2), 
+PaymentType TEXT, 
+Instructions TEXT, 
+SentTo VARCHAR(25), 
+ProcessedBy VARCHAR(25), 
+ProcessedOn Timestamp(14), 
+ShippedBy VARCHAR(25), 
+ShippedOn Timestamp(14), 
+TrackingID VARCHAR(100), 
+AddedOn Timestamp(14));
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Orders (OrderID, Username, CMCustNum, ConfigIDs, 
+ProductIDs, ShippingID, TotalPrice, Tax, PaymentType, Instructions, 
+ProcessedBy, ProcessedOn, ShippedBy, ShippedOn, TrackingID, 
+AddedOn)
+
+VALUES (Null, "drlouie", "a9878skka2", "1365263-WH", Null, Null, "563.23", 
+"543.00", "15.36", "558.36", "AMEX", "1564859632565896", 
+"Instructions", Null, "", Null, "", Null, "", Null, Null);

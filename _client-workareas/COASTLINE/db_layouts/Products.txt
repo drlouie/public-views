@@ -1,0 +1,42 @@
+TOTAL: 36 Fields
+
+// Follow notations on Desktops table layout
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Products (ProductID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CMPartNum VARCHAR(25), 
+SYSCode VARCHAR(25), 
+KITCode TEXT, 
+MediaCode TEXT, 
+DISTCode VARCHAR(25), 
+MFGCode VARCHAR(25), 
+MFGPartNum VARCHAR(100), 
+MFGProdURL VARCHAR(250), 
+MFGDriverURL VARCHAR(250),
+PricingClass ENUM('Desktop','Notebook','Server','Monitor', 'Memory','HardDrive','VideoCard','Peripheral','Printer', 'Software') DEFAULT 'Peripheral', 
+ItemName VARCHAR(100), 
+Description TEXT, 
+TechSpecs TEXT, 
+Keywords VARCHAR(100), 
+SneakPeak VARCHAR(50), 
+Emblem VARCHAR(100), 
+SmallPhoto VARCHAR(250), 
+LargePhoto VARCHAR(250), 
+Warranty VARCHAR(25), 
+Weight DECIMAL(8,1), 
+Cost DECIMAL(8,2), 
+CompPrice DECIMAL(8,2), 
+RelatedProd VARCHAR(250), 
+Accessories VARCHAR(250), 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10), 
+IngramPartNum VARCHAR(100), 
+TechDataPartNum VARCHAR(100), 
+SynnexPartNum VARCHAR(100), 
+ProductType ENUM('Desktop','Notebook','Server','Audio','CDROM','CDRW','DigitalCam','DVDROM','Floppy','HardDrive','InternetCam','Joystick','Keyboard','Memory','Modem','Monitor','Networking','NIC','NoteExtra','Pointer','UPS','Printer','Processor','Scanner','Software','Speaker','Storage','SystemBoard','SystemChassis','VideoCard','WirelessNet','ZipDrive','Warranty','License','Assembly','Peripheral') DEFAULT 'Peripheral', 
+Searchable ENUM('Yes','No') DEFAULT 'Yes');

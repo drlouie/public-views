@@ -1,0 +1,60 @@
+ 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">About 
+            Coastline Micro</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> <font class="regtextnobold"> 
+                              <p>Coastline Micro is a manufacturer of computer systems. We also provide peripherals and support services. We are dedicated to bringing you the best computing solutions at competitive prices. Our products are built strong from the start and to your specifications. We deliver them quickly and efficiently to meet your deadlines. Our staff will work to see you are provided the best in personal service and online product procurement.
+<br><br>
+Please utilize the various communication and feedback tools within our site to help us bring you better service. We thank you for visiting CoastlineMicro.com and we look forward to your next 
+visit.
+<br>
+                              </p>
+                              <ul>
+                                <li><font class="regtextnobold"><a href="about_temp.cgi?sub_link=location">Company 
+                                  Location</a></font></li>
+                                <li><font class="regtextnobold"><a href="about_temp.cgi?sub_link=news">Company 
+                                  News</a></font></li>
+                                <li><font class="regtextnobold"><a href="about_temp.cgi?sub_link=heritage">Coastline 
+                                  Micro's Heritage</a></font></li>
+                                <li><font class="regtextnobold"><a href="about_temp.cgi?sub_link=press">Press 
+                                  Releases</a></font></li>
+                                <li><a href="about_temp.cgi?sub_link=auth"><font class="innerlink">Product 
+                                  Authorizations</font></a></li>
+                              </ul>
+                              </font>
+          </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

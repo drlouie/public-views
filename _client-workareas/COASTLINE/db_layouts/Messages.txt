@@ -1,0 +1,48 @@
+TOTAL: 14 Fields
+
+// Username = The username of the person sending message
+
+// (*)ID = If this message is intended to be a Quote, Order or Configuration alert
+// to the Coastline Micro staff, the associated field is tagged either the Quote, 
+// Order or Configuration ID as necessary. Only one at a time of course.
+// If not then nothing is tagged and message is just plainly sent.
+
+// Recipients = All intended recipients of this message, up to 250 characters allowed
+
+// Subject = Subject of message, up to 100 characters allowed
+
+// Body = Body of message, Plain text for now, unlimited characters allowed
+
+// Attachment(*) = Message attachments of any type, up to 3 seperate files at once
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE Messages (MessageID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Username VARCHAR(25), 
+QuoteID INT, 
+OrderID INT, 
+ConfigID INT, 
+ReplyAdd VARCHAR(100), 
+Recipients VARCHAR(250), 
+Subject VARCHAR(100), 
+Body TEXT, 
+Attachment1 VARCHAR(50), 
+Attachment2 VARCHAR(50), 
+Attachment3 VARCHAR(50), 
+AddedOn Timestamp(10), 
+DeletedBy VARCHAR(25),
+DeletedOn Timestamp(10),
+CMCustNum VARCHAR(100));
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO Messages (MessageID, Username, QuoteID, 
+OrderID, ConfigID, ReplyAdd, Recipients, Subject, Body, Attachment1, 
+Attachment2, Attachment3, AddedOn, DeletedBy, DeletedOn)
+
+VALUES (Null, "drlouie", "", "", "", "drlouie@hapasol.com", 
+"drlouie@tstonramp.com", "Subject of Message", 
+"Body of Message", "Attach1", "Attach2", 
+"Attach3", "", "", Null, "");

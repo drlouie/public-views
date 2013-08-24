@@ -1,0 +1,40 @@
+TOTAL: 36 Fields
+
+// Follow notations on Desktops table layout
+
+// (*)By = The username of the person taking the action
+// (*)On = The date when action was taken
+
+<!-- MAKE TABLE STRUCTURE -->
+CREATE TABLE DISTs (DistributorID INT(10) ZEROFILL NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Name VARCHAR(100), 
+URL VARCHAR(250), 
+MailAdd VARCHAR(100), 
+MailAdd2 VARCHAR(100), 
+MailCity CHAR(100), 
+MailState CHAR(100), 
+MailZip VARCHAR(100), 
+MainEmail VARCHAR(50), 
+MainPhone VARCHAR(100), 
+MainFax VARCHAR(100), 
+Emblem VARCHAR(50), 
+LogoSmall VARCHAR(50), 
+LogoMedium VARCHAR(50), 
+LogoLarge VARCHAR(50), 
+AddedBy VARCHAR(25), 
+AddedOn Timestamp(10), 
+ModifiedBy VARCHAR(25), 
+ModifiedOn Timestamp(10));
+
+
+<!-- ADD DATA STRUCTURE -->
+INSERT INTO DISTs (DistributorID, Name, URL, 
+MailAdd, MailAdd2, MailCity, MailState, MailZip,  
+MainEmail, MainPhone, MainFax, Emblem, LogoSmall, 
+LogoMedium, LogoLarge, AddedBy, AddedOn, ModifiedBy, 
+ModifiedOn)
+
+VALUES (Null, "Intel Corporation", "http://www.intel.com/", 
+"Address1", "Address2", "City", "State", "91767", 
+"main@hapasol.com", "9999999999", "9999999999", 
+"", "", "", "", "drlouie", Null, "", "");

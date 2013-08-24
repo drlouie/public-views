@@ -1,0 +1,83 @@
+ 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Contact 
+            Coastline Micro</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td colspan="5"> 
+            <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                <td width=10>&nbsp;</td>
+                <td colspan="3" align="left" valign="top"> 
+                  <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+                    <tr> 
+                      <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                      <td width="200"><font  class="regtextnobold">1-800-729-6809</font></td>
+                    </tr>
+                    <tr> 
+                      <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                      <td width="200"><font class="regtextnobold">1-949-450-9977</font></td>
+                    </tr>
+                    <tr> 
+                      <td width="65">&nbsp;</td>
+                      <td width="200">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width=10>&nbsp;</td>
+                <td colspan="3"> <font class="regtextnobold"> 
+                  <p>The Internet has revolutionized communications between company and client, helping us achieve the best in customer service practices. Today our customers have the power to contact our company via the Internet 24 hours a day. We value your comments and continually look for ways to improve our customers' experiences; this is why we urge you to take a moment to comment on our Web site or the service you've received from our staff. We thank you for your comments and suggestions, and we look forward to providing the best support possible.
+                    <br>
+                    <br>
+                    Below is a list of feedback options. Please select the department you wish to contact.<br>
+                  <ul>
+                    <li><a href="cont_temp.cgi?sub_link=gencomments">General Comments</a></li>
+                    <li><a href="supp_temp.cgi?sub_link=cs">Customer Service</a></li>
+                    <li><a href="cont_temp.cgi?sub_link=credit">Online Credit 
+                      Application</a></li>
+                    <li><a href="cont_temp.cgi?sub_link=sitecomments">Site Comments</a></li>
+                    <li><a href="supp_temp.cgi?sub_link=ts">Technical Support</a></li>
+                  </ul>
+                  <br>
+                  <br>
+                  </font> </td>
+                <td width=10>&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
