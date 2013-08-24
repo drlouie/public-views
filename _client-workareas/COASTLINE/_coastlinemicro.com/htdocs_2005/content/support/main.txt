@@ -1,0 +1,92 @@
+ 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Customer 
+            Support Center</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td width=10>&nbsp;</td>
+          <td colspan="3" align="left" valign="top"> 
+            <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+              <tr> 
+                      <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                      <td width="200"><font  class="regtextnobold">(800) 729-6809</font></td>
+                    </tr>
+                    <tr> 
+                      <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                      <td width="200"><font class="regtextnobold">(949) 450-9977</font></td>
+              </tr>
+              <tr> 
+                <td width="65">&nbsp;</td>
+                <td width="200">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width=10>&nbsp;</td>
+          <td colspan="3"> <font class="regtextnobold"> 
+            <p>Coastline Micro is proud to offer award winning customer service. 
+              Recently Coastline Micro was awarded the Prestigious Customer Care 
+              Award from the System Builder Summit (<a href="press.html">See 
+              Press Release</a>). Our commitment to our customers goes way beyond 
+              a simple procedure or policy. Our customer service commitment is 
+              prevalent in every Coastline Micro department. Whether you are applying 
+              for credit, or reporting a problem with your equipment, a Coastline 
+              Micro representative is there and committed to resolving your request 
+              in the most efficient means possible. <br>
+              <br>
+              It is our goal to resolve every customer service issue the same 
+              day the request for service is submitted. We offer a one-year warranty 
+              on all equipment purchased from Coastline Micro. Next day parts 
+              replacement, and on-site service are optional for the 1st, 2nd and 
+              3rd year of ownership cutting down on your company's IT department 
+              costs for computer repair and upgrades.<br>
+              <br>
+              Please call one of our Customer Service Representatives to help 
+              with any of your product return issues. Or you can write to our 
+              Customer Service Department using our online request forms for an 
+              equally fast response. No matter what your workstation, server and/or 
+              network needs be, you can rest assure Coastline Micro can meet if 
+              not exceed your expectations and deadlines every single time.<br>
+            </p>
+            <ul>
+              <li><a href="support.html?title=cs">Customer Service</a><br>
+                <br>
+              <li><a href="support.html?title=ts">Technical Support</a> 
+            </ul>
+            </font> </td>
+          <td width=10>&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

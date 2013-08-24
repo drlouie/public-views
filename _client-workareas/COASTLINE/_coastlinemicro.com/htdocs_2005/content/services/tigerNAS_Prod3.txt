@@ -1,0 +1,298 @@
+<style type="text/css">
+	.stextbig{ color:#000000; }
+</style>
+<script language="Javascript" src="js/mousetable.js"></script>
+<script language="Javascript" src="js/b4dom.js"></script>
+<script language="Javascript">
+function viewPic() {
+	var LP = document.getElementById("LP").style;
+	if (LP.visibility != 'visible') {
+		currWidth = document.body.clientWidth;
+		// icon layer placement
+		minusMenuSpace = currWidth - 225;
+		newPlacement = currWidth - minusMenuSpace;
+		// place icon layer accordingly
+		LP.visibility = 'visible';
+		LP.width = ""+minusMenuSpace+"px";
+		LP.height = "330px";
+	}
+}
+function hidePic() {
+	var LP = document.getElementById("LP").style;
+	if (LP.visibility != 'hidden') {
+		LP.visibility = 'hidden';
+		LP.width = "1px";
+		LP.height = "1px";
+	}
+}
+
+var ovFGColor = "#008ED2";
+function focusOnMe(cual) {
+	var este = cual;
+	este.style.background = "000000";
+}
+
+function blurMe(cual) {
+	var este = cual;
+	este.style.background = ovFGColor;
+}
+
+function focusOnText(cual) {
+	document.getElementById(""+cual+"").style.color = "#000000";
+}
+
+function blurText(cual) {
+	document.getElementById(""+cual+"").style.color = "#008ED2";
+}
+</script>
+<div id="LP" style="background-color:#FFFFFF;position:absolute;left:225px;top:125px;width:1px;height:1px;visibility:hidden;" onMouseOut="hidePic();">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td width="100%" align="center"><img src="images/header_large_prod3.jpg" width="502" height="225" id="daLP" border="0"></td>
+	</tr>
+	<tr>
+		<td width="100%" align="center" height="20" valign="bottom"><i><font face="Verdana,Arial,Helvetica" size="2" color="#000000" style="line-height:12px;"><b>Configure / Print / Evaluate</b></font></i></td>
+	</tr>
+</table>
+</div>
+<table width="85%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3">
+      <table width="100%" cellspacing="0" cellpadding="0" height="336">
+        <tr valign="top"> 
+          <td height="188" width="50%" align="right" align="bottom"><a href="#" onMouseOver="viewPic();"><img src="images/header_left_prod3.jpg" width="319" height="188" border="0"></a></td>
+          <td height="188" align="right" width="50%"><img src="images/header_right_xeon.jpg" width="278" height="188"></td>
+        </tr>
+        <tr valign="top"> 
+          <td colspan="2"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" height="148">
+              <tr> 
+                <td width="65%" align="center" height="148" valign="middle"> 
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td><font face="Arial, Helvetica, sans-serif" size="4" style="line-height:23px;"><i><font size="5"><b>3U 
+                        16-Bay Tiger Series NAS Solution<br>
+                        </b></font><font size="4">Intel Xeon DP Processor Support</font><font size="3"><br>
+                        For Terabyte Enterprise Storage Storage</font></i></font></td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="35%" align="left" height="148" valign="middle"><a href="#" onClick="javascript:window.open('http://www.adaptec.com/worldwide/product/markeditorial.html?sess=no&language=English+US&cat=%2fTechnology%2fSerial+ATA&prodkey=sata_sas_compare','SerialATA');" onMouseOver="document.images.serialata.src = 'images/serial_ata_1.5gbs_color.gif';" onMouseOut="document.images.serialata.src = 'images/serial_ata_1.5gbs.gif';" title="Click to view Key Decision Factors When Choosing a Serial Technology by Adaptec"><img src="images/serial_ata_1.5gbs.gif" width="55" height="57" name="serialata" border="0"></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr valign="top" align="left" bgcolor="#000000"> 
+          <td colspan="2" height="30"><img src="images/header_bar_prod3.gif" width="550" height="30"></td>
+        </tr>
+        <tr valign="top" align="center" bgcolor="#A3A3A3"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" height="5" colspan="3"><img src="images/spacer.gif" width="1" height="5" border="0"></td>
+  </tr>
+  <tr valign="top"> 
+    <td align="left" width="65%"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr> 
+          <td><font face="Arial, Helvetica, sans-serif" size="3"><b>Intel Xeon 
+            DP Processors at 2.4GHz 533MHz Front Side Bus, 512K Cache</b></font></td>
+        </tr>
+      </table>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+              <tr> 
+                <td height="1"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr> 
+          <td><font face="Arial, Helvetica, sans-serif" size="3"><b>2048MB ECC 
+            DDR SDRAM Memory</b></font></td>
+        </tr>
+      </table>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+              <tr> 
+                <td height="1"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <font face="Arial, Helvetica, sans-serif" size="3"></font> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr> 
+          <td><font face="Arial, Helvetica, sans-serif" size="3"><b>Serial ATA 
+            or SCSI Hard Drives x16</b></font></td>
+        </tr>
+      </table>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+              <tr> 
+                <td height="1"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <font face="Arial, Helvetica, sans-serif" size="3"></font><font face="Arial, Helvetica, sans-serif" size="3"></font> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr> 
+          <td><font face="Arial, Helvetica, sans-serif" size="3"><b>MS Windows Storage Server 2003</b></font></td>
+        </tr>
+      </table>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+              <tr> 
+                <td height="1"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <font face="Arial, Helvetica, sans-serif" size="3"></font><font face="Arial, Helvetica, sans-serif" size="3"></font> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr> 
+          <td><font face="Arial, Helvetica, sans-serif" size="3"><b>Persistent 
+            Storage Management</b></font></td>
+        </tr>
+      </table>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+              <tr> 
+                <td height="1"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr> 
+          <td><font face="Arial, Helvetica, sans-serif" size="3"><b>Rack Mount 
+            Slide Rail Kit</b></font></td>
+        </tr>
+      </table>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+              <tr> 
+                <td height="1"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+ 
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr> 
+          <td><font face="Arial, Helvetica, sans-serif" size="3"><b>3-Year Limited Warranty</b></font></td>
+        </tr>
+      </table>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+              <tr> 
+                <td height="1"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+           <td height="5" colspan="2"><img src="images/spacer.gif" width="1" height="5" border="0"></td>
+        </tr>
+        <tr>
+          <td align="center" width="100%" colspan="2"><font face="Arial, Helvetica, sans-serif" size="2" color="#000000"><i>Configure yours Today!</i></font></td>
+        </tr>
+<form>
+        <tr>
+          	<td align="center" width="50%"><input type="button" value="(M316S) Serial ATA" class="pricebut" style="cursor:hand;height:25px;width:150px;font-size:10px;background-color:#008ED2;color:#FFFFFF" onClick="javascript:document.location.href='sharktank.html?title=tiger&loadsys=M316S';" onFocus="focusOnMe(this);focusOnText('SysBut1');" OnBlur="blurMe(this);blurText('SysBut1');" OnMouseOver="focusOnMe(this);focusOnText('SysBut1');" OnMouseOut="blurMe(this);blurText('SysBut1');"></td>
+			<td align="center" width="50%"><input type="button" value="(M316SS) SCSI" class="pricebut" style="cursor:hand;height:25px;width:150px;font-size:10px;background-color:#008ED2;color:#FFFFFF" onClick="javascript:document.location.href='sharktank.html?title=tiger&loadsys=M316SS';" onFocus="focusOnMe(this);focusOnText('SysBut2');" OnBlur="blurMe(this);blurText('SysBut2');" OnMouseOver="focusOnMe(this);focusOnText('SysBut2');" OnMouseOut="blurMe(this);blurText('SysBut2');"></td>
+        </tr>
+        <tr>
+          	<td width="50%" valign="top" align="center"><div style="width:130px;text-align:left;"><font face="Arial, Helvetica, sans-serif" size="2" style="color:#008ED2;" id="SysBut1"><b>CM 3U 16 Drive NAS Chassis w/Slide Rails 500W 1+1 PSU SATA</b><br><br>NAS MODEL: M316S Form Factor: 3U, 19" Rackmount Capacity: 1.28TB - 2.56TB Drive Type: Serial ATA Hot Swap: Yes RAID Level: HW 0, 1, 10, 5, 5+ hotspare CPU: (2) Intel Xeon 2.4Ghz 533FSB Memory: 2gb ECC DDR Ethernet: 1 10/100, 1 10/100/1000 Connectivity: U320 SCSI RPS: Yes</font></div></td>
+          	<td width="50%" valign="top" align="center"><div style="width:130px;text-align:left;"><font face="Arial, Helvetica, sans-serif" size="2" style="color:#008ED2;" id="SysBut2"><b>CM 3U 16 Drive NAS Chassis w/Slide Rails 500W 1+1 PSU 2CH SCSI</b><br><br>NAS MODEL: M316SS Form Factor: 3U, 19" Rackmount Capacity: 1.17TB - 2.34TB Drive Type: U320 SCSI Hot Swap: Yes RAID Level: HW 0, 1, 10, 5, 5+ hotspare CPU: (2) Intel Xeon 2.4Ghz 533FSB Memory: 2gb ECC DDR Ethernet: 1 10/100, 1 10/100/1000 Connectivity: U320 SCSI RPS: Yes</font></div></td>
+        </tr>
+</form>
+      </table>
+<font face="Arial, Helvetica, sans-serif" size="3"></font><font face="Arial, Helvetica, sans-serif" size="3"></font></td>
+    <td align="center" bgcolor="#000000" width="1"><img src="images/spacer.gif" width="1" height="5" border="0"></td>
+    <td align="center" width="35%">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr onMouseOver="runto2(this,'#000000');" onMouseOut="runback2(this,'#FFFFFF');" style="background-color:#FFFFFF;cursor:hand;" onClick="javascript:parent.location.href='newframer.html?subject=press&title=in&PageTitle=Press%20Release%20Archive';" title="Click to view the Coastline Micro Network Attached Storage Press Release">
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+          <td width="15" height="40"><img src="images/nas_arrow3.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/nas_arrow.gif" width="15" height="25"></td>
+          <td width="100%" height="40">&nbsp;&nbsp;<a href="#" onClick="javascript:parent.location.href='newframer.html?subject=press&title=in&viewRel=00001090';" title="Click to view the Coastline Micro Network Attached Storage Press Release"><font face="Arial, Helvetica, sans-serif" size="2" color="#008ED2"><b>CM NAS Press Release</b></font></a></td>
+          <td width="15" height="40" align="right"><img src="images/nas_arrow2.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+        </tr>
+        <tr onMouseOver="runto2(this,'#000000');" onMouseOut="runback2(this,'#FFFFFF');" style="background-color:#FFFFFF;cursor:hand;" onClick="javascript:window.open('http://www.microsoft.com/windows/storage/default.mspx','MSNAS');" title="Click to view more information about Microsoft Windows for Network Attached Storage">
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+          <td width="15" height="40"><img src="images/nas_arrow3.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/nas_arrow.gif" width="15" height="25"></td>
+          <td width="100%" height="40">&nbsp;&nbsp;<a href="#" onClick="javascript:window.open('http://www.microsoft.com/windows/storage/default.mspx','MSNAS');" title="Click to view more information about Microsoft Windows for Network Attached Storage"><font face="Arial, Helvetica, sans-serif" size="2" color="#008ED2"><b>MS Windows for NAS</b></font></a></td>
+          <td width="15" height="40" align="right"><img src="images/nas_arrow2.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+        </tr>
+        <tr onMouseOver="runto2(this,'#000000');" onMouseOut="runback2(this,'#FFFFFF');" style="background-color:#FFFFFF;cursor:hand;" onClick="javascript:parent.location.href='newframer.html?subject=coastlinemicro_services&title=lanrover3105&PageTitle=LanRover%201080-85%20Broadband%20Security%20Gateways';" title="Click to view more information about Virtual Private Newtworking for Network Attached Storage">
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+          <td width="15" height="40"><img src="images/nas_arrow3.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/nas_arrow.gif" width="15" height="25"></td>
+          <td width="100%" height="40">&nbsp;&nbsp;<a href="#" onClick="javascript:parent.location.href='newframer.html?subject=coastlinemicro_services&title=lanrover3105&PageTitle=LanRover%201080-85%20Broadband%20Security%20Gateways';"  title="Click to view more information about Virtual Private Newtworking for Network Attached Storage"><font face="Arial, Helvetica, sans-serif" size="2" color="#008ED2"><b>VPN Solutions for NAS</b></font></a></td>
+          <td width="15" height="40" align="right"><img src="images/nas_arrow2.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+        </tr>
+        <tr onMouseOver="runto2(this,'#000000');" onMouseOut="runback2(this,'#FFFFFF');" style="background-color:#FFFFFF;cursor:hand;" onClick="javascript:parent.location.href='newframer.html?subject=coastlinemicro_services&title=cyberkey&PageTitle=CyberKey%20Security%20Token%20Information';" title="Click to view information on our Cyberkey Security offering">
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+          <td width="15" height="40"><img src="images/nas_arrow3.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/nas_arrow.gif" width="15" height="25"></td>
+          <td width="100%" height="40">&nbsp;&nbsp;<a href="#" onClick="javascript:parent.location.href='newframer.html?subject=coastlinemicro_services&title=cyberkey&PageTitle=CyberKey%20Security%20Token%20Information';" title="Click to view information on our Cyberkey Security offering"><font face="Arial, Helvetica, sans-serif" size="2" color="#008ED2"><b>CyberKey Security</b></font></a></td>
+          <td width="15" height="40" align="right"><img src="images/nas_arrow2.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+        </tr>
+        <tr onMouseOver="runto2(this,'#000000');" onMouseOut="runback2(this,'#FFFFFF');" style="background-color:#FFFFFF;cursor:hand;" onClick="javascript:parent.location.href='newframer.html?subject=coastlinemicro_services&title=tigerNAS_datasheets&PageTitle=NAS%20Data%20Sheets';" title="Click to view the Network Attached Storage Data Sheets">
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+          <td width="15" height="40"><img src="images/nas_arrow3.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/nas_arrow.gif" width="15" height="25"></td>
+          <td width="100%" height="40">&nbsp;&nbsp;<a href="#" onClick="javascript:parent.location.href='newframer.html?subject=coastlinemicro_services&title=tigerNAS_datasheets&PageTitle=NAS%20Data%20Sheets';" title="Click to view the Network Attached Storage Data Sheets"><font face="Arial, Helvetica, sans-serif" size="2" color="#008ED2"><b>NAS Data Sheets</b></font></a></td>
+          <td width="15" height="40" align="right"><img src="images/nas_arrow2.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+        </tr>
+        <tr onMouseOver="runto2(this,'#000000');" onMouseOut="runback2(this,'#FFFFFF');" style="background-color:#FFFFFF;cursor:hand;" onClick="javascript:parent.location.href='newframer.html?subject=coastlinemicro_services&title=tigerNAS_whitepapers&PageTitle=NAS%20White%20Papers';" title="Click to view the Network Attached Storage White Papers">
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+          <td width="15" height="40"><img src="images/nas_arrow3.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/nas_arrow.gif" width="15" height="25"></td>
+          <td width="100%" height="40">&nbsp;&nbsp;<a href="#" onClick="javascript:parent.location.href='#';" title="Click to view the Network Attached Storage White Papers"><font face="Arial, Helvetica, sans-serif" size="2" color="#008ED2"><b>NAS White Papers</b></font></a></td>
+          <td width="15" height="40" align="right"><img src="images/nas_arrow2.gif" width="15" height="25"></td>
+          <td width="15" height="40"><img src="images/spacer.gif" width="10" height="1"></td>
+        </tr>
+        <tr align="center"> 
+          <td colspan="6" height="40">
+            <img src="images/nas_logoage.gif" width="102" height="151" vspace="5">
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

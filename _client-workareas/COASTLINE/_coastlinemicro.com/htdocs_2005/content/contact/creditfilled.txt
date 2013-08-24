@@ -1,0 +1,153 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//Check Search field for completion
+function checkForm() {
+	if (document.emailform.First_Name.value == "") {
+	alert('Your First Name is missing.');
+	document.emailform.First_Name.focus();
+	return false;
+	}	
+	
+	if (document.emailform.Last_Name.value == "") {
+	alert('Your Last Name is missing.')
+	document.emailform.Last_Name.focus();
+	return false;
+	}	
+
+	if (document.emailform.Company_Name.value == "") {
+	alert('Your Company\'s Name is missing.')
+	document.emailform.Company_Name.focus();
+	return false;
+	}	
+	
+	var x= document.emailform.email.value;
+	if( x.indexOf('@')==-1 || x.indexOf('.')==-1 || x.indexOf(' ')!=-1 || x.length<7)
+	{
+    alert('Your Email Address is invalid or missing. Please enter a valid email address.');
+	document.emailform.email.focus();
+    return false;
+    }
+	
+	else {
+	return true;
+	}
+}
+-->
+</SCRIPT>
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Download 
+            Credit Application</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> 
+
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td colspan="2"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr align="center"> 
+                <td width="100%"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr> 
+                            <td colspan="5"> 
+                              <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+                          <tr> 
+                            <td width=10>&nbsp;</td>
+                            <td colspan="3" align="left" valign="top"> 
+                              <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+                                <tr> 
+                                  <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                                  <td width="200"><font  class="regtextnobold">(800) 729-6809</font></td>
+                                </tr>
+                                <tr> 
+                                  <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                                  <td width="200"><font class="regtextnobold">(949) 450-9977</font></td>
+                                </tr>
+                                <tr> 
+                                  <td width="65">&nbsp;</td>
+                                  <td width="200">&nbsp;</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td width=10>&nbsp;</td>
+                            <td colspan="3"> <font class="regtextnobold">We have 
+                              successfully recieved your contact information. 
+                              Now you can click the link below to download our 
+                              Credit Application. Once the file is downloaded, 
+                              please print the form, fill it out and <b>fax</b> 
+                              it back to our credit department at <b>(949) 450-9977</b>. 
+                              <br>
+                                <UL>
+								<LI><a href="downloads/creditapp.pdf">Download Credit Application</a><br>
+								</UL>
+								<br>
+                              <b>Note: </b>If you are unable to view the file, 
+                              you must not have Adobe Acrobat Reader installed 
+                              on your system. Please download and install Adobe 
+                              Acrobat Reader on your system to view the file.<br>
+								<UL>
+								<LI><a href="http://download.cnet.com/downloads/0-10068-100-2351460.html?tag=st.dl.10001_103_1.lst.td_2351460">Adobe Acrobat Reader for Windows 95/98/2000</a><br>
+								<LI><a href="http://download.cnet.com/downloads/0-10202-100-1439453.html?tag=st.dl.10000_103_1.lst.td_1439453">Adobe Acrobat Reader for Macintosh System 7.1+</a><br>
+								<LI><a href="http://download.cnet.com/downloads/1,10150,0-10000-103-0-1-7,00.html?tag=st%2Edl%2E10001%2Esbsr&qt=adobe+acrobat&cn=&ca=10000">Abobe Acrobat Reader for other Operating Systems</a>
+								</UL>
+								</font>
+                            </td>
+                            <td width=10>&nbsp;</td>
+                          </tr>
+                        </table>
+
+<form method="post" action="sitemailer.html" name="emailform" onSubmit="return checkForm()">
+                    <input type="hidden" name="recipient" value="email">
+                    <input type="hidden" name="subject" value="Online_Credit_Application">
+                    <input type=hidden name="required" value="First_Name,Last_Name,Company_Name,email">
+                    <input type=hidden name="sort" value="order:First_Name,Last_Name,Company_Name,email">
+                        </form>
+				  
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+
+          </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

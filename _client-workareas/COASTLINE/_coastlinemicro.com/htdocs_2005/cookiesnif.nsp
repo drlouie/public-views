@@ -1,0 +1,29 @@
+#!/usr/bin/perl5 -s
+
+require ("parse_query.nsp");
+
+require 'cookie.lib';
+
+if (&GetCookies('Echado')) {
+	&GetCookies('CeeEmmNo');
+	&GetCookies('EDomi');
+	&GetCookies('GID');
+	&GetCookies('FiNo');
+	&GetCookies('LaNo');
+	&GetCookies('UTipe');
+	&GetCookies('CoNo');
+	&GetCookies('DTV');
+	&GetCookies('SRV');
+	&GetCookies('NBV');
+	&GetCookies('MOV');
+	&GetCookies('MYV');
+	&GetCookies('HDV');
+	&GetCookies('VDV');
+	&GetCookies('PHV');
+	&GetCookies('PTV');
+	&GetCookies('SWV');	
+	&GetCookies('CNFIGS');
+	&GetCookies('PTIES');
+}
+
+1;

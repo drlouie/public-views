@@ -1,0 +1,118 @@
+<style type="text/css">
+	.stextbig{ color:#000000; }
+</style>
+<script language="Javascript" src="js/popwindow.js"></script>
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr height="1">
+          <td width="45%" valign="bottom"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+          <td align="right" width="55%" valign="bottom"><img src="images/spacer.gif" width="1" height="1" border="0">
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+
+  
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10" align="center">
+<tr>
+<td width="100%" valign="top" align="center">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">		  
+        <tr> 
+          <td width="45%" valign="bottom"><img src="sharktank/images/cm_logo_small.jpg" width="142" height="51" border="0"></td>
+          <td align="right" width="55%" valign="bottom"><font class="stextbig"><b><nobr>Microsoft&reg; Windows&reg; Powered</nobr><br><img src="images/spacer.gif" width="1" height="12" border="0"></b></font></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td width="45%" valign="bottom"><b><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><nobr>TIGER SERIES&#153; NETWORK ATTACHED STORAGE</nobr></font></b></td>
+          <td align="right" width="55%" valign="bottom"><b><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">DATA SHEETS</font></b></td>
+        </tr>
+</table>		
+<br>
+<br>
+<table id="uno" width="90%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-top:1px solid #FFFFFF; border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF;">
+	<tr>
+		<td width="100%" height="25"><font color="#000000" size="1" style="font-size:10px;" face="Verdana, Arial, Helvetica, sans-serif"><b>Windows Powered NAS Datasheet</b><br><div style="padding-left:15px;">(<a href="/nas/wpnasgreendatasht.pdf"><font color="#000000">PDF</font></a> - 101 KB)<br>A overview of the NAS environment under Windows.<br></div></font></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+</table>
+<table id="dos" width="90%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-top:1px solid #FFFFFF; border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF;">
+	<tr>
+		<td width="100%" height="25"><font color="#000000" size="1" style="font-size:10px;" face="Verdana, Arial, Helvetica, sans-serif"><b>Ensure Business Continuity</b><br><div style="padding-left:15px;">(<a href="/nas/ensbizcontbluedatasht.pdf"><font color="#000000">PDF</font></a> - 680 KB)<br>The future of NAS for business at a glance.</div></font></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+</table>
+<table id="siete" width="90%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-top:1px solid #FFFFFF; border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF;">
+	<tr>
+		<td width="100%" height="25"><font color="#000000" size="1" style="font-size:10px;" face="Verdana, Arial, Helvetica, sans-serif"><b>File Server Consolidation</b><br><div style="padding-left:15px;">(<a href="/nas/srvrconsyellowdatasht.pdf"><font color="#000000">PDF</font></a> - 755 KB)<br>How to Reduce Costs, Simplify Management and Deliver Business Agility using Windows NAS.</div></font></b></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+</table>
+<table id="siete" width="90%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-top:1px solid #FFFFFF; border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF;">
+	<tr>
+			<td width="100%" height="25"><font color="#000000" size="1" style="font-size:10px;" face="Verdana, Arial, Helvetica, sans-serif"><b>NAS Side-By-Side Comparison Sheet</b><br><div style="padding-left:15px;">(<a href="/nas/TigerSeriesNAS-side-by-side-comparison.pdf"><font color="#000000">PDF</font></a> - 21 KB)<br>Side-by-side comparison of our Windows Powered NAS Solutions.</div></font></b></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+</table>
+
+</td>
+<td width="275" valign="top" align="center"><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td><img src="images/tigerNASillus_whitepapers.jpg" width="264" height="343" border="0"></td></tr>
+
+</table>
+<br><img src="images/spacer.gif" width="275" height="1" border="0"></td>
+</tr>
+
+</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="50" align="center"><font class="stext"><b>(*) Available in parallel ATA and serial ATA hard drives.</b></font></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="center" height="20"><font class="stextbig"><b>Call <font style="color:#EB0000;">(800)729-6809</font> for more information on our NAS Solutions</b></font></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+         <tr> 
+          <td colspan="2" height="80"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    
+  
+
+
+<map name="Main1"> 
+  <area shape="rect" coords="0,1,329,75" href="coastlinemicro_services.html?title=tigerNAS2_Prod1_2">
+  <area shape="rect" coords="328,1,419,75" href="#" onClick="javascript:popWindow('http://www.microsoft.com/windows/storage/productinformation/demos/main.htm','WINNAS','760','540','NO');">
+</map>
+<map name="Main2"> 
+  <area shape="rect" coords="0,1,329,75" href="coastlinemicro_services.html?title=tigerNAS2_Prod2_2">
+  <area shape="rect" coords="328,1,419,75" href="#" onClick="javascript:popWindow('http://www.microsoft.com/windows/storage/productinformation/demos/main.htm','WINNAS','760','540','NO');">
+</map>
+<map name="Main3"> 
+  <area shape="rect" coords="0,1,329,75" href="coastlinemicro_services.html?title=tigerNAS2_Prod3_2">
+  <area shape="rect" coords="328,1,419,75" href="#" onClick="javascript:popWindow('http://www.microsoft.com/windows/storage/productinformation/demos/main.htm','WINNAS','760','540','NO');">
+</map>

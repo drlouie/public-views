@@ -1,0 +1,362 @@
+
+
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>Networking</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr>
+<td width="2%" valign="top">&nbsp;</td>
+                <td width="96%" valign="top"> <b><font color="#333366" size="2" face="Verdana, Arial, Helvetica, sans-serif">Coastline 
+                  Micro 7120 e-Commerce Accelerator</font></b><br>
+  <br>
+                  <font class="stext"><b>Improve server performance for secure 
+                  online transactions</b><br>
+                  <br>
+                  </font>
+                  <table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+                    <tr> 
+                      <td><b><font face="Verdana, Arial, Helvetica" size="2">Key 
+                        Features</font></b><b></b></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td><font class="stext">Offload up to 2,200 new SSL connections 
+                        per second for improved data center server performance 
+                        </font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td><font class="stext">Enhanced cascade mode for scalability 
+                        beyond 8,000 SSL connections per second </font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td><font class="stext">Increased security and reliability 
+                        for data center environments</font></td>
+                    </tr>
+                  </table>
+                  <font class="stext"><br>
+                  Boost speed and increase online transaction security with the 
+                  Coastline Micro 7120 e-Commerce Accelerator. Compact and easy 
+                  to install between routers and servers, the Coastline Micro 
+                  7120 e-Commerce Accelerator offloads Secure Sockets Layer (SSL) 
+                  encryption/decryption, freeing server resources and providing 
+                  up to 2,200 SSL connections per second processing. As both clear-text 
+                  and secure traffic increases, the performance and Gigabit (10/100/1000) 
+                  connectivity of the Coastline Micro 7120 e-Commerce Accelerator 
+                  is ready to meet growing SSL traffic needs. 
+                  <p>With its enhanced scalability features, the Coastline Micro 
+                    7120 e-Commerce Accelerator can be deployed in a variety of 
+                    modes to accommodate peak traffic periods easily and economically. 
+                    In cascade mode, excess SSL traffic can be transferred to 
+                    the next unit or to the server farm, providing the ability 
+                    to scale beyond 8,000 SSL connections per second without the 
+                    introduction of a load-balancing device. Failover/pass-through 
+                    technology helps reduce single point of failure concerns so 
+                    that your e-Commerce business remains quick, reliable and 
+                    secure.</p>
+                  <p>The Coastline Micro 7120 e-Commerce Accelerator can be managed 
+                    remotely via telnet, SSH, or SNMP through the Out-of-Band 
+                    management port or directly through the serial console port. 
+                    Event monitoring provides monitoring of key accelerator metrics 
+                    like SSL connections per second (cps), as well as alerts for 
+                    events such as encryption status change, refused SSL connections, 
+                    threshold alerts, overload alerts, and network link status. 
+                    Health monitoring alerts are also available to enable product 
+                    reliability and uptime.<br>
+                  </p></font>
+                  <br>
+                  <table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+                    <tr> 
+                      <td width="45%"><b><font face="Verdana, Arial, Helvetica" size="2">Features</font></b></td>
+                      <td width="10%">&nbsp;</td>
+                      <td width="45%"><b><font face="Verdana, Arial, Helvetica" size="2">Benefits</font></b></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Offloads SSL handling 
+                        from the data center servers</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Reduce the need for 
+                        new servers while maximizing current data center investments</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Handles up to 2,200 
+                        connections per second and up to 20,000 simultaneous SSL 
+                        sessions </font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Security without sacrificing 
+                        speed</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Gigabit (10/100/1000) 
+                        connectivity</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Optimize network performance 
+                        and flexibility</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Dynamically scalable 
+                        architecture</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Add SSL processing capacity 
+                        as secure traffic increases</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Provides RC2*, RC4*, 
+                        DES and 3DES level of encryption</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Supports industry standard 
+                        ciphers for trusted secure transactions </font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Client certificate authentication</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Accept or deny user 
+                        access based on certificate authority and revocation list</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Interoperable with most 
+                        servers and operating systems</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Easily introduced into 
+                        data centers</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Easy, drop-in installation 
+                        between router and servers</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">No additional hardware 
+                        or software needed</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Remote management and 
+                        event monitoring capabilities</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Device management from 
+                        remote locations, event notification, and monitoring</font></td>
+                    </tr>
+                  </table>
+<br>
+                  <font class="stext"> <b>Specifications**</b><br>
+<br>
+                  </font> 
+                  <table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Servers Supported</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"> 
+                        <ul>
+                          <li><font class="stext">Most commercial Web servers-Apache*, 
+                            Microsoft*, Netscape*, etc.</font></li>
+                          <li><font class="stext">Most operating systems - UNIX 
+                            Solaris*, Window NT*, OS400*, BSD/BSDI, AIX etc.</font></li>
+                          <li><font class="stext">Most server hardware - Sun*, 
+                            HP*, IBM RS 6000*and AS/400*, Compaq*, SGI*, Intel-based 
+                            platforms</font></li>
+                          <li><font class="stext">No practical limit on number 
+                            of servers</font></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">System Administration</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"> 
+                        <ul>
+                          <li>Command Line Interface for improved management</li>
+                          <li>Dynamic configuration through password-protected 
+                            serial console, telnet, or SSH</li>
+                          <li>Certificate, private key, port numbers/IP per certificate, 
+                            display log/diagnostic information</li>
+                          <li>Internal certificate generation for intranet testing 
+                            and configuration</li>
+                          <li>Security Algorithms Supported&#133;&#133; RSA*, 
+                            Blowfish*, DES, 3DES, RC2*, RC4*, MD5* and SHA-1*</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">System Fault Tolerance 
+                        With Failover</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"> 
+                        <ul>
+                          <li>Failover/pass-through switch (internal)</li>
+                          <li>Power failureIn-line/bypass switch</li>
+                          <li>Software failure security alert detection</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Interface Connections</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"> 
+                        <ul>
+                          <li>Dual 10/100/1000 Ethernet</li>
+                          <li>Dual DB9 serial - console</li>
+                          <li>Out-of-Band management port</li>
+                          <li>RESET - soft reset to existing setting; hard reset 
+                            restores factory defaults</li>
+                          <li>BYPASS - toggle between processing and not processing 
+                            SSL transactions</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Status Lights</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">System - power, activity, 
+                        overload, error, fail-safe, and bypassNetwork and Link 
+                        Speed - network, server, management</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Physical Specifications</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Standard 19in rack-mount</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Dimensions (W x H x 
+                        D)</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">17.18in x 1.71in x 20.61in</font></td>
+                    </tr>
+                  </table>
+                  <font class="stext"><br>
+                  <br>
+                  <b>Additional Coastline Micro e-Commerce Accelerator Product 
+                  Offerings</b><br>
+                  <br>
+                  </font> 
+                  <table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 7117 
+                        e-Commerce Accelerator</font></td>
+                      <td width="50%"> 
+                        <ul>
+                          <li><font class="stext">Offload up to 1000 new SSL connections 
+                            per second for improved server performance </font></li>
+                          <li><font class="stext">Enhanced scalability for growing 
+                            customer needs </font></li>
+                          <li><font class="stext">Multiple unit support for redundancy 
+                            and improved performance</font></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 7120 
+                        Configuration Services</font></td>
+                      <td width="50%"><font class="stext">Configuration services 
+                        for the Coastline Micro 7120 e-Commerce Accelerator</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 7120 
+                        5 Incident Pack - 1 Year</font></td>
+                      <td width="50%"><font class="stext">Support by Coastline 
+                        Micro service specialists on a per-incident basis 8am 
+                        to 5pm Monday - Friday PST</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 7120 
+                        10 Incident Pack - 1 Year</font></td>
+                      <td width="50%"><font class="stext">Support by Coastline 
+                        Micro service specialists on a per-incident basis 8am 
+                        to 5pm Monday - Friday PST</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 7120 
+                        Unlimited Phone Support Pack - 1 Year.</font></td>
+                      <td width="50%"><font class="stext">Support by Coastline 
+                        Micro service specialists on a per-incident basis. Unlimited 
+                        phone support incident packs provide the flexibility to 
+                        call 24 hours a day, 7 days a week, 365 days a year.</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 7120 
+                        Hardware Support Only - 1 Year</font></td>
+                      <td width="50%"><font class="stext">Enhances your product 
+                        warranty by providing next-business-day advanced exchange 
+                        of parts.</font></td>
+                    </tr>
+                  </table>
+<font class="stext"><br>
+<strong>Contact for Product and Ordering Information</strong><br>
+<br>
+Coastline Micro Internet Security Services ................... <a href="mailto:services@coastlinemicro.com" class="stext"><font class="stext">services@coastlinemicro.com</font></a><br>
+<br>
+Coastline Micro, Inc.<br>
+60 Technology Drive<br>
+Irvine, CA 92618 <br>
+Toll Free: 800.729.6809<br>
+Phone: 949.450.9966<br>
+Fax: 949.450.9977 <br>
+<font size="1"><br>
+Information in this document is provided in connection with Coastline Micro products. 
+No license, express or implied, by estoppel or otherwise, to any Coastline Micro 
+intellectual property rights is granted by this document. Except as provided in 
+Coastline Micro's Terms and Conditions of Sale for such products, Coastline Micro 
+assumes no liability whatsoever, and Coastline Micro disclaims any express or 
+implied warranty, relating to sale and/or use of Coastline Micro products including 
+liability or warranties relating to fitness for a particular purpose, merchantability, 
+or infringement of any patent, copyright or other Coastline Micro intellectual 
+property right. Coastline Micro products are not intended for use in medical, 
+life saving, or life sustaining applications. Coastline Micro may make changes 
+to specifications and product descriptions at anytime, without notice. <br>
+<br>
+*All Copyrights and Trademarks are properties of their respective owners.<br>
+<br>
+** Performance tests and ratings are measured using specific computer systems 
+and/or components and/or configurations, and reflect the approximate performance 
+of Coastline Micro products as measured by those tests<br>
+</font></font>
+
+
+
+</td>
+<td width="2%" valign="top" align="center">&nbsp;</td>
+</tr>
+
+</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>&nbsp;</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+</tr> </table>

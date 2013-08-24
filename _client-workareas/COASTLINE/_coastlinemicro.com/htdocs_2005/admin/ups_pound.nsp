@@ -1,0 +1,19 @@
+#!/usr/bin/perl5 -w
+
+use lib '.';
+use Business::UPS;
+my $Package = "GNDCOM";
+my $ShipZip = "91767";
+my $type = "$Package";
+my $to = "$ShipZip";
+my $wgt = "1";
+my ($from,$co) = qw/92618/;
+my ($shipping,$ups_zone,$error) = getUPS($type,$from,$to,$wgt,$co,'', '', '', '', '');
+$error and die "ERROR: $error\n";
+print "UPS Version " . $Business::UPS::VERSION . "\n";
+print "From: 91767 to 92618 at a Weight of 1 Pound using package GNDCOM\n";
+print "Shipping is \$$shipping\n";
+print "UPS Zone is $ups_zone\n";
+
+##return =true
+1;

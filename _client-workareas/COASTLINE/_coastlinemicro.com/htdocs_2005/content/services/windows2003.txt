@@ -1,0 +1,82 @@
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr>
+<td width="5%" valign="top">&nbsp;</td>
+                <td width="90%" valign="top"> <font class="stext" style="font-size:20px;font-family:arial,verdana,helvetica;line-height:30px;"> 
+                  <img src="images/domorewithless.jpg" width="249" height="376" align="left" style="margin-right:35px;">The 
+                  Windows Server 2003 family takes the best of Windows 2000 Server 
+                  technology and makes it easier to deploy, manage, and use. The 
+                  result: a highly productive infrastructure that helps make your 
+                  network a strategic asset for your organization. <br>
+                  <br>
+                  <b>Evolutionary Improvements to Windows 2000</b><br>
+                  Windows Server 2003 includes all the functionality customers 
+                  need today from a Windows server operating system to do more 
+                  with less, such as security, reliability, availability, and 
+                  scalability. In addition, Microsoft has improved and extended 
+                  the Windows server operating systems to incorporate the benefits 
+                  of Microsoft® .NET for connecting information, people, systems, 
+                  and devices. </font> </td>
+<td width="5%" valign="top" align="center">&nbsp;</td>
+</tr>
+
+</table>
+		    <br>
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+              <tr>
+                <td width="5%" valign="top">&nbsp;</td>
+                <td width="80%" valign="top" height="83"><img src="images/serverroles.jpg" width="226" height="63"></td>
+                <td width="15%" valign="top" align="center">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="5%" valign="top">&nbsp;</td>
+                <td width="80%" valign="top"> <font class="stext" style="font-size:19px;font-family:arial,verdana,helvetica;line-height:25px;"> 
+                  Windows Server 2003 is a multipurpose operating system capable 
+                  of handling a diverse set of server roles, depending on your 
+                  needs, in either a centralized or distributed fashion. Some 
+                  of these server roles include: 
+                  <ul>
+                    <li type="circle"> &nbsp; File and print server.<br>
+                    </li>
+                    <li type="circle"> &nbsp; Web server and Web application services.<br>
+                    </li>
+                    <li type="circle"> &nbsp; Mail server.<br>
+                    </li>
+                    <li type="circle"> &nbsp; Terminal server.<br>
+                    </li>
+                    <li type="circle"> &nbsp; Remote access and virtual private 
+                      network (VPN) server.<br>
+                    </li>
+                    <li type="circle"> &nbsp; Directory services, Domain Name 
+                      System (DNS)<br>
+                    </li>
+                    <li type="circle"> &nbsp; Dynamic Host Configuration Protocol 
+                      (DHCP) server, and Windows Internet Naming Service (WINS).<br>
+                    </li>
+                    <li type="circle"> &nbsp; Streaming media server.</li>
+                  </ul>
+                  <br><b>Find out more information on the <a href="javascript:void(0)" onClick="javascript:window.open('http://www.microsoft.com/windowsserver2003/default.mspx','WINDOWS2003');" class="stext" style="color:#000000;font-size:19px;font-family:arial,verdana,helvetica;line-height:25px;">Windows 2003 Server Family</a></b><br>
+                  <br>
+                  <b>View <a href="http://www.coastlinemicro.com/newframer.html?subject=sharktank&title=tiger&loadthis=tiger&PageTitle=Tiger%20Series%20DP%20Xeon%20Server" target="_parent" class="stext" style="color:#000000;font-size:19px;font-family:arial,verdana,helvetica;line-height:25px;">Coastline Micro's Advanced Server Solutions</a> incorporating 
+                  Windows 2003 applications.</b></font> </td>
+                <td width="15%" valign="top" align="center">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    
+  
+
+
+  
+

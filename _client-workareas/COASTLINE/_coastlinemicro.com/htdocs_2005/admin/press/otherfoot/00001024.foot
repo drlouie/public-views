@@ -1,0 +1,10 @@
+#!/usr/bin/perl5 -w
+
+$foottitle = "About NetMedia Solutions";
+
+$footlink = "http://www.hapasol.com/";
+
+$footbody = "NetMedia Solutions is in business to provide seemless integration of services ranging from simple print design to complex Internet data structures. Any size and class of company can benefit from the superior services at this company's disposal. The team at NetMedia Solutions will always go above and beyond a project's bounderies in order to continue to acquire numberous awards and industry class recognition. Like they say at NetMedia Solutons: \"If we don't feel its good enough for us or the client, its definetely not ready for the Internet public!\"<br><br>NetMedia Solutions continuously provides Coastline Micro, Inc. with a wide range of services including: CD-ROM Sleeve and Face Design, Packaging Design, Product Branding, Interactive Web Site Development including Flash, Ad Design and Implementation, Web Site Marketing, and a variety of other pre-press services including company Shirt and Hat Design. Since NetMedia Solutions has such a stronghold on a quite a number online and offline design and marketing aspects, they really are your best choice for quality work and award-winning design.";
+
+##return = true
+1;

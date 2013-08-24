@@ -1,0 +1,10 @@
+<tr>
+<td width="!!PC2!!%" valign="top" bgcolor="#F2F2F7"><font class="stext">!!Title_With_Link!!</font><font class="stext">!!ProdDesc!!</font></td>
+<td width="15%" valign="top"><font class="stext">!!CLM!!</font></td>
+<td width="!!PC1!!%" valign="top" align="center">!!IMAGEN!!</td>
+</tr>
+<tr>
+<td width="!!PC2!!%" bgcolor="#F2F2F7" height="10"><font size="-4" face="verdana,arial,helvetica">&nbsp;</font></td>
+<td width="15%" height="10"><font size="-4" face="verdana,arial,helvetica">&nbsp;</font></td>
+<td width="!!PC1!!%" height="10"><font size="-4" face="verdana,arial,helvetica">&nbsp;</font></td>
+</tr>

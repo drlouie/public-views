@@ -1,0 +1,16 @@
+#!/usr/bin/perl5 -s
+
+## get dynamic shipping price per pound
+use lib '.';
+use Business::UPS;
+my $type = "$ShipType";
+my $to = "$Zip";
+my $wgt = "1";
+my ($from,$co) = qw/92618/;
+my ($shipping,$ups_zone,$error) = getUPS($type,$from,$to,$wgt,$co,'', '', '', '', '');
+$error and die "ERROR: $error\n";
+$ShipPrice = "$shipping";
+$UPSZone = "$ups_zone";
+
+##return =true
+1;

@@ -1,0 +1,49 @@
+<script language="Javascript">
+<!--
+reef1ov = new Image();
+reef1ov.src = "sharktank/images/dynamics/new_reef1_ov.gif";
+reef1off = new Image();
+reef1off.src = "sharktank/images/dynamics/new_reef1_off.gif";
+
+
+reef2ov = new Image();
+reef2ov.src = "sharktank/images/dynamics/new_reef2_ov.gif";
+reef2off = new Image();
+reef2off.src = "sharktank/images/dynamics/new_reef2_off.gif";
+
+reef3ov = new Image();
+reef3ov.src = "sharktank/images/dynamics/new_reef3_ov.gif";
+reef3off = new Image();
+reef3off.src = "sharktank/images/dynamics/new_reef3_off.gif";
+
+reef4ov = new Image();
+reef4ov.src = "sharktank/images/dynamics/new_reef4_ov.gif";
+reef4off = new Image();
+reef4off.src = "sharktank/images/dynamics/new_reef4_off.gif";
+//-->
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="right" valign="top" rowspan="2" width="206"><img src="sharktank/images/dynamics/new_reef3_off.gif" width="118" height="161" usemap="#reef3" border="0" name="reef3"><br>
+      <img src="sharktank/images/dynamics/new_reef4_off.gif" width="118" height="119" usemap="#reef4" border="0" name="reef4"><img src="sharktank/images/dynamics/spacer_5px.gif" width="206" height="1"><br></td>
+    <td align="left" valign="top" width="201" height="81"><nobr><img src="sharktank/images/dynamics/new_reef2_off.gif" width="97" height="81" usemap="#reef2" border="0" name="reef2"><img src="sharktank/images/dynamics/new_reef1_off.gif" width="94" height="81" usemap="#reef1" border="0" name="reef1"></nobr></td>
+    <td valign="middle" height="81" width="365">&nbsp;</td>
+    <td valign="middle" height="81" align="center" width="15"><img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1"></td>
+    <td valign="top" height="79" width="100%" align="right"><a href="http://www.intel.com/intelinside/weblinks/english/p4pm.htm"><img src="images/nuevohome/hlogo_intelp4mobile.gif" width="82" height="85" border="0" name="leImagen" style="margin-right:75px;margin-bottom:15px;margin-top:10px;"></a></td>
+    <td valign="middle" height="81" align="center" width="15"><img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1"></td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top" colspan="5" height="450" width="100%"> 
+
+!!!MYCONTENT!!!
+    
+	
+	</td>
+  </tr>
+</table>
+<div id="divLinkage">
+<map name="reef1"><area shape="rect" coords="19,4,85,77" href="javascript:trigger('sharktank.html?title=reef&loadsys=CM1400');" OnMouseOver="javascript:reef1.src = reef1ov.src;overlib('<center><font class=\'overDiv\'>Reef Series Pentium&reg; 4m Performance Notebook</font></center>')" onMouseOut="javascript:reef1.src = reef1off.src;return nd();"></map>
+<map name="reef2"><area shape="rect" coords="10,3,77,77" href="javascript:trigger('sharktank.html?title=reef&loadsys=CM7600');" OnMouseOver="javascript:reef2.src = reef2ov.src;overlib('<center><font class=\'overDiv\'>Reef Series Pentium&reg; 4 Notebook</font></center>')" onMouseOut="javascript:reef2.src = reef2off.src;return nd();"></map>
+<map name="reef3"><area shape="rect" coords="12,54,98,134" href="javascript:trigger('sharktank.html?title=reef&loadsys=CM2700');" OnMouseOver="javascript:reef3.src = reef3ov.src;overlib('<center><font class=\'overDiv\'>Reef Series Pentium&reg; 4 Entry Notebook</font></center>')" onMouseOut="javascript:reef3.src = reef3off.src;return nd();"></map>
+<map name="reef4"><area shape="rect" coords="15,16,91,87"></map>
+</div>

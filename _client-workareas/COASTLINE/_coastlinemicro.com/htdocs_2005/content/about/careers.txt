@@ -1,0 +1,186 @@
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>Careers at Coastline Micro</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr>
+<td width="2%" valign="top">&nbsp;</td>
+<td width="96%" valign="top"><font class="stext">
+Coastline Micro is looking for qualified candidates to join our fast-growing team. To apply for a position simply paste your resume into the body of an email message addressed to <A href="mailto:careers@coastlinemicro.com" class="stext">careers@coastlinemicro.com</a>. Remember to indicate your area of interest in the subject line.
+<br><br><br>
+<b style="font-size:12px;">Following are our available positions:</b>
+<br><br>
+
+<table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td width="100%" valign="top">
+<pre style="font-size:12px;" class="stext">
+JOB TITLE: PC Technician
+DEPARTMENT: Production
+POSITION TYPE: Hourly, Part-to-Full Time
+
+PRIMARY FUNCTION: 
+o	Under general supervision
+o	Assembly of computer hardware
+o	BIOS updates and upgrades
+o	Operating system installation
+o	Applications installation
+
+AUXILIARY FUNCTION:
+o	Under general supervision
+o	Field technical support calls
+o	Diagnose and repair computers
+o	Perform miscellaneous job-related duties as assigned
+
+MINIMUM REQUIREMENTS, KNOWLEDGE AND SKILLS:
+o	A+ Certified
+o	Familiar with Microsoft operating systems and applications
+o	High School Diploma or GED
+o	Ability to communicate effectively, both orally and in writing
+o	Ability to lift 50lbs equipment
+
+
+_______________________________________________________________________
+
+
+JOB TITLE: Driver
+DEPARTMENT: Shipping and Receiving
+POSITION TYPE: Hourly, Full Time
+
+PRIMARY FUNCTION: 
+o	Under general supervision
+o	Drive a Coastline Micro owned van in order to deliver product 
+	to Coastline Micro's customers
+o	Pick up products from Coastline Micro's vendors
+o	Perform routine vehicle inspection and maintenance including checking 
+	the oil, fuel, brakes, lights, windshield wipers, and water and tire pressures
+o	Maintain accurate records of delivery's and pick up's
+o	Perform miscellaneous job-related duties as assigned
+
+MINIMUM REQUIREMENTS, KNOWLEDGE AND SKILLS:
+o	High School Diploma or GED 
+o	1 to 3 years experience directly related to the functions specified
+o	Possession of a valid California Driver's License
+o	Good driving record
+o	Ability to communicate effectively, both orally and in writing
+o	Ability to lift 50lbs equipment
+
+
+_______________________________________________________________________
+
+
+ 
+JOB TITLE: Outside Sales Consultant
+DEPARTMENT: Sales
+POSITION TYPE: Base + Commission, Full Time
+
+PRIMARY FUNCTION: 
+o	Develop new accounts
+o	Create new business with existing accounts
+o	Attain and maintain a pipeline of qualified leads via prospecting, 
+	premise visits, telemarketing, customer referrals and networking in 
+	order to generate profitable revenue.
+o	Generate appointments with the primary decision maker of prospective 
+	customers and existing customers.
+o	Develop proposals based on prospect or existing customer requirements.
+o	Respond to RFP's.
+o	Provide technical solutions, conducting presentations, and 
+	demonstrations for prospective clients.
+o	Interface with each of the inside sales consultants to make sure that 
+	they are effectively managing their accounts to the level that the 
+	customer requires.
+o	Assist with customer quotations and other related sales functions as required
+
+MINIMUM REQUIREMENTS, KNOWLEDGE AND SKILLS:
+o	3 to 5 year of experience in the computer industry
+o	Proficient at the technical level with computer hardware
+o	Ability to communicate effectively, both orally and in writing
+o	Self motivated and focused, with goal-setting mentality
+o	Must have proven track record and existing client base 
+o	Ability to build strong business relationships with new and existing contacts 
+
+
+_______________________________________________________________________
+
+
+
+JOB TITLE: Business Development Consultant
+DEPARTMENT: Sales
+POSITION TYPE:  Non-exempt, Full Time
+
+PRIMARY FUNCTION: 
+o	Call on qualified and non-qualified leads
+o	Generate appointments with the primary decision maker of prospective 
+	customers and existing customers
+o	Participate in industry specific trade shows
+
+MINIMUM REQUIREMENTS, KNOWLEDGE AND SKILLS:
+o	2 to 3 year of experience in the computer industry
+o	Superior prospecting and cold calling skills
+o	Ability to communicate effectively, both orally and in writing
+o	Self motivated and focused, with goal-setting mentality
+o	Ability to generate business and leads on an ongoing basis 
+o	Heavy Cold calling
+
+
+_______________________________________________________________________
+
+
+ 
+JOB TITLE: Administrative/Accounting Assistant
+DEPARTMENT: Accounting
+POSITION TYPE:  Non-exempt, Full Time
+
+PRIMARY FUNCTION: 
+o	Under general supervision
+o	Assist accounts payable with invoicing
+o	Assist customer service with product returns
+o	Assist customer service with RMA process
+o	Answer phones
+o	Fax administrator
+o	Perform miscellaneous job-related duties as assigned
+
+MINIMUM REQUIREMENTS, KNOWLEDGE AND SKILLS:
+o	High School Diploma or GED
+o	1 to 3 year of experience
+o	Ability to communicate effectively, both orally and in writing
+
+</pre>
+</td></tr></table>
+
+</font></td>
+<td width="2%" valign="top" align="center">&nbsp;</td>
+</tr>
+
+</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>&nbsp;</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

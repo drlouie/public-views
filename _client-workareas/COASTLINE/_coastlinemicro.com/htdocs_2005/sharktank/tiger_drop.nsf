@@ -1,0 +1,73 @@
+<script language="Javascript">
+<!--
+tiger1ov = new Image();
+tiger1ov.src = "sharktank/images/dynamics/new_tiger1_ov.gif";
+tiger1off = new Image();
+tiger1off.src = "sharktank/images/dynamics/new_tiger1_off.gif";
+
+tiger2ov = new Image();
+tiger2ov.src = "sharktank/images/dynamics/new_tiger2_ov.gif";
+tiger2off = new Image();
+tiger2off.src = "sharktank/images/dynamics/new_tiger2_off.gif";
+
+tiger3ov = new Image();
+tiger3ov.src = "sharktank/images/dynamics/new_tiger3_ov.gif";
+tiger3off = new Image();
+tiger3off.src = "sharktank/images/dynamics/new_tiger3_off.gif";
+
+tiger4ov = new Image();
+tiger4ov.src = "sharktank/images/dynamics/new_tiger4_ov.gif";
+tiger4off = new Image();
+tiger4off.src = "sharktank/images/dynamics/new_tiger4_off.gif";
+
+tiger5ov = new Image();
+tiger5ov.src = "sharktank/images/dynamics/new_tiger5_ov.gif";
+tiger5off = new Image();
+tiger5off.src = "sharktank/images/dynamics/new_tiger5_off.gif";
+
+tiger6ov = new Image();
+tiger6ov.src = "sharktank/images/dynamics/new_tiger6_ov.gif";
+tiger6off = new Image();
+tiger6off.src = "sharktank/images/dynamics/new_tiger6_off.gif";
+
+tiger7ov = new Image();
+tiger7ov.src = "sharktank/images/dynamics/new_tiger7_ov.gif";
+tiger7off = new Image();
+tiger7off.src = "sharktank/images/dynamics/new_tiger7_off.gif";
+//-->
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="left" valign="top" rowspan="2"><nobr><img src="sharktank/images/dynamics/new_tiger4_off.gif" width="112" height="109" usemap="#tiger4" border="0" name="tiger4"><img src="sharktank/images/dynamics/new_tiger3_off.gif" width="90" height="71" align="top" usemap="#tiger3" border="0" name="tiger3"></nobr><br>
+      <img src="sharktank/images/dynamics/new_tiger5_off.gif" width="82" height="44" usemap="#tiger5" border="0" name="tiger5"><br>
+      <img src="sharktank/images/dynamics/new_tiger6_off.gif" width="97" height="68" usemap="#tiger6" border="0" name="tiger6"><br>
+      <img src="sharktank/images/dynamics/new_tiger7_off.gif" width="165" height="56" usemap="#tiger7" border="0" name="tiger7"><br>
+	  <!--Old Xeon Emblem Location--><br>
+    </td>
+    <td align="left" valign="top" width="198" height="58"><nobr><img src="sharktank/images/dynamics/new_tiger2_off.gif" width="93" height="58" usemap="#tiger2" border="0" name="tiger2"><img src="sharktank/images/dynamics/new_tiger1_off.gif" width="105" height="54" usemap="#tiger1" border="0" name="tiger1"></nobr></td>
+    <td valign="middle" height="79" width="15" align="center">
+<img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1">
+    </td>
+    <td valign="top" height="79" width="100%" align="right"><a href="http://www.intel.com/intelinside/weblinks/english/ixpsw.htm"><img src="images/nuevohome/hlogo_intelxeon.gif" border="0" name="leImagen" style="margin-right:75px;margin-bottom:20px;"></a></td>
+    <td valign="middle" height="79" width="15" align="center"> 
+      <img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1">
+    </td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top" colspan="4" height="450" width="100%"> 
+
+!!!MYCONTENT!!!
+
+	</td>
+  </tr>
+</table>
+<div id="divLinkage">
+<map name="tiger1"><area shape="rect" coords="15,4,93,47" href="javascript:trigger('sharktank.html?title=tiger&loadsys=1USR1300A');" OnMouseOver="javascript:tiger1.src = tiger1ov.src;overlib('<center><font class=\'overDiv\'>Tiger Series&reg; DP Xeon&#153; 1U HDRM Server - ATA </font></center>')" onMouseOut="javascript:tiger1.src = tiger1off.src;return nd();"></map>
+<map name="tiger2"><area shape="rect" coords="7,3,86,53" href="javascript:trigger('sharktank.html?title=tiger&loadsys=1USR1300S');" OnMouseOver="javascript:tiger2.src = tiger2ov.src;overlib('<center><font class=\'overDiv\'>Tiger Series&reg; DP Xeon&#153; 1U HDRM Server</font></center>')" onMouseOut="javascript:tiger2.src = tiger2off.src;return nd();"></map>
+<map name="tiger3"><area shape="rect" coords="11,20,84,58" href="javascript:trigger('sharktank.html?title=tiger&loadsys=2USR2300S');" OnMouseOver="javascript:tiger3.src = tiger3ov.src;overlib('<center><font class=\'overDiv\'>Tiger Series&reg; DP Xeon&#153; 2U HDRM Server</font></center>')" onMouseOut="javascript:tiger3.src = tiger3off.src;return nd();"></map>
+<map name="tiger4"><area shape="rect" coords="49,11,105,102" href="javascript:trigger('sharktank.html?title=tiger&loadsys=PEDCW2A');" OnMouseOver="javascript:tiger4.src = tiger4ov.src;overlib('<center><font class=\'overDiv\'>Tiger Series&reg; Tiger Series DP Xeon&#153; Server - ATA</font></center>')" onMouseOut="javascript:tiger4.src = tiger4off.src;return nd();"></map>
+<map name="tiger5"><area shape="rect" coords="2,11,77,36" href="javascript:trigger('sharktank.html?title=tiger&loadsys=RM5USHG2');" OnMouseOver="javascript:tiger5.src = tiger5ov.src;overlib('<center><font class=\'overDiv\'>Tiger Series&reg; DP Xeon&#153; 5U HDRM Server</font></center>')" onMouseOut="javascript:tiger5.src = tiger5off.src;return nd();"></map>
+<map name="tiger6"><area shape="rect" coords="11,6,88,59" href="javascript:trigger('sharktank.html?title=tiger&loadsys=PRPSSHG2');" OnMouseOver="javascript:tiger6.src = tiger6ov.src;overlib('<center><font class=\'overDiv\'>Tiger Series&reg; DP Xeon&#153; RPS Server</font></center>')" onMouseOut="javascript:tiger6.src = tiger6off.src;return nd();"></map>
+<map name="tiger7"><area shape="rect" coords="78,1,161,39" href="javascript:trigger('sharktank.html?title=tiger&loadsys=PEDCW2');" OnMouseOver="javascript:tiger7.src = tiger7ov.src;overlib('<center><font class=\'overDiv\'>Tiger Series&reg; Tiger Series DP Xeon&#153; Server</font></center>')" onMouseOut="javascript:tiger7.src = tiger7off.src;return nd();"></map>
+</div>
+

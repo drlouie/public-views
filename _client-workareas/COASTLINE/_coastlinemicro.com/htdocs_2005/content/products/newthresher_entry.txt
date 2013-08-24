@@ -1,0 +1,132 @@
+<style type="text/css">
+	.stextbig{ color:#000000; }
+	#overdiv{ border:1px solid #008ED2; background-color:#FFFFFF; text-align:center; padding:10px; line-heigth: 16px; }
+</style>
+<script>
+ol_width = "325";
+</script>
+
+<center><table width="90%" cellpadding="0" cellspacing="0" border="0">
+<tr><td width="100%" height="55" align="middle" align="center"><img src="images/newones/2k3/yourvalue.jpg" width="468" height="45" border="0"></td></tr>
+<tr><td width="100%" height="97" align="middle" align="center"><img src="images/newones/2k3/thresher_title_entry.jpg" width="600" height="87" border="0"></td></tr>
+<tr><td width="100%" align="center">
+
+
+<table width="75%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #cccccc; cursor:hand" onMouseOver="javascript:Brunto(this,'#008ED2');" onMouseOut="javascript:Brunback(this,'#CCCCCC');">
+<tr><td width="100%" align="center">
+
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	<td width="300" align="center" rowspan="2"><img src="images/newones/2k3/thresher_secondary_1.jpg" width="226" height="114" border="0"></td>
+	<td align="left"><img src="images/spacer.gif" width="100" height="10" vspace="1"><br><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=MT400&PageTitle=Thresher Series Mini-Tower ( MT400 )" target="_parent" onMouseOver="javascript:FONTrunto('MT400','008ED2');" onMouseOut="javascript:FONTrunto('MT400','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="MT400"><b>MT400 - </b>Mini-Tower</a></td>
+	</tr>
+	<tr>
+	<td align="left"><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=VL400&PageTitle=Thresher Series Mini-Tower ( VL400 )" target="_parent" onMouseOver="javascript:FONTrunto('VL400','008ED2');" onMouseOut="javascript:FONTrunto('VL400','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="VL400"><b>VL400 - </b>Mini-Tower</a><br><img src="images/spacer.gif" width="100" height="10" vspace="1"></td>
+	</tr>
+	</table>
+
+</td></tr>
+</table>
+
+
+<img src="images/spacer.gif" height="10" border="0" width="100" vspace="1">
+
+<table width="75%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #cccccc; cursor:hand" onMouseOver="javascript:Brunto(this,'#008ED2');" onMouseOut="javascript:Brunback(this,'#CCCCCC');">
+<tr><td width="100%" align="center">
+
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	<td width="300" align="center" rowspan="2"><img src="images/newones/2k3/thresher_secondary_2.jpg" width="226" height="114" border="0"></td>
+	<td align="left"><img src="images/spacer.gif" width="100" height="10" vspace="1"><br><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=MT400B&PageTitle=Thresher Series Mini-Tower ( MT400B )" target="_parent" onMouseOver="javascript:FONTrunto('MT400B','008ED2');" onMouseOut="javascript:FONTrunto('MT400B','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="MT400B"><nobr><b>MT400B - </b>Mini-Tower</nobr><br><font style="font-size:10px;"><i>Black Chassis</i></font></a></td>
+	</tr>
+	<tr>
+	<td align="left"><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=VL400B&PageTitle=Thresher Series Mini-Tower ( VL400B )" target="_parent" onMouseOver="javascript:FONTrunto('VL400B','008ED2');" onMouseOut="javascript:FONTrunto('VL400B','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="VL400B"><nobr><b>VL400B - </b>Mini-Tower Gigabyte</nobr><br><font style="font-size:10px;"><i>Black Chassis</i></font></a><br><img src="images/spacer.gif" width="100" height="10" vspace="1"></td>
+	</tr>
+	</table>
+
+</td></tr>
+</table>
+
+
+<img src="images/spacer.gif" height="10" border="0" width="100" vspace="1">
+
+<table width="75%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #cccccc; cursor:hand" onMouseOver="javascript:Brunto(this,'#008ED2');" onMouseOut="javascript:Brunback(this,'#CCCCCC');">
+<tr><td width="100%" align="center">
+
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	<td width="300" align="center"><img src="images/newones/2k3/thresher_secondary_3.jpg" width="226" height="114" border="0"></td>
+	<td align="left"><img src="images/spacer.gif" width="100" height="10" vspace="1"><br><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=MD400&PageTitle=Thresher Series Mini Desktop ( MD400 )" target="_parent" onMouseOver="javascript:FONTrunto('MD400','008ED2');" onMouseOut="javascript:FONTrunto('MD400','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="MD400"><nobr><b>MD400 - </b>Mini Desktop</nobr></a></td>
+	</tr>
+	</table>
+
+</td></tr>
+</table>
+
+
+<img src="images/spacer.gif" height="10" border="0" width="100" vspace="1">
+
+<table width="75%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #cccccc; cursor:hand" onMouseOver="javascript:Brunto(this,'#008ED2');" onMouseOut="javascript:Brunback(this,'#CCCCCC');">
+<tr><td width="100%" align="center">
+
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	<td width="300" align="center"><img src="images/newones/2k3/thresher_secondary_4.jpg" width="226" height="114" border="0"></td>
+	<td align="left"><img src="images/spacer.gif" width="100" height="10" vspace="1"><br><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=SD400B&PageTitle=Thresher Series Slim Desktop ( SD400B )" target="_parent" onMouseOver="javascript:FONTrunto('SD400B','008ED2');" onMouseOut="javascript:FONTrunto('SD400B','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="SD400B"><nobr><b>SD400B - </b>Slim Desktop</nobr><br><font style="font-size:10px;"><i>Black Chassis</i></font></a></td>
+	</tr>
+	</table>
+
+</td></tr>
+</table>
+
+
+<img src="images/spacer.gif" height="10" border="0" width="100" vspace="1">
+
+<table width="75%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #cccccc; cursor:hand" onMouseOver="javascript:Brunto(this,'#008ED2');" onMouseOut="javascript:Brunback(this,'#CCCCCC');">
+<tr><td width="100%" align="center">
+
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	<td width="300" align="center" rowspan="3"><img src="images/newones/2k3/thresher_secondary_5.jpg" width="226" height="114" border="0"></td>
+	<td align="left"><img src="images/spacer.gif" width="100" height="10" vspace="1"><br><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=ST400&PageTitle=Thresher Series Mid-Tower ( ST400 )" target="_parent" onMouseOver="javascript:FONTrunto('ST400','008ED2');" onMouseOut="javascript:FONTrunto('ST400','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="ST400"><nobr><b>ST400 - </b>Mid-Tower</nobr></font></a></td>
+	</tr>
+	<tr>
+	<td align="left"><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=ST533&PageTitle=Thresher Series Mid-Tower ( ST533 )" target="_parent" onMouseOver="javascript:FONTrunto('ST533','008ED2');" onMouseOut="javascript:FONTrunto('ST533','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="ST533"><nobr><b>ST533 - </b>Mid-Tower</nobr></font></a></td>
+	</tr>
+	<tr>
+	<td align="left"><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=ST533NL&PageTitle=Thresher Series Mid-Tower ( ST533NL )" target="_parent" onMouseOver="javascript:FONTrunto('ST533NL','008ED2');" onMouseOut="javascript:FONTrunto('ST533NL','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="ST533NL"><nobr><b>ST533NL - </b>Mid-Tower</nobr></font></a><br><img src="images/spacer.gif" width="100" height="10" vspace="1"></td>
+	</tr>
+	</table>
+
+</td></tr>
+</table>
+
+
+<img src="images/spacer.gif" height="10" border="0" width="100" vspace="1">
+
+
+<table width="75%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #cccccc; cursor:hand" onMouseOver="javascript:Brunto(this,'#008ED2');" onMouseOut="javascript:Brunback(this,'#CCCCCC');">
+<tr><td width="100%" align="center">
+
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	<td width="300" align="center" rowspan="2"><img src="images/newones/2k3/thresher_secondary_6.jpg" width="226" height="114" border="0"></td>
+	<td align="left"><img src="images/spacer.gif" width="100" height="10" vspace="1"><br><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=ST400B&PageTitle=Thresher Series Mid-Tower ( ST400B )" target="_parent" onMouseOver="javascript:FONTrunto('ST400B','008ED2');" onMouseOut="javascript:FONTrunto('ST400B','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="ST400B"><nobr><b>ST400B - </b>Mid-Tower</nobr></font></a></td>
+	</tr>
+	<tr>
+	<td align="left"><a href="newframer.cgi?subject=sharktank&title=thresher&newIface=true&loadsys=ST533B&PageTitle=Thresher Series Mid-Tower ( ST533B )" target="_parent" onMouseOver="javascript:FONTrunto('ST533B','008ED2');" onMouseOut="javascript:FONTrunto('ST533B','000000');return nd();" style="color:#000000;font-family:verdana,arial,helvetica;size:11px;text-decoration:none;" id="ST533B"><nobr><b>ST533B - </b>Mid-Tower</nobr><br><font style="font-size:10px;"><i>Black Chassis</i></font></a><br><img src="images/spacer.gif" width="100" height="10" vspace="1"></td>
+	</tr>
+	</table>
+
+</td></tr>
+</table>
+
+
+<img src="images/spacer.gif" height="10" border="0" width="100" vspace="1">
+
+
+<img src="images/spacer.gif" height="25" border="0" width="100" vspace="1">
+
+</td></tr>
+</table>
+</center>

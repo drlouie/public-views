@@ -1,0 +1,125 @@
+#!/usr/bin/perl5 -s
+
+###########################################################################################################
+# Company: ©2001 NetMedia Solutions                                                                             #
+# Date: Saturday, September 21, 2001                                                                      #
+# Location: Los Angeles County, California, United States of America                                      #
+# Made By: Luis Rodriguez (drlouie)                                                                       #
+# Email: Drlouie@NetMediaSol.com                                                                          #
+#                                                                                                         #
+# This program cannot be duplicated, distributed or re-used for any other purpose other than its original #
+# intended purpose and function. You may request NetMedia Solutions for a copy of the script,             #
+# personalized to fit your exact needs for a small re-programming fee.                                    #
+###########################################################################################################
+
+## ----------------->>> GIVE THE DOCUMENT SOME STYLE/SIZE
+$tablewidth = "80%"; $t1 = "1%"; $t2 = "64%"; $t3 = "18%"; $t4 = "18%";
+
+## ----------------->>> Must Have SERIES!
+if ($FORM{'Series'}) {
+$Series = "$FORM{'Series'}";
+
+## WHICH MAIN TITLE?
+if ($Series eq "mako") { $CopyID = "0000000001"; }
+elsif ($Series eq "gw") { $CopyID = "0000000002"; }
+elsif ($Series eq "thresher") { $CopyID = "0000000003"; }
+elsif ($Series eq "tiger") { $CopyID = "0000000004"; }
+elsif ($Series eq "reef") { $CopyID = "0000000005"; }
+elsif ($Series eq "thresher2") { $CopyID = "0000000006"; }
+elsif ($Series eq "nmusd") { $CopyID = "0000000007"; }
+elsif ($Series eq "nmusdCustCom") { $CopyID = "0000000008"; }
+elsif ($Series eq "tpp") { $CopyID = "0000000009"; }
+
+## ----------------->>> GET Copy and Title and EmailSubject for this page from DB
+use DBI; 
+my $dbh = DBI->connect("DBI:mysql:NMS-SysConfigurator","root","62Ak.fi1HdBxI") or die "Unable to connect to database: <b>coastline</b>\n"; 
+$dbh->{RaiseError} = 1; 
+$count=0;
+my $sth = $dbh->prepare("SELECT * FROM Copy WHERE CopyID='$CopyID'");
+$sth->execute or die "Unable to execute query\n";
+my @row;
+while(@row = $sth->fetchrow_array) { 
+	$MainTitle = $row[1];
+	$BodyCopy = $row[2];
+	$EmailSubject = $row[5];
+	$SavedAddedBy = $row[6];
+	$SavedAddedOn = $row[7];
+	$SavedModifiedBy = $row[8];
+	$SavedModifiedBy = $row[9];
+	## Re-Structure data as necessary
+	$AddYear = substr($SavedAddedOn, 0, 2);
+	$AddMonth = substr($SavedAddedOn, 2, 2);
+	$AddDay = substr($SavedAddedOn, 4, 2);
+	$ModYear = substr($SavedModifiedOn, 0, 2);
+	$ModMonth = substr($SavedModifiedOn, 2, 2);
+	$ModDay = substr($SavedModifiedOn, 4, 2);
+	$count++;
+}
+$sth->execute or die "Unable to execute query\n";
+$sth->finish;
+$dbh->disconnect;
+
+## IF PRINTING SCREEN
+if ($FORM{'NSPRINT'}) { 
+	$TBack = "";
+	$TLeft = "&nbsp;";
+	$TRight = "&nbsp;";
+	$PrintIt = "&nbsp;";
+	$EmailIt = "&nbsp;";
+	$PageURL = "<font face=\"verdana,arial,helvetica\" size=\"1\" color=\"#EB0000\">Page URL - http://www.rhomberg.com/systemConfigurator/$Series/</font>";
+}
+if ($FORM{'MSP'} eq "1" || $FORM{'NMUSD'} eq "1" || $FORM{'TPP'} eq "1") {
+	$TBack = "background=\"images/tables/topbar.jpg\" height=\"24\"";
+	$TLeft = "<img src=\"images/tables/topbar_left.jpg\" width=\"5\" height=\"24\">";
+	$TRight = "<img src=\"images/tables/topbar_right.jpg\" width=\"5\" height=\"24\">";
+	$PrintIt = "<a href=\"javascript:void(0);\" onClick=\"javascript:runTemplate('stank_startpage.nsp','Series','$Series');\" onMouseOver=\"javascript:imageOnDHTML('printit','ov');\" onMouseOut=\"javascript:imageOffDHTML('printit','off');\"><img src=\"images/tables/but_printit_off.gif\" width=\"67\" height=\"21\" name=\"printit\" border=\"0\"></a>";
+	$EmailIt = "&nbsp;";
+	$PageURL = "&nbsp;";
+}
+else {
+	$TBack = "background=\"images/tables/topbar.jpg\" height=\"24\"";
+	$TLeft = "<img src=\"images/tables/topbar_left.jpg\" width=\"5\" height=\"24\">";
+	$TRight = "<img src=\"images/tables/topbar_right.jpg\" width=\"5\" height=\"24\">";
+	$PrintIt = "<a href=\"javascript:void(0);\" onClick=\"javascript:runTemplate('stank_startpage.nsp','Series','$Series');\" onMouseOver=\"javascript:imageOnDHTML('printit','ov');\" onMouseOut=\"javascript:imageOffDHTML('printit','off');\"><img src=\"images/tables/but_printit_off.gif\" width=\"67\" height=\"21\" name=\"printit\" border=\"0\"></a>";
+	$EmailIt = "<a href=\"javascript:void(0);\" onClick=\"toggleEmailer('stank_emailit.htm?MySubject=$Series&MyTitle=$Series&MyLoad=loadthis&MyData=$Series&EmailSubject=$MainTitle');\" onMouseOver=\"javascript:imageOnDHTML('emailit','ov');\" onMouseOut=\"javascript:imageOffDHTML('emailit','off');\"><img src=\"images/tables/but_emailit_off.gif\" width=\"62\" height=\"21\" name=\"emailit\" border=\"0\"></a>";
+	$PageURL = "";
+}
+
+$pageDrop = "
+
+<table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+  <tr> 
+    <td align=\"center\" valign=\"middle\" width=\"$tablewidth\" height=\"25\"> 
+      <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" $TBack>
+        <tr> 
+          <td width=\"$t1\">$TLeft</td>
+          <td width=\"$t2\"><nobr><font class=\"btext\">&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td>
+          <td width=\"$t3\" align=\"center\" valign=\"top\">$EmailIt</td>
+          <td width=\"$t4\" align=\"center\" valign=\"top\">$PrintIt</td>
+          <td width=\"$t1\" align=\"left\" valign=\"top\">$TRight</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height=\"4\"><img src=\"spacer.gif\" width=\"1\" height=\"4\" border=\"0\"></td>
+  </tr>
+  <tr> 
+    <td width=\"100%\"> 
+      <table width=\"95%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">
+        <tr> 
+          <td width=\"100%\"><font class=\"btext\" style=\"font-size:11px\"> 
+            <p>$BodyCopy</p>
+            </font> </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<center>$PageURL</center>
+
+";
+}
+##return =true
+1;

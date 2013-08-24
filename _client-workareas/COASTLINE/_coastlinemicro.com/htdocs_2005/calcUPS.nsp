@@ -1,0 +1,44 @@
+#!/usr/bin/perl5 -s
+
+## Test location of request
+require ("referer.nsp");
+
+## Grab User Input
+require ("parse_query.nsp");
+
+## If data present scan it...
+if (($FORM{'Origin'}) && ($FORM{'Destination'}) && ($FORM{'Package'})) {
+
+	## Crumble Form Input to Variables
+	my $Origin = "$FORM{'Origin'}";
+	my $Destination = "$FORM{'Destination'}";
+	my $Weight = "$FORM{'Weight'}";
+	my $Package = "$FORM{'Package'}";
+	
+print '
+<center><font face="verdana,arial,helvetica" size="1" color="#FFFFFF">
+				  
+';
+
+use lib '.';
+use Business::UPS;
+
+# US shipment
+my $from = "$Origin";
+my $to = "$Destination";
+my $wgt = "$Weight";
+my $type = "$Package";
+my ($co) = qw//;
+my ($shipping,$ups_zone,$error) = getUPS($type,$from,$to,$wgt,$co,'', '', '', '', '');
+$error and die "ERROR: $error\n";
+print "<br>To ship from <b>$from</b> to <b>$to</b><br><br>"; 
+print "Weight of Package - <b>$wgt</b> Lbs.<br><br>";
+print "Courier Package Used - <b>$type</b><br><br>";
+print "Shipping Price - <b>\$$shipping</b><br><br>";
+print "UPS Delivery Zone - <b>$ups_zone</b><br><br>";
+print "<font color=\"#FFC256\"><br>UPS Shipping Calculator Module developed by <a href=\"mailto:drlouie\@tstonramp.com?Subject=UPS Tracking Module\" style=\"color:#FFC256\">drlouie\@tstonramp.com</a><br><br>Thanks to UPS Perl Module Version " . $Business::UPS::VERSION . "</font>";
+print "<br><br></center>";
+
+
+1;
+}

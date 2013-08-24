@@ -1,0 +1,10 @@
+#!/usr/bin/perl5 -w
+
+$foottitle = "About Coastline Micro, Inc.";
+
+$footlink = "http://www.coastlinemicro.com/pointers/about.html";
+
+$footbody = "Coastline Micro is a manufacturer of computer systems. We also provide peripherals and support services. We are dedicated to bringing you the best computing solutions at competitive prices. Our products are built strong from the start and to your specifications. We deliver them quickly and efficiently to meet your deadlines. Our staff will work to see you are provided with the best in personal service and online product procurement. ";
+
+##return = true
+1;

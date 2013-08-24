@@ -1,0 +1,161 @@
+<!--Start Main HTML Template-->
+<html>
+<head>
+<title>Coastline Micro Inc. - Site Search</title>
+<SCRIPT LANGUAGE="JavaScript">
+
+///////////////////////////////////////////////////////////////////
+// This script and its counterparts are ©2001 NetMedia Solutions //
+// For use ONLY with CoastlineMicro.com                          //
+// To re-use or have this script re-interfaced for your specific //
+// needs please contact SServices\@NetMediaSolutions.com         //
+// Prices are cheap for re-interfacing of current scripts and    //
+// programs, so email us today to get you own LEGAL programming  //
+// licensed for use only on YOUR site(s) or for YOUR purpose(s). //
+///////////////////////////////////////////////////////////////////
+
+<!-- Begin
+function loadScript() {
+if (document.getElementById) {  // DOM3 = IE5, NS6
+document.getElementById('hidepage').style.visibility = 'hidden';
+}
+else {
+if (document.layers) {  // Netscape 4
+document.hidepage.visibility = 'hidden';
+}
+else {  // IE 4
+document.all.hidepage.style.visibility = 'hidden';
+      }
+   }
+}
+//  End -->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+
+///////////////////////////////////////////////////////////////////
+// This script and its counterparts are ©2001 NetMedia Solutions //
+// For use ONLY with CoastlineMicro.com                          //
+// To re-use or have this script re-interfaced for your specific //
+// needs please contact SServices\@NetMediaSolutions.com         //
+// Prices are cheap for re-interfacing of current scripts and    //
+// programs, so email us today to get you own LEGAL programming  //
+// licensed for use only on YOUR site(s) or for YOUR purpose(s). //
+///////////////////////////////////////////////////////////////////
+
+// QUICK CROSS-BROWSER MOUSE-OVER/OFF FUNCTIONS
+// By Drlouie @ NetMedia Solutions
+// info@NetMediaSol.com for help
+// Copyright 2001 NetMedia Solutions
+
+function imageOff(which,which2,thisone) {
+	var cual = 	"images/newones/but_sagain_"+thisone+".gif";
+	document.images[which].src = cual;
+	document.images[which2].src = cual;
+}
+function imageOn(which,which2,thisone) {
+	var cual = 	"images/newones/but_sagain_"+thisone+".gif";
+	document.images[which].src = cual;
+	document.images[which2].src = cual;
+}
+</SCRIPT>
+<style type="text/css">
+#hidepage {z-index:2000}
+body { scrollbar-face-color:#F2F2F7; scrollbar-highlight-color:#F2F2F7; scrollbar-shadow-color:#8f8fab; scrollbar-3dlight-color: #333366; scrollbar-arrow-color:#333366; scrollbar-track-color:#F2F2F7; scrollbar-darkshadow-color:#8f8fab; }
+</style>
+<div id="hidepage" style="position: absolute; left:0px; top:0px; background-color: #FFFFFF; layer-background-color: #FFFFFF; height: 100%; width: 100%;">
+<table width=100% cellpadding="0" cellspacing="0">
+<tr height="100%"><td align="center" valign="middle"><br><br><img src="sharktank/images/cm_logo_large.jpg" width="166" height="59" border="0"><font face="verdana,arial,helvetica" size="2" color="#333366"><br><br>Loading DHTML interactive user interface, please wait...<br><br><br><br><br><font size="1"><b><u>Compatibility</u></b><br><br>Win/Mac MSIE 4/5/6<br>Win/Mac/Linux Netscape 4/6<br><br><i>Best if viewed on Windows 95/98/2000 platform using MSIE 4+</i></font></font></td></tr>
+</table>
+</div> 
+<script language="JavaScript" src="js/reload.js"></script>
+
+<!--FOLLOWING EXTERNAL SCRIPT IS USED FOR BROWSER TESTING AND IS INTEGRAL PART OF POW-->
+<script language="JavaScript" src="js/dynlayer.js"></script>
+<!--END-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="coastlinemicro.com, www.coastlinemicro.com, coastline, micro, irvine, ca, california, about, company, location, businsess, competition, competitors, solutions, irvine, california, technology, ceo, own, partner, fast, reliable, heritage, sophisticated, computer, system, build, custom, sample, guarantee, search, product">
+<meta name="description" content="Coastline Micro Inc. is in business to develop hardware solutions that make sense for the small to corporate sized business arena. We have been in business for over a decade and have the knowledge and expertise necessary to be competitive in the market. Our every product carries a 100% Product Satisfaction Guarantee. We are located in Irvine, California at 60 N. Technology Drive. For more information about our company and its what it is in business to do please follow the link above. Our company's Heritage dates back to 1989.">
+<script language="JavaScript" src="js/menu_config.js"></script>
+<LINK REL="STYLESHEET" HREF="common_css.htm" Type="text/css">
+
+</head>
+<body bgcolor="#ffffff" text="#333366" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="javascript:loadScript();runSearch();">
+<a name="top"></a>
+
+<!-- Copyright NetMedia Solutions and Coasltine Micro, Inc.-->
+<script language="Javascript" src="js/menu_constructor.js"></script>
+
+<!-- Start header table -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/newones/top_tablebg_main.jpg" height="100">
+  <tr> 
+    <td width="30%"><img src="images/newones/illus_search.jpg" width="250" height="100" border="0"></td>
+    <td align="right" valign="middle" width="70%"><font size="1" color="#ffffff" face="verdana,arial,helvetica">!!Date!!&nbsp;&nbsp;<font size="3">&nbsp;</font></font>
+	<center><img src="images/newones/title_sitesearch.jpg" width="350" height="80" align="bottom"></center></td>
+  </tr>
+</table>
+<!-- End header table -->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="175" align=left valign=top><img src="images/newmenu/place_holder.gif" width="175" height="150"><img src="images/spacer.gif" width="190" height="20" border="0">!!Powbutton!! !!Legal!!</td>
+    <td width="5"><img src="images/140spacer.gif" width="5" height="8"></td>
+    <td width="100%" align="left" valign=top><br>
+	<!--Start Content Table Wrapper--> 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>Search Results</b></font></td>
+          <td align="right" width="65%"><a href="#top" onClick="javascript:toggleSearch2();" onMouseOver="javascript:imageOn('sagain','sagain2','ov');" onMouseOut="javascript:imageOff('sagain','sagain2','off');"><img src="images/newones/but_sagain_off.gif" width="81" height="20" name="sagain" border="0"></a></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%" height="20"><font class="stext2"><b><font color="#FD0000">!!Matches!!</font></b> matches found for <b><font color="#FD0000">!!Keywords!!</font></b></font></td>
+          <td width="65%" align="right"><font class="stext">!!Prev_Pages!! &nbsp; !!Pages!! &nbsp; !!Next_Pages!!</font></td>
+		</tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+		  <table width="75%" border="0" cellspacing="0" cellpadding="0" align="center">!!SearchResults!!</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td width="35%" height="23"><font class="stext2"><b><font color="#FD0000">!!Matches!!</font></b> matches found for <b><font color="#FD0000">!!Keywords!!</font></b></font></td>
+          <td width="65%" align="right"><font class="stext">!!Prev_Pages!! &nbsp; !!Pages!! &nbsp; !!Next_Pages!!</font></td>
+		</tr>		
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>&nbsp;</b></font></td>
+          <td align="right" width="65%"><a href="#top" onClick="javascript:toggleSearch2();" onMouseOver="javascript:imageOn('sagain2','sagain','ov');" onMouseOut="javascript:imageOff('sagain2','sagain','off');"><img src="images/newones/but_sagain_off.gif" width="81" height="20" name="sagain2" border="0"></a></td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+      <!--End Content Table Wrapper-->
+</td>
+  </tr>
+</table>
+
+<!-- Dynamic Moving Layers -->
+!!Pow!!
+
+!!LoadScript!!
+</body>
+</html>
+<!--End Main Template-->

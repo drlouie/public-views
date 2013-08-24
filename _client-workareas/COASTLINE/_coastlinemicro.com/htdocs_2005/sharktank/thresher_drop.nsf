@@ -1,0 +1,39 @@
+<script language="Javascript">
+<!--
+thresher1ov = new Image();
+thresher1ov.src = "sharktank/images/dynamics/new_thresher1_ov.gif";
+thresher1off = new Image();
+thresher1off.src = "sharktank/images/dynamics/new_thresher1_off.gif";
+
+thresher2ov = new Image();
+thresher2ov.src = "sharktank/images/dynamics/new_thresher2_ov.gif";
+thresher2off = new Image();
+thresher2off.src = "sharktank/images/dynamics/new_thresher2_off.gif";
+//-->
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="left" valign="top" rowspan="2" width="206"><nobr><img src="sharktank/images/dynamics/spacer_5px.gif" width="70" height="61"><img src="sharktank/images/dynamics/new_thresher2_off.gif" width="136" height="90" usemap="#thresher2" border="0" name="thresher2"></nobr><br><img src="sharktank/images/dynamics/new_thresher3_off.gif" width="123" height="95" usemap="#thresher3" border="0" name="thresher3"><br><nobr><img src="sharktank/images/dynamics/spacer_5px.gif" width="39" height="1"><img src="sharktank/images/dynamics/new_thresher4_off.gif" width="129" height="105" usemap="#thresher4" border="0" name="thresher4"></nobr><br>
+    </td>
+    <td align="left" valign="top" width="127" height="79"><img src="sharktank/images/dynamics/new_thresher1_off.gif" width="127" height="81" usemap="#thresher1" border="0" name="thresher1"></td>
+    <td valign="top" height="79" width="365">&nbsp;</td>
+    <td valign="middle" height="79" width="15" align="center"><img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1"></td>
+    <td valign="top" height="79" width="100%" align="right"><a href="http://www.intel.com/intelinside/weblinks/english/p4p.htm"><img src="images/nuevohome/p4p_graphic2.gif" width="206" height="98" border="0" name="leImagen" style="margin-right:75px;margin-bottom:10px;margin-top:10px;"></a></td>
+    <td valign="middle" height="79" width="15" align="center"> 
+      <img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1">
+    </td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top" colspan="5" height="450" width"100%"> 
+
+!!!MYCONTENT!!!
+
+    </td>
+  </tr>
+</table>
+<div id="divLinkage"> 
+<map name="thresher1"><area shape="rect" coords="20,1,102,71" href="javascript:trigger('sharktank.html?title=thresher&loadsys=CM845G');" OnMouseOver="javascript:thresher1.src = thresher1ov.src;overlib('<center><font class=\'overDiv\'>Thresher Series&reg; P4 Desktop - Model CM845G</font></center>')" onMouseOut="javascript:thresher1.src = thresher1off.src;return nd();"></map>
+<map name="thresher2"><area shape="rect" coords="32,15,123,89" href="javascript:trigger('sharktank.html?title=thresher&loadsys=CM845GL');" OnMouseOver="javascript:thresher2.src = thresher2ov.src;overlib('<center><font class=\'overDiv\'>Thresher Series&reg; P4 Desktop - Model CM845GL</font></center>')" onMouseOut="javascript:thresher2.src = thresher2off.src;return nd();"></map>
+<map name="thresher3"></map>
+<map name="thresher4"></map>
+</div>

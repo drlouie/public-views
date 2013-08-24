@@ -1,0 +1,219 @@
+
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center"> 
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr> 
+          <td valign="top" align="left" rowspan="2" width="122"><img src="sharktank/intel/title_left.gif" border="0" width="122" height="100"></td>
+          <td valign="top" align="left" rowspan="2" width="321"><img src="sharktank/intel/title_center.gif" border="0" width="316" height="71"><br>
+            <font face="arial, helvetica" size=2><b><font color="#0000FF">The 
+            fastest &amp; easiest way to enable network connectivity wherever 
+            you need it</font></b><br>
+            <img src="images/spacer.gif" width="1" height="7" border="0"><br>
+            <font face="verdana, arial, helvetica" size="1">Whether you need to 
+            extend the reach of a wired network or quickly deploy an all wireless 
+            LAN, Intel PRO/Wireless 2011 LAN Adapters and Access Points provide 
+            a reliable, easy-to-install network infrastructure. Intel"s standards-based 
+            solution is ideal for historic buildings, leased office spaces, temporary 
+            projects...any location where wired connectivity is not practical 
+            or cost effective.</font></font></td>
+          <td valign="top" align="left" width="1280" rowspan="2"> 
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr> 
+                <td valign=top align=left><img src="images/spacer.gif" width="1" height="31" border="0"></td>
+              </tr>
+              <tr> 
+                <td valign=top align=left bgcolor="#FF9900"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+              </tr>
+              <tr> 
+                <td valign=top align=left><img src="images/spacer.gif" width="1" height="50" border="0"></td>
+              </tr>
+            </table>
+          </td>
+          <td valign="top" align="left" width="160"><img src="sharktank/intel/title_right.gif" border="0" width="160" height="79"></td>
+        </tr>
+      </table>
+      <br>
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr> 
+          <td valign="top" align="left" rowspan="3"><img src="sharktank/intel/oversome_linear.gif" width="485" height="5" border="0"></td>
+          <td valign="top" align="left" width=1280><img src="images/spacer.gif" width="1" height="2" border="0"></td>
+          <td valign="top" align="left" rowspan="3"><img src="sharktank/intel/oversome_linear_end.gif" width="102" height="5" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" align="left" bgcolor="#FF9900"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" align="left"><img src="images/spacer.gif" width="1" height="2" border="0"></td>
+        </tr>
+      </table>
+      <br>
+      <font face="Verdana, Arial, Helvetica" size=1 color="#333366"><b><a href="everything_intel.cgi?title=intel_nic"><font color="#0000FF">Network 
+      Interface Cards</font></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="everything_intel.cgi?title=intel_vpn"><font color="#0000FF">VPN 
+      Networking Products</font></a>&nbsp;&nbsp;|&nbsp;&nbsp;Wireless 
+      Networking Products<br>
+      <br>
+      <br>
+      </b></font> 
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr> 
+          <td valign="top" align="left" rowspan="3"><img src="sharktank/intel/oversome_linear.gif" width="485" height="5" border="0"></td>
+          <td valign="top" align="left" width=1280><img src="images/spacer.gif" width="1" height="2" border="0"></td>
+          <td valign="top" align="left" rowspan="3"><img src="sharktank/intel/oversome_linear_end.gif" width="102" height="5" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" align="left" bgcolor="#FF9900"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" align="left"><img src="images/spacer.gif" width="1" height="2" border="0"></td>
+        </tr>
+      </table>
+      <font face="Verdana, Arial, Helvetica" size=1 color="#333366"><b><a href="everything_intel.cgi?title=intel_wireless"><font color="#0000FF"> 
+      </font></a></b></font><br>
+      <table border="0" cellpadding="0" cellspacing="0" align="center" width="85%">
+        <tr> 
+          <td valign="top" colspan="3"><font face="Verdana, Arial, Helvetica" size=1 color="#0000FF"><font face="Verdana, Arial, Helvetica" size=1 color="#0000FF"><b><img src="sharktank/intel/pro_wireless_accesspoint.jpg" width="115" height="103" align="right" vspace="5" hspace="10"></b></font><b><br>
+            Intel&reg; PRO/Wireless 2011 LAN Access Point </b><b><br>
+            </b> <font color="#333366"><br>
+            802.11b Wireless access point with 128-bit WEP<br>
+            <br>
+            Functioning as a wireless hub, the Intel® PRO/Wireless 2011 LAN Access 
+            Point serves as a bridge between an existing wired network and wireless 
+            devices. In addition, the access point can act as a repeater, passing 
+            along transmissions from one access point to another, creating a wireless 
+            backbone and connecting hard-to-reach areas. Intel wireless access 
+            points are simple to install, since they ship with a site survey tool 
+            to assist in proper placement for desired coverage and performance. 
+            IT administrators can manage and monitor the network of access points 
+            remotely via standard web browser. <br>
+            <br>
+            Ethernet-speed connectivity <br>
+            Up to 11Mbps throughput provides reliable access to email, Internet, 
+            file sharing and other network resources. The Intel PRO/Wireless 2011 
+            LAN Access Point always seeks to connect at 11Mbps and then switches 
+            to 5.5, 2 or 1, as network traffic demands, for increased signal range 
+            - up to 500 meters, for broad roaming capabilities. <br>
+            <br>
+            Seamless roaming <br>
+            Dynamic rate scaling, IP mobile functionality and advanced transmit/receive 
+            technology allow multiple Intel PRO/Wireless 2011 LAN Access Points 
+            to serve users on the go. The Access Points automatically adjust connection 
+            speeds according to traffic demands, assuring mobile workers and students 
+            optimal performance with reliable network access. Omnidirectional 
+            (360 degrees) and directional (20-90 degrees) signal control allows 
+            Intel PRO/Wireless 2011 LAN Access Points to be configured for specific 
+            power and wiring requirements. <br>
+            <br>
+            Solves wiring concerns <br>
+            In some locations - conference rooms, temporary classrooms, or information 
+            kiosks, for example - network access may be desirable, but network 
+            wiring is impractical. Intel PRO/Wireless Access Points can be strategically 
+            located, out of the way, to provide LAN access while avoiding the 
+            time and expense of wiring. <br>
+            <br>
+            IEEE 802.11b High Rate compliant <br>
+            Intel PRO/Wireless Access Points are designed to interoperate with 
+            standards-based 11Mbps Wi-Fi* approved products, and are backward 
+            compatible with 802.11 direct sequence products at 1 and 2 Mbps, enabling 
+            IT administrators to choose best-in-class solutions and protect their 
+            investment in existing infrastructure. And, standards-based architecture 
+            future-proofs your system by ensuring continued industry support. 
+            <br>
+            <br>
+            Ease of manageability <br>
+
+            Support for SNMP and an embedded HTTP server enable IT administrators 
+            to configure, monitor, and upgrade Access Points from anywhere in 
+            the world using a standard web browser. A Site Survey utility assists 
+            in finding the most effective placement for Access Points to deliver 
+            maximum coverage. <br>
+            <br>
+            </font></font> </td>
+        </tr>
+      </table>
+      <br>
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr> 
+          <td valign="top" align="left" rowspan="3"><img src="sharktank/intel/oversome_linear.gif" width="485" height="5" border="0"></td>
+          <td valign="top" align="left" width=1280><img src="images/spacer.gif" width="1" height="2" border="0"></td>
+          <td valign="top" align="left" rowspan="3"><img src="sharktank/intel/oversome_linear_end.gif" width="102" height="5" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" align="left" bgcolor="#FF9900"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" align="left"><img src="images/spacer.gif" width="1" height="2" border="0"></td>
+        </tr>
+      </table>
+      <br>
+      <table border="0" cellpadding="0" cellspacing="0" align="center" width="85%">
+        <tr> 
+          <td valign="top" colspan="3"><font face="Verdana, Arial, Helvetica" size=1 color="#0000FF"><font face="Verdana, Arial, Helvetica" size=1 color="#0000FF"><font face="Verdana, Arial, Helvetica" size=1 color="#0000FF"><b><img src="sharktank/intel/anypoint_wireless.jpg" width="120" height="120" align="right" vspace="25" hspace="30"></b></font></font><b><br>
+            Intel AnyPoint Wireless 1.6Mbps USB Home Network<br>
+            </b> <b><br>
+            </b> <font color="#333366">1.6Mbps Wireless Home Network USB Model 
+            with integrated 6 foot cable<br>
+            <br>
+            Connect your laptop and desktop PC(s) and use your laptop to surf 
+            the net from anywhere in the home without wires - the kitchen table, 
+            the family room sofa, even the back yard or patio. Share Internet 
+            access, files, drives, printers and more. You can open files on a 
+            home office PC, or print documents on another connected PC"s printer. 
+            <br>
+            <br>
+            Key Features: 
+            <ul>
+              <li>Connect your laptop and desktop PCs without wires or cables 
+              <li>Surf the web sharing a single Internet connection with other 
+                home PCs. Share files, drives and printers, play multi-user games, 
+                listen to MP3 music stored on another PC - all at the same time, 
+                without wires 
+              <li>Access resources on other PCs from up to 150 ft away, through 
+                walls and floors 
+              <li>Broadband compatible. Great with high speed DSL, cable modem 
+                or other broadband Internet access. Works great with regular dial-up 
+                Internet access too 
+              <li>Easy to install. No need to even open the PC. Just connect the 
+                USB Model to the PC"s USB port. The software install wizard handles 
+                the rest of the set-up 
+              <li>Provides everything you need to connect one PC to an AnyPoint 
+                Wireless Home Network 
+              <li>Works with all AnyPoint Wireless Home Network Models. Buy one 
+                Wireless USB Model for each desktop PC and one Wireless PC Card 
+                or Wireless USB Model for each laptop 
+            </ul>
+            Includes: 
+            <ul>
+              <li>One AnyPoint™ Wireless Home Network USB Model with integrated 
+                6 ft cable to connect the product to a PC"s USB port 
+              <li>CD-based software, including AnyPoint™ Internet Sharing Software, 
+                Sharing and Mapping Software, and Network Switching Software 
+              <li>Documentation 
+              <li>3-year limited hardware warranty 
+              <li>90 days of free 800-number technical support 
+            </ul>
+            System Requirements: 
+            <ul>
+              <li>Intel® Celeron™ or Pentium® processor-based PC or higher 
+              <li>Microsoft® Windows 98, 98SE, or Me operating system. Does not 
+                currently support Windows 2000® 
+              <li>Free USB port 
+              <li>30 MB free hard drive space 
+              <li>16 MB RAM 
+              <li>At least one PC to be networked must have a CD-ROM drive. (To 
+                install the network on a PC that doesn"t have a CD-ROM drive, 
+                you"ll need blank diskettes, which aren"t included.) 
+              <li>Internet sharing requires a modem and a working Internet account 
+                on one of your connected PCs and may be subject to terms and conditions 
+                set forth in your Internet service provider license<br>
+            </ul>
+            <br>
+            </font></font> </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<br>

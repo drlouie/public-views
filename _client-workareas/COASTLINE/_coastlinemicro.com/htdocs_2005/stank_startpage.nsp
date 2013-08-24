@@ -1,0 +1,72 @@
+#!/usr/bin/perl5 -s
+
+###########################################################################################################
+# Company: ©2001 NetMedia Solutions                                                                             #
+# Date: Saturday, September 21, 2001                                                                      #
+# Location: Los Angeles County, California, United States of America                                      #
+# Made By: Luis Rodriguez (drlouie)                                                                       #
+# Email: Drlouie@NetMediaSol.com                                                                          #
+#                                                                                                         #
+# This program cannot be duplicated, distributed or re-used for any other purpose other than its original #
+# intended purpose and function. You may request NetMedia Solutions for a copy of the script,             #
+# personalized to fit your exact needs for a small re-programming fee.                                    #
+###########################################################################################################
+
+## WHICH MAIN TITLE?
+if ($title eq "mako") { $CopyID = "0000000001"; }
+if ($title eq "gw") { $CopyID = "0000000002"; }
+if ($title eq "thresher") { $CopyID = "0000000003"; }
+if ($title eq "tiger") { $CopyID = "0000000004"; }
+if ($title eq "reef") { $CopyID = "0000000005"; }
+if ($title eq "thresher2") { $CopyID = "0000000006"; }
+if ($title eq "nmusd") { $CopyID = "0000000007"; }
+
+## ----------------->>> GET Copy and Title and EmailSubject for this page from DB
+use DBI; 
+my $dbh = DBI->connect("DBI:mysql:NMS-SysConfigurator","root","62Ak.fi1HdBxI") or die "Unable to connect to database: <b>coastline</b>\n"; 
+$dbh->{RaiseError} = 1; 
+$count=0;
+my $sth = $dbh->prepare("SELECT * FROM Copy WHERE CopyID='$CopyID'");
+$sth->execute or die "Unable to execute query\n";
+my @row;
+while(@row = $sth->fetchrow_array) { 
+	$MainTitle = $row[1];
+	$BodyCopy = $row[2];
+	$EmailSubject = $row[5];
+	$SavedAddedBy = $row[6];
+	$SavedAddedOn = $row[7];
+	$SavedModifiedBy = $row[8];
+	$SavedModifiedBy = $row[9];
+	## Re-Structure data as necessary
+	$AddYear = substr($SavedAddedOn, 0, 2);
+	$AddMonth = substr($SavedAddedOn, 2, 2);
+	$AddDay = substr($SavedAddedOn, 4, 2);
+	$ModYear = substr($SavedModifiedOn, 0, 2);
+	$ModMonth = substr($SavedModifiedOn, 2, 2);
+	$ModDay = substr($SavedModifiedOn, 4, 2);
+	$count++;
+}
+$sth->execute or die "Unable to execute query\n"; 
+$sth->finish;
+$dbh->disconnect; 	
+
+	$PrintPage = "";
+	$TBack = "background=\"images/tables/topbar.jpg\" height=\"24\"";
+	$TLeft = "<img src=\"images/tables/topbar_left.jpg\" width=\"5\" height=\"24\">";
+	$TRight = "<img src=\"images/tables/topbar_right.jpg\" width=\"5\" height=\"24\">";
+	$PrintIt = "<a href=\"#\" onClick=\"javascript:printalo();\"><img src=\"images/tables/but_printit_off.gif\" width=\"67\" height=\"21\" name=\"printit\" border=\"0\"></a>";
+	$EmailIt = "<a href=\"#\" onClick=\"javascript:window.open('stank_emailit.htm?MySubject=$title&MyTitle=$title&MyLoad=loadthis&MyData=$title&EmailSubject=$MainTitle','EMAILIT','width=450,height=500');\"><img src=\"images/tables/but_emailit_off.gif\" width=\"62\" height=\"21\" name=\"emailit\" border=\"0\"></a>";
+	$PageURL = "";
+
+	$tablewidth = "440";
+	$t1 = "5";
+	$t2 = "324";
+	$t3 = "69";
+	$t4 = "37";
+
+$Script2 = "<!--START PRINT--><SCRIPT LANGUAGE=\"Javascript\">function printalo() { var agree=confirm(\"A new window will be opened and this document will load into it. Once loaded, the print command will start automatically from the new window. If it does not please hold the 'CTRL' key while hitting the 'P' on your keyboard to start printing. Once printing is done close the new window to get back to this screen.\"); if (agree) javascript:window.open('http://www.rhomberg.com/systemConfigurator/stank_startpage.htm?Series=$title&PrintPage=1','PRINT','width=576,height=590'); else nogo=1; } </SCRIPT>";
+$LeTable = "<table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td align=\"center\" valign=\"middle\" width=\"$tablewidth\" height=\"25\"><table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" $TBack><tr><td width=\"$t1\">$TLeft</td><td width=\"$t2\"><nobr><font class=\"btext\">&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td><td width=\"$t3\" align=\"center\" valign=\"top\">$EmailIt</td><td width=\"$t4\" align=\"center\" valign=\"top\">$PrintIt</td><td width=\"$t1\" align=\"left\" valign=\"top\">$TRight</td></tr></table></td></tr><tr><td height=\"4\"><img src=\"spacer.gif\" width=\"1\" height=\"4\" border=\"0\"></td></tr><tr><td width=\"100%\"><table width=\"95%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\"><tr><td width=\"100%\"><font class=\"btext\"><p>$BodyCopy</p></font></td></tr></table></td></tr></table>";
+
+
+##return =true
+1;

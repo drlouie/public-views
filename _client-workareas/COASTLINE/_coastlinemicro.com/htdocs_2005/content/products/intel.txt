@@ -1,0 +1,112 @@
+
+<table width="90%" border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+        <tr> 
+          <td valign="top" align="left" colspan="3"><img src="sharktank/intel/oversome_title_top.gif" width="485" height="61" border="0"></td>
+          <td valign="top" align="left" width="414"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+          <td valign="top" align="left" rowspan="3" width="102"><img src="sharktank/intel/oversome_title_logo.gif" width="102" height="130" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" align="left" colspan="3"><b><img src="sharktank/intel/oversome_title_line.gif" width="502" height="1" border="0"></b></td>
+          <td valign="top" align="left" bgcolor="#FF9900" width="414"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" align="left" width="146"><img src="sharktank/intel/oversome_title_left.gif" width="146" height="118" border="0"></td>
+          <td valign="top" align="left" width="164"><img src="sharktank/intel/oversome_title_center.gif" width="164" height="68" border="0"><br>
+            <font face="verdana, arial, helvetica" size=1>Providing the technology 
+            that helps people connect. In business. At home. Online.</font></td>
+          <td valign="bottom" align="left" rowspan="2" width="192"><img src="sharktank/intel/oversome_people.gif" width="175" height="118" border="0"></td>
+          <td valign="top" align="left" width="414"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+        </tr>
+      </table>
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr> 
+          <td valign="top" align="left" rowspan="3"><img src="sharktank/intel/oversome_title_bottom.gif" width="485" height="5" border="0"></td>
+          <td valign="top" align="left" width=1280><img src="images/spacer.gif" width="1" height="2" border="0"></td>
+          <td valign="top" align="left" rowspan="3"><img src="sharktank/intel/oversome_linear_end.gif" width="102" height="5" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" align="left" bgcolor="#FF9900"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" align="left"><img src="images/spacer.gif" width="1" height="2" border="0"></td>
+        </tr>
+      </table>
+      <br>
+      <TABLE WIDTH="403" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+	<TR>
+		  <TD VALIGN="top" ALIGN="left"><IMG SRC="sharktank/intel/oversome_intel_logo.gif" WIDTH="108" HEIGHT="55" BORDER="0"></TD>
+		<TD VALIGN="top" ALIGN="left">
+			<TABLE WIDTH="295" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+              <TR> 
+                <TD VALIGN=top ALIGN="left"><IMG SRC="images/spacer.gif" WIDTH="17" HEIGHT="1" BORDER="0"></TD>
+                <TD VALIGN=top ALIGN="left"><IMG SRC="sharktank/intel/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0"></TD>
+              </TR>
+              <TR>
+                <TD VALIGN=top ALIGN="left"><IMG SRC="sharktank/intel/dot.gif" WIDTH="17" HEIGHT="16" BORDER="0"></TD>
+                <TD VALIGN="top" ALIGN="left"><FONT FACE="arial, helvetica" SIZE=2 COLOR="#000000"><B>Networking Products.</B></FONT> <FONT FACE="arial, helvetica" SIZE=2>Get connected &#151; with flexible, affordable solutions for the desktop, office and Internet</FONT><BR>
+                  <TABLE WIDTH="278" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+                    <TR> 
+                      <TD VALIGN="top" ALIGN="left"><IMG SRC="images/spacer.gif" WIDTH="8" HEIGHT="1" BORDER="0"></TD>
+                      <TD VALIGN="top" ALIGN="left"><IMG SRC="images/spacer.gif" WIDTH="131" HEIGHT="1" BORDER="0"></TD>
+                      <TD VALIGN="top" ALIGN="left"><IMG SRC="images/spacer.gif" WIDTH="8" HEIGHT="1" BORDER="0"></TD>
+                      <TD VALIGN="top" ALIGN="left"><IMG SRC="images/spacer.gif" WIDTH="131" HEIGHT="1" BORDER="0"></TD>
+                    </TR>
+                    <TR> 
+                      <TD VALIGN="top" ALIGN="left"><img src="sharktank/intel/bullet.gif" width="8" height="9" border="0"></TD>
+                      <TD VALIGN="top" ALIGN="left"><FONT FACE="Verdana, Helvetica" SIZE="1"><A HREF="everything_intel.cgi?title=intel_nic"><font COLOR="#0000FF">Network 
+                        Cards</font></A></font><BR>
+                        <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="2" BORDER="0"></TD>
+                      <td valign="top" align="left"><img src="sharktank/intel/bullet.gif" width="8" height="9" border="0"></td>
+                      <td valign="left" align="left"><font face="Verdana, Helvetica" size="1"><a href="everything_intel.cgi?title=intel_vpn"><font COLOR="#0000FF">VPN/WAN 
+                        Products</font></a></font><br>
+                        <img src="images/spacer.gif" width="1" height="2" border="0"></td>
+                    </TR>
+                    <TR> 
+                      <TD VALIGN="top" ALIGN="left"><img src="sharktank/intel/bullet.gif" width="8" height="9" border="0"></TD>
+                      <TD VALIGN="top" ALIGN="left"><FONT FACE="Verdana, Helvetica" SIZE="1"><A HREF="everything_intel.cgi?title=intel_wireless"><font COLOR="#0000FF">Wireless 
+                        LAN</font></A></font><BR>
+                        <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="2" BORDER="0"></TD>
+                      <TD VALIGN="top" ALIGN="left">&nbsp;</TD>
+                      <TD VALIGN="left" ALIGN="left">&nbsp;</TD>
+                    </TR>
+                  </TABLE>
+                  <BR>
+                </TD>
+              </TR>
+              <TR>
+                <TD VALIGN="top" ALIGN="left"><IMG SRC="sharktank/intel/dot.gif" WIDTH="17" HEIGHT="16" BORDER="0"></TD>
+                <TD VALIGN="top" ALIGN="left"><a href="products.cgi?title=mako&loadthis=sharktank/intel/pc_camera_pro.html"><FONT FACE="arial, helvetica" SIZE=2 COLOR="#000000"><B>Intel&#174; PC Cameras.</B></FONT></A> <FONT FACE="arial, helvetica" SIZE=2>Picture this &#151; connect with family and friends with video e-mail or video phone</FONT><BR>&nbsp;</TD>
+              </TR>
+              <TR>
+                <TD VALIGN="top" ALIGN="left"><IMG SRC="sharktank/intel/dot.gif" WIDTH="17" HEIGHT="16" BORDER="0"></TD>
+                <TD VALIGN="top" ALIGN="left"><A HREF="products.cgi?title=mako&loadthis=sharktank/intel/8port_wireless_hub.html"><FONT FACE="arial, helvetica" SIZE=2 COLOR="#000000"><B> 
+                  Intel&#174; Wireless Peripherals.</B></FONT></A> <FONT FACE="arial, helvetica" SIZE=2>Enhance 
+                  your PC and Internet experiences with wireless freedom and comfort: 
+                  Introducing the expandable Intel Wireless Series</FONT><BR>
+                  &nbsp;</TD>
+              </TR>
+            </TABLE>
+
+		</TD>
+	</TR>
+</TABLE>
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr> 
+          <td valign="top" align="left" rowspan="3"><img src="sharktank/intel/oversome_linear.gif" width="485" height="5" border="0"></td>
+          <td valign="top" align="left" width=1280><img src="images/spacer.gif" width="1" height="2" border="0"></td>
+          <td valign="top" align="left" rowspan="3"><img src="sharktank/intel/oversome_linear_end.gif" width="102" height="5" border="0"></td>
+        </tr>
+        <tr>
+          <td valign="top" align="left" bgcolor="#FF9900"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+        </tr>
+        <tr>
+          <td valign="top" align="left"><img src="images/spacer.gif" width="1" height="2" border="0"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<br>

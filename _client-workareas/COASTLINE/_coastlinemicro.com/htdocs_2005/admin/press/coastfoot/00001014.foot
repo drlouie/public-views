@@ -1,0 +1,10 @@
+#!/usr/bin/perl5 -w
+
+$foottitle = "About Coastline Micro, Inc.";
+
+$footlink = "http://www.coastlinemicro.com/framer.cgi?new_url=cont_temp.cgi&sub_link=gencomments";
+
+$footbody = "For more information on Coastline Micro, Inc. Please contact Dave Rhomberg, Director of Technology at 800-720-6809 or <a href=\"cont_temp.cgi?sub_link=gencomments\">send us a message</a>.";
+
+##return = true
+1;

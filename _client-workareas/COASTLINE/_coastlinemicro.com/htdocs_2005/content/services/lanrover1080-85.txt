@@ -1,0 +1,50 @@
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>Security Solutions</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr>
+<td width="2%" valign="top">&nbsp;</td>
+<td width="96%" valign="top">
+<font color="#333366" size="2" face="Verdana, Arial, Helvetica, sans-serif" style="line-height:20px">Our security solutions comprise of Shiva's VPN, firewall, and broadband access devices.  These easy-to-use and deploy products enable businesses to securely leverage the power and presence of the Internet thereby increasing productivity and revenue, while driving down operating costs.<br><br><b><a href="pdf/1080Datasheet.pdf" style="color:#333366;"><img src="images/shiva1080-85.jpg" width="223" height="94" border="0" align="right" style="margin-left:20px;margin-bottom:20px;"></a>LanRover 1080/85 Broadband Security Gateways</b><br>Ideal for SOHO or Remote Branch Offices<br>
+  <br>
+  The Shiva&reg; LanRover&#153; 1080/1085 Broadband Security Gateway series provides broadband remote access and security in a single platform. The LanRover 1080/1085 combines the security of a firewall with the flexibility of an embedded ADSL router and offers a robust range of features including an IP Router, ICSA-compliant stateful packet inspection firewall and VPN support. The LanRover 1080 is designed for ADSL networks operating over analog POTS (ITU G.992.1, Annex A) while the LanRover 1085 supports networks requiring ADSL over ISDN (ITU G.992.1, Annex B).<br><br><br><ol type="circle"><b>Features:<br></b><li>Multi-Function ADSL CPE </li><li>Profile Key Technology eases deployment, configuration and future feature/service upgrades</li><li>ICSA-compliant stateful inspection firewall</li><li>IPSec compliant VPN assures interoperability between gateways and clients</li><li>Easy-to-use graphical user interface (GUI) for fast customer installs and service upgrades</li><li><a href="pdf/1080Datasheet.pdf" style="color:#333366;">View LanRover 1080/1085 Datasheet by Shiva</a></li></ol></font>
+
+
+
+</td>
+<td width="2%" valign="top" align="center">&nbsp;</td>
+</tr>
+
+</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>&nbsp;</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

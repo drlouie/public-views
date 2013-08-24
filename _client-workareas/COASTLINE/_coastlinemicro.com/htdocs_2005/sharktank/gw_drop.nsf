@@ -1,0 +1,49 @@
+<script language="Javascript">
+<!--
+gw1ov = new Image();
+gw1ov.src = "sharktank/images/dynamics/new_gw1_ov.gif";
+gw1off = new Image();
+gw1off.src = "sharktank/images/dynamics/new_gw1_off.gif";
+
+
+gw2ov = new Image();
+gw2ov.src = "sharktank/images/dynamics/new_gw2_ov.gif";
+gw2off = new Image();
+gw2off.src = "sharktank/images/dynamics/new_gw2_off.gif";
+
+gw3ov = new Image();
+gw3ov.src = "sharktank/images/dynamics/new_gw3_ov.gif";
+gw3off = new Image();
+gw3off.src = "sharktank/images/dynamics/new_gw3_off.gif";
+
+gw4ov = new Image();
+gw4ov.src = "sharktank/images/dynamics/new_gw4_ov.gif";
+gw4off = new Image();
+gw4off.src = "sharktank/images/dynamics/new_gw4_off.gif";
+//-->
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="left" valign="top" rowspan="2" width="206"><img src="sharktank/images/dynamics/new_gw2_off.gif" width="206" height="101" usemap="#gw2" border="0" name="gw2"><br>
+      <img src="sharktank/images/dynamics/new_gw3_off.gif" width="92" height="81" usemap="#gw3" border="0" name="gw3"><br>
+      <img src="sharktank/images/dynamics/new_gw4_off.gif" width="181" height="102" usemap="#gw4" border="0" name="gw4"><br>
+    </td>
+    <td align="left" valign="top" width="201" height="79"><img src="sharktank/images/dynamics/new_gw1_off.gif" width="201" height="79" usemap="#gw1" border="0" name="gw1"></td>
+    <td valign="top" height="79" width="241">&nbsp;</td>
+    <td valign="middle" height="79" width="15" align="center"> <img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1"> 
+    </td>
+    <td valign="top" height="79" width="100%" align="right"><a href="http://www.intel.com/intelinside/weblinks/english/ixpsw.htm"><img src="images/nuevohome/hlogo_intelxeon.gif" border="0" name="leImagen" style="margin-right:75px;margin-bottom:20px;"></a></td>
+    <td valign="middle" height="79" width="15" align="center"> <img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1"> 
+    </td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top" colspan="5" height="450" width="100%"> !!!MYCONTENT!!! 
+    </td>
+  </tr>
+</table>
+<div id="divLinkage"> 
+<map name="gw1"><area shape="rect" coords="22,6,125,64" href="javascript:trigger('sharktank.html?title=gw&loadsys=RM4USRSH4');" OnMouseOver="javascript:gw1.src = gw1ov.src;overlib('<center><font class=\'overDiv\'> Great White Series&reg; MP Xeon&#153; Server</font></center>')" onMouseOut="javascript:gw1.src = gw1off.src;return nd();"></map>
+<map name="gw2"><area shape="rect" coords="94,2,182,93"></map>
+<map name="gw3"><area shape="rect" coords="2,5,88,51"></map>
+<map name="gw4"><area shape="rect" coords="48,2,146,66"></map>
+</div>

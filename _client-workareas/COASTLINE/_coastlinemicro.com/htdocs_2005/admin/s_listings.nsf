@@ -1,0 +1,13 @@
+<tr width="100%" bgcolor="#ffffff">
+<td width="5%" align="center"><font class="sresults1">!!Numbers!!</font></td>
+<td width="5%" align="center"><font class="sresults1">!!RPERC!!<br></font></td>
+<td align="left" width="40%"><font class="sresults1"><a href="!!MYPROG!!?CMPartNum=!!CLM!!" class="sresults1">!!Title_With_Link!!</a></font></td>
+<td width="15%" align="center"><font class="sresults1">!!CLM!!</font></td>
+<td width="15%" align="center"><font class="sresults1">!!MFGP!!</font></td>
+<td width="10%" align="center"><font class="sresults1">!!PRICE!!</font></td>
+<td width="10%" align="center">
+<a href="!!MYPROG!!?CMPartNum=!!CLM!!"><img src="images/icon_change_off.gif" border="0" onMouseOver="javascript:iconOn(this,'change','on');" onMouseOut="javascript:iconOff(this,'change','off');"></a>
+&nbsp;&nbsp;
+<a href="!!MYDEL!!"><img src="images/icon_delete_off.gif" border="0" onMouseOver="javascript:iconOn(this,'delete','on');" onMouseOut="javascript:iconOff(this,'delete','off');"></a>
+</td>
+</tr>

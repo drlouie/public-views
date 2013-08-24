@@ -1,0 +1,258 @@
+#!/usr/bin/perl5 -s
+
+###########################################################################################################
+# Company: ©2001 NetMedia Solutions                                                                             #
+# Date: Saturday, September 21, 2001                                                                      #
+# Location: Los Angeles County, California, United States of America                                      #
+# Made By: Luis Rodriguez (drlouie)                                                                       #
+# Email: Drlouie@NetMediaSol.com                                                                          #
+#                                                                                                         #
+# This program cannot be duplicated, distributed or re-used for any other purpose other than its original #
+# intended purpose and function. You may request NetMedia Solutions for a copy of the script,             #
+# personalized to fit your exact needs for a small re-programming fee.                                    #
+###########################################################################################################
+
+require ("referer.nsp"); 
+require ("parse_query.nsp");
+require ("date.nsp");
+
+$browser = "$ENV{'HTTP_USER_AGENT'}";
+if (($browser =~ "Mozilla/" && $browser =~ "6.") || $browser =~ "Netscape6") { $tablewidth = "100%"; $t1 = "5"; $t2 = "64%"; $t3 = "18%"; $t4 = "18%"; $t5 = "25%"; $t6 = "75%"; }	
+else { $tablewidth = "470"; $t1 = "5"; $t2 = "339"; $t3 = "79"; $t4 = "42"; $t5 = "170"; $t6 = "300"; }
+if ($browser =~ "Mozilla/4.7") { $border = "border=\"1\" bordercolor=\"#333366\""; }
+
+if ($browser =~ "MSIE 5.0" || $browser =~ "MSIE 5.5" || $browser =~ "Mozilla/4.7" || $browser =~ "MSIE 4.0") { $StartURLer="javascript:void(0);\" onClick=\"javascript:window.open"; $EndURLer=",'EMAILIT','width=485,height=590');";}
+else { $StartURLer="javascript:trigger"; $EndURLer=");";}
+
+$STANKLEGAL = `cat stank_legal.nsf`;
+
+## remove the CM logo since this page has a different layout with CM in it already...
+$STANKLEGAL =~ s/cm_logo_small.jpg/spacer.gif/g;
+$STANKLEGAL =~ s/142/1/g;
+$STANKLEGAL =~ s/51/1/g;
+
+## Snif cookie, if present test for logged in status
+require ("cookiesnif.nsp");
+
+##----------->>> CONNECT TO DB
+	use DBI;
+	my $dbh = DBI->connect("DBI:mysql:NMS-SysConfigurator","root","62Ak.fi1HdBxI") or die "Unable to connect to database: <b>coastline</b>\n"; 
+	$dbh->{RaiseError} = 1; 
+
+	$count=0;
+	if ($FORM{'CID'} ne "" || $FORM{'CID'} ne " " || $FORM{'CID'} > 0) {
+		$CID = "$FORM{'CID'}";
+		## GET CONFIGURATION INFORMATION
+		my $sth = $dbh->prepare("SELECT * FROM Configs WHERE ConfigID='$CID'");
+		$sth->execute or die "Unable to execute query\n";
+		my @row;
+		while(@row = $sth->fetchrow_array) {
+			$Parent = $row[1];
+			$Username = $row[2];
+			$CMCustNum = $row[3];
+			$OrderIDs = $row[4];
+			$CMSeries = $row[5];
+			$ProductIDs = $row[6];
+			$TotalPrice = $row[7];
+			$TotalWeight = $row[8];
+			$CreatedOn = $row[9];
+			push(@elConfig,"$Parent=-=-=$Username=-=-=$CMCustNum=-=-=$OrderIDs=-=-=$CMSeries=-=-=$ProductIDs=-=-=$TotalPrice=-=-=$TotalWeight=-=-=$CreatedOn=-=-=$CID");
+		}
+		$sth->finish;
+
+
+	## disconnect DB
+	$dbh->disconnect;
+
+$MainTitle = "Configuration Viewer";
+
+use DBI;
+my $dbh = DBI->connect("DBI:mysql:NMS-SysConfigurator","root","62Ak.fi1HdBxI") or die "Unable to connect to database: <b>coastline</b>\n"; 
+$dbh->{RaiseError} = 1; 
+	
+@splitConfig = split(/=-=-=/, $elConfig[0]);
+$leParent = $splitConfig[0];
+$leUser = $splitConfig[1];
+$leCMC = $splitConfig[2];
+$leOIDs = $splitConfig[3];
+$leCMS = $splitConfig[4];
+$lePIDs = $splitConfig[5];
+$lePrice = $splitConfig[6];
+$leWeight = $splitConfig[7];
+$leCreated = $splitConfig[8];
+$leCID = $splitConfig[9];
+
+my $sth = $dbh->prepare("SELECT * FROM Products WHERE CMPartNum='$leParent'");
+$sth->execute or die "Unable to execute query\n";
+my @row;
+while(@row = $sth->fetchrow_array) {
+	$ProductNombre = $row[11];
+	$SmallPhoto = $row[17];
+}
+$sth->finish;
+
+my $sth = $dbh->prepare("SELECT * FROM Images WHERE ImageID='$SmallPhoto'");
+$sth->execute or die "Unable to execute query\n";
+my @row;
+while(@row = $sth->fetchrow_array) { 
+	$SavedFileName = $row[3];
+	$SavedDesc = $row[8];
+	$SmallImageN = "$SavedFileName"; 
+	$SmallImageD= "$SavedDesc";
+}
+$sth->execute or die "Unable to execute query\n"; 
+$sth->finish;
+
+if ($leCMS eq "GreatWhite") { $leCMS = "gw"; }
+elsif ($leCMS eq "Mako") { $leCMS = "mako"; }
+elsif ($leCMS eq "Reef") { $leCMS = "reef"; }
+elsif ($leCMS eq "Thresher") { $leCMS = "thresher"; }
+else { $leCMS = "tiger"; }
+
+if ($FORM{'InnerLink'} eq "1") {
+	$CARTITLink = "&nbsp;"; 
+	$RECONFIGLink = "&nbsp;";
+	$LayerCSS = "#divNewsCont {position:absolute; left:150; top:12px; width:300px; height:80px; clip:rect(0px 300px 80px 0px); visibility:hidden; overflow:hidden;}\n";
+	$LayerCSS2 = "#divNews     {position:absolute;}\n";
+}
+else { 
+	$CARTITLink = "<a href=\"javascript:location.href = 'framer.htm?subject=$leCMS&title=$leCMS&cartit=$leCID';\" onMouseOver=\"javascript:imageOnDHTML3('cartit','ov');\" onMouseOut=\"javascript:imageOffDHTML3('cartit','off');\"><img src=\"images/newones/cartit_off.gif\" border=\"0\" name=\"cartit\"></a>"; 
+	$RECONFIGLink = "<a href=\"javascript:location.href = 'framer.htm?subject=$leCMS&title=$leCMS&loadsys=$leParent';\" onMouseOver=\"javascript:imageOnDHTML3('reconfigit','ov');\" onMouseOut=\"javascript:imageOffDHTML3('reconfigit','off');\"><img src=\"images/newones/reconfigit_off.gif\" border=\"0\" name=\"reconfigit\"></a>";
+	$LayerCSS = "#divNewsCont {position:absolute; top:12px; width:300px; height:80px; clip:rect(0px 300px 80px 0px); visibility:hidden; overflow:hidden;}\n";
+	$LayerCSS2 = "#divNews     {position:absolute;}\n";
+}
+
+## ----------------------->>> SEND EMAIL MESSAGE
+my $SenderIn = "admmin\@rhomberg.com(E-Com Store)";
+use lib "/www/htdocs/MIME-Lite-2.117/lib/";
+use MIME::Lite;
+my $msg = MIME::Lite->new(
+				From    =>$SenderIn,
+                To      =>$Email,
+                Subject =>'Configuration Saved!',
+                Type    =>'multipart/related'
+                );
+   $msg->attach(Type => 'text/html',
+   Data => qq{ 
+<html>
+<head>
+<title>Company Name</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="common_css.htm?anchor=333366&anchorov=EB0000&weight=normal&weightov=normal&decor=underline&decorov=underline" Type="text/css">
+<STYLE TYPE="text/css">
+body { background-color:#ffffff; scrollbar-face-color:#F2F2F7; scrollbar-highlight-color:#F2F2F7; scrollbar-shadow-color:#8f8fab; scrollbar-3dlight-color: #333366; scrollbar-arrow-color:#333366; scrollbar-track-color:#F2F2F7; scrollbar-darkshadow-color:#8f8fab; }
+</STYLE>
+
+
+
+<!--END PRINT-->
+<style type="text/css">
+$LayerCSS
+$LayerCSS2
+.link { line-height:12px; font-family:verdana,arial,helvetica; font-size:10px; text-decoration:none; }
+.nolink { line-height:12px; font-family:verdana,arial,helvetica; font-size:10px; text-decoration:none; font-weight:bold; }
+.red { color:#EB0000; }
+a { text-decoration:underline; }
+a:hover { text-decoration:none; }
+</style>
+
+<base href="http://www.rhomberg.com/systemConfigurator/">
+</head>
+<body bgcolor="#ffffff" text="#8F8FAB" leftmargin="0" topmargin="0" marginwidth="0" scroll="yes" marginheight="0">
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr height="40">
+<td rowspan="2" width="15%" align="left" valign="top"><a href="http://www.rhomberg.com/systemConfigurator/"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/top_cm_logo.jpg" width="116" height="37" border="0"></a></td>
+<td rowspan="2" align="center" valign="bottom" width="30%"><div id="divNewsCont"><div id="divNews">$Welcome</div></div></td>
+<td width="55%" align="right" valign="bottom"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/god_bless_america.gif" width="118" height="35"></td>
+</tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="5"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/spacer.gif" width="2" height="5"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#8F8FAB" height="2"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="2"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+</table>
+<table width="95%" align="center" cellspacing="0" cellpadding="0" border="1" bordercolor="#8F8FAB" class="comtableborder"><tr><td width="100%" valign="top">
+
+<table width="$tablewidth" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="center" valign="middle" width="$tablewidth" height="25"> 
+      <table width="$tablewidth" border="0" cellspacing="0" cellpadding="0" background="images/tables/topbar.jpg" height="24">
+        <tr> 
+          <td width="$t1"><img src="images/tables/topbar_left.jpg" width="5" height="24"></td>
+          <td width="$t2"><nobr><font class="btext">&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td>
+          <td width="$t3" align="center" valign="top">&nbsp;</td>
+          <td width="$t4" align="center" valign="top"><a href="javascript:void(0);" onClick="javascript:printPage('stank_vconfig.htm','CID','$CID');" onMouseOver="javascript:imageOnDHTML('printit','ov');" onMouseOut="javascript:imageOffDHTML('printit','off');"><img src="images/tables/but_printit_off.gif" width="67" height="21" name="printit" border="0"></a></td>
+          <td width="$t1" align="left" valign="top"><img src="images/tables/topbar_right.jpg" width="5" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center"> 
+      <table width="$tablewidth" border="0" cellspacing="0" cellpadding="0" height="30">
+        <tr align="center"> 
+          <td width="20%" align="left"><img src="images/tables/icon_back_off.gif" width="60" height="20" name="back" border="0"></td>
+          <td width="16%"><img src="images/tables/but_configureit_dn.gif" width="81" height="20" name="configureit" border="0"></td>
+          <td width="16%"><img src="images/tables/but_techspecs_dn.gif" width="77" height="20" name="techspecs" border="0"></td>
+          <td width="16%"><img src="images/tables/but_sysdrivers_dn.gif" width="78" height="20" name="sysdrivers" border="0"></td>
+          <td width="16%"><img src="images/tables/but_lphoto_dn.gif" width="75" height="20" name="lphoto" border="0"></td>
+          <td width="16%"><img src="images/tables/but_multimedia_dn.gif" width="73" height="20" name="sysmedia" border="0"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top"> 
+      <table width="$tablewidth" border="0" cellspacing="1" cellpadding="0" align="center">
+        <tr> 
+          <td align="center" valign="top" height="150" width="$t5">
+		  <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+		  <tr>
+		  <td width="40%" align="right" valign="middle">$CARTITLink</td>
+		  <td width="20%" align="center" valign="middle">&nbsp;</td>
+		  <td width="40%" align="left" valign="middle">$RECONFIGLink</td>
+		  </tr>
+		  </table>
+		  <font class="stankprice"><br><font class=\"stankprice\"><center>System's Price<br><b>\$$TotalPrice</b></center></font><img src="/dbimages/prod_common/$SmallImageN" width="165" height="100" vspace="20" border="0" alt="$SmallImageD"></font>
+            <table width="100%" cellspacing="1" cellpadding="0" bgcolor="#FFFFFF">
+              <tr> 
+                <td> 
+                  <table width="100%" cellspacing="0" cellpadding="0" bgcolor="#F2F2F7" class="stankth" height="18" $border>
+                    <tr> 
+                      <td align="center"><font class="btext"><b>Trusted Performance By</b></font></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+                  <table width="100%" cellspacing="0" cellpadding="0" class="stankth" $border>
+                    <tr> 
+                      <td width="5%">&nbsp;</td><td align="center" width="90%"><font class="btext">
+					  
+<!--TESTER-->
+<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#F2F2F7\"><tr><tr><td width=\"100%\" height=\"10\"><font size=\"-4\" face=\"verdana,arial,helvetica\">&nbsp;</font></td></tr></table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+<table width="$tablewidth" border="0" cellspacing="0" cellpadding="0"><tr><td align="center" width="$tablewidth"> 
+$STANKLEGAL
+</td></tr></table>
+
+</body>
+</html>
+});
+$msg->send();

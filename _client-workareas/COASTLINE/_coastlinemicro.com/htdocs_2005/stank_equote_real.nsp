@@ -1,0 +1,747 @@
+#!/usr/bin/perl5 -s
+
+###########################################################################################################
+# Company: ©2001 NetMedia Solutions                                                                       #
+# Date: Saturday, September 21, 2001                                                                      #
+# Location: Los Angeles County, California, United States of America                                      #
+# Made By: Luis Rodriguez (drlouie)                                                                       #
+# Email: Drlouie@NetMediaSol.com                                                                          #
+#                                                                                                         #
+# This program cannot be duplicated, distributed or re-used for any other purpose other than its original #
+# intended purpose and function. You may request NetMedia Solutions for a copy of the script,             #
+# personalized to fit your exact needs for a small re-programming fee.                                    #
+###########################################################################################################
+
+$tablewidth = "90%"; $t1 = "5"; $t2 = "64%"; $t3 = "18%"; $t4 = "18%"; $t5 = "100%";
+
+$CMPartNum = "$FORM{'CMPartNum'}";
+$PricingClass = "$FORM{'PricingClass'}";
+$ItemName = "$FORM{'ItemName'}";
+$Warranty = "$FORM{'Warranty'}";
+$CMSeries = "$FORM{'CMSeries'}";
+$LasPartes = $FORM{'LasPartes'};
+$ElPrecio = $FORM{'ElPrecio'};
+$ElPeso = $FORM{'ElPeso'};
+$Image = $FORM{'Image'};	
+
+## ----------------->>> BACK BUTTON
+$GoBack = "<a href=\"javascript:history.go(-1);\"><img src=\"images/tables/icon_back_on.gif\" width=\"60\" height=\"20\" name=\"back\" border=\"0\"></a>";
+
+
+$STANKLEGAL = `cat stank_legal.nsf`;
+
+##---------------------------->>> CONFIGURE SYSTEM INFORMATION AND IMAGERY FOR OUTPUT
+$MainTitle = "$CMSeries&#153; Series System Saver";
+if ($CMSeries eq "GreatWhite") { $ITitle = "gw"; }
+elsif ($CMSeries eq "Mako") { $ITitle = "mako"; }
+elsif ($CMSeries eq "Reef") { $ITitle = "reef"; }
+elsif ($CMSeries eq "Tiger") { $ITitle = "tiger"; }
+elsif ($CMSeries eq "Thresher") { $ITitle = "thresher"; }
+else { $ITitle = "store"; }
+
+## RECONFIGURABLE?
+$ConfigIT = "<img src=\"images/tables/but_configureit_dn.gif\" width=\"81\" height=\"20\" name=\"configureit\" border=\"0\">";
+
+
+if ($FORM{'SEAGATE'} eq "1") { 
+	$topbarLeft = "seagate_topbar_left.gif"; 
+	$topbarRight = "seagate_topbar_right.gif"; 
+	$topbarMid = "seagate_topbar_mid.gif"; 
+	$extraStyle = "style='color:#000000'";
+}
+elsif ($FORM{'QUEST'} eq "1") { 
+	$topbarLeft = "quest_topbar_left.gif"; 
+	$topbarRight = "quest_topbar_right.gif"; 
+	$topbarMid = "quest_topbar_mid.gif"; 
+	$extraStyle = "style='color:#000000'";
+}
+else { 
+	$topbarLeft = "topbar_left.jpg"; 
+	$topbarRight = "topbar_right.jpg"; 
+	$topbarMid = "topbar.jpg"; 
+}
+
+## ----------------->>> EQUOTE
+if (($FORM{'LasPartes'} ||  $FORM{'CID'}) && $FORM{'CartSaveEQuote'} eq "EQUOTE") {
+
+
+	$countfile = "EQCNT.cnt";
+	open(COUNT,"$countfile") || &error('can not write to $countfile');
+	$countEQ = <COUNT>;
+	$countEQ++;
+	close(COUNT);
+	## write out current count on tracking file
+	open(COUNT2,">$countfile") || &error('can not write to $countfile');
+	flock(COUNT2, 2);
+	print COUNT2 "$countEQ";
+	flock(COUNT2, 8);
+	close(COUNT2);
+	
+	$EQCNT = "$countEQ";
+
+use DBI;
+my $dbh = DBI->connect("DBI:mysql:NMS-SysConfigurator","root","62Ak.fi1HdBxI") or die "Unable to connect to database: <b>coastline</b>\n"; 
+$dbh->{RaiseError} = 1; 
+
+if ($Cookies{'Echado'} ne "" && $Cookies{'Echado'} ne " " && $Cookies{'Echado'} ne "NO") {
+	$Username = "$Cookies{'GID'}";
+	$CMCustNum = "$Cookies{'CeeEmmNo'}";
+	$FirstName = "$Cookies{'FiNo'}";
+	$LastName = "$Cookies{'LaNo'}";
+	$Email = "$Cookies{'EDomi'}";
+	$UTipe = "$Cookies{'UTipe'}";
+	$CoNo = "$Cookies{'CoNo'}";
+	$DTV = "$Cookies{'DTV'}";
+	$SRV = "$Cookies{'SRV'}";
+	$NBV = "$Cookies{'NBV'}";
+	$MOV = "$Cookies{'MOV'}";
+	$MYV = "$Cookies{'MYV'}";
+	$HDV = "$Cookies{'HDV'}";
+	$VDV = "$Cookies{'VDV'}";
+	$PHV = "$Cookies{'PHV'}";
+	$PRV = "$Cookies{'PRV'}";
+	$SWV = "$Cookies{'SWV'}";
+
+	my $sth = $dbh->prepare("SELECT * FROM Customers WHERE CMCustNum='$CMCustNum'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) {
+		$SavedPhone = $row[8];
+		$RepID = $row[3];
+	}
+	$sth->finish;
+	
+	$Area = substr($SavedPhone, 0, 3);
+	$Phone3 = substr($SavedPhone, 3, 3);
+	$Phone4 = substr($SavedPhone, 6, 4);
+
+	## if Email not blank, set UserEmailer option to YES/ON
+	if ($Email ne "" && $Email ne " " && $Email =~ "\@") { $UserEmailer = "YES"; }
+	
+	## rep EMAILS
+	if ($RepID ne "" && $RepID ne " ") {
+		if ($RepID =~ ",") { 
+			@splitReps = split(/,/, $RepID);
+			$leRepID = $splitReps[0];
+		}
+		else { $leRepID = $RepID; }
+		
+		my $sth = $dbh->prepare("SELECT * FROM Users WHERE Username='$leRepID'");
+		$sth->execute or die "Unable to execute query\n";
+		my @row;
+		while(@row = $sth->fetchrow_array) {
+			$RepEmail = $row[5];
+		}
+		$sth->finish;
+	}
+}
+
+else {
+	$countfile2 = "GUCNT.cnt";
+	open(COUNT2,"$countfile2") || &error('can not write to $countfile2');
+	$countGU = <COUNT2>;
+	$countGU++;
+	close(COUNT2);
+	## write out current count on tracking file
+	open(COUNT3,">$countfile2") || &error('can not write to $countfile2');
+	flock(COUNT3, 2);
+	print COUNT3 "$countGU";
+	flock(COUNT3, 8);
+	close(COUNT3);
+	
+	$Username = "Guest_$countGU";
+	$CMCustNum = "Guest_$countGU";
+	$FirstName = "$FORM{'FirstName'}";
+	$LastName = "$FORM{'LastName'}";
+	if ($FORM{'Email'} ne "" && $FORM{'Email'} ne " " && $FORM{'Email'} =~ "\@") { $UserEmailer = "YES"; $Email = "$FORM{'Email'}"; }
+	else { $Email = "admmin\@rhomberg.com"; }
+	$Area = "$FORM{'Area'}";
+	$Phone = "$FORM{'Phone'}";
+	$UTipe = "GuestUser";
+	$CoNo = "$FORM{'CoNo'}";
+	$DTV = "35";
+	$SRV = "35";
+	$NBV = "35";
+	$MOV = "35";
+	$MYV = "35";
+	$HDV = "35";
+	$VDV = "35";
+	$PHV = "35";
+	$PRV = "35";
+	$SWV = "35";
+
+	$Phone3 = substr($Phone, 0, 3);
+	$Phone4 = substr($Phone, 3, 4);
+}
+
+	$Parent = "$FORM{'CMPartNum'}";
+	$OrderIDs = "0";
+	$ProductIDs = "$LasPartes";
+	$TotalPrice = "$ElPrecio";
+	$TotalWeight = "$ElPeso";
+	push(@elConfig,"$Parent=-=-=$Username=-=-=$CMCustNum=-=-=$OrderIDs=-=-=$CMSeries=-=-=$ProductIDs=-=-=$TotalPrice=-=-=$TotalWeight=-=-=$CreatedOn=-=-=$CID");
+
+$MainTitle = "Electronic Quoting System";
+
+@splitConfig = split(/=-=-=/, $elConfig[0]);
+$leParent = $splitConfig[0];
+$leUser = $splitConfig[1];
+$leCMC = $splitConfig[2];
+$leOIDs = $splitConfig[3];
+$leCMS = $splitConfig[4];
+$lePIDs = $splitConfig[5];
+$lePrice = $splitConfig[6];
+$leWeight = $splitConfig[7];
+$leCreated = $splitConfig[8];
+$leCID = $splitConfig[9];
+
+my $sth = $dbh->prepare("SELECT * FROM Products WHERE CMPartNum='$leParent'");
+$sth->execute or die "Unable to execute query\n";
+my @row;
+while(@row = $sth->fetchrow_array) {
+	$ProductNombre = $row[11];
+	$SmallPhoto = $row[17];
+}
+$sth->finish;
+
+my $sth = $dbh->prepare("SELECT * FROM Images WHERE ImageID='$SmallPhoto'");
+$sth->execute or die "Unable to execute query\n";
+my @row;
+while(@row = $sth->fetchrow_array) { 
+	$SavedFileName = $row[3];
+	$SavedDesc = $row[8];
+	$SmallImageN = "$SavedFileName"; 
+	$SmallImageD= "$SavedDesc";
+}
+$sth->execute or die "Unable to execute query\n"; 
+$sth->finish;
+
+if ($leCMS eq "GreatWhite") { $leCMS = "gw"; }
+elsif ($leCMS eq "Mako") { $leCMS = "mako"; }
+elsif ($leCMS eq "Reef") { $leCMS = "reef"; }
+elsif ($leCMS eq "Thresher") { $leCMS = "thresher"; }
+else { $leCMS = "tiger"; }
+
+if ($FORM{'InnerLink'} eq "1") {
+	$CARTITLink = "&nbsp;"; 
+	$RECONFIGLink = "&nbsp;";
+	$LayerCSS = "#divNewsCont {position:absolute; left:150; top:12px; width:300px; height:80px; clip:rect(0px 300px 80px 0px); visibility:hidden; overflow:hidden;}\n";
+	$LayerCSS2 = "#divNews     {position:absolute;}\n";
+}
+else { 
+	$CARTITLink = "<a href=\"javascript:location.href = 'framer.htm?subject=$leCMS&title=$leCMS&cartit=$leCID';\" onMouseOver=\"javascript:imageOnDHTML3('cartit','ov');\" onMouseOut=\"javascript:imageOffDHTML3('cartit','off');\"><img src=\"images/newones/cartit_off.gif\" border=\"0\" name=\"cartit\"></a>"; 
+	$RECONFIGLink = "<a href=\"javascript:location.href = 'products.htm?title=$$FORM{'title'}&loadsys=$leParent';\" onMouseOver=\"javascript:imageOnDHTML3('reconfigit','ov');\" onMouseOut=\"javascript:imageOffDHTML3('reconfigit','off');\"><img src=\"images/newones/reconfigit_off.gif\" border=\"0\" name=\"reconfigit\"></a>";
+	$LayerCSS = "#divNewsCont {position:absolute; top:12px; width:300px; height:80px; clip:rect(0px 300px 80px 0px); visibility:hidden; overflow:hidden;}\n";
+	$LayerCSS2 = "#divNews     {position:absolute;}\n";
+}
+
+@losProductos = split(/,,,,,/, $lePIDs);
+foreach $elProducto (@losProductos) {
+	@splitItem = split(/-----/, $elProducto);	
+	$MiCate = $splitItem[0];
+	$MiNume = $splitItem[1];
+	my $sth = $dbh->prepare("SELECT * FROM Products WHERE CMPartNum='$MiNume'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) {
+		$Compania = $row[6];
+		$ItemName = $row[11];
+		$Description = $row[12];
+		if ($Compania ne "" && $Compania ne " " && $Compania ne "NONE") { push(@Companias,"$Compania"); }
+		if ($row[16] ne "" && $row[16] ne " ") { push(@emblems, "$row[16]"); }
+		push(@theItems, "$MiCate-----$MiNume-----$ItemName-----$Description");
+	}
+	$sth->finish;
+}
+
+foreach $Company (@Companias) {
+	my $sth = $dbh->prepare("SELECT * FROM MFGs WHERE ManufacturerID='$Company'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$MuaName = $row[1];
+		$SImage = $row[18];
+		if ($Company ne "" && $Company ne $LastCompany) { push(@Emblems,"$Company,,,,,$MuaName,,,,,$SImage"); $LastCompany = $Company; }
+	}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+}
+
+foreach $EmblemIt (@Emblems) {
+	@EsteEmb = split(/,,,,,/, $EmblemIt);
+	$MuaCompany = $EsteEmb[0];
+	$MuaName = $EsteEmb[1];
+	$MuaSImage = $EsteEmb[2];
+	
+	my $sth = $dbh->prepare("SELECT * FROM Images WHERE ImageID='$MuaSImage'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$InnerURL = $row[6];
+		if ($lastImage =~ "$MuaSImage") {  }
+		else { push (@leImagen, "<br><img src=\"$InnerURL\" border=\"0\"><br>$MuaName\<br><br><br>"); }
+		$lastImage = $lastImage . $MuaSImage;
+	}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+}
+
+
+push (@leProductos, "<table width='100%' cellpadding='3' cellspacing='0' border='0'>\n");
+
+push (@leProductos, "<tr><td width='15%'><font class='btext3'>$CMPartNum</font></td><td width='65%'><font class='btext3'>$CMSeries Series&nbsp;</font></td><td width='5%' align='center'><font class='btext3'>1</font></td><td width='15%' align='right'><font class='btext3'>\$$TotalPrice</font></td></tr>\n");
+
+$SCuenta=0;
+foreach $anItem (@theItems) {
+	@splitCosas = split(/-----/, $anItem);	
+	$Category = $splitCosas[0];
+	$MiNume = $splitCosas[1];
+	$MiEsteNombre = $splitCosas[2];
+	$ItsDesc = $splitCosas[3];
+
+	##--->> REFORMAT INCOMING DATA FOR PARSING
+	$DCount = "0";
+	@DescCount = split(//, $ItsDesc);
+	foreach $DescDesc (@DescCount) { 
+	$DCount++; 
+		if (($FORM{'SEAGATE'} eq "1" || $FORM{'QUEST'} eq "1" || $FORM{'TPP'} eq "1") && $SCuenta eq "0") { 
+			$ItsDesc = $ItsDesc; 
+		}
+		elsif ($DCount >= "50" && ($DescDesc eq "." || $DescDesc eq "!")) { 
+			$ItsDesc = substr($ItsDesc, 0, $DCount); 
+		} 
+	}
+	##--->> REFORMAT INCOMING DATA FOR PARSING
+	$NCount = "0";
+	@NameCount = split(//, $MiName);
+	foreach $NameName (@NameCount) { 
+	$NCount++; 
+		if ($NCount >= "35" && $NameName eq " ") { 
+			$MiEsteNombre = substr($MiEsteNombre, 0, $NCount); 
+		} 
+	}
+
+	
+	## check categories
+	if ($lastCate ne "$Category") {
+		push (@leProductos, "<tr><td width='10%'><font class='btext3'>$MiNume</font></td><td width='65%'><a href='stank_viewprod.htm?CMPartNum=$MiNume&ComingFrom=vconfig&OGPart=$leCID&InnerLink=1'><font class='btext3'>$MiEsteNombre</font></a></td><td width='5%' align='center'><font class='btext3'>1</font></td><td width='15%' align='right'><font class='btext3'>0.00</font></td></tr>\n");
+	}
+	else {
+		push (@leProductos, "<tr><td width='10%'><font class='btext3'>$MiNume</font></td><td width='65%'><a href='stank_viewprod.htm?CMPartNum=$MiNume&ComingFrom=vconfig&OGPart=$leCID&InnerLink=1'><font class='btext3'>$MiEsteNombre</font></a></td><td width='5%' align='center'><font class='btext3'>1</font></td><td width='15%' align='right'><font class='btext3'>0.00</font></td></tr>\n");
+	}
+	$lastCate = "$Category";
+
+$SCuenta++;
+}
+push (@leProductos, "</table>");
+
+if ($FORM{'NMUSD'} eq "1") { 
+	$lePrecious="<font class=\"stankprice\"><br><center>For faster service, feel free to give us a call anytime...</center></font><br>"; 
+	$leType = "School District Program";
+	$leRecipient = "admmin\@rhomberg.com";
+}
+elsif ($FORM{'MSP'} eq "1") { 
+	$lePrecious="<font class=\"stankprice\"><br><center>For faster service, feel free to give us a call anytime...</center></font><br>"; 
+	$leType = "Intel&reg; Model School Program";
+	$leRecipient = "admmin\@rhomberg.com";
+}
+elsif ($FORM{'TPP'} eq "1" && $Cookies{'Echado'} eq "YES") { 
+	$lePrecious="<br><font class=\"stankprice\"><center>System's Price As Seen Online<br><b>\$$TotalPrice</b></center></font>"; 
+	$leType = "TPP Program Systems";
+	$leRecipient = "admmin\@rhomberg.com";
+}
+elsif ($FORM{'SEAGATE'} eq "1") { 
+	$lePrecious="<br><font class=\"stankprice\"><center>System's Price As Seen Online<br><b>\$$TotalPrice</b></center></font>"; 
+	$leType = "Seagate System Purchasing Center";
+	$leRecipient = "admmin\@rhomberg.com";
+}
+elsif ($FORM{'QUEST'} eq "1") { 
+	$lePrecious="<br><font class=\"stankprice\"><center>System's Price As Seen Online<br><b>\$$TotalPrice</b></center></font>"; 
+	$leType = "Quest System Purchasing Center";
+	$leRecipient = "admmin\@rhomberg.com";
+}
+else { 
+	$lePrecious="<br><font class=\"stankprice\"><center>System's Price<br><b>\$$TotalPrice</b></center></font>"; 
+	$leRecipient = "admmin\@rhomberg.com";
+}
+
+
+if ($FORM{'SEAGATE'} eq "1" || $FORM{'QUEST'} eq "1") { 
+	$cualUserGreeting = "<b>$FirstName $LastName</b>,<br>Your Order has been recieved for the customized <b>$CMSeries Series&#153;</b> $PricingClass system of your choice. Below you will find the parameters of your system's configuration. A Company Representative will contact you regarding this order in a timely manner. Please feel free to call us if you do NOT want to wait for our Representative to call you.<br><br>You can use <b>$EQCNT</b>, this transaction's <b>Order ID</b>, when contacting us regarding this specific configuration. You can find our contact information at the foot of this email message.<br><br><center><b>As always, thank you for using our prize winning e-commerce store.</b></center><br><br>";
+	$cualAdminGreeting = "This Order has been processed for <b>$FirstName $LastName</b> from <b>$CoNo</b>. Below you will find the components of the system <b>$FirstName $LastName</b> ordered. He/She has been adviced that a Company Representative would contact him/her in timely manner. Attached you will find a Printable Order Sheet<br><br><b>Program Type</b> - $leType<br><b>First and Last Name</b> - $FirstName $LastName<br><b>Company Name</b> - $CoNo<br><b>Email Address</b> - $Email<br><b>Phone Number</b> - ($Area) $Phone3-$Phone4<br><br>";
+	$cualQuest = "Order";
+	$cualCCInfo = "Your order is being reviewed and will be processed as soon as your Company Representative recieves it. He/she will contact you with an order confirmation number once this order has been processed.";
+}
+else {
+	$cualUserGreeting = "<b>$FirstName $LastName</b>,<br>Your Electronic Quote (E-Quote) request has been delivered for your customized <b>$CMSeries Series&#153;</b> $PricingClass system. Below you will find the parameters of that configuration. A Company Representative will contact you regarding this request in a timely manner. Please feel free to call us if you do NOT want to wait for our Representative to call you.<br><br>You can use <b>$EQCNT</b>, this request's <b>EQuote ID</b>, when contacting Company regarding this specific configuration. You can find our contact information at the foot of this email message.<br><br><center><b>As always, thank you for using our prize winning e-commerce store.</b></center><br><br>";
+	$cualAdminGreeting = "This Electronic Quote (E-Quote) request has been sent by <b>$FirstName $LastName</b> from <b>$CoNo</b>. Below you will find the components of the system <b>$FirstName $LastName</b> requested a quote for. He/She has been adviced that a Company Representative would contact him/her in timely manner. Directly below is the <b>$FirstName's</b> contact information for user: <b>$Username</b><br><br><b>Program Type</b> - $leType<br><b>First and Last Name</b> - $FirstName $LastName<br><b>Company Name</b> - $CoNo<br><b>Email Address</b> - $Email<br><b>Phone Number</b> - ($Area) $Phone3-$Phone4<br><br><br><center><b>As always, thank you for using our prize winning e-commerce store.</b></center><br><br>";
+	$cualQuest = "E-Quote";
+	$cualCCInfo = "Additionally a credit card authorization form will be emailed to you for completion. Please complete credit card authorization form and fax to <b>949-450-9977</b>. Upon receipt, your order will be processed and a Company Representative will contact you with an order confirmation number.";
+}
+
+
+
+
+##############################################
+#################### MAKE USNV'S INVOICE PDF #
+##############################################
+#####
+foreach $eleP (@leProductos) {
+	$todosCOSAS = $todosCOSAS . $eleP;
+}
+$BUNCHADATA = "$todosCOSAS";
+
+
+$cualSoldto = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$FORM{'CoNo'}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$FORM{'FirstName'} $FORM{'LastName'}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$FORM{'Email'}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($FORM{'Area'}) $FORM{'Phone'}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Confirmed To:</u><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$FORM{'FirstName'} $FORM{'LastName'}";
+$cualShipto = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$FORM{'CoNo'}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$FORM{'FirstName'} $FORM{'LastName'}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$FORM{'Email'}";
+
+### FEED HTML TEMPLATE 
+## html template file
+if ($FORM{'SEAGATE'} eq "1" || $FORM{'QUEST'} eq "1") { $leTemplateO = `cat pdf/receipt.html.nsf`; }
+else { $leTemplateO = `cat pdf/equote.html.nsf`; }
+$leTemplateO =~ s/%%OrderID%%/$EQCNT/g;
+$leTemplateO =~ s/%%OrderDate%%/$date/g;
+$leTemplateO =~ s/%%ShipPackage%%/N\/A/g;
+$leTemplateO =~ s/%%PayTerms%%/Pre-Defined Terms/g;
+$leTemplateO =~ s/%%SoldTo%%/$cualSoldto/g;
+$leTemplateO =~ s/%%ShipTo%%/$cualShipto/g;
+$leTemplateO =~ s/%%NetTotal%%/$TotalPrice/g;
+$leTemplateO =~ s/%%TaxTotal%%/0.00/g;
+$leTemplateO =~ s/%%FinalTotal%%/\$$TotalPrice/g;
+$leTemplateO =~ s/%%DATADROP%%/$BUNCHADATA/g;
+
+
+## temp invoice file
+$Ohtml = "pdf/O_dat.html";
+## new PDF as per O-Num
+$Opdf = "pdf/rec/order_$EQCNT.html";
+
+## create HTML since no PDF
+open(OPDF,">$Opdf") || &error('can not write to $Opdf');
+flock(OPDF, 2);
+print OPDF "$leTemplateO";
+flock(OPDF, 8);
+close(OPDF);
+
+
+## create PDF
+#$commandline="htmldoc -t pdf13 --pagemode document --header ... --footer ... --left 1cm --size Letter --webpage -f $Opdf pdf/O_dat.html";
+#select(STDOUT); $| = 1;
+#print "Content-Type: application/pdf\n\n";
+#system($commandline);
+
+########################################
+#################### SEND ADMINS EMAIL #
+########################################
+my $Subby = "----->>> $cualQuest ID: $EQCNT";
+use lib "/www/htdocs/MIME-Lite-2.117/lib/";
+use MIME::Lite;
+my $msg = MIME::Lite->new(
+				From    =>"$Email($FirstName $LastName)",
+                To      =>"$leRecipient",
+                Subject =>"----------->>> $cualQuest #$EQCNT",
+                Type    =>'text/html', 
+Data => qq{
+
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="http://www.rhomberg.com/systemConfigurator/common_css.htm?anchor=$dark1&anchorov=EB0000&weight=normal&weightov=normal&decor=underline&decorov=underline" Type="text/css">
+<STYLE TYPE="text/css">
+body { background-color:#ffffff; scrollbar-face-color:#$light1; scrollbar-highlight-color:#$light1; scrollbar-shadow-color:#$dark2; scrollbar-3dlight-color: #$dark1; scrollbar-arrow-color:#$dark1; scrollbar-track-color:#$light1; scrollbar-darkshadow-color:#$dark2; }
+</STYLE>
+
+<style type="text/css">
+$LayerCSS
+$LayerCSS2
+.link { line-height:12px; font-family:verdana,arial,helvetica; font-size:10px; text-decoration:none; }
+.nolink { line-height:12px; font-family:verdana,arial,helvetica; font-size:10px; text-decoration:none; font-weight:bold; }
+.red { color:#EB0000; }
+a { text-decoration:underline; }
+a:hover { text-decoration:none; }
+</style>
+
+<base href="http://www.rhomberg.com/systemConfigurator/">
+</head>
+<body bgcolor="#ffffff" text="#$dark2" leftmargin="0" topmargin="0" marginwidth="0" scroll="yes" marginheight="0">
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr height="40">
+<td rowspan="2" width="15%" align="left" valign="top"><a href="http://www.rhomberg.com/systemConfigurator/"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/top_cm_logo.jpg" width="116" height="37" border="0"></a></td>
+<td rowspan="2" align="center" valign="bottom" width="30%">&nbsp;</td>
+<td width="55%" align="right" valign="bottom"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/god_bless_america.gif" width="118" height="35"></td>
+</tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="5"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/spacer.gif" width="2" height="5"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#$dark2" height="2"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="2"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+</table>
+<table width="95%" align="center" cellspacing="0" cellpadding="0" border="1" bordercolor="#$dark2" class="comtableborder"><tr><td width="100%" valign="top">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="center" valign="middle" width="100%" height="25"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/tables/$topbarMid" height="24">
+        <tr> 
+          <td width="5"><img src="images/tables/$topbarLeft" width="5" height="24"></td>
+          <td width="64%"><nobr><font class="btext" $extraSpacer>&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td>
+          <td width="18%" align="center" valign="top">&nbsp;</td>
+          <td width="18%" align="center" valign="top">&nbsp;</td>
+          <td width="100%" align="left" valign="top"><img src="images/tables/$topbarRight" width="5" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align="left">
+	 <table width="85%" border="0" cellspacing="1" cellpadding="0" align="center">
+        <tr> 
+          <td align="left" valign="top" width="100%"><font class="btext3"><br>$cualAdminGreeting</font></td>
+		</tr>
+	 </table>
+</td>
+  </tr>
+
+</table>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+});
+
+$msg->attach(Type => 'text/html', Path => "$Opdf", Filename => "order_$EQCNT.html");
+
+$msg->send();
+		
+		
+###########	
+## ----------------------->>> SEND EMAIL MESSAGE TO USER
+###########
+if ($UserEmailer eq "YES") {
+
+### FEED HTML TEMPLATE 
+## html template file
+if ($FORM{'SEAGATE'} eq "1" || $FORM{'QUEST'} eq "1") { $leTemplateR = `cat pdf/receipt.html.nsf`; }
+else { $leTemplateR = `cat pdf/equote.html.nsf`; }
+$leTemplateR =~ s/%%OrderID%%/$EQCNT/g;
+$leTemplateR =~ s/%%OrderDate%%/$date/g;
+$leTemplateR =~ s/%%ShipPackage%%/N\/A/g;
+$leTemplateR =~ s/%%PayTerms%%/Pre-Defined/g;
+$leTemplateR =~ s/%%SoldTo%%/$cualSoldto/g;
+$leTemplateR =~ s/%%ShipTo%%/$cualShipto/g;
+$leTemplateR =~ s/%%NetTotal%%/$TotalPrice/g;
+$leTemplateR =~ s/%%TaxTotal%%/0.00/g;
+$leTemplateR =~ s/%%FinalTotal%%/\$$TotalPrice/g;
+$leTemplateR =~ s/%%DATADROP%%/$BUNCHADATA/g;
+
+
+## temp invoice file
+$Rhtml = "pdf/R_dat.html";
+## new PDF as per O-Num
+$Rpdf = "pdf/rec/reciept_$EQCNT.html";
+
+## create HTML since no PDF
+open(RPDF,">$Rpdf") || &error('can not write to $Rpdf');
+flock(RPDF, 2);
+print RPDF "$leTemplateR";
+flock(RPDF, 8);
+close(RPDF);
+
+use lib "/www/htdocs/MIME-Lite-2.117/lib/";
+use MIME::Lite;
+my $msg2 = MIME::Lite->new(
+                From	=>"$leRecipient",
+				To		=>"$Email($FirstName $LastName)",
+                Subject =>"Your Online $cualQuest #$EQCNT",
+                Type    =>'text/html', 
+Data => qq{
+
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="http://www.rhomberg.com/systemConfigurator/common_css.htm?anchor=$dark1&anchorov=EB0000&weight=normal&weightov=normal&decor=underline&decorov=underline" Type="text/css">
+<STYLE TYPE="text/css">
+body { background-color:#ffffff; scrollbar-face-color:#$light1; scrollbar-highlight-color:#$light1; scrollbar-shadow-color:#$dark2; scrollbar-3dlight-color: #$dark1; scrollbar-arrow-color:#$dark1; scrollbar-track-color:#$light1; scrollbar-darkshadow-color:#$dark2; }
+</STYLE>
+
+<style type="text/css">
+$LayerCSS
+$LayerCSS2
+.link { line-height:12px; font-family:verdana,arial,helvetica; font-size:10px; text-decoration:none; }
+.nolink { line-height:12px; font-family:verdana,arial,helvetica; font-size:10px; text-decoration:none; font-weight:bold; }
+.red { color:#EB0000; }
+a { text-decoration:underline; }
+a:hover { text-decoration:none; }
+</style>
+
+<base href="http://www.rhomberg.com/systemConfigurator/">
+</head>
+<body bgcolor="#ffffff" text="#$dark2" leftmargin="0" topmargin="0" marginwidth="0" scroll="yes" marginheight="0">
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr height="40">
+<td rowspan="2" width="15%" align="left" valign="top"><a href="http://www.rhomberg.com/systemConfigurator/"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/top_cm_logo.jpg" width="116" height="37" border="0"></a></td>
+<td rowspan="2" align="center" valign="bottom" width="30%">&nbsp;</td>
+<td width="55%" align="right" valign="bottom"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/god_bless_america.gif" width="118" height="35"></td>
+</tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="5"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/spacer.gif" width="2" height="5"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#$dark2" height="2"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="2"><img src="http://www.rhomberg.com/systemConfigurator/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+</table>
+<table width="95%" align="center" cellspacing="0" cellpadding="0" border="1" bordercolor="#$dark2" class="comtableborder"><tr><td width="100%" valign="top">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="center" valign="middle" width="100%" height="25"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/tables/$topbarMid" height="24">
+        <tr> 
+          <td width="5"><img src="images/tables/$topbarLeft" width="5" height="24"></td>
+          <td width="64%"><nobr><font class="btext" $extraSpacer>&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td>
+          <td width="18%" align="center" valign="top">&nbsp;</td>
+          <td width="18%" align="center" valign="top">&nbsp;</td>
+          <td width="100%" align="left" valign="top"><img src="images/tables/$topbarRight" width="5" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align="left">
+	 <table width="85%" border="0" cellspacing="1" cellpadding="0" align="center">
+        <tr> 
+          <td align="left" valign="top" width="100%"><font class="btext3"><br>$cualUserGreeting</font></td>
+		</tr>
+	 </table>
+</td>
+  </tr>
+
+</table>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
+});
+
+$msg2->attach(Type => 'text/html', Path => "$Rpdf", Filename => "reciept_$EQCNT.html");
+
+$msg2 ->send();
+}
+		
+
+&topper;
+$pageDrop = $pageDrop . "
+
+<table width=\"100%\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">
+<tr> 
+<td width=\"40%\" valign=\"middle\" align=\"center\"><img src=\"/dbimages/prod_common/$Image\" width=\"165\" height=\"100\" vspace=\"20\" border=\"0\"></td>
+<td width=\"55%\" valign=\"middle\"><font class=\"btext\"><br>An $cualQuest has been recieved for your customized <b>$CMSeries Series&#153;</b> $PricingClass system. You will receive an email specifying the parameters of your configuration and $cualQuest.  $cualCCInfo If you have any questions or concerns, please feel free to contact Company at <b>800-729-6809</b>.<br><br>You can use <b>$EQCNT</b>, this request's <b>$cualQuest ID</b>, when contacting Company regarding this specific configuration.<br><br><b>As always, thank you for using our prize winning e-commerce store.</b><br><br></font></td>
+<td width=\"5%\">&nbsp;</td>
+</tr>
+</table>
+<br>
+
+";
+&bottom;
+
+
+## DISCONNECT DB 
+$dbh->disconnect; 
+
+##return =true
+1;
+}
+
+
+sub topper {
+$pageDrop = $pageDrop . "
+
+<form action=\"stank_saveit.htm\" name=\"leConfig\" method=\"post\" onSubmit=\"return checkForm();\">
+<input type=\"hidden\" name=\"CMPartNum\" value=\"$CMPartNum\">
+<input type=\"hidden\" name=\"Warranty\" value=\"$Warranty\">
+<input type=\"hidden\" name=\"PricingClass\" value=\"$PricingClass\">
+<input type=\"hidden\" name=\"ItemName\" value=\"$ItemName\">
+<input type=\"hidden\" name=\"CMSeries\" value=\"$CMSeries\">
+<table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+  <tr> 
+    <td align=\"center\" valign=\"middle\" width=\"$tablewidth\" height=\"25\"> 
+      <table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" background=\"images/tables/$topbarMid\" height=\"24\">
+        <tr> 
+          <td width=\"$t1\"><img src=\"images/tables/$topbarLeft\" width=\"5\" height=\"24\"></td>
+          <td width=\"$t2\"><nobr><font class=\"btext\" $extraStyle>&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td>
+          <td width=\"$t3\" align=\"center\" valign=\"top\">&nbsp;</td>
+          <td width=\"$t4\" align=\"center\" valign=\"top\">&nbsp;</td>
+          <td width=\"$t1\" align=\"left\" valign=\"top\"><img src=\"images/tables/$topbarRight\" width=\"5\" height=\"24\"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align=\"center\"> 
+      <table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" height=\"30\">
+        <tr align=\"center\"> 
+          <td width=\"20%\" align=\"left\">$GoBack</td>
+          <td width=\"16%\">$ConfigIT</td>
+          <td width=\"16%\"><img src=\"images/tables/but_techspecs_dn.gif\" width=\"77\" height=\"20\" name=\"techspecs\" border=\"0\"></td>
+          <td width=\"16%\"><img src=\"images/tables/but_sysdrivers_dn.gif\" width=\"78\" height=\"20\" name=\"sysdrivers\" border=\"0\"></td>
+          <td width=\"16%\"><img src=\"images/tables/but_lphoto_dn.gif\" width=\"75\" height=\"20\" name=\"lphoto\" border=\"0\"></td>
+          <td width=\"16%\"><img src=\"images/tables/but_multimedia_dn.gif\" width=\"73\" height=\"20\" name=\"sysmedia\" border=\"0\"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td valign=\"top\"> 
+      <table width=\"$tablewidth\" border=\"0\" cellspacing=\"1\" cellpadding=\"0\" align=\"center\">
+        <tr> 
+          <td valign=\"top\" width=\"$t5\"> 
+            <table width=\"100%\" cellspacing=\"1\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">
+              <tr> 
+                <td> 
+                  <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#$light1\" class=\"stankth\" height=\"18\" $border>
+                    <tr> 
+                      <td align=\"center\"><font class=\"btext\" $extraSpacer><b>Your $PricingClass Configuration</b></font></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+<table width=\"100%\" cellspacing=\"0\" cellpadding=\"2\" class=\"stankth\" $border>
+<tr> 
+<td valign=\"top\">
+
+";
+}
+
+sub bottom {
+$pageDrop = $pageDrop . "
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+            </table>
+
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</form>
+
+";
+}
+
+sub error {
+	print "ERROR!";
+}

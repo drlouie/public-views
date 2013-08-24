@@ -1,0 +1,79 @@
+ 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Configuration 
+            and Assembly</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td colspan="5"> 
+            <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                <td width=10>&nbsp;</td>
+                <td colspan="3" align="left" valign="top"> 
+                  <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+                    <tr> 
+                <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                <td width="200"><font  class="regtextnobold">(800) 729-6809</font></td>
+              </tr>
+              <tr> 
+                <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                <td width="200"><font class="regtextnobold">(949) 450-9977</font></td>
+                    </tr>
+                    <tr> 
+                      <td width="65">&nbsp;</td>
+                      <td width="200">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width=10>&nbsp;</td>
+                <td colspan="3"> <font class="regtextnobold"> 
+                  <p>We start to assemble your built-to-order Thresher Series&#153; Desktop PC, Mako Series&#153; Workstation, Great White Series&#153; Xeon&#153; and Tiger Series&#153; Servers the day you order them. Each system we build must pass five different signoff points in our manufacturing and testing process. Our assembly professionals strive for the highest quality craftsmanship in every system we build. <br>
+                    <br>
+                    Our advanced configuration center can install, test and configure custom peripheral devices in your built-to-order desktop or server. Our Networking Service Center can fully configure complete back office applications such as MS Exchange Server, MS SQL Server, or any of the Microsoft Back Office products.<br>
+                    <br>
+                    Coastline Micro can cluster-configure a pair of our Great White Series XEON&#153; Servers. We will have them delivered and ready to run in no time at all. We also offer all our servers pre-configured with the latest operating systems from both Novell and LINUX.<br>
+<br>
+We offer priority next-day shipment, or you can request additional diagnostic burn-in times of 24 or 48 hours to ensure your system will be ready to perform the day you receive it. Standard orders are shipped within three days of placement.<br>
+                    <br>
+                    Ask your <a href="coastlinemicro_support.html?title=cs">sales representative</a> 
+                    for details on costs for our advanced configurations. </p>
+                  </font> </td>
+                <td width=10>&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

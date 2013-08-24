@@ -1,0 +1,112 @@
+  Slide Methods
+The slide methods provide an easy solution for creating simple straight-line animations. The slide methods are now automatically assigned to all DynLayers, so you can use them at any time. 
+
+The slideTo() Method: 
+
+The slideTo() method will slide the DynLayer to a specific coordinate. 
+
+objectName.slideTo(endx,endy,inc,speed,fn)
+
+
+Where: 
+endx - the final x coordinate 
+endy - the final y coordinate 
+inc - the incrementation amount (the number pixel units to move each repetition) 
+speed - the speed of repetition in milliseconds 
+fn - (optional) the function or statement to be executed when the slide is complete 
+If you want the DynLayer to slide in a horizontal line pass null for the endy value. And if you want the DynLayer to slide in a vertical line pass null for the endx value. 
+
+Examples: 
+
+To slide the DynLayer to coordinate (100,50), in increments of 10 pixel units, at 20 milliseconds per repetition: 
+
+mylayer.slideTo(100,50,10,20)
+
+To slide the DynLayer horizontally to the x-coordinate 80: 
+
+mylayer.slideTo(80,null,5,30)
+
+To pop up alert to notify when a slide is complete: 
+
+mylayer.slideTo(100,50,10,20,'alert("The slide is complete")')
+
+When using the fn property from a hyperlink you must do a trick with the quotes: 
+
+<A HREF="javascript:mylayer.slideTo(100,50,10,20,'alert(\'The slide is complete\')')"></A>  
+
+The slideBy() Method: 
+
+The slideBy() method will slide the DynLayer to another coordinate by defining the amount of pixels to shift from it's current location (similar to moveBy() but animated). The usage is very similar to slideTo(): 
+
+objectName.slideBy(distx,disty,inc,speed,fn)
+
+
+Where: 
+distx - the amount of pixels to shift horizontally 
+disty - the amount of pixels to shift vertically 
+inc - the incrementation amount (the number pixel units to move each repetition) 
+speed - the speed of repetition in milliseconds 
+fn - (optional) the function or statement to be executed when the slide is complete 
+If you want the DynLayer to slide in a horizontal line pass 0 for the endy value. And if you want the DynLayer to slide in a vertical line pass 0 for the endx value. 
+
+Examples: 
+
+To slide the DynLayer on a diagonal 40 pixels left and 60 pixels down: 
+
+mylayer.slideBy(-40,60,5,20)
+
+To slide the DynLayer 50 pixels to the right: 
+
+mylayer.slideBy(50,0,5,20)
+
+Making Sequences: 
+
+I left the fn property so that you always have a way of determining when the slide is complete. By taking advantage of this feature you can link a series of slide()'s together to make a sequence of animations. Here's an easy way to accomplish a sequence: 
+
+seq1 = 0
+function sequence1() {
+	seq1++
+	if (seq1==1) {
+		// commands for first part of sequence
+		// link the slide back to this function to keep it going
+		mylayer.slideBy(50,0,10,20,'sequence1()')
+	}
+	else if (seq1==2) {
+		// commands for seconds part of sequence
+	}
+	else seq1 = 0 // reset to 0 so you can play the sequence again
+}
+
+onSlide Handlers 
+
+I've added 2 event handlers to the Slide Methods: 
+
+onSlide - called in each and every step in the slide 
+onSlideEnd - called when the slide has finished (just like the "fn") 
+I have not put these handlers to large use, but it seems to work pretty well, and are perhaps better to use than the "fn" parameter in the slideBy() and slideTo() methods. 
+
+By default these handlers do nothing, but all you have to do is reset them to some function after calling the slideInit() method: 
+
+mylayer.slideInit()
+mylayer.onSlide = mylayerOnSlide  // some function that runs each step in the slide
+mylayer.onSlideEnd = mylayerOnSlideEnd  // some function that runs when completed the slide
+
+Example: dynlayer-slide1.html [source] - for an example with different variations of the slide methods and sequences. 
+
+Example: dynlayer-slide2.html [source] - for an example showing how to use the onSlide handlers. 
+
+The Dynamic Layer Object API 
+
+Initialization 
+DynLayerInit() Function 
+Properties 
+Using Layer-based Events 
+Hide, Show, Move Methods 
+Slide Methods 
+Clip Methods 
+Write Method 
+css() and DynLayerTest() Functions 
+Download: dynlayer.js 
+View Source: dynlayer.js 
+Home Next Lesson: Clip Methods 
+copyright 1998 Dan Steinman 

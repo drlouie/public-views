@@ -1,0 +1,16 @@
+#!/usr/bin/perl5 -w
+
+$date = "March 01, 2001";
+
+$title = "Coastline Micro proudly reveils its newest Web site additons";
+
+$para1 = "Sorry, there is no description for this article yet.";
+
+$location = "Irvine, CA";
+
+$myfoot = "00001011";
+
+$partners = "00001024,00001022,00001023,00001021";
+
+##return = true
+1;

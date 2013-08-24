@@ -1,0 +1,10 @@
+#!/usr/bin/perl5 -w
+
+$foottitle = "About the Peak Performer Customer Care Award ";
+
+$footlink = "http://www.systembuildersummit.com/value/sbs-awards.htm";
+
+$footbody = "System Builder Summit \"Peak Performer Awards\" recognize select System Builders for their contributions to the channel, while Vendors gain instant brand and product credibility with every nomination and award they receive for product and program excellence.";
+
+##return = true
+1;

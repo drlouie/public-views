@@ -1,0 +1,55 @@
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>Customer Support ( Remote Support )</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr>
+<td width="2%" valign="top">&nbsp;</td>
+    <td width="96%" valign="top"><font class="stext"> This remote support option 
+      is for customers that have been directed here by a Coastline Micro technical 
+      support representative. If you have not been assigned a TSR number and directed 
+      to this page please contact Coastline Micro's technical support group to 
+      ensure prompt processing of your support request. If you have been directed 
+      to this page please click the button below to begin your remote assistance 
+      session with a Coastline Micro technical support representative.<br>
+      <br>
+      <center>
+		<a href="http://www.coastlinemicro.com/support/rs/"><img src="images/newones/remote_support.jpg" width="250" height="75" border="0"></a>
+      </center>
+      </font></td>
+<td width="2%" valign="top" align="center">&nbsp;</td>
+</tr>
+
+</table>
+
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>&nbsp;</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

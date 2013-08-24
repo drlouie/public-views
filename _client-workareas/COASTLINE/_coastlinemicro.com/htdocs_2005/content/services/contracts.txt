@@ -1,0 +1,127 @@
+ 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Available Service Contracts</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td width=10>&nbsp;</td>
+          <td colspan="3" align="left" valign="top"> 
+            <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+              <tr> 
+                <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                <td width="200"><font  class="regtextnobold">(800) 729-6809</font></td>
+              </tr>
+              <tr> 
+                <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                <td width="200"><font class="regtextnobold">(949) 450-9977</font></td>
+              </tr>
+              <tr> 
+                <td width="65">&nbsp;</td>
+                <td width="200">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width=10>&nbsp;</td>
+          <td colspan="3"> <font class="regtextnobold"> 
+            <p>
+			
+		<table width="75%" align="center" border=1 bordercolor="8f8fab" cellpadding=3 cellspacing=0>
+          <tr> 
+            <td width="100%" align="center"><br><font class="regtextnobold">
+			<center>
+			To view our service <b>contract add-ons</b> please <a href="/coastlinemicro_services.html?title=addons">click here</a>.
+			<br><br>
+			For additional information on our <b>service offerings</b> please <a href="/contact_coastlinemicro.html?title=gencomments">email us</a> or give us a call.
+			</center>
+			</font>
+			<br>
+        	</td>
+          </tr>
+        </table>
+			<br>
+<ul>
+<b>Time and Material Service Contract</b>
+<ul type="circle">
+<li>Customer pays the standard rate on as needed basis.</li>
+<li>Support available Monday - Friday, 8a - 5p PST, except holidays.</li>
+<li>After hours support available Monday - Friday, except holidays, by appointment only.</li>
+<li>After hours support is billed at 1.5X (1.5 x rate = billable rate) of the standard rate.</li>
+<li>Phone support billed in 15-minute increments. Minimum billing is 15 minutes.</li>
+<li>Onsite support billed in 15-minute increments. Minimum billing is 1 hour.</li>
+<li>Typical onsite response time, next day but not guaranteed. 3rd day onsite guaranteed.</li>
+<li>To lock in rates customer must sign up for a Time and Material Service Contract.</li>
+<li>Contract applies to Level 2 Techs and Level 3 Engineers only.</li>
+<li>Level 4 Engineers are billed at the standard applicable rate.</li>
+</ul>	
+<br>
+<b>Monthly Service Contract</b>
+<ul type="circle">
+<li>Customer purchases a block of hours (5 hours minimum) at a reduced rate* to be used per month.</li>
+<li>Unused hours do not roll over to the following month.</li>
+<li>When the customer requires technical support (onsite or phone) the hours used will be deducted from the purchased block.</li>
+<li>Support available Monday - Friday, 8a - 5p PST, except holidays.</li>
+<li>After hours support available Monday - Friday, except holidays, by appointment only.</li>
+<li>After hours support is billed at 1.5X (1.5 x rate = billable rate) of the standard rate.</li>
+<li>Phone support billed in 15-minute increments. Minimum billing is 15 minutes.</li>
+<li>Onsite support billed in 15-minute increments. Minimum billing is 1 hour.</li>
+<li>Level 3 Engineer will be assigned to the account.</li>
+<li>Engineer will be onsite weekly at a predetermined date and time to work on any open support issues.</li>
+<li>Typical onsite response time, same day but not guaranteed. Next day onsite guaranteed.</li>
+<li>Contract applies to Level 2 Techs and Level 3 Engineers only.</li>
+<li>Level 4 Engineers are billed at the standard applicable rate.</li>
+</ul>
+<br>
+
+        <table width="75%" align="center" border=1 bordercolor="8f8fab" cellpadding=3 cellspacing=0>
+          <tr> 
+            <td width="100%" align="center"><br><font class="regtextnobold">
+			<center>
+			To view our service contract <b>add-ons</b> please <a href="/coastlinemicro_services.html?title=addons">click here</a>.
+			<br><br>
+			For additional information on our <b>service offerings</b> please <a href="/contact_coastlinemicro.html?title=gencomments">email us</a> or give us a call.
+			</center>
+			</font>
+			<br>
+        	</td>
+          </tr>
+        </table>
+
+            </p>
+            </font> 
+          </td>
+          <td width=10>&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
