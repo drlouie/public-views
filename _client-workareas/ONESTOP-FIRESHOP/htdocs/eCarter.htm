@@ -1,0 +1,707 @@
+#!/usr/bin/perl5 -s
+
+require "parse_query.nsp";
+
+## Snif cookie, if present test for logged in status
+require ("cookiesniffer.nsp");
+
+
+## ECARTER ITEMS (UPDATE CART)
+if ($FORM{'SKU_1'} && $FORM{'PO_1'} && $FORM{'Qty_1'} || $FORM{'Delete_1'}) {
+	if ($FORM{'Delete_1'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_1'}%%%%%$FORM{'PO_1'}%%%%%$FORM{'Qty_1'}"); }
+
+	if ($FORM{'SKU_2'} && $FORM{'PO_2'} && $FORM{'Qty_2'} || $FORM{'Delete_2'}) { if ($FORM{'Delete_2'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_2'}%%%%%$FORM{'PO_2'}%%%%%$FORM{'Qty_2'}"); }	}
+	if ($FORM{'SKU_3'} && $FORM{'PO_3'} && $FORM{'Qty_3'} || $FORM{'Delete_3'}) { if ($FORM{'Delete_3'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_3'}%%%%%$FORM{'PO_3'}%%%%%$FORM{'Qty_3'}"); }	}
+	if ($FORM{'SKU_4'} && $FORM{'PO_4'} && $FORM{'Qty_4'} || $FORM{'Delete_4'}) { if ($FORM{'Delete_4'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_4'}%%%%%$FORM{'PO_4'}%%%%%$FORM{'Qty_4'}"); }	}
+	if ($FORM{'SKU_5'} && $FORM{'PO_5'} && $FORM{'Qty_5'} || $FORM{'Delete_5'}) { if ($FORM{'Delete_5'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_5'}%%%%%$FORM{'PO_5'}%%%%%$FORM{'Qty_5'}"); }	}
+	if ($FORM{'SKU_6'} && $FORM{'PO_6'} && $FORM{'Qty_6'} || $FORM{'Delete_6'}) { if ($FORM{'Delete_6'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_6'}%%%%%$FORM{'PO_6'}%%%%%$FORM{'Qty_6'}"); }	}
+	if ($FORM{'SKU_7'} && $FORM{'PO_7'} && $FORM{'Qty_7'} || $FORM{'Delete_7'}) { if ($FORM{'Delete_7'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_7'}%%%%%$FORM{'PO_7'}%%%%%$FORM{'Qty_7'}"); }	}
+	if ($FORM{'SKU_8'} && $FORM{'PO_8'} && $FORM{'Qty_8'} || $FORM{'Delete_8'}) { if ($FORM{'Delete_8'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_8'}%%%%%$FORM{'PO_8'}%%%%%$FORM{'Qty_8'}"); }	}
+	if ($FORM{'SKU_9'} && $FORM{'PO_9'} && $FORM{'Qty_9'} || $FORM{'Delete_9'}) { if ($FORM{'Delete_9'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_9'}%%%%%$FORM{'PO_9'}%%%%%$FORM{'Qty_9'}"); }	}
+	if ($FORM{'SKU_10'} && $FORM{'PO_10'} && $FORM{'Qty_10'} || $FORM{'Delete_10'}) { if ($FORM{'Delete_10'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_10'}%%%%%$FORM{'PO_10'}%%%%%$FORM{'Qty_10'}"); }	}
+	if ($FORM{'SKU_11'} && $FORM{'PO_11'} && $FORM{'Qty_11'} || $FORM{'Delete_11'}) { if ($FORM{'Delete_11'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_11'}%%%%%$FORM{'PO_11'}%%%%%$FORM{'Qty_11'}"); }	}
+	if ($FORM{'SKU_12'} && $FORM{'PO_12'} && $FORM{'Qty_12'} || $FORM{'Delete_12'}) { if ($FORM{'Delete_12'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_12'}%%%%%$FORM{'PO_12'}%%%%%$FORM{'Qty_12'}"); }	}
+	if ($FORM{'SKU_13'} && $FORM{'PO_13'} && $FORM{'Qty_13'} || $FORM{'Delete_13'}) { if ($FORM{'Delete_13'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_13'}%%%%%$FORM{'PO_13'}%%%%%$FORM{'Qty_13'}"); }	}
+	if ($FORM{'SKU_14'} && $FORM{'PO_14'} && $FORM{'Qty_14'} || $FORM{'Delete_14'}) { if ($FORM{'Delete_14'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_14'}%%%%%$FORM{'PO_14'}%%%%%$FORM{'Qty_14'}"); }	}
+	if ($FORM{'SKU_15'} && $FORM{'PO_15'} && $FORM{'Qty_15'} || $FORM{'Delete_15'}) { if ($FORM{'Delete_15'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_15'}%%%%%$FORM{'PO_15'}%%%%%$FORM{'Qty_15'}"); }	}
+	if ($FORM{'SKU_16'} && $FORM{'PO_16'} && $FORM{'Qty_16'} || $FORM{'Delete_16'}) { if ($FORM{'Delete_16'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_16'}%%%%%$FORM{'PO_16'}%%%%%$FORM{'Qty_16'}"); }	}
+	if ($FORM{'SKU_17'} && $FORM{'PO_17'} && $FORM{'Qty_17'} || $FORM{'Delete_17'}) { if ($FORM{'Delete_17'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_17'}%%%%%$FORM{'PO_17'}%%%%%$FORM{'Qty_17'}"); }	}
+	if ($FORM{'SKU_18'} && $FORM{'PO_18'} && $FORM{'Qty_18'} || $FORM{'Delete_18'}) { if ($FORM{'Delete_18'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_18'}%%%%%$FORM{'PO_18'}%%%%%$FORM{'Qty_18'}"); }	}
+	if ($FORM{'SKU_19'} && $FORM{'PO_19'} && $FORM{'Qty_19'} || $FORM{'Delete_19'}) { if ($FORM{'Delete_19'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_19'}%%%%%$FORM{'PO_19'}%%%%%$FORM{'Qty_19'}"); }	}
+	if ($FORM{'SKU_20'} && $FORM{'PO_20'} && $FORM{'Qty_20'} || $FORM{'Delete_20'}) { if ($FORM{'Delete_20'} ne "on") { 	push(@todosECProducts,"$FORM{'SKU_20'}%%%%%$FORM{'PO_20'}%%%%%$FORM{'Qty_20'}"); }	}
+	
+	foreach $unP (@todosECProducts) {
+		@splitP = split(/%%%%%/,$unP);
+		if ($splitP[3] ne "checked") {
+			push(@newCookies,"$splitP[0]-----$splitP[1]-----$splitP[2]");
+		}
+	}
+
+}
+else {
+	### COOKIE CART ITEMS
+	if ($Cookies{'OsFsC'} =~ "xxxxx") {
+		@EstosShoozoom = split(/xxxxx/, $Cookies{'OsFsC'});
+		foreach $unOldCookie (@EstosShoozoom) {
+			push(@newCookies,"$unOldCookie");
+		}
+	}
+	elsif ($Cookies{'OsFsC'} =~ "-----") {
+		push(@newCookies,"$Cookies{'OsFsC'}");
+	}
+
+
+	### PRODUCT.HTM FORM ITEMS
+	if ($FORM{'pid'} && $FORM{'Product'} && $FORM{'Quantity'} > 0) {
+		push(@newCookies,"$FORM{'pid'}-----$FORM{'Product'}-----$FORM{'Quantity'}");
+	}
+
+}
+
+
+$countNC = 0;
+$pTotal = "0";
+$cTotal = "0";
+foreach $unNC (@newCookies) {
+
+
+	if ($countNC eq "0") { $myCartContent = "$unNC"; }
+	else { $myCartContent = $myCartContent . "xxxxx" . $unNC; }
+	$countNC++;
+
+
+	## FIND TOTALS / PRICE
+	@splitNCs = split(/-----/,$unNC);	
+	@splitPO = split(/:::::/,$splitNCs[1]);
+	$pTotal = $splitPO[1] * $splitNCs[2];
+	$cTotal = 1 * $splitNCs[2];
+	push(@allPrices,"$pTotal");
+	push(@allPieces,"$cTotal");
+}
+
+
+
+if ($countNC ne "0") {
+
+	$CookieTotalPrecio = "0.00";
+	foreach $unCPrecio (@allPrices) {
+		$CookieTotalPrecio = $CookieTotalPrecio + $unCPrecio;
+	}
+
+	$CookieTotalItems = "0";
+	foreach $unCCosas (@allPieces) {
+		$CookieTotalItems = $CookieTotalItems + $unCCosas;
+	}
+	
+	print "Content-type: text/html \n";
+		&SetCookies('OsFsC',$myCartContent);
+		&SetCookies('MCT',$CookieTotalPrecio);
+		&SetCookies('MCP',$CookieTotalItems);
+	print "\n";	
+}
+else {
+	print "Content-type: text/html\n\n";
+}
+
+
+
+
+
+
+
+#################### START LEFT MENU COUNTER
+## connect to DB
+use DBI; 
+my $dbh = DBI->connect('DBI:mysql:OneStop','root','62Ak.fi1HdBxI') or die "Unable to connect to database: <b>unvWeb</b>\n"; 
+$dbh->{RaiseError} = 1; 
+
+
+	## GET PRODUCT NAMES FOR MENU
+	$sth = $dbh->prepare("SELECT * FROM Products");
+	$sth->execute or die "Unable to execute query\n"; 
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$PartNum = $row[1];
+		$ItemName = $row[5];
+		push(@todosProductos,"$PartNum-----$ItemName");
+	}
+	$sth->finish;
+
+	
+	
+	##MAKE MENU JS
+	$TotalMainMenuCount=0;
+	$SubMenuArray="";
+
+
+	$sth = $dbh->prepare("SELECT * FROM Cataloger ORDER BY MCatID");
+	$sth->execute or die "Unable to execute query\n"; 
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$TotalMainMenuCount++;
+		$ThyCatID = $row[0];
+		$ThyCatConfig = $row[2];
+		
+		$ThyCatID =~ s/000000000//g;
+		$ThyCatID =~ s/00000000//g;
+		$ThyCatID =~ s/0000000//g;
+
+		##offset positive start
+		$ThyCatID--; 
+
+			$countDSub=0;
+			## if multiple children present
+			if ($ThyCatConfig =~ "-----") {
+				@tSplitConfig = split(/-----/,$ThyCatConfig);
+				foreach $unSC (@tSplitConfig) {
+					if ($unSC ne "" && $unSC ne "NULL" && $unSC =~ ":::::") {
+						$countDSub++;
+					}
+				}
+## 				some errors this way rework above
+##				$countDSub = @tSplitConfig;
+			}
+
+
+
+		if ($TotalMainMenuCount eq "1") {
+			$SubMenuArray = $countDSub;
+		}	
+		else {
+			$SubMenuArray = $SubMenuArray . "," . $countDSub;
+		}
+	}
+	$sth->finish;
+
+
+
+
+	
+
+
+$muaMenuScript = `cat js/MyMenu.js`;
+$muaMenuScript =~ s/%%TotalMainMenuCount%%/$TotalMainMenuCount/g;
+$muaMenuScript =~ s/%%SubMenuArray%%/$SubMenuArray/g;
+#################### END LEFT MENU COUNTER
+
+
+
+
+&topOne;
+
+print qq~
+<form name="eCarter" method="post">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr align="center">
+    	<td height="15" width="100%"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+	<tr align="center" class="bottomDasher">
+		<td height="5" width="100%"><img src="images/spacer.gif" width="1" height="5" border="0"></td>
+	</tr>
+</table>
+
+
+<table width="100%" align="center" cellpadding="2" cellspacing="0" border="0">
+
+~;
+
+if (@newCookies > 0) {
+
+print qq~
+		<tr bgcolor="#999999" height="25" align="center">
+			<td><font class="productDesc" style="color:#FFFFFF;"><b>Product ID</b></font></td>
+			<td><font class="productDesc" style="color:#FFFFFF;"><b>Item Name</b></font></td>
+			<td><font class="productDesc" style="color:#FFFFFF;"><b>Quantity</b></font></td>
+			<td><font class="productDesc" style="color:#FFFFFF;"><b>Price/Option</b></font></td>
+			<td><font class="productDesc" style="color:#FFFFFF;"><b>Subtotal</b></font></td>
+			<td><font class="productDesc" style="color:#FFFFFF;"><b>Delete</b></font></td>
+		</tr>
+	<tr align="center" class="bottomDasher">
+		<td height="5" width="100%" colspan="6"><img src="images/spacer.gif" width="1" height="5" border="0"></td>
+	</tr>
+
+~;
+		
+	$countUNCs=1;
+	foreach $unNC2 (@newCookies) {
+		@allProducts = split(/-----/,$unNC2);
+
+		$mySKU = $allProducts[0];
+		$myQty = $allProducts[2];
+		$OptionPrice = $allProducts[1];
+		@OPPR = split(/:::::/,$OptionPrice);
+		$myOption = $OPPR[0];
+		$myPrice = $OPPR[1];
+
+		
+		## GET PRODUCT NAMES FOR MENU
+		$sth = $dbh->prepare("SELECT * FROM Products where PartNum='$mySKU'");
+		$sth->execute or die "Unable to execute query\n"; 
+		my @row;
+		while(@row = $sth->fetchrow_array) { 
+			$ItemName = $row[5];
+			$RetailC = $row[18];
+		}
+		$sth->finish;
+		
+		$MenuOptions = "";
+		if ($RetailC =~ "-----") {
+			@PriceArray = split(/-----/,$RetailC);
+			foreach $PA (@PriceArray) {
+				if ($PA =~ ":::::") {
+					@splitThisPrecio = split(/:::::/,$PA);
+					$myMenuOption = "$splitThisPrecio[0]";
+					$myMenuPrice = "$splitThisPrecio[1]";
+					$selectThis = "";
+					if ($myOption eq $myMenuOption) { $selectThis = "selected"; }
+					$MenuOptions = $MenuOptions . "<option value=\"$PA\" $selectThis>$myMenuOption, \$$myMenuPrice</option>";
+				}
+			}
+			$myPO = "PO_" . $countUNCs;
+			$mySelector = "<select name=\"$myPO\" class=\"OSFSSelect\">$MenuOptions</select>";
+		}
+		elsif ($RetailC =~ ":::::") {
+			@splitPrecio = split(/:::::/,$RetailC);
+			$myOption = "$splitPrecio[0]";
+			$myPrice = "$splitPrecio[1]";
+			$myPO = "PO_" . $countUNCs;
+			$mySelector = "<select name=\"$myPO\" class=\"OSFSSelect\"><option value=\"$RetailC\" selected>$myOption, \$$myPrice</option></select>";
+		}
+		
+		$mySKUNum = "SKU_" . $countUNCs;
+		$mySKUField = "<input type=\"hidden\" name=\"$mySKUNum\" value=\"$mySKU\">";
+		$myQName = "Qty_" . $countUNCs;
+		$myQuantity = "<input type=\"text\" size=\"3\" name=\"$myQName\" value=\"$myQty\" class=\"OSFSInput\">";
+		$myDelRadioName = "Delete_" . $countUNCs;
+
+		$miPrecio = $myPrice * $myQty;
+		$miPrecio = sprintf("%.2f", $miPrecio);
+		
+		if ($countUNCs eq 1 || $countUNCs eq 3 || $countUNCs eq 5 || $countUNCs eq 7 || $countUNCs eq 9 || $countUNCs eq 11 || $countUNCs eq 13 || $countUNCs eq 15 || $countUNCs eq 17 || $countUNCs eq 19 || $countUNCs eq 21) { $cualBG = "#ECE9E9"; }
+		else { $cualBG = "#FFCCCC"; }
+		print qq~
+		<tr bgcolor="$cualBG" height="35">
+		<td><font class="productDesc">&nbsp;&nbsp;&nbsp;$mySKU $mySKUField</font></td>
+		<td><font class="productDesc">$ItemName</font></td>
+		<td align="center"><font class="productDesc">$myQuantity</font></td>
+		<td align="left"><font class="productDesc">$mySelector</font></td>
+		<td align="center"><font class="productDesc">\$$miPrecio</font></td>
+		<td align="center"><font class="productDesc"><input type="checkbox" name="$myDelRadioName"></font></td>
+		</tr>
+		~;
+		$countUNCs++;
+	}
+
+	
+	
+	
+$totalPrecio = "0.00";
+foreach $unPrecio (@allPrices) {
+	$totalPrecio = $totalPrecio + $unPrecio;
+}
+
+print qq~
+
+
+		<tr><td colspan="7"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr align="center" class="bottomDasher"><td height="5" width="100%"><img src="images/spacer.gif" width="1" height="5" border="0"></td></tr></table></td></tr>
+		<tr height="25" align="center" bgcolor="#999999">
+			<td colspan="4" align="right"><font class="productDesc" style="color:#FFFFFF;"><b>Cart Total</b> (shipping/taxes NOT included)&nbsp;&nbsp;</font></td>
+			<td colspan="2" align="left"><font class="productDesc" style="color:#FFFFFF;font-size:11px;">&nbsp;&nbsp;&nbsp;<b>\$$totalPrecio</b></font></td>
+		</tr>
+
+
+<script language="Javascript">
+
+function checkThisQuantity(val) {
+   	var key = window.event.keyCode;
+	var leValue= val.value;
+	// if Key is right submit form
+	// if (key == "13") { runUCart(); }
+   	// key numeric?
+   	if (key > 47 && key < 58) {
+		leValue = val.value;
+		return; 
+	}
+	else {
+		// discard
+    	window.event.returnValue = null;
+	}
+}
+function checkInputs() {
+
+
+//js ends
+~;
+## PERL START
+
+
+$countScripts=1;
+foreach $unNC2 (@newCookies) {
+$myNombre = "Quantity_" . $countScripts;
+print "
+		if (document.eCarter.$myNombre.value == 0) {
+			alert('Quantity must be higher than Zero(0)');
+			document.eCarter.$myNombre.focus();
+			return false;
+		}
+";
+$countScripts++;
+}
+
+
+##perl END
+print qq~
+//js starts
+
+
+	else {
+		return true;
+	}
+}
+
+
+function popCC() {
+	alert('Please stay tuned . . .\\n\\n\\nCheckout is being debugged for posting . . .');
+	return false;
+}
+
+</script>
+
+~;
+
+}
+
+else {
+	print "Cart empty";
+}
+
+
+print qq~
+</table>
+
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr align="center" class="bottomDasher">
+		<td height="5" width="100%"><img src="images/spacer.gif" width="1" height="5" border="0"></td>
+	</tr>
+	<tr align="center">
+    	<td height="15" width="100%"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+    	<td height="30" width="100%"><nobr><input type="image" name="submit" src="images/cart_update_off.gif" border="0"><img src="images/spacer.gif" width="50" height="10" border="0"><input type="image" onclick="javascript:return popCC();" src="images/cart_checkout_off.gif" border="0"></nobr></td>
+	</tr>
+</table>
+</form>
+~;
+
+&bottomOne;
+
+exit;
+
+
+
+
+
+
+
+sub topOne {
+
+## start of WEB TOPPER
+print qq~
+
+<html>
+<head>
+<title>One Stop Fire Shop - Fire, EMT & Rescue Equipment, Tools & Gear</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+body { background-image: url(images/menuLiner.gif); background-repeat: repeat-y; background-position: left top; scrollbar-face-color:#ECE9E9; scrollbar-highlight-color:#999999; scrollbar-shadow-color:#ECE9E9; scrollbar-3dlight-color: #999999; scrollbar-arrow-color:#000000; scrollbar-track-color:#999999; scrollbar-darkshadow-color:#000000; }
+.menuTable { margin-top:25px; border-left:#8C8C8C 1px solid; border-top:#8C8C8C 1px solid; border-bottom:#8C8C8C 1px solid; border-right:#8C8C8C 1px solid; }
+.menuText { margin-left:8px; font-size:11px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px; }
+.movieText1 { font-size:10px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px; }
+.movieText2 { font-size:9px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px;text-decoration:none; }
+.movieTitle { font-size:14px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px;text-decoration:none;font-weight:bold; }
+.mainText { font-size:11px;font-family:verdana,arial,helvetica;color:#969B61;line-height:16px; }
+.tableBacker {  background-image:   url(images/home_middle.jpg); background-repeat: no-repeat; background-position: left top;}
+
+#divFoldCont {position:absolute; left:-25px; top:275px; width:300px; visibility:hidden; text-align:left;}
+.clFold {position:absolute; width:300px; }
+.clFoldSub {position:absolute; left:45px; width:300px; visibility:hidden;}
+.clFoldSub2 {position:absolute; left:15px; width:300px; visibility:hidden;}
+.clFoldLinks { font-family:Verdana, Arial, Helvetica, Helv; font-size:10px; font-weight:bold; text-decoration:none; color:black;}
+.clSubLinks {font-family:Verdana, Arial, Helvetica, Helv; font-size:9px; font-weight:bold; text-decoration:none; color:black;}
+.clSubLinks2 {font-family:Verdana, Arial, Helvetica, Helv; font-size:9px; text-decoration:none; color:black;}  
+
+.bottomDasher { background-image: url(images/bottomDasher.gif); background-repeat: repeat-x; background-position: left top; }
+
+.prodTitle { background-image: url(images/prod_title_back.jpg); background-repeat: no-repeat; background-position: left top; }
+.productTitleText { font-size:16px; margin-top:3px; font-family:arial,verdana,helvetica;color:#000000;line-height:14px;text-decoration:none; }
+.productDesc { font-size:9px; font-family:verdana,arial,helvetica;color:#000000;line-height:14px;text-decoration:none; }
+.productInfo { font-size:10px; font-family:verdana,arial,helvetica;color:#000000;line-height:14px;text-decoration:none; }
+
+ .OSFSInput { background-color: #FFFFFF; border: 1px solid #000000; color:#000000; height:18px; font-size: 9px; font-family:verdana,arial,helvetica; text-align:center; }
+ .OSFSSelect { background-color: #FFFFFF; border: 1px solid #000000; color:#000000; height:18px; font-size: 9px; font-family:verdana,arial,helvetica; }
+</style>
+
+<script language="JavaScript" type="text/javascript">
+$muaMenuScript
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+<div id="divFoldCont">
+~;
+
+##START LEFT MENUS
+	$DivCloser=0;
+
+	$sth = $dbh->prepare("SELECT * FROM Cataloger ORDER BY MCatID");
+	$sth->execute or die "Unable to execute query\n"; 
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$CatID = $row[0];
+		$CatName = $row[1];
+		$CatConfig = $row[2];
+
+		$CatID =~ s/000000000//g;
+		$CatID =~ s/00000000//g;
+		$CatID =~ s/0000000//g;
+
+		##offset positive start
+		$CatID--; 
+	
+
+		$TopDivName = "divFold" . "$CatID";
+		$toggleNum = "$CatID";
+		$imageName = "imgFold" . "$CatID";
+		print "		<div id=\"$TopDivName\" class=\"clFold\"><a href=\"#\" onclick=\"foldmenu($toggleNum); return false\" class=\"clFoldLinks\" onfocus=\"if(this.blur)this.blur()\"><img src=\"images/ovallarge_off.gif\" name=\"$imageName\" width=\"40\" height=\"12\" border=\"0\"><img src=\"images/spacer.gif\" width=\"5\" height=\"12\" border=\"0\">$CatName</a><br>\n";
+		$CountMySubs=0;
+
+
+
+
+
+
+########### if multiple children present
+			if ($CatConfig =~ "-----") {
+				foreach (@splitConfig) { shift(@splitConfig); }
+				@splitConfig = split(/-----/,$CatConfig);
+				$unSub = "";
+				foreach $unSub (@splitConfig) {
+					$childSub1 = "divFoldSub" . $CatID . "_" . $CountMySubs;
+
+					$imageSub1 = "imgFold" . $CatID . "Sub" . $CountMySubs;
+
+					foreach (@splitSub) { shift(@splitSub); }
+					@splitSub = split(/:::::/,$unSub);
+					$myName = "$splitSub[0]";
+					print "			<div id=\"$childSub1\" class=\"clFoldSub\"><a name=\"$CatID\"></a><a href=\"#$CatID\" onclick=\"subfoldmenu($CatID,$CountMySubs); return false\" class=\"clSubLinks\" onfocus=\"if(this.blur)this.blur()\"><img src=\"images/ovalsmall_off.gif\" name=\"$imageSub1\" width=\"22\" height=\"12\" border=\"0\"><img src=\"images/spacer.gif\" width=\"5\" height=\"12\" border=\"0\">$myName</a><br>\n";
+
+					foreach (@allMySubs) { shift(@allMySubs); }
+					if ($splitSub[1] =~ ",") {
+						@allMySubs = split(/, /,$splitSub[1]);
+					}
+					else { push(@allMySubs,"$splitSub[1]"); }
+
+
+					$CountSubSub=0;
+					$aSub="";
+					$childSubSub1 = "divFoldSub" . $CatID . "_" . $CountMySubs . "_" . "0";
+					print "				<div id=\"$childSubSub1\" class=\"clFoldSub2\">\n";
+					foreach $aSub (@allMySubs) {
+						## run through prod list to get prod id
+						foreach $unP (@todosProductos) { 
+							if ($unP =~ "$aSub") {
+								@thisProduct = split(/-----/,$unP);
+								$thisID = $thisProduct[0];
+								$thisProductName = $thisProduct[1];
+								print "				<a href=\"productos.htm?pid=$thisID\" class=\"clSubLinks2\" onfocus=\"if(this.blur)this.blur()\" style=\"spacing-top:3px;\"><img src=\"images/spacer.gif\" width=\"10\" height=\"12\" border=\"0\"><img src=\"images/menuDash.gif\" width=\"10\" height=\"12\" border=\"0\">$thisProductName</a><br>";
+							}
+						}
+						$CountSubSub++;
+					}
+					print "				</div>\n";
+					
+					
+					print "			</div>\n";
+					$CountMySubs++;
+				}
+			}
+
+
+
+
+
+
+########### elsif one child present
+			elsif ($CatConfig =~ ":::::") {
+
+			
+			}
+
+			## elsif multiple products present
+			elsif ($CatConfig =~ ", ") {
+			
+			}
+
+
+		print "		</div>\n";
+
+	}
+	$sth->finish;
+
+
+
+
+	
+##END LEFT MENUS
+
+print qq~
+
+</div>
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td width="70" valign="top" align="left" style="padding-top:50px;"><nobr><img src="images/catalogTitle.gif" width="38" height="185" border="0"><img src="images/spacer.gif" width="32" height="185" border="0"></nobr></td>
+    <td width="100%" align="center">
+      <table width="100" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="342" height="168"><img src="images/home_topleft.jpg" width="342" height="168"></td>
+          <td width="225"><a href="home.html"><img src="images/home_topmid.jpg" width="225" border="0" height="168"></a></td>
+          <td width="225"><img src="images/home_topRight.jpg" width="232" height="168"></td>
+          <td width="100%" align="left" valign="top">&nbsp; </td>
+        </tr>
+      </table>
+      <table class="tableBacker" width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td colspan="5" height="80"><img src="images/spacer.gif" width="25" height="80"></td>
+              </tr>
+              <tr align="center" valign="top"> 
+                <td colspan="5" height="80"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr align="center" valign="top"> 
+                      <td width="50%" align="right"> 
+                        <table class="menuTable" border="0" cellspacing="0" cellpadding="0" bgcolor="#ECE9E9">
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td width="223"><a href="company_information.html" class="menuText"><font class="menuText">Company Info</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" bgcolor="#999999"><a href="products.htm" class="menuText"><font class="menuText">Products / Secure Online Ordering</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td width="223"><a href="policies-procedures.html" class="menuText"><font class="menuText">Company Policies & Procedures</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td width="223"><a href="contactform.htm" class="menuText"><font class="menuText">Request Information</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width="5"><img src="images/spacer.gif" width="5" height="1"></td>
+                      <td width="50%" align="left"> 
+                        <table class="menuTable" border="0" cellspacing="0" cellpadding="0" bgcolor="#ECE9E9">
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td width="223"><a href="movies/multimedia.html" class="menuText"><font class="menuText">Multimedia</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr align="center" valign="top">
+                <td colspan="5"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr align="center" valign="bottom"> 
+    				  <td width="125"><img src="images/spacer.gif" width="125" height="1" border="0"></td>
+                      <td height="30" width="100%"><font class="movieTitle"><i>Contents of your E-Shopping Cart</i></font></td>
+    				  <td width="100"><img src="images/spacer.gif" width="100" height="1" border="0"></td>
+                    </tr>
+                    <tr align="center" valign="top"> 
+    				  <td width="125"><img src="images/spacer.gif" width="125" height="1" border="0"></td>
+                      <td height="700" valign="top" width="100%">
+~;
+## end of WEB TOPPER
+
+
+}
+
+
+
+
+
+sub bottomOne {
+
+## start of WEB BOTTOMER
+print qq~
+                      </td>
+    				  <td width="100"><img src="images/spacer.gif" width="100" height="1" border="0"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr align="center">
+    	<td height="30"><img src="images/spacer.gif" width="1" height="30" border="0"></td>
+	</tr>
+	<tr align="center" class="bottomDasher">
+    	<td height="5"><img src="images/spacer.gif" width="1" height="5" border="0"></td>
+	</tr>
+</table>
+
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr align="center">
+		<td height="25">
+			
+      <table width="600" cellpadding="0" cellspacing="0" border="0" height="80">
+        <tr valign="middle"> 
+          <td width="150" align="right"><font class="movieText2"><a href="contactform.htm" class="movieText2" style="font-family:times new,verdana,helvetica;text-decoration:underline;letter-spacing:2px;font-size:8px;color:#999999">CONTACT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><a href="products.htm" class="movieText2" style="font-family:times new,verdana,helvetica;text-decoration:underline;letter-spacing:2px;font-size:8px;color:#999999">E-CATALOG</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><a href="movies/multimedia.html" class="movieText2" style="font-family:times new,verdana,helvetica;text-decoration:underline;letter-spacing:2px;font-size:8px;color:#999999">MULTIMEDIA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+          <td width="150" align="center"><img src="images/logoFlat.jpg" width="62" height="66" border="0"></td>
+          <td width="300"><font class="movieText2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-family:times new,verdana,helvetica;letter-spacing:2px;font-size:8px;color:#999999"><b>ONE STOP FIRE SHOP</b></font><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="movieText2" style="font-family:times new,verdana,helvetica;letter-spacing:2px;font-size:8px;color:#999999">15729 ARTIST WAY : ADDISON, TX 75001</font><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="movieText2" style="font-family:times new,verdana,helvetica;letter-spacing:2px;font-size:8px;color:#999999">PHONE : 1(214)632-5825</font></font></td>
+		</tr>
+			</table>
+
+		</td>
+	</tr>
+	<tr align="center" class="bottomDasher">
+    	<td height="5"><img src="images/spacer.gif" width="1" height="5" border="0"></td>
+	</tr>
+    <tr align="center">
+		<td height="25"><font class="movieText1" style="color:#999999"><i>- - - For state and federal government contracts <b>One Stop Fire Shop</b> qualifies as a woman owned small business - - -</i></font></td>
+	</tr>
+</table>
+</body>
+</html>
+
+
+~;
+## end of WEB BOTTOMER
+
+}

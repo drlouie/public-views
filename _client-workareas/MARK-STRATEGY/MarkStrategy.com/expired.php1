@@ -1,0 +1,45 @@
+<?
+	define('INNER', true);
+	include 'share/global.inc.php';
+	include 'share/config.inc.php';
+	include 'share/sql.inc.php';
+	include 'share/design.inc.php';
+	include 'share/lib.inc.php';
+	include 'share/dynamic_form_hash.inc.php';
+	include 'share/homes.inc.php';
+
+	$SQL = new KRF_SQL(
+					$db_conf['user'], 
+					$db_conf['passwd'], 
+					$db_conf['host'],
+					$db_conf['db']);
+	
+	
+	$db = $SQL->Query("SELECT id, logo, photo, info,
+							email, ttl, mls_id, domain,
+							fname, lname, mname,
+							phone, fax, voicemail, 
+							address, slogan FROM user WHERE id=$id LIMIT 0,1");
+
+	if ($db && $SQL->Numrows($db))
+	{
+		list($uId, $logo, $photo, $personal_info, $email_to, $ttl, $mls_id,
+			$domain, $u_fname, $u_lname, $u_mname,
+			$u_phone, $u_fax, $u_voicemail, $u_address, $u_slogan) = $SQL->Fetchrow($db);
+	}
+?>
+<html>
+<head><link rel="stylesheet" href="1.css">
+</head>
+<BODY BGCOLOR=#FFFFFF leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+	<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+				<TR>
+					<TD WIDTH=100% valign=top align=left id=content>
+						<hr color=#cccccc size=1 width=100% noshade>
+						<h2>Account expired</h2><br />
+						<big>For agent: <?= "$u_fname $u_mname $u_lname"?></big>
+					</td>
+				</tr>	
+			</TABLE>
+</body>
+</html>

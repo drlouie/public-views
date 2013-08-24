@@ -1,0 +1,1 @@
+adminuser=admin&adminpass=wake&email=pshamray@navigatorpress.com

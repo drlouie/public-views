@@ -1,0 +1,39 @@
+MLS Lister 3.x Open (Public GNU Version)
+By: Robert Saylor
+
+October 7, 2003
+
+License:  
+--------
+
+MLS Lister has been listed under the GNU OpenSource license and is now available to the end user free of charge.
+Please review the license.txt file
+
+Support:
+--------
+
+There is no support for this product under the GNU license.  However, profeshional installations are available
+at a small fee to the end user.  
+
+Warranty:
+---------
+
+Under no conditions may Robert Saylor, R&B Scripting, Turnkey Hosting, or any other member of the programming staff
+may be held responsibal for any harm this program may encounter.  Use this software at your own risk.
+
+Installation:
+-------------
+
+Copy all files to your web browser and extract the TAR file. For thoe users who use (TM) Microsoft Windows you can use
+(TM) WinZip or any other zip archive utility to extract the tar file.  For those users who use Linux you can use 
+tar -xvf mls-filename.tar to extract the files.
+
+Once you have all files extracted you need to upload to your web server.
+
+Upload all files in ASCII mode using your favorite FTP client.
+
+Run http://www.yourname.com/wheretheprogramis/install.php to complete the installation.
+
+
+
+

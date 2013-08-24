@@ -1,0 +1,685 @@
+#!/usr/bin/perl5 -s
+
+print "Content-type: text/html\n\n";
+
+require "parse_query.nsp";
+
+### if inputing proper form fields
+if ($FORM{'FName'} && $FORM{'LName'} && $FORM{'SubjectMatter'} && $FORM{'Email'}) {
+
+&topOne;
+print "<center><font class=\"movieText1\" style=\"color:#FF3333\">Your information has been successfully processed and sent to O.S.F.S.</font></center>";
+&bottomOne;
+
+if ($FORM{'CName'} ne "" && $FORM{'CName'} ne "Company / Agency Name") {
+	$CName = "$FORM{'CName'}";
+}
+if ($FORM{'PHArea'} ne "" && $FORM{'PHNumber'} ne "" && $FORM{'PHArea'} ne "888" && $FORM{'PHNumber'} ne "555-5555") {
+	$PHArea = "$FORM{'PHArea'}";
+	$PHNumber = "$FORM{'PHNumber'}";
+}
+
+## ----------------------->>> O.S.F.S.'S EMAIL
+## ----------------------->>> PREPARE VARIABLES FOR OUTER SEND EMAIL PROGRAM
+my $SenderIn = "$FORM{'Email'} ($FORM{'FName'} $FORM{'LName'})";
+my $RecipientDef = "Careyshay25\@yahoo.com";
+$Subject = "O.S.F.S. - Online Correspondence";
+
+use lib "/usr/local/lib/";
+use MIME::Lite;
+my $msg = MIME::Lite->new(
+				From    =>"$SenderIn",
+                To      =>"$RecipientDef",
+                Subject =>"$Subject",
+                Type    =>'multipart/related'
+                );
+   $msg->attach(Type => 'text/html',
+   Data => qq{
+$wrapTop
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td align="center"> 
+<form>
+                                      <table class="menuTable" border="0" cellspacing="0" cellpadding="0" bgcolor="#ECE9E9" width="450">
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="http://216.122.59.152/osfs/images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" valign="middle" height="30"><font class="emailerTitle" style="color:#FF3333">. : : Information sent by End-User via the O.S.F.S website : : .</font></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="http://216.122.59.152/osfs/images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="1" type="text" class="OSFSInput" size="35" name="FName" value="$FORM{'FName'}">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="http://216.122.59.152/osfs/images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="2" type="text" class="OSFSInput" size="35" name="LName" value="$FORM{'LName'}">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="http://216.122.59.152/osfs/images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="3" type="text" class="OSFSInput" size="35" name="CName" value="$CName">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="http://216.122.59.152/osfs/images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="4" type="text" class="OSFSInput" size="35" name="Email" value="$FORM{'Email'}">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="http://216.122.59.152/osfs/images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="5" type="text" class="OSFSInput" value="$PHArea" size="7" name="PHArea">&nbsp;&nbsp;&nbsp;&nbsp;<input tabindex="6" type="text" class="OSFSInput" size="15" name="PHNumber" value="$PHNumber">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="http://216.122.59.152/osfs/images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="100">
+                                            <textarea tabindex="7" name="SubjectMatter" rows="10" cols="65" class="OSFSTArea">$FORM{'SubjectMatter'}</textarea>
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="http://216.122.59.152/osfs/images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                      </table>
+</form>
+
+</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </table>
+$wrapBot
+								}
+                     );
+        $msg->send();
+
+}
+
+
+
+### no proper form inputs 
+### DROP DEFAULT FORM
+else {
+
+&topOne;
+
+print qq~
+<script language="Javascript">
+var FN = "First Name";
+var LN = "Last Name";
+var CN = "Company / Agency Name";
+var EM = "E-Mail Address";
+var QU = "How may O.S.F.S. assist you today?";
+
+function focusThyForm(cual) {
+	if (cual.name == "FName" && (cual.value == FN || cual.value == "" || cual.value == " ")) { cual.value = ""; }
+	if (cual.name == "LName" && (cual.value == LN || cual.value == "" || cual.value == " ")) { cual.value = ""; }
+	if (cual.name == "CName" && (cual.value == CN || cual.value == "" || cual.value == " ")) { cual.value = ""; }
+	if (cual.name == "Email" && (cual.value == EM || cual.value == "" || cual.value == " ")) { cual.value = ""; }
+	if (cual.name == "SubjectMatter" && (cual.value == QU || cual.value == "" || cual.value == " ")) { cual.value = ""; }
+	var este = cual;
+	este.style.color = "FF3333";
+	este.style.border = "#FF3333 1px solid";
+}
+
+function blurThyForm(cual) {
+	if (cual.name == "FName" && (cual.value == "" || cual.value == " ")) { cual.value = FN; }
+	if (cual.name == "LName" && (cual.value == "" || cual.value == " ")) { cual.value = LN; }
+	if (cual.name == "CName" && (cual.value == "" || cual.value == " ")) { cual.value = CN; }
+	if (cual.name == "Email" && (cual.value == "" || cual.value == " ")) { cual.value = EM; }
+	if (cual.name == "SubjectMatter" && (cual.value == "" || cual.value == " ")) { cual.value = QU; }
+	var este = cual;
+	este.style.color = "000000";
+	este.style.border = "#000000 1px solid";
+}
+
+function resetThyForm() {
+	document.contactOSFS.FName.value = FN;
+	document.contactOSFS.LName.value = LN;
+	document.contactOSFS.CName.value = CN;
+	document.contactOSFS.Email.value = EM;
+	document.contactOSFS.SubjectMatter.value = QU;
+	return false;
+}
+
+function checkInputQty(val) {
+   	var key = window.event.keyCode;
+	var leValue= val.value;
+	var leName= val.name;
+	// if dash(-) and field is phone number allow
+	// no dash(-) needed for area code
+	if (leName == "PHNumber" && key == 45) {
+		leValue = val.value;
+		return;
+	}
+   	// key numeric?
+	// 48 = 0 (dont want zero)
+   	else if (key > 48 && key < 58) {
+		leValue = val.value;
+		return; 
+	}
+	else {
+		// discard
+    	window.event.returnValue = null;
+	}
+}
+
+
+function validateOSFSForm() {
+var missingdrop = "";
+var thefirst = "";
+
+// Check Common form fields
+if (document.contactOSFS.FName.value == FN || document.contactOSFS.FName.value == "" || document.contactOSFS.FName.value == " " || document.contactOSFS.FName.value.length <= 0) {
+    missingdrop += "\\n     - Your First Name is missing";
+	if (thefirst == "") { thefirst = "FName"; }
+}else if (document.contactOSFS.FName.value.length <= 2) {
+   	missingdrop += "\\n     - Your First Name must be greater than 2 characters in length";
+	if (thefirst == "") { thefirst = "FName"; }
+}
+
+if (document.contactOSFS.LName.value == LN || document.contactOSFS.LName.value == "" || document.contactOSFS.LName.value == " " || document.contactOSFS.LName.value.length <= 0) {
+    missingdrop += "\\n     - Your Last Name is missing";
+	if (thefirst == "") { thefirst = "LName"; }
+}else if (document.contactOSFS.LName.value.length <= 2) {
+   	missingdrop += "\\n     - Your Last Name must be greater than 2 characters in length";
+	if (thefirst == "") { thefirst = "LName"; }
+}
+
+// CHECK EMAIL
+  if (document.contactOSFS.Email.value == "" || document.contactOSFS.Email.value == EM)	{
+    missingdrop += "\\n     - Your Email Address is missing";
+	if (thefirst == "") { thefirst = "Email"; }
+  } else if ((document.contactOSFS.Email.value.indexOf('\@') == -1) || 
+        (document.contactOSFS.Email.value.indexOf('.') == -1)) {
+    missingdrop += "\\n     - Your Email Address's Format should be: username\@company.com";
+	if (thefirst == "") { thefirst = "Email"; }
+  }
+  if ((document.contactOSFS.Email.value.indexOf(',') != -1)) {
+    missingdrop += "\\n     - Commas are not allowed in email addresses";
+	if (thefirst == "") { thefirst = "Email"; }
+  }
+  if ((document.contactOSFS.Email.value.indexOf(';') != -1)) {
+    missingdrop += "\\n     - Semicolons are not allowed in email addresses";
+	if (thefirst == "") { thefirst = "Email"; }
+  }
+  if ((document.contactOSFS.Email.value.indexOf(':') != -1)) {
+    missingdrop += "\\n     - Colons are not allowed in email addresses";
+	if (thefirst == "") { thefirst = "Email"; }
+  }
+  if ((document.contactOSFS.Email.value.indexOf('&') != -1)) {
+    missingdrop += "\\n     - Ampersands are not allowed in email addresses";
+	if (thefirst == "") { thefirst = "Email"; }
+  }
+  if ((document.contactOSFS.Email.value.indexOf(' ') != -1)) {
+    missingdrop += "\\n     - Spaces are not allowed in email addresses";
+	if (thefirst == "") { thefirst = "Email"; }
+  }
+
+if (document.contactOSFS.SubjectMatter.value == QU || document.contactOSFS.SubjectMatter.value == "" || document.contactOSFS.SubjectMatter.value == " " || document.contactOSFS.SubjectMatter.value.length <= 0) {
+    missingdrop += "\\n     - Message is blank, know may we assist you?";
+	if (thefirst == "") { thefirst = "SubjectMatter"; }
+}else if (document.contactOSFS.SubjectMatter.value.length <= 2) {
+   	missingdrop += "\\n     - Message must be greater than 2 characters in length";
+	if (thefirst == "") { thefirst = "SubjectMatter"; }
+}
+
+
+
+// If anything comes back wrong alert and detain form, else submit info
+if (missingdrop != "") {
+    missingdrop ="___________________________________________                   \\n\\n" + "  Sorry, I cannot process your request because the\\n  following fields are either blank or filled incorrectly:\\n" + "___________________________________________                   \\n\\n" +
+    missingdrop + "\\n\\n___________________________________________                   " + "\\n\\n   To continue, check fields and submit form again!" + "\\n___________________________________________";
+    alert(missingdrop);
+	document.contactOSFS[thefirst].focus();
+    return false;
+} 
+else {
+return true;
+}
+}
+</script>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td align="center"> 
+
+<form name="contactOSFS" onSubmit="return validateOSFSForm();" method="post">
+<input type="hidden" name="whatForm" value="OSFSContact">
+                                      <table class="menuTable" border="0" cellspacing="0" cellpadding="0" bgcolor="#ECE9E9" width="450">
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="1" type="text" class="OSFSInput" size="35" name="FName" value="First Name" onFocus="focusThyForm(this);" onBlur="blurThyForm(this);">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="2" type="text" class="OSFSInput" size="35" name="LName" value="Last Name" onFocus="focusThyForm(this);" onBlur="blurThyForm(this);">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="3" type="text" class="OSFSInput" size="35" name="CName" value="Company / Agency Name" onFocus="focusThyForm(this);" onBlur="blurThyForm(this);">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="4" type="text" class="OSFSInput" size="35" name="Email" value="E-Mail Address" onFocus="focusThyForm(this);" onBlur="blurThyForm(this);">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="5" type="text" class="OSFSInput" value="888" size="7" name="PHArea" onFocus="focusThyForm(this);" onBlur="blurThyForm(this);" OnKeyPress="checkInputQty(this);">&nbsp;&nbsp;&nbsp;&nbsp;<input tabindex="6" type="text" class="OSFSInput" size="15" name="PHNumber" value="555-5555" onFocus="focusThyForm(this);" onBlur="blurThyForm(this);" OnKeyPress="checkInputQty(this);">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="100">
+                                            <textarea tabindex="7" name="SubjectMatter" rows="10" cols="65" class="OSFSTArea" onFocus="focusThyForm(this);" onBlur="blurThyForm(this);">How may O.S.F.S. assist you today?</textarea>
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" align="center" height="30">
+                                            <input tabindex="8" type="submit" value="Submit Information" class="OSFSInput" onFocus="focusThyForm(this);" onBlur="blurThyForm(this);" style="height:22px;font-weight:bold;letter-spacing:1px;">&nbsp;&nbsp;&nbsp;&nbsp;<input tabindex="9" type="reset" value="Reset This Form" class="OSFSInput" onFocus="focusThyForm(this);" onBlur="blurThyForm(this);" style="height:22px;font-weight:bold;letter-spacing:1px;">
+                                          </td>
+                                        </tr>
+                                        <tr> 
+                                          <td width="450" height="5" align="center"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                                        </tr>
+                                      </table>
+</form>
+
+</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </table>
+                            
+                            
+
+~;
+
+
+&bottomOne;
+
+
+}
+
+
+
+
+
+
+
+
+sub topOne {
+
+
+
+## start of EMAIL TOPPER
+$wrapTop = "
+<html>
+<head>
+<title>One Stop Fire Shop - Fire, EMT & Rescue Equipment, Tools & Gear</title>
+<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">
+<style type=\"text/css\">
+body { background-image: url(images/menuLiner.gif); background-repeat: repeat-y; background-position: left top; scrollbar-face-color:#ECE9E9; scrollbar-highlight-color:#999999; scrollbar-shadow-color:#ECE9E9; scrollbar-3dlight-color: #999999; scrollbar-arrow-color:#000000; scrollbar-track-color:#999999; scrollbar-darkshadow-color:#000000; }
+.menuTable { margin-top:25px; border-left:#8C8C8C 1px solid; border-top:#8C8C8C 1px solid; border-bottom:#8C8C8C 1px solid; border-right:#8C8C8C 1px solid; }
+.menuText { margin-left:8px; font-size:11px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px; }
+.movieText1 { font-size:10px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px; }
+.movieText2 { font-size:9px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px;text-decoration:none; }
+.movieTitle { font-size:14px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px;text-decoration:none;font-weight:bold; }
+.mainText { font-size:11px;font-family:verdana,arial,helvetica;color:#969B61;line-height:16px; }
+.tableBacker {  background-image:   url(images/home_middle.jpg); background-repeat: no-repeat; background-position: left top;}
+
+.bottomDasher { background-image: url(images/bottomDasher.gif); background-repeat: repeat-x; background-position: left top; }
+
+ .OSFSInput { background-color: #FFFFFF; border: 1px solid #000000; color:#000000; height:18px; font-size: 9px; font-family:verdana,arial,helvetica; padding: 3px; margin-left:3px; }
+ .OSFSTArea { background-color: #FFFFFF; border: 1px solid #000000; color:#000000; font-size: 9px; font-family:verdana,arial,helvetica; padding: 3px; margin-bottom:3px; margin-left:3px; }
+
+ .emailerTitle { font-size:10px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px;text-decoration:none; }
+
+</style>
+</head>
+
+<body bgcolor=\"#FFFFFF\" LEFTMARGIN=\"0\" TOPMARGIN=\"0\" MARGINWIDTH=\"0\" MARGINHEIGHT=\"0\">
+
+<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">
+  <tr>
+    <td>
+      <table width=\"100\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+        <tr> 
+          <td width=\"342\" height=\"168\"><img src=\"http://216.122.59.152/osfs/images/home_topleft.jpg\" width=\"342\" height=\"168\"></td>
+          <td width=\"225\"><a href=\"http://216.122.59.152/osfs/home.html\"><img src=\"http://216.122.59.152/osfs/images/home_topmid.jpg\" width=\"225\" border=\"0\" height=\"168\"></a></td>
+          <td width=\"225\"><img src=\"http://216.122.59.152/osfs/images/home_topRight.jpg\" width=\"232\" height=\"168\"></td>
+          <td width=\"100%\" align=\"left\" valign=\"top\">&nbsp; </td>
+        </tr>
+      </table>
+      <table class=\"tableBacker\" width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+        <tr> 
+          <td valign=\"top\">
+            <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+              <tr> 
+                <td colspan=\"5\" height=\"80\"><img src=\"http://216.122.59.152/osfs/images/spacer.gif\" width=\"25\" height=\"80\"></td>
+              </tr>
+              <tr align=\"center\" valign=\"top\"> 
+                <td colspan=\"5\" height=\"80\"> 
+                  <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+                    <tr align=\"center\" valign=\"top\"> 
+                      <td width=\"50%\" align=\"right\"> 
+                        <table class=\"menuTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#ECE9E9\">
+                          <tr> 
+                            <td width=\"223\" height=\"5\"><img src=\"http://216.122.59.152/osfs/images/menuspliter.gif\" width=\"223\" height=\"5\"></td>
+                          </tr>
+                          <tr> 
+                            <td width=\"223\"><a href=\"http://216.122.59.152/osfs/company_information.html\" class=\"menuText\"><font class=\"menuText\">Company Info</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width=\"223\" height=\"5\"><img src=\"http://216.122.59.152/osfs/images/menuspliter.gif\" width=\"223\" height=\"5\"></td>
+                          </tr>
+                          <tr> 
+                            <td width=\"223\"><a href=\"http://216.122.59.152/osfs/products.html\" class=\"menuText\"><font class=\"menuText\">Products / Secure Online Ordering</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width=\"223\" height=\"5\"><img src=\"http://216.122.59.152/osfs/images/menuspliter.gif\" width=\"223\" height=\"5\"></td>
+                          </tr>
+                          <tr> 
+                            <td width=\"223\"><a href=\"http://216.122.59.152/osfs/policies-procedures.html\" class=\"menuText\"><font class=\"menuText\">Company Policies & Procedures</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width=\"223\" height=\"5\"><img src=\"http://216.122.59.152/osfs/images/menuspliter.gif\" width=\"223\" height=\"5\"></td>
+                          </tr>
+                          <tr> 
+                            <td width=\"223\" bgcolor=\"#999999\"><a href=\"http://216.122.59.152/osfs/contactform.htm\" class=\"menuText\"><font class=\"menuText\">Request Information</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width=\"223\" height=\"5\"><img src=\"http://216.122.59.152/osfs/images/menuspliter.gif\" width=\"223\" height=\"5\"></td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width=\"5\"><img src=\"http://216.122.59.152/osfs/images/spacer.gif\" width=\"5\" height=\"1\"></td>
+                      <td width=\"50%\" align=\"left\"> 
+                        <table class=\"menuTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#ECE9E9\">
+                          <tr> 
+                            <td width=\"223\" height=\"5\"><img src=\"http://216.122.59.152/osfs/images/menuspliter.gif\" width=\"223\" height=\"5\"></td>
+                          </tr>
+                          <tr> 
+                            <td width=\"223\"><a href=\"http://216.122.59.152/osfs/movies/multimedia.html\" class=\"menuText\"><font class=\"menuText\">Multimedia</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width=\"223\" height=\"5\"><img src=\"http://216.122.59.152/osfs/images/menuspliter.gif\" width=\"223\" height=\"5\"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr align=\"center\" valign=\"top\">
+                <td colspan=\"5\"> 
+                  <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+                    <tr align=\"center\" valign=\"bottom\"> 
+                      <td colspan=\"2\" height=\"30\"><font class=\"movieTitle\"><i>Request Information / Contact Us</i></font></td>
+                    </tr>
+                    <tr align=\"center\" valign=\"bottom\"> 
+                      <td colspan=\"2\" height=\"100\" valign=\"top\">
+";
+
+## end of EMAIL TOPPER
+
+## start of WEB TOPPER
+print qq~
+
+<html>
+<head>
+<title>One Stop Fire Shop - Fire, EMT & Rescue Equipment, Tools & Gear</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+body { background-image: url(images/menuLiner.gif); background-repeat: repeat-y; background-position: left top; scrollbar-face-color:#ECE9E9; scrollbar-highlight-color:#999999; scrollbar-shadow-color:#ECE9E9; scrollbar-3dlight-color: #999999; scrollbar-arrow-color:#000000; scrollbar-track-color:#999999; scrollbar-darkshadow-color:#000000; }
+.menuTable { margin-top:25px; border-left:#8C8C8C 1px solid; border-top:#8C8C8C 1px solid; border-bottom:#8C8C8C 1px solid; border-right:#8C8C8C 1px solid; }
+.menuText { margin-left:8px; font-size:11px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px; }
+.movieText1 { font-size:10px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px; }
+.movieText2 { font-size:9px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px;text-decoration:none; }
+.movieTitle { font-size:14px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px;text-decoration:none;font-weight:bold; }
+.mainText { font-size:11px;font-family:verdana,arial,helvetica;color:#969B61;line-height:16px; }
+.tableBacker {  background-image:   url(images/home_middle.jpg); background-repeat: no-repeat; background-position: left top;}
+
+.bottomDasher { background-image: url(images/bottomDasher.gif); background-repeat: repeat-x; background-position: left top; }
+
+ .OSFSInput { background-color: #FFFFFF; border: 1px solid #000000; color:#000000; height:18px; font-size: 9px; font-family:verdana,arial,helvetica; padding: 3px; margin-left:3px; }
+ .OSFSTArea { background-color: #FFFFFF; border: 1px solid #000000; color:#000000; font-size: 9px; font-family:verdana,arial,helvetica; padding: 3px; margin-bottom:3px; margin-left:3px; }
+
+ .emailerTitle { font-size:10px;font-family:verdana,arial,helvetica;color:#000000;line-height:14px;text-decoration:none; }
+
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="342" height="168"><img src="images/home_topleft.jpg" width="342" height="168"></td>
+          <td width="225"><a href="home.html"><img src="images/home_topmid.jpg" width="225" border="0" height="168"></a></td>
+          <td width="225"><img src="images/home_topRight.jpg" width="232" height="168"></td>
+          <td width="100%" align="left" valign="top">&nbsp; </td>
+        </tr>
+      </table>
+      <table class="tableBacker" width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td colspan="5" height="80"><img src="images/spacer.gif" width="25" height="80"></td>
+              </tr>
+              <tr align="center" valign="top"> 
+                <td colspan="5" height="80"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr align="center" valign="top"> 
+                      <td width="50%" align="right"> 
+                        <table class="menuTable" border="0" cellspacing="0" cellpadding="0" bgcolor="#ECE9E9">
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td width="223"><a href="company_information.html" class="menuText"><font class="menuText">Company Info</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td width="223"><a href="products.html" class="menuText"><font class="menuText">Products / Secure Online Ordering</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td width="223"><a href="policies-procedures.html" class="menuText"><font class="menuText">Company Policies & Procedures</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" bgcolor="#999999"><a href="contactform.htm" class="menuText"><font class="menuText">Request Information</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width="5"><img src="images/spacer.gif" width="5" height="1"></td>
+                      <td width="50%" align="left"> 
+                        <table class="menuTable" border="0" cellspacing="0" cellpadding="0" bgcolor="#ECE9E9">
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                          <tr> 
+                            <td width="223"><a href="movies/multimedia.html" class="menuText"><font class="menuText">Multimedia</font></a></td>
+                          </tr>
+                          <tr> 
+                            <td width="223" height="5"><img src="images/menuspliter.gif" width="223" height="5"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr align="center" valign="top">
+                <td colspan="5"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr align="center" valign="bottom"> 
+                      <td colspan="2" height="30"><font class="movieTitle"><i>Request Information / Contact Us</i></font></td>
+                    </tr>
+                    <tr align="center" valign="bottom"> 
+                      <td colspan="2" height="100" valign="middle">
+~;
+## end of WEB TOPPER
+
+
+}
+
+
+sub bottomOne {
+
+## start of EMAIL BOTTOMER
+$wrapBot = "
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width=\"100%\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">
+	<tr align=\"center\">
+    	<td height=\"30\"><img src=\"http://216.122.59.152/osfs/movies/images/spacer.gif\" width=\"1\" height=\"30\" border=\"0\"></td>
+	</tr>
+	<tr align=\"center\" class=\"bottomDasher\">
+    	<td height=\"5\"><img src=\"http://216.122.59.152/osfs/movies/images/spacer.gif\" width=\"1\" height=\"5\" border=\"0\"></td>
+	</tr>
+</table>
+
+<table width=\"100%\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">
+    <tr align=\"center\">
+		<td height=\"25\">
+			
+      <table width=\"600\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" height=\"80\">
+        <tr valign=\"middle\"> 
+          <td width=\"150\" align=\"right\"><font class=\"movieText2\"><a href=\"contactform.htm\" class=\"movieText2\" style=\"font-family:times new,verdana,helvetica;text-decoration:underline;letter-spacing:2px;font-size:8px;color:#999999\">CONTACT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><a href=\"products.htm\" class=\"movieText2\" style=\"font-family:times new,verdana,helvetica;text-decoration:underline;letter-spacing:2px;font-size:8px;color:#999999\">E-CATALOG</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><a href=\"movies/multimedia.html\" class=\"movieText2\" style=\"font-family:times new,verdana,helvetica;text-decoration:underline;letter-spacing:2px;font-size:8px;color:#999999\">MULTIMEDIA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+          <td width=\"150\" align=\"center\"><img src=\"http://216.122.59.152/osfs/movies/images/logoFlat.jpg\" width=\"62\" height=\"66\" border=\"0\"></td>
+          <td width=\"300\"><font class=\"movieText2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style=\"font-family:times new,verdana,helvetica;letter-spacing:2px;font-size:8px;color:#999999\"><b>ONE STOP FIRE SHOP</b></font><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class=\"movieText2\" style=\"font-family:times new,verdana,helvetica;letter-spacing:2px;font-size:8px;color:#999999\">15729 ARTIST WAY : ADDISON, TX 75001</font><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class=\"movieText2\" style=\"font-family:times new,verdana,helvetica;letter-spacing:2px;font-size:8px;color:#999999\">PHONE : 1(214)632-5825</font></font></td>
+		</tr>
+			</table>
+
+		</td>
+	</tr>
+	<tr align=\"center\" class=\"bottomDasher\">
+    	<td height=\"5\"><img src=\"http://216.122.59.152/osfs/movies/images/spacer.gif\" width=\"1\" height=\"5\" border=\"0\"></td>
+	</tr>
+    <tr align=\"center\">
+		<td height=\"25\"><font class=\"movieText1\" style=\"color:#999999\"><i>- - - For state and federal government contracts <b>One Stop Fire Shop</b> qualifies as a woman owned small business - - -</i></font></td>
+	</tr>
+</table>
+</body>
+</html>
+";
+## end of EMAIL BOTTOMER
+
+## start of WEB BOTTOMER
+print qq~
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr align="center">
+    	<td height="30"><img src="images/spacer.gif" width="1" height="30" border="0"></td>
+	</tr>
+	<tr align="center" class="bottomDasher">
+    	<td height="5"><img src="images/spacer.gif" width="1" height="5" border="0"></td>
+	</tr>
+</table>
+
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr align="center">
+		<td height="25">
+			
+      <table width="600" cellpadding="0" cellspacing="0" border="0" height="80">
+        <tr valign="middle"> 
+          <td width="150" align="right"><font class="movieText2"><a href="contactform.htm" class="movieText2" style="font-family:times new,verdana,helvetica;text-decoration:underline;letter-spacing:2px;font-size:8px;color:#999999">CONTACT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><a href="products.htm" class="movieText2" style="font-family:times new,verdana,helvetica;text-decoration:underline;letter-spacing:2px;font-size:8px;color:#999999">E-CATALOG</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><a href="movies/multimedia.html" class="movieText2" style="font-family:times new,verdana,helvetica;text-decoration:underline;letter-spacing:2px;font-size:8px;color:#999999">MULTIMEDIA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+          <td width="150" align="center"><img src="images/logoFlat.jpg" width="62" height="66" border="0"></td>
+          <td width="300"><font class="movieText2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-family:times new,verdana,helvetica;letter-spacing:2px;font-size:8px;color:#999999"><b>ONE STOP FIRE SHOP</b></font><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="movieText2" style="font-family:times new,verdana,helvetica;letter-spacing:2px;font-size:8px;color:#999999">15729 ARTIST WAY : ADDISON, TX 75001</font><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="movieText2" style="font-family:times new,verdana,helvetica;letter-spacing:2px;font-size:8px;color:#999999">PHONE : 1(214)632-5825</font></font></td>
+		</tr>
+			</table>
+
+		</td>
+	</tr>
+	<tr align="center" class="bottomDasher">
+    	<td height="5"><img src="images/spacer.gif" width="1" height="5" border="0"></td>
+	</tr>
+    <tr align="center">
+		<td height="25"><font class="movieText1" style="color:#999999"><i>- - - For state and federal government contracts <b>One Stop Fire Shop</b> qualifies as a woman owned small business - - -</i></font></td>
+	</tr>
+</table>
+</body>
+</html>
+
+
+~;
+## end of WEB BOTTOMER
+
+}
+
+exit;

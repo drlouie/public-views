@@ -1,0 +1,19 @@
+<!--
+body        {background: #cccccc top repeat-x; margin: 0px; padding: 0px;}
+
+
+.bottom    {background: #cccccc; color: #000000; font-size: 11px; font-family: verdana, helvetica,tahoma, arial, "ms sans serif", sans-serif; line-height: 1.4;}
+.abot:link      {color: #000000; text-decoration: none;}
+.abot:visited   {color: #000000; text-decoration: none;}
+
+
+.text    {color: #ffffff; font-size: 11px; font-family: verdana, helvetica,tahoma, arial, "ms sans serif", sans-serif; line-height: 1.4;}
+.text:link      {color: #ffffff; text-decoration: none;}
+.text:visited   {color: #ffffff; text-decoration: none;}
+.contacts    {color: #ffffff; font-size: 12px; font-family: arial,verdana, helvetica,tahoma "ms sans serif", sans-serif; line-height: 1.2;}
+.contacts:link    {color: #ffffff; text-decoration: underline;}
+.contacts:visited    {color: #ffffff; text-decoration: underline;}
+
+td { font-family: verdana, helvetica,tahoma, arial, "ms sans serif", sans-serif; font-size:12px; }
+
+-->

@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<TITLE>Navigator Press File Upload Page</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META NAME="keywords" CONTENT="FTP, file transfer, upload, online printing">
+<script language="JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.name; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') {
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (val<min || max<val) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  } if (errors) alert('The following error(s) occurred:\n'+errors);
+  document.MM_returnValue = (errors == '');
+}
+//-->
+</script>
+</HEAD>
+
+<BODY BGCOLOR="#003366" TEXT="#ffffff" LINK="#66ffcc" ALINK="#99ccff" VLINK="#66cccc">
+<!--SELECTION--><!--/SELECTION-->
+<H1><CENTER>
+    <I><IMG src="images/File_Upload_Page%20copy.gif" width="204" height="88"></I> 
+  </CENTER></H1>
+
+<P><CENTER>
+  <TABLE WIDTH="489" BORDER="0" CELLSPACING="2" CELLPADDING="0"
+HEIGHT="34">
+    <TR>
+      <TD WIDTH="100%" height="16">
+        <CENTER>
+          <B>Please check the following items: </B> 
+        </CENTER>
+      </TD>
+  </TR>
+</TABLE></CENTER>
+  <P>&nbsp;</P>
+<FORM ENCTYPE="multipart/form-data" ACTION="newupload.cgi" METHOD="POST" NAME="FORM1">
+<INPUT type="hidden" name="username" value="mastermind">
+<BLOCKQUOTE>
+    <P><U><FONT COLOR="#ffffff" SIZE="+2" FACE="Times">File Upload Checklist</FONT></U><FONT COLOR="#ffffff" SIZE="+2" FACE="Times">:</FONT></P>
+    <P><FONT face="Times"> 
+      <INPUT type="radio" name="Fonts" value="Yes">
+      <B>FONTS.</B> Please include all fonts that are used in your document. Include 
+      only those fonts that are actually used (as opposed to copying an entire 
+      font folder). Please include both parts for each font, i.e., a printer font 
+      and a screen font. </FONT></P>
+    <P><FONT face="Times"><I>Note: Stylized fonts or multiple master fonts may 
+      cause problems with your file(s). </I></FONT></P>
+    <P><FONT face="Times"> 
+      <INPUT type="radio" name="Images" value="Yes">
+      <B> IMAGES.</B> Include all images that are placed in your document. JPEG, 
+      TIFF and EPS formats are acceptable. </FONT></P>
+    <P><FONT face="Times"> 
+      <INPUT type="radio" name="Resolution" value="Yes">
+      <B>RESOLUTION. </B>All images should be 300 dpi at the size of output. If 
+      your images are of lower resolution, please call and discuss this with your 
+      <BR>
+      Navigator/Scantech Account Representative. </FONT></P>
+    <P><FONT face="Times"> 
+      <INPUT type="radio" name="Color" value="Yes">
+      <B>COLOR.</B> Images should be scanned CMYK; however, Navigator can convert 
+      RGB images IF the ICC profile is provided. Color outside the gamut will 
+      be handled according to perceptual rendering intent. </FONT></P>
+    <P><FONT face="Times"> 
+      <INPUT type="radio" name="Hairlines" value="Yes">
+      <B>HAIRLINES.</B> Hairlines must have an assigned numerical value (i.e., 
+      do not select &quot;hairline&quot; from the line weight menu). </FONT></P>
+    <P><FONT face="Times"> 
+      <INPUT type="radio" name="Proofread" value="Yes">
+      <B>PROOFREAD.</B> Navigator is not responsible for incorrect copy supplied 
+      by clients. Please proofread your files. </FONT></P>
+</BLOCKQUOTE>
+
+<PRE><CENTER><FONT COLOR="#ffff66" SIZE="+1" FACE="Helvetica">Filename</FONT><FONT COLOR="#ffff33" FACE="Helvetica"> </FONT><FONT COLOR="#ffffff" FACE="Helvetica">as to be saved on <I>Navigator Press</I>  server:</FONT>
+<FONT COLOR="#ffffff" SIZE="+1" FACE="Times"><INPUT TYPE="text"
+NAME="save-as-filename" SIZE="35"></FONT>
+</CENTER></PRE>
+
+<BLOCKQUOTE>
+    <PRE><FONT color="#ffffff" size="+1" face="Times">Click the </FONT><FONT color="#ffff66" size="+1" face="Times">Browse</FONT><FONT color="#ffffff" size="+1" face="Times"> button (below), and direct our browser to the file you</FONT>
+<FONT color="#ffffff" size="+1" face="Times">want to upload.</FONT><FONT size="+1" face="Times"> </FONT><FONT color="#ffffff" size="+1" face="Times">When you find it, click &quot;Open,&quot; and you will see the name appear</FONT>
+<FONT color="#ffffff" size="+1" face="Times">in the &quot;File to Upload&quot; field.</FONT></PRE>
+</BLOCKQUOTE>
+
+<PRE><FONT COLOR="#ffffff" SIZE="+1" FACE="Times">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT><FONT COLOR="#ffff66" SIZE="+1" FACE="Helvetica">File To Upload:</FONT><FONT COLOR="#ffff66" SIZE="+1" FACE="Times">&nbsp;</FONT><FONT COLOR="#ccffff" FACE="Times"><INPUT TYPE="FILE" NAME="upload-file" SIZE=35></FONT></PRE>
+
+<BLOCKQUOTE>
+    <PRE><FONT COLOR="#ffffff" SIZE="+1" FACE="Times">To finish, click this button to upload: </FONT><FONT COLOR="#ccffff"><INPUT
+TYPE="submit" VALUE="Upload The File!" onClick="MM_validateForm('save-as-filename','','R');return document.MM_returnValue" name="Submit"></FONT>
+
+<I><FONT COLOR="#ffffff" SIZE="+1" FACE="Times">Note: To upload multiple files, you can compress them in one folder first, or select</FONT></I>
+<I><FONT COLOR="#ffffff" SIZE="+1" FACE="Times">&quot;upload another file&quot; from the upload completion page.</FONT></I>
+<FONT COLOR="#ffcc99"><HR ALIGN=LEFT SIZE="1" NOSHADE></FONT></PRE>
+</BLOCKQUOTE>
+</FORM>
+</BODY>
+</HTML>

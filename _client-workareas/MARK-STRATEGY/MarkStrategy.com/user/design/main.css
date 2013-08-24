@@ -1,0 +1,139 @@
+.tst
+{
+text-align : justify;   
+}
+
+LI { list-style-type: square; 
+     font-size : 12px;
+}
+    
+
+.sl { list-style-type: square; 
+     font-size : 10px;
+    }
+.dd { 
+     font-size : 12px;
+     text-transform:lowercase;
+     
+    }
+                   
+
+STRONG,B,td { font-family : Verdana, Arial, sans-serif; font-size : 12px;}
+
+
+INPUT{
+        font-family :Verdana,Arial,sans-serif;
+        border-color : black;
+        border-style:solid;
+        border-width : 1px;
+        font-size : 12px;
+        
+}
+
+.check{
+        font-family :Verdana,Arial,sans-serif;
+        border-color : white;
+        border-width : 0px;
+        font-size : 12px;
+}
+
+
+.nav{
+        font-family :Verdana,Arial,sans-serif;
+        border-color : black;
+        border-width : 2px;
+        border-style : dotted;
+}
+
+B {     font-size : 12px;}
+hr{color :gray;
+   NOSHADE; 
+   heigth : 1px;
+  }
+
+
+p{      font-family :Verdana,Arial,sans-serif;
+        font-size : 12px;}
+
+UL{
+        font-family :Verdana,Arial,sans-serif;
+        font-size : 12px;
+}
+SMALL { font-family : Verdana, Arial, sans-serif; font-size : 12px;}
+
+PRE {
+        font-family :Verdana,Arial,sans-serif;
+        color : black;
+        font-size : 12px;}
+
+
+A{
+        font-family :Verdana,Arial,sans-serif;
+        text-decoration : underline;
+        color : orange;
+        font-size : 12px;
+}
+                 
+A:Hover{
+        color: #353555;
+        cursor:hand;
+}
+
+.menu{
+        font-family :Verdana,Arial,sans-serif;
+        font-weight:bold;
+        text-decoration : underline;
+        color : navy;
+        font-size : 12px;
+}
+
+.menu:Hover{
+        color: #353555;
+        font-weight:bold;
+        cursor: hand;
+}
+
+
+BODY {  margin: 10pt;      
+        line-height: 1.1;
+        color: black;
+        BACKGROUND: gray;      
+        font-family: Verdana,Arial,Helvetica;
+        font-size:   12px; 
+        text-align : justify;
+}
+th {    
+        color: #333399;      
+        font-family: Verdana,Arial,Helvetica;
+        font-size:   12px; 
+}
+
+.head {    
+        BACKGROUND: silver;
+        font-family: Verdana,Arial,Helvetica;
+        font-size:   12px; 
+}
+
+.inner {    
+        BACKGROUND: white;
+        font-family: Verdana,Arial,Helvetica;
+        font-size:   12px; 
+}
+
+.board {    
+        BACKGROUND: silver;
+}
+
+.alt {    
+        BACKGROUND: #66aaaa;
+        font-family: Verdana,Arial,Helvetica;
+        font-size:   12px; 
+}
+
+.div {    
+        BACKGROUND: #99dddd;
+        font-family: Verdana,Arial,Helvetica;
+        font-size:   12px; 
+}
+.tbold  { font-weight:bold;  }
+.tnorm  { font-weight:normal;}

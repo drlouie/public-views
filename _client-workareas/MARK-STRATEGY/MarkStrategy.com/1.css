@@ -1,0 +1,26 @@
+body {margin:0px;}
+td {font-family:arial; font-size:12px;}
+#menu a, #lmenu a {color:#ffffff; text-decoration:none; font-size:12px;}
+#menu td.button, #lmenu td.button {padding-left:10px; padding-right:10px;}
+#lmenu a {color:#000000; font-size:11px;}
+h2 {color:#EB3C1D; margin:0px; font-size:18px; font-weight:normal;}
+#header, #content {padding-left:20px;}
+#content {padding-right:30px;}
+h3 {color:#EB3C1D;  margin:0px; font-size:13px; font-weight:bold; margin-bottom:10px;}
+hr {margin-bottom:10px;}
+.ftop {color:#144E56; font-size:18px; font-weight:normal;}
+.fbutton a {color:#EB3C1D; text-decoration:none; font-size:14px; font-weight:bold;}
+.fbottom {padding-left:25px;}
+.fbottom a {color:#EB3C1D; text-decoration:none; font-size:11px;}
+.fcenter p {padding-left:25px;}
+p {margin:0px; margin-bottom:10px;}
+#left h2, #left hr {margin-left:15px;}
+#left h2 {color:#ffffff;}
+form {margin:0px;}
+#left form  {margin-bottom:15px;}
+big {font-weight:bold;}
+#bottom, #bottom a {color:#144E56; text-decoration:none;}
+.copy {color:#999999; margin-top:5px;}
+#content a {color:EB3C1D; font-weight:bold;}
+#content p {text-align:justify;}
+.red {Xcolor:#EB3C1D; Xfont-weight:bold; Xcolor: white}

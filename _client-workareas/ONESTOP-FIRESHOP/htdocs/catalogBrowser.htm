@@ -1,0 +1,42 @@
+#!/usr/bin/perl5 -s
+
+print "Content-type: text/html\n\n";
+
+require "parse_query.nsp";
+
+if ($FORM{'pid'}) {
+
+## connect to DB
+use DBI; 
+my $dbh = DBI->connect('DBI:mysql:OneStop','root','62Ak.fi1HdBxI') or die "Unable to connect to database: <b>unvWeb</b>\n"; 
+$dbh->{RaiseError} = 1; 
+
+
+	## GET SLECTED PRODUCT
+	$sth = $dbh->prepare("SELECT * FROM Products where PartNum='$FORM{'pid'}'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$PartNum = $row[1];
+		$MFGName = $row[2];
+		$MFGPN = $row[3];
+		$MFGLogo = $row[4];
+		$ItemName = $row[5];
+		$Desc = $row[6];
+		$Specs = $row[7];
+		$LargePhoto = $row[9];
+		$Warranty = $row[10];
+		$Weight = $row[11];
+		$Accessories = $row[12];
+		$VirtualStatus = $row[13];
+		$IncludedItems = $row[14];
+		$RetailC = $row[18];
+	}
+	$sth->finish;
+	$dbh->disconnect;
+
+	print "($PartNum) $ItemName by $MFGName<br><img src=\"images/products/$LargePhoto\">";
+}
+
+
+exit;
