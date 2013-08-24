@@ -1,0 +1,357 @@
+<style type="text/css">
+<!--
+#searchBlock {position:absolute; left:50px; top:-135px; width:245px; height:135px; clip:rect(0px 245px 135px 0px);z-index:1501;}
+#searchBlock2 {position:absolute; left:295px; top:-135px; width:245px; height:135px; clip:rect(0px 245px 135px 0px);z-index:1502;}
+--> 
+</style>
+
+<script language="JavaScript"> 
+
+///////////////////////////////////////////////////////////////////
+// This script and its counterparts are ©2001 NetMedia Solutions //
+// For use ONLY with CoastlineMicro.com                          //
+// To re-use or have this script re-interfaced for your specific //
+// needs please contact SServices\@NetMediaSolutions.com         //
+// Prices are cheap for re-interfacing of current scripts and    //
+// programs, so email us today to get you own LEGAL programming  //
+// licensed for use only on YOUR site(s) or for YOUR purpose(s). //
+///////////////////////////////////////////////////////////////////
+
+<!--
+
+//Global Moving Layer Introduction
+function runSearch() {
+	searchLayer1 = new DynLayer("searchBlock")
+	searchLayer1.slideInit()
+	searchLayer2 = new DynLayer("searchBlock2")
+	searchLayer2.slideInit()
+	// To hide netscape's DHTML script stack bugs
+	if (is.ns5) { 
+		searchLayer1.x == 50;
+		searchLayer1.y == -135;
+		searchLayer1.hide(); 
+		searchLayer2.x == 295;
+		searchLayer2.y == -135;
+		searchLayer2.hide();
+	}
+}
+
+//
+// START Featured Product Controls
+
+
+//
+// START Search Panel Controls
+// 
+
+// SEARCH BOX ONE - INVENTORY SEARCH
+function toggleSearch1() {	
+	if (is.ns5) { 
+	searchLayer1.show(); 
+	}
+	if (searchLayer1.y <= -135) {
+		toggleSearch1Down();
+	}
+	if (searchLayer1.y >= 0) {
+		toggleSearch1Up();
+	}
+}
+
+function toggleSearch1Down() {
+	if (searchLayer1.y == -135) {		
+		javascript:searchLayer1.slideTo(50,0,5,10)
+	}
+}
+
+function toggleSearch1Up() {
+	if (searchLayer1.y == 0) {
+		javascript:searchLayer1.slideTo(50,-135,5,10)
+	}
+}
+
+// SEARCH BOX TWO - WEBSITE SEARCH
+function toggleSearch2() {	
+	if (is.ns5) { 
+	searchLayer2.show(); 
+	}
+	if (searchLayer2.y <= -135) {
+		toggleSearch2Down();
+	}
+	if (searchLayer2.y >= 0) {
+		toggleSearch2Up();
+	}
+}
+
+function toggleSearch2Down() {
+	if (searchLayer2.y == -135) {		
+		javascript:searchLayer2.slideTo(295,0,5,10)
+	}
+}
+
+function toggleSearch2Up() {
+	if (searchLayer2.y == 0) {
+		javascript:searchLayer2.slideTo(295,-135,5,10)
+	}
+}
+//-->
+</script>
+
+
+
+<!-- THIS IS SEARCH BLOCK ONE, THE INVENTORY SEARCH BOX -->
+<DIV ID="searchBlock">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//Check Search field for completion
+function checkSearch1(thisone) {
+	// SPECIAL FORM HANDLING FOR NS4
+	if (is.ns4) {
+		var formindex = thisone.ProductType.selectedIndex;
+		var myselect = thisone.ProductType.options[formindex].value;
+		if (myselect == "NULL" || myselect == " " || myselect == "") {
+		alert ('Inventory search has detected that you have selected an invalid Product Type list item, please select a different one.');
+		thisone.ProductType.focus();
+		return false;
+		}	
+		if (thisone.PKeywords.value == " " || thisone.PKeywords.value == "") {
+		alert ('Inventory search cannot continue with the Search Terms field blank.');
+		thisone.PKeywords.focus();
+		return false;
+		}
+		else {
+		return true;
+		}
+	}
+	// ALL OTHER BROWSER'S FORM HANDLING
+	else {
+		if (document.search1.ProductType.value == "NULL" || document.search1.ProductType.value == " " || document.search1.ProductType.value == "") {
+		alert ('Inventory search has detected that you have selected an invalid Product Type list item, please select a different one.');
+		document.search1.ProductType.focus();
+		}	
+		if (document.search1.PKeywords.value == " " || document.search1.PKeywords.value == "") {
+		alert ('Inventory search cannot continue with the Search Terms field blank.');
+		document.search1.PKeywords.focus();
+		}
+		else { document.search1.submit(); }
+	}
+}
+
+//Called from search1.swf from all browsers except for NS4
+function submitSearch1() {
+	if (document.search1.ProductType.value == "NULL" || document.search1.ProductType.value == " " || document.search1.ProductType.value == "") {
+		alert ('Inventory search has detected that you have selected an invalid Product Type list item, please select a different one.');
+		document.search1.ProductType.focus();
+		}	
+	if (document.search1.PKeywords.value == " " || document.search1.PKeywords.value == "") {
+		alert ('Inventory search cannot continue with the Search Terms field blank.');
+		document.search1.PKeywords.focus();
+		}
+	else { document.search1.submit(); }
+}
+//-->
+</SCRIPT>
+<form name="search1" METHOD="GET" ACTION="s_prod.html" onSubmit="javascript:if (is.ns4) { return checkSearch1(this); } else {checkSearch1(this);}">
+<table cellpadding="0" cellspacing="0" border="0" valign="top" height="135" width="245" bgcolor="#ffffff">
+  <tr> 
+    <td align="left" valign="top" height="23"><img src="images/search/s1_topleft.jpg" width="223" height="23"></td>
+    <td align="left" valign="top" height="23"><a href="javascript:void(0)" onClick="javascript:toggleSearch1()"><img src="images/search/s1_topright_off.jpg" width="22" height="23" border="0"></a></td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top" colspan="2">
+        <table width="245" border="0" cellspacing="0" cellpadding="0" height="94">
+          <tr> 
+            <td width="2" height="94"><img src="images/search/s1_left.jpg" width="2" height="94"></td>
+            <td valign="top" width="15" height="94" align="left">&nbsp;</td>
+            <td valign="middle" width="166" height="94" align="center"> 
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr> 
+                  <td height="12"><font size="1" face="verdana,arial,helvetica" color="#33336">Product 
+                    Type</font></td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <select name="ProductType" size="1" class="search1">
+                      <option value="All" selected>All Product Types</option>
+                      <option value="NULL"></option>
+                      <option value="NULL">---- Pre-Confgirued ---- </option>
+                      <option value="Desktop">Desktop PCs</option>
+                      <option value="Notebook">Notebook Computers</option>
+                      <option value="Server">Net Servers</option>
+                      <option value="NULL"></option>
+                      <option value="NULL">---- Miscellaneous ---- </option>
+                      <option value="Audio">Audio Equipment</option>
+                      <option value="CDROM">CD-ROM Drives</option>
+                      <option value="CDRW">CD-RW Drives</option>
+                      <option value="DigitalCam">Digital Cameras</option>
+                      <option value="DVDROM">DVD-ROM Drives</option>
+                      <option value="Floppy">Floppy Drives</option>
+                      <option value="HardDrive">Hard Drives</option>
+                      <option value="InternetCam">Internet Cameras</option>
+                      <option value="Joystick">Joysticks</option>
+                      <option value="Keyboard">Keyboards</option>
+                      <option value="Memory">Memory</option>
+                      <option value="Modem">Modems</option>
+                      <option value="Monitor">Monitors</option>
+                      <option value="Networking">Networking</option>
+                      <option value="NIC">Network Cards</option>
+                      <option value="NoteExtra">Notebooks Extras</option>
+                      <option value="Pointer">Pointer Devices</option>
+                      <option value="UPS">Power Protection</option>
+                      <option value="Printer">Printers</option>
+                      <option value="Processor">Processors</option>
+                      <option value="Scanner">Scanners</option>
+                      <option value="Software">Software</option>
+                      <option value="Speaker">Speakers</option>
+                      <option value="Storage">Storage Devices</option>
+                      <option value="SystemBoard">System Boards</option>
+                      <option value="SystemChassis">System Chassis</option>
+                      <option value="VideoCard">Video Cards</option>
+                      <option value="WirelessNet">Wireless Networking</option>
+                      <option value="ZipDrive">Zip Drives</option>
+                      <option value="NULL"></option>
+                      <option value="NULL">---- All Others ---- </option>
+                      <option value="Peripheral">Peripherals (Catchall)</option>
+                    </select>
+                  </td>
+                </tr>
+
+                <tr> 
+                  <td valign="bottom" height="20"><font size="1" face="verdana,arial,helvetica" color="#33336">Search 
+                    Term(s)</font></td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <input type="text" size="15" name="PKeywords" class="searchinput" value="">
+                  </td>
+                </tr>
+              </table>
+			</td>
+            <td width="75" height="94" align="center">
+<Script language="Javascript">
+//Calling for search1.swf for all browsers except for NS4, it gets a submit button using images/submit/s1_ns4_icon.jpg
+if (is.ns4) {
+document.write('<input type=\"image\" name=\"Submit\" border=\"0\" src=\"images/search/s1_ns4_icon.jpg\" width=\"55\" height=\"85\">');
+}
+else {
+document.write('<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"55\" height=\"85\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0\">');
+document.write('<param name=\"MOVIE\" value=\"search1.swf\"><param name=\"PLAY\" value=\"true\"><param name=\"LOOP\" value=\"false\"><param name=\"QUALITY\" value=\"high\"><param name=\"MENU\" value=\"false\">');
+document.write('<embed src=\"search1.swf\" width=\"55\" height=\"85\" play=\"true\" loop=\"false\" quality=\"high\" menu=\"false\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/shockwave/download/index.html?P1_Prod_Version=ShockwaveFlash\"></embed>');
+document.write('</object>');
+}
+</SCRIPT>
+
+
+</td>
+            <td width="2" height="94"><img src="images/search/s1_right.jpg" width="2" height="94"></td>
+          </tr>
+        </table>
+        <table width="245" border="0" cellspacing="0" cellpadding="0" height="17">
+          <tr> 
+            <td width="51" rowspan="2" valign="top" height="17"><img src="images/search/s1_botleft.jpg" width="51" height="18"></td>
+            <td width="64" rowspan="2" valign="top" height="18"><img src="images/search/s1_button1_on.jpg" width="64" height="18"></td>
+            <td width="64" rowspan="2" valign="top" height="18"><a href="javascript:void(0);" onClick="javascript:toggleSearch1();toggleSearch2();"><img src="images/search/s1_button2_off.jpg" width="64" height="18" border="0"></a></td>
+            <td width="66" rowspan="2" valign="top" height="18"><a href="ss.html"><img src="images/search/s1_button3_off.jpg" width="66" height="18" border="0"></a></td>
+          </tr>
+          <tr> </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+</form>
+</DIV>
+
+<!-- THIS IS SEARCH BLOCK TWO, THE WEBSITE SEARCH BOX -->
+<DIV ID="searchBlock2">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//Check Search field for completion
+function checkSearch2(thisone) {
+	// SPECIAL FORM HANDLING FOR NS4
+	if (is.ns4) {
+		if (thisone.keywords.value == " " || thisone.keywords.value == "") {
+		alert ('Website search cannot continue with the Search Terms field blank.');
+		thisone.keywords.focus();
+		return false
+		}
+		else {
+		return true
+		}
+	}
+	// ALL OTHER BROWSER'S FORM HANDLING
+	else {
+		if (document.search2.keywords.value == " " || document.search2.keywords.value == "") {
+		alert ('Website search cannot continue with the Search Terms field blank.');
+		document.search2.keywords.focus();
+		}
+		else { document.search2.submit(); }
+	}
+}
+
+//Called from search1.swf from all browsers except for NS4
+function submitSearch2() {
+	if (document.search2.keywords.value == " " || document.search2.keywords.value == "") {
+		alert ('Website search cannot continue with the Search Terms field blank.');
+		document.search2.keywords.focus();
+		}
+	else { document.search2.submit(); }
+}
+//-->
+</SCRIPT>
+<form name="search2" METHOD="GET" ACTION="s.html" onSubmit="javascript:if (is.ns4) { return checkSearch2(this); } else {checkSearch2(this);}">
+<table cellpadding="0" cellspacing="0" border="0" valign="top" height="135" width="245" bgcolor="#ffffff">
+  <tr> 
+      <td align="left" valign="top" height="23"><img src="images/search/s2_topleft.jpg" width="223" height="23"></td>
+    <td align="left" valign="top" height="23"><a href="javascript:void(0)" onClick="javascript:toggleSearch2()"><img src="images/search/s1_topright_off.jpg" width="22" height="23" border="0"></a></td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top" colspan="2">
+        <table width="245" border="0" cellspacing="0" cellpadding="0" height="94">
+          <tr> 
+            <td width="2" height="94"><img src="images/search/s1_left.jpg" width="2" height="94"></td>
+            <td valign="top" width="15" height="94" align="left">&nbsp;</td>
+            <td valign="middle" width="166" height="94" align="center"> 
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr> 
+                  <td valign="bottom"><font size="1" face="verdana,arial,helvetica" color="#33336">Search 
+                    Term(s)</font></td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <input type="text" size="16" name="keywords" class="searchinput" value="">
+                  </td>
+                </tr>
+              </table>
+			</td>
+            <td width="75" height="94" align="center">
+<Script language="Javascript">
+//Calling for search1.swf for all browsers except for NS4, it gets a submit button using images/submit/s1_ns4_icon.jpg
+if (is.ns4) {
+document.write('<input type=\"image\" name=\"Submit\" border=\"0\" src=\"images/search/s1_ns4_icon.jpg\" width=\"55\" height=\"85\">');
+}
+else {
+document.write('<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"55\" height=\"85\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0\">');
+document.write('<param name=\"MOVIE\" value=\"search2.swf\"><param name=\"PLAY\" value=\"true\"><param name=\"LOOP\" value=\"false\"><param name=\"QUALITY\" value=\"high\"><param name=\"MENU\" value=\"false\">');
+document.write('<embed src=\"search2.swf\" width=\"55\" height=\"85\" play=\"true\" loop=\"false\" quality=\"high\" menu=\"false\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/shockwave/download/index.html?P1_Prod_Version=ShockwaveFlash\"></embed>');
+document.write('</object>');
+}
+</SCRIPT>
+
+
+</td>
+            <td width="2" height="94"><img src="images/search/s1_right.jpg" width="2" height="94"></td>
+          </tr>
+        </table>
+        <table width="245" border="0" cellspacing="0" cellpadding="0" height="17">
+          <tr> 
+            <td width="51" rowspan="2" valign="top" height="17"><img src="images/search/s1_botleft.jpg" width="51" height="18"></td>
+            <td width="64" rowspan="2" valign="top" height="18"><a href="javascript:void(0);" onClick="javascript:toggleSearch2();toggleSearch1();"><img src="images/search/s1_button1_off.jpg" width="64" height="18" border="0"></a></td>
+            <td width="64" rowspan="2" valign="top" height="18"><img src="images/search/s1_button2_on.jpg" width="64" height="18" border="0"></td>
+            <td width="66" rowspan="2" valign="top" height="18"><a href="ss.html"><img src="images/search/s1_button3_off.jpg" width="66" height="18" border="0"></a></td>
+          </tr>
+          <tr> </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+</form>
+</DIV>

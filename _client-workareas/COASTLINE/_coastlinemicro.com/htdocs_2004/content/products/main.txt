@@ -1,0 +1,82 @@
+ 
+<table width="85%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Online Product Showcase</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><font class="regtextnobold"> 
+            <p>Welcome to the HTML version of Coastline Micro's Shark Tank&#153;. 
+              Here you can find detailed product technical specifications, driver 
+              downloads and other system specific information. You can also fully 
+              customize and purchase your next Coastline Micro system right online. 
+              Quality comes first when you choose to purchase a computer system 
+              from Coastline Micro. We start with the highest quality components 
+              from industry leaders:</p>
+            <ul>
+              <li>Intel&reg; provides all our system boards, processors, and server 
+                building blocks. </li>
+              <li>All memory we use is manufactured by Kingston Technologies.</li>
+              <li>We use only hard disk drives manufactured by Seagate and IBM 
+                for maximum performance. </li>
+              <li>The highest quality power supplies from PC Power and Cooling 
+                are used to significantly improve the system's power and cooling 
+                needs.</li>
+              <li>We offer video cards from ATI, ELSA, and Matrox Graphics.</li>
+              <li>Our operating systems, mice and keyboards all come from industry 
+                leader Microsoft.</li>
+            </ul>
+            <p>Our newly developed store is 100% secure for it utilizes the newest 
+              in Internet SSL technologies for a safer online shopping experience. 
+              If you ever have trouble navigating our site, please allow our <a href="contact.html?title=sitecomments">webmaster</a> 
+              to hear about your problems.</p>
+            <ul>
+              <li><a href="products.html?title=1&title=thresher">Thresher 
+                Series&#153; Value Desktop PCs</a><br>
+                <br>
+              </li>
+              <li><a href="products.html?title=1&title=mako">Mako Series&#153; 
+                Performance Desktop PCs</a><br>
+                <br>
+              </li>
+              <li><a href="products.html?title=1&title=tiger">Tiger 
+                Series&#153; PIII Servers</a><br>
+                <br>
+              </li>
+              <li><a href="products.html?title=1&title=gw">Great White 
+                Series&#153; XEON&#153; Server</a><br><br></li>
+              <li><a href="products.html?title=1&title=reef">Reef 
+                Series&#153; Notebooks</a></li>
+            </ul>
+            </font></td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

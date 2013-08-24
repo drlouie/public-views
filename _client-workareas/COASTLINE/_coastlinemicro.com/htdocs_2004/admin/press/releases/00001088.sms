@@ -1,0 +1,16 @@
+#!/usr/bin/perl5 -w
+
+$date = "May 28, 2002";
+
+$title = "Coastline Micro wins Newport-Mesa Unified School District of Orange County, CA Contract ";
+
+$para1 = "Contract Newport-Mesa Unified School District (\"NMUSD\") today awarded Coastline Micro, Inc. the District contract to provide Windows® based computers, laptops, file servers, peripherals and supplies. These products will be used for operation of all District facilities and for instructional purposes. <br><br>\"I'm pleased to announce that the district now has a new vendor for Windows® computers. After a fierce competitive bid process, we've selected Coastline Micro as our new vendor. They showed a remarkable combination of product quality, service/support, and price. Best of all, they are local: their headquarters and production facility are in Irvine,\" said Alan Engard, Director of Information Technology, Newport-Mesa Unified School District. <br><br>Pursuant to Public Contract Code 20652 and 20118, school districts within Orange County, Riverside County, San Bernardino County and Los Angeles County may also purchase identical items under the price, terms, and conditions listed in the awarded bid. <br><br>\"Coastline Micro is extremely pleased to earn the NMUSD's business and looks forward to also serving the educational IT need of neighboring school districts. Because Coastline Micro offers such a wide-range of IT services we are uniquely qualified to provide for the diverse needs of education and this contract award enables us to gain further recognition as a leader in this sector.\"<br><br>Coastline Micro is an Intel® Premier Provider-Educational Specialist, Microsoft Direct OEM with manufacturing facilities in the heart of Orange County. <br><br>For additional information please contact Coastline Micro at (800) 729-6809 or send an email to <a href=\"mailto:education\@coastlinemicro.com\"></a>";
+
+$location = "Irvine, CA";
+
+$myfoot = "";
+
+$partners = "";
+
+##return = true
+1;

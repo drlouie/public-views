@@ -1,0 +1,10 @@
+#!/usr/bin/perl5 -w
+
+$foottitle = "About HapaSol";
+
+$footlink = "http://www.hapasol.com/";
+
+$footbody = "Just a killer company with a sense of direction...";
+
+##return = true
+1;

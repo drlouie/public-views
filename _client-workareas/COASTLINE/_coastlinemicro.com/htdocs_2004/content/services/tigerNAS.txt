@@ -1,0 +1,144 @@
+<style type="text/css">
+	.stextbig{ color:#000000; }
+</style>
+<script language="Javascript" src="js/popwindow.js"></script>
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr height="1">
+          <td width="45%" valign="bottom"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+          <td align="right" width="55%" valign="bottom"><img src="images/spacer.gif" width="1" height="1" border="0">
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+
+  
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10" align="center">
+<tr>
+<td width="100%" valign="top" align="center">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">		  
+        <tr> 
+          <td width="45%" valign="bottom"><img src="sharktank/images/cm_logo_small.jpg" width="142" height="51" border="0"></td>
+          <td align="right" width="55%" valign="bottom"><font class="stextbig"><b><nobr>Microsoft&reg; Windows&reg; Powered</nobr><br><img src="images/spacer.gif" width="1" height="12" border="0"></b></font></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td width="45%" valign="bottom"><b><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><nobr>TIGER SERIES&#153; NETWORK ATTACHED STORAGE</nobr></font></b></td>
+          <td align="right" width="55%" valign="bottom"><b><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">SERVER APPLIANCE</font></b></td>
+        </tr>
+</table>		
+<br>
+
+<table id="uno" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" >
+	<tr>
+		<td width="100%" height="25" bgcolor="#000000"><b><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CM Tiger Series NAS 1U for small business to departmental</font></b></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+	<tr>
+		<td width="100%" height="25" align="center"><img src="images/tiger_NAS2_Prod1.jpg" width="420" height="76" border="0" usemap="#Main1"></td>
+	</tr>
+	<tr>
+		<td width="100%" height="20" align="center" valign="bottom"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">Expandable from 144GB - 800GB, Parallel ATA versions starting at $2,775</font></td>
+	</tr>
+</table>
+<br>
+<table id="dos" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" >
+	<tr>
+		<td width="100%" height="25" bgcolor="#000000"><b><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CM Tiger Series NAS 2U for departmental to enterprise</font></b></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+	<tr>
+		<td width="100%" height="25" align="center"><img src="images/tiger_NAS2_Prod2.jpg" width="420" height="76" border="0" usemap="#Main2"></td>
+	</tr>
+	<tr>
+		<td width="100%" height="20" align="center" valign="bottom"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">Expandable from 432GB - 1.92TB, Serial ATA versions starting at $7,069</font></td>
+	</tr>
+</table>
+<br>
+<table id="tres" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" >
+	<tr>
+		<td width="100%" height="25" bgcolor="#000000"><b><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CM Tiger Series NAS 3U for enterprise</font></b></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+	<tr>
+		<td width="100%" height="25" align="center"><img src="images/tiger_NAS2_Prod3.jpg" width="420" height="76" border="0" usemap="#Main3"></td>
+	</tr>
+	<tr>
+		<td width="100%" height="20" align="center" valign="bottom"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">Expandable from 1.17TB - 2.56TB, Serial ATA versions starting at $8,035</font></td>
+	</tr>
+</table>
+<br>
+
+</td>
+<td width="275" valign="top" align="center">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td height="130" valign="top" align="center"><a href="http://www.microsoft.com/windowsserversystem/wss2003/howtobuy/default.mspx" target="Windows Storage Server 2000"><img src="images/windows_storage_server_2000.jpg" width="181" height="112" border="0" alt="Click for more information on 'How To Buy Windows Storage Server 2003'"></a></td></tr>
+<tr><td><img src="images/tigerNASillus2.gif" width="264" height="343" border="0"></td></tr>
+
+<tr><td><a href="newframer.html?subject=press&title=in&PageTitle=Press%20Release%20Archive" title="Click to view the Coastline Micro Network Attached Storage Press Release" target="_parent" onMouseOver="document.images.right1.src = 'images/right_illus_link1_ov.gif';" onMouseOut="document.images.right1.src = 'images/right_illus_link1.gif';"><img src="images/right_illus_link1.gif" width="264" height="28" border="0" name="right1"></a></td></tr>
+<tr><td><a target="MSNAS" href="http://www.microsoft.com/windows/storage/default.mspx" title="Click to view more information about Microsoft Windows for Network Attached Storage" onMouseOver="document.images.right2.src = 'images/right_illus_link2_ov.gif';" onMouseOut="document.images.right2.src = 'images/right_illus_link2.gif';"><img src="images/right_illus_link2.gif" width="264" height="28" border="0" name="right2"></a></td></tr>
+<tr><td><a target="_parent" href="newframer.html?subject=coastlinemicro_services&title=lanrover3105&PageTitle=LanRover%201080-85%20Broadband%20Security%20Gateways" title="Click to view more information about Virtual Private Newtworking for Network Attached Storage" onMouseOver="document.images.right3.src = 'images/right_illus_link3_ov.gif';" onMouseOut="document.images.right3.src = 'images/right_illus_link3.gif';"><img src="images/right_illus_link3.gif" width="264" height="28" border="0" name="right3"></a></td></tr>
+<tr><td><a target="_parent" href="newframer.html?subject=coastlinemicro_services&title=cyberkey&PageTitle=CyberKey%20Security%20Token%20Information" title="Click to view information on our Cyberkey Security offering" onMouseOver="document.images.right4.src = 'images/right_illus_link4_ov.gif';" onMouseOut="document.images.right4.src = 'images/right_illus_link4.gif';"><img src="images/right_illus_link4.gif" width="264" height="28" border="0" name="right4"></a></td></tr>
+<tr><td><a target="_parent" href="newframer.html?subject=coastlinemicro_services&title=tigerNAS_datasheets&PageTitle=NAS%20Data%20Sheets" onMouseOver="document.images.right5.src = 'images/right_illus_link5_ov.gif';" onMouseOut="document.images.right5.src = 'images/right_illus_link5.gif';"><img src="images/right_illus_link5.gif" width="264" height="28" border="0" name="right5"></a></td></tr>
+<tr><td><a target="_parent" href="newframer.html?subject=coastlinemicro_services&title=tigerNAS_whitepapers&PageTitle=NAS%20White%20Papers" title="Click to view the Network Attached Storage White Papers" onMouseOver="document.images.right6.src = 'images/right_illus_link6_ov.gif';" onMouseOut="document.images.right6.src = 'images/right_illus_link6.gif';"><img src="images/right_illus_link6.gif" width="264" height="28" border="0" name="right6"></a></td></tr>
+
+
+<tr height="75" align="bottom"><td><img src="images/right_illus_linkend.gif" width="264" height="28" border="0"></td></tr>
+</table></td>
+</tr>
+
+</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="75" align="center" valign="top">
+
+<font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><nobr><b>Coastline Micro Tiger Series NAS Side-By-Side Comparison</b></nobr><br><nobr><font size="1">( <a href="/nas/TigerSeriesNAS-side-by-side-comparison.pdf"><font color="#008ED2">http://www.coastlinemicro.com/nas/TigerSeriesNAS-side-by-side-comparison.pdf</font></a> )</font></nobr></font>
+		  
+		  </td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="center" height="20"><font class="stextbig"><b>Call <font style="color:#EB0000;">(800)729-6809</font> for more information on our NAS Solutions</b></font></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+         <tr> 
+          <td colspan="2" height="80" align="center"><img src="images/spacer.gif" width="1" height="15"><font class="stext"><b>(*) Available in parallel ATA and serial ATA hard drives.</b></font></td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    
+  
+
+
+<map name="Main1"> 
+  <area shape="rect" coords="0,1,329,75" href="coastlinemicro_services.html?title=tigerNAS_Prod1">
+  <area shape="rect" coords="328,1,419,75" href="#" onClick="javascript:popWindow('http://www.microsoft.com/windows/storage/productinformation/demos/main.htm','WINNAS','760','540','NO');">
+</map>
+<map name="Main2"> 
+  <area shape="rect" coords="0,1,329,75" href="coastlinemicro_services.html?title=tigerNAS_Prod2">
+  <area shape="rect" coords="328,1,419,75" href="#" onClick="javascript:popWindow('http://www.microsoft.com/windows/storage/productinformation/demos/main.htm','WINNAS','760','540','NO');">
+</map>
+<map name="Main3"> 
+  <area shape="rect" coords="0,1,329,75" href="coastlinemicro_services.html?title=tigerNAS_Prod3">
+  <area shape="rect" coords="328,1,419,75" href="#" onClick="javascript:popWindow('http://www.microsoft.com/windows/storage/productinformation/demos/main.htm','WINNAS','760','540','NO');">
+</map>

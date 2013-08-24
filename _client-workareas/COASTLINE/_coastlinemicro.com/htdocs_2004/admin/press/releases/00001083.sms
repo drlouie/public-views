@@ -1,0 +1,25 @@
+#!/usr/bin/perl5 -w
+
+$date = "May 21, 2002";
+
+$title = "Coastline Announces Two New Thresher Series Desktop Computers";
+
+$para1 = "Coastline today announced two new Thresher&reg; Series desktop computers, the Thresher&reg; GL and Thresher&reg G, to suit wide-ranging customers' needs from microprocessor and video high performance to being able to fit in small places.<br><br>
+The Thresher&reg; GL, is designed for customers who need powerful Intel&reg; Pentium&reg; P4 or Celeron&reg; technology in a compact, mini-tower chassis.<br><br>
+A typical Thresher&reg; GL configuration features Intel's new 845G chipset, which incorporates Intel Extreme Graphics, utilizing up to 64 MB of dynamic system memory and features six integrated USB 2.0 ports. Combined with a P4 processor, the chipset provides an affordable, yet powerful, video, audio and networking capability.<br><br>
+The second, the Thresher&reg; G, provides expandability for a wider selection of audio cards, graphics cards and processor speeds. It also features Intel's new 845E chipset, along with more memory bandwidth that enables better graphics, multitasking, integrated USB 2.0 support and Microsoft&reg; Windows&reg; XP performance.<br><br>
+All models come with Intel integrated 10/100 LAN onboard as a standard feature.<br><br>
+<b>Technical features of the Thresher&reg; GL include:</b><br>
+CPU options of Intel Pentium 4 at 1.6GHz up to 2.4GHz Intel Celeron processor at 1.7 GHz System bus 400MHz Up to 2GB PC266 DDR memory Four Integrated USB 2.0 Ports Hard drives of 40GB, 60GB, 80GB and 120GB Optical drives of: DVD ROM/CD-RW Combination Drive, 24/10/40X CD-RW, 16x max DVD-ROM, 52x max speed CD-ROM<br><br>
+<b>Technical features of the Thresher&reg; G include:</b><br>
+CPU options of Intel Pentium 4 at 1.6GHz up to 2.53GHz System bus 533MHz or 400MHz Up to 2GB PC266 DDR memory Four Integrated USB 2.0 Ports Hard drives of 40GB, 60GB, 80GB and 120GB Optical drives of: DVD ROM/CD-RW Combination Drive, 24/10/40X CD-RW, 16x max DVD-ROM, 52x max speed CD-ROM<br><br>
+For current pricing, call your Coastline representative at 800.729.6809.";
+
+$location = "Irvine, CA";
+
+$myfoot = "";
+
+$partners = "";
+
+##return = true
+1;

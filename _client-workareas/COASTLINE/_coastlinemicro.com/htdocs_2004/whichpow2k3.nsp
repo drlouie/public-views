@@ -1,0 +1,303 @@
+#!/usr/bin/perl5 -s
+
+###########################################################################################################
+# Company: ©2001 NetMedia Solutions                                                                             #
+# Date: Saturday, September 21, 2001                                                                      #
+# Location: Los Angeles County, California, United States of America                                      #
+# Made By: Luis Rodriguez (drlouie)                                                                       #
+# Email: Drlouie@NetMediaSol.com                                                                          #
+#                                                                                                         #
+# Reads in the images in the specified directory, in this case the                                        #
+# sharktank/pow or in other words, the Product of the Week images.                                        #
+# If images are found that match the POW criteria, IE: Image type and image name, it then                 #
+# queries the DB to retrieve function information based on each specific image.                           #
+# A different POW screen is chosen dynamically by the following program.                                  #
+#                                                                                                         #
+# This program cannot be duplicated, distributed or re-used for any other purpose other than its original #
+# intended purpose and function. You may request NetMedia Solutions for a copy of the script,             #
+# personalized to fit your exact needs for a small re-programming fee.                                    #
+###########################################################################################################
+
+$count=0;
+## ----------- >>> GET ALL PRODUCTS WITH SNEAKPEAK IMAGE
+	use DBI;
+	my $dbh = DBI->connect("DBI:mysql:coastline","drlouie","chinga2") or die "Unable to connect to database: <b>coastline</b>\n"; 
+	$dbh->{RaiseError} = 1; 
+
+	my $sth = $dbh->prepare("SELECT * FROM Products WHERE SneakPeak > '0'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$CMPartNum = $row[1];
+		$SysCode = $row[2];
+		$PricingClass = $row[10];
+		$ItemName = $row[11];
+		$SneakPeak = $row[15];
+		push(@prodimages, "$CMPartNum-----$SysCode-----$PricingClass-----$ItemName-----$SneakPeak");
+		$count++;
+	}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+
+	$random = int( rand($count));
+	## random chosen image from the sharktank/pow/ directory
+	$thisfile = @prodimages[$random];
+
+	@LeSplit = split(/-----/, $thisfile);
+
+	$LaParte = $LeSplit[0];
+	$ElCode = $LeSplit[1];
+	$LaClase = $LeSplit[2];
+	$ElNombre = $LeSplit[3];
+	$ElPico = $LeSplit[4];
+	
+	my $sth = $dbh->prepare("SELECT * FROM Images WHERE ImageID='$ElPico'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$IURL = $row[6];
+	}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+
+	my $sth = $dbh->prepare("SELECT * FROM Images WHERE ImageID='$ElPico'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$IURL = $row[6];
+	}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+
+	##----------->>> Grab SYSTEMS STUFF
+	$count=0;
+	$PartCount=0;
+	my $sth = $dbh->prepare("SELECT * FROM Systems WHERE SystemID='$ElCode'");
+	$sth->execute or die "Unable to execute query\n"; 
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$SavedSystemID = $row[0]; $SavedParent = $row[1]; $SavedCMSeries = $row[2]; $SavedReconfig = $row[3];
+		push(@Parts,"$row[4],,,,,$row[5],,,,,$row[6],,,,,$row[7]"); $SavedMainNumbers = $row[7]; $Numero=1;
+		if (($SavedMainNumbers eq "") || ($SavedMainNumbers eq " ") || ($SavedMainNumbers eq "Null") || ($SavedMainNumbers eq "NULL")) { } else { push(@Parts,"$row[8],,,,,$row[9],,,,,$row[10],,,,,$row[11]"); $SavedSub1Numbers = $row[11]; $Numero=2; }
+		if (($SavedSub1Numbers eq "") || ($SavedSub1Numbers eq " ") || ($SavedSub1Numbers eq "Null") || ($SavedSub1Numbers eq "NULL")) { } else { push(@Parts,"$row[12],,,,,$row[13],,,,,$row[14],,,,,$row[15]"); $SavedSub2Numbers = $row[15]; $Numero=3; }
+		if (($SavedSub2Numbers eq "") || ($SavedSub2Numbers eq " ") || ($SavedSub2Numbers eq "Null") || ($SavedSub2Numbers eq "NULL")) { } else { push(@Parts,"$row[16],,,,,$row[17],,,,,$row[18],,,,,$row[19]"); $SavedSub3Numbers = $row[19]; $Numero=4; }
+		if (($SavedSub3Numbers eq "") || ($SavedSub3Numbers eq " ") || ($SavedSub3Numbers eq "Null") || ($SavedSub3Numbers eq "NULL")) { } else { push(@Parts,"$row[20],,,,,$row[21],,,,,$row[22],,,,,$row[23]"); $SavedSub4Numbers = $row[23]; $Numero=5; }
+		if (($SavedSub4Numbers eq "") || ($SavedSub4Numbers eq " ") || ($SavedSub4Numbers eq "Null") || ($SavedSub4Numbers eq "NULL")) { } else { push(@Parts,"$row[24],,,,,$row[25],,,,,$row[26],,,,,$row[27]"); $SavedSub5Numbers = $row[27]; $Numero=6; }
+		if (($SavedSub5Numbers eq "") || ($SavedSub5Numbers eq " ") || ($SavedSub5Numbers eq "Null") || ($SavedSub5Numbers eq "NULL")) { } else { push(@Parts,"$row[28],,,,,$row[29],,,,,$row[30],,,,,$row[31]"); $SavedSub6Numbers = $row[31]; $Numero=7; }
+		if (($SavedSub6Numbers eq "") || ($SavedSub6Numbers eq " ") || ($SavedSub6Numbers eq "Null") || ($SavedSub6Numbers eq "NULL")) { } else { push(@Parts,"$row[32],,,,,$row[33],,,,,$row[34],,,,,$row[35]"); $SavedSub7Numbers = $row[35]; $Numero=8; }
+		if (($SavedSub7Numbers eq "") || ($SavedSub7Numbers eq " ") || ($SavedSub7Numbers eq "Null") || ($SavedSub7Numbers eq "NULL")) { } else { push(@Parts,"$row[36],,,,,$row[37],,,,,$row[38],,,,,$row[39]"); $SavedSub8Numbers = $row[39]; $Numero=9; }
+		if (($SavedSub8Numbers eq "") || ($SavedSub8Numbers eq " ") || ($SavedSub8Numbers eq "Null") || ($SavedSub8Numbers eq "NULL")) { } else { push(@Parts,"$row[40],,,,,$row[41],,,,,$row[42],,,,,$row[43]"); $SavedSub9Numbers = $row[43]; $Numero=10; }
+		if (($SavedSub9Numbers eq "") || ($SavedSub9Numbers eq " ") || ($SavedSub9Numbers eq "Null") || ($SavedSub9Numbers eq "NULL")) { } else { push(@Parts,"$row[44],,,,,$row[45],,,,,$row[46],,,,,$row[47]"); $SavedSub10Numbers = $row[47]; $Numero=11; }
+		if (($SavedSub10Numbers eq "") || ($SavedSub10Numbers eq " ") || ($SavedSub10Numbers eq "Null") || ($SavedSub10Numbers eq "NULL")) { } else { push(@Parts,"$row[48],,,,,$row[49],,,,,$row[50],,,,,$row[51]"); $SavedSub11Numbers = $row[51]; $Numero=12; }
+		if (($SavedSub11Numbers eq "") || ($SavedSub11Numbers eq " ") || ($SavedSub11Numbers eq "Null") || ($SavedSub11Numbers eq "NULL")) { } else { push(@Parts,"$row[52],,,,,$row[53],,,,,$row[54],,,,,$row[55]"); $SavedSub12Numbers = $row[55]; $Numero=13; }
+		if (($SavedSub12Numbers eq "") || ($SavedSub12Numbers eq " ") || ($SavedSub12Numbers eq "Null") || ($SavedSub12Numbers eq "NULL")) { } else { push(@Parts,"$row[56],,,,,$row[57],,,,,$row[58],,,,,$row[59]"); $SavedSub13Numbers = $row[59]; $Numero=14; }
+		if (($SavedSub13Numbers eq "") || ($SavedSub13Numbers eq " ") || ($SavedSub13Numbers eq "Null") || ($SavedSub13Numbers eq "NULL")) { } else { push(@Parts,"$row[60],,,,,$row[61],,,,,$row[62],,,,,$row[63]"); $SavedSub14Numbers = $row[63]; $Numero=15; }
+		if (($SavedSub14Numbers eq "") || ($SavedSub14Numbers eq " ") || ($SavedSub14Numbers eq "Null") || ($SavedSub14Numbers eq "NULL")) { } else { push(@Parts,"$row[64],,,,,$row[65],,,,,$row[66],,,,,$row[67]"); $SavedSub15Numbers = $row[67]; $Numero=16; }
+		if (($SavedSub15Numbers eq "") || ($SavedSub15Numbers eq " ") || ($SavedSub15Numbers eq "Null") || ($SavedSub15Numbers eq "NULL")) { } else { push(@Parts,"$row[68],,,,,$row[69],,,,,$row[70],,,,,$row[71]"); $SavedSub16Numbers = $row[71]; $Numero=17; }
+		if (($SavedSub16Numbers eq "") || ($SavedSub16Numbers eq " ") || ($SavedSub16Numbers eq "Null") || ($SavedSub16Numbers eq "NULL")) { } else { push(@Parts,"$row[72],,,,,$row[73],,,,,$row[74],,,,,$row[75]"); $SavedSub17Numbers = $row[75]; $Numero=18; }
+		if (($SavedSub17Numbers eq "") || ($SavedSub17Numbers eq " ") || ($SavedSub17Numbers eq "Null") || ($SavedSub17Numbers eq "NULL")) { } else { push(@Parts,"$row[76],,,,,$row[77],,,,,$row[78],,,,,$row[79]"); $SavedSub18Numbers = $row[79]; $Numero=19; }
+		if (($SavedSub18Numbers eq "") || ($SavedSub18Numbers eq " ") || ($SavedSub18Numbers eq "Null") || ($SavedSub18Numbers eq "NULL")) { } else { push(@Parts,"$row[80],,,,,$row[81],,,,,$row[82],,,,,$row[83]"); $SavedSub19Numbers = $row[83]; $Numero=20; }
+		if (($SavedSub19Numbers eq "") || ($SavedSub19Numbers eq " ") || ($SavedSub19Numbers eq "Null") || ($SavedSub19Numbers eq "NULL")) { } else { push(@Parts,"$row[84],,,,,$row[85],,,,,$row[86],,,,,$row[87]"); $SavedSub20Numbers = $row[87]; $Numero=21; }
+		if (($SavedSub20Numbers eq "") || ($SavedSub20Numbers eq " ") || ($SavedSub20Numbers eq "Null") || ($SavedSub20Numbers eq "NULL")) { } else { push(@Parts,"$row[88],,,,,$row[89],,,,,$row[90],,,,,$row[91]"); $SavedSub21Numbers = $row[91]; $Numero=22; }
+		if (($SavedSub21Numbers eq "") || ($SavedSub21Numbers eq " ") || ($SavedSub21Numbers eq "Null") || ($SavedSub21Numbers eq "NULL")) { } else { push(@Parts,"$row[92],,,,,$row[93],,,,,$row[94],,,,,$row[95]"); $SavedSub22Numbers = $row[95]; $Numero=23; }
+		if (($SavedSub22Numbers eq "") || ($SavedSub22Numbers eq " ") || ($SavedSub22Numbers eq "Null") || ($SavedSub22Numbers eq "NULL")) { } else { push(@Parts,"$row[96],,,,,$row[97],,,,,$row[98],,,,,$row[99]"); $SavedSub23Numbers = $row[99]; $Numero=24; }
+		if (($SavedSub23Numbers eq "") || ($SavedSub23Numbers eq " ") || ($SavedSub23Numbers eq "Null") || ($SavedSub23Numbers eq "NULL")) { } else { push(@Parts,"$row[100],,,,,$row[101],,,,,$row[102],,,,,$row[103]"); $SavedSub24Numbers = $row[103]; $Numero=25; }
+		if (($SavedSub24Numbers eq "") || ($SavedSub24Numbers eq " ") || ($SavedSub24Numbers eq "Null") || ($SavedSub24Numbers eq "NULL")) { } else { push(@Parts,"$row[104],,,,,$row[105],,,,,$row[106],,,,,$row[107]"); $SavedSub25Numbers = $row[107]; $Numero=26; }
+		$count++;
+	}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+
+	## RECONFIGURABLE?
+	if ($SavedReconfig eq "Y") { $ConfigIT = "<a href=\"$StartURLer('stank_reconfig.html?CMPartNum=$CMPartNum&ComingFrom=sysbrowse'$EndURLer\" onMouseOver=\"javascript:imageOnDHTML('configureit','ov');\" onMouseOut=\"javascript:imageOffDHTML('configureit','off');\"><img src=\"images/2k3/tables/but_configureit_off.gif\" width=\"81\" height=\"20\" name=\"configureit\" border=\"0\"></a>"; }
+	else { $ConfigIT = "<img src=\"images/tables/2k3/but_configureit_dn.gif\" width=\"81\" height=\"20\" name=\"configureit\" border=\"0\">"; }
+
+	$Counter = 0;
+	foreach (1 .. $Numero) {
+	$Counter++;
+
+		@MyParts = split(/,,,,,/, $Parts[0]);
+		shift(@Parts);
+		$Category = $MyParts[0];
+		$Type = $MyParts[1];
+		$Character = $MyParts[2];
+		$Parties = $MyParts[3];
+		## WHICH TYPE?
+		if ($Type eq "HIDE") { $IsHidden = "selected"; $IsShown = ""; }
+		else { $IsHidden = ""; $IsShown = "selected"; }
+		## WHICH CHARACTERISTIC?
+		if ($Character eq "All") { $IsSingle = ""; $IsMultiple = ""; $IsAll = "selected"; }
+		elsif ($Character eq "Multiple") { $IsSingle = ""; $IsMultiple = "selected"; $IsAll = ""; }
+		else { $IsSingle = "selected"; $IsMultiple = ""; $IsAll = ""; }
+	
+		if ($Character eq "All" && $Parties =~ ",") {
+			$EstaCuenta=0;
+			@SubParts = split(/,/, $Parties);
+			foreach $SubPart (@SubParts) {
+				$EstaCuenta++;
+				my $sth = $dbh->prepare("SELECT * FROM Products WHERE CMPartNum='$SubPart' ORDER BY ItemName ASC");
+				$sth->execute or die "Unable to execute query\n"; 
+				my @row;
+				while(@row = $sth->fetchrow_array) {
+					$MiCuesta = $row[21];
+					$Emblem = $row[16];
+					$Compania = $row[6];
+					$MiEsteNombre = $row[11];
+					$ItsDesc = $row[12];
+					if ($LastCATE eq "$Category") { $CATE = "NONE"; }
+					else { $CATE = "$Category"; }
+					push(@SubPartes,"$CATE,,,,,$Type,,,,,$MiEsteNombre,,,,,$SubPart,,,,,$Counter,,,,,$Character,,,,,$ItsDesc,,,,,$MiCuesta");
+					push(@SubTotales,"$MiCuesta,,,,,$Counter,,,,,$Character");
+					if ($Compania ne "" && $Compania ne "NONE") { push(@Companias,"$Compania"); }
+					$LastCATE = "$Category";
+				}
+				$sth->finish;
+			}
+		}
+		else {
+			@SubParts = split(/,/, $Parties);
+			my $sth = $dbh->prepare("SELECT * FROM Products WHERE CMPartNum='$SubParts[0]' ORDER BY ItemName ASC");
+			$sth->execute or die "Unable to execute query\n"; 
+			my @row;
+			while(@row = $sth->fetchrow_array) {
+				$SubPart = $row[1];
+				$MiEsteNombre = $row[11];
+				$ItsDesc = $row[12];
+				$Emblem = $row[16];
+				$Compania = $row[6];
+				$MiCuesta = $row[21];
+				push(@SubPartes,"$Category,,,,,$Type,,,,,$MiEsteNombre,,,,,$SubPart,,,,,$Counter,,,,,$Character,,,,,$ItsDesc,,,,,$MiCuesta");
+				push(@SubTotales,"$MiCuesta,,,,,$Counter,,,,,$Character");
+				if ($Compania ne "" && $Compania ne "NONE") { push(@Companias,"$Compania"); }
+			}
+			$sth->finish;	
+		}
+	
+	##------------------->>> Calculate total for all SUB components
+	$ComponentTotal=0;
+	$TCCount=0;
+	if ($Character eq "All") {
+		foreach $Total (@SubTotales) {
+			@ThisPrice = split(/,,,,,/, $Total);
+			if ($ThisPrice[1] eq $Counter) {
+				$TCCount++;
+				$ComponentTotal = $ThisPrice[0] + $ComponentTotal;
+			}
+		}
+	}
+
+	else {
+		foreach $Total (@SubTotales) {
+			@ThisPrice = split(/,,,,,/, $Total);
+			if ($ThisPrice[1] eq $Counter && $TCCount eq "0") {
+				$TCCount++;
+				$DaFirstObj = "$ThisPrice[3]";
+				$ComponentTotal = $ThisPrice[0] + $ComponentTotal;
+			}
+			elsif ($ThisPrice[1] eq $Counter && $ThisPrice[3] eq $DaFirstObj) {
+				$TCCount++;
+				$ComponentTotal = $ThisPrice[0] + $ComponentTotal;			
+			}
+		}
+	}
+
+	$ComponentTotal = sprintf("%.2f", $ComponentTotal);
+	push(@LeTotalistico, $ComponentTotal);
+
+	##------------------>>> CALCULATE TOTAL FOR ALL ITEMS IN SYSTEM
+	$AllCompTotal=0;
+	foreach $Totalistico (@LeTotalistico) {
+		$AllCompTotal = $AllCompTotal + $Totalistico;
+	}
+	$EntireTotal = sprintf("%.2f", $AllCompTotal);
+	}
+	
+	$PricingClass = "$LaClase";
+
+	## Snif cookie, if present test for logged in status
+	require ("cookiesnif.nsp");
+
+	if ($PricingClass eq "Desktop" && $Cookies{'DTV'} > 0) {
+		$MyTypo = 100 - $Cookies{'DTV'};
+		if ($MyTypo < 10) { $MyTypo = "." . "0" . "$MyTypo"; }
+		else { $MyTypo = ".$MyTypo"; }
+		$Markup = ($EntireTotal / $MyTypo);
+		$Markup = sprintf("%.2f", $Markup);
+		$EntireTotal = $Markup;
+	}
+	elsif ($PricingClass eq "Server" && $Cookies{'SRV'} > 0) {
+		$MyTypo = 100 - $Cookies{'SRV'};
+		if ($MyTypo < 10) { $MyTypo = "." . "0" . "$MyTypo"; }
+		else { $MyTypo = ".$MyTypo"; }
+		$Markup = ($EntireTotal / $MyTypo);
+		$Markup = sprintf("%.2f", $Markup);
+		$EntireTotal = $Markup;
+	}
+	elsif ($PricingClass eq "Notebook" && $Cookies{'NBV'} > 0) {
+		$MyTypo = 100 - $Cookies{'NBV'};
+		if ($MyTypo < 10) { $MyTypo = "." . "0" . "$MyTypo"; }
+		else { $MyTypo = ".$MyTypo"; }
+		$Markup = ($EntireTotal / $MyTypo);
+		$Markup = sprintf("%.2f", $Markup);
+		$EntireTotal = $Markup;
+	}
+	elsif ($Cookies{'UserType'} eq "CMManage" || $Cookies{'UserType'} eq "CMAdmin" || $Cookies{'UserType'} eq "CMSales" || $Cookies{'UserType'} eq "CMUser") {
+		$EntireTotal = $EntireTotal;
+	}
+	else {
+		$Markup = ($EntireTotal / .65);
+		$Markup = sprintf("%.2f", $Markup);
+		$EntireTotal = $Markup;
+	}
+	$EntireTotal = sprintf("%.2f", $EntireTotal);
+	
+##------------------>>>GATHER COPY FOR SYSTEM SERIES
+	if ($SavedCMSeries eq "Mako") { $CopyID = "0000000001"; $LeTitle = "mako"; }
+	if ($SavedCMSeries eq "GreatWhite") { $CopyID = "0000000002"; $LeTitle = "gw"; }
+	if ($SavedCMSeries eq "Thresher") { $CopyID = "0000000003"; $LeTitle = "thresher"; }
+	if ($SavedCMSeries eq "Tiger") { $CopyID = "0000000004"; $LeTitle = "tiger"; }
+	if ($SavedCMSeries eq "Reef") { $CopyID = "0000000005"; $LeTitle = "reef"; }
+
+	my $sth = $dbh->prepare("SELECT * FROM Copy WHERE CopyID='$CopyID'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$BodyCopy = $row[2];
+	}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+	
+	##--->> REFORMAT INCOMING DATA FOR PARSING
+	$DCount = "0";
+	@BodyCount = split(//, $BodyCopy);
+	foreach $BodyBody (@BodyCount) { 
+	$DCount++; 
+		if ($DCount >= "160" && ($BodyBody eq "." || $BodyBody eq "!")) { 
+			$BodyCopy = substr($BodyCopy, 0, $DCount); 
+		} 
+	}
+	
+	$TheLink1 = "products.html?title=$LeTitle&loadthis=$LeTitle";
+	$TheLink2 = "products.html?title=$LeTitle&loadsys=$LaParte";
+	
+
+##------------------>>>PUSH INFO INTO CAT'D POW2.NSF
+	$Imagen = "$IURL";
+	$CMParte = $LaParte;
+	$pow = `cat pow2k3.nsf`;
+	$pow =~ s/%%Imagen%%/$Imagen/g;
+	$pow =~ s/%%CMPartNum%%/$CMParte/g;
+	$pow =~ s/%%ItemName%%/$ElNombre/g;
+	$pow =~ s/%%LePrecio%%/$EntireTotal/g;
+	$pow =~ s/%%ElUno%%/$BodyCopy/g;
+	$pow =~ s/%%ElLinker1%%/$TheLink1/g;
+	$pow =~ s/%%ElLinker2%%/$TheLink2/g;
+	
+	$dbh->disconnect;
+
+## Finally it calls POW.NSF, which is the DHTML/HTML layout for the POW menu itself, 
+## Which is then fed the dynamic data necessary to make the menu functional to the user.
+## And now returning this dynamic data to the script calling this program...
+
+##return =true
+1;

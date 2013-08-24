@@ -1,0 +1,66 @@
+<script language="Javascript">
+<!--
+nmusd1ov = new Image();
+nmusd1ov.src = "sharktank/images/dynamics/new_nmusd1_ov.gif";
+nmusd1off = new Image();
+nmusd1off.src = "sharktank/images/dynamics/new_nmusd1_off.gif";
+
+nmusd2ov = new Image();
+nmusd2ov.src = "sharktank/images/dynamics/new_nmusd2_ov.gif";
+nmusd2off = new Image();
+nmusd2off.src = "sharktank/images/dynamics/new_nmusd2_off.gif";
+
+nmusd3ov = new Image();
+nmusd3ov.src = "sharktank/images/dynamics/new_nmusd3_ov.gif";
+nmusd3off = new Image();
+nmusd3off.src = "sharktank/images/dynamics/new_nmusd3_off.gif";
+
+nmusd4ov = new Image();
+nmusd4ov.src = "sharktank/images/dynamics/new_nmusd4_ov.gif";
+nmusd4off = new Image();
+nmusd4off.src = "sharktank/images/dynamics/new_nmusd4_off.gif";
+
+nmusd5ov = new Image();
+nmusd5ov.src = "sharktank/images/dynamics/new_nmusd5_ov.gif";
+nmusd5off = new Image();
+nmusd5off.src = "sharktank/images/dynamics/new_nmusd5_off.gif";
+
+nmusd6ov = new Image();
+nmusd6ov.src = "sharktank/images/dynamics/new_nmusd6_ov.gif";
+nmusd6off = new Image();
+nmusd6off.src = "sharktank/images/dynamics/new_nmusd6_off.gif";
+
+nmusd7ov = new Image();
+nmusd7ov.src = "sharktank/images/dynamics/new_nmusd7_ov.gif";
+nmusd7off = new Image();
+nmusd7off.src = "sharktank/images/dynamics/new_nmusd7_off.gif";
+//-->
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" rowspan="2" width="4"><img src="sharktank/images/dynamics/spacer_5px.gif" width="4" height="1"></td>
+    <td align="left" valign="top" rowspan="2"><nobr><img src="sharktank/images/dynamics/new_nmusd4_off.gif" width="112" height="109" usemap="#nmusd4" border="0" name="nmusd4"><img src="sharktank/images/dynamics/new_nmusd3_off.gif" width="90" height="71" align="top" usemap="#nmusd3" border="0" name="nmusd3"></nobr><br>
+      <img src="sharktank/images/dynamics/new_nmusd5_off.gif" width="82" height="44" usemap="#nmusd5" border="0" name="nmusd5"><br>
+      <img src="sharktank/images/dynamics/new_nmusd6_off.gif" width="97" height="68" usemap="#nmusd6" border="0" name="nmusd6"><br>
+      <img src="sharktank/images/dynamics/new_nmusd7_off.gif" width="165" height="56" usemap="#nmusd7" border="0" name="nmusd7"> 
+    </td>
+    <td align="left" valign="top" width="198" height="58"><nobr><img src="sharktank/images/dynamics/new_nmusd2_off.gif" width="93" height="58" usemap="#nmusd2" border="0" name="nmusd2"><img src="sharktank/images/dynamics/new_nmusd1_off.gif" width="105" height="54" usemap="#nmusd1" border="0" name="nmusd1"></nobr></td>
+    <td valign="middle" height="79" width="15" align="center"> <img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1"> 
+    </td>
+    <td valign="top" height="79" width="100%" align="left">&nbsp;</td>
+    <td valign="middle" height="79" width="15" align="center"> <img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1"> 
+    </td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top" colspan="4" height="450" width="100%"> !!!MYCONTENT!!! </td>
+  </tr>
+</table>
+<div id="divLinkage">
+<map name="nmusd1"><area shape="rect" coords="15,4,93,47" href="javascript:trigger('sharktank.html?title=nmusd&loadsys=NM10102P4&NMUSD=1');" OnMouseOver="javascript:nmusd1.src = nmusd1ov.src;overlib('<center><font class=\'overDiv\'>Thresher Series&reg; Pentium&reg; 4 Desktop</font></center>')" onMouseOut="javascript:nmusd1.src = nmusd1off.src;return nd();"></map>
+<map name="nmusd2"><area shape="rect" coords="7,3,86,53" href="javascript:trigger('sharktank.html?title=nmusd&loadsys=NM10102L4&NMUSD=1');" OnMouseOver="javascript:nmusd2.src = nmusd2ov.src;overlib('<center><font class=\'overDiv\'>Reef Series&reg; Pentium&reg; 4 Laptop</font></center>')" onMouseOut="javascript:nmusd2.src = nmusd2off.src;return nd();"></map>
+<map name="nmusd3"><area shape="rect" coords="11,20,84,58" href="javascript:trigger('sharktank.html?title=nmusd&loadsys=NM10102L3&NMUSD=1');" OnMouseOver="javascript:nmusd3.src = nmusd3ov.src;overlib('<center><font class=\'overDiv\'>Reef Series&reg; Pentium&reg; III Laptop</font></center>')" onMouseOut="javascript:nmusd3.src = nmusd3off.src;return nd();"></map>
+<map name="nmusd4"><area shape="rect" coords="49,11,105,102" href="javascript:trigger('sharktank.html?title=nmusd&loadsys=NM10102P3S&NMUSD=1');" OnMouseOver="javascript:nmusd4.src = nmusd4ov.src;overlib('<center><font class=\'overDiv\'>Tiger Series&reg; Pentium&reg; III Server</font></center>')" onMouseOut="javascript:nmusd4.src = nmusd4off.src;return nd();"></map>
+<map name="nmusd5"><area shape="rect" coords="2,11,77,36" href="javascript:trigger('sharktank.html?title=nmusd&loadsys=NM10102XS&NMUSD=1');" OnMouseOver="javascript:nmusd5.src = nmusd5ov.src;overlib('<center><font class=\'overDiv\'>Great White Series&reg; Xeon&#153; Server</font></center>')" onMouseOut="javascript:nmusd5.src = nmusd5off.src;return nd();"></map>
+<map name="nmusd6"><area shape="rect" coords="11,6,88,59"></map>
+<map name="nmusd7"><area shape="rect" coords="78,1,161,39"></map>
+</div>

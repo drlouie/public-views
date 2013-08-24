@@ -1,0 +1,67 @@
+#!/usr/bin/perl5 -s
+
+## ----------------------->>> NEXT, IF USER WANTS TEXT/ASSCI MAIL SEND IT
+if ($EmailType eq "TEXT") {
+	# SEND TEXT/ASCCI EMAIL TO USER
+	my $mailprog = '/usr/sbin/sendmail';
+	open(MAIL,"|$mailprog -t");
+	print MAIL "To: $TO\n";
+	print MAIL "From: $FROM\n";
+	print MAIL "Subject: $SUBJECT\n\n";
+	print MAIL "$GREETING";
+	print MAIL "$BODY";
+	print MAIL "$FOOTER";
+	print MAIL "$ATTACHMENTS";
+	close (MAIL);
+
+}	
+## ----------------------->>> ELSE, SEND HTML MAIL, DEFAULT
+else {
+		my $SenderIn = "$FROM";
+		my $RecipientIn = "$TO";
+		my $SubjectIn = "$SUBJECT";
+		my $HTMLTitleIn = "$MYHTMLTITLE";
+		my $HTMLStampIn = "$MYHTMLSTAMP";
+		my $HTMLAttachment = "$MYHTMLATTACH";
+		use lib "/www/htdocs/MIME-Lite-2.117/lib/";
+    	use MIME::Lite;
+        	my $msg = MIME::Lite->new(
+            	         From    =>$SenderIn,
+                	     To      =>$RecipientIn,
+                    	 Subject =>$SubjectIn,
+                     	Type    =>'multipart/related'
+                     	);
+        	$msg->attach(Type => 'text/html',
+                     	Data => qq{ 
+<html>
+<head>
+$HTMLTitleIn
+<LINK REL="STYLESHEET" HREF="http://www.coastlinemicro.com/Mailbox/commoncss.html" Type="text/css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr height="40">
+<td rowspan="2" width="15%" align="left" valign="top"><a href="http://www.coastlinemicro.com/"><img src="http://www.coastlinemicro.com/Mailbox/images/top_cm_logo.jpg" width="116" height="37" border="0"></a></td>
+<td rowspan="2" align="center" valign="bottom" width="30%">&nbsp;</td>
+<td width="55%" align="right" valign="bottom"><img src="http://www.coastlinemicro.com/Mailbox/images/god_bless_america.gif" width="118" height="35"></td>
+</tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="5"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="5"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#8F8FAB" height="2"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="2"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+</table>
+<table width="95%" align="center" cellspacing="0" cellpadding="0" border="1" bordercolor="#8F8FAB" class="comtableborder"><tr><td width="100%" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="http://www.coastlinemicro.com/Mailbox/images/top_tablebg_main.jpg" height="100"><tr><td width="30%" valign="top"><img src="http://www.coastlinemicro.com/Mailbox/images/illus_main.jpg" width="250" height="100"></td><td width="25%">&nbsp;</td><td align="left" valign="top"><img src="http://www.coastlinemicro.com/Mailbox/images/title_main.jpg" width="300" height="100"></td></tr></table>
+$HTMLStampIn
+$HTMLAttachment
+<table width="100%" background="http://www.coastlinemicro.com/Mailbox/images/bot_frame_bg.jpg" height="56" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td width="55%" align="left" height="56">&nbsp;</td></tr></table>
+</td></tr></table>
+<br>
+</body></html>
+								}
+                     );
+        $msg->send();
+}
+
+##return =true
+1;

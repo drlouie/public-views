@@ -1,0 +1,35 @@
+################################
+## prepare Admin's Equote PDF ##
+################################
+
+### FEED HTML TEMPLATE 
+## html template file
+#if ($FORM{'SEAGATE'} eq "1" || $FORM{'QUEST'} eq "1") { $leTemplateAdminEquote = `cat pdf/receipt.html.nsf`; }
+#$leTemplateAdminEquote = `cat pdf/equote.html.nsf`;
+#$leTemplateAdminEquote =~ s/%%OrderID%%/$EQCNT/g;
+#$leTemplateAdminEquote =~ s/%%OrderDate%%/$date/g;
+#$leTemplateAdminEquote =~ s/%%ShipPackage%%/N\/A/g;
+#$leTemplateAdminEquote =~ s/%%PayTerms%%/Pre-Defined/g;
+#$leTemplateAdminEquote =~ s/%%QuotedTo%%/$cualQuotedto/g;
+#$leTemplateAdminEquote =~ s/%%ShipTo%%/$cualShipto/g;
+#$leTemplateAdminEquote =~ s/%%NetTotal%%/$TotalPrice/g;
+#$leTemplateAdminEquote =~ s/%%TaxTotal%%/0.00/g;
+#$leTemplateAdminEquote =~ s/%%FinalTotal%%/\$$TotalPrice/g;
+#$leTemplateAdminEquote =~ s/%%DATADROP%%/$BUNCHADATA/g;
+
+
+$leTemplateAdminEquote = `cat pdf/newquote.html.nsf`;
+$leTemplateAdminEquote =~ s/%%MuaDate%%/$date/g;
+$leTemplateAdminEquote =~ s/%%MuaINumber%%/$EQCNT/g;
+$leTemplateAdminEquote =~ s/%%MuaBillTo%%/N\/A/g;
+$leTemplateAdminEquote =~ s/%%MuaShipTo%%/$cualShipto/g;
+$leTemplateAdminEquote =~ s/%%MuaPO%%/$FORM{'PurchOrd'}/g;
+$leTemplateAdminEquote =~ s/%%MuaShippedOn%%/Pending/g;
+$leTemplateAdminEquote =~ s/%%MuaRep%%/$cualRep/g;
+$leTemplateAdminEquote =~ s/%%MuaTerms%%/Pre-Defined Terms/g;
+$leTemplateAdminEquote =~ s/%%MuaCourier%%/$FORM{'Courier'} ($FORM{'Package'})/g;
+$leTemplateAdminEquote =~ s/%%MuaTodos%%/$BUNCHADATA/g;
+$leTemplateAdminEquote =~ s/%%MuaSubTotal%%/$TotalPrice/g;
+$leTemplateAdminEquote =~ s/%%MuaShipCost%%/0.00/g;
+$leTemplateAdminEquote =~ s/%%MuaTaxes%%/0.00/g;
+$leTemplateAdminEquote =~ s/%%MuaTotal%%/\$$TotalPrice/g;

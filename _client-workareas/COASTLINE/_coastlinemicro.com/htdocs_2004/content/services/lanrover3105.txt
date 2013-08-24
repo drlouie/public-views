@@ -1,0 +1,62 @@
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>Security Solutions</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr>
+<td width="2%" valign="top">&nbsp;</td>
+<td width="96%" valign="top">
+<font color="#333366" size="2" face="Verdana, Arial, Helvetica, sans-serif" style="line-height:20px"><b><a href="pdf/3105Datasheet.pdf" style="color:#333366;"><img src="images/shiva3105.jpg" width="223" height="94" border="0" align="right" style="margin-left:20px;margin-bottom:20px;"></a>LanRover 3105 Security Gateway</b><br>Ideal for Small to Midsize Offices or for Branch Sites in Large Enterprises<br>
+  <br>
+  The Shiva&reg; LanRover&#153; 3105 Security Gateway is an end-to-end firewall and VPN solution that offers robust authentication, high performance data encryption, dynamic routing, and stateful inspection firewall functionality. The LanRover 3105 enables you to significantly cut the telecommunications costs associated with dial-up, leased-line and frame relay connections by leveraging the Internet to securely provide remote access, LAN-to-LAN and Extranet connectivity.<br><br><br>
+  <ol type="circle"><b>Features:<br></b>
+  <li>A widely-deployed, proven secure VPN solution</li>
+  <li>Up to 20 Mbps 3DES or 30 Mbps AES performance</li>
+  <li>ICSA-certified stateful inspection firewall</li>
+  <li>Integrated IP router & DHCP server</li>
+  <li>Redundancy for mission-critical applications means high availability</li>
+  <li>Administrative flexibility via Web-based management and centralized remote management</li>
+  <li>Supports portable VPN on wireless clients, PDAs and other hand-held devices</li>
+  <li>Expands network reach by enabling remote users to connect from multiple operating systems</li>
+  <li><a href="pdf/3105Datasheet.pdf" style="color:#333366;">View LanRover 3105 Datasheet by Shiva</a></li>
+  </ol>
+  </font>
+
+
+
+</td>
+<td width="2%" valign="top" align="center">&nbsp;</td>
+</tr>
+
+</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>&nbsp;</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

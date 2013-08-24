@@ -1,0 +1,204 @@
+#!/usr/bin/perl5 -s
+
+use LWP::Simple;
+use CGI;
+use CGI::Carp qw(fatalsToBrowser);
+my $url = "http://wwwapps.ups.com/WebTracking/processInputRequest?HTMLVersion=5.0&sort_by=status&term_warn=yes&tracknums_displayed=5&TypeOfInquiryNumber=T&loc=en_US&InquiryNumber1=$FORM{'Package'}&InquiryNumber2=$FORM{'Package2'}&InquiryNumber3=$FORM{'Package3'}&InquiryNumber4=$FORM{'Package4'}&InquiryNumber5=$FORM{'Package5'}&AgreeToTermsAndConditions=yes&track=";
+my $page = get ($url);
+$page =~ s/CCCC99/9EC4ED/gi;
+
+
+#### GOOD CALL
+if ($page =~ "TRACKING" && $page =~ "STATUS" && $page =~ "detailed" && $page =~ "report") {
+	$leOne = "<TABLE BORDER=\"0\" CELLSPACING=\"0\" CELLPADDING=\"0\" WIDTH=\"600\">";
+	@splitted = split(/$leOne/,$page);
+	$elImagen = "";
+	$elImagenReal = "";
+	$splitted[4] =~ s/\/tracking\/images\/engua_detail.gif/images\/spacer.gif/gi;
+	$splitted[4] =~ s/<TD/<TD CLASS=stextbig STYLE=\"color:#FFC256\"/gi;
+	print "<center>";
+	print "<TABLE BORDER=\"0\" CELLSPACING=\"0\" CELLPADDING=\"10\" WIDTH=\"100%\">";
+	print "<tr align=\"center\" bgcolor=\"#673301\" height=\"30\" class=\"stextbig\" style=\"color:#FFC256\"><td><nobr>Package ID(s)</nobr></td><td>Status</td><td colspan=\"2\"><nobr>Package Information</nobr></td></tr>";
+	print "$splitted[4]";
+	print "</center>";
+}
+
+
+#	print $page;
+	
+if ($page =~ "Delivered" && $page =~ "Status" && $page =~ "Signed" || ($page =~ "Exception")) {
+	$pieza1 = "<div class=\"modulepad\"><div class=\"modpadbullet\">";
+	$pieza2 = "<td valign=\"bottom\" width=\"155\">";
+	$piezaStartDeliveryInformation = '<table border="0" cellpadding="0" cellspacing="0">';
+	$piezaEndDeliveryInformation = '<!-- -------------------------- -->';
+	$piezaSDelInfo = "<td valign=\"bottom\" width=\"155\">";
+	$pieza3 = "<td valign=\"top\" width=\"155\">";
+	$pieza4 = "Signed by:";
+	$pieza5 = "Service Type:";
+	$pieza6 = "Tracking results provided by UPS:";
+	$tede = "</td>";
+	$tablaended = "</table>";
+	@splittedLines = split(/\n/,$page);
+
+	## RUN EACH RETURNED LINE
+	$countlines=0;
+	$countSDI = 0;
+	$countEDI = 0;
+	$startSDC = 0;
+	foreach $unaLinea (@splittedLines) {
+		$countlines++;
+
+		if ($unaLinea =~ "$piezaStartDeliveryInformation") {
+			##counting this line for # 3 (should be start table part of delivery results)
+			$countSDI++;
+			if ($countSDI eq "2") {
+				$ds1 = "$countlines";
+			}
+			##4th <TABLE> equals 2nd delivery results table
+			if ($countSDI eq "3") {
+				$ds2 = "$countlines";
+			}
+			##5th <TABLE> equals 3rd delivery results table
+			if ($countSDI eq "4") {
+				$ds3 = "$countlines";
+			}
+			##6th <TABLE> equals 4th delivery results table
+			if ($countSDI eq "5") {
+				$ds4 = "$countlines";
+			}
+			##7th <TABLE> equals 5th delivery results table
+			if ($countSDI eq "6") {
+				$ds5 = "$countlines";
+			}
+		}
+		if ($unaLinea =~ "$piezaEndDeliveryInformation") {
+			##counting this line for # 1 (should be start table part of delivery results)
+			$countEDI++;
+			##1st </TABLE> equals 1st delivery results table
+			if ($countEDI eq "1") {
+				$de1 = "$countlines";
+			}
+			##2nd </TABLE> equals 2nd delivery results table
+			if ($countEDI eq "2") {
+				$de2 = "$countlines";
+			}
+			##3rd <TABLE> equals 3rd delivery results table
+			if ($countEDI eq "3") {
+				$de3 = "$countlines";
+			}
+			##4th <TABLE> equals 4th delivery results table
+			if ($countEDI eq "4") {
+				$de4 = "$countlines";
+			}
+			##5th <TABLE> equals 5th delivery results table
+			if ($countEDI eq "5") {
+				$de5 = "$countlines";
+			}
+		}
+
+
+	
+	 	if ($unaLinea =~ "$pieza1") { 
+			@splitLine = split(/$pieza1/,$unaLinea);
+	 		push(@TrackNums,$splitLine[1]);
+		}
+
+		elsif ($unaLinea =~ "$pieza6") {
+			$unaLinea =~ s/\t//g;
+			$ThanksUPS = "$unaLinea"; 
+			$ThanksUPS =~ s/provided by/supplied by/g;
+			$ThanksUPS =~ s/UPS/<b>UPS.com<\/b>/g;
+			$ThanksUPS =~ s/:/ on/g;
+			$THANKS = "UPS Tracking Module engineered by <a href=\"mailto:drlouie\@tstonramp.com?Subject=UPS Tracking Module\" style=\"color:#FFC256\">drlouie\@tstonramp.com</a><br><br>$ThanksUPS";
+		}
+
+
+
+		
+
+		
+
+		$counta++;
+	}
+	$CountTracks=0;
+
+	foreach $TN (@TrackNums) { 
+		#print "Track#: $TN<br>"; 
+		$CountTracks++; 
+	}
+
+	
+
+
+#print "<script>alert('$ds1 $de1');</script>";
+
+		$mylinea = 0;
+		foreach $cual (@splittedLines) {
+			$mylinea++;
+			if ($mylinea eq "$ds1") { $myfirst = "$cual"; }
+			elsif ($mylinea > "$ds1" && $mylinea < "$de1") { $myfirst = $myfirst . "$cual"; }
+			elsif ($mylinea > "$ds1" && $mylinea eq "$de1") { $myfirst = $myfirst . "$cual" . "</table>"; }
+
+			if ($mylinea eq "$ds2") { $mysecond = "$cual"; }
+			elsif ($mylinea > "$ds2" && $mylinea < "$de2") { $mysecond = $mysecond . "$cual"; }
+			elsif ($mylinea > "$ds2" && $mylinea eq "$de2") { $mysecond = $mysecond . "$cual" . "</table>"; }
+
+			if ($mylinea eq "$ds3") { $mythird = "$cual"; }
+			elsif ($mylinea > "$ds3" && $mylinea < "$de3") { $mythird = $mythird . "$cual"; }
+			elsif ($mylinea > "$ds3" && $mylinea eq "$de3") { $mythird = $mythird . "$cual" . "</table>"; }
+
+			if ($mylinea eq "$ds4") { $myfourth = "$cual"; }
+			elsif ($mylinea > "$ds4" && $mylinea < "$de4") { $myfourth = $myfourth . "$cual"; }
+			elsif ($mylinea > "$ds4" && $mylinea eq "$de4") { $myfourth = $myfourth . "$cual" . "</table>"; }
+
+			if ($mylinea eq "$ds5") { $myfifth = "$cual"; }
+			elsif ($mylinea > "$ds5" && $mylinea < "$de5") { $myfifth = $myfifth . "$cual"; }
+			elsif ($mylinea > "$ds5" && $mylinea eq "$de5") { $myfifth = $myfifth . "$cual" . "</table>"; }
+			
+		}
+	print "<center>";
+	print "<TABLE BORDER=\"0\" CELLSPACING=\"0\" CELLPADDING=\"10\" WIDTH=\"100%\">";
+	print "<tr align=\"center\" bgcolor=\"#673301\" height=\"30\" class=\"stextbig\" style=\"color:#FFC256\"><td>Package ID(s)</td><td>Status</td><td colspan=\"2\">Package Information</td></tr>";
+	$RunTrack=0;
+	foreach (1 .. $CountTracks) {
+		if ($RunTrack eq "0") { $myDelInfo = "$myfirst"; }
+		if ($RunTrack eq "1") { $myDelInfo = "$mysecond"; }
+		if ($RunTrack eq "2") { $myDelInfo = "$mythird"; }
+		if ($RunTrack eq "3") { $myDelInfo = "$myfourth"; }
+		if ($RunTrack eq "4") { $myDelInfo = "$myfifth"; }
+		$width155 = 'width="155"';
+		$newwidth155 = 'class="stextbig"';
+		$myDelInfo =~ s/$width155/$newwidth155/gi;
+		$tdaligntop = '<td valign="top">';
+		$newtdaligntop = '<td valign="top" class="stextbig" style="color:#FFFFFF">';
+		$tdalignbot = '<td valign="bottom" class="stextbig">';
+		$newtdalignbot = '<td valign="bottom" class="stextbig" style="color:#FFFFFF">';
+		$myDelInfo =~ s/$tdaligntop/$newtdaligntop/gi;
+		$myDelInfo =~ s/$tdalignbot/$newtdalignbot/gi;		
+		print "<tr valign=\"top\" align=\"center\" height=\"30\" class=\"stextbig\" style=\"color:#FFFFFF\"><td><nobr>$TrackNums[$RunTrack]</nobr></td><td>Delivered</td><td colspan=\"2\" align=\"left\"> $myDelInfo </td></tr>";
+		$RunTrack++;
+	}
+	print "<tr align=\"center\" bgcolor=\"#673301\" height=\"20\" class=\"stextbig\" style=\"color:#FFC256\"><td colspan=\"4\">$THANKS</td></tr>";
+	print "</table>";
+	print "</center>";
+}
+
+#### BAD CALL
+elsif ($page =~ "invalid") {
+	print "<font class=\"stextbig\" style=\"color:#FFC256\">One or more of the numbers you entered are not valid UPS Tracking Numbers. These UPS Tracking Number(s) are not valid. Please try again...<br><br>UPS Tracking Module engineered by <a href=\"mailto:drlouie\@tstonramp.com?Subject=UPS Tracking Module\" style=\"color:#FFC256\">drlouie\@tstonramp.com</a><br></font>";
+}
+
+elsif ($page =~ "could not find") {
+	print "<font class=\"stextbig\" style=\"color:#FFC256\">We could not find information for this Tracking Number.  Make sure the Tracking Number is correct and try again.<br><br>UPS Tracking Module engineered by <a href=\"mailto:drlouie\@tstonramp.com?Subject=UPS Tracking Module\" style=\"color:#FFC256\">drlouie\@tstonramp.com</a><br></font>";
+}
+
+#### BAD CALL
+elsif ($page =~ "Unable" && $page =~ "track" && $page =~ "shipment") {
+	print "<font class=\"stextbig\" style=\"color:#FFC256\">We were unable to track the package for the number you entered. Please try again...<br><br>UPS Tracking Module engineered by <a href=\"mailto:drlouie\@tstonramp.com?Subject=UPS Tracking Module\" style=\"color:#FFC256\">drlouie\@tstonramp.com</a><br></font>";
+}
+
+else {
+	print "<font class=\"stextbig\" style=\"color:#FFC256\">We were unable to track the package for the number you entered. Please try again...<br><br>UPS Tracking Module engineered by <a href=\"mailto:drlouie\@tstonramp.com?Subject=UPS Tracking Module\" style=\"color:#FFC256\">drlouie\@tstonramp.com</a><br></font>";
+}
+
+1;

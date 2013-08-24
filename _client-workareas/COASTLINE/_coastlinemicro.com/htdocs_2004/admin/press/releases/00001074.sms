@@ -1,0 +1,16 @@
+#!/usr/bin/perl5 -w
+
+$date = "November 12, 2000";
+
+$title = "Coastline Micro unveils its new E-Com enabled Web site";
+
+$para1 = "Coastline Micro today posted its newly re-designed e-com enabled site. The new site takes the company to a new frontier in selling and marketing their award winning computer solutions. The site gives end-users the ability to fully customize and configure any Coastline Micro system directly via their Internet browser. Once the end-user has completed the system configuration they want, he/she can purchase the system directly online or they can send the new system configuration directly to the Coastline Micro Sales Representative handling their account. This enables the end-user to fully customize their next system right online, while keeping Coastline Micro's award winning customer service just a phone call or email message away. <br><br>CoastlineMicro.com has also been given a complete overhaul in function, look/layout and is ported to function properly on the latest versions of Internet Explorer, Netscape Navigator and AOL. The new functional layout gives the user total control of its navigation, search, feedback and customer support features. Making it easy for any given user to not only navigate and gather information as necessary throughout the site, it tends to complete its duties in a clean and sophisticated manner without ever confusing the end-user with too much or too little information. <br><br>NetMedia Solutions is the creator of the award winning CoastlineMicro.com interface, layout and functional programming and design. NetMedia Solutions consists of a team of highly qualified and inventive technical gurus who are in business to take their each and every corporate client a step above the competition by providing high-class Internet content and solutions. NetMedia Solutions is inclined to do whatever it takes to not only meet, but exceed your company's delivery expectations. Ask Dave Rhomberg, Coastline Micro's Director of Technology, and you will see that we always deliver on a promise, on time every single time. They also try to keep within your corporate budget no matter what size of the project at hand. Guaranteed! ";
+
+$location = "LOS ANGELES, CA";
+
+$myfoot = "00001010";
+
+$partners = "00001024";
+
+##return = true
+1;

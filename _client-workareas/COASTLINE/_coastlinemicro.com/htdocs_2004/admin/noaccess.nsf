@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Coastline Micro, Inc. - Get My Password</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" height="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="25%" height="50">&nbsp;</td>
+    <td width="50%" height="50">&nbsp;</td>
+    <td width="25%" height="50">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%">&nbsp;</td>
+      <td align="center" width="50%" valign="middle"><img src="images/splash_logos.jpg" width="166" height="164"><br>
+        <br>
+        <font face="verdana,arial,helvetica" size="1" color="#333366"><b>Access Denied</b><br>
+        <br>
+        </font> 
+        <table width="350" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="100%"><font face="verdana,arial,helvetica" size="1" color="#333366">You do not have access to the administrative function you requested. If you believe you have recieved this message in error please contact your Supervisor or Manager for help.<br><br><center><form><input type="button" value="Go Home!" onClick="javascript:parent.location.href='index.html'"></form></center></font></td>
+          </tr>
+        </table>
+    </td>
+      <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%" height="50">&nbsp;</td>
+    <td width="50%" height="50">&nbsp;</td>
+    <td width="25%" height="50">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

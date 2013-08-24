@@ -1,0 +1,47 @@
+<script language="Javascript">
+<!--
+products1ov = new Image();
+products1ov.src = "sharktank/images/dynamics/new_products1_ov.gif";
+products1off = new Image();
+products1off.src = "sharktank/images/dynamics/new_products1_off.gif";
+
+products2ov = new Image();
+products2ov.src = "sharktank/images/dynamics/new_products2_ov.gif";
+products2off = new Image();
+products2off.src = "sharktank/images/dynamics/new_products2_off.gif";
+
+products3ov = new Image();
+products3ov.src = "sharktank/images/dynamics/new_products3_ov.gif";
+products3off = new Image();
+products3off.src = "sharktank/images/dynamics/new_products3_off.gif";
+
+products4ov = new Image();
+products4ov.src = "sharktank/images/dynamics/new_products4_ov.gif";
+products4off = new Image();
+products4off.src = "sharktank/images/dynamics/new_products4_off.gif";
+//-->
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="left" valign="top" rowspan="2" width="206"><img src="sharktank/images/dynamics/new_products2_off.gif" width="206" height="101" usemap="#products2" border="0" name="products2"><br>
+      <img src="sharktank/images/dynamics/new_products3_off.gif" width="92" height="81" usemap="#products3" border="0" name="products3"><br>
+      <img src="sharktank/images/dynamics/new_products4_off.gif" width="181" height="102" usemap="#products4" border="0" name="products4"> 
+    </td>
+    <td align="left" valign="top" width="201" height="79"><img src="sharktank/images/dynamics/new_products1_off.gif" width="201" height="79" usemap="#products1" border="0" name="products1"></td>
+    <td valign="top" height="79" width="241">&nbsp;</td>
+    <td valign="middle" height="79" width="15" align="center"> <img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1"> 
+    </td>
+    <td valign="top" height="79" width="100%" align="left"><font class="ctext">&nbsp;</font></td>
+    <td valign="middle" height="79" width="15" align="center"> <img src="sharktank/images/dynamics/spacer_5px.gif" width="15" height="1"> 
+    </td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top" colspan="5" height="450" width="100%"> 
+
+!!!MYCONTENT!!!
+
+    </td>
+  </tr>
+</table>
+<div id="divLinkage"> 
+</div>

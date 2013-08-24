@@ -1,0 +1,44 @@
+ 
+<table width="95%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Coastline 
+            Micro's Heritage</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> <font class="regtextnobold"> 
+                              <p>Since 1989 Coastline Micro has been assembling quality built-to-order computer systems, including servers, workstations and PCs, for VARs and resellers nationwide. In that time we have built a reputation among our loyal customer base as a company that values integrity, quality and strong working relationships. We have continued to expand our selection of built-to-order and pre-built products, as well as our scope of services. Today Coastline Micro is a leading provider of end-to-end, high-quality, cost-effective computing and networking solutions.<br>
+                                <br>We understand that our success is measured by the success of the customers we work with. Every member of the Coastline Micro team remains unified in accomplishing our corporate mission: to improve your bottom line by quickly, efficiently and cost-effectively delivering comprehensive computing solutions. 
+                              </p>
+                              </font> </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

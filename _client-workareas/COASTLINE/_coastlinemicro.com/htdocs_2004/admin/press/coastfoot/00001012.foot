@@ -1,0 +1,10 @@
+#!/usr/bin/perl5 -w
+
+$foottitle = "About CM's Customer Service";
+
+$footlink = "http://www.coastlinemicro.com/pointers/customersupport.html";
+
+$footbody = "A little something about this...";
+
+##return = true
+1;

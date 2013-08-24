@@ -1,0 +1,50 @@
+#!/usr/bin/perl5 -w
+
+require ("parse_query.nsp");
+
+require 'cookie.lib';
+
+if (&GetCookies('Logged')) {
+	&GetCookies('CMCustNum');
+	&GetCookies('Username');
+	&GetCookies('UserType');
+	&GetCookies('FirstName');
+	&GetCookies('LastName');
+	&GetCookies('ExtraAccess');
+	## IF USER IS LOGGED AND IS A COASTLINE MICRO USER LET HIM INTO ADMIN SECTION
+	if (($Cookies{'UserType'} eq "CMManage") || ($Cookies{'UserType'} eq "CMAdmin") || ($Cookies{'UserType'} eq "CMSales") || ($Cookies{'UserType'} eq "CMUser")) { $exit = "0"; }
+	## ELSE DENY ACCESS
+ 	else { 	
+
+		print "<html><head><title>Access Denied</title>";
+		print "<script language=\"Javascript\">";
+		print "setTimeout('refreshIt()',1000);";
+		print "function refreshIt() {";
+		print "parent.location.href='http://www.coastlinemicro.com/admin/login.cgi?lasturl=$lasturl';";
+		print "}";
+		print "</script>";
+		print "</head><body>";
+		print "</body></html>";
+		$exit = "1";
+
+	}
+}
+
+elsif ($noGO eq "1") {
+	$justreturn = 1;
+}
+
+else {
+		print "<html><head><title>Access Denied</title>";
+		print "<script language=\"Javascript\">";
+		print "setTimeout('refreshIt()',1000);";
+		print "function refreshIt() {";
+		print "parent.location.href='https://www.coastlinemicro.com/admin/login.cgi?lasturl=$lasturl';";
+		print "}";
+		print "</script>";
+		print "</head><body>";
+		print "</body></html>";
+		$exit = "1";
+}
+
+1;

@@ -1,0 +1,327 @@
+#!/usr/bin/perl5 -s
+
+###########################################################################################################
+# Company: ©2001 NetMedia Solutions                                                                       #
+# Date: Saturday, September 21, 2001                                                                      #
+# Location: Los Angeles County, California, United States of America                                      #
+# Made By: Luis Rodriguez (drlouie)                                                                       #
+# Email: Drlouie@NetMediaSol.com                                                                          #
+#                                                                                                         #
+# This program cannot be duplicated, distributed or re-used for any other purpose other than its original #
+# intended purpose and function. You may request NetMedia Solutions for a copy of the script,             #
+# personalized to fit your exact needs for a small re-programming fee.                                    #
+###########################################################################################################
+
+$tablewidth = "90%"; $t1 = "5"; $t2 = "64%"; $t3 = "18%"; $t4 = "18%"; $t5 = "100%";
+
+$CMPartNum = "$FORM{'CMPartNum'}";
+$PricingClass = "$FORM{'PricingClass'}";
+$ItemName = "$FORM{'ItemName'}";
+$Warranty = "$FORM{'Warranty'}";
+$CMSeries = "$FORM{'CMSeries'}";
+$LasPartes = $FORM{'LasPartes'};
+$ElPrecio = $FORM{'ElPrecio'};
+$ElPeso = $FORM{'ElPeso'};
+$Image = $FORM{'Image'};	
+
+## ----------------->>> BACK BUTTON
+$GoBack = "<a href=\"javascript:history.go(-1);\"><img src=\"images/tables/icon_back_on.gif\" width=\"60\" height=\"20\" name=\"back\" border=\"0\"></a>";
+
+##---------------------------->>> CONFIGURE SYSTEM INFORMATION AND IMAGERY FOR OUTPUT
+$MainTitle = "$CMSeries&#153; Series System Saver";
+if ($CMSeries eq "GreatWhite") { $ITitle = "gw"; }
+elsif ($CMSeries eq "Mako") { $ITitle = "mako"; }
+elsif ($CMSeries eq "Reef") { $ITitle = "reef"; }
+elsif ($CMSeries eq "Tiger") { $ITitle = "tiger"; }
+elsif ($CMSeries eq "Thresher") { $ITitle = "thresher"; }
+else { $ITitle = "store"; }
+
+## RECONFIGURABLE?
+$ConfigIT = "<img src=\"images/tables/but_configureit_dn.gif\" width=\"81\" height=\"20\" name=\"configureit\" border=\"0\">";
+
+
+## ----------------->>> CART
+if (($FORM{'LasPartes'} ||  $FORM{'CID'}) && $Cookies{'Echado'} eq "YES" && $FORM{'CartSaveEQuote'} eq "CART") {
+
+use DBI;
+my $dbh = DBI->connect("DBI:mysql:coastline","drlouie","chinga2") or die "Unable to connect to database: <b>coastline</b>\n"; 
+$dbh->{RaiseError} = 1; 
+
+
+	## SAVE CONFIG
+	if ($FORM{'CartSaveEQuote'} eq "CART") { 
+		my $sth = $dbh->prepare("INSERT INTO Configs (ConfigID, Parent, Username, CMCustNum, OrderIDs, 
+								CMSeries, ProductIDs, TotalPrice, TotalWeight, AddedOn, ModifiedBy, ModifiedOn)
+	
+								VALUES (Null, '$CMPartNum', '$Cookies{'GID'}', '$Cookies{'CeeEmmNo'}', Null, '$CMSeries', 
+								'$LasPartes', '$ElPrecio', '$ElPeso', Null, Null, '')");
+		$sth->execute or die "Unable to execute query\n"; 
+		$sth->finish;
+	
+		## GET LAST INSERT ID
+		my $sth = $dbh->prepare("SELECT LAST_INSERT_ID() FROM Configs");
+		$sth->execute or die "Unable to execute query\n"; 
+		my $row = $sth->fetchrow_arrayref;
+		$LastOne = $row->[0];
+		$sth->finish;
+		$LastOne = "$LastOne";
+	}
+	elsif ($FORM{'CID'}) {
+		if ($Cookies{'CNFIGS'} ne "") {
+			@EstosCNFIGS = split(/,/, $Cookies{'CNFIGS'});
+			foreach $EsteCNFIG (@EstosCNFIGS) {
+				@muaCF = split(/-----/, $EsteCNFIG);
+				$ConfigID = "$muaCF[0]";
+				$siCuenta = "$muaCF[1]";
+				if ($ConfigID eq "$FORM{'CID'}") { $siCuenta++; }
+				push(@thyConfigs, "$muaCF[0]-----$siCuenta");
+			}
+			$tFCount = 0;
+			foreach $thyCFG (@thyConfigs) {
+				$tFCount++;
+				if ($tFCount eq "1") { $LastOne = "$thyCFG"; }
+				else { $LastOne = "$LastOne" . "," . "$thyCFG"; }
+			}
+		}
+		else {
+			$LastOne = "$FORM{'CID'}";
+		}
+	}
+		
+my $Username = "$Cookies{'GID'}";
+my $FirstName = "$Cookies{'FiNo'}";
+my $Email = "$Cookies{'EDomi'}";
+my $LastOne = $LastOne;
+
+## ----------------------->>> SEND EMAIL MESSAGE
+my $SenderIn = "Configs\@coastlinemicro.com(Coastline Micro, Inc. - Shark Tank E-Com Store)";
+use lib "/www/htdocs/MIME-Lite-2.117/lib/";
+use MIME::Lite;
+my $msg = MIME::Lite->new(
+				From    =>$SenderIn,
+                To      =>$Email,
+                Subject =>'Configuration Saved!',
+                Type    =>'multipart/related'
+                );
+   $msg->attach(Type => 'text/html',
+   Data => qq{ 
+<html>
+<head>
+<title>Coastline Micro, Inc. - Shark Tank E-Com Store - Configuration Saved</title>
+<LINK REL="STYLESHEET" HREF="http://www.coastlinemicro.com/commoncss.html" Type="text/css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr height="40">
+<td rowspan="2" width="15%" align="left" valign="top"><a href="http://www.coastlinemicro.com/"><img src="http://www.coastlinemicro.com/Mailbox/images/top_cm_logo.jpg" width="116" height="37" border="0"></a></td>
+<td rowspan="2" align="center" valign="bottom" width="30%">&nbsp;</td>
+<td width="55%" align="right" valign="bottom"><img src="http://www.coastlinemicro.com/Mailbox/images/god_bless_america.gif" width="118" height="35"></td>
+</tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="5"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="5"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#8F8FAB" height="2"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="2"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+</table>
+<table width="95%" align="center" cellspacing="0" cellpadding="0" border="1" bordercolor="#8F8FAB" class="comtableborder"><tr><td width="100%" valign="top">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="http://www.coastlinemicro.com/images/newones/2k3/top_tablebg_main.jpg" height="100">
+  <tr> 
+    <td width="30%"><img src="http://www.coastlinemicro.com/images/newones/2k3/illus_products.jpg" width="250" height="100" border="0"></td>
+    <td align="right" valign="middle" width="70%"><font size="1" color="#ffffff" face="verdana,arial,helvetica">$date&nbsp;&nbsp;<font size="3">&nbsp;</font></font>
+	<center><img src="http://www.coastlinemicro.com/images/newones/2k3/title_$ITitle.jpg" width="350" height="80" align="bottom"></center></td>
+  </tr>
+</table>
+
+<table width="400" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="100%" valign="top">
+<font face="verdana,arial,helvetica" size="1" color="#333366">$FirstName,<br><br>You have successfully saved your new $CMSeries&#153; Series configuration. This configuration will be saved for a total of 30 days.<br><br>All <b>$Cookies{'CoNo'}</b> users can review/purchase this system securely online by logging onto the Shark Tank&#153; with their own username/password.<br><ul><li><b>Your $CMSeries&#153; Series Configuration</b><br><a href="http://www.coastlinemicro.com/stank_vconfig.html?CID=$LastOne">$ItemName</a></li><li><b>Shark Tank&#153; E-Com Store</b><br><a href="http://www.coastlinemicro.com/">http://www.coastlinemicro.com/</a></li><li><b>Did not request this info?</b><br><a href="mailto:security\@coastlinemicro.com?Subject=Account Fraud (Shark Tank E-Com Store)">Report It</a></li></ul></font>
+</td></tr></table>
+<table width="100%" background="http://www.coastlinemicro.com/Mailbox/images/bot_frame_bg.jpg" height="56" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td width="55%" align="left" height="56">&nbsp;</td></tr></table>
+</td></tr></table>
+<br>
+</body></html>
+								}
+                     );
+        $msg->send();
+
+## ----------------------->>> SAVE COPY OF EMAIL MESSAGE TO DB
+	my $RecipientsIn = "$Email\n";
+	my $SubjectIn = "Configuration Saved";
+	my $BodyIn = "$FirstName,\n\nYou have successully saved your new $CMSeries Series system for later review/purchase. Any $CoNo user can review/purchase this configuration so long they login to the Shark Tank with their own username/password.\n\n To review this system please click below: \nhttp://www.coastlinemicro.com/admin/\n\nECom Store: http://www.coastlinemicro.com/\n\nDid not request this info?: security\@coastlinemicro.com\n\n\n";
+	my $Attach1In = "";
+	my $Attach2In = "";
+	my $Attach3In = "";
+	my $Number = "$Cookies{'CeeEmmNo'}";
+	## SAVE EMAIL
+	my $sth = $dbh->prepare("INSERT INTO Messages (MessageID, Username, QuoteID, OrderID, ConfigID, 
+							 ReplyAdd, Recipients, Subject, Body, Attachment1, Attachment2, 
+							 Attachment3, AddedOn, DeletedBy, DeletedOn, CMCustNum)
+ 
+						 	VALUES (Null, '$Username', '', '', '$LastOne', '$SenderIn', 
+							'$RecipientsIn', '$SubjectIn', '$BodyIn', '$Attach1In', '$Attach2In', 
+							'$Attach3In', Null, '', '', '$Number')");
+	$sth->execute or die "Unable to execute query\n";
+	$sth->finish;
+
+&GetCookies('CNFIGS');
+&GetCookies('PTIES');
+
+## SINCE WE ARE SETTING COOKIES IN THIS DOCUMENT WE MUST SET
+## $pageHeader SO products.html CAN PRINT THESE ALTERNATE HEADERS
+## INSTEAD OF THE COMMON PAGE HEADERS
+		$pageHeader = "1";
+
+		&SetCookies('Echado','YES');
+		&SetCookies('CeeEmmNo', "$Cookies{'CeeEmmNo'}");
+		&SetCookies('EDomi', "$Cookies{'EDomi'}");
+		&SetCookies('GID', "$Cookies{'GID'}");
+		&SetCookies('FiNo', "$Cookies{'FiNo'}");
+		&SetCookies('LaNo', "$Cookies{'LaNo'}");
+		&SetCookies('UTipe', "$Cookies{'UTipe'}");
+		&SetCookies('CoNo', "$Cookies{'CoNo'}");
+		&SetCookies('DTV', "$Cookies{'DTV'}");
+		&SetCookies('SRV', "$Cookies{'SRV'}");
+		&SetCookies('NBV', "$Cookies{'NBV'}");
+		&SetCookies('MOV', "$Cookies{'MOV'}");
+		&SetCookies('MYV', "$Cookies{'MYV'}");
+		&SetCookies('HDV', "$Cookies{'HDV'}");
+		&SetCookies('VDV', "$Cookies{'VDV'}");
+		&SetCookies('PHV', "$Cookies{'PHV'}");
+		&SetCookies('PRV', "$Cookies{'PRV'}");
+		&SetCookies('SWV', "$Cookies{'SWV'}");
+
+	if ($FORM{'CID'}) {
+		$ALLCONFIGS = "$LastOne";
+		# Print headers with only one \n 
+		print "Content-type: text/html\n";
+		&SetCookies('CNFIGS', "$ALLCONFIGS-----1");
+		&SetCookies('PTIES', "$Cookies{'PTIES'}");
+	    # End the headers by laying last \n
+    	print "\n";
+	}
+	elsif ($Cookies{'CNFIGS'} eq "") {
+		# Print headers with only one \n 
+		print "Content-type: text/html\n";
+		&SetCookies('CNFIGS', "$LastOne-----1");
+		&SetCookies('PTIES', "$Cookies{'PTIES'}");
+	    # End the headers by laying last \n
+    	print "\n";
+	}
+	else {
+		$ALLCONFIGS = "$Cookies{'CNFIGS'}" . "," . "$LastOne-----1";
+		# Print headers with only one \n 
+		print "Content-type: text/html\n";
+		&SetCookies('CNFIGS', "$ALLCONFIGS");
+		&SetCookies('PTIES', "$Cookies{'PTIES'}");
+	    # End the headers by laying last \n
+    	print "\n";
+	}
+
+&topper;
+$pageDrop = $pageDrop . "
+
+<table width=\"100%\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">
+<tr> 
+<td width=\"40%\" valign=\"middle\" align=\"center\"><img src=\"/dbimages/prod_common/$Image\" width=\"165\" height=\"100\" vspace=\"20\" border=\"0\"></td>
+<td width=\"55%\" valign=\"middle\"><font class=\"btext\"><br>Your customized <b>$CMSeries Series&#153;</b> $PricingClass was successfully saved to the system and it has also been added to your cart. For future reference, review and/or purchase, you have been sent a copy of this system's configuration via email.<br><br>To view the contents of your cart, click 'View Cart'. To order the contents of your cart, click 'Check Out!'.<br><br></font>
+<center><a href=\"javascript:trigger('products.html?loadcart=1&title=products');\" onMouseOver=\"javascript:imageOnDHTML3('mycart','ov');\" onMouseOut=\"javascript:imageOffDHTML3('mycart','off');\"><img src=\"images/newones/2k3/mycart_off.gif\" border=\"0\" name=\"mycart\"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href=\"javascript:trigger('products.html?checkout=1&title=products');\" onMouseOver=\"javascript:imageOnDHTML3('checkout','ov');\" onMouseOut=\"javascript:imageOffDHTML3('checkout','off');\"><img src=\"images/newones/2k3/checkout_off.gif\" border=\"0\" name=\"checkout\"></a></center>
+</td>
+<td width=\"5%\">&nbsp;</td>
+</tr>
+</table>
+<br>
+
+";
+&bottom;
+
+## DISCONNECT DB 
+$dbh->disconnect; 
+
+## >>> END CGI <<< ##
+
+##return =true
+1;
+}
+
+sub topper {
+$pageDrop = $pageDrop . "
+
+<form action=\"stank_saveit.html\" name=\"leConfig\" method=\"post\" onSubmit=\"return checkForm();\">
+<input type=\"hidden\" name=\"CMPartNum\" value=\"$CMPartNum\">
+<input type=\"hidden\" name=\"Warranty\" value=\"$Warranty\">
+<input type=\"hidden\" name=\"PricingClass\" value=\"$PricingClass\">
+<input type=\"hidden\" name=\"ItemName\" value=\"$ItemName\">
+<input type=\"hidden\" name=\"CMSeries\" value=\"$CMSeries\">
+<table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+  <tr> 
+    <td align=\"center\" valign=\"middle\" width=\"$tablewidth\" height=\"25\"> 
+      <table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" background=\"images/tables/topbar.jpg\" height=\"24\">
+        <tr> 
+          <td width=\"$t1\"><img src=\"images/tables/topbar_left.jpg\" width=\"5\" height=\"24\"></td>
+          <td width=\"$t2\"><nobr><font class=\"btext\">&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td>
+          <td width=\"$t3\" align=\"center\" valign=\"top\">&nbsp;</td>
+          <td width=\"$t4\" align=\"center\" valign=\"top\">&nbsp;</td>
+          <td width=\"$t1\" align=\"left\" valign=\"top\"><img src=\"images/tables/topbar_right.jpg\" width=\"5\" height=\"24\"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align=\"center\"> 
+      <table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" height=\"30\">
+        <tr align=\"center\"> 
+          <td width=\"20%\" align=\"left\">$GoBack</td>
+          <td width=\"16%\">$ConfigIT</td>
+          <td width=\"16%\"><img src=\"images/tables/but_techspecs_dn.gif\" width=\"77\" height=\"20\" name=\"techspecs\" border=\"0\"></td>
+          <td width=\"16%\"><img src=\"images/tables/but_sysdrivers_dn.gif\" width=\"78\" height=\"20\" name=\"sysdrivers\" border=\"0\"></td>
+          <td width=\"16%\"><img src=\"images/tables/but_lphoto_dn.gif\" width=\"75\" height=\"20\" name=\"lphoto\" border=\"0\"></td>
+          <td width=\"16%\"><img src=\"images/tables/but_multimedia_dn.gif\" width=\"73\" height=\"20\" name=\"sysmedia\" border=\"0\"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td valign=\"top\"> 
+      <table width=\"$tablewidth\" border=\"0\" cellspacing=\"1\" cellpadding=\"0\" align=\"center\">
+        <tr> 
+          <td valign=\"top\" width=\"$t5\"> 
+            <table width=\"100%\" cellspacing=\"1\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">
+              <tr> 
+                <td> 
+                  <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"$light1\" class=\"stankth\" height=\"18\" $border>
+                    <tr> 
+                      <td align=\"center\"><font class=\"btext\"><b>Your $PricingClass Configuration</b></font></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+<table width=\"100%\" cellspacing=\"0\" cellpadding=\"2\" class=\"stankth\" $border>
+<tr> 
+<td valign=\"top\">
+
+";
+}
+
+sub bottom {
+$pageDrop = $pageDrop . "
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+            </table>
+
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</form>
+
+";
+}

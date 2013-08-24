@@ -1,0 +1,376 @@
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>Security Solutions</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr>
+<td width="2%" valign="top">&nbsp;</td>
+<td width="96%" valign="top">
+
+
+<b><font color="#333366" size="2" face="Verdana, Arial, Helvetica, sans-serif">Coastline 
+Micro 3125 VPN Gateway</font></b><br>
+  <br>
+<font class="stext"><b>Coastline Micro Data Security Offering for the Service 
+Provider or Large Central Site</b><img width="215" height="99" vspace="15" hspace="15" align="right" src="images/image002.jpg"><br>
+Virtual Private Networks (VPNs) enable the secure transmission of private data 
+over the Internet, allowing for rapid set-up and low-cost management of intranets, 
+extranets, remote connections, and wireless LANs. Now you can achieve a unique 
+combination of powerful, cost-effective, Internet-based business access and unparalleled 
+communications security. <br>
+<br>
+The Coastline Micro 3125 VPN Gateway is an ideal solution for service providers 
+and large central sites requiring stellar performance and high rack density. The 
+Coastline Micro 3125 VPN Gateway offers full authentication, data encryption, 
+hardware acceleration, routing, and firewall features, handling up to 10,000 concurrent 
+tunnels and up to 85 Mbps 3DES throughput. Its intuitive interfaces make configuration 
+and management exceptionally quick and easy. <br>
+<br>
+The Coastline Micro 3125 VPN Gateway comes complete with Coastline Micro VPN Client 
+software, which enables remote users to transfer mission-critical information 
+via the Internet from a desktop or laptop. The Coastline Micro VPN Client interoperates 
+with other industry-standard authentication and authorization schemes to deliver 
+seamless connectivity across a wide range of last-mile technologies.</font><br>
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+  <tr> 
+    <td width="45%"><b><font face="Verdana, Arial, Helvetica" size="2">Features</font></b></td>
+    <td width="10%">&nbsp;</td>
+    <td width="45%"><b><font face="Verdana, Arial, Helvetica" size="2">Benefits</font></b></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">Up to 85 Mbps 3DES</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Performance for today's fast Internet 
+      technologies</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">Scalable and stackable, supporting up 
+      to 10,000 simultaneous tunnels per gateway </font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Ease of network growth with minimal disruption 
+      of network performance</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">ICSA-certified stateful inspection firewall</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Provides security for the network against 
+      unauthorized access</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">Two strong encryption options: 3DES and 
+      AES</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Protects data connections across the Internet</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">Multiple authentication options including 
+      Entrust*, Baltimore*, VeriSign*, Microsoft* CA, RSA SecurID*, Netscape* 
+      CMS</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Freedom to choose the authentication solution 
+      that meets your network security needs</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">High Availability</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Site-to-site failover provides redundancy 
+      for mission-critical applications</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">Centralized Remote Management</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Easy to understand, install and use; flexibility 
+      to adapt as<br>
+      needs evolve<br>
+      </font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">Elliptic Curve Cryptography (ECC) Support</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Low CPU cycle cryptographic solution that 
+      enables support<br>
+      for the portable VPN on PDAs and hand-held devices</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">Dynamic Routing: RIP I &amp; II, OSPF</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Enables Internet-bound data to reach its 
+      destination</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">ICSA 1.0b IPSec Certification</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Standard-based IPSec implementation allows 
+      for<br>
+      interoperability with other IPSec certified solutions</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">NAT Traversal</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Enables VPN clients to negotiate tunnels 
+      from almost anywhere, including hotels</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">Multi-Platform Client Support via 3rd 
+      party vendors:<br>
+      Network Associates* PGP VPN Mac Client, Certicom* wireless VPN clients for 
+      Windows* CE and Palm* OS</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Enables remote users to connect from multiple 
+      operating systems - expanding the reach of the network </font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="45%"><font class="stext">Compact 1U form factor</font></td>
+    <td width="10%" align="center"><font class="stext">&gt; &gt; &gt; &gt;</font></td>
+    <td width="45%"><font class="stext">Conserves rack space in offices experiencing 
+      rapid growth</font></td>
+  </tr>
+</table>
+<br>
+<font class="stext"> <b>Customer Applications</b><br>
+The Coastline Micro 3125 VPN Gateway performs in a variety of settings, enabling: 
+<ul>
+  <li>Secure site-to-site intranets</li>
+  <li>Secure remote access for mobile users and telecommuters</li>
+  <li>Secure extranets to connect customers, partners and vendors</li>
+  <li>Secure subscriber access to service provider data centers</li>
+  <li>Service provider value-added services through managed VPN offerings</li>
+  <li>Security for wireless LANs</li>
+</ul>
+<b>Specifications**</b><br>
+<br>
+</font>
+<table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Encrypted 
+      Throughput</font></td>
+    <td width="50%"><font class="stext">Up to 85 Mbps 3DES</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Simultaneous 
+      Tunnels</font></td>
+    <td width="50%"><font class="stext">Up to 10,000 Tunnels</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Processor 
+      Memory</font></td>
+    <td width="50%"><font class="stext">Intel&reg; Pentium&reg; III processor 
+      750 MHz512Mb RAM, 32MB Flash</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Software 
+      Included</font></td>
+    <td width="50%"><font class="stext">Coastline 
+      Micro VPN Client, Coastline Micro VPN Manager</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Interfaces</font></td>
+    <td width="50%"><font class="stext">Two IEEE 802.3/802.3u Ethernet 10/100 
+      Connections RS-232 for Administration</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Standards 
+      Compliance</font></td>
+    <td width="50%"><font class="stext">IPSec security specification proposed 
+      by the IETF 1828, 1851, 1852, 1929, 2085, 2401, 2402, 2406, 2407, 2408, 
+      2409, 2410, 2865, 2866 ICSA 1.0b IPSec certification</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Electrical<br>
+      <i>&nbsp;&nbsp;&nbsp;Line Voltage<br>
+      &nbsp;&nbsp;&nbsp;FrequencyMaximum<br>
+      &nbsp;&nbsp;&nbsp;Power Consumption<br>
+      &nbsp;&nbsp;&nbsp;Power supply </i></font></td>
+    <td width="50%"><font class="stext"><br>
+      <i>100/240 VAC<br>
+      50/60Hz<br>
+      180W<br>
+      Output max 125W</i></font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Physical<br>
+      <i>&nbsp;&nbsp;&nbsp;Height<br>
+      &nbsp;&nbsp;&nbsp;Width<br>
+      &nbsp;&nbsp;&nbsp;Depth<br>
+      &nbsp;&nbsp;&nbsp;Weight<br>
+      &nbsp;&nbsp;&nbsp;Rack<br>
+      <br>
+      </i>Environmental<br>
+      <i>&nbsp;&nbsp;&nbsp;Operating Temperature<br>
+      &nbsp;&nbsp;&nbsp;Storage Temperature<br>
+      &nbsp;&nbsp;&nbsp;Relative Humidity<br>
+      &nbsp;&nbsp;&nbsp;Altitude<br>
+      <br>
+      </i>EMC</font></td>
+    <td width="50%"><font class="stext"><br>
+      1.7 in (4.3 cm)<br>
+      (EIA standard IU)<br>
+      21.97 in (55.8 cm)<br>
+      16.75 in (42.54 cm)<br>
+      23 lbs (10.44 kg)<br>
+      Standard 19 inch rack mount<br>
+      <br>
+      <br>
+      5&deg; to 35&deg; C<br>
+      -40&deg; to 70&deg; C<br>
+      95% non-condensing at 30&deg; C<br>
+      Up to 15,000 ft (4,572 m)<br>
+      <br>
+      FCC part 15 (USA) Class B; EN 55022 (Europe) Class B VCCI, V3/93.01 (Japan); 
+      ICES-003 (Canada) Class B; AS/NZS 3548 (Australia), EN 55024 (Europe)</font></td>
+  </tr>
+</table>
+<font class="stext"><br>
+<br>
+<b>Additional Coastline Micro VPN Product Offerings</b><br>
+<br>
+</font>
+<table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3125 VPN Gateway</font></td>
+    <td width="50%"><font class="stext">Central 
+      Office/Service Provider high performance companion to the Coastline Micro 
+      3105 VPN Gateway</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3105 Configuration Services</font></td>
+    <td width="50%"><font class="stext">Configuration 
+      services for the Coastline Micro 3105 VPN Gateway</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3125 Configuration Services</font></td>
+    <td width="50%"><font class="stext">Configuration 
+      services for the Coastline Micro 3125 VPN Gateway</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3105 5 Incident Pack - 1 Year</font></td>
+    <td width="50%"><font class="stext">Support 
+      by Coastline Micro service specialists on a per-incident basis 8am to 5pm 
+      Monday - Friday PST</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3125 5 Incident Pack - 1 Year</font></td>
+    <td width="50%"><font class="stext">Support 
+      by Coastline Micro service specialists on a per-incident basis 8am to 5pm 
+      Monday - Friday PST</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3105 10 Incident Pack - 1 Year</font></td>
+    <td width="50%"><font class="stext">Support 
+      by Coastline Micro service specialists on a per-incident basis 8am to 5pm 
+      Monday - Friday PST</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3125 10 Incident Pack - 1 Year</font></td>
+    <td width="50%"><font class="stext">Support 
+      by Coastline Micro service specialists on a per-incident basis 8am to 5pm 
+      Monday - Friday PST</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3105 Unlimited Phone Support Pack - 1 Year.</font></td>
+    <td width="50%"><font class="stext">Support 
+      by Coastline Micro service specialists on a per-incident basis. Unlimited 
+      phone support incident packs provide the flexibility to call 24 hours a 
+      day, 7 days a week, 365 days a year.</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3125 Unlimited Phone Support Pack - 1 Year.</font></td>
+    <td width="50%"><font class="stext">Support 
+      by Coastline Micro service specialists on a per-incident basis. Unlimited 
+      phone support incident packs provide the flexibility to call 24 hours a 
+      day, 7 days a week, 365 days a year.</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3105 Hardware Support Only - 1 Year</font></td>
+    <td width="50%"><font class="stext">Enhances 
+      your product warranty by providing next-business-day advanced exchange of 
+      parts.</font></td>
+  </tr>
+  <tr bgcolor="#F2F2F7" valign="top"> 
+    <td width="50%"><font class="stext">Coastline 
+      Micro 3125 Hardware Support Only - 1 Year</font></td>
+    <td width="50%"><font class="stext">Enhances 
+      your product warranty by providing next-business-day advanced exchange of 
+      parts.</font></td>
+  </tr>
+</table>
+<font class="stext"><br>
+Contact for Product and Ordering Information<br>
+<br>
+Coastline Micro Internet Security Services ................... <a href="mailto:services@coastlinemicro.com" class="stext"><font class="stext">services@coastlinemicro.com</font></a><br>
+<br>
+Coastline Micro, Inc.<br>
+60 Technology Drive<br>
+Irvine, CA 92618 <br>
+Toll Free: 800.729.6809<br>
+Phone: 949.450.9966<br>
+Fax: 949.450.9977 <br>
+<font size="1"><br>
+Information in this document is provided in connection with Coastline Micro products. 
+No license, express or implied, by estoppel or otherwise, to any Coastline Micro 
+intellectual property rights is granted by this document. Except as provided in 
+Coastline Micro's Terms and Conditions of Sale for such products, Coastline Micro 
+assumes no liability whatsoever, and Coastline Micro disclaims any express or 
+implied warranty, relating to sale and/or use of Coastline Micro products including 
+liability or warranties relating to fitness for a particular purpose, merchantability, 
+or infringement of any patent, copyright or other Coastline Micro intellectual 
+property right. Coastline Micro products are not intended for use in medical, 
+life saving, or life sustaining applications. Coastline Micro may make changes 
+to specifications and product descriptions at anytime, without notice. <br>
+<br>
+*All Copyrights and Trademarks are properties of their respective owners.<br>
+<br>
+** Performance tests and ratings are measured using specific computer systems 
+and/or components and/or configurations, and reflect the approximate performance 
+of Coastline Micro products as measured by those tests<br>
+</font></font>
+
+
+
+</td>
+<td width="2%" valign="top" align="center">&nbsp;</td>
+</tr>
+
+</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>&nbsp;</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

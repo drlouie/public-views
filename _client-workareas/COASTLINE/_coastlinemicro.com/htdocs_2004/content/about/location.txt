@@ -1,0 +1,54 @@
+ 
+<table width="95%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Coastline 
+            Micro's Location</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td> <font class="regtextnobold">Coastline Micro Inc. is located in the Irvine Spectrum area of Southern California. Our new production facility is located in the middle of "Silicon Beach," one of the fastest growing locations for technology development in the United States.<br>
+                              <br>We are just 10 minutes south of Orange County's John Wayne Airport. Please contact one of our sales representatives to arrange a personal tour of our manufacturing and testing facilities.<br>
+                              <br>
+                              </font> <br>
+                              <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                  <td align="center"><font class="regtextnobold"><b>Coastline 
+                                    Micro Inc. - 60 Technology Drive - Irvine, 
+                                    California 92618</b><br><i>(Click image to get driving directions to Coastline Micro)</i></font></td>
+                                </tr>
+                              </table>
+                              <br>
+                              <center>
+                                <a href="#" onClick="javascript:window.open('http://www.mapquest.com/cgi-bin/ia_find?link=btwn%2Ftwn-map_results&random=810&event=find_search&uid=u2u3mac1u9n8m5zb%3A2lqfb2g6zl&SNVData=&address=60+technology+drive&city=irvine&State=ca&Zip=92618&Find+Map.x=0&Find+Map.y=0','MAPQUEST');"><img src="images/location.jpg" width="532" height="291" border="0"></a>
+                              </center> </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

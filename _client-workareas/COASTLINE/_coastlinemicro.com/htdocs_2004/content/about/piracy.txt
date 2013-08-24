@@ -1,0 +1,58 @@
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>Piracy Policy</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr>
+<td width="2%" valign="top">&nbsp;</td>
+<td width="96%" valign="top"><font class="stext">
+<b>Coastline Micro strongly supports efforts within the software industry to combat piracy, as it helps ensure that customers may confidently buy legal software.</b>
+<br><br>
+When you acquired your new Coastline Micro PC, Coastline Micro provided you with an option that can be used if you need to recover the genuine Microsoft® operating system that has been preinstalled on your machine. 
+<br><br> 
+All of the recovery solutions will address the extremely rare instances of failure due to operating system file corruption or modification or hardware failure. In no way do these options limit your ability to add or remove new hardware and software to your PC, or limit your ability to make a backup copy of the operating system. 
+<br><br>
+<img src="images/made_cd.gif" width="225" height="225" border="0" align="right">The recovery media option that Coastline Micro provides for our variety of products is: 
+<br><br>
+<b>CD Media</b> - Which are often called "Recovery CDs". This is a CD clearly marked with the PC Manufacturer's brand that can only be used on the PC you purchased. The media will be included as part of the materials you received at the time of purchase and will include all files necessary to restore the operating system on the PC. 
+<br><br>
+All Coastline Micro computers that are preinstalled with a genuine Microsoft Windows operating system will have a Certificate of Authenticity attached to the PC chassis. For more details please <a href="#" onClick="javascript:window.open('http://www.microsoft.com/piracy/howtotell/');" class="stext"><font class="stext">click here</font></a>.  
+<br><br>
+If you have questions about the systems recovery option that is available with your machine, please <a href="contact.html?title=gencomments" class="stext"><font class="stext">contact us</font></a>.
+<br><br><center><a href="#" onClick="javascript:window.open('http://www.microsoft.com/piracy/howtotell/default.asp?oemid=314');"><img src="images/be_sure.gif" width="121" height="55" border="0"></a></center>
+</font></td>
+<td width="2%" valign="top" align="center">&nbsp;</td>
+</tr>
+
+</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>&nbsp;</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

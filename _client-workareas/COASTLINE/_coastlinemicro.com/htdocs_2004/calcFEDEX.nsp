@@ -1,0 +1,153 @@
+#!/usr/bin/perl5 -s
+
+## Test location of request
+require ("referer.nsp");
+
+## Grab User Input
+require ("parse_query.nsp");
+
+### RUN 1
+if ($RUNCFEDEX eq "1") {
+	use LWP::Simple;
+	use CGI;
+	use CGI::Carp qw(fatalsToBrowser);
+	$rateURL = "http://www.fedex.com/ratefinder/shipInfo";
+	$rateFinder = get ($rateURL);
+
+
+	$cuatro60 = 'width="460"';
+	$trescientos = '';
+	$select = '<select';
+	$select1 = '<select class="prodguinea3"';
+	$input = '<input type="text"';
+	$input1 = '<input type="text" class="searchinput" style="border:1px solid #660099; color:#660099;"';
+	$fontS = '<font face="verdana,arial,helvetica" size="1" color="#660099">';
+	$fontE = '</font>';
+	$fontTD = '<td class="contentSmall">';
+	$fontTD1 = '<td><font face="verdana,arial,helvetica" size="1" color="#660099">';
+	$fontLI = '<li>';
+	$fontLI1 = '<li><font face="verdana,arial,helvetica" size="1" color="#660099">';
+	$fontELI = '</li>';
+	$fontELI1 = '</font></li>';
+	$piezaHref = 'a href';
+	$piezaHref2 = 'a target="FedEx" class="stextbig" style="color:660099" href';
+	$piezaImagesS = '/images/';
+	$piezaImagesS2 = 'http://www.fedex.com/images/';
+	$piezaSubmitBut = '<input type="submit" name="submitShipInfo" value="Continue">';
+	$piezaFormE = '</form>';
+	$piezaFormE2 = '';
+	
+	$ShipFrom = 'Ship From';
+	$ShipTo = 'Ship To';
+	$ZipPostalCode = 'Zip/Postal Code';
+	$ShipDate = 'Ship Date';
+	$ShipToRes = 'Shipping to Residence';
+	$ChooseTOS = 'Choose type of Service';
+	$PleaseNote = 'Please Note';
+	$RadioYes = 'Yes&nbsp;&nbsp;&nbsp;&nbsp;';
+	$RadioNo = 'No</span>';
+
+	$rateFinder =~ s/$cuatro60/$trescientos/gi;
+	$rateFinder =~ s/$select/$select1/gi;
+	$rateFinder =~ s/$input/$input1/gi;
+	$rateFinder =~ s/$fontTD/$fontTD1/gi;
+	$rateFinder =~ s/$fontCContent/$fontCContent1/gi;
+	$rateFinder =~ s/$fontLI/$fontLI1/gi;
+	$rateFinder =~ s/$fontELI/$fontELI1/gi;
+	$rateFinder =~ s/$piezaImagesS/$piezaImagesS2/gi;
+	$rateFinder =~ s/$piezaSubmitBut//gi;
+	$rateFinder =~ s/$piezaHref/$piezaHref2/gi;
+	$rateFinder =~ s/$piezaFormE/$piezaFormE2/gi;
+	$rateFinder =~ s/$ShipFrom/$fontS $ShipFrom $fontE/gi;
+	$rateFinder =~ s/$ShipTo/$fontS $ShipTo $fontE/gi;
+	$rateFinder =~ s/$ZipPostalCode/$fontS $ZipPostalCode $fontE/gi;
+	$rateFinder =~ s/$ShipDate/$fontS $ShipDate $fontE/gi;
+	$rateFinder =~ s/$ShipToRes/$fontS $ShipToRes $fontE/gi;
+	$rateFinder =~ s/$ChooseTOS/$fontS $ChooseTOS $fontE/gi;
+	$rateFinder =~ s/$PleaseNote/$fontS $PleaseNote $fontE/gi;
+	$rateFinder =~ s/$RadioYes/$fontS $RadioYes $fontE/gi;
+	$rateFinder =~ s/$RadioNo/$fontS $RadioNo $fontE/gi;
+	
+	$RFpieza1 = '<script language="javascript">';
+	$RFpieza2	= '</script>';
+	$RFpieza3 = '<!-- End Measurements Area 1 -->';
+	$RFpieza4	= '</form>';
+	
+	@splittedPartes = split(/\n/,$rateFinder);
+	if ($rateFinder =~ "Rate Finder") {
+		## RUN EACH RETURNED LINE
+		$cuentalines=0;
+		$cuentascript=0;
+		$cuentascript2=0;
+		foreach $estaLinea2 (@splittedPartes) {
+			$cuentalines++;
+			if ($estaLinea2 =~ "$RFpieza1" && $cuentascript eq "0") {
+				$RFs1 = "$cuentalines";
+				$cuentascript++;
+			}
+			elsif ($estaLinea2 =~ "$RFpieza2" && $cuentascript2 eq "0") {
+				$RFe1 = "$cuentalines";
+				$cuentascript2++;
+			}
+
+			if ($estaLinea2 =~ "$RFpieza1" && $cuentascript eq "1") {
+				$RFs2 = "$cuentalines";
+				$cuentascript++;
+			}
+			elsif ($estaLinea2 =~ "$RFpieza2" && $cuentascript2 eq "1") {
+				$RFe2 = "$cuentalines";
+				$cuentascript2++;
+			}
+
+			if ($estaLinea2 =~ "$RFpieza1" && $cuentascript eq "2") {
+				$RFs3 = "$cuentalines";
+				$cuentascript++;
+			}
+			elsif ($estaLinea2 =~ "$RFpieza2" && $cuentascript2 eq "2") {
+				$RFe3 = "$cuentalines";
+				$cuentascript2++;
+			}
+
+			
+			
+			if ($estaLinea2 =~ "$RFpieza3") {
+				$Sf1 = "$cuentalines";
+			}
+			if ($estaLinea2 =~ "$RFpieza4") {
+				$Ef1 = "$cuentalines";
+			}
+
+		}
+
+		$cuentaPusher=0;
+		foreach $ERF (@splittedPartes) {
+			$cuentaPusher++;
+### PRINT JAVASCRIPTING
+			if ($cuentaPusher > $RFs1 && $cuentaPusher < $RFe1) {
+				print "$ERF";
+			}
+			elsif ($cuentaPusher > $RFs2 && $cuentaPusher < $RFe2) {
+				print "$ERF";
+			}
+			elsif ($cuentaPusher > $RFs3 && $cuentaPusher < $RFe3) {
+				print "$ERF";
+			}			
+
+### PRINT FORM PART 1
+			
+			if ($cuentaPusher > $Sf1 && $cuentaPusher <= $Ef1) {
+				print "$ERF\n";
+			}
+		}
+
+		
+	}
+
+}
+
+
+
+#print "$rateFinder";
+1;
+
+

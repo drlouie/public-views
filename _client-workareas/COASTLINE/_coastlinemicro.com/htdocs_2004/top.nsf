@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Coastline Micro, Inc. - Administration System Login</title>
+<script>
+
+///////////////////////////////////////////////////////////////////
+// This script and its counterparts are ©2001 NetMedia Solutions //
+// For use ONLY with CoastlineMicro.com                          //
+// To re-use or have this script re-interfaced for your specific //
+// needs please contact SServices\@NetMediaSolutions.com         //
+// Prices are cheap for re-interfacing of current scripts and    //
+// programs, so email us today to get you own LEGAL programming  //
+// licensed for use only on YOUR site(s) or for YOUR purpose(s). //
+///////////////////////////////////////////////////////////////////
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="admincss.html" Type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/top_tablebg_main.jpg" height="100">
+  <tr> 
+    <td width="30%" valign="top"><img src="images/illus_main.jpg" width="250" height="100"></td>
+    <td width="25%">&nbsp;</td>
+    <td align="left" valign="top"><img src="images/title_main.jpg" width="300" height="100"></td>
+  </tr>
+</table>
+<table width="100%" border="0" height="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top"> 
+    <td width="20%">&nbsp;</td>
+    <td align="center" width="80%"> 
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="50%"> <font face="verdana,arial,helvetica" size="2" color="#333366"><b>System 
+            Customer Base</b></font></td>
+          <td align="right" width="50%"><img src="images/button_addnew_off.gif" width="65" height="19"></td>
+        </tr>
+        <tr> 
+          <td colspan="2"> 
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" class="tableBORDER">
+              <tr bordercolor="#333366" valign="middle"> 
+                <td width="50%" align="center" height="20" bgcolor="#F2F2F7" class="tableBG"><font face="verdana,arial,helvetica" size="1" color="#333366"><b>Search 
+                  Customers</b></font></td>
+                <td width="50%" align="center" height="20" bgcolor="#F2F2F7" class="tableBG"> 
+                  <font face="verdana,arial,helvetica" size="1" color="#333366"><b>Browse 
+                  Customers</b></font></td>
+              </tr>
+              <tr bordercolor="#333366"> 
+                <td width="50%" align="center" valign="top" height="250"> 
+                  <form method="post">
+                    <br>
+                    <table border="1" cellspacing="0" cellpadding="0" width="175" bordercolor="#333366">
+                      <tr> 
+                        <td height="20" align="center" bgcolor="#F2F2F7" class="tableBG"><font face="verdana,arial,helvetica" size="1" color="#333366"><b>Terms/Keywords</b></font></td>
+                      </tr>
+                      <tr> 
+                        <td align="center" height="40"> 
+                          <input type="text" name="SearchTerms" size="15">
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td height="20" align="center" bgcolor="#F2F2F7"><font face="verdana,arial,helvetica" size="1" color="#333366"><b>Filtering 
+                          Options </b></font></td>
+                      </tr>
+                      <tr> 
+                        <td height="125"> 
+                          <input type="radio" name="SearchType" value="CMCustNum" SELECTED checked>
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">CM 
+                          Customer Number</font><br>
+                          <input type="radio" name="SearchType" value="CompanyName">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Company 
+                          Name</font><br>
+                          <input type="radio" name="SearchType" value="MailCity">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Business 
+                          City</font><br>
+                          <input type="radio" name="SearchType" value="MailState">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Business 
+                          State</font><br>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td align="center" height="35"> 
+                          <input type="image" name="submit" src="images/button_search_off.gif" width="65" height="19" border="0">
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </td>
+                <td width="50%" align="center" valign="top" height="250"> 
+                  <form>
+                    <br>
+                    <table border="1" cellspacing="0" cellpadding="0" width="175" bordercolor="#333366">
+                      <tr> 
+                        <td height="20" align="center" bgcolor="#F2F2F7"><font face="verdana,arial,helvetica" size="1" color="#333366"><b>Filtering 
+                          Options </b></font></td>
+                      </tr>
+                      <tr> 
+                        <td width="175" height="125"> 
+                          <input type="radio" name="Browse" value="CMCustNum" SELECTED checked>
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">CM 
+                          Customer Number</font><br>
+                          <input type="radio" name="Browse" value="CompanyName">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Company 
+                          Name</font><br>
+                          <input type="radio" name="Browse" value="MailCity">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Business 
+                          City</font><br>
+                          <input type="radio" name="Browse" value="MailState">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Business 
+                          State</font><br>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td width="175" align="center" height="35"> 
+                          <input type="image" name="submit" src="images/button_browse_off.gif" width="65" height="19" border="0">
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </td>
+              </tr>
+              <tr bordercolor="#333366" bgcolor="#F2F2F7"> 
+                <td colspan="2" align="center" valign="top" height="19">

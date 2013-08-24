@@ -1,0 +1,119 @@
+<style type="text/css">
+	.stextbig{ color:#000000; }
+</style>
+<script language="Javascript" src="js/popwindow.js"></script>
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr height="1">
+          <td width="45%" valign="bottom"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+          <td align="right" width="55%" valign="bottom"><img src="images/spacer.gif" width="1" height="1" border="0">
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+
+  
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10" align="center">
+<tr>
+<td width="100%" valign="top" align="center">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">		  
+        <tr> 
+          <td width="45%" valign="bottom"><img src="sharktank/images/cm_logo_small.jpg" width="142" height="51" border="0"></td>
+          <td align="right" width="55%" valign="bottom"><font class="stextbig"><b><nobr>Microsoft&reg; Windows&reg; Powered</nobr><br><img src="images/spacer.gif" width="1" height="12" border="0"></b></font></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td width="45%" valign="bottom"><b><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><nobr>TIGER SERIES&#153; NETWORK ATTACHED STORAGE</nobr></font></b></td>
+          <td align="right" width="55%" valign="bottom"><b><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">WHITE PAPERS</font></b></td>
+        </tr>
+</table>		
+<br>
+<br>
+
+<table id="tres" width="90%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-top:1px solid #FFFFFF; border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF;">
+	<tr>
+		<td width="100%" height="25"><font color="#000000" size="1" style="font-size:10px;" face="Verdana, Arial, Helvetica, sans-serif"><b>Benefits of Deploying Windows Powered NAS in an Active Directory Environment</b><br><div style="padding-left:15px;">(<a href="/nas/NASActiveDirectory.doc"><font color="#000000">WORD</font></a> - 218 KB)<br>This whitepaper outlines the benefits of the NT File System (NTFS) that provides the foundation for Windows Powered NAS appliance file services.</div></font></b></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+</table>
+<table id="cuatro" width="90%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-top:1px solid #FFFFFF; border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF;">
+	<tr>
+		<td width="100%" height="25"><font color="#000000" size="1" style="font-size:10px;" face="Verdana, Arial, Helvetica, sans-serif"><b>Improving Business Continuity using Windows Powered NAS Devices</b><br><div style="padding-left:15px;">(<a href="/nas/NASBusinessCont.doc"><font color="#000000">WORD</font></a> - 958 KB)<br>This paper describes some technologies and approaches for achieving business continuity within the Windows environment; specifically, by combining replication software and Windows Powered network-attached storage (NAS) devices.</div></font></b></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+</table>
+<table id="cinco" width="90%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-top:1px solid #FFFFFF; border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF;">
+	<tr>
+		<td width="100%" height="25"><font color="#000000" size="1" style="font-size:10px;" face="Verdana, Arial, Helvetica, sans-serif"><b>Building Better Protected Storage using Windows Powered NAS</b><br><div style="padding-left:15px;">(<a href="/nas/NASProtection.doc"><font color="#000000">WORD</font></a> - 480 KB)<br>This paper will examine four separate data protection strategies, then compare their merits for the most common business continuance scenarios.</div></font></b></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+</table>
+<table id="seis" width="90%" border="0" cellspacing="0" cellpadding="0" align="center" style="border-top:1px solid #FFFFFF; border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF;">
+	<tr>
+		<td width="100%" height="25"><font color="#000000" size="1" style="font-size:10px;" face="Verdana, Arial, Helvetica, sans-serif"><b>Deploying Windows Powered NAS Using Dfs with or Without Active Directory</b><br><div style="padding-left:15px;">(<a href="/nas/NASUsingDFs.doc"><font color="#000000">WORD</font></a> - 235 KB)<br>This white paper describes how Microsoft® Windows® Powered network attached storage (NAS) appliances deployed in Windows 2000 environments using the Distributed file system (Dfs) provide IT organizations with the best storage solution for environments with large capacity, high -performance, and high-availability file system requirements.</div></font></b></td>
+	</tr>
+	<tr>
+		<td width="100%" height="15"><img src="images/spacer.gif" width="1" height="15" border="0"></td>
+	</tr>
+</table>
+
+</td>
+<td width="275" valign="top" align="center"><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td><img src="images/tigerNASillus_whitepapers.jpg" width="264" height="343" border="0"></td></tr>
+
+</table>
+<br><img src="images/spacer.gif" width="275" height="1" border="0"></td>
+</tr>
+
+</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="50" align="center"><font class="stext"><b>(*) Available in parallel ATA and serial ATA hard drives.</b></font></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="center" height="20"><font class="stextbig"><b>Call <font style="color:#EB0000;">(800)729-6809</font> for more information on our NAS Solutions</b></font></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+         <tr> 
+          <td colspan="2" height="80"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    
+  
+
+
+<map name="Main1"> 
+  <area shape="rect" coords="0,1,329,75" href="coastlinemicro_services.html?title=tigerNAS2_Prod1_2">
+  <area shape="rect" coords="328,1,419,75" href="#" onClick="javascript:popWindow('http://www.microsoft.com/windows/storage/productinformation/demos/main.htm','WINNAS','760','540','NO');">
+</map>
+<map name="Main2"> 
+  <area shape="rect" coords="0,1,329,75" href="coastlinemicro_services.html?title=tigerNAS2_Prod2_2">
+  <area shape="rect" coords="328,1,419,75" href="#" onClick="javascript:popWindow('http://www.microsoft.com/windows/storage/productinformation/demos/main.htm','WINNAS','760','540','NO');">
+</map>
+<map name="Main3"> 
+  <area shape="rect" coords="0,1,329,75" href="coastlinemicro_services.html?title=tigerNAS2_Prod3_2">
+  <area shape="rect" coords="328,1,419,75" href="#" onClick="javascript:popWindow('http://www.microsoft.com/windows/storage/productinformation/demos/main.htm','WINNAS','760','540','NO');">
+</map>

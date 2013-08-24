@@ -1,0 +1,157 @@
+<!--Start Main HTML Template-->
+<html>
+<head>
+<title>Coastline Micro, Inc. - Shark Tank Admin System - Product Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="admincss.cgi" Type="text/css">
+<SCRIPT LANGUAGE="JavaScript">
+// QUICK CROSS-BROWSER MOUSE-OVER/OFF FUNCTIONS
+// By Drlouie \@ NetMedia Solutions
+// info\@NetMediaSol.com for help
+// Copyright 2001 NetMedia Solutions
+
+function imageOff(which,which2,thisone) {
+	var cual = 	"images/but_sagain_"+thisone+".gif";
+	document.images[which].src = cual;
+	document.images[which2].src = cual;
+}
+function imageOn(which,which2,thisone) {
+	var cual = 	"images/but_sagain_"+thisone+".gif";
+	document.images[which].src = cual;
+	document.images[which2].src = cual;
+}
+
+function iconOff(daobject,which,thisone) {
+	var cual = 	"images/icon_"+which+"_"+thisone+".gif";
+	daobject.src = cual;
+}
+function iconOn(daobject,which,thisone) {
+	var cual = 	"images/icon_"+which+"_"+thisone+".gif";
+	daobject.src = cual;
+}
+
+function deleteThis(DISTID, Name) {
+var agree=confirm("Deleting a distributor's profile will destroy its entire configuration, including and not limited to this distributor's e-commerce and other system pertinent data. Keep in mind that this action cannot be undone. \n\nAre you sure you want to delete the selected distributor's profile from the system?\n\n");
+if (agree)
+location.href = "change_dist.cgi?DELETEIT=1&DISTID="+DISTID+"&Name="+Name+"";
+else
+nogo=1;
+}	
+</script>
+<script langauage="Javascript" src="js/menu_config.js"></script>
+</head>
+<BODY TEXT="#333366" LINK="#8F8FAB" VLINK="#8F8FAB" ALINK="#8F8FAB" BGCOLOR="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<script langauage="Javascript" src="js/menu_constructor.js"></script>
+<!-- Start header table -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/top_tablebg_main.jpg" height="100">
+  <tr> 
+    <td width="30%" valign="top"><img src="images/illus_main.jpg" width="250" height="100"></td>
+    <td width="25%">&nbsp;</td>
+    <td align="left" valign="top"><img src="images/title_main.jpg" width="300" height="100"></td>
+  </tr>
+</table>
+<!-- End header table -->
+
+<table width="100%" border="0" height="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top"> 
+    <td width="20%"><br>!!Legal!!</td>
+    <td align="center" width="80%"> 
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="50%"> <font face="verdana,arial,helvetica" size="2" color="#333366"><b>View/Add/Update Products</b></font></td>
+          <td align="right" width="50%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="2"> 
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#333366">
+              <tr bgcolor="#F2F2F7"> 
+                <td colspan="2" align="center" valign="top" height="19">
+<!--Start Content Table Wrapper--> 
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr> 
+          <td width="35%"><font class="stextbig"><b>Search Results</b></font></td>
+          <td align="right" width="65%"><a href="change_product.cgi" target="_top" onMouseOver="javascript:imageOn('sagain','sagain2','ov');" onMouseOut="javascript:imageOff('sagain','sagain2','off');"><img src="images/but_sagain_off.gif" width="81" height="20" name="sagain" border="0"></a></td>
+                          </tr>
+                          <tr bgcolor="#333366"> 
+                            <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+                          </tr>
+                          <tr> 
+          <td width="35%" height="20"><font class="stext2"><b><font color="#FD0000">!!Matches!!</font></b> matches found for <b><font color="#FD0000">!!Keywords!!</font></b></font></td>
+          <td width="65%" align="right"><font class="stext">!!Prev_Pages!! &nbsp; !!Pages!! &nbsp; !!Next_Pages!!</font></td>
+                          </tr>
+                          <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="2" height="115">
+	<table width="85%" align="center" border="1" bgcolor="#FFFFFF" cellpadding="10" cellspacing="0">
+	<tr><td width="100%" valign="middle">
+	<font class="sresults1"><li>To update, change or view a product's configuration click on the '<b>Name</b>' of the product you would like to change, or you can use the icons.</li><li>To Delete a product from the system click the 'Delete' icon located on the row of the product you want to delete.</li>
+	</font>
+	<br><br>
+
+	<table width="300" align="center" border="0" cellpadding="5" cellspacing="0" bgcolor="F2F2F7">
+	<tr>
+	<td width="100%" align="center" colspan="2"><font class="sresults1"><b>Icon Legend</b></font></td>
+	</tr>
+	<tr>
+	<td width="50%" align="center"><nobr><img src="images/icon_change_on.gif" border="0"><font class="sresults1"><br>Change/Update Product</font></nobr></td>
+	<td width="50%" align="center"><nobr><img src="images/icon_delete_on.gif" border="0"><font class="sresults1"><br>Delete Product</font></nobr></td>
+	</tr>
+	</table>
+	
+	</td></tr>
+	</table>							
+<br>
+							</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="2" align="left" width="100%"> 
+
+
+!!LETBTR!!
+
+</td>
+</tr>
+<tr>
+<td colspan="9">
+<table width="100%" cellspacing="2" cellpadding="2" align="center" border="2" bordercolor="#333366">
+
+		  !!SearchResults!!
+		  </table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td width="35%" height="23"><font class="stext2"><b><font color="#FD0000">!!Matches!!</font></b> matches found for <b><font color="#FD0000">!!Keywords!!</font></b></font></td>
+          <td width="65%" align="right"><font class="stext">!!Prev_Pages!! &nbsp; !!Pages!! &nbsp; !!Next_Pages!!</font></td>
+		</tr>		
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>&nbsp;</b></font></td>
+          <td align="right" width="65%" height="30" valign="top"><a href="change_product.cgi" target="_top" onMouseOver="javascript:imageOn('sagain2','sagain','ov');" onMouseOut="javascript:imageOff('sagain2','sagain','off');"><img src="images/but_sagain_off.gif" width="81" height="20" name="sagain2" border="0"></a></td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+      <!--End Content Table Wrapper-->
+</td>
+  </tr>
+</table>
+<br><br>
+</body>
+</html>
+<!--End Main Template-->

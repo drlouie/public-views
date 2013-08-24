@@ -1,0 +1,136 @@
+#!/usr/bin/perl5 -s
+
+$LOSNUMBERS = "$FORM{'Package'}";
+if ($FORM{'Package2'} ne "" && $FORM{'Package2'} ne " ") { $LOSNUMBERS = $LOSNUMBERS . "%0D%0A" . "$FORM{'Package2'}"; }
+if ($FORM{'Package3'} ne "" && $FORM{'Package3'} ne " ") { $LOSNUMBERS = $LOSNUMBERS . "%0D%0A" . "$FORM{'Package3'}"; }
+if ($FORM{'Package4'} ne "" && $FORM{'Package4'} ne " ") { $LOSNUMBERS = $LOSNUMBERS . "%0D%0A" . "$FORM{'Package4'}"; }
+if ($FORM{'Package5'} ne "" && $FORM{'Package5'} ne " ") { $LOSNUMBERS = $LOSNUMBERS . "%0D%0A" . "$FORM{'Package5'}"; }
+
+use LWP::Simple;
+use CGI;
+use CGI::Carp qw(fatalsToBrowser);
+my $url = "http://www.fedex.com/cgi-bin/tracking?action=track&tracknumbers=$LOSNUMBERS";
+my $page = get ($url);
+
+# print $page;
+
+	$pieza1 = "<!-- shipment info -->";
+	$pieza2	= "<!-- shipment tracking stats -->";
+
+	$piezaSS = "<!-- BEGIN Scan Activity -->";
+	$piezaSE = "<!-- END Scan Activity -->";	
+	
+	$piezaSignatureProofS = 'name="signature_proof" value="Signature proof"';
+	$piezaInput = '<input';
+	$piezaInputN = '<input class="inputbut" style="border:1px solid #660099; color:#660099;"';
+	
+	$pieza3 = 'images/shared/';
+	$pieza4 = 'images/';
+	$piezaImagesS = '/images/ascend/';
+	$piezaImagesS2 = 'http://www.fedex.com/images/ascend/';
+	$piezaLink = '/cgi-bin/tracking';
+	$piezaLink2 = 'http://www.fedex.com/cgi-bin/tracking';
+	$piezaInvalid = 'Please check the following numbers and resubmit.';
+	$piezaInvalid2 = 'The following numbers are invalid. Please make sure you typed in the number correctly. Click the button below to try again.';
+	$piezaClassSmall = ' class="small"';
+	$piezaHref = '<a href';
+	$piezaHref2 = '<a target="FedEx" class="stextbig" style="color:660099" href';
+
+	$pieza5 = '<td';
+	$pieza6 = '<td class="stextbig" style="color:#660099;"';
+	$page =~ s/$pieza3/$pieza4/gi;
+	$page =~ s/$pieza5/$pieza6/gi;
+	$page =~ s/$piezaInput/$piezaInputN/gi;
+	$page =~ s/$piezaImagesS/$piezaImagesS2/gi;
+	$page =~ s/$piezaLink/$piezaLink2/gi;
+	$page =~ s/$piezaInvalid/$piezaInvalid2/gi;
+	$page =~ s/$piezaClassSmall//gi;
+	$page =~ s/$piezaHref/$piezaHref2/gi;
+	@splittedLines = split(/\n/,$page);
+
+	$Npieza1 = "<!-- Single piece shipments -->";
+	$Npieza2 = "<!-- Resubmit and Track More Shipments Bar -->";
+	
+	
+if ($page =~ "Single Piece" || $page =~ "Door tag" || $page =~ "Multiple-piece") {
+	## RUN EACH RETURNED LINE
+	$countlines2=0;
+	foreach $unaLinea2 (@splittedLines) {
+		$countlines2++;
+		if ($unaLinea2 =~ "$Npieza1") {
+			$Nds1 = "$countlines2";
+		}
+		elsif ($unaLinea2 =~ "$Npieza2") {
+			$Nde1 = "$countlines2";
+		}
+	}
+
+	$countPusher2=0;
+	foreach $PL2 (@splittedLines) {
+		$countPusher2++;
+		if ($countPusher2 > $Nds1 && $countPusher2 < $Nde1) {
+			print "$PL2";
+		}
+	}
+}
+elsif ($page =~ "Results" && $page =~ "Status" && $page =~ "Delivered") {
+
+	## RUN EACH RETURNED LINE
+	$countlines=0;
+	$countSDI = 0;
+	$countEDI = 0;
+	foreach $unaLinea (@splittedLines) {
+		$countlines++;
+		if ($unaLinea =~ "$pieza1") {
+			$ds1 = "$countlines";
+		}
+		elsif ($unaLinea =~ "$pieza2") {
+			$de1 = "$countlines";
+		}
+
+		if ($unaLinea =~ "$piezaSS") {
+			$ss1 = "$countlines";
+		}
+		elsif ($unaLinea =~ "$piezaSE") {
+			$se1 = "$countlines";
+		}
+
+	}
+	$countPusher=0;
+	foreach $PL (@splittedLines) {
+		$countPusher++;
+		if ($countPusher > $ds1 && $countPusher < $de1) {
+			print "$PL";
+		}
+		if ($countPusher > $ss1 && $countPusher < $se1) {
+			print "$PL";
+		}
+	}
+
+}
+else {
+	print "There was an unspecific error in the system while trying to process your tracking number(s). Please check your number(s) and try again.";
+}
+
+	## RUN EACH RETURNED LINE
+	$countPusher3=0;
+	foreach $PL3 (@splittedLines) {
+		$countPusher3++;
+		if ($PL3 =~ "$piezaSignatureProofS") {
+			$SignProof = "$PL3";
+			$docloc = 'document.location=';
+			$winopen = 'window.open(';
+
+			$doclocend = '" class="buttongray"';
+			$winopenend = ',\'FEDEX\');" class="buttongray"';
+			if($SignProof =~ "$docloc") {
+				$SignProof =~ s/$docloc/$winopen/g;
+				$SignProof =~ s/$doclocend/$winopenend/g;
+			}
+		}
+	}
+
+
+#print $page;
+
+1;

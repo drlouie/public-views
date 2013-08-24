@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Coastline Micro, Inc. - Shark Tank Admin System - Message Depot</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="admincss.cgi" Type="text/css">
+<SCRIPT LANGUAGE="JavaScript">
+// QUICK CROSS-BROWSER MOUSE-OVER/OFF FUNCTIONS
+// By Drlouie \@ NetMedia Solutions
+// info\@NetMediaSol.com for help
+// Copyright 2001 NetMedia Solutions
+
+function imageOff(which,thisone) {
+	var cual = 	"images/button_"+which+"_"+thisone+".gif";
+	document.images[which].src = cual;
+}
+function imageOn(which,thisone) {
+	var cual = 	"images/button_"+which+"_"+thisone+".gif";
+	document.images[which].src = cual;
+}
+function imageOff2(daobject,which,thisone) {
+	var cual = 	"images/button_"+which+"_"+thisone+".gif";
+	daobject.src = cual;
+}
+function imageOn2(daobject,which,thisone) {
+	var cual = 	"images/button_"+which+"_"+thisone+".gif";
+	daobject.src = cual;
+}
+</SCRIPT>
+<script language="Javascript">
+<!--
+function checkForm() {
+	if ((document.search.SearchTerms.value == "") || (document.search.SearchTerms.value == "0") || (document.search.SearchTerms.value == " ")) {
+	alert('In order to search the message depot you must type in a keyword or phrase in the search field.')
+	document.search.SearchTerms.focus();
+	return false;
+	}	
+	else {
+	return true;
+	}	
+}
+//-->
+</script>
+%%MENUCONFIG%%
+</head>
+<BODY TEXT="#333366" LINK="#8F8FAB" VLINK="#8F8FAB" ALINK="#8F8FAB" BGCOLOR="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+%%MENUCONSTRUCTOR%%
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/top_tablebg_main.jpg" height="100">
+  <tr> 
+    <td width="30%" valign="top"><img src="images/illus_main.jpg" width="250" height="100"></td>
+    <td width="25%">&nbsp;</td>
+    <td align="left" valign="top"><img src="images/title_main.jpg" width="300" height="100"></td>
+  </tr>
+</table>
+<table width="100%" border="0" height="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top"> 
+    <td width="20%">%%LEGAL%%</td>
+    <td align="center" width="80%"> 
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="50%"> <font face="verdana,arial,helvetica" size="2" color="#333366"><b>System Message Depot</b></font></td>
+          <td align="right" width="50%"><a href="#" onMouseOver="javascript:imageOn('addnew','on');" onMouseOut="javascript:imageOff('addnew','off');"><img src="images/button_addnew_off.gif" width="65" height="19" name="addnew" border="0"></a></td>
+        </tr>
+        <tr> 
+          <td colspan="2"> 
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" class="tableBORDER">
+              <tr bordercolor="#333366" valign="middle"> 
+                <td width="50%" align="center" height="20" bgcolor="#F2F2F7" class="tableBG"><font face="verdana,arial,helvetica" size="1" color="#333366"><b>Search Messages</b></font></td>
+                <td width="50%" align="center" height="20" bgcolor="#F2F2F7" class="tableBG"> 
+                  <font face="verdana,arial,helvetica" size="1" color="#333366"><b>Browse Messages</b></font></td>
+              </tr>
+              <tr bordercolor="#333366"> 
+                <td width="50%" align="center" valign="top" height="250"> 
+                  <form method="post" name="search" onSubmit="return checkForm();">
+                    <br>
+                    <table border="1" cellspacing="0" cellpadding="0" width="175" bordercolor="#333366">
+                      <tr> 
+                        <td height="20" align="center" bgcolor="#F2F2F7" class="tableBG"><font face="verdana,arial,helvetica" size="1" color="#333366"><b>Terms/Keywords</b></font></td>
+                      </tr>
+                      <tr> 
+                        <td align="center" height="40"> 
+                          <input type="text" name="SearchTerms" size="15">
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td height="20" align="center" bgcolor="#F2F2F7"><font face="verdana,arial,helvetica" size="1" color="#333366"><b>Filtering 
+                          Options </b></font></td>
+                      </tr>
+                      <tr> 
+                        <td height="125"> 
+                          <input type="radio" name="SearchType" value="Username" SELECTED checked>
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Sender's Username</font><br>
+                          <input type="radio" name="SearchType" value="ReplyAdd">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Reply Address</font><br>
+                          <input type="radio" name="SearchType" value="Recipients">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Intended Recipients</font><br>
+                          <input type="radio" name="SearchType" value="Subject">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Subject</font><br>
+                          <input type="radio" name="SearchType" value="Attachments">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">File Attachments</font><br>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td align="center" height="35"> 
+                          <input type="image" name="submit" src="images/button_search_off.gif" width="65" height="19" border="0" onMouseOver="javascript:imageOn2(this,'search','on');" onMouseOut="javascript:imageOff2(this,'search','off');">
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </td>
+                <td width="50%" align="center" valign="top" height="250"> 
+                  <form method="post" name="browse">
+                    <br>
+                    <table border="1" cellspacing="0" cellpadding="0" width="175" bordercolor="#333366">
+                      <tr> 
+                        <td height="20" align="center" bgcolor="#F2F2F7"><font face="verdana,arial,helvetica" size="1" color="#333366"><b>Filtering 
+                          Options </b></font></td>
+                      </tr>
+                      <tr> 
+                        <td width="175" height="125"> 
+                          <input type="radio" name="Browse" value="Username" SELECTED checked>
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Sender's Username</font><br>
+                          <input type="radio" name="Browse" value="ReplyAdd">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Reply Address</font><br>
+                          <input type="radio" name="Browse" value="Recipients">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Intended Recipient(s)</font><br>
+                          <input type="radio" name="Browse" value="Subject">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">Subject</font><br>
+                          <input type="radio" name="Browse" value="Attachments">
+                          <font face="verdana,arial,helvetica" size="1" color="#333366">File Attachments</font><br>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td width="175" align="center" height="35"> 
+                          <input type="image" name="submit" src="images/button_browse_off.gif" width="65" height="19" border="0" onMouseOver="javascript:imageOn2(this,'browse','on');" onMouseOut="javascript:imageOff2(this,'browse','off');">
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </td>
+              </tr>
+              <tr bordercolor="#333366" bgcolor="#F2F2F7"> 
+                <td colspan="2" align="center" valign="top" height="19">

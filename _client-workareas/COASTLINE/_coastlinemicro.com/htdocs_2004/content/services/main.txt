@@ -1,0 +1,94 @@
+ 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Coastline 
+            Micro's Services</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td width=10>&nbsp;</td>
+          <td colspan="3" align="left" valign="top"> 
+            <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+              <tr> 
+                <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                <td width="200"><font  class="regtextnobold">(800) 729-6809</font></td>
+              </tr>
+              <tr> 
+                <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                <td width="200"><font class="regtextnobold">(949) 450-9977</font></td>
+              </tr>
+              <tr> 
+                <td width="65">&nbsp;</td>
+                <td width="200">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width=10>&nbsp;</td>
+          <td colspan="3"> <font class="regtextnobold"> 
+            <p>Coastline Micro offers a wide variety of quality services. Our 
+              Networking Center can pre-configure complete enterprise-ready servers 
+              with your choice of operating system(s), including Windows 2000, 
+              Novell, and LINUX. Our technical staff is trained in many server 
+              applications such as Microsoft Back Office, Tivoli Management Software, 
+              Citrix Thin Client, and Elron Internet applications.<br>
+              <br>
+              Contact your Coastline Micro Sales Representative for details on 
+              how we can help reduce your integration time and expense. Don't 
+              forget to ask about our optional on-site service plans for the first, 
+              second and third years of ownership, reducing your company's costs 
+              for computer service.<br>
+            <ul>
+              <li><a href="coastlinemicro_services.html?title=config">Configuration/Assembly</a><br>
+                <br>
+              </li>
+              <li><a href="coastlinemicro_services.html?title=inter_intra">Internet/Intranet</a><br>
+                <br>
+              </li>
+              <li><a href="coastlinemicro_services.html?title=networking">Networking</a><br>
+                <br>
+              </li>
+              <li><a href="coastlinemicro_services.html?title=requirement">Requirement Analysis</a><br>
+                <br>
+              </li>
+              <li><a href="coastlinemicro_services.html?title=shipping">Shipping</a><br>
+                <br>
+              </li>
+              <li><a href="coastlinemicro_services.html?title=testing">Testing</a></li>
+            </ul>
+            <p></p>
+            </font></td>
+          <td width=10>&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,465 @@
+#!/usr/bin/perl5 -s
+
+## Test location of request
+require ("referer.nsp");
+
+## Grab User Input
+require ("parse_query.nsp");
+
+## If data present scan it...
+if ($FORM{'Package'} && $FORM{'title'} eq "UPSTracking") {
+
+print '
+              <table align="center" cellpadding="15" cellspacing="0" border="0">
+                <tr> 
+                  <td width="100%" align="center"> <fieldset id="Fieldset1" style="border:1px solid #330000;padding:5px;"> 
+                    <legend class="stextbig" style="margin-bottom:20px;"><b>&nbsp;UPS Package Tracking Service&nbsp;&nbsp;</b></legend> 
+
+
+
+                          <table width="300" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr> 
+                              <td width="348" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td bgcolor="#330000" width="1" height="80"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                              <td width="348" valign="top"> 
+                                <table width="300" border="0" cellspacing="0" cellpadding="0">
+                                  <tr> 
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                    <td height="20" bgcolor="#330000"><font face="verdana,arial,helvetica" size="1" color="#FFC256"><b><font color="#FFC256">Package Tracking Results</font></b></font></td>
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                  </tr>
+                                  <tr> 
+                                    <td colspan="3" height="1"><img src="images/verticalbar.gif" width="15" height="1"></td>
+                                  </tr>
+                                  <tr> 
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                    <td height="35" bgcolor="#673301" align="left" style="padding-top:10px;padding-bottom:10px;"><font face="verdana,arial,helvetica" size="1" color="#FFC256">
+';
+									
+require("RegenerateUPSOutput.nsp");
+
+print '									
+									</font></td>
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td bgcolor="#330000" width="1" height="70"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" align="center" height="35"><input type="button" value="Try Again" class="inputbut" style="border:1px solid #FFC256; background-color:#673301;color:#FFC256;font-size:11px;height:22px;width:140px;" onClick="javascript:history.go(-1);"></td>
+                            </tr>
+                          </table>
+
+                    <br>
+                    </fieldset> </td>
+                </tr>
+              </table>
+';
+
+## RETURN
+1;
+}
+
+
+elsif ($FORM{'Origin'} && $FORM{'Destination'} && $FORM{'Package'} && $FORM{'title'} eq "UPSShipping") {
+
+print '
+              <table align="center" cellpadding="15" cellspacing="0" border="0">
+                <tr> 
+                  <td width="100%" align="center"> <fieldset id="Fieldset2" style="border:1px solid #330000;padding:5px;">
+                    <legend class="stextbig" style="margin-bottom:20px;"><b>&nbsp;UPS Shipping Calculator Service&nbsp;&nbsp;</b></legend> 
+
+
+                          <table width="300" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr> 
+                              <td width="348" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td bgcolor="#330000" width="1" height="80"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                              <td width="348" valign="top"> 
+                                <table width="300" border="0" cellspacing="0" cellpadding="0">
+                                  <tr> 
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                    <td height="20" bgcolor="#330000"><font face="verdana,arial,helvetica" size="1" color="#FFC256"><b><font color="#FFC256">Route Priced Successfully</font></b></font></td>
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                  </tr>
+                                  <tr> 
+                                    <td colspan="3" height="1"><img src="images/verticalbar.gif" width="15" height="1"></td>
+                                  </tr>
+                                  <tr> 
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                    <td height="35" bgcolor="#673301" align="left" style="padding-top:10px;padding-bottom:10px;"><font face="verdana,arial,helvetica" size="1" color="#FFC256">
+';
+									
+require("calcUPS.nsp");
+
+print '									
+									</font></td>
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td bgcolor="#330000" width="1" height="70"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" align="center" height="35"><input type="button" value="Try Again" class="inputbut" style="border:1px solid #FFC256; background-color:#673301;color:#FFC256;font-size:11px;height:22px;width:140px;" onClick="javascript:history.go(-1);"></td>
+                            </tr>
+                          </table>
+
+
+                    <br>
+                    </fieldset> </td>
+                </tr>
+              </table>
+';
+
+## RETURN
+1;
+}
+
+
+## If no resident form processing calls are given continue
+else {
+
+print '
+<script language="Javascript">
+// CROSS-BROWSER FORM CHECKER
+// By Drlouie \@ NetMedia Solutions
+// info\@NetMediaSol.com for help
+// Copyright 2001 NetMedia Solutions
+
+function checkTracking() {
+var missingdrop = "";
+var thefirst = "";
+
+// Check Common form fields
+if ((document.trackUPS.Package.value == "" || document.trackUPS.Package.value == " ") && (document.trackUPS.Package2.value == "" || document.trackUPS.Package2.value == " ") && (document.trackUPS.Package3.value == "" || document.trackUPS.Package3.value == " ") && (document.trackUPS.Package4.value == "" || document.trackUPS.Package4.value == " ") && (document.trackUPS.Package5.value == "" || document.trackUPS.Package5.value == " ")) {
+   	missingdrop += "\\n     - At least one Tracking Number must be specified";
+	thefirst = "Package";
+}
+else if (document.trackUPS.Package.value.indexOf(" ") > 0 || document.trackUPS.Package2.value.indexOf(" ") > 0 || document.trackUPS.Package3.value.indexOf(" ") > 0 || document.trackUPS.Package4.value.indexOf(" ") > 0 || document.trackUPS.Package5.value.indexOf(" ") > 0) {
+   	missingdrop += "\\n     - No spaces allowed in any field.";
+	thefirst = "Package";
+}
+
+// If anything comes back wrong alert and detain form, else submit info
+if (missingdrop != "") {
+    missingdrop ="___________________________________________                   \\n\\n" + "  Sorry, I cannot process your request because the\\n  following fields are either blank or filled incorrectly:\\n" + "___________________________________________                   \\n\\n" +
+    missingdrop + "\\n\\n___________________________________________                   " + "\\n\\n   To continue, check fields and submit form again!" + "\\n___________________________________________";
+    alert(missingdrop);
+	document.trackUPS[thefirst].focus();
+    return false;
+} 
+else {
+return true;
+}
+}
+
+
+
+
+function checkShipping() {
+var missingdrop = "";
+var thefirst = "";
+
+// Check Common form fields
+if (isNaN(document.UPSShipCalc.Origin.value) || document.UPSShipCalc.Origin.value == "" || document.UPSShipCalc.Origin.value == " ") {
+    missingdrop += "\\n     - Originating Zip Code";
+	thefirst = "Origin";
+}
+
+if (isNaN(document.UPSShipCalc.Destination.value) || (document.UPSShipCalc.Destination.value == "") || (document.UPSShipCalc.Destination.value == " ")) {
+    missingdrop += "\\n     - Destination Zip Code";
+	if (thefirst == "") { thefirst = "Destination"; }
+}
+
+if (isNaN(document.UPSShipCalc.Weight.value) || (document.UPSShipCalc.Weight.value == "") || (document.UPSShipCalc.Weight.value == " ")) {
+    missingdrop += "\\n     - Package Weight";
+	if (thefirst == "") { thefirst = "Weight"; }
+}
+
+// If anything comes back wrong alert and detain form, else submit info
+if (missingdrop != "") {
+    missingdrop ="___________________________________________                   \\n\\n" + "  Sorry, I cannot process your request because the\\n  following fields are either blank or filled incorrectly:\\n" + "___________________________________________                   \\n\\n" +
+    missingdrop + "\\n\\n___________________________________________                   " + "\\n\\n   To continue, check fields and submit form again!" + "\\n___________________________________________";
+    alert(missingdrop);
+	document.UPSShipCalc[thefirst].focus();
+    return false;
+} 
+else {
+return true;
+}
+}
+
+
+function checkInputNum(val) {
+   	var key = window.event.keyCode;
+	var leValue= val.value;
+	var leName = val.name;
+   // key numeric?
+   	if (key > 47 && key < 58 || key == 46 || key == 13) {
+		leValue = val.value;
+		return;
+	}
+	else {
+		// discard
+    	window.event.returnValue = null;
+	}
+}
+</script>
+<!-- <a href="http://www.ups.com/" title="(UPS) United Parcel Service Corporate Website" alt="(UPS) United Parcel Service Corporate Website" target="UPS"><img src="images/upsStart.gif" width="252" height="54" border="0"></a>-->
+<table align="center" cellpadding="5" cellspacing="0" border="0" width="100%">
+                <tr> 
+                  <td width="100%" align="center"> 
+                    <table id="Table1" cellpadding="5" cellspacing="0" border="0">
+                      <tr> 
+                        <td valign="top" align="center" width="50%">
+<fieldset id="Fieldset1" style="border:1px solid #330000;padding:5px;"> 
+<legend class="stextbig" style="margin-bottom:20px;color:#673301"><b>&nbsp;UPS Package Tracking Service&nbsp;&nbsp;</b></legend>
+<form method="post" action="coastlinemicro_services.html" name="trackUPS" onSubmit="return checkTracking();">
+<input type="hidden" name="title" value="UPSTracking">
+				
+                          <table width="300" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr> 
+                              <td width="348" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td bgcolor="#330000" width="1" height="80"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                              <td width="348" valign="top"> 
+                                <table width="300" border="0" cellspacing="0" cellpadding="0">
+                                  <tr> 
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                    <td height="20" bgcolor="#330000"><font face="verdana,arial,helvetica" size="1" color="#FFC256"><b><font color="#FFC256">Package(s)</font></b></font></td>
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                  </tr>
+                                  <tr> 
+                                    <td colspan="3" height="1"><img src="images/verticalbar.gif" width="15" height="1"></td>
+                                  </tr>
+                                  <tr> 
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                    <td height="35" bgcolor="#673301" align="left" style="padding-top:10px;padding-bottom:10px;"><font face="verdana,arial,helvetica" size="1" color="#FFC256">Our free UPS Package Tracking Service allows for up to 5 packages to be tracked simultaneously. Type in as many UPS Package Tracking Numbers as you need.</font></td>
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                  </tr>
+                                  <tr bgcolor="#673301">
+                                    <td width="15">&nbsp;</td>
+                                    <td height="35" align="center"> 
+                                      						<font face="verdana,arial,helvetica" size="1" color="#FFC256"><br><br>
+						<b>UPS Tracking ID (1)</b><br><input type="text" tabindex="1" name="Package" size="35" class="searchinput" style="border:1px solid #FFC256; background-color:#FFFFFF;color:#673301;font-size:12px;height:20px;width:175px;"><br>
+						<b><br>UPS Tracking ID (2)</b><br><input type="text" tabindex="1" name="Package2" size="35" class="searchinput" style="border:1px solid #FFC256; background-color:#FFFFFF;color:#673301;font-size:12px;height:20px;width:175px;"><br>
+						<b><br>UPS Tracking ID (3)</b><br><input type="text" tabindex="1" name="Package3" size="35" class="searchinput" style="border:1px solid #FFC256; background-color:#FFFFFF;color:#673301;font-size:12px;height:20px;width:175px;"><br>
+						<b><br>UPS Tracking ID (4)</b><br><input type="text" tabindex="1" name="Package4" size="35" class="searchinput" style="border:1px solid #FFC256; background-color:#FFFFFF;color:#673301;font-size:12px;height:20px;width:175px;"><br>
+						<b><br>UPS Tracking ID (5)</b><br><input type="text" tabindex="1" name="Package5" size="35" class="searchinput" style="border:1px solid #FFC256; background-color:#FFFFFF;color:#673301;font-size:12px;height:20px;width:175px;"><br>
+						<br><br>
+						</font>
+                                    </td>
+                                    <td width="15">&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td bgcolor="#330000" width="1" height="70"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" height="35" align="center"><input type="submit" value="Track Package(s)" class="inputbut" style="border:1px solid #FFC256; background-color:#673301;color:#FFC256;font-size:11px;height:22px;width:140px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Clear Fields" class="inputbut" style="border:1px solid #FFC256; background-color:#673301;color:#FFC256;font-size:11px;height:22px;width:100px;"></td>
+                            </tr>
+                          </table>
+<br>
+</form>
+</fieldset>
+
+
+						</td>
+						<td valign="top" align="center" width="50%">
+
+<fieldset id="Fieldset2" style="border:1px solid #330000;padding:5px;"> 
+<legend class="stextbig" style="margin-bottom:20px;color:#673301"><b>&nbsp;UPS Shipping Calculator Service&nbsp;&nbsp;</b></legend>
+<form method="post" action="coastlinemicro_services.html" name="UPSShipCalc" onSubmit="return checkShipping();">
+<input type="hidden" name="title" value="UPSShipping">
+
+                          <table width="300" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr> 
+                              <td width="348" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td bgcolor="#330000" width="1" height="80"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                              <td width="348" valign="top"> 
+                                <table width="300" border="0" cellspacing="0" cellpadding="0">
+                                  <tr> 
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                    <td height="20" bgcolor="#330000"><font face="verdana,arial,helvetica" size="1" color="#FFC256"><b><font color="#FFC256">Originating Zip Code</font></b></font></td>
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                  </tr>
+                                  <tr> 
+                                    <td colspan="3" height="1"><img src="images/verticalbar.gif" width="15" height="1"></td>
+                                  </tr>
+                                  <tr> 
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                    <td height="35" bgcolor="#673301" align="left" style="padding-top:10px;padding-bottom:10px;"><font face="verdana,arial,helvetica" size="1" color="#FFC256">Originating (Sending-From) Zip Code for package. Filled with Coastline Micro Corporate Office Zip Code by default. <i>[5 Digit]</i></font></td>
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                  </tr>
+                                  <tr bgcolor="#673301">
+                                    <td width="15">&nbsp;</td>
+                                    <td height="35" align="center"> 
+                                      <input type="text" value="92618" name="Origin" size="7" class="inputtext7" style="text-align:center;border:1px solid #FFC256; background-color:#FFFFFF;color:#673301;" OnKeyPress="checkInputNum(this);">
+                                    </td>
+                                    <td width="15">&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td bgcolor="#330000" width="1" height="70"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                          </table>
+<br>
+                          <table width="300" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr> 
+                              <td width="348" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td bgcolor="#330000" width="1" height="80"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                              <td width="348" valign="top"> 
+                                <table width="300" border="0" cellspacing="0" cellpadding="0">
+                                  <tr> 
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                    <td height="20" bgcolor="#330000"><font face="verdana,arial,helvetica" size="1" color="#FFC256"><b><font color="#FFC256">Destination Zip Code</font></b></font></td>
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                  </tr>
+                                  <tr> 
+                                    <td colspan="3" height="1"><img src="images/verticalbar.gif" width="15" height="1"></td>
+                                  </tr>
+                                  <tr> 
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                    <td height="35" bgcolor="#673301" align="left" style="padding-top:10px;padding-bottom:10px;"><font face="verdana,arial,helvetica" size="1" color="#FFC256">Destination (Sending-To) Zip Code for your package. Must correspond to an address in the USA. <i>[5 Digit]</i></font></td>
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                  </tr>
+                                  <tr bgcolor="#673301">
+                                    <td width="15">&nbsp;</td>
+                                    <td height="35" align="center"><input type="text" name="Destination" size="7" class="inputtext7" style="text-align:center;border:1px solid #FFC256; background-color:#FFFFFF;color:#673301;" OnKeyPress="checkInputNum(this);"></td>
+                                    <td width="15">&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td bgcolor="#330000" width="1" height="70"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                          </table>						  
+<br>
+                          <table width="300" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr> 
+                              <td width="348" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td bgcolor="#330000" width="1" height="80"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                              <td width="348" valign="top"> 
+                                <table width="300" border="0" cellspacing="0" cellpadding="0">
+                                  <tr> 
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                    <td height="20" bgcolor="#330000"><font face="verdana,arial,helvetica" size="1" color="#FFC256"><b><font color="#FFC256">Package Weight</font></b></font></td>
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                  </tr>
+                                  <tr> 
+                                    <td colspan="3" height="1"><img src="images/verticalbar.gif" width="15" height="1"></td>
+                                  </tr>
+                                  <tr> 
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                    <td height="35" bgcolor="#673301" align="left" style="padding-top:10px;padding-bottom:10px;"><font face="verdana,arial,helvetica" size="1" color="#FFC256">Weight of the package in pounds(lbs.). <i>[Examples: <b>2.5</b> - <b>2.05</b> - <b>2</b>]</i></font></td>
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                  </tr>
+                                  <tr bgcolor="#673301"> 
+                                    <td width="15">&nbsp;</td>
+                                    <td height="35" align="center"> 
+                                      <input type="text" name="Weight" size="7" class="inputtext7" style="text-align:center;border:1px solid #FFC256; background-color:#FFFFFF;color:#673301;" OnKeyPress="checkInputNum(this);">
+                                    </td>
+                                    <td width="15">&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td bgcolor="#330000" width="1" height="70"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                          </table>
+						  
+<br>
+                          <table width="300" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr> 
+                              <td width="348" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td bgcolor="#330000" width="1" height="80"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                              <td width="348" valign="top"> 
+                                <table width="300" border="0" cellspacing="0" cellpadding="0">
+                                  <tr> 
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                    <td height="20" bgcolor="#330000"><font face="verdana,arial,helvetica" size="1" color="#FFC256"><b><font color="#FFC256">UPS Shipping Packages</font></b></font></td>
+                                    <td width="15" height="15" bgcolor="#330000">&nbsp;</td>
+                                  </tr>
+                                  <tr> 
+                                    <td colspan="3" height="1"><img src="images/verticalbar.gif" width="15" height="1"></td>
+                                  </tr>
+                                  <tr> 
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                    <td height="40" bgcolor="#673301" align="left" style="padding-top:10px;padding-bottom:10px;"><font face="verdana,arial,helvetica" size="1" color="#FFC256">Select the package you would like to use for your shipment from the available list.</font></td>
+                                    <td width="15" bgcolor="#673301">&nbsp;</td>
+                                  </tr>
+                                  <tr bgcolor="#673301"> 
+                                    <td width="15">&nbsp;</td>
+                                    <td height="35" align="center"> 
+                                      <select name="Package" class="inputtext" style="border:1px solid #FFC256; background-color:#FFFFFF;color:#673301;">
+                                        <option value="1DM">Next Day Air Early AM</option>
+                                        <option value="1DA">Next Day Air</option>
+                                        <option value="2DA">2nd Day Air</option>
+                                        <option value="3DS">3 Day Select</option>
+                                        <option value="GNDCOM">Ground Commercial</option>
+                                        <option value="GNDRES">Ground Residential</option>
+                                      </select>
+                                    </td>
+                                    <td width="15">&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td bgcolor="#330000" width="1" height="70"><img src="images/verticalbar.gif" width="1" height="25"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" bgcolor="#330000"><img src="images/spacer.gif" width="25" height="1"></td>
+                            </tr>
+                            <tr> 
+                              <td width="100%" colspan="3" height="35" align="center"><input type="submit" value="Calculate" class="inputbut" style="border:1px solid #FFC256; background-color:#673301;color:#FFC256;font-size:11px;height:22px;width:100px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Clear Fields" class="inputbut" style="border:1px solid #FFC256; background-color:#673301;color:#FFC256;font-size:11px;height:22px;width:100px;"></td>
+                            </tr>
+                          </table>
+<br>
+</form>
+</fieldset>
+						  
+						  
+						  
+                        </td>
+                      </tr>
+                    </table>
+
+
+						
+						</td>
+                      </tr>
+                    </table>
+';
+
+## RETURN
+1;
+}

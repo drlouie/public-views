@@ -1,0 +1,16 @@
+#!/usr/bin/perl5 -w
+
+$date = "January 01, 2000";
+
+$title = "Coastline Micro moves operations to new Irvine facility";
+
+$para1 = "Coastline Micro recently moved its production facility to a new Irvine office. President Nick Vertucci commented on the move. \"We moved to the Irvine Spectrum area because we see this area as a hotbed of technology. Our new office will allow us to double our current production levels. I attribute this year's success to the efforts of our hard working employees. We moved to Irvine, we were awarded Intel's Solutions Provider Award for Business Development, now we are awarded the Customer Care Award. Its been a good year for Coastline Micro.\"<br><br>Coastline Micro manufacturers Intel Plll based servers and desktop PCs. They build to order systems ranging from a low-cost. Value PC to an 8 Way Xeon server. All of Coastline Micro's servers are built from the Intel Server building blocks. Coastline Micro has been in business since 1989, building and selling quality computer systems and servers to resellers nationwide. Today, Coastline Micro is a leading provider of end-to-end, high quality, cost-effective computing and networking solutions. They have built a loyal customer base as a company that values integrity, quality and ongoing working relationships. Coastline Micro's technicians and engineers provide their customers with complete requirement analysis that includes networking, configuration/assembly, testing, shipping, internet/intranet, hardware/software and technical support.<br><br>Patrick Nunez manages a growing staff of IT professionals. It is Coastline Micro's goal to have its entire technical staff fully certified by their strategic vendor partners, such as Intel and Microsoft.<br><br>Coastline Micro will unveil a new B2B e-Commerce store on its Web site November 12th at the COMDEX trade show in Las Vegas, Nevada. It will be offered as an extension of their direct sales staff. Coastline Micro will maintain a very personal service relationship in working with clients. All orders placed on the Web site will be verified personally by dedicated sales professionals. All of the Coastline Micro sales professionals are exposed to ongoing product training. They work with their customers constantly to come up with optimum system configuration.";
+
+$location = "LOS ANGELES, CA";
+
+$myfoot = "00001010";
+
+$partners = "";
+
+##return = true
+1;

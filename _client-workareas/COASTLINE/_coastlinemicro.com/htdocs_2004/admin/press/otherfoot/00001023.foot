@@ -1,0 +1,10 @@
+#!/usr/bin/perl5 -w
+
+$foottitle = "About Intel Corporation";
+
+$footlink = "http://www.intel.com/";
+
+$footbody = "This is something about Intel Corportation...";
+
+##return = true
+1;

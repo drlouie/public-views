@@ -1,0 +1,235 @@
+#!/usr/bin/perl5 -s
+
+###########################################################################################################
+# Company: ©2001 NetMedia Solutions                                                                             #
+# Date: Saturday, September 21, 2001                                                                      #
+# Location: Los Angeles County, California, United States of America                                      #
+# Made By: Luis Rodriguez (drlouie)                                                                       #
+# Email: Drlouie@NetMediaSol.com                                                                          #
+#                                                                                                         #
+# This program cannot be duplicated, distributed or re-used for any other purpose other than its original #
+# intended purpose and function. You may request NetMedia Solutions for a copy of the script,             #
+# personalized to fit your exact needs for a small re-programming fee.                                    #
+###########################################################################################################
+
+$tablewidth = "90%"; $t1 = "5"; $t2 = "64%"; $t3 = "18%"; $t4 = "18%"; $t5 = "100%"; 
+
+if ($FORM{'SEAGATE'} eq "1") { 
+	$topbarLeft = "seagate_topbar_left.gif"; 
+	$topbarRight = "seagate_topbar_right.gif"; 
+	$topbarMid = "seagate_topbar_mid.gif"; 
+	$extraStyle = "style='color:#000000'";
+}
+else { 
+	$topbarLeft = "quest_topbar_left.gif"; 
+	$topbarRight = "quest_topbar_right.gif"; 
+	$topbarMid = "quest_topbar_mid.gif"; 
+	$extraStyle = "style='color:#000000'";
+}
+
+## ----------------->>> Must Have CMPartNum!
+if ($FORM{'CMPartNum'}) {
+$CMPartNum = "$FORM{'CMPartNum'}";
+
+if ($FORM{'ThisOne'}) { $ThisOne = "$FORM{'ThisOne'}"; }
+else { $ThisOne = "1"; }
+
+## ----------------->>> BACK BUTTON
+$GoBack = "<a href=\"javascript:history.go(-1);\"><img src=\"images/tables/icon_back_on.gif\" width=\"60\" height=\"20\" name=\"back\" border=\"0\"></a>";
+
+##----------->>> Grab PRODUCTS STUFF
+use DBI;
+my $dbh = DBI->connect("DBI:mysql:coastline","drlouie","chinga2") or die "Unable to connect to database: <b>coastline</b>\n"; 
+$dbh->{RaiseError} = 1; 
+my $sth = $dbh->prepare("SELECT * FROM Products WHERE CMPartNum='$CMPartNum'");
+$sth->execute or die "Unable to execute query\n";
+my @row;
+while(@row = $sth->fetchrow_array) { 
+	$SavedMediaCode = $row[4];
+	$SavedPricingClass = $row[10];
+	$SavedItemName = $row[11];
+	$SavedTechSpecs = $row[13];
+	$SavedLargeLogo = $row[18];
+	if ($SavedLargeLogo =~ ",") {
+		@Images = split(",", $SavedLargeLogo);
+	}
+	else { push (@Images, "$SavedLargeLogo"); }
+}
+$sth->execute or die "Unable to execute query\n"; 
+$sth->finish;
+
+## ---------->>> Grab system IMAGE information
+$count=0;
+foreach $Image (@Images) {
+	my $sth = $dbh->prepare("SELECT * FROM Images WHERE ImageID='$Image'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$SavedFileName = $row[3];
+		$SavedDesc = $row[8];
+		push(@LargeImages, "$SavedFileName-----$SavedDesc");
+		$count++;
+	}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+}
+## ----------->>> here we got the actual count of large images for this product in system
+$RealICount = "$count";
+$ICount=0;
+foreach $LargeImage (@LargeImages) {
+	$ICount++;
+	@ThyIStuff = split("-----", $LargeImage);
+	if ($ThisOne == $ICount) {
+		$CurrImage = "<img src=\"/dbimages/prod_common/$ThyIStuff[0]\" border=\"0\" width=\"250\" height=\"250\" alt=\"$SavedItemName\">";
+		$CurrDesc = "$SavedItemName";
+		if ($ICount ne "1") { $PrevCount = $ICount - 1; $PrevImage = "<font class=\"ctext\">&nbsp;&nbsp;< < < <a href=\"javascript:trigger('sharktank.html?title=$FORM{'title'}&images=$CMPartNum&ThisOne=$PrevCount');\"><font class=\"ctext2\">Previous</font></a></font>"; }
+		else { $PrevImage = "<font class=\"ctext\">&nbsp;&nbsp;< < < Previous</font>"; }
+		if ($ICount ne $RealICount && $RealICount ne "1") { $NextCount = $ICount + 1; $NextImage = "<font class=\"ctext\"><a href=\"javascript:trigger('sharktank.html?images=$CMPartNum&ThisOne=$NextCount$MSP$NMUSD$TPP');\"><font class=\"ctext2\">Next</font></a> > > >&nbsp;&nbsp;</font>"; }
+		else { $NextImage = "<font class=\"ctext\">Next > > >&nbsp;&nbsp;</font>"; }
+		$WhatofWhat = "<font class=\"ctext\"><b>$ICount&nbsp;&nbsp;of&nbsp;&nbsp;$RealICount</b></font>";		
+	}
+}
+
+
+##----------->>> Grab SYSTEMS INFO
+my $sth = $dbh->prepare("SELECT * FROM Systems WHERE Parent='$CMPartNum'");
+$sth->execute or die "Unable to execute query\n"; 
+my @row;
+while(@row = $sth->fetchrow_array) { 
+	$SavedCMSeries = $row[2];
+	$SavedReconfig = $row[3];
+}
+$sth->execute or die "Unable to execute query\n"; 
+$sth->finish;
+
+
+## MULTIMEDIA
+if ($SavedMediaCode ne "") { $SysMedia = "<a href=\"#\" onMouseOver=\"javascript:imageOnDHTML('multimedia','ov');\" onMouseOut=\"javascript:imageOffDHTML('multimedia','off');\"><img src=\"images/tables/but_multimedia_off.gif\" width=\"73\" height=\"20\" name=\"multimedia\" border=\"0\"></a>"; }
+elsif ($SavedPricingClass ne "Desktop" || $SavedPricingClass ne "Notebook" || $SavedPricingClass ne "Server") { $SysMedia = "<img src=\"images/tables/but_multimedia_dn.gif\" width=\"73\" height=\"20\" name=\"multimedia\" border=\"0\">"; }
+else { $SysMedia = "<img src=\"images/tables/but_multimedia_dn.gif\" width=\"73\" height=\"20\" name=\"multimedia\" border=\"0\">"; }
+
+## RECONFIGURABLE?
+if ($SavedReconfig eq "Y") { $ConfigIT = "<a href=\"#\" onClick=\"trigger('sharktank.html?reconfigIt=$CMPartNum&title=$FORM{'title'}$MSP$NMUSD$TPP');\" onMouseOver=\"javascript:imageOnDHTML('configureit','ov');\" onMouseOut=\"javascript:imageOffDHTML('configureit','off');\"><img src=\"images/tables/but_configureit_off.gif\" width=\"81\" height=\"20\" name=\"configureit\" border=\"0\"></a>"; }
+elsif ($SavedPricingClass ne "Desktop" || $SavedPricingClass ne "Notebook" || $SavedPricingClass ne "Server") { $ConfigIT = "<img src=\"images/tables/but_configureit_dn.gif\" width=\"81\" height=\"20\" name=\"configureit\" border=\"0\">"; }
+else { $ConfigIT = "<img src=\"images/tables/but_configureit_dn.gif\" width=\"81\" height=\"20\" name=\"configureit\" border=\"0\">"; }
+
+## SYSTEM DRIVERS ONLY FOR SYSTEMS AND TECHSPECS ARE DIFFERENT FOR KITS, SYS AND PROD
+if ($SavedItemName =~ "mdlschool" || $SavedItemName =~ "MDLSCHOOL") { 
+	$LESysDrivers = "<a href=\"javascript:trigger('sharktank.html?sysdrivers=$CMPartNum&title=$FORM{'title'}$MSP$NMUSD$TPP');\" onMouseOver=\"javascript:imageOnDHTML('sysdrivers','ov');\" onMouseOut=\"javascript:imageOffDHTML('sysdrivers','off');\"><img src=\"images/tables/but_sysdrivers_off.gif\" width=\"78\" height=\"20\" name=\"sysdrivers\" border=\"0\"></a>"; 
+	$LETechSpecs = "<a href=\"javascript:trigger('sharktank.html?specIt=$CMPartNum&title=$FORM{'title'}$MSP$NMUSD$TPP');\" onMouseOver=\"javascript:imageOnDHTML('techspecs','ov');\" onMouseOut=\"javascript:imageOffDHTML('techspecs','off');\"><img src=\"images/tables/but_techspecs_off.gif\" width=\"77\" height=\"20\" name=\"techspecs\" border=\"0\"></a>"; 
+	$EmailIT = "&nbsp;";
+	$lePrinter = "<a href=\"javascript:void(0);\" onClick=\"javascript:runTemplate('stank_images.html','CMPartNum','$CMPartNum');\" onMouseOver=\"javascript:imageOnDHTML('printit','ov');\" onMouseOut=\"javascript:imageOffDHTML('printit','off');\"><img src=\"images/tables/but_printit_off.gif\" width=\"67\" height=\"21\" name=\"printit\" border=\"0\"></a>";
+}
+elsif ($FORM{'TPP'}) {
+	$LETechSpecs = "<img src=\"images/tables/but_techspecs_dn.gif\" width=\"77\" height=\"20\" name=\"techspecs\" border=\"0\">";
+	$LESysDrivers = "<img src=\"images/tables/but_sysdrivers_dn.gif\" width=\"78\" height=\"20\" border=\"0\">"; 
+	$EmailIT = "&nbsp;";
+	$lePrinter = "&nbsp;";
+}
+elsif ($SavedPricingClass eq "Desktop" || $SavedPricingClass eq "Notebook" || $SavedPricingClass eq "Server") { 
+	$LESysDrivers = "<a href=\"javascript:trigger('sharktank.html?sysdrivers=$CMPartNum&title=$FORM{'title'}$MSP$NMUSD$TPP');\" onMouseOver=\"javascript:imageOnDHTML('sysdrivers','ov');\" onMouseOut=\"javascript:imageOffDHTML('sysdrivers','off');\"><img src=\"images/tables/but_sysdrivers_off.gif\" width=\"78\" height=\"20\" name=\"sysdrivers\" border=\"0\"></a>"; 
+	$LETechSpecs = "<a href=\"javascript:trigger('sharktank.html?specIt=$CMPartNum&title=$FORM{'title'}$MSP$NMUSD$TPP');\" onMouseOver=\"javascript:imageOnDHTML('techspecs','ov');\" onMouseOut=\"javascript:imageOffDHTML('techspecs','off');\"><img src=\"images/tables/but_techspecs_off.gif\" width=\"77\" height=\"20\" name=\"techspecs\" border=\"0\"></a>"; 
+	$EmailIT = "<a href=\"#\" onClick=\"toggleEmailer('https://www.coastlinemicro.com/stank_emailit.html?MySubject=$SavedCMSeries&MyTitle=$SavedCMSeries&MyLoad=loadsys&MyData=$CMPartNum&EmailSubject=$SavedItemName');\" onMouseOver=\"javascript:imageOnDHTML('emailit','ov');\" onMouseOut=\"javascript:imageOffDHTML('emailit','off');\"><img src=\"images/tables/but_emailit_off.gif\" width=\"62\" height=\"21\" name=\"emailit\" border=\"0\"></a>";
+	$lePrinter = "<a href=\"javascript:void(0);\" onClick=\"javascript:runTemplate('stank_images.html','CMPartNum','$CMPartNum');\" onMouseOver=\"javascript:imageOnDHTML('printit','ov');\" onMouseOut=\"javascript:imageOffDHTML('printit','off');\"><img src=\"images/tables/but_printit_off.gif\" width=\"67\" height=\"21\" name=\"printit\" border=\"0\"></a>";
+}
+else { 
+	if ($SavedTechSpecs ne "" && $SavedTechSpecs ne "NULL" && $SavedTechSpecs ne "NONE" && $SavedTechSpecs ne "None" && $SavedTechSpecs ne "none") { $LETechSpecs = "<a href=\"javascript:trigger('stank_prodspecs.html?CMPartNum=$CMPartNum&ComingFrom=$ComingFrom');\" onMouseOver=\"javascript:imageOnDHTML('techspecs','ov');\" onMouseOut=\"javascript:imageOffDHTML('techspecs','off');\"><img src=\"images/tables/but_techspecs_off.gif\" width=\"77\" height=\"20\" name=\"techspecs\" border=\"0\"></a>"; } 
+	else { 	$LETechSpecs = "<img src=\"images/tables/but_techspecs_off.gif\" width=\"77\" height=\"20\" name=\"techspecs\" border=\"0\">"; }
+	$LESysDrivers = "<img src=\"images/tables/but_sysdrivers_dn.gif\" width=\"78\" height=\"20\" border=\"0\">"; 
+	$EmailIT = "<a href=\"toggleEmailer('https://www.coastlinemicro.com/stank_emailit.html?MySubject=products&MyTitle=products&MyLoad=loadprod&MyData=$CMPartNum&EmailSubject=$SavedItemName');\" onMouseOver=\"javascript:imageOnDHTML('emailit','ov');\" onMouseOut=\"javascript:imageOffDHTML('emailit','off');\"><img src=\"images/tables/but_emailit_off.gif\" width=\"62\" height=\"21\" name=\"emailit\" border=\"0\"></a>";
+	$lePrinter = "<a href=\"javascript:void(0);\" onClick=\"javascript:runTemplate('stank_images.html','CMPartNum','$CMPartNum');\" onMouseOver=\"javascript:imageOnDHTML('printit','ov');\" onMouseOut=\"javascript:imageOffDHTML('printit','off');\"><img src=\"images/tables/but_printit_off.gif\" width=\"67\" height=\"21\" name=\"printit\" border=\"0\"></a>";
+}
+
+##---------------------------->>> IMAGERY FOR OUTPUT
+$MainTitle = "$SavedItemName";
+
+##--->> REFORMAT MAINTITLE
+$NCount = "0";
+@NameCount = split(//, $MainTitle);
+foreach $NameName (@NameCount) { 
+$NCount++; 
+	if ($NCount >= "30" && $NameName eq " ") { 
+		$MainTitle = substr($MainTitle, 0, $NCount); 
+	}
+}
+
+if ($browser =~ "Mozilla/4.7") { $border = "border=\"1\" bordercolor=\"#333366\""; }
+
+$pageDrop = "
+
+<table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+  <tr> 
+    <td align=\"center\" valign=\"middle\" width=\"$tablewidth\" height=\"25\"> 
+      <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" background=\"images/tables/$topbarMid\" height=\"24\">
+        <tr> 
+          <td width=\"$t1\"><img src=\"images/tables/$topbarLeft\" width=\"5\" height=\"24\"></td>
+          <td width=\"$t2\"><nobr><font class=\"btext\">&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td>
+          <td width=\"$t3\" align=\"center\" valign=\"top\">$EmailIT</td>
+          <td width=\"$t4\" align=\"center\" valign=\"top\">$lePrinter</td>
+          <td width=\"$t1\" align=\"left\" valign=\"top\"><img src=\"images/tables/$topbarRight\" width=\"5\" height=\"24\"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align=\"center\"> 
+      <table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" height=\"30\">
+        <tr align=\"center\">
+          <td width=\"20%\" align=\"left\">$GoBack</td>
+		  <td width=\"16%\">$ConfigIT</td>
+          <td width=\"16%\">$LETechSpecs</td>
+		  <td width=\"16%\">$LESysDrivers</td>
+          <td width=\"16%\"><img src=\"images/tables/but_lphoto_dn.gif\" width=\"75\" height=\"20\" name=\"lphoto\" border=\"0\"></td>
+		  <td width=\"16%\">$SysMedia</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td valign=\"top\"> 
+      <table width=\"100%\" border=\"0\" cellspacing=\"1\" cellpadding=\"0\" align=\"center\">
+        <tr> 
+          <td align=\"center\" valign=\"top\" height=\"150\" width=\"$t5\">
+<table width=\"100%\" cellspacing=\"1\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">
+              <tr> 
+                <td> 
+                  <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#$light1\" class=\"stankth\" height=\"18\" $border>
+                    <tr>
+                      <td align=\"left\" width=\"25%\">&nbsp;</td>
+                      <td align=\"center\" width=\"50%\" height=\"30\"><font class=\"btext\"><b>Product Views</b></font></td>
+                      <td align=\"right\" width=\"25%\">&nbsp;</td>
+                    </tr>
+                    <tr> 
+                      <td align=\"left\" width=\"25%\">$PrevImage</td>
+                      <td align=\"center\" height=\"25\" width=\"50%\">$WhatofWhat</td>
+                      <td align=\"right\" width=\"25%\">$NextImage</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+                  <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" class=\"stankth\" $border>
+                    <tr> 
+                      <td align=\"center\"><br>
+                        $CurrImage<font class=\"btext3\"><br>
+                        <br>
+                        <b>$CurrDesc</b><br>
+                        <br>
+                        </font></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+";
+}
+##return =true
+1;

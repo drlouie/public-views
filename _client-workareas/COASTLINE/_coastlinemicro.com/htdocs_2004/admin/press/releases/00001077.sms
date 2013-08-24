@@ -1,0 +1,16 @@
+#!/usr/bin/perl5 -w
+
+$date = "September 26, 2000";
+
+$title = "Peak Performer™ Customer Care Award";
+
+$para1 = "This year, Coastline Micro found itself included among the list of nominees for the prestigious Peak Performer™ Award. Companies like Coastline Micro recently were honored for excellence and outstanding achievements specific to the system builder channel. Award recipients were chosen from 220 system builders and 110 vendor corporations from the U.S., Canada and Latin America attending the System Builder Summit. The event, including the 3Com Dinner and Peak Performer Awards Ceremony, took place September 24-27, 2000 at the Arizona Biltmore Resort in Phoenix.<br><br>Nominees for the Customer Care Award for quality in the ongoing service and support given to customers were Coastline Micro, Kingdom Computers and Mach-Speed Technologies. The winner, Coastline Micro, Irvine, California, attributes its growth to always going beyond what the customer expects. Its Customer Care policies include sing-off by five different individuals during production, a maximum wait of three minutes to reach a customer service representative, and same day resolution of most customer issues. System Builder Summit is a semi-annual event produced by Vision Events, a Gartner Company based in Nashua, New Hampshire.<br><br>\"We take great satisfaction in knowing that our company-wide policy of customer care is so highly regarded in the industry, and that our customers needs always come first. We work very hard to insure that customers receive only the highest level of satisfaction. Many people are unaware that 45 percent of all PCs sold in North America come from this community of 220 system builders,\" said Mark Capobianco, Vice President of Coastline Micro.";
+
+$location = "LOS ANGELES, CA";
+
+$myfoot = "00001010";
+
+$partners = "00001021";
+
+##return = true
+1;

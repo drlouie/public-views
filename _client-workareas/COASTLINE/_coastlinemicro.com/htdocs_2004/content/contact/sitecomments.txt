@@ -1,0 +1,194 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//Check Search field for completion
+function checkForm() {
+	if (document.emailform.name.value == "") {
+	alert('Your Name is missing.');
+	document.emailform.name.focus();
+	return false;
+	}	
+
+	var x= document.emailform.email.value;
+	if( x.indexOf('@')==-1 || x.indexOf('.')==-1 || x.indexOf(' ')!=-1 || x.length<7)
+	{
+    alert('Your Email Address is invalid or missing. Please enter a valid email address.');
+	document.emailform.email.focus();
+    return false;
+    }
+		
+	if (document.emailform.comments.value == "") {
+	alert('Your Comments are missing.')
+	document.emailform.comments.focus();
+	return false;
+	}	
+	else {
+	return true;
+	}	
+}
+//-->
+</SCRIPT>
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Site 
+            Comments </font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td colspan="5"> 
+            <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                <td width=10>&nbsp;</td>
+                <td colspan="3" align="left" valign="top"> 
+                  <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+                    <tr> 
+                                  <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                                  <td width="200"><font  class="regtextnobold">(800) 729-6809</font></td>
+                                </tr>
+                                <tr> 
+                                  <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                                  <td width="200"><font class="regtextnobold">(949) 450-9977</font></td>
+                    </tr>
+                    <tr> 
+                      <td width="65">&nbsp;</td>
+                      <td width="200">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width=10>&nbsp;</td>
+                <td colspan="3"> 
+                  <p><font class="regtextnobold">Thank you for your interest in our Web site. We are always looking for ways to improve the overall experience for our customers. Be sure to share any difficulties or problems you might have had while navigating through our Web site. If you have an idea regarding information or functionality you feel would be useful, please let us know. All comments received from our users will be considered when we update our Web site in the future.<br>
+                    <br>
+                    <b>Note:</b> The 
+                    fields marked with an asterisk (<font class="star">*</font>)  
+                    are required fields and must be filled out in order for your 
+                    comments to be successfully submitted. Thank you for taking the time in sending us your comments. </font></p>
+                </td>
+                <td width=10>&nbsp;</td>
+              </tr>
+            </table>
+            <br>
+            <form method="post" action="sitemailer.html" name="emailform" onSubmit="return checkForm();">
+              <input type="hidden" name="recipient" value="email">
+              <input type="hidden" name="subject" value="Site_Comments">
+              <input type=hidden name="required" value="name,email,comments">
+              <input type=hidden name="sort" value="order:name,email,comments">
+              <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center">
+                <tr align="center" valign="middle"> 
+                  <td colspan="4" height="29" bgcolor="#8f8fab"><b><font class="secondhead">Contact 
+                    Information</font></b></td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td height="20" colspan="4">&nbsp;</td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td colspan="4"> 
+                    <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#8f8fab">
+                      <tr valign="bottom"> 
+                        <td width="2%" align="left">&nbsp;</td>
+                        <td align="center" colspan="2"><b><font class="formbold"><font class="star">*</font>Your 
+                          name&nbsp;</font></b></td>
+                        <td align="left" width="2%">&nbsp;</td>
+                      </tr>
+                      <tr valign="top"> 
+                        <td height="35" width="2%">&nbsp;</td>
+                        <td colspan="2" align="center"> 
+                          <input type="text" name="name" size="45">
+                        </td>
+                        <td height="35" width="2%">&nbsp;</td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td valign="middle" width="2%" height="10"><font size="-4">&nbsp;</font></td>
+                        <td valign="middle" colspan="2" height="10" bgcolor="#333366" align="center"><font size="-4">&nbsp;</font></td>
+                        <td valign="middle" width="2%" height="10"><font size="-4">&nbsp;</font></td>
+                      </tr>
+                      <tr valign="bottom"> 
+                        <td align="left" width="2%">&nbsp;</td>
+                        <td align="center" colspan="2"><b><font class="formbold"><font class="star">*</font>Your 
+                          e-mail address&nbsp;</font></b></td>
+                        <td align="left" width="2%">&nbsp;</td>
+                      </tr>
+                      <tr valign="top"> 
+                        <td height="35" width="2%">&nbsp;</td>
+                        <td colspan="2" align="center"> 
+                          <input type="text" name="email" size="45">
+                        </td>
+                        <td height="35" width="2%">&nbsp;</td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td valign="middle" width="2%" height="10"><font size="-4">&nbsp;</font></td>
+                        <td valign="middle" colspan="2" height="10" bgcolor="#333366" align="center"><font size="-4">&nbsp;</font></td>
+                        <td valign="middle" width="2%" height="10"><font size="-4">&nbsp;</font></td>
+                      </tr>
+                      <tr valign="bottom"> 
+                        <td width="2%" align="left">&nbsp;</td>
+                        <td align="center" colspan="2"><b><font class="formbold"><font class="star">*</font>Description 
+                          of comments&nbsp;</font></b></td>
+                        <td align="left" width="2%">&nbsp;</td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td width="2%" valign="middle">&nbsp;</td>
+                        <td valign="middle" align="center" colspan="2"> 
+                          <textarea name="comments" cols="55" rows="10"></textarea>
+                        </td>
+                        <td valign="middle" width="2%">&nbsp;</td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td valign="middle" width="2%" height="12"><font size="-3">&nbsp;</font></td>
+                        <td valign="middle" colspan="2"><font size="-3">&nbsp;</font></td>
+                        <td valign="middle" height="12" width="2%"><font size="-3">&nbsp;</font></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td height="20" colspan="4">&nbsp;</td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td height="40" colspan="4"> 
+                    <input type="image" border="0" name="submit" src="images/submit_but.gif" width="53" height="17">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:location.reload()"><img src="images/clear_but.gif" width="53" height="17" border=0></a> 
+                    <br>
+                    <br>
+                    <center>
+                      <b><font class="formbold"><font class="star">*</font>Required 
+                      fields</font></b> <br>
+                    </center>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

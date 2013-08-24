@@ -1,0 +1,381 @@
+ 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Proposal 
+            Request</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td colspan="5"> 
+            <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                <td width=10>&nbsp;</td>
+                <td colspan="3" align="left" valign="top"> 
+                  <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+                    <tr> 
+                                  <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                                  <td width="200"><font  class="regtextnobold">(800) 729-6809</font></td>
+                                </tr>
+                                <tr> 
+                                  <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                                  <td width="200"><font class="regtextnobold">(949) 450-9977</font></td>
+                    </tr>
+                    <tr> 
+                      <td width="65">&nbsp;</td>
+                      <td width="200">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width=10>&nbsp;</td>
+                <td colspan="3"> 
+                  <p><font class="regtextnobold"> Request for Proposal copy goes 
+                    here... </font></p>
+                </td>
+                <td width=10>&nbsp;</td>
+              </tr>
+            </table>
+            <br>
+            <form method="post" action="sitemailer.html">
+              <input type="hidden" name="recipient2" value="email">
+              <input type="hidden" name="subject2" value="Online_Proposal_Request">
+              <input type=hidden name="required2" value="Name,email,Company_Name,Division,Title,Voice_Phone,Fax,Address1,Address2,City,State,Zip,Country,Account_Representative,Comments,Case_Type,Motherboard_Type,Motherboard_Model,CPU_Type,CPU_Speed,MB_Memory,Monitor,Video_Card,Keyboard,Mouse,Modem_or_NIC,Operating_System,Drive_Bay_1,Floppy_Drive_1">
+              <input type=hidden name="sort2" value="order:Name,email,Company_Name,Division,Title,Voice_Phone,Fax,Address1,City,State,Zip,Country,Account_Representative,Comments,Case_Type,Motherboard_Type,Motherboard_Model,CPU_Type,CPU_Speed,MB_Memory,Monitor,Video_Card,Keyboard,Mouse,Modem_or_NIC,Operating_System,Drive_Bay_1,Drive_Bay_2,Drive_Bay_3,Drive_Bay_4,Floppy_Drive_1,Floppy_Drive_2">
+              <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center">
+                <tr align="center" valign="middle" bgcolor="#8f8fab"> 
+                  <td colspan="4" height="25"><b><font class="secondhead">Personal 
+                    Information</font></b></td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td height="20" colspan="4">&nbsp;</td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td colspan="4"> 
+                    <table width="590" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr valign="middle"> 
+                        <td width="170" align="right" valign="middle"><b><font class="formbold"><font class="star">*</font>Name&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" valign="middle" align="left">
+                          <input type="text" name="Name2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Address12">
+                        </td>
+                        <td width="170" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;Address<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" valign="middle"><b><font class="formbold"><font class="star">*</font>Email&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" valign="middle" align="left">
+                          <input type="text" name="email2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Address22">
+                        </td>
+                        <td width="170" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;Address 
+                          2</font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" valign="middle"><b><font class="formbold"><font class="star">*</font>Company&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" valign="middle" align="left">
+                          <input type="text" name="Company_Name2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="City2">
+                        </td>
+                        <td width="170" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;City<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" valign="middle"><b><font class="formbold"><font class="star">*</font>Division&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" valign="middle" align="left">
+                          <input type="text" name="Division2">
+                        </td>
+                        <td height="25" width="125" align="right"> 
+                          <select name=select  size=1 >
+                            <option value="NONE" selected> Select a State 
+                            <option value="AL"> Alabama 
+                            <option value="AK" > Alaska 
+                            <option value="AZ" > Arizona 
+                            <option value="AR" > Arkansas 
+                            <option value="CA" > California 
+                            <option value="CO" > Colorado 
+                            <option value="CT" > Connecticut 
+                            <option value="DE" > Delaware 
+                            <option value="DC" > District of Columbia 
+                            <option value="FL" > Florida 
+                            <option value="GA" > Georgia 
+                            <option value="HI" > Hawaii 
+                            <option value="ID" > Idaho 
+                            <option value="IL" > Illinois 
+                            <option value="IN" > Indiana 
+                            <option value="IA" > Iowa 
+                            <option value="KS" > Kansas 
+                            <option value="KY" > Kentucky 
+                            <option value="LA" > Louisiana 
+                            <option value="ME" > Maine 
+                            <option value="MD" > Maryland 
+                            <option value="MA" > Massachusetts 
+                            <option value="MI" > Michigan 
+                            <option value="MN" > Minnesota 
+                            <option value="MS" > Mississippi 
+                            <option value="MO" > Missouri 
+                            <option value="MT" > Montana 
+                            <option value="NE" > Nebraska 
+                            <option value="NV" > Nevada 
+                            <option value="NH" > New Hampshire 
+                            <option value="NJ" > New Jersey 
+                            <option value="NM" > New Mexico 
+                            <option value="NY" > New York 
+                            <option value="NC" > North Carolina 
+                            <option value="ND" > North Dakota 
+                            <option value="OH" > Ohio 
+                            <option value="OK" > Oklahoma 
+                            <option value="OR" > Oregon 
+                            <option value="PA" > Pennsylvania 
+                            <option value="PR" > Puerto Rico 
+                            <option value="RI" > Rhode Island 
+                            <option value="SC" > South Carolina 
+                            <option value="SD" > South Dakota 
+                            <option value="TN" > Tennessee 
+                            <option value="TX" > Texas 
+                            <option value="UT" > Utah 
+                            <option value="VT" > Vermont 
+                            <option value="VA" > Virginia 
+                            <option value="WA" > Washington 
+                            <option value="WV" > West Virginia 
+                            <option value="WI" > Wisconsin 
+                            <option value="WY" > Wyoming 
+                            <option value="lines"> ---------- 
+                            <option value="AB" > Alberta 
+                            <option value="BC" > British Columbia 
+                            <option value="MB" > Manitoba 
+                            <option value="NB" > New Brunswick 
+                            <option value="NF" > Newfoundland 
+                            <option value="NT" > Northwest Territories 
+                            <option value="NS" > Nova Scotia 
+                            <option value="ON" > Ontario 
+                            <option value="PE" > Prince Edward Island 
+                            <option value="QC" > Quebec 
+                            <option value="SK" > Saskatchewan 
+                            <option value="YT" > Yukon 
+                            <option value="lines"> ---------- 
+                            <option value="OTHER" > Other. . . . 
+                          </select>
+                        </td>
+                        <td width="170" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;State<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" valign="middle"><b><font class="formbold"><font class="star">*</font>Title&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" valign="middle" align="left">
+                          <input type="text" name="Title2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Zip2">
+                        </td>
+                        <td width="170" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;Zip<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" valign="middle"><b><font class="formbold"><font class="star">*</font>Voice 
+                          Phone&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" valign="middle" align="left">
+                          <input type="text" name="Voice_Phone2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Country2">
+                        </td>
+                        <td width="170" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;Country<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td width="170" align="right" valign="middle"><b><font class="formbold">Fax&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" valign="middle" align="left">
+                          <input type="text" name="Fax2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Account_Representative2">
+                        </td>
+                        <td width="170" align="left" valign="middle"><b><font class="formbold">&nbsp;&nbsp;Account 
+                          Rep<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td width="170" align="right" valign="middle">&nbsp;</td>
+                        <td height="40" colspan="2" valign="bottom" align="center"><b><font class="formbold"><font class="star">*</font>Your 
+                          Comments Please</font></b></td>
+                        <td width="170" align="left" valign="middle">&nbsp;</td>
+                      </tr>
+                      <tr valign="middle" align="center"> 
+                        <td height="25" colspan="4" valign="top"><b><font class="formbold">&nbsp;&nbsp;</font></b> 
+                          <br>
+                          <textarea name="textarea" class="input" cols="45" rows="10"></textarea>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td height="40" colspan="4">&nbsp;</td>
+                </tr>
+                <tr align="center" valign="middle" bgcolor="#8f8fab"> 
+                  <td colspan="4" height="29"><b><font class="secondhead">Computer 
+                    Description</font></b></td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td height="20" colspan="4">&nbsp;</td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td colspan="4"> 
+                    <table width="590" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr valign="middle"> 
+                        <td align="right" width="170" height="25"><b><font class="formbold"><font class="star">*</font>Case 
+                          Type&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" align="left">
+                          <input type="text" name="Case_Type2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Mouse2">
+                        </td>
+                        <td align="left" width="170" height="25"><b><font class="formbold">&nbsp;&nbsp;Mouse<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" height="25"><b><font class="formbold"><font class="star">*</font>MB 
+                          Type&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" align="left">
+                          <input type="text" name="Motherboard_Type2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Modem_or_NIC2">
+                        </td>
+                        <td align="left" width="170" height="25"><b><font class="formbold">&nbsp;&nbsp;Modem/NIC<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" height="25"><b><font class="formbold"><font class="star">*</font>MB 
+                          Model&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" align="left">
+                          <input type="text" name="Motherboard_Model2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Operating_System2">
+                        </td>
+                        <td align="left" width="170" height="25"><b><font class="formbold">&nbsp;&nbsp;OS<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" height="25"><b><font class="formbold"><font class="star">*</font>CPU 
+                          Type&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" align="left">
+                          <input type="text" name="CPU_Type2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Drive_Bay_12">
+                        </td>
+                        <td align="left" width="170" height="25"><b><font class="formbold">&nbsp;&nbsp;Drive 
+                          1<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" height="25"><b><font class="formbold"><font class="star">*</font>CPU 
+                          Speed&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" align="left">
+                          <input type="text" name="CPU_Speed2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Drive_Bay_22">
+                        </td>
+                        <td align="left" width="170" height="25"><b><font class="formbold">&nbsp;&nbsp;Drive 
+                          2</font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" height="25"><b><font class="formbold"><font class="star">*</font>MB 
+                          Memory&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" align="left">
+                          <input type="text" name="MB_Memory2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Drive_Bay_32">
+                        </td>
+                        <td align="left" width="170" height="25"><b><font class="formbold">&nbsp;&nbsp;Drive 
+                          3</font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" height="25"><b><font class="formbold"><font class="star">*</font>Monitor&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" align="left">
+                          <input type="text" name="Monitor2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Drive_Bay_42">
+                        </td>
+                        <td align="left" width="170" height="25"><b><font class="formbold">&nbsp;&nbsp;Drive 
+                          4</font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" height="25"><b><font class="formbold"><font class="star">*</font>Video 
+                          Card&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" align="left">
+                          <input type="text" name="Video_Card2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Floppy_Drive_12">
+                        </td>
+                        <td align="left" width="170" height="25"><b><font class="formbold">&nbsp;&nbsp;Floppy 
+                          1<font class="star">*</font></font></b></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td align="right" width="170" height="25"><b><font class="formbold"><font class="star">*</font>Keyboard&nbsp;&nbsp;</font></b></td>
+                        <td height="25" width="125" align="left">
+                          <input type="text" name="Keyboard2">
+                        </td>
+                        <td height="25" width="125" align="right">
+                          <input type="text" name="Floppy_Drive_22">
+                        </td>
+                        <td align="left" width="170" height="25"><b><font class="formbold">&nbsp;&nbsp;Floppy 
+                          2</font></b></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td height="20" colspan="4">&nbsp; </td>
+                </tr>
+                <tr align="center" valign="middle"> 
+                  <td height="40" colspan="4"> 
+                    <input type="image" border="0" name="submit2" src="images/submit_but.gif" width="53" height="17">
+                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="javascript:location.reload()"><img src="images/clear_but.gif" width="53" height="17" border=0></a> 
+                    <br>
+                    <br>
+                    <center>
+                      <b><font class="formbold"> <font class="star">*</font> Required 
+                      Fields</font></b> 
+                    </center>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

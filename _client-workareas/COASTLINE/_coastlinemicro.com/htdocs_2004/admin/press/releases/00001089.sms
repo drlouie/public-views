@@ -1,0 +1,17 @@
+#!/usr/bin/perl5 -w
+
+$date = "January 03, 2003";
+
+$title = "Coastline Micro Releases Tiger Series 1U NAS Storage Device with 800GB of capacity";
+
+$para1 = "FOR IMMEDIATE RELEASE<br><br>Coastline Micro Releases Tiger Series 1U NAS Storage Device with 800GB of capacity<br><br>Irvine, California, January 3, 2003 – Coastline Micro, Inc., a full service technology provider, today announced that it’s new line of network attached storage (NAS) devices are now capable of handling up to 800GB of EIDE storage in a 1U chassis form factor.<br><br>The Coastline Micro Tiger Series NAS800i Appliance Server is a flexible, cross-platform solution that businesses need for organizing, sharing, and protecting critical data.  In a 1U rack mountable chassis the Tiger Series NAS800i features four 200GB 7200 RPM drives with an 8MB buffer, ATA/100 RAID, teamed with dual 10/100 Ethernet support (for increased performance and reliability), and optional Ultra 160 SCSI support for local tape backup.  The Tiger Series NAS800i can be configured to support RAID 0, 1, 0/1 and 5.<br><br>Powered by Windows 2000 the Tiger Series NAS Appliance Servers are designed for high reliability, availability, and ease of management.  “We've listened to our customers and designed a NAS appliance to meet their advanced needs.  Our Tiger Series NAS Appliance Servers integrate seamlessly into existing infrastructures and support heterogeneous file serving as well as backup/replication of mission-critical data,” said Patrick Nunez, vice-president, IT Services, Coastline Micro, Inc.<br><br>Since 1989 Coastline Micro has been assembling quality built-to-order computer systems, including servers, workstations, PCs, and laptops for VARs and resellers nationwide. In that time we have built a reputation among our loyal customer base as a company that values integrity, quality and strong working relationships. We have continued to expand our selection of built-to-order and pre-built products, as well as our scope of services. Today Coastline Micro is a leading provider of end-to-end, high-quality, cost-effective computing and networking solutions.<br><br>For additional information please contact Coastline Micro at (800) 729-6809 or visit www.coastlinemicro.com.
+";
+
+$location = "Irvine, CA";
+
+$myfoot = "";
+
+$partners = "";
+
+##return = true
+1;

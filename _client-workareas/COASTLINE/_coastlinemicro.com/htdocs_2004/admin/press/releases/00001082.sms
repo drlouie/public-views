@@ -1,0 +1,21 @@
+#!/usr/bin/perl5 -w
+
+$date = "August 27, 2001";
+
+$title = "Coastline Micro announces two new Intel® Pentium® 4  2GHz systems";
+
+$para1 = "Today, Coastline Micro announced two new computer models, by adding  Intel® Pentium® 4 processors 2 Ghz to their existing Thresher Series ™ and their Mako Series™ product lines. The two new models will add the fastest Intel Pentium 4 processors  to Coastline Micro's full line of desktop computer systems.
+<ol type=\"1\">
+<li><b>Thresher Series™ Desktop systems meet the needs of the home office</b><br>
+The newest addition to the Thresher Series™ is the perfect center for the digital home. As telecommunication becomes a more prevalent source of business efficiency nationwide, Coastline Micro’s Thresher Series™, Model CED845GB2C arrives just in time.  The Intel  Pentium 4 processor 2GHz provides all the power it needs. The CED845GB2C is a complete solution for the home entertainment hub as well as a robust business computing system. <br><br>Using only off the shelf software from Microsoft and Intel, this system will act as an Internet gateway sharing broadband connection to the rest of the household, via an Intel wireless networking hub. It will function as a firewall by implementing Microsoft’s Internet Sharing service found in the Windows 98 operating system.  The system will also act as a home media server, when combined with Coastline Micro’s MediaStation. <br><br>The CED845GB2C comes equipped with an Intel Pocket PC Camera enabling users to videoconference with the office and clients, using Microsoft NetMeeting software.  The camera also pulls extra duty, allowing the user to enjoy digital picture capabilities during family events.  Also included with the CED845GB2C is a DVD player, which can be directed to any nearby television for high quality viewing.  A convenient CD-RW is provided granting users the ability to customize and record music or video files for personal consumption. <br><br>Whether this CED845GB2C Digital entertainment hub is used by itself, or in conjunction with other systems as part of a complete digital home office, its power and simplicity should not be overlooked.  Users can rejoice in knowing that finally, there's hardware that provides the perfect balance between a business productivity unit and a home entertainment system.<br><br><li><b>Mako Series™ Provide state-of-the-art performance for the business desktop</b><br>
+The Mako Series™, Model CED850GB2 brings power and cutting edge technology to the applications that need it most including voice recognition.  Microsoft has bundled its latest version of Office XP, which comes complete with voice recognition capabilities. <br><br>Processing power is a key component to a successful voice recognition experience. By utilizing the performance of the new  Pentium 4 processor 2GHz  from Intel, Coastline Micro’s Mako Series pushes the performance envelope.  Equipped with 512MB of PC800 Rambus memory, voice recognition is a breeze.  Dictating a letter is now almost as easy as talking on the phone.  An optional wireless headset and microphone gives the user freedom to move about without restriction. Optimum performance is what Coastline Micro’s Mako Series™ is all about.
+</ol>";
+
+$location = "Irvine, California";
+
+$myfoot = "00001014";
+
+$partners = "";
+
+##return = true
+1;

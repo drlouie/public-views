@@ -1,0 +1,1063 @@
+#!/usr/bin/perl5 -s
+
+###########################################################################################################
+# Company: ©2001 NetMedia Solutions                                                                       #
+# Date: Saturday, September 21, 2001                                                                      #
+# Location: Los Angeles County, California, United States of America                                      #
+# Made By: Luis Rodriguez (drlouie)                                                                       #
+# Email: Drlouie@NetMediaSol.com                                                                          #
+#                                                                                                         #
+# This program cannot be duplicated, distributed or re-used for any other purpose other than its original #
+# intended purpose and function. You may request NetMedia Solutions for a copy of the script,             #
+# personalized to fit your exact needs for a small re-programming fee.                                    #
+###########################################################################################################
+
+$tablewidth = "90%"; $t1 = "5"; $t2 = "64%"; $t3 = "18%"; $t4 = "18%"; $t5 = "100%";
+
+$CMPartNum = "$FORM{'CMPartNum'}";
+$PricingClass = "$FORM{'PricingClass'}";
+$ItemName = "$FORM{'ItemName'}";
+$Warranty = "$FORM{'Warranty'}";
+$CMSeries = "$FORM{'CMSeries'}";
+$LasPartes = $FORM{'LasPartes'};
+$ElPrecio = $FORM{'ElPrecio'};
+$ElPeso = $FORM{'ElPeso'};
+$Image = $FORM{'Image'};	
+
+## ----------------->>> BACK BUTTON
+$GoBack = "<a href=\"javascript:history.go(-1);\"><img src=\"images/tables/icon_back_on.gif\" width=\"60\" height=\"20\" name=\"back\" border=\"0\"></a>";
+
+
+$STANKLEGAL = `cat stank_legal.nsf`;
+
+##---------------------------->>> CONFIGURE SYSTEM INFORMATION AND IMAGERY FOR OUTPUT
+$MainTitle = "$CMSeries&#153; Series System Saver";
+if ($CMSeries eq "GreatWhite") { $ITitle = "gw"; }
+elsif ($CMSeries eq "Mako") { $ITitle = "mako"; }
+elsif ($CMSeries eq "Reef") { $ITitle = "reef"; }
+elsif ($CMSeries eq "Tiger") { $ITitle = "tiger"; }
+elsif ($CMSeries eq "Thresher") { $ITitle = "thresher"; }
+else { $ITitle = "store"; }
+
+## RECONFIGURABLE?
+$ConfigIT = "<img src=\"images/tables/but_configureit_dn.gif\" width=\"81\" height=\"20\" name=\"configureit\" border=\"0\">";
+
+
+if ($FORM{'SEAGATE'} eq "1") { 
+	$topbarLeft = "seagate_topbar_left.gif"; 
+	$topbarRight = "seagate_topbar_right.gif"; 
+	$topbarMid = "seagate_topbar_mid.gif"; 
+	$extraStyle = "style='color:#000000'";
+}
+else { 
+	$topbarLeft = "quest_topbar_left.gif"; 
+	$topbarRight = "quest_topbar_right.gif"; 
+	$topbarMid = "quest_topbar_mid.gif"; 
+	$extraStyle = "style='color:#000000'";
+}
+
+## ----------------->>> EQUOTE
+if (($FORM{'LasPartes'} ||  $FORM{'CID'}) && $FORM{'CartSaveEQuote'} eq "EQUOTE") {
+
+
+	$countfile = "EQCNT.cnt";
+	open(COUNT,"$countfile") || &error('can not write to $countfile');
+	$countEQ = <COUNT>;
+	$countEQ++;
+	close(COUNT);
+	## write out current count on tracking file
+	open(COUNT2,">$countfile") || &error('can not write to $countfile');
+	flock(COUNT2, 2);
+	print COUNT2 "$countEQ";
+	flock(COUNT2, 8);
+	close(COUNT2);
+	
+	$EQCNT = "$countEQ";
+
+use DBI;
+my $dbh = DBI->connect("DBI:mysql:coastline","drlouie","chinga2") or die "Unable to connect to database: <b>coastline</b>\n"; 
+$dbh->{RaiseError} = 1; 
+
+if ($Cookies{'Echado'} ne "" && $Cookies{'Echado'} ne " " && $Cookies{'Echado'} ne "NO") {
+	$Username = "$Cookies{'GID'}";
+	$CMCustNum = "$Cookies{'CeeEmmNo'}";
+	$FirstName = "$Cookies{'FiNo'}";
+	$LastName = "$Cookies{'LaNo'}";
+	$Email = "$Cookies{'EDomi'}";
+	$UTipe = "$Cookies{'UTipe'}";
+	$CoNo = "$Cookies{'CoNo'}";
+	$DTV = "$Cookies{'DTV'}";
+	$SRV = "$Cookies{'SRV'}";
+	$NBV = "$Cookies{'NBV'}";
+	$MOV = "$Cookies{'MOV'}";
+	$MYV = "$Cookies{'MYV'}";
+	$HDV = "$Cookies{'HDV'}";
+	$VDV = "$Cookies{'VDV'}";
+	$PHV = "$Cookies{'PHV'}";
+	$PRV = "$Cookies{'PRV'}";
+	$SWV = "$Cookies{'SWV'}";
+
+	my $sth = $dbh->prepare("SELECT * FROM Customers WHERE CMCustNum='$CMCustNum'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) {
+		$SavedPhone = $row[8];
+		$RepID = $row[3];
+	}
+	$sth->finish;
+	
+	$Area = substr($SavedPhone, 0, 3);
+	$Phone3 = substr($SavedPhone, 3, 3);
+	$Phone4 = substr($SavedPhone, 6, 4);
+
+	## if Email not blank, set UserEmailer option to YES/ON
+	if ($Email ne "" && $Email ne " " && $Email =~ "\@") { $UserEmailer = "YES"; }
+	
+	## rep EMAILS
+	if ($RepID ne "" && $RepID ne " ") {
+		if ($RepID =~ ",") { 
+			@splitReps = split(/,/, $RepID);
+			$leRepID = $splitReps[0];
+		}
+		else { $leRepID = $RepID; }
+		
+		my $sth = $dbh->prepare("SELECT * FROM Users WHERE Username='$leRepID'");
+		$sth->execute or die "Unable to execute query\n";
+		my @row;
+		while(@row = $sth->fetchrow_array) {
+			$RepEmail = $row[5];
+		}
+		$sth->finish;
+	}
+}
+
+else {
+	$countfile2 = "GUCNT.cnt";
+	open(COUNT2,"$countfile2") || &error('can not write to $countfile2');
+	$countGU = <COUNT2>;
+	$countGU++;
+	close(COUNT2);
+	## write out current count on tracking file
+	open(COUNT3,">$countfile2") || &error('can not write to $countfile2');
+	flock(COUNT3, 2);
+	print COUNT3 "$countGU";
+	flock(COUNT3, 8);
+	close(COUNT3);
+	
+	$Username = "Guest_$countGU";
+	$CMCustNum = "Guest_$countGU";
+	$FirstName = "$FORM{'FirstName'}";
+	$LastName = "$FORM{'LastName'}";
+	if ($FORM{'Email'} ne "" && $FORM{'Email'} ne " " && $FORM{'Email'} =~ "\@") { $UserEmailer = "YES"; $Email = "$FORM{'Email'}"; }
+	else { $Email = "NoUserEmail\@coastlinemicro.com"; }
+	$Area = "$FORM{'Area'}";
+	$Phone = "$FORM{'Phone'}";
+	$UTipe = "GuestUser";
+	$CoNo = "$FORM{'CoNo'}";
+	$DTV = "35";
+	$SRV = "35";
+	$NBV = "35";
+	$MOV = "35";
+	$MYV = "35";
+	$HDV = "35";
+	$VDV = "35";
+	$PHV = "35";
+	$PRV = "35";
+	$SWV = "35";
+
+	$Phone3 = substr($Phone, 0, 3);
+	$Phone4 = substr($Phone, 3, 4);
+}
+
+	$Parent = "$FORM{'CMPartNum'}";
+	$OrderIDs = "0";
+	$ProductIDs = "$LasPartes";
+	$TotalPrice = "$ElPrecio";
+	$TotalWeight = "$ElPeso";
+	push(@elConfig,"$Parent=-=-=$Username=-=-=$CMCustNum=-=-=$OrderIDs=-=-=$CMSeries=-=-=$ProductIDs=-=-=$TotalPrice=-=-=$TotalWeight=-=-=$CreatedOn=-=-=$CID");
+
+$MainTitle = "Shark Tank&#153; Electronic Quoting System";
+
+@splitConfig = split(/=-=-=/, $elConfig[0]);
+$leParent = $splitConfig[0];
+$leUser = $splitConfig[1];
+$leCMC = $splitConfig[2];
+$leOIDs = $splitConfig[3];
+$leCMS = $splitConfig[4];
+$lePIDs = $splitConfig[5];
+$lePrice = $splitConfig[6];
+$leWeight = $splitConfig[7];
+$leCreated = $splitConfig[8];
+$leCID = $splitConfig[9];
+
+my $sth = $dbh->prepare("SELECT * FROM Products WHERE CMPartNum='$leParent'");
+$sth->execute or die "Unable to execute query\n";
+my @row;
+while(@row = $sth->fetchrow_array) {
+	$ProductNombre = $row[11];
+	$SmallPhoto = $row[17];
+}
+$sth->finish;
+
+my $sth = $dbh->prepare("SELECT * FROM Images WHERE ImageID='$SmallPhoto'");
+$sth->execute or die "Unable to execute query\n";
+my @row;
+while(@row = $sth->fetchrow_array) { 
+	$SavedFileName = $row[3];
+	$SavedDesc = $row[8];
+	$SmallImageN = "$SavedFileName"; 
+	$SmallImageD= "$SavedDesc";
+}
+$sth->execute or die "Unable to execute query\n"; 
+$sth->finish;
+
+if ($leCMS eq "GreatWhite") { $leCMS = "gw"; }
+elsif ($leCMS eq "Mako") { $leCMS = "mako"; }
+elsif ($leCMS eq "Reef") { $leCMS = "reef"; }
+elsif ($leCMS eq "Thresher") { $leCMS = "thresher"; }
+else { $leCMS = "tiger"; }
+
+if ($FORM{'InnerLink'} eq "1") {
+	$CARTITLink = "&nbsp;"; 
+	$RECONFIGLink = "&nbsp;";
+	$LayerCSS = "#divNewsCont {position:absolute; left:150; top:12px; width:300px; height:80px; clip:rect(0px 300px 80px 0px); visibility:hidden; overflow:hidden;}\n";
+	$LayerCSS2 = "#divNews     {position:absolute;}\n";
+}
+else { 
+	$CARTITLink = "<a href=\"javascript:location.href = 'newframer.html?subject=$leCMS&title=$leCMS&cartit=$leCID';\" onMouseOver=\"javascript:imageOnDHTML3('cartit','ov');\" onMouseOut=\"javascript:imageOffDHTML3('cartit','off');\"><img src=\"images/newones/cartit_off.gif\" border=\"0\" name=\"cartit\"></a>"; 
+	$RECONFIGLink = "<a href=\"javascript:location.href = 'sharktank.html?title=$$FORM{'title'}&loadsys=$leParent';\" onMouseOver=\"javascript:imageOnDHTML3('reconfigit','ov');\" onMouseOut=\"javascript:imageOffDHTML3('reconfigit','off');\"><img src=\"images/newones/reconfigit_off.gif\" border=\"0\" name=\"reconfigit\"></a>";
+	$LayerCSS = "#divNewsCont {position:absolute; top:12px; width:300px; height:80px; clip:rect(0px 300px 80px 0px); visibility:hidden; overflow:hidden;}\n";
+	$LayerCSS2 = "#divNews     {position:absolute;}\n";
+}
+
+@losProductos = split(/,,,,,/, $lePIDs);
+foreach $elProducto (@losProductos) {
+	@splitItem = split(/-----/, $elProducto);	
+	$MiCate = $splitItem[0];
+	$MiNume = $splitItem[1];
+	$MiPrecio = $splitItem[4];
+	my $sth = $dbh->prepare("SELECT * FROM Products WHERE CMPartNum='$MiNume'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) {
+		$Compania = $row[6];
+		$ItemName = $row[11];
+		$Description = $row[12];
+		$Precio = $row[21];
+		if ($Compania ne "" && $Compania ne " " && $Compania ne "NONE") { push(@Companias,"$Compania"); }
+		if ($row[16] ne "" && $row[16] ne " ") { push(@emblems, "$row[16]"); }
+		push(@losPrecios,"$Precio");
+		push(@theItems, "$MiCate-----$MiNume-----$ItemName-----$Description-----$Precio");
+	}
+	$sth->finish;
+}
+
+foreach $Company (@Companias) {
+	my $sth = $dbh->prepare("SELECT * FROM MFGs WHERE ManufacturerID='$Company'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$MuaName = $row[1];
+		$SImage = $row[18];
+		if ($Company ne "" && $Company ne $LastCompany) { push(@Emblems,"$Company,,,,,$MuaName,,,,,$SImage"); $LastCompany = $Company; }
+	}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+}
+
+foreach $EmblemIt (@Emblems) {
+	@EsteEmb = split(/,,,,,/, $EmblemIt);
+	$MuaCompany = $EsteEmb[0];
+	$MuaName = $EsteEmb[1];
+	$MuaSImage = $EsteEmb[2];
+	
+	my $sth = $dbh->prepare("SELECT * FROM Images WHERE ImageID='$MuaSImage'");
+	$sth->execute or die "Unable to execute query\n";
+	my @row;
+	while(@row = $sth->fetchrow_array) { 
+		$InnerURL = $row[6];
+		if ($lastImage =~ "$MuaSImage") {  }
+		else { push (@leImagen, "<br><img src=\"$InnerURL\" border=\"0\"><br>$MuaName\<br><br><br>"); }
+		$lastImage = $lastImage . $MuaSImage;
+	}
+	$sth->execute or die "Unable to execute query\n"; 
+	$sth->finish;
+}
+
+
+use locale;
+my $UCCMPartNum = uc($CMPartNum);
+
+if ($CMSeries eq "Thresher") { $myNombre = "Value Desktop PC"; }
+elsif ($CMSeries eq "Tiger") { $myNombre = "DP Xeon&#153; Server"; }
+elsif ($CMSeries eq "GreatWhite") { $myNombre = "MP Xeon&#153; Server"; }
+elsif ($CMSeries eq "Mako") { $myNombre = "Performance Desktop PC"; }
+else { $myNombre = "Notebook PC"; }
+
+
+	$daTotal = $TotalPrice * $FORM{'HowMany'};
+	$daTotal = sprintf("%.2f", $daTotal);
+
+push (@leProductos, "
+<tr bgcolor='#000000' height='30'>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#FFFFFF'>&nbsp;</font></td>
+<td width='5%'><font face='arial' size='2' color='#FFFFFF'><b>$UCCMPartNum</b></font></td>
+<td width='100%'><font face='Verdana,Arial,Helevetica' size='2' color='#FFFFFF'><b>$CMSeries Series&#153; $myNombre&nbsp;</b></font></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#FFFFFF'>$FORM{'HowMany'}</font></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#FFFFFF'>&nbsp;</font></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#FFFFFF'>$TotalPrice</font></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#FFFFFF'>$daTotal</font></td>
+</tr>
+<tr align='center' height='5'>
+<td width='5%'><img src='http://www.coastlinemicro.com/images/spacer.gif' width='5' height='1'></td>
+<td width='5%'><img src='http://www.coastlinemicro.com/images/spacer.gif' width='100' height='1'></td>
+<td width='50%' align='left'><img src='http://www.coastlinemicro.com/images/spacer.gif' width='5' height='1'></td>
+<td width='15%'><img src='http://www.coastlinemicro.com/images/spacer.gif' width='25' height='1'></td>
+<td width='15%'><img src='http://www.coastlinemicro.com/images/spacer.gif' width='75' height='1'></td>
+<td width='10%'><img src='http://www.coastlinemicro.com/images/spacer.gif' width='5' height='1'></td>
+</tr>
+\n");
+
+$SCuenta=0;
+foreach $anItem (@theItems) {
+	@splitCosas = split(/-----/, $anItem);	
+	$Category = $splitCosas[0];
+	$MiNume = $splitCosas[1];
+	$MiEsteNombre = $splitCosas[2];
+	$ItsDesc = $splitCosas[3];
+	$ElPrecio = $splitCosas[4];
+	
+	##--->> REFORMAT INCOMING DATA FOR PARSING
+	$DCount = "0";
+	@DescCount = split(//, $ItsDesc);
+	foreach $DescDesc (@DescCount) { 
+	$DCount++; 
+		if (($FORM{'SEAGATE'} eq "1" || $FORM{'QUEST'} eq "1" || $FORM{'TPP'} eq "1") && $SCuenta eq "0") { 
+			$ItsDesc = $ItsDesc; 
+		}
+		elsif ($DCount >= "50" && ($DescDesc eq "." || $DescDesc eq "!")) { 
+			$ItsDesc = substr($ItsDesc, 0, $DCount); 
+		} 
+	}
+	##--->> REFORMAT INCOMING DATA FOR PARSING
+	$NCount = "0";
+	@NameCount = split(//, $MiName);
+	foreach $NameName (@NameCount) { 
+	$NCount++; 
+		if ($NCount >= "35" && $NameName eq " ") { 
+			$MiEsteNombre = substr($MiEsteNombre, 0, $NCount); 
+		} 
+	}
+
+	
+	## check categories
+
+if ($lastCate ne "$Category") {
+$mulPrice = $FORM{'HowMany'} * $ElPrecio;
+$mulPrice = sprintf("%.2f", $mulPrice);
+
+push(@losPrecios,"$mulPrice");
+
+push (@leProductos, "
+<tr height='20'>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>&nbsp;</font></td>
+<td width='5%'><font face='arial' size='1' color='#000000'>$MiNume</font></td>
+<td width='100%'><a href='http://www.coastlinemicro.com/stank_viewprod.html?CMPartNum=$MiNume&ComingFrom=vconfig&OGPart=$leCID&InnerLink=1'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>$MiEsteNombre&nbsp;</b></font></a></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>$FORM{'HowMany'}</font></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>0</font></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>&nbsp;0.00&nbsp;</font></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>&nbsp;0.00&nbsp;</font></td>
+</tr>
+\n");
+
+}
+else {
+
+$mulPrice = $FORM{'HowMany'} * $ElPrecio;
+$mulPrice = sprintf("%.2f", $mulPrice);
+
+push(@losPrecios,"$mulPrice");
+
+push (@leProductos, "
+<tr height='20'>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>&nbsp;</font></td>
+<td width='5%'><font face='arial' size='1' color='#000000'>$MiNume</font></td>
+<td width='100%'><a href='http://www.coastlinemicro.com/stank_viewprod.html?CMPartNum=$MiNume&ComingFrom=vconfig&OGPart=$leCID&InnerLink=1'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>$MiEsteNombre&nbsp;</b></font></a></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>$FORM{'HowMany'}</font></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>0</font></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>&nbsp;0.00&nbsp;</font></td>
+<td align='center'><font face='Verdana,Arial,Helevetica' size='1' color='#000000'>&nbsp;0.00&nbsp;</font></td>
+</tr>
+\n");
+
+
+}
+
+$lastCate = "$Category";
+
+$SCuenta++;
+
+
+if ($SCuenta eq @theItems) {
+push (@leProductos, "
+<tr bgcolor='#FFFFFF' height='15'>
+<td colspan='7' align='right'><img src='images/spacer.gif' width='1' height='15'></td>
+</tr>
+\n");
+}
+
+
+}
+
+if ($FORM{'NMUSD'} eq "1") { 
+	$lePrecious="<font class=\"stankprice\"><br><center>For faster service, feel free to give us a call anytime...</center></font><br>"; 
+	$leType = "School District Program";
+	$leRecipient = "NMUSD\@coastlinemicro.com";
+	$leRecipient2 = "ssanchez\@coastlinemicro.com";
+#	$leRecipient = "drlouie\@tstonramp.com";
+}
+elsif ($FORM{'MSP'} eq "1") { 
+	$lePrecious="<font class=\"stankprice\"><br><center>For faster service, feel free to give us a call anytime...</center></font><br>"; 
+	$leType = "Intel&reg; Model School Program";
+	$leRecipient = "MSP\@coastlinemicro.com";
+	$leRecipient2 = "ssanchez\@coastlinemicro.com";
+#	$leRecipient = "drlouie\@tstonramp.com";
+}
+elsif ($FORM{'TPP'} eq "1" && $Cookies{'Echado'} eq "YES") { 
+	$lePrecious="<br><font class=\"stankprice\"><center>System's Price As Seen Online<br><b>\$$TotalPrice</b></center></font>"; 
+	$leType = "TPP Program Systems";
+	$leRecipient = "TPP\@coastlinemicro.com";
+	$leRecipient2 = "ssanchez\@coastlinemicro.com";
+#	$leRecipient = "drlouie\@tstonramp.com";
+}
+elsif ($FORM{'SEAGATE'} eq "1") { 
+	$lePrecious="<br><font class=\"stankprice\"><center>System's Price As Seen Online<br><b>\$$TotalPrice</b></center></font>"; 
+	$leType = "Seagate System Purchasing Center";
+	$leRecipient = "cmseagate\@coastlinemicro.com";
+	$leRecipient2 = "ssanchez\@coastlinemicro.com";
+#	$leRecipient = "drlouie\@tstonramp.com";
+}
+elsif ($FORM{'QUEST'} eq "1") { 
+	$lePrecious="<br><font class=\"stankprice\"><center>System's Price As Seen Online<br><b>\$$TotalPrice</b></center></font>"; 
+	$leType = "Quest System Purchasing Center";
+	$leRecipient = "quest\@coastlinemicro.com";
+	$leRecipient2 = "ssanchez\@coastlinemicro.com";
+#	$leRecipient = "drlouie\@tstonramp.com";
+}
+else { 
+	$lePrecious="<br><font class=\"stankprice\"><center>System's Price<br><b>\$$TotalPrice</b></center></font>"; 
+	$leRecipient = "mpnunez\@coastlinemicro.com";
+	$leRecipient2 = "ssanchez\@coastlinemicro.com";
+#	$leRecipient = "drlouie\@tstonramp.com";
+}
+
+
+if ($FORM{'SEAGATE'} eq "1" || $FORM{'QUEST'} eq "1") { 
+	$cualUserGreeting = "<b>$FirstName $LastName</b>,<br>Your Order has been recieved for the customized <b>$CMSeries Series&#153;</b> $PricingClass system of your choice. Below you will find the parameters of your system's configuration. A Coastline Micro Representative will contact you regarding this order in a timely manner. Please feel free to call us if you do NOT want to wait for our Representative to call you.<br><br>You can use <b>$EQCNT</b>, this transaction's <b>Order ID</b>, when contacting Coastline Micro regarding this specific configuration. You can find our contact information at the foot of this email message.<br><br><center><b>As always, thank you for using the Shark Tank&#153;, our prize winning e-commerce store.</b></center><br><br>";
+	$cualAdminGreeting = "This Order has been processed for <b>$FirstName $LastName</b> from <b>$CoNo</b>. Below you will find the components of the system <b>$FirstName $LastName</b> ordered. He/She has been adviced that a Coastline Micro Representative would contact him/her in timely manner. Attached you will find a Printable Order Sheet<br><br><b>Program Type</b> - $leType<br><b>First and Last Name</b> - $FirstName $LastName<br><b>Company Name</b> - $CoNo<br><b>Email Address</b> - $Email<br><b>Phone Number</b> - ($Area) $Phone3-$Phone4<br><br>";
+	$cualQuest = "Order";
+	$cualCCInfo = "Your order is being reviewed and will be processed as soon as your Coastline Micro Representative recieves it. He/she will contact you with an order confirmation number once this order has been processed.";
+}
+else {
+	$cualUserGreeting = "<b>$FirstName $LastName</b>,<br>Your Electronic Quote (E-Quote) request has been delivered for your customized <b>$CMSeries Series&#153;</b> $PricingClass system. Below you will find the parameters of that configuration. A Coastline Micro Representative will contact you regarding this request in a timely manner. Please feel free to call us if you do NOT want to wait for our Representative to call you.<br><br>You can use <b>$EQCNT</b>, this request's <b>EQuote ID</b>, when contacting Coastline Micro regarding this specific configuration. You can find our contact information at the foot of this email message.<br><br><center><b>As always, thank you for using the Shark Tank&#153;, our prize winning e-commerce store.</b></center><br><br>";
+	$cualAdminGreeting = "This Electronic Quote (E-Quote) request has been sent by <b>$FirstName $LastName</b> from <b>$CoNo</b>. Below you will find the components of the system <b>$FirstName $LastName</b> requested a quote for. He/She has been adviced that a Coastline Micro Representative would contact him/her in timely manner. Directly below is the <b>$FirstName's</b> contact information for user: <b>$Username</b><br><br><b>Program Type</b> - $leType<br><b>First and Last Name</b> - $FirstName $LastName<br><b>Company Name</b> - $CoNo<br><b>Email Address</b> - $Email<br><b>Phone Number</b> - ($Area) $Phone3-$Phone4<br><br><br><center><b>As always, thank you for using the Shark Tank&#153;, our prize winning e-commerce store.</b></center><br><br>";
+	$cualQuest = "E-Quote";
+	$cualCCInfo = "Additionally a credit card authorization form will be emailed to you for completion. Please complete credit card authorization form and fax to <b>949-450-9977</b>. Upon receipt, your order will be processed and a Coastline Micro Representative will contact you with an order confirmation number.";
+}
+
+
+&topper;
+$pageDrop = $pageDrop . "
+
+<table width=\"100%\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">
+<tr> 
+<td width=\"40%\" valign=\"middle\" align=\"center\"><img src=\"/dbimages/prod_common/$Image\" width=\"165\" height=\"100\" vspace=\"20\" border=\"0\"></td>
+<td width=\"55%\" valign=\"middle\"><font class=\"btext\"><br>An $cualQuest has been recieved for your customized <b>$CMSeries Series&#153;</b> $PricingClass system. You will receive an email specifying the parameters of your configuration and $cualQuest.  $cualCCInfo If you have any questions or concerns, please feel free to contact Coastline Micro at <b>800-729-6809</b>.<br><br>You can use <b>$EQCNT</b>, this request's <b>$cualQuest ID</b>, when contacting Coastline Micro regarding this specific configuration.<br><br><b>As always, thank you for using the Shark Tank&#153;, our prize winning e-commerce store.</b><br><br></font></td>
+<td width=\"5%\">&nbsp;</td>
+</tr>
+</table>
+<br>
+
+";
+&bottom;
+
+
+&sendEmails;
+
+## DISCONNECT DB 
+$dbh->disconnect; 
+
+##return =true
+1;
+}
+
+
+
+
+
+
+
+
+
+
+sub sendEmails {
+
+################################
+## prepare Admin's Equote PDF ##
+################################
+
+
+
+$lostotales= "
+                    <tr valign=\"top\"> 
+                      <td width=\"75%\"></td>
+                      <td width=\"25%\" align=\"right\"> 
+                        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\">
+                          <tr valign=\"middle\"> 
+                            <td width=\"50%\" align=\"right\"><font face=\"arial\" size=\"2\">Net Quote:&nbsp;&nbsp;</font></td>
+                            <td width=\"50%\" align=\"right\"><font face=\"arial\" size=\"2\" color=\"#000000\">%%MuaTotal%%</font></td>
+                          </tr>
+                        </table>
+                        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\">
+                          <tr valign=\"middle\"> 
+                            <td width=\"50%\" align=\"right\"><font face=\"arial\" size=\"2\">Discount:&nbsp;&nbsp;</font></td>
+                            <td width=\"50%\" align=\"right\"><font face=\"arial\" size=\"2\" color=\"#000000\">%%MuaDiscount%%</font></td>
+                          </tr>
+                        </table>
+                        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\">
+                          <tr valign=\"middle\"> 
+                            <td width=\"50%\" align=\"right\"><font face=\"arial\" size=\"2\">Freight:&nbsp;&nbsp;</font></td>
+                            <td width=\"50%\" align=\"right\"><font face=\"arial\" size=\"2\" color=\"#000000\">%%MuaShipCost%%</font></td>
+                          </tr>
+                        </table>
+                        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\">
+                          <tr valign=\"middle\"> 
+                            <td width=\"50%\" align=\"right\"><font face=\"arial\" size=\"2\">Sales Tax:&nbsp;&nbsp;</font></td>
+                            <td width=\"50%\" align=\"right\"><font face=\"arial\" size=\"2\" color=\"#000000\">%%MuaTaxes%%</font></td>
+                          </tr>
+                        </table>
+                        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+                          <tr valign=\"middle\">
+                            <td width=\"50%\" align=\"right\" height=\"1\"><img src=\"http://www.coastlinemicro.com/images/spacer.gif\" width=\"1\" height=\"1\"></td>
+                            <td width=\"50%\" align=\"right\" height=\"1\" bgcolor=\"#000000\"><img src=\"http://www.coastlinemicro.com/images/spacer.gif\" width=\"1\" height=\"1\"></td>
+                          </tr>
+                        </table>
+                        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\">
+                          <tr valign=\"middle\"> 
+                            <td width=\"50%\" align=\"right\"><font face=\"arial\" size=\"2\"><b>Quote Total:&nbsp;&nbsp;</b></font></td>
+                            <td width=\"50%\" align=\"right\"><font face=\"arial\" size=\"2\" color=\"#000000\"><b>%%MuaGrandTotal%%</b></font></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+";
+
+
+
+
+foreach $eleP (@leProductos) {
+	$todosCOSAS = $todosCOSAS . $eleP;
+}
+$BUNCHADATA = "$todosCOSAS";
+
+$cualQuotedto = "<nobr>&nbsp;$FORM{'CoNo'}</nobr><br><nobr>&nbsp;$FORM{'FirstName'} $FORM{'LastName'}</nobr><br><nobr>&nbsp;$FORM{'Email'}</nobr><br><nobr>&nbsp;($FORM{'Area'}) $FORM{'Phone'}</nobr>";
+
+### FEED HTML TEMPLATE 
+if ($FORM{'SEAGATE'} eq "1" || $FORM{'QUEST'} eq "1") { 
+	$leTemplateAdminEquote = `cat pdf/newreceipt.html.nsf`; 
+	$leTemplateAdminEquote =~ s/%%MuaPO%%/$FORM{'PurchOrd'}/g;
+	$leTemplateAdminEquote =~ s/%%MuaShippedOn%%/Pending/g;
+	$leTemplateAdminEquote =~ s/%%MuaCourier%%/( UPS \/ FedEx )/g;
+}
+else { 
+	$leTemplateAdminEquote = `cat pdf/newquote.html.nsf`; 
+}
+
+
+
+$trueTotal = $TotalPrice * $FORM{'HowMany'};
+$trueTotal = sprintf("%.2f", $trueTotal);
+
+$leTemplateAdminEquote =~ s/%%TOTALS%%/$lostotales/g;
+$leTemplateAdminEquote =~ s/%%MuaDate%%/$date2/g;
+$leTemplateAdminEquote =~ s/%%MuaQNumber%%/E-Quote $EQCNT/g;
+$leTemplateAdminEquote =~ s/%%MuaCNumber%%/E-Com Guest/g;
+$leTemplateAdminEquote =~ s/%%MuaQuoteTo%%/$cualQuotedto/g;
+$leTemplateAdminEquote =~ s/%%MuaTerms%%/Pre-Defined/g;
+$leTemplateAdminEquote =~ s/%%MuaTodos%%/$BUNCHADATA/g;
+$leTemplateAdminEquote =~ s/%%MuaSubTotal%%/$TotalPrice/g;
+$leTemplateAdminEquote =~ s/%%MuaShipCost%%/0.00/g;
+$leTemplateAdminEquote =~ s/%%MuaTaxes%%/0.00/g;
+$leTemplateAdminEquote =~ s/%%MuaTotal%%/$trueTotal/g;
+$leTemplateAdminEquote =~ s/%%MuaDiscount%%/0.00/g;
+$leTemplateAdminEquote =~ s/%%MuaGrandTotal%%/$trueTotal/g;
+
+
+if ($leType ne "" && $leType ne " ") {
+	$leTemplateAdminEquote =~ s/%%ProgType%%/$leType/g;
+}
+else {
+	$leTemplateAdminEquote =~ s/%%ProgType%%/N\/A/g;
+}
+
+
+if ($Cookies{'Echado'} eq "YES" && ($Cookies{'UTipe'} ne "CMManage" && $Cookies{'UTipe'} ne "CMAdmin" && $Cookies{'UTipe'} ne "CMUser" && $Cookies{'UTipe'} ne "CMSales")) {
+	$leTemplateAdminEquote =~ s/%%AccountStatus%%/Active/g;
+	$leTemplateAdminEquote =~ s/%%MuaRep%%/$cualRep/g;
+}
+elsif ($Cookies{'Echado'} ne "YES" && $Cookies{'Logged'} ne "YES") { 
+	$leTemplateAdminEquote =~ s/%%AccountStatus%%/In-Active/g;
+	$leTemplateAdminEquote =~ s/%%MuaRep%%/TBD/g;
+}
+else {
+	$leTemplateAdminEquote =~ s/%%AccountStatus%%/Active/g;
+	$leTemplateAdminEquote =~ s/%%MuaRep%%/$cualRep/g;
+}
+
+
+
+
+
+
+
+### NOW MAKE TEMPLATE INTO PERL generated HTML (AS CONFIGURED ON SERVER)
+$leTemplatePDFAE = $leTemplateAdminEquote;
+$cut1 = "<html>";
+$add1 = "#!/usr/bin/perl5 -s \n\n print\"Content-type: text/html\\n\\n\";\n\n print qq\~ \n\n<html>";
+$cut2 = "</html>";
+$add2 = "</html>\n\n\~;\n\nexit;";
+$leTemplatePDFAE =~ s/$cut1/$add1/g;
+$leTemplatePDFAE =~ s/$cut2/$add2/g;
+$leTemplatePDFAE =~ s/@/\\@/g;
+
+
+## new HTML for PDF as per O-Num
+$AEhtml = "pdf/rec/aequote_$EQCNT.html";
+
+## save html template for PDF ##
+open(AEHTML,">$AEhtml") || &error('can not write to $AEhtml');
+flock(AEHTML, 2);
+print AEHTML "$leTemplatePDFAE";
+flock(AEHTML, 8);
+close(AEHTML);
+## CHMOD TO ACTIVATE
+chmod (0755, $AEhtml)  || &error('cant chmod $AEhtml');
+
+###########################
+## generate PDF (remote) ##
+###########################
+use LWP::Simple;
+use CGI;
+use CGI::Carp qw(fatalsToBrowser);
+my $url = "http://216.122.237.121/pdmyht.php?URL=https%3A%2F%2Fwww.coastlinemicro.com%2Fpdf%2Frec%2Faequote_$EQCNT.html&FORMAT=.pdf";
+my $page = get ($url);
+
+## save PDF ##
+$lepdfAE = "pdf/rec/aequote_$EQCNT.pdf";
+
+open(AEPDF,">$lepdfAE") || &error('can not write to $lepdfAE');
+flock(AEPDF, 2);
+print AEPDF "$page";
+flock(AEPDF, 8);
+close(AEPDF);
+
+
+### READ FILESIZE
+# Get the filesize in KB. For files < 1 KB return 1, unless the file
+# is 0 bytes.
+#my $lepdfAEC = $lepdfAE;
+#my $lepdfAESize = int((-s $lepdfAEC)/1024);
+#if( $lepdfAESize == 0 && ! (-s $lepdfAEC == 0) ) {
+#	$lepdfAESize = 1;
+#}
+
+
+
+
+
+
+
+$myPDF1 = "aequote_" . $EQCNT . ".pdf";
+
+########################################
+#################### SEND ADMINS EMAIL #
+########################################
+my $Subby = "Shark Tank $cualQuest ID: $EQCNT";
+use lib "/www/htdocs/MIME-Lite-2.117/lib/";
+use MIME::Lite;
+my $msg = MIME::Lite->new(
+				From    =>"$Email($FirstName $LastName)",
+                To      =>"$leRecipient",
+                Cc      =>"$leRecipient2",
+                Subject =>"Shark Tank $cualQuest #$EQCNT",
+                Type    =>'text/html', 
+Data => qq{
+
+<html>
+<head>
+<title>Coastline Micro Inc.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="http://www.coastlinemicro.com/common_css.html?anchor=$dark1&anchorov=EB0000&weight=normal&weightov=normal&decor=underline&decorov=underline" Type="text/css">
+<STYLE TYPE="text/css">
+body { background-color:#ffffff; scrollbar-face-color:#$light1; scrollbar-highlight-color:#$light1; scrollbar-shadow-color:#$dark2; scrollbar-3dlight-color: #$dark1; scrollbar-arrow-color:#$dark1; scrollbar-track-color:#$light1; scrollbar-darkshadow-color:#$dark2; }
+</STYLE>
+
+<style type="text/css">
+$LayerCSS
+$LayerCSS2
+.link { line-height:12px; font-family:verdana,arial,helvetica; font-size:10px; text-decoration:none; }
+.nolink { line-height:12px; font-family:verdana,arial,helvetica; font-size:10px; text-decoration:none; font-weight:bold; }
+.red { color:#EB0000; }
+a { text-decoration:underline; }
+a:hover { text-decoration:none; }
+</style>
+
+<base href="http://www.coastlinemicro.com/">
+</head>
+<body bgcolor="#ffffff" text="#$dark2" leftmargin="0" topmargin="0" marginwidth="0" scroll="yes" marginheight="0">
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr height="40">
+<td rowspan="2" width="15%" align="left" valign="top"><a href="http://www.coastlinemicro.com/"><img src="http://www.coastlinemicro.com/Mailbox/images/top_cm_logo.jpg" width="116" height="37" border="0"></a></td>
+<td rowspan="2" align="center" valign="bottom" width="30%">&nbsp;</td>
+<td width="55%" align="right" valign="bottom"><img src="http://www.coastlinemicro.com/Mailbox/images/god_bless_america.gif" width="118" height="35"></td>
+</tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="5"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="5"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#$dark2" height="2"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="2"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+</table>
+<table width="95%" align="center" cellspacing="0" cellpadding="0" border="1" bordercolor="#$dark2" class="comtableborder"><tr><td width="100%" valign="top">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="center" valign="middle" width="100%" height="25"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/tables/$topbarMid" height="24">
+        <tr> 
+          <td width="5"><img src="images/tables/$topbarLeft" width="5" height="24"></td>
+          <td width="64%"><nobr><font class="btext" $extraSpacer>&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td>
+          <td width="18%" align="center" valign="top">&nbsp;</td>
+          <td width="18%" align="center" valign="top">&nbsp;</td>
+          <td width="100%" align="left" valign="top"><img src="images/tables/$topbarRight" width="5" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align="left">
+	 <table width="85%" border="0" cellspacing="1" cellpadding="0" align="center">
+        <tr> 
+          <td align="left" valign="top" width="100%"><font class="btext3"><br>$cualAdminGreeting</font></td>
+		</tr>
+	 </table>
+</td>
+  </tr>
+
+</table>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+});
+
+$msg->attach(Type => 'image/pdf', Path => "$lepdfAE", Filename => "$myPDF1");
+
+$msg->send();
+
+
+		
+###########	
+## ----------------------->>> SEND EMAIL MESSAGE TO USER
+###########
+if ($UserEmailer eq "YES") {
+
+
+	## Snif cookie, if present test for logged in status
+	require ("cookiesnif.nsp");
+	$noGO = 1;
+	require ("admin/cookiesnif.nsp");
+
+
+###############################
+## prepare User's Equote PDF ##
+###############################
+
+if ($FORM{'SEAGATE'} eq "1" || $FORM{'QUEST'} eq "1") { 
+	$leTemplateUserEquote = `cat pdf/newreceipt.html.nsf`; 
+	$leTemplateUserEquote =~ s/%%MuaPO%%/$FORM{'PurchOrd'}/g;
+	$leTemplateUserEquote =~ s/%%MuaShippedOn%%/Pending/g;
+	$leTemplateUserEquote =~ s/%%MuaCourier%%/( UPS \/ FedEx )/g;
+}
+else { 
+	$leTemplateUserEquote = `cat pdf/newquote.html.nsf`; 
+}
+
+
+
+
+	$leTemplateUserEquote =~ s/%%TOTALS%%//g;
+	$leTemplateUserEquote =~ s/%%MuaRep%%/TBD/g;
+	$leTemplateUserEquote =~ s/%%MuaTerms%%/TBD/g;
+	$leTemplateUserEquote =~ s/%%MuaSubTotal%%/Quote/g;
+	$leTemplateUserEquote =~ s/%%MuaShipCost%%/&nbsp;/g;
+	$leTemplateUserEquote =~ s/%%MuaTaxes%%/&nbsp;/g;
+	$leTemplateUserEquote =~ s/%%MuaTotal%%/Quote/g;
+	$leTemplateUserEquote =~ s/%%MuaGrandTotal%%/Quote/g;
+	$leTemplateAdminEquote =~ s/%%MuaDiscount%%/0.00/g;
+	$leTemplateUserEquote =~ s/%%AccountStatus%%/In-Active/g;
+
+	## remove all prices
+	foreach $unP (@losPrecios) {
+		$BUNCHADATA =~ s/&nbsp;$unP&nbsp;/&nbsp;/g;
+	}
+	$BUNCHADATA =~ s/$daTotal/&nbsp;/g;
+	$BUNCHADATA =~ s/$TotalPrice/&nbsp;/g;
+
+	
+
+
+
+if ($leType ne "" && $leType ne " ") {
+	$leTemplateUserEquote =~ s/%%ProgType%%/$leType/g;
+}
+else {
+	$leTemplateUserEquote =~ s/%%ProgType%%/N\/A/g;
+}
+
+
+
+
+
+
+$leTemplateUserEquote =~ s/%%MuaDate%%/$date2/g;
+$leTemplateUserEquote =~ s/%%MuaQNumber%%/E-Quote $EQCNT/g;
+$leTemplateUserEquote =~ s/%%MuaCNumber%%/E-Com Guest/g;
+$leTemplateUserEquote =~ s/%%MuaQuoteTo%%/$cualQuotedto/g;
+$leTemplateUserEquote =~ s/%%MuaTodos%%/$BUNCHADATA/g;
+
+
+
+
+### NOW MAKE TEMPLATE INTO PERL generated HTML (AS CONFIGURED ON SERVER)
+$leTemplatePDFUE = $leTemplateUserEquote;
+$cut1 = "<html>";
+$add1 = "#!/usr/bin/perl5 -s \n\n print\"Content-type: text/html\\n\\n\";\n\n print qq\~ \n\n<html>";
+$cut2 = "</html>";
+$add2 = "</html>\n\n\~;\n\nexit;";
+$leTemplatePDFUE =~ s/$cut1/$add1/g;
+$leTemplatePDFUE =~ s/$cut2/$add2/g;
+$leTemplatePDFUE =~ s/@/\\@/g;
+
+## new HTML for PDF as per O-Num
+$UEhtml = "pdf/rec/uequote_$EQCNT.html";
+
+## save html template for PDF ##
+open(UEHTML,">$UEhtml") || &error('can not write to $UEhtml');
+flock(UEHTML, 2);
+print UEHTML "$leTemplatePDFUE";
+flock(UEHTML, 8);
+close(UEHTML);
+## CHMOD TO ACTIVATE
+chmod (0755, $UEhtml)  || &error('cant chmod $UEhtml');
+
+###########################
+## generate PDF (remote) ##
+###########################
+use LWP::Simple;
+use CGI;
+use CGI::Carp qw(fatalsToBrowser);
+my $url2 = "http://216.122.237.121/pdmyht.php?URL=https%3A%2F%2Fwww.coastlinemicro.com%2Fpdf%2Frec%2Fuequote_$EQCNT.html&FORMAT=.pdf";
+my $page2 = get ($url2);
+
+## new HTML for PDF as per O-Num
+$lepdfUE = "pdf/rec/uequote_$EQCNT.pdf";
+
+## save PDF ##
+open(UEPDF,">$lepdfUE") || &error('can not write to $lepdfUE');
+flock(UEPDF, 2);
+print UEPDF "$page2";
+flock(UEPDF, 8);
+close(UEPDF);
+
+
+
+
+$myPDF2 = "uequote_" . $EQCNT . ".pdf";
+
+use lib "/www/htdocs/MIME-Lite-2.117/lib/";
+use MIME::Lite;
+my $msg2 = MIME::Lite->new(
+                From	=>"SharkTankQuotes\@CoastlineMicro.com( System Price Quote )",
+				To		=>"$Email($FirstName $LastName)",
+                Subject =>"Coastline Micro, Inc. - Your Online $cualQuest #$EQCNT",
+                Type    =>'text/html', 
+Data => qq{
+
+<html>
+<head>
+<title>Coastline Micro Inc.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="http://www.coastlinemicro.com/common_css.html?anchor=$dark1&anchorov=EB0000&weight=normal&weightov=normal&decor=underline&decorov=underline" Type="text/css">
+<STYLE TYPE="text/css">
+body { background-color:#ffffff; scrollbar-face-color:#$light1; scrollbar-highlight-color:#$light1; scrollbar-shadow-color:#$dark2; scrollbar-3dlight-color: #$dark1; scrollbar-arrow-color:#$dark1; scrollbar-track-color:#$light1; scrollbar-darkshadow-color:#$dark2; }
+</STYLE>
+
+<style type="text/css">
+$LayerCSS
+$LayerCSS2
+.link { line-height:12px; font-family:verdana,arial,helvetica; font-size:10px; text-decoration:none; }
+.nolink { line-height:12px; font-family:verdana,arial,helvetica; font-size:10px; text-decoration:none; font-weight:bold; }
+.red { color:#EB0000; }
+a { text-decoration:underline; }
+a:hover { text-decoration:none; }
+</style>
+
+<base href="http://www.coastlinemicro.com/">
+</head>
+<body bgcolor="#ffffff" text="#$dark2" leftmargin="0" topmargin="0" marginwidth="0" scroll="yes" marginheight="0">
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr height="40">
+<td rowspan="2" width="15%" align="left" valign="top"><a href="http://www.coastlinemicro.com/"><img src="http://www.coastlinemicro.com/Mailbox/images/top_cm_logo.jpg" width="116" height="37" border="0"></a></td>
+<td rowspan="2" align="center" valign="bottom" width="30%">&nbsp;</td>
+<td width="55%" align="right" valign="bottom"><img src="http://www.coastlinemicro.com/Mailbox/images/god_bless_america.gif" width="118" height="35"></td>
+</tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="5"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="5"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#$dark2" height="2"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+<tr><td colspan="3" width="100%" bgcolor="#FFFFFF" height="2"><img src="http://www.coastlinemicro.com/Mailbox/images/spacer.gif" width="2" height="2"></td></tr>
+</table>
+<table width="95%" align="center" cellspacing="0" cellpadding="0" border="1" bordercolor="#$dark2" class="comtableborder"><tr><td width="100%" valign="top">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="center" valign="middle" width="100%" height="25"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/tables/$topbarMid" height="24">
+        <tr> 
+          <td width="5"><img src="images/tables/$topbarLeft" width="5" height="24"></td>
+          <td width="64%"><nobr><font class="btext" $extraSpacer>&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td>
+          <td width="18%" align="center" valign="top">&nbsp;</td>
+          <td width="18%" align="center" valign="top">&nbsp;</td>
+          <td width="100%" align="left" valign="top"><img src="images/tables/$topbarRight" width="5" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align="left">
+	 <table width="85%" border="0" cellspacing="1" cellpadding="0" align="center">
+        <tr> 
+          <td align="left" valign="top" width="100%"><font class="btext3"><br>$cualUserGreeting</font></td>
+		</tr>
+	 </table>
+</td>
+  </tr>
+
+</table>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
+});
+
+$msg2->attach(Type => 'image/pdf', Path => "$lepdfUE", Filename => "$myPDF2");
+
+$msg2 ->send();
+}
+		
+
+
+}
+
+
+sub topper {
+$pageDrop = $pageDrop . "
+
+<form action=\"stank_saveit.html\" name=\"leConfig\" method=\"post\" onSubmit=\"return checkForm();\">
+<input type=\"hidden\" name=\"CMPartNum\" value=\"$CMPartNum\">
+<input type=\"hidden\" name=\"Warranty\" value=\"$Warranty\">
+<input type=\"hidden\" name=\"PricingClass\" value=\"$PricingClass\">
+<input type=\"hidden\" name=\"ItemName\" value=\"$ItemName\">
+<input type=\"hidden\" name=\"CMSeries\" value=\"$CMSeries\">
+<table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+  <tr> 
+    <td align=\"center\" valign=\"middle\" width=\"$tablewidth\" height=\"25\"> 
+      <table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" background=\"images/tables/$topbarMid\" height=\"24\">
+        <tr> 
+          <td width=\"$t1\"><img src=\"images/tables/$topbarLeft\" width=\"5\" height=\"24\"></td>
+          <td width=\"$t2\"><nobr><font class=\"btext\" $extraStyle>&nbsp;&nbsp;<b>$MainTitle</b></font></nobr></td>
+          <td width=\"$t3\" align=\"center\" valign=\"top\">&nbsp;</td>
+          <td width=\"$t4\" align=\"center\" valign=\"top\">&nbsp;</td>
+          <td width=\"$t1\" align=\"left\" valign=\"top\"><img src=\"images/tables/$topbarRight\" width=\"5\" height=\"24\"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td align=\"center\"> 
+      <table width=\"$tablewidth\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" height=\"30\">
+        <tr align=\"center\"> 
+          <td width=\"20%\" align=\"left\">$GoBack</td>
+          <td width=\"16%\">$ConfigIT</td>
+          <td width=\"16%\"><img src=\"images/tables/but_techspecs_dn.gif\" width=\"77\" height=\"20\" name=\"techspecs\" border=\"0\"></td>
+          <td width=\"16%\"><img src=\"images/tables/but_sysdrivers_dn.gif\" width=\"78\" height=\"20\" name=\"sysdrivers\" border=\"0\"></td>
+          <td width=\"16%\"><img src=\"images/tables/but_lphoto_dn.gif\" width=\"75\" height=\"20\" name=\"lphoto\" border=\"0\"></td>
+          <td width=\"16%\"><img src=\"images/tables/but_multimedia_dn.gif\" width=\"73\" height=\"20\" name=\"sysmedia\" border=\"0\"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td valign=\"top\"> 
+      <table width=\"$tablewidth\" border=\"0\" cellspacing=\"1\" cellpadding=\"0\" align=\"center\">
+        <tr> 
+          <td valign=\"top\" width=\"$t5\"> 
+            <table width=\"100%\" cellspacing=\"1\" cellpadding=\"0\" bgcolor=\"#FFFFFF\">
+              <tr> 
+                <td> 
+                  <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" bgcolor=\"#$light1\" class=\"stankth\" height=\"18\" $border>
+                    <tr> 
+                      <td align=\"center\"><font class=\"btext\" $extraSpacer><b>Your $PricingClass Configuration</b></font></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+<table width=\"100%\" cellspacing=\"0\" cellpadding=\"2\" class=\"stankth\" $border>
+<tr> 
+<td valign=\"top\">
+
+";
+}
+
+sub bottom {
+$pageDrop = $pageDrop . "
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+            </table>
+
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</form>
+
+";
+}
+
+sub error {
+	print "ERROR!";
+}

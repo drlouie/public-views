@@ -1,0 +1,10 @@
+#!/usr/bin/perl5 -w
+
+$footlink = "http://www.coastlinemicro.com";
+
+$foottitle = "Coastline Micro, Inc. - When you need the best hardware, Coastline is your only choice.";
+
+$footbody = "A little something about Coastline Micro.";
+
+##return = true
+1;

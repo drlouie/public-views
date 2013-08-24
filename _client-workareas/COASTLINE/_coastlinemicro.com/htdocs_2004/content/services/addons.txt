@@ -1,0 +1,172 @@
+ 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_top_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_top_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%"><b><font class="tableheading">Service Contract Add-Ons</font></b></td>
+          <td align="right" height="24" width="12"><img src="images/table_top_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" align="center"> 
+    <td> <br>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td width=10>&nbsp;</td>
+          <td colspan="3" align="left" valign="top"> 
+            <table border="0" cellspacing="0" cellpadding="0" align="left" height="25">
+              <tr> 
+                <td width="65"><font class="regtextbold"><b>Phone</b></font></td>
+                <td width="200"><font  class="regtextnobold">(800) 729-6809</font></td>
+              </tr>
+              <tr> 
+                <td width="65"><font class="regtextbold"><b>Fax</b></font></td>
+                <td width="200"><font class="regtextnobold">(949) 450-9977</font></td>
+              </tr>
+              <tr> 
+                <td width="65">&nbsp;</td>
+                <td width="200">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width=10>&nbsp;</td>
+          <td colspan="3"> <font class="regtextnobold"> 
+            <p>
+			
+		<table width="75%" align="center" border=1 bordercolor="8f8fab" cellpadding=3 cellspacing=0>
+          <tr> 
+            <td width="100%" align="center"><br><font class="regtextnobold">
+			<center>
+			To view our available <b>service contracts</b> please <a href="/coastlinemicro_services.html?title=contracts">click here</a>.
+			<br><br>
+			For additional information on our <b>service offerings</b> please <a href="/contact_coastlinemicro.html?title=gencomments">email us</a> or give us a call.
+			</center>
+			</font>
+			<br>
+        	</td>
+          </tr>
+        </table>
+			<br>
+<ul>
+<b>Regular Business hours 4hr Response</b>
+<ul type="circle">
+<li>When a customer signs a contract listed above they can also purchase 4hr local (within 100 miles of Coastline Micro's office) response time guarantee at a 40% premium (rate x 1.40 = billable rate).</li>
+<li>Minimum phone support billable time is equal to 30 minutes</li>
+<li>Minimum onsite support billable time is equal to 2 hours</li>
+</ul>
+<br>
+<b>24x7 4hr Response</b>
+<ul type="circle">
+<li>When a customer signs a contract listed above they can also purchase a 24x7 4hr local (100 miles of Coastline Micro's office) response time guarantee at a 100% premium (rate x 2.00 = billable rate).</li>
+<li>Minimum phone support billable time is equal to 1 hour</li>
+<li>Minimum onsite support billable time is equal to 2 hours</li>
+</ul>
+<br>
+<b>Server Preventative Maintenance</b>
+<ul type="circle">
+<li>Maintenance includes:
+<ul type="circle">
+<li>Daily review of event logs</li>
+<li>Daily review of backup logs, if applicable</li>
+<li>Client notification of security issues</li>
+<li>Client notification of open issues and recommended action plan**</li>
+</ul></li>
+
+<li>Prerequisites:
+<ul type="circle">
+<li>Windows 2000 Terminal Services Remote Management or</li>
+<li>Symantec pcAnywhere and</li>
+<li>Dedicated Internet connection or</li>
+<li>Dial up modem</li>
+</ul></li>
+<li>Rates:
+<ul type="circle">
+<li>$200 per month per server</li>
+<li>Includes server Operating System (Windows NT or Windows 2000 Server) and (1) additional Microsoft based server application and backup software, if applicable</li>
+<li>$250 per month per server</li>
+<li>Includes server Operating System (Windows NT or Windows 2000 Server) and (2) additional Microsoft based server applications and backup software, if applicable</li>
+<li>$300 per month per server</li>
+<li>Microsoft Small Business Server and backup software, if applicable</li>
+<li>$400 per month per server</li>
+<li>Microsoft BackOffice Server and backup software, if applicable</li>
+</ul></li>
+</ul>
+<br>
+<b>Standard Labor Rates</b>
+<ul type="circle">
+<li>Level 1 - Technician, N/A</li>
+<li>Level 2 - Technician, $100 per hour</li>
+<li>Level 3 - Systems Engineer, $140 per hour</li>
+<li>Level 4 - Senior Systems Engineer, $165+ per hour</li>
+<li>Programmer/DBA - $165 - $325 per hour</li>
+</ul>
+<br>
+Long-term project rates are negotiable. If the contracted engagement is longer than 1 month and billable time is greater than 35hrs per week please contact Coastline's Director of Network Services.
+<br><br>
+<b>*Rate structure</b>
+<ul type="circle">
+<li>5 hour minimum purchase is discounted 5% (standard rate x .95 = billable rate)</li>
+<li>10 hour minimum purchase is discounted 10% (standard rate x .90 = billable rate)</li>
+<li>15 hour minimum purchase is discounted at 15% (standard rate x .85 = billable rate)</li>
+<li>+20 hour minimum purchase is discounted at 20% (standard rate x .80 = billable rate)</li>
+<li>+40 hour minimum purchase is discounted at 28% (standard rate x .72 = billable rate)</li>
+</ul>
+<br>
+**Troubleshooting charges covered by in place service contract
+<br><br>
+<b>Trip charges</b>
+<ul type="circle">
+<li>0 - 25 miles = $25 trip charge</li>
+<li>26 - 50 miles = $45 trip charge</li>
+<li>51 - 75 miles = $65 trip charge</li>
+<li>76 - 100 miles = $85 trip charge</li>
+<li>+100 please contact Coastline Micro</li>
+</ul>
+
+<br>
+
+        <table width="75%" align="center" border=1 bordercolor="8f8fab" cellpadding=3 cellspacing=0>
+          <tr> 
+            <td width="100%" align="center"><br><font class="regtextnobold">
+			<center>
+			To view our available <b>service contracts</b> please <a href="/coastlinemicro_services.html?title=contracts">click here</a>.
+			<br><br>
+			For additional information on our <b>service offerings</b> please <a href="/contact_coastlinemicro.html?title=gencomments">email us</a> or give us a call.
+			</center>
+			</font>
+			<br>
+        	</td>
+          </tr>
+        </table>
+
+            </p>
+            </font> 
+          </td>
+          <td width=10>&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="12" height="24"><img src="images/table_bot_left.gif" border=0 width="12" height="24"></td>
+          <td bgcolor="#8f8fab" align="center" width="50%">&nbsp;</td>
+          <td align="center" width="30" height="24"><img src="images/table_bot_mid.gif" border=0 width="30" height="24"></td>
+          <td bgcolor="#333366" align="center" width="50%">&nbsp;</td>
+          <td align="right" height="24" width="12"><img src="images/table_bot_right.gif" border=0 width="12" height="24"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

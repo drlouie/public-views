@@ -1,0 +1,24 @@
+#!/usr/bin/perl5 -w
+
+$date = "October 11, 2000";
+
+$title = "Coastline Micro, Inc. attends eXCHANGE Summit";
+
+$para1 = "Coastline Micro, Inc. recently attended the eXCHANGE, held October 11th and 12th in San Francisco. There, Intel and other leaders of the computing industry discussed and demonstrated collaborative efforts to deliver e-Business solutions. Technology and e-Business leaders assembled at the eXCHANGE e-Business Summit emphasizing the momentum behind Intel-Based solutions. The two-day Summit, hosted by Intel Corporation, highlighted the importance of a worldwide e-Business ecosystem to support today's growing internet economy.<br><br><table width=\"95%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">
+<tr><td width=\"100%\"><p><font class=\"regtextnobold\"><b>\"Who's Who\" of Industry Leaders</b>
+This event attracted a list of \"Who's Who\" of industry leaders: Carly Fiorina, Chairman, President and CEO of Hewlett-Packard Corporation; Bill Gates, Chairman and Chief Software Architect of Microsoft Corporation (pictured speaking with Dave Rhomberg, Coastline Micro Director of Technology); and John M. Thompson, Vice Chairman, IBM, delivered keynote addresses at the event. They joined Craig Barrett, (pictured speaking before attendees), Intel Chairman Andy Grove (also pictured with Dave Rhomberg), and Intel Executive Vice President Paul Otellini, in offering senior business and information technology managers blueprints of the diverse technologies that will help them innovate, row and respond to the changing conditions of the Internet economy.<br><br><b>Coastline Micro partners with Microsoft and Intel</b>
+Mr. Rhomberg had an opportunity to briefly meet with Bill Gates and Andy Grove while he attended the Summit. Following their discussion, Mr. Rhomberg offered these comments: \"Coastline Micro is proud to be partner with both Microsoft and Intel as a solution provider. We feel that the new 64-bit architecture of the Intel Itanium product line will help enable Coastline Micro to grow its share of the e-Commerce server market. The newfound power of the Intel Itanium product line, combined with the newly announced NetIQ management features that will be added to the Windows 2000 operating system, will enable our customers to implement reliable, scalable servers without incurring the higher costs of a RISC based system. SUN should be concerned about their perceived stronghold on the dot COM market. With Intel's proven quality, substantial performance gains, and the proven reliability of the Windows 2000 operating system, more and more IT directors will be choosing the IA platform as a standard.\"<br><br><b>Microsoft/NetIQ Partnership</b>
+One of the biggest announcements at the eXCHANGE event would have to be the announcement by Bill Gates of the Net IQ/Microsoft partnership. Under the terms of the agreement, Microsoft will license the NETIQ Operations Manager technology for managing the Microsoft Windowsâ 2000â operating system and Microsoft .NET Enterprise Servers. The companies also will collaborate on the development and marketing of additional management solutions for server, clients, applications and devices. In addition, Microsoft will designate NetIQ as its premier independent software vendor (ISV) for solutions built on Microsoft's operations management product. These solutions will include management of non-Microsoft environments, management of Windows NTâ 4.0 operating system-based environments, and advanced security and network performance management. Now, Windows 2000 Server will include integrated, scalable, industry-proven, best-of-breed management solutions, second to none. All business - large to small - can now benefit from a greater platform for simplifying the management of their distributed multi-platform infrastructures. 
+</font>
+</td>
+</tr>
+</table>";
+
+$location = "LOS ANGELES, CA";
+
+$myfoot = "00001010";
+
+$partners = "";
+
+##return = true
+1;

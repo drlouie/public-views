@@ -1,0 +1,17 @@
+#!/usr/bin/perl5 -w
+
+$date = "May 07, 2002";
+
+$title = "Coastline Micro Adds Internet Appliance solutions to Product Line";
+
+$para1 = "Today Coastline Micro began shipping high performance, virtual private networking (VPN), SSL e-Commerce Accelerators and e-Commerce Director appliances based on Intel’s NetStructure™ line to address growing customer demand for Internet appliance solutions.<br><br>Deployment of traffic managers or load balancers in today’s networks has grown exponentially and is expected to continue gaining momentum.  According to International Data Corporation, traffic manager sales were \$200 million in 1999 and are expected to reach \$2.5 billion before 2004 (IDC, 8/2000).  <br><br>“As one of only a handful of firms offering Internet appliance solutions, we have made a commitment to our customers to offer a wide range of easily deployable, integrated business solutions.  Our solutions not only meet the demand of the ISP/ASP’s and the enterprises but also small to medium businesses,” said M. Patrick Nunez, Coastline Micro’s Director of IT Services.<br><br>These offerings will allow Coastline Micro to provide complete, end-to-end Internet appliances to fully address customer needs.  The SSL e-Commerce Accelerators and e-Commerce Directors (SSL acceleration plus network load balancing) appliances will increase server efficiency by offloading encryption and decryption of Secure Socket Layer (SSL) traffic.  The VPN appliances will enable secure and cost effective connectivity to remote networks and users.<br><br>For availability and pricing please contact a sales representative at 800-729-6809 or email services\@coastlinemicro.com.<br><br>For additional information go to www.coastlinemicro.com
+";
+
+$location = "Irvine, CA";
+
+$myfoot = "00001010";
+
+$partners = "";
+
+##return = true
+1;

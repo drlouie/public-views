@@ -1,0 +1,438 @@
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>Networking</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="left" width="100%">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr>
+<td width="2%" valign="top">&nbsp;</td>
+                <td width="96%" valign="top"> <b><font color="#333366" size="2" face="Verdana, Arial, Helvetica, sans-serif">Coastline 
+                  Micro 8120 e-Commerce Director</font></b><br>
+  <br>
+                  <font class="stext"><b>Improve server performance for secure 
+                  online transactions</b><br>
+                  <br>
+                  </font> 
+                  <table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+                    <tr> 
+                      <td><b><font face="Verdana, Arial, Helvetica" size="2">Key 
+                        Features</font></b><b></b></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td><font class="stext">Up to 1,400 new SSL connections 
+                        per second processing for improved capacity and response 
+                        times </font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td><font class="stext">Layers 4-7 content-aware load balancing, 
+                        easily integrated into Gigabit Ethernet networks </font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td><font class="stext">Complete combination of intelligent 
+                        features, including transactional integrity and Intelligent 
+                        Data Replication</font></td>
+                    </tr>
+                  </table>
+                  <font class="stext"><br>
+                  The Coastline Micro 8125 and 8120 e-Commerce Directors provide 
+                  a complete combination of intelligent traffic management and 
+                  encryption technology. By intelligently balancing network loads 
+                  and offloading Secure Sockets Layer (SSL) processing, the Coastline 
+                  Micro 8125 and 8120 e-Commerce Directors significantly reduce 
+                  server overhead. IT professionals benefit from centralized load 
+                  balancing and SSL management using secure a Command Line Interface 
+                  (CLI) and Graphical User Interface (GUI). From transaction integrity 
+                  to Intelligent Data Replication (IDR) to high-performance SSL 
+                  offload, the Coastline Micro 8125 and 8120 e-Commerce Directors 
+                  provide a reliable, secure end-user customer experience.
+                  <p>Deliver fast, secure and reliable traffic management with 
+                    Gigabit Ethernet connectivity using the Coastline Micro 8125 
+                    and 8120 e-Commerce Directors. Rack-mountable and easily installed 
+                    between your router and server farm, the Coastline Micro 8125 
+                    and 8120 e-Commerce Directors feature intelligent management 
+                    for secure transactions, and combine Layers 4-7 awareness 
+                    to direct and prioritize web content.</p>
+                  <p>The Coastline Micro 8125 and 8120 e-Commerce Directors offload 
+                    SSL encryption/decryption with proprietary software and innovative 
+                    hardware acceleration. The Coastline Micro 8125 and 8120 e-Commerce 
+                    Directors also provide multiple levels of Layer 7 intelligence. 
+                    The Intelligent Session Recovery feature provides the ability 
+                    to &quot;look inside&quot; secure transactions, automatically 
+                    detect relevant HTTP 400 or 500 errors, and transparently 
+                    redirect the transaction to another available server, optimizing 
+                    the customer experience. The Coastline Micro 8125 and 8120 
+                    e-Commerce Directors include application-layer content verification, 
+                    providing awareness of the user experience beyond simple load 
+                    balancing. <br>
+                  </p></font> 
+                  <table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+                    <tr> 
+                      <td width="45%"><b><font face="Verdana, Arial, Helvetica" size="2">Features</font></b></td>
+                      <td width="10%">&nbsp;</td>
+                      <td width="45%"><b><font face="Verdana, Arial, Helvetica" size="2">Benefits</font></b></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Up to 1,400 new SSL 
+                        connections per second</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Security without sacrificing 
+                        speed, maximizes web server investment by offloading encryption/decryption</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Intelligent Session 
+                        Recovery</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Detects HTTP error messages 
+                        in real time and redirects traffic to another device with 
+                        mirrored content for an uninterrupted user experience</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Intelligent Resource 
+                        Verification</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">ICMP, TCP Port and HTTP 
+                        Content Verification checks that the application, not 
+                        just the server, is up and running</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Layers 4-7 content routing 
+                        of secure traffic</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Seamlessly delivers 
+                        traffic, even SSL-encrypted traffic, to content-optimized 
+                        locations, optimizing the customer experience</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Multiple persistence 
+                        options, including wireless devices</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Maintains client-server 
+                        affinity for wireless devices, mega-proxy environments 
+                        and shopping-cart applications</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Extensive client certificate 
+                        support</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Verifies client identity 
+                        for critical business-to-business (B2B) partner or enterprise 
+                        transactions</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Gigabit Ethernet interfaces</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Transparently provides 
+                        scalability and fault-tolerance for your network devices 
+                        with support for existing or future Gigabit Ethernet network</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">One-arm deployment as 
+                        a dedicated ITM device</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Easily deployed into 
+                        your existing network without rewiring or changing server 
+                        IP addresses, reduces rack space requirements, decreases 
+                        network maintenance and power consumption</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="45%"><font class="stext">Fast device failover</font></td>
+                      <td width="10%" align="center"><font class="stext">&gt; 
+                        &gt; &gt; &gt;</font></td>
+                      <td width="45%"><font class="stext">Provides maximum uptime 
+                        for new and in-process connections with both network and 
+                        out-of-band failover</font></td>
+                    </tr>
+                  </table>
+                  <font class="stext"><br>
+                  <b>Specifications</b><br>
+                  <br>
+                  </font> 
+                  <table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Performance</font></td>
+                      <td width="50%"> 
+                        <ul>
+                          <li>Patent-pending technology offloads encryption/decryption 
+                            from servers</li>
+                          <li>Coastline Micro 8125 e-Commerce Director offloads 
+                            up to 1,400 new SSL connections/sec</li>
+                          <li>Coastline Micro 8120 e-Commerce Director offloads 
+                            700 new SSL connections/sec</li>
+                          <li>Both e-Commerce Directors support up to 4,000 new 
+                            HTTP connections/sec, 7,500 new TCP connections/sec, 
+                            up to 22,000 HTTPS concurrent connections, 30,000 
+                            HTTP concurrent connections, 50,000 TCP concurrent 
+                            connections</li>
+                          <li>Up to 385Mbit/sec throughput</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Flexibility</font></td>
+                      <td width="50%"> 
+                        <ul>
+                          <li><font class="stext">Out-of-Path Return (OPR) provides 
+                            an efficient return path for server to client traffic</font></li>
+                          <li><font class="stext">Multiple operation modes provide 
+                            seamless installation without rewiring or changing 
+                            server IP addresses</font></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Secure Environment</font></td>
+                      <td width="50%"> 
+                        <ul>
+                          <li><font class="stext">SSL Client Certificate authentication</font></li>
+                          <li><font class="stext">Multiple automated import methods 
+                            for Client Certificate Revocation Lists (CRL)</font></li>
+                          <li><font class="stext">Blowfish, DES, 3DES, MD5, RC2, 
+                            RC4, RSA, SHA-1 security algorithms supported</font></li>
+                          <li><font class="stext">SSH for secure Command Line 
+                            Interface (56- or 128-bit)</font></li>
+                          <li><font class="stext">SSL for secure Graphical User 
+                            Interface</font></li>
+                          <li><font class="stext">IP Filtering</font></li>
+                          <li><font class="stext">Serial port login for secure 
+                            local management</font></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">System Availability 
+                        Capabilities</font></td>
+                      <td width="50%"> 
+                        <ul>
+                          <li><font class="stext">Automatic detection of services, 
+                            status change and server health</font></li>
+                          <li><font class="stext">Hot/standby failover via in-band 
+                            or out-of-band system interfaces</font></li>
+                          <li><font class="stext">Network failover via RIP or 
+                            OSPF</font></li>
+                          <li><font class="stext">Graceful server shutdown</font></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">System Administration</font></td>
+                      <td width="50%"> 
+                        <ul>
+                          <li><font class="stext">Secure web-based GUI and CLI 
+                            for easier management</font></li>
+                          <li><font class="stext">Wizard modes for easy creation 
+                            of common configurations</font></li>
+                          <li><font class="stext">SNMP monitoring (MIB II and 
+                            Private MIB)</font></li>
+                          <li><font class="stext">Dynamic configuration through 
+                            password-protected web interface or serial console</font></li>
+                          <li><font class="stext">Dynamic loading and unloading 
+                            of protocol support and policies</font></li>
+                          <li><font class="stext">SSL Certificate management, 
+                            service/server configuration, device options, real-time 
+                            performance, administrative logging, internal certificate 
+                            generation for intranet testing and configuration</font></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Load Balancing Algorithms</font></td>
+                      <td width="50%"> 
+                        <ul>
+                          <li><font class="stext">Most commercial Web servers 
+                            - Apache*, Microsoft*, Netscape*, BEA*, etc.</font></li>
+                          <li><font class="stext">Most operating systems - UNIX*, 
+                            Solaris*, Windows*, OS400*, BSD/BSDI*, AIX*, Linux*, 
+                            etc.</font></li>
+                          <li><font class="stext">Most server hardware - Sun*, 
+                            HP*, IBM RS 6000* and AS/400*, Compaq*, SGI*, Intel-based 
+                            platforms</font></li>
+                          <li><font class="stext">Supports 300 services / 600 
+                            servers</font></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Servers Supported</font></td>
+                      <td width="50%"><font class="stext">Custom HTTP re-directs, 
+                        Custom HTTP header insertion</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">HTTP Packet Awareness 
+                        / Control</font></td>
+                      <td width="50%"><font class="stext">Source IP; Cookies, 
+                        including encrypted; SSL Session ID, URL Query</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Server Persistence Modes</font></td>
+                      <td width="50%"> 
+                        <ul>
+                          <li><font class="stext">Automatically redirects requests, 
+                            customizable redirect</font></li>
+                          <li><font class="stext">Traps 400 and 500 series errors 
+                            for HTTP and HTTPS</font></li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Intelligent Session 
+                        Recovery</font></td>
+                      <td width="50%"><font class="stext">Enhances your product 
+                        warranty by providing next-business-day advanced exchange 
+                        of parts.</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Intelligent Data Replication</font></td>
+                      <td width="50%"><font class="stext">A protocol for mirroring 
+                        HTTP traffic to a specified target device. Information 
+                        about the IDR protocol specification is available from 
+                        Intel Corporation.</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Intelligent Content 
+                        Routing</font></td>
+                      <td width="50%"><font class="stext">URL; File type, e.g., 
+                        *gif; File path, e.g., \ads\; File name, e.g., Index.html</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Intelligent Resource 
+                        Verification</font></td>
+                      <td width="50%"><font class="stext">Determine availability 
+                        of devices at multiple levels: ICMP Echo, TCP Port, HTTP 
+                        Content Verification</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Interface Connections</font></td>
+                      <td width="50%"><font class="stext">Dual 10/100/1000 Ethernet, 
+                        10/100 Ethernet port for Out-of-Band network management, 
+                        TTY Serial-Console, Failover port, Diagnostics port</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Physical Specifications</font></td>
+                      <td width="50%"><font class="stext">Standard 19in rack-mount 
+                        - 2U rack height</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Dimensions (W x H x 
+                        D)</font></td>
+                      <td width="50%"><font class="stext">17in x 3.5in x 19in 
+                        (43.5cm x 9cm x 48.5cm)</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Weight</font></td>
+                      <td width="50%"><font class="stext">27.5 lb (14 Kg)</font></td>
+                    </tr>
+                  </table>
+                  <font class="stext"><br>
+                  <b>Additional Coastline Micro e-Commerce Director Product Offerings</b><br>
+                  <br>
+                  </font> 
+                  <table width="95%" border="0" cellspacing="0" cellpadding="3" align="center">
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 8125 
+                        and 8120 Configuration Services</font></td>
+                      <td width="50%">Configuration services for the Coastline 
+                        Micro 8125 and 8120 e-Commerce Directors</td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 8125 
+                        and 8120 5 Incident Pack - 1 Year</font></td>
+                      <td width="50%"><font class="stext">Support by Coastline 
+                        Micro service specialists on a per-incident basis 8am 
+                        to 5pm Monday - Friday PST</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 8125 
+                        and 8120 10 Incident Pack - 1 Year</font></td>
+                      <td width="50%"><font class="stext">Support by Coastline 
+                        Micro service specialists on a per-incident basis 8am 
+                        to 5pm Monday - Friday PST</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 8125 
+                        and 8120 Unlimited Phone Support Pack - 1 Year.</font></td>
+                      <td width="50%"><font class="stext">Support by Coastline 
+                        Micro service specialists on a per-incident basis. Unlimited 
+                        phone support incident packs provide the flexibility to 
+                        call 24 hours a day, 7 days a week, 365 days a year.</font></td>
+                    </tr>
+                    <tr bgcolor="#F2F2F7" valign="top"> 
+                      <td width="50%"><font class="stext">Coastline Micro 8125 
+                        and 8120 Hardware Support Only - 1 Year</font></td>
+                      <td width="50%"><font class="stext">Enhances your product 
+                        warranty by providing next-business-day advanced exchange 
+                        of parts.</font></td>
+                    </tr>
+                  </table>
+                  <font class="stext"><br>
+<strong>Contact for Product and Ordering Information</strong><br>
+<br>
+Coastline Micro Internet Security Services ................... <a href="mailto:services@coastlinemicro.com" class="stext"><font class="stext">services@coastlinemicro.com</font></a><br>
+<br>
+Coastline Micro, Inc.<br>
+60 Technology Drive<br>
+Irvine, CA 92618 <br>
+Toll Free: 800.729.6809<br>
+Phone: 949.450.9966<br>
+Fax: 949.450.9977 <br>
+<font size="1"><br>
+Information in this document is provided in connection with Coastline Micro products. 
+No license, express or implied, by estoppel or otherwise, to any Coastline Micro 
+intellectual property rights is granted by this document. Except as provided in 
+Coastline Micro's Terms and Conditions of Sale for such products, Coastline Micro 
+assumes no liability whatsoever, and Coastline Micro disclaims any express or 
+implied warranty, relating to sale and/or use of Coastline Micro products including 
+liability or warranties relating to fitness for a particular purpose, merchantability, 
+or infringement of any patent, copyright or other Coastline Micro intellectual 
+property right. Coastline Micro products are not intended for use in medical, 
+life saving, or life sustaining applications. Coastline Micro may make changes 
+to specifications and product descriptions at anytime, without notice. <br>
+<br>
+*All Copyrights and Trademarks are properties of their respective owners.<br>
+<br>
+** Performance tests and ratings are measured using specific computer systems 
+and/or components and/or configurations, and reflect the approximate performance 
+of Coastline Micro products as measured by those tests<br>
+</font></font>
+
+
+
+</td>
+<td width="2%" valign="top" align="center">&nbsp;</td>
+</tr>
+
+</table>
+		</td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="15"><img src="images/spacer.gif" width="1" height="15"></td>
+        </tr>
+        <tr bgcolor="#333366"> 
+          <td colspan="2" height="1"><img src="images/spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td width="35%"><font class="stextbig"><b>&nbsp;</b></font></td>
+          <td align="right" width="65%">&nbsp;</td>
+        </tr>
+            </table>
+          </td>
+        </tr>
+      </table>

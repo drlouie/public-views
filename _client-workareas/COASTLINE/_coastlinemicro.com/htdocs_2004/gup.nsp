@@ -1,0 +1,96 @@
+#!/usr/bin/perl5 -w
+
+BEGIN {
+    $userid = 0; # -------------- >>> This Number is the specific ID - ID number assigned to you on your Unix System.
+    $groupid = 0; # -------------- >>> This Number is the specific Group - ID number assigned to people with your access level on your Unix system.
+				  # -------------- >>> You can gain your $userid and $groupid by typing 'id' at your - UNIX prompt.  (GID = Group Id, UID = User Id).
+    $overwrite = 0; # -------------- >>> Set this value to '1' to allow overwriting of existing files.
+                    # -------------- >>> Set this value to '0' to dis-allow the overwriting of existing files.
+                    # -------------- >>> NOTE: Existing files WILL NOT be over-written unless they are given the permissions 'a+rw'.  An error message will return to users who try to over-write files which are protected.
+    $Windows = 0; # -------------- >>> $Windows allows you to specifiy if you are using the Windows operating system or not.  If you are not running this script under Microsoft Windows, set this value to zero ('0').  If you are running under Windows, set this value to one. ('1')
+    $exclusive_lock = 2; # -------------- >>> DO NOT CHANGE THIS VALUE - It should be set to '2'
+    $unlock_lock = 8; # -------------- >>> DO NOT CHANGE THIS VALUE - It should be set to '8'
+}
+
+$| = 1;
+&GetInput;
+&Process_File;
+&GoodOne;
+
+sub GetInput {
+    # -------------- >>> Loads CGI module, assigns $filename the filename the file should be saved as.
+    use CGI qw(:standard);
+    $CGI::OS = 'WINDOWS' if ($Windows);
+    $query = new CGI;
+	$filename = $query->param('uploadfile');
+    $Type = $query->param('Type');
+    $path = "/usr/local/www/vhosts/coastlinemicro.com/htdocs/dbimages/$Type";
+}
+
+
+sub Process_File {
+    # -------------- >>> Takes all the input, determines if the user is using the appropiate browser, then extracts the filename, and saves the file.  Uploaded files are chmodded to 644, and given ownership to the user defined in $userid and $groupid.
+    &Exit_Not_A_Netscape_User if ($ENV{'HTTP_USER_AGENT'} !~ /^Mozilla\/[432]/);
+
+    if ($filename =~ /\//) {
+        @array = split(/\//, $filename);
+        $real_name = pop(@array);
+    } elsif ($filename =~ /\\/) {
+        @array = split(/\\/, $filename);
+        $real_name = pop(@array);
+    } else {
+        $real_name = "$filename";
+    }
+
+    $outfile = "$path" . "/" . "$real_name";
+
+    $filename = $query->param('uploadfile');
+
+    &Exit_File_Exists if ((-e "$outfile") && (!$overwrite));
+    # -------------- >>> &Exit_Size_Error  if ((stat $tmpfilename)[7] < 1);
+
+    if (!open(OUTFILE, ">$outfile")) {
+        print "Make sure that the directory:\n$path\nhas been chmodded with the permissions '777'.\n\nError: $!\n";
+        exit;
+    }
+
+    while ($bytesread = read($filename,$buffer,1024)) {
+        $totalbytes += $bytesread;
+        binmode OUTFILE;
+        print OUTFILE $buffer;               
+    }
+
+    close($filename);
+    close(OUTFILE);
+
+    if ((stat $outfile)[7] < 1) {
+        unlink $outfile;
+        &Exit_Size_Error;
+    }
+    chmod (0644, "$outfile")              if (!$Windows);
+    chown ($userid, $groupid, "$outfile") if (!$Windows);
+}
+
+sub GoodOne {
+    # -------------- >>> Succcess Redirect Back to Originating Script.
+	print "GOOD ONE!";
+    exit 0;
+}
+
+sub Exit_Not_A_Netscape_User {
+    # -------------- >>> This user is not using a compatible browser for the upload...
+    print "Sorry, but you must use an updated browser with file upload capabilities.\n\nPlease return to the upload page with a different browser.\n";
+    exit 0;
+}
+
+sub Exit_File_Exists {
+    # -------------- >>> This user is trying to upload a file with a filename that is already in use, and this script is set not to overwrite existing files.
+    print "Sorry, but this system is not allowed to overwrite existing files.  The filename you have selected is already in use in the directory file-uploads are allowed.  Please use the back button on your browser rename the file, and try again.\n";
+    exit 0;
+}
+
+sub Exit_Size_Error {
+    # -------------- >>> This user is uploaded a file, however it's less than one byte in size.
+    print "Sorry, but it seems that the file you uploaded is less than 1 byte in size.  This means that there was an error transfering the file from your computer to the server.  Verify with the server administrator that you are allowed to upload files, and verify that the file you are attempting to upload exists on your system.\n";
+    exit 0;
+}
