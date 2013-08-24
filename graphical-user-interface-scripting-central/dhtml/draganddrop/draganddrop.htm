@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0042)http://www.webreference.com/dhtml/column7/ -->
+<HTML><HEAD><TITLE>Drag & Drop in Explorer 4 - webreference.com</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META 
+content="dynamic html CSS javascript jscript scripting dhtml css&#10;stylesheets positioning bandwidth menu html 4.0 layers eventhandlers communicator&#10;explorer 4 rollovers onmousedown onmouseUp onclick onmouseover&#10;onmouseout" 
+name=keywords>
+<META 
+content="A biweekly column on Dynamic HTML, a&#10;feature of fourth generation browsers like Netscape 4 and Explorer 4.,&#10;by Peter Belesis. DHTML uses client-side scripting to allow documents to&#10;be changed dynamically after their initial display, without server&#10;access. Use DHTML to create sophisticated, low bandwidth animations,&#10;database front-ends, multi-layered presentations and more using CSS&#10;style sheets, layers, positioning, and JavaScript." 
+name=description><LINK href="draganddrop_files/column7.css" rel=STYLESHEET 
+type=text/css>
+<STYLE type=text/css>#elAll {
+	LEFT: 0px; POSITION: relative; TOP: 0px; VISIBILITY: hidden
+}
+#elDRAGOne {
+	BACKGROUND-COLOR: red; CLIP: rect(0px 100px 100px 0px); COLOR: white; FONT-WEIGHT: bold; HEIGHT: 100px; LEFT: 75px; POSITION: absolute; TEXT-ALIGN: center; TOP: 0px; VISIBILITY: hidden; WIDTH: 100px; layer-background-color: red
+}
+#elTwoDRAG {
+	BACKGROUND-COLOR: green; CLIP: rect(0px 100px 100px 0px); COLOR: white; FONT-WEIGHT: bold; HEIGHT: 100px; LEFT: 180px; POSITION: absolute; TEXT-ALIGN: center; TOP: 100px; VISIBILITY: hidden; WIDTH: 100px; layer-background-color: green
+}
+#elDRAGThree {
+	BACKGROUND-COLOR: blue; CLIP: rect(0px 100px 100px 0px); COLOR: white; FONT-WEIGHT: bold; HEIGHT: 100px; LEFT: 285px; POSITION: absolute; TEXT-ALIGN: center; TOP: 100px; VISIBILITY: hidden; WIDTH: 100px; layer-background-color: blue
+}
+#elFourDRAG {
+	BACKGROUND-COLOR: gray; CLIP: rect(0px 100px 100px 0px); COLOR: white; FONT-WEIGHT: bold; HEIGHT: 100px; LEFT: 390px; POSITION: absolute; TEXT-ALIGN: center; TOP: 100px; VISIBILITY: hidden; WIDTH: 100px; layer-background-color: gray
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+<!--
+
+var bV=parseInt(navigator.appVersion);
+NS4=(document.layers) ? true : false;
+IE4=((document.all)&&(bV>=4))?true:false;
+ver4 = (NS4 || IE4) ? true : false;
+
+function setEls() { return };
+
+if (document.images) {
+    arImLoad = new Array (
+        "../art/b_left_over",
+        "../art/b_left_down",
+        "../art/b_right_over",
+        "../art/b_right_down"
+    );
+
+    arImList = new Array ();
+    for (counter in arImLoad) {
+        arImList[counter] = new Image();
+        arImList[counter].src = arImLoad[counter] + ".gif";
+    }
+
+}
+
+    function navOver(imName,dir,over) {
+	if (!document.images) {return};
+        whichIm = document.images[imName];
+	if (over) { whichIm.src = "../art/b_" + dir + "_over.gif" }
+             else { whichIm.src = "../art/b_" + dir + ".gif" }
+    }
+
+    function navPress(imName,dir,press) {
+        whichIm = document.images[imName];
+        if (press) { whichIm.src = "../art/b_" + dir + "_down.gif" }
+              else { whichIm.src = "../art/b_" + dir + ".gif" }
+    }
+
+//-->
+</SCRIPT>
+
+<META content="MSHTML 5.00.2014.210" name=GENERATOR></HEAD>
+<BODY aLink=red bgColor=#ffffff link=firebrick text=#000000 vLink=#660000><!--=== HEADER ===--><!-- START AD -->
+<P align=center><A 
+href="http://www.webreference.com/event.ng/Type=click&amp;ProfileID=1&amp;RunID=1&amp;AdID=21&amp;TagValues=194.208.222.245.313.641&amp;FamilyID=2&amp;GroupID=1&amp;Redirect=http://www.jumbo.com" 
+target=_top><IMG alt="" border=0 height=60 
+src="draganddrop_files/jumbo-jumbo-1.gif" width=468></A> </P><!-- END AD -->
+<P align=center><A href="http://www.webreference.com/art/index.map"><IMG 
+border=0 height=18 isMap src="draganddrop_files/bn_wrl_sm.gif" 
+width=468></A></P>
+<TABLE width="100%">
+  <TBODY>
+  <TR>
+    <TD><B><A href="http://www.webreference.com/">home</A> / <A 
+      href="http://www.webreference.com/experts/">experts</A> / <A 
+      href="http://www.webreference.com/dhtml/">dhtml</A> / column7 </B></TD>
+    <TD align=right CELLPADDING="20"><IMG height=18 name=imButTop1 
+      src="draganddrop_files/b_center.gif" width=18><A 
+      href="http://www.webreference.com/dhtml/column7/IEsetup.html" 
+      onmousedown="navPress('imButTop2','right',true)" 
+      onmouseout="navOver('imButTop2','right',false)" 
+      onmouseover="navOver('imButTop2','right',true)" 
+      onmouseup="navPress('imButTop2','right',false)"><IMG border=0 height=18 
+      name=imButTop2 src="draganddrop_files/b_right.gif" width=18></A><A 
+      href="http://www.webreference.com/dhtml/column7/IEgrab.html" 
+      onmousedown="navPress('imButTop3','right',true)" 
+      onmouseout="navOver('imButTop3','right',false)" 
+      onmouseover="navOver('imButTop3','right',true)" 
+      onmouseup="navPress('imButTop3','right',false)"><IMG border=0 height=18 
+      name=imButTop3 src="draganddrop_files/b_right.gif" width=18></A><A 
+      href="http://www.webreference.com/dhtml/column7/IEmove.html" 
+      onmousedown="navPress('imButTop9','right',true)" 
+      onmouseout="navOver('imButTop9','right',false)" 
+      onmouseover="navOver('imButTop9','right',true)" 
+      onmouseup="navPress('imButTop9','right',false)"><IMG border=0 height=18 
+      name=imButTop9 src="draganddrop_files/b_right.gif" width=18></A><A 
+      href="http://www.webreference.com/dhtml/column7/IExtra.html" 
+      onmousedown="navPress('imButTop4','right',true)" 
+      onmouseout="navOver('imButTop4','right',false)" 
+      onmouseover="navOver('imButTop4','right',true)" 
+      onmouseup="navPress('imButTop4','right',false)"><IMG border=0 height=18 
+      name=imButTop4 src="draganddrop_files/b_right.gif" width=18></A><A 
+      href="http://www.webreference.com/dhtml/column7/allCode.html" 
+      onmousedown="navPress('imButTop5','right',true)" 
+      onmouseout="navOver('imButTop5','right',false)" 
+      onmouseover="navOver('imButTop5','right',true)" 
+      onmouseup="navPress('imButTop5','right',false)"><IMG border=0 height=18 
+      name=imButTop5 src="draganddrop_files/b_right.gif" width=18></A><A 
+      href="http://www.webreference.com/dhtml/column7/crossCode.html" 
+      onmousedown="navPress('imButTop8','right',true)" 
+      onmouseout="navOver('imButTop8','right',false)" 
+      onmouseover="navOver('imButTop8','right',true)" 
+      onmouseup="navPress('imButTop8','right',false)"><IMG border=0 height=18 
+      name=imButTop8 src="draganddrop_files/b_right.gif" width=18></A> 
+  </TD></TR></TBODY></TABLE><!--=== BODY ===-->
+<BLOCKQUOTE><!---->
+  <TABLE align=left cellPadding=0 cellSpacing=0>
+    <TBODY>
+    <TR>
+      <TD vAlign=top><A href="http://www.webreference.com/dhtml/"><IMG 
+        align=left alt=Logo border=0 height=75 hspace=0 name=imLogo 
+        src="draganddrop_files/imRoll0info.gif" width=94></A> 
+      <TD width=20></TD></TR></TBODY></TABLE>
+  <H2><FONT color=#003333>Drag &amp; Drop, Part II:<BR><SMALL>dragging 
+  positioned elements in Explorer 4</SMALL></FONT></H2><BR clear=all>
+  <BLOCKQUOTE><B>This tutorial can be appreciated by users of any browser, any 
+    version. The in-line examples, of course, will only work in Explorer 4. The 
+    drag examples work in both Explorer 4 <I>and</I> Navigator 4. <I>The code 
+    discussed is specific to Explorer. The code actually used is the 
+    cross-browser version.</I></B></BLOCKQUOTE>
+  <P>The present column is a <I>continuation</I> of column 6, <A 
+  href="http://www.webreference.com/dhtml/column6/">Drag &amp; Drop Part I, 
+  Navigator 4.</A> We will discuss how to drag positioned elements in Explorer 
+  4, and then combine the two parts into a cross-browser script.</P>
+  <P>Please refer to Part I for an introduction to drag &amp; drop concepts, and 
+  a script for achieving this effect in Netscape Navigator 4. Part I has been 
+  <I>revised</I> and the script <I>revamped</I> to allow for easier 
+  cross-browser compatibility.</P>
+  <H3><FONT color=#003333>Square Dance, the sequel</FONT></H3>
+  <P>Our squares are back! This time they can be dragged in Explorer as well. As 
+  before, grab and move them around with your mouse; partially hide a square and 
+  then select the hidden one to move; pass them over the form button; reset them 
+  to the original position by pressing the button.</P>
+  <DIV id=elAll>
+  <CENTER>
+  <TABLE cellSpacing=5>
+    <TBODY>
+    <TR>
+      <TD bgColor=red><IMG height=100 name=imOne 
+        src="draganddrop_files/spacerTr.gif" width=100></TD>
+      <TD bgColor=green><IMG height=100 name=imTwo 
+        src="draganddrop_files/spacerTr.gif" width=100></TD>
+      <TD bgColor=blue><IMG height=100 name=imThree 
+        src="draganddrop_files/spacerTr.gif" width=100></TD>
+      <TD bgColor=gray><IMG height=100 name=imFour 
+        src="draganddrop_files/spacerTr.gif" 
+  width=100></TD></TR></TBODY></TABLE></CENTER></DIV>
+  <CENTER>
+  <FORM><INPUT onclick=setEls(false) type=button value="Reset Elements"></FORM></CENTER>
+  <H3><FONT color=#003333>Behavior Differences</FONT></H3>
+  <P>Essentially there is little difference, at least for the user, in element 
+  dragging between Explorer and Navigator. You may have noticed, however, that, 
+  unlike Navigator, Explorer <I>allows</I> positioned elements to <I>hide</I> 
+  form elements. The button above can be hidden by the squares. Another 
+  difference is that the text in the squares was not <I>highlighted</I>, that 
+  is, it was not <I>selected</I> if you chanced to grab the square by the text 
+  part. And finally we signalled to the user that an element was draggable by 
+  changing the cursor shape.</P>
+  <H3><FONT color=#003333>In This Column</FONT></H3>
+  <P>We will discuss:</P>
+  <UL>
+    <LI><I>setting up the page</I> and elements for dragging, 
+    <LI><I>identifying the draggable element</I> and page position when 
+    <TT><FONT color=#990000>mousedown</FONT></TT> fires, 
+    <LI><I>moving the element</I> and ending the drag, 
+    <LI>a unique Explorer event handler: <TT><FONT 
+    color=#990000>onSelectStart</FONT></TT> 
+    <LI><I>changing the cursor shape</I>. 
+    <LI>combining NN and IE script into a <I>cross-browser version</I>. </LI></UL>
+  <P>First, let's tell our page <A 
+  href="http://www.webreference.com/dhtml/column7/IEsetup.html">to ready itself 
+  for dragging</A>.</P><!--<P><B CLASS=note>MSIE PP2 Note<NOLAYER>:</NOLAYER></B> </P>--></BLOCKQUOTE><!--=== FOOTER ===--><BR 
+clear=all><!BR>
+<P align=right><IMG height=18 name=imButBot1 
+src="draganddrop_files/b_center.gif" width=18><A 
+href="http://www.webreference.com/dhtml/column7/IEsetup.html" 
+onmousedown="navPress('imButBot2','right',true)" 
+onmouseout="navOver('imButBot2','right',false)" 
+onmouseover="navOver('imButBot2','right',true)" 
+onmouseup="navPress('imButBot2','right',false)"><IMG border=0 height=18 
+name=imButBot2 src="draganddrop_files/b_right.gif" width=18></A><A 
+href="http://www.webreference.com/dhtml/column7/IEgrab.html" 
+onmousedown="navPress('imButBot3','right',true)" 
+onmouseout="navOver('imButBot3','right',false)" 
+onmouseover="navOver('imButBot3','right',true)" 
+onmouseup="navPress('imButBot3','right',false)"><IMG border=0 height=18 
+name=imButBot3 src="draganddrop_files/b_right.gif" width=18></A><A 
+href="http://www.webreference.com/dhtml/column7/IEmove.html" 
+onmousedown="navPress('imButBot9','right',true)" 
+onmouseout="navOver('imButBot9','right',false)" 
+onmouseover="navOver('imButBot9','right',true)" 
+onmouseup="navPress('imButBot9','right',false)"><IMG border=0 height=18 
+name=imButBot9 src="draganddrop_files/b_right.gif" width=18></A><A 
+href="http://www.webreference.com/dhtml/column7/IExtra.html" 
+onmousedown="navPress('imButBot4','right',true)" 
+onmouseout="navOver('imButBot4','right',false)" 
+onmouseover="navOver('imButBot4','right',true)" 
+onmouseup="navPress('imButBot4','right',false)"><IMG border=0 height=18 
+name=imButBot4 src="draganddrop_files/b_right.gif" width=18></A><A 
+href="http://www.webreference.com/dhtml/column7/allCode.html" 
+onmousedown="navPress('imButBot5','right',true)" 
+onmouseout="navOver('imButBot5','right',false)" 
+onmouseover="navOver('imButBot5','right',true)" 
+onmouseup="navPress('imButBot5','right',false)"><IMG border=0 height=18 
+name=imButBot5 src="draganddrop_files/b_right.gif" width=18></A><A 
+href="http://www.webreference.com/dhtml/column7/crossCode.html" 
+onmousedown="navPress('imButBot8','right',true)" 
+onmouseout="navOver('imButBot8','right',false)" 
+onmouseover="navOver('imButBot8','right',true)" 
+onmouseup="navPress('imButBot8','right',false)"><IMG border=0 height=18 
+name=imButBot8 src="draganddrop_files/b_right.gif" width=18></A></P><!-- START AD -->
+<P align=center><A 
+href="http://www.webreference.com/event.ng/Type=click&amp;ProfileID=1&amp;RunID=1&amp;AdID=28&amp;TagValues=194.208.222.245.314.641&amp;FamilyID=2&amp;GroupID=1&amp;Redirect=http://searchenginewatch.com/about/banner.html" 
+target=_top><IMG alt="Get Ranked Higher on Search Engines" border=0 height=60 
+src="draganddrop_files/ic-searchenginefull-3.gif" width=468></A> </P><!-- END AD -->
+<P align=center><A class=oldstyle 
+href="http://www.webreference.com/cgi-bin/suggest.cgi">Comments</A> are 
+welcome<BR>Produced by <A class=oldstyle 
+href="mailto:peter@webreference.com">Peter Belesis</A> and Copyright © 1997 <A 
+class=oldstyle href="http://www.webreference.com/athenia.html">Athenia 
+Associates</A><BR>Created: 10/22/97<BR>Revised: 10/22/97</P>
+<P align=center><SMALL>URL: 
+http://www.webreference.com/dhtml/column7/</SMALL></P><BR>
+<SCRIPT language=JavaScript1.2 src="draganddrop_files/ind.js"></SCRIPT>
+</BODY></HTML>

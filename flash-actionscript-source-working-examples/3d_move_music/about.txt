@@ -1,0 +1,4 @@
+(C) Eugene Petrukhin, PetGraph, 2001
+Eugene.Petrukhin@e-businesseast.com, petgraph@mail.ru
+
+http://petgraph.da.ru

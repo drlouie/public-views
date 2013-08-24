@@ -1,0 +1,15 @@
+BODY {
+	FONT-FAMILY: Verdana
+}
+H5.devxtag {
+	COLOR: #ffffff; FONT-FAMILY: Verdana; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+H5.menuhead {
+	COLOR: #cccc99; FONT-FAMILY: Verdana; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.menuitem {
+	COLOR: #ffffff; FONT-FAMILY: Verdana; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+A.menu {
+	COLOR: #cccc99; FONT-FAMILY: Verdana; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}

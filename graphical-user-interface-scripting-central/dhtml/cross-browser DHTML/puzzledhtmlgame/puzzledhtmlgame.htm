@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0051)http://www.dannyg.com/javascript/puzzle/mapgame.htm -->
+<HTML><HEAD><TITLE>Map Game</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<STYLE type=text/css>#bgmap {
+	LEFT: 100px; POSITION: absolute; TOP: 180px; WIDTH: 406px
+}
+#azlabel {
+	BACKGROUND-COLOR: red; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; HEIGHT: 28px; LEFT: 310px; POSITION: absolute; TEXT-ALIGN: center; TOP: 0px; WIDTH: 100px
+}
+#calabel {
+	BACKGROUND-COLOR: red; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; HEIGHT: 28px; LEFT: 310px; POSITION: absolute; TEXT-ALIGN: center; TOP: 29px; WIDTH: 100px
+}
+#orlabel {
+	BACKGROUND-COLOR: red; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; HEIGHT: 28px; LEFT: 310px; POSITION: absolute; TEXT-ALIGN: center; TOP: 58px; WIDTH: 100px
+}
+#utlabel {
+	BACKGROUND-COLOR: red; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; HEIGHT: 28px; LEFT: 310px; POSITION: absolute; TEXT-ALIGN: center; TOP: 87px; WIDTH: 100px
+}
+#walabel {
+	BACKGROUND-COLOR: red; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; HEIGHT: 28px; LEFT: 310px; POSITION: absolute; TEXT-ALIGN: center; TOP: 116px; WIDTH: 100px
+}
+#nvlabel {
+	BACKGROUND-COLOR: red; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; HEIGHT: 28px; LEFT: 310px; POSITION: absolute; TEXT-ALIGN: center; TOP: 145px; WIDTH: 100px
+}
+#idlabel {
+	BACKGROUND-COLOR: red; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; HEIGHT: 28px; LEFT: 310px; POSITION: absolute; TEXT-ALIGN: center; TOP: 174px; WIDTH: 100px
+}
+#camap {
+	LEFT: 20px; POSITION: absolute; TOP: 100px; WIDTH: 1px
+}
+#ormap {
+	LEFT: 60px; POSITION: absolute; TOP: 100px; WIDTH: 1px
+}
+#wamap {
+	LEFT: 100px; POSITION: absolute; TOP: 100px; WIDTH: 1px
+}
+#idmap {
+	LEFT: 140px; POSITION: absolute; TOP: 100px; WIDTH: 1px
+}
+#nvmap {
+	LEFT: 180px; POSITION: absolute; TOP: 100px; WIDTH: 1px
+}
+#azmap {
+	LEFT: 220px; POSITION: absolute; TOP: 100px; WIDTH: 1px
+}
+#utmap {
+	LEFT: 260px; POSITION: absolute; TOP: 100px; WIDTH: 1px
+}
+#congrats {
+	LEFT: 20px; POSITION: absolute; TOP: 100px; VISIBILITY: hidden; WIDTH: 1px
+}
+</STYLE>
+
+<SCRIPT language=JavaScript src="puzzledhtmlgame_files/DHTMLapi.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+var offsetX = 0
+var offsetY = 0
+var selectedObj
+var selectedState = ""
+var selectedSateIndex
+
+function state(abbrev, fullName, x, y) {
+	this.abbrev = abbrev
+	this.fullName = fullName
+	this.x = x
+	this.y = y
+	this.done = false
+}
+var states = new Array()
+states[0] = new state("ca", "California", 7, 54)
+states[1] = new state("or", "Oregon", 7, 24)
+states[2] = new state("wa", "Washington", 23, 8)
+states[3] = new state("id", "Idaho", 48, 17)
+states[4] = new state("az", "Arizona", 45, 105)
+states[5] = new state("nv", "Nevada", 27, 61)
+states[6] = new state("ut", "Utah", 55, 69)
+
+function getSelectedMap(e) {
+	if (isNav4) {
+		var clickX = e.pageX
+		var clickY = e.pageY
+		var testObj
+		for (var i = states.length - 1; i >= 0; i--) {
+			testObj = document.layers[states[i].abbrev + "map"]
+			if ((clickX > testObj.left) && (clickX < testObj.left + testObj.clip.width) && (clickY > testObj.top) && (clickY < testObj.top + testObj.clip.height)) {
+				selectedObj = testObj
+				if (selectedObj) {
+					selectedStateLabel = document.bgmap.document.layers[states[i].abbrev + "label"]
+					selectedStateIndex = i
+					setZIndex(selectedObj, 100)
+					return
+				}
+			}
+		}
+	} else {
+		var imgObj = window.event.srcElement
+		selectedObj = imgObj.parentElement.style
+		if (selectedObj) {
+			var stateName = imgObj.parentElement.id.substring(0,2)
+			for (var i = 0; i < states.length; i++) {
+				if (states[i].abbrev == stateName ) {
+					selectedStateLabel = document.all(stateName + "label").style
+					selectedStateIndex = i
+					setZIndex(selectedObj,100)
+					return
+				}
+			}
+		}
+	}
+	selectedObj = null
+	selectedStateLabel = null
+	selectedStateIndex = null
+	return
+}
+function dragIt(e) {
+	if (selectedObj) {
+		if (isNav4) {
+			shiftTo(selectedObj, (e.pageX - offsetX), (e.pageY - offsetY))
+		} else {
+			shiftTo(selectedObj, (window.event.clientX - offsetX), (window.event.clientY - offsetY))
+		}
+	}
+}
+function toggleEngage(e) {
+	if (selectedObj) {
+		release(e)	
+	} else {
+		engage(e)
+	}
+}
+function engage(e) {
+	getSelectedMap(e)
+	if (selectedObj) {
+		if (isNav4) {
+			offsetX = e.pageX - selectedObj.left
+			offsetY = e.pageY - selectedObj.top
+		} else {
+			offsetX = window.event.offsetX - document.body.scrollLeft
+			offsetY = window.event.offsetY - document.body.scrollTop
+		}
+		setBGColor(selectedStateLabel,"yellow")
+	}
+}
+function release(e) {
+	if (onTarget(e)) {
+		setBGColor(selectedStateLabel, "green")
+		states[selectedStateIndex].done = true
+		if (isDone()) {
+			show("congrats")
+		}
+	} else {
+		setBGColor(selectedStateLabel, "red")
+		states[selectedStateIndex].done = false
+		hide("congrats")
+	}
+	setZIndex(selectedObj, 0)
+	selectedObj = null
+	selectedState = null
+}
+function onTarget(e) {
+	var x = states[selectedStateIndex].x + getObjectLeft("bgmap")
+	var y = states[selectedStateIndex].y + getObjectTop("bgmap")
+	if (isNav4) {
+		var objX = selectedObj.pageX
+		var objY = selectedObj.pageY
+	} else {
+		var objX = selectedObj.pixelLeft
+		var objY = selectedObj.pixelTop
+	}
+	if ((objX >= x-2 && objX <= x+2) && (objY >= y-2 && objY <= y+2)) {
+		shiftTo(selectedObj, x, y)
+		return true
+	}
+	return false
+}
+function isDone() {
+	for (var i = 0; i < states.length; i++) {
+		if (!states[i].done) {
+			return false	
+		}
+	}
+	return true
+}
+function showHelp() {
+	var objName = "help"
+	shiftTo(objName, insideWindowWidth, 80)
+	setZIndex(objName,1000)
+	show(objName)
+	intervalID = setInterval("moveHelp()", 1)
+}
+function moveHelp() {
+	shiftBy("help",-5,0)
+	var objectLeft = getObjectLeft("help")
+	if (objectLeft <= (insideWindowWidth/2) - 150) {
+		clearInterval(intervalID)
+	}
+}
+function hideMe() {
+	clearInterval(intervalID)
+	hide("help")
+	shiftTo("help", insideWindowWidth, 80)
+}
+function setNSEvents() {
+	if (isNav4) {
+		document.captureEvents(Event.MOUSEDOWN | Event.MOUSEMOVE)
+		document.onMouseDown = toggleEngage
+		document.onMouseMove = dragIt
+		document.help.captureEvents(Event.CLICK)
+		document.help.onClick = hideMe
+	}
+}
+function init() {
+	if (isNav4) {
+		for (var i = 0; i< states.length; i++) {
+			setBGColor((document.bgmap.document.layers[states[i].abbrev + "label"]),"red")
+		}
+	} else if (isIE4) {
+		insideWindowWidth = document.body.scrollWidth
+	}
+}
+function setWidth() {
+	if (isIE4) {
+		insideWindowWidth = document.body.scrollWidth
+	}
+}
+</SCRIPT>
+
+<META content="MSHTML 5.00.2014.210" name=GENERATOR></HEAD>
+<BODY onload="init(); setNSEvents()" onmousedown=toggleEngage() 
+onmousemove=dragIt() onresize=setWidth()>
+<H1>"Lower 48" U.S. Map Puzzle&nbsp;<A href="javascript:void%20showHelp()" 
+onmouseout="status='';return true" 
+onmouseover="status='Show help panel...';return true"><IMG border=0 height=22 
+src="puzzledhtmlgame_files/info.gif" width=22></A></H1>
+<HR>
+
+<DIV id=bgmap><IMG border=1 height=202 src="puzzledhtmlgame_files/us11.gif" 
+width=306>&nbsp;</IMG> 
+<DIV id=azlabel>Arizona</DIV>
+<DIV id=calabel>California</DIV>
+<DIV id=orlabel>Oregon</DIV>
+<DIV id=utlabel>Utah</DIV>
+<DIV id=walabel>Washington</DIV>
+<DIV id=nvlabel>Nevada</DIV>
+<DIV id=idlabel>Idaho</DIV></DIV>
+<DIV id=camap><IMG border=0 height=82 src="puzzledhtmlgame_files/ca.gif" 
+width=47></DIV>
+<DIV id=ormap><IMG border=0 height=45 src="puzzledhtmlgame_files/or.gif" 
+width=57></DIV>
+<DIV id=wamap><IMG border=0 height=29 src="puzzledhtmlgame_files/wa.gif" 
+width=38></DIV>
+<DIV id=idmap><IMG border=0 height=55 src="puzzledhtmlgame_files/id.gif" 
+width=34></DIV>
+<DIV id=azmap><IMG border=0 height=45 src="puzzledhtmlgame_files/az.gif" 
+width=38></DIV>
+<DIV id=nvmap><IMG border=0 height=56 src="puzzledhtmlgame_files/nv.gif" 
+width=35></DIV>
+<DIV id=utmap><IMG border=0 height=41 src="puzzledhtmlgame_files/ut.gif" 
+width=33></DIV>
+<DIV id=congrats><FONT color=red>
+<H1>Congratulations!</H1></FONT></DIV>
+<SCRIPT language=JavaScript>
+if (isIE4) {
+	var output = "<DIV ID='help' onClick='hideMe()' STYLE='position:absolute; visibility:hidden; top:80; width:300; border:none; background-color:#98FB98;'>\n"
+	output += "<P STYLE='margin-top:5'><CENTER><B>Instructions</B></CENTER></P>\n"
+	output += "<HR COLOR='seagreen'>\n<OL STYLE='margin-right:20'>"
+	output += "<LI>Click on a state map to pick it up. The label color turns yellow.\n"
+	output += "<LI>Move the mouse and map into position, and click the mouse to drop the state map.\n"
+	output += "<LI>If you are close to the actual location, the state snaps into place and the label color turns green.\n"
+	output += "</OL>\n<FORM>\n<CENTER><INPUT TYPE='button' VALUE='Close'>\n</FORM></DIV>"
+	document.write(output)
+} else if (isNav4) {
+	var output = "<LAYER ID='help' TOP=80 LEFT=&{window.innerWidth}; WIDTH=300 VISIBILITY='HIDDEN' SRC='instrux.htm'></LAYER>"
+	document.write(output)
+}
+</SCRIPT>
+</BODY></HTML>

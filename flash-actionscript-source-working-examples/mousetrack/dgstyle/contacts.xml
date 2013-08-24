@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+	<contact>
+		<nom>MARTIN</nom>
+		<prenom>Eric</prenom>
+		<tel>01.23.45.11.11</tel>
+		<fax>01.23.45.11.11</fax>
+		<email>eric.martin@wanadoo.fr</email>
+		<sexe>homme</sexe>
+	</contact>	
+	<contact>
+		<nom>DUPOND</nom>
+		<prenom>Jérémie</prenom>
+		<tel>01.23.45.22.22</tel>
+		<fax>01.23.45.22.22</fax>
+		<email>jeremie.dupond@wanadoo.fr</email>
+		<sexe>homme</sexe>
+	</contact>	
+	<contact>
+		<nom>DURAND</nom>
+		<prenom>Geneviève</prenom>
+		<tel>01.29.27.33.33</tel>
+		<fax>01.39.45.33.33</fax>
+		<email>g.durand@macromedi.fr</email>
+		<sexe>femme</sexe>
+	</contact>	
+	<contact>
+		<nom>NOMAIL</nom>
+		<prenom>Philippe</prenom>
+		<tel>01.29.27.44.44</tel>
+		<fax>01.39.45.44.44</fax>
+		<email>philippe.nomail@wanadoo.fr</email>
+		<sexe>homme</sexe>
+	</contact>	
+	<contact>
+		<nom>FLASH</nom>
+		<prenom>Germaine</prenom>
+		<tel>02.29.23.55.55</tel>
+		<fax>02.29.23.55.55</fax>
+		<email>germaine.flash@super.fr</email>
+		<sexe>femme</sexe>
+	</contact>
+</contacts>

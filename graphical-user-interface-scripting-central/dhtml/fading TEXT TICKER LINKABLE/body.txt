@@ -1,0 +1,82 @@
+<div id="tickertape">
+<div id="subtickertape" class="subtickertapefont">Initializing...</div>
+</div>
+
+<script language="JavaScript1.2">
+
+/*
+Fading Ticker Tape Script- 
+© Dynamic Drive (www.dynamicdrive.com)
+Fading background color component by Dave Methvin, Windows Magazine
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+//default speed is 4.5 seconds, Change that as desired
+var speed=4500
+
+var news=new Array()
+news[0]="<a href='http://dynamicdrive.com'>Click here to go to Dynamic Drive's front page</a>"
+news[1]="<a href='http://wsabstract.com'>Visit Website Abstraction for free JavaScripts!</a>"
+news[2]="<a href='http://download.com'>Looking for software downloads? Click here.</a>"
+//expand or shorten this list of messages as desired
+
+i=0
+if (document.all)
+tickerobject=document.all.subtickertape.style
+else
+tickerobject=document.tickertape.document
+function regenerate(){
+window.location.reload()
+}
+function regenerate2(){
+if (document.layers)
+setTimeout("window.onresize=regenerate",450)
+}
+
+function update(){
+ BgFade(0xff,0xff,0xff, 0x00,0x00,0x00,10);
+if (document.layers){
+document.tickertape.document.subtickertape.document.write('<span class="subtickertapefont">'+news[i]+'</span>')
+document.tickertape.document.subtickertape.document.close()
+}
+else 
+document.all.subtickertape.innerHTML=news[i]
+
+if (i<news.length-1)
+i++
+else
+i=0
+setTimeout("update()",speed)
+}
+
+ function BgFade(red1, grn1, blu1, red2,
+ grn2, blu2, steps) {
+ sred = red1; sgrn = grn1; sblu = blu1; 
+ ered = red2; egrn = grn2; eblu = blu2; 
+ inc = steps; 
+ step = 0; 
+ RunFader();
+ }
+ function RunFader() {
+ var epct = step/inc; 
+ var spct = 1 - epct; 
+ if (document.layers)
+ tickerobject.bgColor =
+ Math.floor(sred * spct + ered *
+ epct)*256*256 +
+ Math.floor(sgrn * spct + egrn * epct)*256 +
+ Math.floor(sblu * spct + eblu * epct); 
+ else
+ tickerobject.backgroundColor=
+ Math.floor(sred * spct + ered *
+ epct)*256*256 +
+ Math.floor(sgrn * spct + egrn * epct)*256 +
+ Math.floor(sblu * spct + eblu * epct); 
+ if ( step < inc ) {
+ setTimeout('RunFader()',50); 
+ }
+ step++;
+ }
+
+</script>

@@ -1,0 +1,391 @@
+<HTML>
+<HEAD>
+<title>
+</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var s45 = "default";
+var sT1, sT2, sT3, sT4, nTest=0;
+// End -->
+</SCRIPT>
+
+
+</HEAD>
+<Body>
+<FORM name="theForm" onSubmit="FrameIt(this);return false" method="get">
+<b>Word(s):</b> <INPUT NAME="GetNetscape" length=30 maxlength=75>
+. . . <INPUT TYPE="submit" VALUE="Search">
+. . . 
+<select NAME="thetop"> 
+<option selected>Multi-window small
+<option>Single Search
+<option>Multi-window full-size
+</select><BR>
+<tr><td VALIGN=TOP>
+<small><font color=#0080c0>search engines</font></small><br>
+<INPUT TYPE="checkbox" NAME="yahoo" VALUE="1"> Yahoo 
+<br><INPUT TYPE="checkbox" NAME="webc"VALUE="1"> WebCrawler
+<br><INPUT TYPE="checkbox" NAME="lycos" VALUE="1"> Lycos
+<br><INPUT TYPE="checkbox" NAME="excite" VALUE="1"> Excite
+<br><INPUT TYPE="checkbox" NAME="alta" VALUE="1"> AltaVista
+<br><INPUT TYPE="checkbox" NAME="is" VALUE="1"> InfoSeek
+<br><INPUT TYPE="checkbox" NAME="infou" VALUE="1"> Ultra InfoSeek
+<br><INPUT TYPE="checkbox" NAME="ink" VALUE="1"> Inktomi
+<br><INPUT TYPE="checkbox" NAME="yahool" VALUE="1"> Yahoo-kids
+<br><INPUT TYPE="checkbox" NAME="point" VALUE="1"> Point
+<br><INPUT TYPE="checkbox" NAME="mag" VALUE="1"> Magellan
+<br><INPUT TYPE="checkbox" NAME="meta" VALUE="1"> Metasearch
+<BR><INPUT TYPE="checkbox" NAME="savvy" VALUE="1"> Savvy Search
+<br></td>
+<td VALIGN=TOP>
+<INPUT TYPE="checkbox" NAME="link" VALUE="1"> Linkstar
+<BR><INPUT TYPE="checkbox" NAME="otxt" VALUE="1"> Open Text
+<br><INPUT TYPE="checkbox" NAME="mcp" VALUE="1"> WWW Yellow Pages
+<br><INPUT TYPE="checkbox" NAME="ftp" VALUE="1"> FTP
+<br><small><font color=#0080c0>news</font></small>
+<br><INPUT TYPE="checkbox" NAME="pathf" VALUE="1">Time Warn. 
+<br><INPUT TYPE="checkbox" NAME="usnews" VALUE="1"> USNews Mag.
+<br><INPUT TYPE="checkbox" NAME="sportsnet" VALUE="1"> SportsNet
+<br><INPUT TYPE="checkbox" NAME="msnbc" VALUE="1"> MSNBC
+<br><INPUT TYPE="checkbox" NAME="headlines" VALUE="1"> Headlines
+<br><small><A HREF="http://www.avenue.com/news">more news sources</A></small>
+<br><small><font color=#0080c0>bus. by name</font></small><br>
+<INPUT TYPE="checkbox" NAME="switchb" VALUE="1"> Phone Book #1
+<br><INPUT TYPE="checkbox" NAME="bigb" VALUE="1"> Phone Book #2
+</td>
+<td VALIGN=TOP>
+<INPUT TYPE="checkbox" NAME="tick" VALUE="1"> US Stocks 
+<br><INPUT TYPE="checkbox" NAME="hoov" VALUE="1"> Hoover 
+<br><small><font color=#0080c0>information</font></small>
+<br><INPUT TYPE="checkbox" NAME="gamelan" VALUE="1"> Gamelan
+<br><INPUT TYPE="checkbox" NAME="dict" VALUE="1"> Dictionary
+<br><INPUT TYPE="checkbox" NAME="theas" VALUE="1"> Theasaurus
+<br><INPUT TYPE="checkbox" NAME="encyc" VALUE="1"> Encyclopedia
+<br><INPUT TYPE="checkbox" NAME="fooddict" VALUE="1"> Food Diction.
+<br><INPUT TYPE="checkbox" NAME="movies" VALUE="1"> Movie Titles
+<br><INPUT TYPE="checkbox" NAME="health" VALUE="1"> Health Reports
+<br><INPUT TYPE="checkbox" NAME="showbiz" VALUE="1"> Music, Books, Shows
+<br><INPUT TYPE="checkbox" NAME="census" VALUE="1"> US Census+Map
+<br><INPUT TYPE="checkbox" NAME="switchf" VALUE="1"> US People 
+<small><br>(firstname lastname)</small>
+</td>
+<td VALIGN=TOP>
+<small><font color=#0080c0>computer</font></small><br>
+<INPUT TYPE="checkbox" NAME="whow" VALUE="1"> Email
+<br><INPUT TYPE="checkbox" NAME="ziff" VALUE="1"> Ziff Mags
+<br><INPUT TYPE="checkbox" NAME="gds" VALUE="1"> Games Domain
+<br><INPUT TYPE="checkbox" NAME="compu" VALUE="1"> Computer News
+<br><INPUT TYPE="checkbox" NAME="maill" VALUE="1"> Mailing Lists
+<br><INPUT TYPE="checkbox" NAME="share" VALUE="1"> shareware.com
+<br><INPUT TYPE="checkbox" NAME="msoft" VALUE="1"> Microsoft
+<br><INPUT TYPE="checkbox" NAME="deja" VALUE="1"> Newsgroups #1
+<br><INPUT TYPE="checkbox" NAME="altan" VALUE="1"> Newsgroups #2
+<br><INPUT TYPE="checkbox" NAME="exciten" VALUE="1"> Newsgroups #3
+<br><small><font color=#0080c0>entertainment</font></small><br>
+<INPUT TYPE="checkbox" NAME="ticket" VALUE="1"> Ticket Master
+<br><INPUT TYPE="checkbox" NAME="nbc" VALUE="1"> NBC
+</td>
+</tr></table></center>
+<br>
+</form>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+function FrameIt(form) {
+var nOld = (parent.frames.length-1)/2;
+var nChosen = form.thetop.selectedIndex + 1;
+nTest = TheTrinity(form);
+var expdate = new Date ();
+expdate.setTime (expdate.getTime() + ( 90 * 24 * 60 * 60 * 1000)); 
+for (var i=5; i < form.elements.length; i++)
+{ //alert(form.elements[i].checked); //.value
+}
+if ( nTest == 0)
+alert("Check at least one engine.");
+else if ( nChosen == 1 ) {
+top.location.href = sT1;
+}
+else if (nChosen == 2)
+{
+if (nTest == 1)
+{ OpenWinds(sT1); }
+else if (nTest == 2)
+{ OpenWinds(sT1); OpenWinds(sT2); }
+else if (nTest == 3)
+{ OpenWinds(sT1); OpenWinds(sT2 ); 
+OpenWinds(sT3); }
+else if (nTest == 4)
+{ OpenWinds(sT1); OpenWinds(sT2);
+OpenWinds(sT3); OpenWinds(sT4); }
+}
+else if (nChosen == 3)
+{
+if (nTest == 1)
+{ OpenWindsBig(sT1); }
+else if (nTest == 2)
+{ OpenWindsBig(sT1); OpenWindsBig(sT2); }
+else if (nTest == 3)
+{ OpenWindsBig(sT1); OpenWindsBig(sT2); 
+OpenWindsBig(sT3, "joke3"); }
+else if (nTest == 4)
+{ OpenWindsBig(sT1); OpenWindsBig(sT2);
+OpenWindsBig(sT3); OpenWindsBig(sT4); }
+}
+return (false);
+}
+function TheTrinity(form) {
+var sRet;
+nTest=0;
+var sThe;
+sThe = form.GetNetscape.value;
+if (form.lycos.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.lycos.com/cgi-bin/pursuit?query=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.gds.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.gamesdomain.com/cgi-bin/wwwwais?keywords=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.nbc.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.nbc.com/cgi-bin/searcher?pik=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.link.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.linkstar.com/linkstar/bin/dosearch-linkstar?keywords=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.otxt.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://search.opentext.com/nastub?query=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.gamelan.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.gamelan.com/find.cgi?and=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.ticket.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.ticketmaster.com/cgi/AT-tickettextsearch.cgi?&mode=concept&search=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.movies.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://us.imdb.com/M/title-substring?title=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.savvy.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://williams.cs.colostate.edu:1969/nph-search?KW=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.mcp.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.mcp.com/nrp/wwwyp/wwwyphtml.cgi?search=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.ftp.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://ftpsearch.unit.no/ftpsearch?query=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.infou.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://ultra.infoseek.com/Titles?qt=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.meta.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.metasearch.com/www.cgi?p=" + sRet; 
+AddNewString(nTest, sRet);nTest++;}
+if (form.excite.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.excite.com/search.gw?search=" + sRet +
+"&category=default&searchType=Concept&display='html2,high'";
+AddNewString(nTest, sRet);nTest++;}
+if (form.deja.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://search.dejanews.com/nph-dnquery.xp?query="+sThe;
+sRet += "&defaultOp=AND&svcclass=dncurrent&maxhits=25"
+AddNewString(nTest, sRet);nTest++;}
+if (form.point.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.pointcom.com/cgi-bin/pursuit-txt?" + sRet ;
+AddNewString(nTest, sRet);nTest++;}
+if (form.exciten.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://www.excite.com/search.gw?search=" + sRet +
+"&category=news&searchType=Concept&display='html2,high'";
+AddNewString(nTest, sRet);nTest++;}
+if (form.ink.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://204.161.74.5:1234/query/?hits=";
+sRet += "50&disp=Terse+Text+Only&query="; 
+sRet += sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.yahoo.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://search.yahoo.com/bin/search?p="+sRet+"&s=a";
+AddNewString(nTest, sRet);nTest++;}
+if (form.pathf.checked ) {
+sThe= ConvertString(sThe);
+sRet ="http://pathfinder.com/@@npPYHRFc8wAAQByZ/";
+sRet +="cgi-bin/search?Search-Operation=query&Search-Databases";
+sRet += "-All=true&Search-Terms=" + sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.dict.checked ) {
+sRet = ConvertString(sThe);
+sRet = "http://gs213.sp.cs.cmu.edu/prog/webster?"+sRet;
+AddNewString(nTest, sRet);nTest++;}
+if (form.sportsnet.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://www.sportsnetwork.com/programs/waisgate?";
+sRet+="WAISqueryString="+sThe;
+sRet += "&WAISdbName=/services/production/tsn/wais/indexes/live";
+AddNewString(nTest, sRet);nTest++;}
+if (form.mag.checked ) {
+sRet = "http://www.mckinley.com/focus.pl?"+sThe;
+sRet = ConvertString(sRet);
+AddNewString(nTest, sRet);nTest++;}
+if (form.yahool.checked ) {
+sRet = "http://search.yahooligans.com/bin/search?p="+sThe;
+sRet = ConvertString(sRet);
+AddNewString(nTest, sRet);nTest++;}
+if (form.webc.checked) {sRet = "http://www.webcrawler.com/cgi-bin/WebQuery?"+sThe;
+sRet = ConvertString(sRet);AddNewString(nTest, sRet); nTest++;}if (form.theas.checked) {sRet = "gopher://odie.niaid.nih.gov/77/.thesaurus/index?"+sThe;sRet = ConvertString(sRet);AddNewString(nTest, sRet);nTest++;}
+if (form.switchb.checked) {sThe = ConvertString(sThe);sRet = "http://www.switchboard.com/bin/cgiqa.dll?S=&BUS=&SR=&L="+sThe;AddNewString(nTest, sRet);nTest++;}
+if (form.switchf.checked) {sThe = ConvertString(sThe);
+var sName = sThe;
+var ss1, ss2;
+var nLen= sName.length;
+for( i=0; i <= nLen; i++)
+{
+if (sName.substring(i,i+1)== "+")
+{ 
+ss1 = sName.substring(0,i);
+ss2 = sName.substring(i+1,nLen);
+break;
+   }
+}
+sRet = "http://www.switchboard.com/bin/cgiqa.dll?SR=&F="+ss1;
+sRet += "&L="+ss2;
+AddNewString(nTest, sRet);nTest++;}
+if (form.is.checked) {
+sThe = ConvertString(sThe);
+sRet = "http://guide-p.infoseek.com/Titles?qt="+sThe;
+sRet += "&col=WW&sv=IS&lk=noframes";
+AddNewString(nTest, sRet);nTest++;}
+if (form.alta.checked) {
+sThe = ConvertString(sThe);
+sRet = "http://www.altavista.digital.com/cgi-bin/query?pg=q&q=" + sThe;
+sRet += "&fmt=&what=web";
+AddNewString(nTest, sRet);nTest++;}
+if (form.altan.checked) {
+sThe = ConvertString(sThe);sRet = "http://www.altavista.digital.com/cgi-bin/query?pg=q&q=" + sThe;
+sRet += "&fmt=&what=news";
+AddNewString(nTest, sRet);nTest++;}
+if (form.usnews.checked) {
+sThe = ConvertString(sThe);sRet = "http://vws.agtnet.com/cgi-dos/agtfind.exe?dbname=usnews.coll";
+sRet += "&pubtype=usnews&query="+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.fooddict.checked ) {
+sRet = "http://www.epicurious.com/db/dictionary/search.cgi?keyword="+sThe;
+sRet = ConvertString(sRet);
+AddNewString(nTest, sRet);nTest++;}
+if (form.tick.checked ) {
+sRet = "http://qs.secapl.com/cgi-bin/qs?tick="+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.whow.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://query1.whowhere.com/jwz/name.wsrch?org=&name="+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.ziff.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://search.zdnet.com/plweb-cgi/topsearch/topresult.pl?dbname=All&query="+sThe;
+AddNewString(nTest, sRet);nTest++;}if (form.maill.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://www.nova.edu/Inter-Links/cgi-bin/lists?"+sThe;
+AddNewString(nTest, sRet);nTest++;}if (form.bigb.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://www.bigbook.com/search/listings_page.cgi?company="+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.hoov.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://www.hoovers.com/search/srch2.cgi?name="+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.health.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://nytsyn.com/cgi-bin/med_search?"+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.compu.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://nytsyn.com/cgi-bin/comp_search?"+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.encyc.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://www.eb.com/cgi-bin/g?keywords="+sThe;
+sRet += "&DBase=Articles&context=&hits=&indexremove=";
+AddNewString(nTest, sRet);nTest++;}
+if (form.compu.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://nytsyn.com/cgi-bin/comp_search?"+sThe;
+AddNewString(nTest, sRet);nTest++;}if (form.census.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://tiger.census.gov/cgi-bin/gazetteer?"+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.share.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://search.shareware.com/code/engine/Find?cfrom=quick&";
+sRet += "frame=none&orfile=True&category=All-Categories&hits=50&";
+sRet += "search="+ sThe +"&logop=and&and=";
+AddNewString(nTest, sRet);nTest++;}
+if (form.msoft.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://webfind.home.msn.com/cgi-bin/fts.dll?db=mssite&gr=&a1=&qu="+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.msnbc.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://webfind.msnbc.com/cgi-bin/fts.dll?db=msnbc&qu="+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.headlines.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://recycle.green.ri.cmu.edu/~speck/process.cgi?query="+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (form.showbiz.checked ) {
+sThe = ConvertString(sThe);
+sRet = "http://www.mrshowbiz.com/cgi/architext/AT-sbglobalsearch.cgi?sp=sp&search="+sThe;
+AddNewString(nTest, sRet);nTest++;}
+if (nTest > 4)
+nTest = 4;
+return(nTest);
+}
+function AddNewString(nGospel, sGospel) {
+if (nGospel == 0){ sT1 = sGospel; }
+else if (nGospel == 1){ sT2 = sGospel; }
+else if (nGospel == 2) { sT3 = sGospel; }
+else if (nGospel == 3) { sT4 = sGospel; }
+}
+function WhichString(n) {
+var sRet;
+if (nGospel == 1){ sRet = sT1; }
+else if (nGospel == 2) { sRet = sT2; }
+else if (nGospel == 3) { sRet = sT3; }
+else if (nGospel == 4) { sRet = sT4; }
+return (sRet);
+}
+function ConvertString(s3) {
+var nLen= s3.length;
+for( i=0; i <= nLen; i++)
+{
+if (s3.substring(i,i+1)== " ")
+{ 
+s3 = s3.substring(0,i) + "+" + s3.substring(i+1,nLen);  }
+}
+return(s3);
+}
+function OpenWinds(sUrl) {
+var qWin;
+var sName;
+oldRand = GetRandom(1, 12000, oldRand);
+sName = "wind" + oldRand;
+qWin=open(sUrl,sName,'toolbar=yes,directories=no,status=yes,menubar=yes,scrollbars=yes,location=yes,resizable=yes,copyhistory=no,width=410,height=260');
+}
+function OpenWindsBig(sUrl, sName) {
+var qWin;
+qWin=open(sUrl,sName,'toolbar=yes,directories=no,status=yes,menubar=yes,scrollbars=yes,location=yes,resizable=yes,copyhistory=no');
+}
+// End -->
+</SCRIPT>

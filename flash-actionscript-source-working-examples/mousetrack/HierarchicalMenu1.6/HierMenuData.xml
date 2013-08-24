@@ -1,0 +1,99 @@
+<hiermenu method="2">
+	<item name="File is a big label">
+		<item name="New">
+			<item name="Window" />
+			<sep />
+			<item name="Message" />
+			<item name="Post" />
+			<item name="Contact" />
+			<item name="Internet Call" />
+		</item>
+		<item name="Open..." />
+		<item name="Edit with FrontPage" />
+		<item name="Save" disabled="true" identifier="saveItem"/>
+		<item name="Save as..." />
+		<sep />
+		<item name="Send..." />
+		<item name="Import and Export">
+			<item name="Page by Email..." />
+			<item name="Link by Email..." />
+			<item name="Shortcut to Desktop" />
+		</item>
+		<sep />
+		<item name="Properties" />
+		<item name="Work Offline" />
+		<item name="Close" />
+	</item>
+	<item name="Edit">
+		<item name="Cut" disabled="true" />
+		<item name="Copy" disabled="true" />
+		<item name="Paste" disabled="true" />
+		<sep />
+		<item name="Select All" />
+		<sep />
+		<item name="Find (on This Page)..." />
+	</item>
+	<item name="View">
+		<item name="Toolbars">
+			<item name="Standard Buttons" checkbox="true" checkboxactive="true" identifier="stdBtns"/>
+			<item name="Address Bar" checkbox="true" checkboxactive="true" identifier="addBar" />
+			<item name="Links" checkbox="true" checkboxactive="false" identifier="links" />
+			<sep />
+			<item name="Lock the toolbars" />
+			<item name="Customize" />
+		</item>
+		<item name="Status Bar" checkbox="true" checkboxactive="true" identifier="statusBar" />
+		<item name="Explorer Bar">
+			<item name="Add/Remove Explorer Bars..." />
+			<sep />
+			<radiogroup name="expBars" active="3">
+				<item name="Search" />
+				<item name="Media" />
+				<item name="Contacts" />
+				<item name="Favorites" />
+				<item name="History" />
+				<item name="Folders" />
+			</radiogroup>
+			<sep />
+			<item name="Tip of the day" />
+			<item name="Discuss" />
+			<item name="Real.com" />
+		</item>
+		<sep />
+		<item name="Go To">
+			<item name="Back		Alt+Left Arrow" />
+			<item name="Forward		Alt+Right Arrow" disabled="true" />
+			<sep />
+			<item name="Home Page	Alt+Home" />
+		</item>
+		<item name="Stop" />
+		<item name="Refresh" />
+		<sep />
+		<item name="Text Size">
+			<radiogroup name="textSize" active="2">
+				<item name="Largest" />
+				<item name="Larger" />
+				<item name="Medium" />
+				<item name="Smaller" />
+				<item name="Smallest" />
+			</radiogroup>
+		</item>
+		<sep />
+		<item name="Source" />
+		<item name="Script Debugger">
+			<item name="Open" />
+			<item name="Break at next statement" />
+		</item>
+		<item name="Full Screen" />
+	</item>
+	<item name="Help">
+		<item name="Contents and Index" />
+		<item name="Tip of the Day" handlerType="func" handlerTarget="showTip" handlerArgs="Toolbar Customizing,Did you know that you can customize your toolbar?" />
+		<item name="for Netscape users" />
+		<item name="Tour" />
+		<item name="Online Support" />
+		<item name="Send Feedback" />
+		<sep />
+		<item name="About Internet Explorer" />
+	</item>
+</hiermenu>

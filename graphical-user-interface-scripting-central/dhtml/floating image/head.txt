@@ -1,0 +1,31 @@
+<script language="JavaScript" SRC="moveobj.js"> </script>
+<script>
+
+/*
+Floating image script
+By Virtual_Max (http://www.geocities.com/siliconvalley/lakes/8620)
+Permission granted to Dynamicdrive.com to feature it in it's archive
+For 100's of FREE DHTML scripts and components,
+Visit http://dynamicdrive.com
+*/
+
+
+var chip1;
+var chip2;
+var chip3;
+//add or delete more variables, depending on how many images you're using
+
+function pagestart()
+{checkbrOK(); 
+ chip1=new Chip("chip1",60,80);
+ chip2=new Chip("chip2",60,80);
+ chip3=new Chip("chip3",60,80);
+ //add or delete more of the above, depending on how many images you're using
+ if(brOK) 
+   { movechip("chip1");
+     movechip("chip2");
+     movechip("chip3");
+     //add or delete more of the above, depending on how many images you're using
+   }
+}
+</script>

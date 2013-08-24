@@ -1,0 +1,16 @@
+<style>
+<!--
+
+#slidemenubar, #slidemenubar2{
+position:absolute;
+left:-155px;
+width:160px;
+top:170px;
+border:1.5px solid green;
+background-color:lightyellow;
+layer-background-color:lightyellow;
+font:bold 12px Verdana;
+line-height:20px;
+}
+-->
+</style>

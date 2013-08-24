@@ -1,0 +1,27 @@
+<HTML><HEAD>
+<TITLE>Date and Time</TITLE>
+</HEAD>
+<!-- Drlouie's Monthly Linked Image Swapper - questions:drlouie@hapasol.com-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--Start Hide
+var isn1=null;
+var isn2=false;
+today=new Date();
+function isnArray() {
+ argnr=isnArray.arguments.length
+ for (var i=0;i<argnr;i++) {
+  this[i+1] = isnArray.arguments[i];
+  }
+ }
+// Months Arrays
+var isnMonths=new isnArray("january","february","march","april","may","june","july","august","september","october","november","december");
+// End Hide -->
+</SCRIPT>
+<BODY BGCOLOR="#FFFFFF">
+
+<!-- Drlouie's Monthly Linked Image Swapper - questions:drlouie@hapasol.com-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--Start Hide
+document.write("<a href=# onClick=\"javascript:window.open('monthly/" +isnMonths[today.getMonth()+1]+ ".htm','feature','width=230,height=370')\"><img src=images/home_" +isnMonths[today.getMonth()+1]+ ".jpg border=0 width=251 height=130></a>");
+// End Hide -->
+</SCRIPT>

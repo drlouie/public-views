@@ -1,0 +1,19 @@
+<script language="JavaScript1.2">
+
+var hotkey=86
+var destination="http://www.dynamicdrive.com"
+if (document.layers)
+document.captureEvents(Event.KEYPRESS)
+function backhome(e){
+if (document.layers){
+if (e.which==hotkey)
+window.location=destination
+}
+else if (document.all){
+if (event.keyCode==hotkey)
+window.location=destination
+}
+}
+document.onkeypress=backhome
+
+</script>

@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>Stop that form!</TITLE>
+</HEAD>
+<BODY BGCOLOR = "#FFFFFF">
+<SCRIPT LANGUAGE = "JavaScript">
+<!--
+
+function isReady(form) {
+    if (form.message.value != "") return true;
+    else { 
+    alert("Please include a message.");
+    form.message.focus();
+    return false;
+    }
+}
+
+//-->
+</SCRIPT>
+<FORM NAME = "theform" onSubmit = "return isReady(this)" METHOD=POST ACTION = "/cgi-bin/">
+<IMG SRC = "send_message.gif"><P>
+<TEXTAREA NAME = "message" ROWS = 6 COLS = 20 WRAP></TEXTAREA><P>
+<INPUT TYPE = SUBMIT VALUE = "  Submit  ">
+<INPUT TYPE = RESET VALUE = "  Reset  ">
+</FORM>
+</BODY>
+</html>
+

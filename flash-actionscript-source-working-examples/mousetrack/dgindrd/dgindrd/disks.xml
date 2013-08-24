@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<disks> 	<disk>  		<name>disk 1</name>  		<value>45</value>  	</disk>
+ 	<disk>
+  		<name>disk 2</name>
+  		<value>12</value>
+  	</disk>
+ 	<disk>
+  		<name>disk 3</name>
+  		<value>73</value>
+  	</disk>
+ 	<disk>
+  		<name>disk 4</name>
+  		<value>94</value>
+  	</disk>
+  	<disk>
+   		<name>disk 5</name>
+   		<value>33</value>
+  	</disk>
+  	<disk>
+   		<name>disk 6</name>
+   		<value>20</value>
+  	</disk>
+</disks>

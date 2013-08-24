@@ -1,0 +1,4 @@
+<a href="whatever.htm"
+           onMousedown="document.images['example'].src=img2.src"
+           onMouseup="document.images['example'].src=img1.src">
+           <img src="up.gif" name="example" border=0></a>

@@ -1,0 +1,29 @@
+<script language="JavaScript1.2">
+
+/*
+Gradual-Highlight Image Script- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+function high(which2){
+theobject=which2
+highlighting=setInterval("highlightit(theobject)",50)
+}
+function low(which2){
+clearInterval(highlighting)
+which2.filters.alpha.opacity=20
+}
+
+
+
+function highlightit(cur2){
+if (cur2.filters.alpha.opacity<100)
+cur2.filters.alpha.opacity+=5
+else if (window.highlighting)
+clearInterval(highlighting)
+}
+
+</script>

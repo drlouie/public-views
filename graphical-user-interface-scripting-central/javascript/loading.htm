@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Cross-browser Dynamic HTML Scripts - Loading....</title>
+<style type="text/css">
+#divLoadCont{position:absolute; width:100%; height:98%; top:0; left:0; background-color:white; layer-background-color:white; font-family:arial,helvetica; z-index:100}
+</style>
+<script type="text/javascript" language="JavaScript">
+/********************************************************************************
+Copyright (C) 1999 Thomas Brattli
+This script is made by and copyrighted to Thomas Brattli at www.bratta.com
+Visit for more great scripts. This may be used freely as long as this msg is intact!
+I will also appriciate any links you could give me.
+********************************************************************************/
+//Default browsercheck, added to all scripts!
+function checkBrowser(){
+	this.ver=navigator.appVersion
+	this.dom=document.getElementById?1:0
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom)?1:0;
+	this.ie4=(document.all && !this.dom)?1:0;
+	this.ns5=(this.dom && parseInt(this.ver) >= 5) ?1:0;
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie5 || this.ie4 || this.ns4 || this.ns5)
+	return this
+}
+bw=new checkBrowser()
+//Hides the div
+function hideIt(div){
+	if(bw.bw){
+		div="divLoadCont"
+		obj=bw.dom?document.getElementById(div).style:bw.ie4?document.all[div].style:bw.ns4?document[div]:0; 
+		obj.visibility='hidden'
+	}
+}
+onload=hideIt;
+</script>
+</HEAD>
+<BODY bgcolor="White">
+	<script>
+	//We write the table and the div to hide the content out, so older browsers won't see it
+	if(bw.bw) document.write('<div id="divLoadCont"><table width="100%" height="95%" align="center" valign="middle"><tr><td width="100%" height="100%" align="center" valign="middle"><h3>Loading Page....</h3></td></tr></table></div>')
+	</script>
+
+YOUR REGULAR BODY CONTENT GOES IN HERE
+</BODY>
+</HTML>
+

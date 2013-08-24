@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+
+<HTML>
+
+ <HEAD>
+  
+<TITLE>Macromedia Flash (SWF) Deployment Kit - Dispatcher Demo</TITLE>
+
+  <META http-equiv="Content-Script-Type" content="text/javascript">
+
+  <SCRIPT TYPE="text/javascript" SRC="Dispatcher.js"></SCRIPT>
+
+  <SCRIPT LANGUAGE="VBScript" SRC="Dispatcher.vbs"></SCRIPT>
+ </HEAD>
+
+
+ <BODY ALINK="#000000" BGCOLOR="#ffffff" LINK="#333399" VLINK="#660033">
+<H1><font face="Arial, Helvetica, sans-serif">Macromedia Flash (SWF) Deployment Kit</font></H1>
+<H2><font face="Arial, Helvetica, sans-serif">Dispatcher Demo</font></H2>
+<P> <font face="Arial, Helvetica, sans-serif"><BR>
+  </font>
+<P><font face="Arial, Helvetica, sans-serif"><B>Macromedia Flash Dispatcher</B> is a script-based 
+  detector for the Macromedia Flash Player. It detects whether the user's Web 
+  browser has the Macromedia Flash plug-in or ActiveX control installed, and if so, at what 
+  version. The Web developer can configure the Dispatcher to take the appropriate 
+  action based on its findings: either load a document containing Macromedia Flash content, 
+  load alternate content, or oversee the updating or installation of the player.</font> 
+<P><font face="Arial, Helvetica, sans-serif">This is an interactive demonstration 
+  of Macromedia Flash Dispatcher's capabilities.</font> 
+<FORM NAME="settings"
+	METHOD="POST"
+	ONSUBMIT="
+	    MM_FlashDispatch(
+		document.settings.content.value,
+		document.settings.version.options[
+		    document.settings.version.selectedIndex
+		].value,
+		document.settings.requireLatestVersion.checked,
+		document.settings.upgradeURL.value,
+		(document.settings.noPlayerAction[0].checked &&
+		 !MM_FlashUserDemurred()),
+		document.settings.installURL.value,
+		document.settings.altContent.value,
+		document.settings.overridePluginsPage.checked
+	    );
+	    return false"
+  >
+  <TABLE>
+    <TR> 
+      <TH><font face="Arial, Helvetica, sans-serif">Macromedia Flash  content URL:</font> 
+      <TD> <font face="Arial, Helvetica, sans-serif"> 
+        <INPUT NAME="content" VALUE="flash/">
+        </font>
+      <TH><font face="Arial, Helvetica, sans-serif">Version of Macromedia Flash  software 
+        used to author content: </font> 
+      <TD> <font face="Arial, Helvetica, sans-serif"> 
+        <select name="version">
+          <option value="2.0">2.0 </option>
+          <option value="3.0">3.0 </option>
+          <option value="4.0">4.0 </option>
+          <option value="5.0" selected>5.0</option>
+        </select>
+        </font> 
+      <TH> <font face="Arial, Helvetica, sans-serif"> 
+        <INPUT TYPE=checkbox NAME="requireLatestVersion">
+        Require latest revision of plug-in</font> 
+  </TABLE>
+  <P><font face="Arial, Helvetica, sans-serif">There are three possible outcomes 
+    of the Macromedia Flash Player detection process:</font> 
+  <H3><font face="Arial, Helvetica, sans-serif">1. A suitable version of Macromedia Flash Player is detected for playing the requested content version.</font></H3>
+  <P><font face="Arial, Helvetica, sans-serif">The Dispatcher will load the content 
+    URL.</font> 
+  <P><font face="Arial, Helvetica, sans-serif"><BR>
+    </font>
+  <H3><font face="Arial, Helvetica, sans-serif">2. An unsuitable version of Macromedia Flash Player is detected.</font></H3>
+  <P><font face="Arial, Helvetica, sans-serif">The Dispatcher will load the content 
+    URL if automated updating is supported on the user's browser &amp; platform; 
+    otherwise, it will load the URL of a document that may inform the user of 
+    their options (upgrade, view alternate content) and give upgrade instructions.</font> 
+  <P> <font face="Arial, Helvetica, sans-serif">URL to load if automated updating 
+    is not supported: </font> <font face="Arial, Helvetica, sans-serif">
+    <INPUT NAME="upgradeURL" VALUE="upgradeFlash.html">
+    </font>
+  <P><font face="Arial, Helvetica, sans-serif"><BR>
+    </font>
+  <H3><font face="Arial, Helvetica, sans-serif">3. Macromedia Flash Player is not installed.</font></H3>
+  <P><font face="Arial, Helvetica, sans-serif">The Dispatcher can either:</font> 
+  <UL>
+    <LI><font face="Arial, Helvetica, sans-serif">perform the installation if 
+      automated installation is supported on the user's browser &amp; platform, 
+      or present the user with their options</font>
+    <LI><font face="Arial, Helvetica, sans-serif"> load alternative content that 
+      does not require Macromedia Flash Player</font>
+  </UL>
+  <P><font face="Arial, Helvetica, sans-serif">In the former case, it will load 
+    the content URL if automated installation is supported on the user's browser 
+    &amp; platform; otherwise, it will load the URL of a document that may inform 
+    the user of their options and give installation instructions. In this demo, 
+    the document, <A HREF="installFlash.html"><TT>installFlash.html</TT></A>, 
+    also offers to remember the user's decision not to install and proceed directly 
+    to the alternative content on future visits, in which case, checking the option 
+    to install the player below has no effect.</font> 
+  <P><font face="Arial, Helvetica, sans-serif">When script-based detection of 
+    Macromedia Flash Player is not possible, the Dispatcher attempts to load a 
+    Macromedia Flash movie to carry out the detection. If Macromedia Flash Player 
+    is not installed, there is presently no choice but to let the browser redirect 
+    the user via the</font> <font face="Arial, Helvetica, sans-serif"><TT>PLUGINSPAGE</TT> 
+    attribute of the</font> <font face="Arial, Helvetica, sans-serif"><TT>EMBED</TT> 
+    tag. In this case, the options to install the player or load alternate content 
+    are ignored, but it is possible to set</font> <font face="Arial, Helvetica, sans-serif"><TT>PLUGINSPAGE</TT> 
+    to the developer-supplied URL, overriding its default value (the URL for the 
+    Macromedia Flash download center on the Macromedia Web site). <EM>(If this 
+    option is checked, the URL must be absolute, not relative.)</EM> </font> 
+  <P>&nbsp; 
+  <TABLE>
+    <TR> 
+      <TD width="151"> <font face="Arial, Helvetica, sans-serif"> 
+        <input type=radio CHECKED name="noPlayerAction">
+        Install the player</font> 
+      <TD width="352"><font face="Arial, Helvetica, sans-serif" size="2">URL to 
+        load if automated installation is not supported:</font><font face="Arial, Helvetica, sans-serif"> 
+        </font> <font face="Arial, Helvetica, sans-serif"> 
+        <INPUT TYPE=text NAME="installURL" VALUE="installFlash.html">
+        </font>
+      <TD width="249"> <font face="Arial, Helvetica, sans-serif"> 
+        <INPUT TYPE=checkbox NAME="overridePluginsPage">
+        Set <TT>PLUGINSPAGE</TT> to this URL</font> 
+    <TR> 
+      <TD width="151"> <font face="Arial, Helvetica, sans-serif"> 
+        <INPUT TYPE=radio NAME="noPlayerAction">
+        Load alternate URL:</font> 
+      <TD width="352"> <font face="Arial, Helvetica, sans-serif"> 
+        <INPUT TYPE=text NAME="altContent" VALUE="noflash/">
+        </font>
+      <TD width="249"><font face="Arial, Helvetica, sans-serif"></font> 
+    </TABLE>
+  <font face="Arial, Helvetica, sans-serif">
+  <INPUT TYPE=submit VALUE="Demo">
+  </font>
+</FORM>
+
+ </BODY>
+ 
+</HTML>

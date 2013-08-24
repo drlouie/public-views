@@ -1,0 +1,26 @@
+<images>
+	<image url="images/1.jpg" title="one.jpg" thumbnailUrl="images/thumbs/1.jpg" />
+	<image url="images/2.jpg" title="two.jpg" thumbnailUrl="images/thumbs/2.jpg" />
+	<image url="images/3.jpg" title="three.jpg" thumbnailUrl="images/thumbs/3.jpg" />
+	<image url="images/4.jpg" title="four.jpg" thumbnailUrl="images/thumbs/4.jpg" />
+	<image url="images/5.jpg" title="five.jpg" thumbnailUrl="images/thumbs/5.jpg" />
+	<image url="images/6.jpg" title="six.jpg" thumbnailUrl="images/thumbs/6.jpg" />
+	<image url="images/7.jpg" title="seven.jpg" thumbnailUrl="images/thumbs/7.jpg" />
+	<image url="images/8.jpg" title="eight.jpg" thumbnailUrl="images/thumbs/8.jpg" />
+	<image url="images/9.jpg" title="nine.jpg" thumbnailUrl="images/thumbs/9.jpg" />
+	<image url="images/10.jpg" title="ten.jpg" thumbnailUrl="images/thumbs/10.jpg" />
+	<image url="images/11.jpg" title="eleven.jpg" thumbnailUrl="images/thumbs/11.jpg" />
+	<image url="images/12.jpg" title="twelve.jpg" thumbnailUrl="images/thumbs/12.jpg" />
+	<image url="images/13.jpg" title="thirteen.jpg" thumbnailUrl="images/thumbs/13.jpg" />
+	<image url="images/14.jpg" title="fourteen.jpg" thumbnailUrl="images/thumbs/14.jpg" />
+	<image url="images/15.jpg" title="fifteen.jpg" thumbnailUrl="images/thumbs/15.jpg" />
+	<image url="images/16.jpg" title="sixteen.jpg" thumbnailUrl="images/thumbs/16.jpg" />
+	<image url="images/17.jpg" title="seventeen.jpg" thumbnailUrl="images/thumbs/17.jpg" />
+	<image url="images/18.jpg" title="eighteen.jpg" thumbnailUrl="images/thumbs/18.jpg" />
+	<image url="images/19.jpg" title="nineteen.jpg" thumbnailUrl="images/thumbs/19.jpg" />
+	<image url="images/20.jpg" title="twenty.jpg" thumbnailUrl="images/thumbs/20.jpg" />
+	<image url="images/21.jpg" title="twentyone.jpg" thumbnailUrl="images/thumbs/21.jpg" />
+	<image url="images/22.jpg" title="twentytwo.jpg" thumbnailUrl="images/thumbs/22.jpg" />
+	<image url="images/23.jpg" title="twentythree.jpg" thumbnailUrl="images/thumbs/23.jpg" />
+	<image url="images/24.jpg" title="twentyfour.jpg" thumbnailUrl="images/thumbs/24.jpg" />
+</images>

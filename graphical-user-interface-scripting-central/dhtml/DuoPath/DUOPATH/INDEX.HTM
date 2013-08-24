@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<!--
+DuoPath 1.11
+Copyright 1998 Dan Steinman
+July 23, 1998.
+-->
+<TITLE>The Dynamic Duo - Using DuoPath 1.11</TITLE>
+
+<H3>Using DuoPath 1.11</H3>
+
+<P>DuoPath is a freeware JavaScript application for making DHTML path animation for Netscape 4.0 and Internet Explorer 4.0.  DuoPath is intended to be used along with the technique shown in the <A HREF="../pathanim/pathanim.html">Path Animation</A> lesson - it'll explain the concepts of how DuoPath can be used for your own purposes.
+
+<P>First of all, launch DuoPath and follow this lesson and switch between the windows to understand what I'm talking about.
+<P><A CLASS="launch" HREF="duopath.html" TARGET="_blank">Launch DuoPath 1.1</A>
+<BR>or <A HREF="../download/duopath.zip">download the zipped version</A> (37Kb)
+<BR><B>Warning:</B> DuoPath will take a little while to initialize so don't be alarmed if your browser seems to do nothing for 10 seconds or so - just be patient and it should load up eventually.  Although DuoPath does work in Internet Explorer 4.0, I highly recommend using Netscape 4.0 because it's  much faster.
+
+<H4 CLASS="heading">Overview of New Features</H4>
+
+<P><B>Version 1.11:</B>
+
+<P>Updated the output of DuoPath to coincide with my updated DynLayer and Path Objects.
+
+<P><B>Version 1.1:</B>
+
+<P>DuoPath 1.1 is basically the same as 1.0 but with a few enhacements:
+
+<UL>
+<LI><A HREF="index.html#curve">Curve Mode</A> - A very powerful set of tools to create smooth curved paths.  All you do is set a few control points and DuoPath will draw in a smooth curve based on those points.
+<LI>Full Drag and Drop - The "move" tools are now full drag and drop instead of double-click as in version 1.0
+<LI>Updated Output - When you generate the HTML DuoPath will now use the updated path scripts that are documented in the <A HREF="../pathanim/pathanim.html">Path Animation</A> lesson.
+</UL>
+
+<H4 CLASS="heading">How to Use DuoPath</H4>
+
+<P>I think DuoPath is simple enough to use that you'll understand how to use it almost immediately.  The basic idea is you click around the screen plotting new points for your path.  Once you're done you can generate the HTML to create a simple demo using your path.  I'll do a quick summary of how to use the features in case something seems a little odd.
+
+<P><B>Edit Mode:</B> - controls the points in your path
+<UL>
+<LI><B>New</B> - inserts a new point to the path
+<LI><B>Move</B> - moves a single point to a new location
+<LI><B>Move All</B> - moves all the points to a new location
+<LI><B>Erase</B> - erases a single point anywhere in the path
+<LI><B>Erase Last</B> - erases the last point in the path
+<LI><B>Insert</B> - inserts a single point in the middle of the path
+<LI><B>Line</B> - creates a straight line of points betwen 2 locations
+<LI><B>Circle</B> - creates a circle/oval starting at the last point
+<LI><B>Parabola</B> - crates a parabola starting at the last point
+<LI><B>Curve</B> - goes into <A HREF="index.html#curve">curve mode</A>
+<LI><B>Info</B> - retrieves the number, and x and y location of a point
+</UL>
+
+<P><B>Notes:</B>
+<P>Inserting a point is not the same as making a new point.  A new point is appended to the end of the path.  Inserting a point puts another point between 2 points already in the path.  You first have to click the point that comes <U><B>after</B></U> the point you are inserting.  This will attach a point to the cursor, then you click again to drop that point into the path.
+
+<P>For the line mode, first click where you want the line to begin.  Then click again for where you want the line to end.  A dialog will pop up and ask how many pixels apart the points will be spaced, then it'll insert them for you.
+
+<P>If you're not going to take my advice and use Netscape, then you will have to be aware that in IE when you click on the scrollbars it will insert a point if you are in "New" or "Line" mode.  I guess IE thinks that the scrollbars are part of the document for some reason.  To avoid putting points where you don't want them just go into one of the other modes before scrolling.
+
+<H4><A NAME="curve">Curve Mode:</A></H4>
+
+<P>Curve mode allows you to draw a perfectly smooth curve of points based on just a few control points which you must define.
+
+<P>The curve tools:
+<P><UL>
+<LI><B>new point</B> - new curve point
+<LI><B>move point</B> - move curve point
+<LI><B>erase point</B> - erase curve point
+<LI><B>move curve</B> - move all curve points
+<LI><B>Path Points</B> - sets the number of path points for each curve point (the distribution)
+<LI><B>erase curve</B> - erases the whole curve
+<LI><B>new curve</B> - finalizes the current curve and starts a new one
+</UL>
+
+<P>You work with curve points just as you would the normal path points.  However, once you put down 4 curve points DuoPath will draw in a series of path points based on where your curve points are.  As you continue to add more curve points it will redraw the curve accordingly.  The curve points (in purple) are used to influence how the curve bends.  You can move the curve points and reshape the curve to your liking.
+
+<P>The curve tools should be self-explanitory except for "Path Points" - that's to determine how many actual path points get put into your curve.  A higher number means there will be more points in the curve and therefore the animation will move smoother and slower.
+
+<P>Here's a "before" shot of some points labeled in the order they were clicked:
+
+<P><IMG SRC="curve-demo0.gif" WIDTH=250 HEIGHT=150 BORDER=0>
+
+<P>The first 3 points won't do anything, but once the forth one is down it'll draw the curve for you:
+
+<P><IMG SRC="curve-demo1.gif" WIDTH=250 HEIGHT=150 BORDER=0>
+
+<P>By positioning the curve points closer or farther apart you can create an acceleration effect.  The picture below shows a path that will start off slow and speed up as it swooshes away:
+
+<P><IMG SRC="curve-demo3.gif" WIDTH=302 HEIGHT=113 BORDER=0>
+
+<H4>Special Buttons</H4>
+
+<UL>
+<LI><B>Preview</B> - allows you to preview the animation to make sure if the locations of the points are correct and the speed is suitable
+<LI><B>Generate</B> - generates an HTML page with all the coding already done for you
+<LI><B>Load Source</B> - loads an HTML page into the workspace (Netscape only)
+<LI><B>Load Path</B> - allows you to insert a path that you created in the past
+<LI><B>New Path</B> - erases all the points
+</UL>
+
+<P><B>Inputing Points</B>:
+<P>This is a way to work on a path that you created earlier, and want to edit some more.  2 dialog boxes will appear, the first asking for the x values, and the second for the y values.  You have to manually cut and paste the numbers from your previous path into these dialogs.  To demonstrate this feature just copy the first line of numbers below (including the commas) by putting your cursor in front of the first number.  Then hold shift and press the END key.  Then press Ctrl-V which will copy the numbers to the clipboard.  Then switch to DuoPath and in the Input Points dialog press Ctrl-V which will paste the numbers in.  Then hit "Okay" and do the same for the y values (the second row of numbers).  DuoPath will then draw out all the points and you can continue editing them.
+
+<FORM>
+<INPUT TYPE="TEXT" SIZE=50 VALUE="101,105,113,122,131,140,149,156,157,156,155,157,163,172,181,188,196,203,208,215,221,227,234,243,252,261,270,278,287,296,303,310,315,319,321,322,322,322,322,323,328,335,345,355,368,377,385,390,392,393,394,391,387,381,377,376,376,378,382,386,391,398,406,414,424,434,442,453,461,468,471,474,475,476,476,475,474,473,472,472,476,481,488,498,508,515,523,529,536,539,542,542,541,539,535,529,523,517,514,513,513,520,530,540,552,564,574,579,581,580,576,567,555,540,521,501,479,459,441,422,404,384,366,349,330,310,291,272,254,238,222,206,188,172,157,141,128,113,102,92,82,72,63,55,48,42,36,32,29,27,29,32,39,48,59,67,74,81,87,91,97">
+<BR><INPUT TYPE="TEXT" SIZE=50 VALUE="285,271,255,242,230,225,225,233,242,253,265,275,281,284,280,269,256,239,224,208,194,181,168,154,143,135,129,126,124,125,127,130,135,140,149,161,174,192,208,229,250,269,281,286,284,277,269,259,248,237,222,202,183,164,147,133,120,108,99,92,86,81,78,76,77,82,90,100,116,136,157,177,200,225,249,270,289,306,323,341,354,365,371,376,376,374,368,361,351,340,324,309,295,281,269,257,245,231,218,202,185,170,159,153,148,142,133,120,106,92,80,69,59,50,44,40,37,35,34,34,34,36,37,39,42,46,50,54,60,67,76,84,95,105,116,128,140,153,166,176,187,200,212,224,237,250,264,279,295,310,326,341,351,357,355,350,342,331,320,310,299">
+</FORM>
+
+<P><B>Preview</B>
+<P>The preview mode is pretty cool.  You can instantly see what your animation is going to look like by playing the animation right inside DuoPath.  You can change characteristics of the animation - whether it loops or not, or change the speed of repetition.
+
+<P><B>Generate HTML</B>
+<P>With a simple click and a few options to set you can have all the path animation code generated for you on the fly.  It has options for setting the speed, the name of the object and so on.  The code is basically the same as shown in the <A HREF="../pathanim/pathanim1.html">Path Animation</A> lesson but can also contain links for playing, pausing, and stopping the animation - just as in DuoPath's preview mode.  Remember that by no means you have to use this code, you can still just take the co-ordinates themselves and do whatever else you want with them.
+
+<P><B>Other Tips:</B>
+<P>Don't hesitate to make tons and tons of points.  It makes the animation smoother and DuoPath is designed so that there's no limit to how many points you can have.  Every 100 points you lay down it'll refresh itself to hold more - don't worry, all your points will remain in tact.
+
+<P>Also if DuoPath ever messes up - like a error occurs or something - you can at anytime reload the workarea frame and it should correct the problem.
+
+<P>DuoPath is available online at The Dynamic Duo (<A HREF="http://www.dansteinman.com/dynduo/">http://www.dansteinman.com/dynduo/</A>)
+
+<P><A HREF="http://www.dansteinman.com/dynduo/usage.txt">copyright</A> 1998 Dan Steinman
+
+</BODY>
+</HTML>

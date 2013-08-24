@@ -1,0 +1,552 @@
+<html>
+<head>
+<title>Macromedia Flash Dispatcher Behavior</title>
+<script>
+
+
+
+// ************************** GLOBAL VARS ********************************
+
+// Error Messages -----------
+var MSG_NeedMoreInfoGeneric = "The Macromedia Flash Dispatcher behavior could not execute because:";
+var MSG_FlashContentURLRequired = "A value for the Flash Content URL field is required.";
+var MSG_AlternateURLRequired =
+  "You have chosen to display an alternate URL but not specified a value for the alternate URL field.";
+var MSG_InstallationURLRequired =
+  "You have chosen to display a Flash installation page but not specified a value for the URL For Installation field";
+var MSG_UpdaterURLRequired =
+  "You have chosen to display a Flash updater page but not specified a value for the URL For Update field.";
+var MSG_CompleteInfo        = "Please fill in the missing data and then click OK.";
+var MSG_SaveDocument = "This action requires a saved document. Please save your document now.";
+
+
+
+// Form Widgets -------------
+// Prefixes indicate form widget type
+// form widget vars are defined in initializeUI()
+// (they are not defined here because its not guaranteed they will load in time if
+// defined in the head. instead they are defined in document onload);
+var TF_FlashContentURL;
+var TF_AlternateURL;
+var MENU_FlashVersion;
+var CB_RequireLatest;
+var TF_InstallationURL;
+var TF_UpdaterURL;
+var RAD_InstallChoices;
+var RAD_UpdateChoices;
+
+
+// Other Globals -------------
+
+// File Paths
+// these are the paths where assets are stored - paths should be absolute
+var PATH_JSFile = dw.getConfigurationPath() + "/DispatcherAssets/Dispatcher.js";
+var PATH_FlashMovie = dw.getConfigurationPath() + "/DispatcherAssets/detectFlash.swf";
+var PATH_VBScript = dw.getConfigurationPath() + "/DispatcherAssets/DispatcherVBScript.txt";
+
+
+// File Names
+// if the file names change, update paths above and names below
+var NAME_JSFile = "Dispatcher.js";
+var NAME_FlashMovie = "detectFlash.swf";
+var NAME_VBScript = "DispatcherVBScript.txt";
+
+
+// ************************** API FUNCTIONS *****************************
+
+
+function canApplyBehavior(){
+  return true;
+}
+
+function behaviorFunction(){
+  return "MM_executeFlashDispatcher";
+}
+
+
+
+// return either an error msg, or a function call to be inserted in the chosen event
+// of the selected object
+function applyBehavior(){
+
+
+
+  // check that needed form fields are completed & alert an err msg if they are not
+  var errMsg = createErrMsg();
+  if (errMsg) return errMsg;
+
+  // get URL of current document
+  var docPath = getDocURL();
+
+  // copy js file and Flash movie to reside in same folder as the active document
+  // the original location of the js and flash movie are defined in the global
+  // vars PATH_JSFile and PATH_JSMovie
+
+  if (!docPath) docPath = dw.getDocumentDOM().URL;
+  var jsFileCopyToPath = docPath.substring(0,docPath.lastIndexOf("/")+1) + NAME_JSFile;
+  var flashMovieCopyToPath = docPath.substring(0,docPath.lastIndexOf("/")+1) + NAME_FlashMovie;
+
+
+if ( !DWfile.exists(jsFileCopyToPath) )
+  DWfile.copy(PATH_JSFile,jsFileCopyToPath);
+if ( !DWfile.exists(flashMovieCopyToPath) )
+    DWfile.copy(PATH_FlashMovie,flashMovieCopyToPath);
+
+  // add a script include statement to the document head, if not already there
+  includeFlashDispatcherJSFile();
+
+
+  // add VBScript to document head, if not already there
+  addVBScriptToDocHead();
+	// fix for Dreamweaver bug
+	addScriptTagToAccountForDreamweaverBug();
+
+
+
+
+  // create function call and return it
+  // function call takes the form of:
+  // MM_executeFlashDispatcher(contentURL, contentVersion, requireLatestRevision,
+  // 			 upgradeURL, install, installURL, altURL,overridePluginsPage)
+
+  var contentURL             = quote(escQuotes(TF_FlashContentURL.value),1);
+  var contentVersion         = quote(MENU_FlashVersion.options[MENU_FlashVersion.selectedIndex].text,1);
+  var requireLatestRevision  = CB_RequireLatest.checked == true;
+  var upgradeURL             = (RAD_UpdateChoices[0].checked)?TF_UpdaterURL.value: TF_AlternateURL.value;
+      upgradeURL             = quote(escQuotes(upgradeURL),1);
+  var install                = RAD_InstallChoices[0].checked == true;
+  var installURL             = quote(escQuotes(TF_InstallationURL.value),1);
+  var altURL                 = quote(escQuotes(TF_AlternateURL.value),1);
+  var override               = false; //
+
+
+  return "MM_executeFlashDispatcher(" + contentURL + "," + contentVersion + "," +
+          requireLatestRevision + "," + upgradeURL + "," + install + "," +
+          installURL + "," + altURL + "," + override + ")";
+
+
+
+}
+
+
+function inspectBehavior(fnCall){
+   var args = extractArgs(fnCall).slice(1);
+   var contentURL = args[0];
+   var contentVersion = args[1];
+   var requireLatestRevision = args[2];
+   var upgradeURL = args[3];
+   var install = args[4];
+   var installURL = args[5]
+   var altURL = args[6];
+
+  // populate top section
+  TF_FlashContentURL.value = contentURL;
+  contentVersion = parseInt(contentVersion.charAt(0));
+  MENU_FlashVersion.selectedIndex = (contentVersion - 2);
+  TF_AlternateURL.value = (altURL)?altURL:"";
+  if (requireLatestRevision.toString().toLowerCase() == "true")
+    CB_RequireLatest.checked = true;
+  else
+    CB_RequireLatest.checked = false;
+
+  // populate lower section
+  if (install.toString().toLowerCase() == "true"){
+    RAD_InstallChoices[0].checked = true;
+    TF_InstallationURL.value = (installURL)?installURL:"";
+  } else {
+    RAD_InstallChoices[1].checked = true;
+  }
+
+  if ( upgradeURL == altURL ){
+    RAD_UpdateChoices[1].checked = true;
+  } else {
+    RAD_UpdateChoices[0].checked = true;
+    TF_UpdaterURL.value = (upgradeURL)?upgradeURL:"";
+  }
+}
+
+function deleteBehavior(fnCall){
+  // the function call is deleted automatically
+  // everything else must be deleted by hand
+
+  var dom = dw.getDocumentDOM();
+  var scriptNodes = dom.getElementsByTagName("SCRIPT");
+  var nScriptNodes = scriptNodes.length,i, currNode;
+
+  // delete script src include
+  for (i=0;i<nScriptNodes;i++){
+    currNode = scriptNodes[i];
+    if (currNode.src && currNode.src.indexOf(NAME_JSFile) != -1){
+      currNode.outerHTML = "";
+    }
+  }
+
+  // we lose object references when outerHTML is set, so we have to go get
+  // them again in order to delete the VBScript
+  dom = dw.getDocumentDOM();
+  scriptNodes = dom.getElementsByTagName("SCRIPT");
+  nScriptNodes = scriptNodes.length;
+  var patt = /Check for the Flash ActiveX control/i;
+
+  for (i=0;i< nScriptNodes; i++){
+    currNode = scriptNodes[i];
+    if (currNode.language && currNode.language.toLowerCase() == "vbscript" &&
+      currNode.outerHTML.search(patt) != -1 ){
+      currNode.outerHTML = "";
+
+    }
+  }
+
+}
+
+// ****************************** BEHAVIOR FUNCTIONS ***************************
+
+
+// insert this function into the user's document
+function MM_executeFlashDispatcher(){
+  var args = MM_executeFlashDispatcher.arguments;
+  MM_FlashDispatch(args[0],args[1],args[2],args[3],args[4],args[5],args[6],args[7]);
+
+}
+
+
+// ****************************** LOCAL FUNCTIONS ********************************
+
+// UI Functions --------------
+function initializeUI(){
+  defineGlobalFormWidgetVars();
+
+}
+
+
+
+
+
+function defineGlobalFormWidgetVars(){
+  // the advantage of using the generic findObject function instead of
+  // references like document.form1.element1, is that findObject finds
+  // the object based on the name only.Full references, on the other hand,
+  // refer to parent elements such as forms and layers. Using findObject allows
+  // the behavior developer to tweak the UI by moving elements from form to
+  // form or from layer to layer without worrying about later re-coding object
+  // references.
+
+
+  TF_FlashContentURL     = findObject("FlashContentURL");
+  TF_AlternateURL        = findObject("AlternateURL");
+  MENU_FlashVersion      = findObject("FlashVersion");
+  TF_InstallationURL     = findObject("InstallationURL");
+  TF_UpdaterURL          = findObject("UpdaterURL");
+  RAD_InstallChoices     = findObject("Install");
+  RAD_UpdateChoices      = findObject("Update");
+  CB_RequireLatest       = findObject("RequireLatest");
+}
+
+
+
+function createErrMsg(){
+  var errMsg = "";
+
+  if (!TF_FlashContentURL.value)
+    errMsg += "\n  -" + MSG_FlashContentURLRequired;
+  if ((RAD_InstallChoices[1].checked || RAD_UpdateChoices[1].checked) && !TF_AlternateURL)
+	errMsg += "\n  -" + MSG_AlternateURLRequired;
+  if (RAD_InstallChoices[0].checked  && !TF_InstallationURL.value)
+    errMsg += "\n  -" + MSG_InstallationURLRequired;
+  if (RAD_UpdateChoices[0].checked && !TF_UpdaterURL.value)
+	errMsg += "\n  -" + MSG_UpdaterURLRequired;
+
+  if (errMsg)
+    errMsg = MSG_NeedMoreInfoGeneric + "\n" + errMsg + "\n\n" + MSG_CompleteInfo;
+
+  return errMsg;
+}
+
+
+function includeFlashDispatcherJSFile(){
+
+  var isIncluded = false;
+  var dom = dw.getDocumentDOM();
+  var scriptNodes = dom.getElementsByTagName("SCRIPT");
+  var nScriptNodes = scriptNodes.length, i;
+
+  // search document to see if its there already
+  for (i=0;i<nScriptNodes;i++ ){
+    if (scriptNodes[i].src && scriptNodes[i].src.indexOf(NAME_JSFile) != -1){
+      isIncluded = true;
+      break;
+    }
+  }
+
+  if (!isIncluded){
+    // right now the script is being inserted as the last item in the head. This
+    // can be tweaked
+    var scriptStr = '<script src="' + NAME_JSFile + '"><\/script>';
+    var headNode = dom.getElementsByTagName("HEAD").item(0);
+    //headNode.innerHTML = headNode.innerHTML + scriptStr;
+	headNode.innerHTML = scriptStr + headNode.innerHTML;
+
+  }
+
+}
+
+function addScriptTagToAccountForDreamweaverBug(){
+  var headNode = dw.getDocumentDOM().getElementsByTagName("HEAD").item(0);
+  var scriptNodes = headNode.getElementsByTagName("SCRIPT");
+  var scriptStrToAdd =  '\n<script language="JavaScript">\n<\/script>';
+  var addScriptTag = false;
+  var lastScriptNode;
+
+  if (!scriptNodes.length || scriptNodes.length == 0){
+    addScriptTag = false;
+  } else {
+    lastScriptNode = scriptNodes[scriptNodes.length-1];
+    if (lastScriptNode.language && lastScriptNode.language.toLowerCase() ==
+"vbscript"){
+      addScriptTag = true;
+    }
+  }
+
+  if (addScriptTag) lastScriptNode.outerHTML = lastScriptNode.outerHTML +
+scriptStrToAdd;
+
+}
+
+
+function addVBScriptToDocHead(){
+  var scriptIsPresent = false;
+  var dom = dw.getDocumentDOM();
+  var scriptNodes = dom.getElementsByTagName("SCRIPT");
+  var nScriptNodes = scriptNodes.length, i, currScript;
+  var patt = /Check for the Flash ActiveX control/i;
+
+  // search document to see if its there already
+  for (i=0;i<nScriptNodes;i++){
+    currScript = scriptNodes[i];
+    if (currScript.language && currScript.language.toLowerCase() == "vbscript" &&
+    currScript.innerHTML.search(patt) != -1)
+      scriptIsPresent = true;
+
+  }
+
+  if ( !scriptIsPresent ){
+    var theScriptPath = PATH_VBScript;
+    var theVBScript = DWfile.read(theScriptPath);
+    var headNode = dom.getElementsByTagName("HEAD").item(0);
+    headNode.innerHTML = headNode.innerHTML + theVBScript;
+  }
+
+
+}
+
+
+
+function getDocURL(){
+  var docURL = dw.getDocumentDOM().URL;
+
+  while (!docURL){
+    alert (MSG_SaveDocument)
+    docURL = dw.browseForFileURL("save");
+  }
+
+
+  return docURL;
+}
+
+
+
+// ****************************** GENERIC FUNCTIONS ******************************
+
+// these functions have already been written by Macromedia employees and exist
+// in the Configuration/Shared/MM folder. I would include those files instead of
+// copying the code if it wasn not for the fact that the location and content of
+// shared files changed between dreamweaver 2 and dreamweaver 3.
+
+function findObject(objName,  parentObj) {
+  var i,tempObj="",found=false,curObj = "";
+    parentObj = (parentObj != null)? parentObj.document : document;
+    if (parentObj[objName] != null) curObj = parentObj[objName]; //at top level
+    else { //if in form
+      if (parentObj.forms) for (i=0; i<parentObj.forms.length; i++) {  //search level for form object
+        if (parentObj.forms[i][objName]) {
+          curObj = parentObj.forms[i][objName];
+          found = true; break;
+      } }
+      if (!found && parentObj.layers && parentObj.layers.length > 0) {
+        parentObj = parentObj.layers;
+        for (i=0; i<parentObj.length; i++) { //else search for child layers
+          tempObj = findObject(objName,parentObj[i]); //recurse
+          if (tempObj) { curObj = tempObj; break;} //if found, done
+  } } }
+  return curObj;
+}
+
+
+
+function browseFile(fieldToStoreURL){
+  var fileName = "";
+  fileName = browseForFileURL();  //returns a local filename
+  if (fileName) fieldToStoreURL.value = fileName;
+}
+
+
+function extractArgs(behFnCallStr){
+  var i, theStr, lastPos, argArray;
+  argArray = getTokens(behFnCallStr,"(),");
+  for (i=0; i<argArray.length; i++) {
+    theStr = stripSpaces(unescQuotes(argArray[i]));
+    lastPos = theStr.length-1;
+    if (theStr.charAt(0) == "'" && lastPos > 0 && theStr.charAt(lastPos) == "'")
+      argArray[i] = theStr.substring(1,lastPos);
+  }
+  return argArray
+}
+
+function stripSpaces(theStr) {
+  if (!theStr) theStr = "";  //ensure its not null
+  theStr = theStr.replace(/^\s*/,""); //strip leading
+  theStr = theStr.replace(/\s*$/,""); //strip trailing
+  return theStr;
+}
+
+
+//Passed a string, finds special chars '"\ and escapes them with \
+
+function escQuotes(theStr){
+  var i, theChar, escStr = "";
+  for(var i=0; i<theStr.length; i++) {
+    theChar = theStr.charAt(i);
+    escStr += (theChar=='"' || theChar=="'" || theChar=="\\")?("\\"+theChar):theChar;
+  }
+  return escStr;
+}
+
+
+//Passed a string, finds any escape chars \ and removes them
+
+function unescQuotes(theStr){
+  var strLen, i, theChar, unescStr = "";
+  strLen = theStr.length;
+  for(i=0; i<strLen; i++) {
+    theChar = theStr.charAt(i);
+    if (theChar == "\\" && i < strLen - 1) //if escape char and not end
+      theChar = theStr.charAt(++i); //append next char and skip over
+    unescStr += theChar;
+  }
+  return unescStr;
+}
+
+
+function quote(textStr,quoteType){
+   var quote = (quoteType == 1)?"'":'"';
+   return quote + textStr + quote;
+}
+
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body onload="initializeUI()">
+<form name="form1" method="post" action="">
+  <table border="0" width="469" cellpadding="3" cellspacing="3" height="382">
+    <tr>
+      <td valign="baseline" align="right" width="161" height="21">Macromedia Flash 
+        Content URL:</td>
+      <td valign="baseline" nowrap colspan="2" height="21"> 
+        <input type="text" name="FlashContentURL" style="width:220">
+        <input type="button" name="Button" value="Browse..." onclick="browseFile(TF_FlashContentURL)">
+      </td>
+    </tr>
+    <tr>
+      <td valign="baseline" align="right" nowrap width="161" height="17">Alternate 
+        URL :</td>
+      <td valign="baseline" nowrap colspan="2" height="17"> 
+        <input type="text" name="AlternateURL" style="width:220">
+        <input type="button" name="Button4" value="Browse..." onClick="browseFile(TF_AlternateURL)">
+      </td>
+    </tr>
+    <tr>
+      <td height=2 nowrap width="161"></td>
+    </tr>
+    <tr>
+      <td valign="baseline" align="right" width="161" height="21">Macromedia Flash 
+        Version:</td>
+      <td valign="baseline" nowrap colspan="2" height="21"> 
+        <select name="FlashVersion" style="width:80">
+          <option value="2">2.0</option>
+          <option value="3">3.0</option>
+          <option value="4" selected>4.0</option>
+          <option value="5">5.0</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td valign="baseline" align="right" width="161" height="2">Require Latest 
+        Plug-in</td>
+      <td valign="baseline" nowrap colspan="2" height="2"> 
+        <input type="checkbox" name="RequireLatest" value="checkbox">
+      </td>
+    </tr>
+    <tr>
+      <td valign="baseline" align="right" colspan="3" height="6"> 
+        <hr>
+      </td>
+    </tr>
+    <tr>
+      <td valign="baseline" colspan="3" height="2">&nbsp;If the Macromedia Flash 
+        Player is not installed and auto-installation is not possible, then:</td>
+    </tr>
+    <tr>
+      <td valign="baseline" width="161" align="right" height="9"> 
+        <div align="right">&nbsp; 
+          <input type="radio" name="Install" value="install" checked>
+          Install Macromedia Flash Player</div>
+      </td>
+      <td valign="baseline" nowrap align="right" width="105" height="9">Installation 
+        URL: </td>
+      <td valign="baseline" nowrap width="247" height="9"> 
+        <input type="text" name="InstallationURL" style="width:160" value="http://www.macromedia.com/shockwave/download/?P1_Prod_Version=ShockwaveFlash">
+        <input type="button" name="Button2" value="Browse..." onClick="browseFile(TF_InstallationURL)">
+      </td>
+    </tr>
+    <tr>
+      <td valign="baseline" nowrap width="161" align="right" height="2"> &nbsp; 
+        <input type="radio" name="Install" value="load">
+        Load Alternate URL </td>
+      <td valign="baseline" nowrap width="105" height="2">&nbsp;</td>
+      <td valign="baseline" nowrap width="247" height="2">&nbsp; </td>
+    </tr>
+    <tr>
+      <td valign="baseline" align="right" width="161" height="9">&nbsp;</td>
+      <td valign="baseline" nowrap width="105" height="9">&nbsp;</td>
+      <td valign="baseline" nowrap width="247" height="9">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="baseline" colspan="3" height="9">&nbsp;If the Macromedia Flash 
+        Player version is unacceptable and auto-update is not possible, then:</td>
+    </tr>
+    <tr>
+      <td valign="baseline" align="right" width="161" height="15"> 
+        <div align="right">&nbsp; 
+          <input type="radio" name="Update" value="update" checked>
+          Update Macromedia Flash Player</div>
+      </td>
+      <td valign="baseline" nowrap align="right" width="105" height="15">Updater 
+        URL: </td>
+      <td valign="baseline" nowrap width="247" height="15"> 
+        <input type="text" name="UpdaterURL" style="width:160" value="http://www.macromedia.com/shockwave/download/?P1_Prod_Version=ShockwaveFlash">
+        <input type="button" name="Button22" value="Browse..." onClick="browseFile(TF_InstallationURL)">
+      </td>
+    </tr>
+    <tr>
+      <td valign="baseline" align="right" width="161" height="2"> &nbsp; 
+        <input type="radio" name="Update" value="load">
+        Load Alternate URL</td>
+      <td valign="baseline" nowrap width="105" height="2">&nbsp;</td>
+      <td valign="baseline" nowrap width="247" height="2">&nbsp;</td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

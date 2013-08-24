@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>DHTML Samples - Moving External File Linkable Menu</title>
+<script language="JavaScript" src="js/radiobar.js"></SCRIPT>
+
+<STYLE TEXT="text/css">
+<!--
+a{color:#000000;font-weight:bold;font-family:verdana,arial,helvetica}
+a:hover{color:#004080;font-weight:bold;font-family:verdana,arial,helvetica}
+bufferOne{ position:absolute;top:-200; left:-500}
+-->
+</style>
+</head>
+
+<body bgcolor="#000000" onLoad="runit()">
+
+<!-- must have bufferFrame in the body somewhere -->
+<IFRAME STYLE="display:none" name="bufferFrame" ID="bufferOne"></IFRAME>
+
+<DIV ID="blockDiv" STYLE="position:absolute; left:-230px; top:100px; width:250px; height:100px; clip:rect(0px 250px 100px 0px)">
+<table width="250" cellpadding=0 cellspacing=0 align="right" border=0 valign=top>
+<tr>
+<td align="left" width="230" bgcolor="#808080" valign=top>
+
+<table align="center" border=0 cellpadding=3 cellspacing=0>
+<tr>
+<td colspan=2 width="100%" valign=top>
+<font face="verdana,arial,helvetica" size="2" color="#ffffff"><b>
+Please choose your Music</b></font>
+</td>
+</tr>
+<td width="110" valign=top>
+<font size=1>
+<a href="javascript:loadSource('blockDiv',null,'electronic.html')">Electronica</a><br>
+<a href="javascript:loadSource('blockDiv',null,'alternative.html')">Alternative</a><br>
+<a href="javascript:loadSource('blockDiv',null,'rap.html')">Rap/Hip-Hop</a><br>
+<a href="javascript:loadSource('blockDiv',null,'rock.html')">Rock</a><br>
+<a href="javascript:loadSource('blockDiv',null,'newage.html')">New Age</a><br>
+</font>
+</td>
+<td width="110" valign=top>
+<font size=1>
+<a href="javascript:loadSource('blockDiv',null,'classical.html')">Classical</a><br>
+<a href="javascript:loadSource('blockDiv',null,'jazz.html')">Jazz</a><br>
+<a href="javascript:loadSource('blockDiv',null,'mainstream.html')">Pop/Mainstream</a><br>
+<a href="javascript:loadSource('blockDiv',null,'blues.html')">Blues</a><br>
+<a href="javascript:loadSource('blockDiv',null,'randb.html')">R & B</a><br>
+</font>
+</td>
+</tr></table>
+
+</td>
+<td align="right" width="20">
+<a href="#" OnMouseOver="javascript:checkPos()"><img src="show_radio.gif" name="radiobar"  border=0 width=20 height=100></a>
+</td>
+</tr>
+</table>
+</DIV>
+</body>
+</html>

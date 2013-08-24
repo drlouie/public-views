@@ -1,0 +1,107 @@
+<HTML><HEAD><TITLE></TITLE>
+<LINK href="hier_files/column21.css" rel=STYLESHEET 
+type=text/css>
+<SCRIPT language=JavaScript>
+<!--
+     NS4 = (document.layers);
+     IE4 = (document.all);
+    ver4 = (NS4 || IE4);   
+   isMac = (navigator.appVersion.indexOf("Mac") != -1);
+  isMenu = (NS4 || (IE4 && !isMac));
+function popUp(){return};
+function popDown(){return};
+function startIt(){return}
+if (!ver4) event=null;
+if (document.images) {
+arImLoad = new Array (
+"../art/b_left_over",
+"../art/b_left_down",
+"../art/b_right_over",
+"../art/b_right_down",
+"tri","triL");
+arImList = new Array ();
+for (counter in arImLoad) {
+arImList[counter] = new Image();
+arImList[counter].src = arImLoad[counter] + ".gif";
+}}
+function navOver(imName,dir,over) {
+if (!document.images) {return};
+whichIm = document.images[imName];
+if (over) {whichIm.src = "../art/b_" + dir + "_over.gif"}
+else {whichIm.src = "../art/b_" + dir + ".gif"}
+}
+function navPress(imName,dir,press) {
+whichIm = document.images[imName];
+if (press) {whichIm.src = "../art/b_" + dir + "_down.gif"}
+else {whichIm.src = "../art/b_" + dir + ".gif"}
+}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2>
+<!--
+if (isMenu) {
+
+menuVersion = 3;
+
+menuWidth = 120;
+childOverlap = 50;
+childOffset = 5;
+perCentOver = null;
+secondsVisible = .5;
+
+fntCol = "blue";
+fntSiz = "10";
+fntBold = false;
+fntItal = false;
+fntFam = "sans-serif";
+
+backCol = "#993366";
+overCol = "#993366";
+overFnt = "993366";
+
+borWid = 2;
+borCol = "993366";
+borSty = "solid";
+itemPad = 3;
+
+imgSrc = "tri.gif";
+imgSiz = 10;
+
+separator = 1;
+separatorCol = "red";
+
+isFrames = false;
+navFrLoc = "left";
+mainFrName = "main";
+
+keepHilite = true; 
+NSfontOver = true;
+clickStart = true;
+clickKill = true;
+
+showVisited = "green";
+
+}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2>
+<!--
+if (isMenu) {
+document.write("<SCRIPT LANGUAGE='JavaScript1.2' SRC='hierArraysVoid.js'><\/SCRIPT>");
+document.write("<SCRIPT LANGUAGE='JavaScript1.2' SRC='hierMenus.js'><\/SCRIPT>");
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY aLink=#993366 bgColor=#000000 link=#993366 text=#993366 vLink=#993366>
+      <A class=leftMenuMore href="http://www.webreference.com/" 
+      onmouseout="popDown('elMenu1')" 
+      onmouseover="popUp('elMenu1',event)">WebReference<IMG alt="" border=0 
+      height=10 src="hier_files/tri.gif" width=10></A><BR><BR><A 
+      class=leftMenuMore href="http://www.webreference.com/new/" 
+      onmouseout="popDown('elMenu2')" 
+      onmouseover="popUp('elMenu2',event)">New<IMG alt="" border=0 height=10 
+      src="hier_files/tri.gif" width=10></A>
+      </BODY></HTML>

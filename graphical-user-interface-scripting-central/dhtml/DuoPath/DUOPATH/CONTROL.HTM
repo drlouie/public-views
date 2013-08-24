@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<!--
+DuoPath 1.11
+Copyright 1998 Dan Steinman
+July 23, 1998.
+-->
+<TITLE>DuoPath - Control Window</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+loaded = 0
+maxpoints = 200
+maxspline = 30
+setcount = -1
+mode = "new"
+sourcepage = "source.html"
+splinecount = -1
+
+begincount = 0
+function begin() {
+	begincount++
+	if (begincount>=3) {
+		parent.workspace.init()
+	}
+}
+//-->
+</SCRIPT>
+<STYLE TYPE="text/css">
+<!--
+EM {font-family:"Arial"; font-size: 9pt; text-decoration:none; font-style:normal;}
+-->
+</STYLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" onLoad="begin()">
+
+<FORM NAME="coordsform">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR VALIGN=TOP>
+<TD><EM><TEXTAREA NAME="coordsfield" COLS=40 ROWS=2>Loading, please wait....</TEXTAREA></EM></TD>
+<TD><EM>Points
+<BR><INPUT TYPE="TEXT" NAME="pointsfield" VALUE="0" SIZE="2"></EM>
+</TD>
+</TR>
+
+</TABLE>
+
+</FORM>
+</BODY>
+</HTML>

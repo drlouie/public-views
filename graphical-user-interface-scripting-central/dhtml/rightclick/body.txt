@@ -1,0 +1,16 @@
+<!--[if IE]>
+<div id="ie5menu" onMouseover="highlightie5()" onMouseout="lowlightie5()" onClick="jumptoie5()">
+<div class="menuitems" url="http://dynamicdrive.com">Dynamicdrive.com</div>
+<div class="menuitems" url="http://dynamicdrive.com/new.htm">What's New?</div>
+<div class="menuitems" url="http://wsabstract.com/cgi-bin/Ultimate.cgi">Message Forum</div>
+<div class="menuitems" url="http://dynamicdrive.com/faqs.htm">FAQs</div>
+<div class="menuitems" url="http://dynamicdrive.com/submitscript.htm">Submit</div>
+<hr>
+<div class="menuitems" url="mailto:dynamicdrive@yahoo.com">Email Us</div>
+</div>
+<![endif]-->
+<script language="JavaScript1.2">
+document.oncontextmenu=showmenuie5
+if (document.all&&window.print)
+document.body.onclick=hidemenuie5
+</script>

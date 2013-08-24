@@ -1,0 +1,51 @@
+<script language="JavaScript1.2">
+
+/*
+Flying Message Script- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+var temp, mywidth
+function regenerate(){
+window.location.reload()
+}
+function regenerate2(){
+setTimeout("window.onresize=regenerate",400)
+}
+
+if (document.layers){
+window.onload=regenerate2
+}
+</script>
+<layer id="master" src="message.htm" style="position:absolute;left:-400;top:80;width:20;" 
+onMouseover="go(0)" onMouseout="go(1)">
+</layer>
+
+<script language="JavaScript1.2">
+if (document.layers){
+temp=document.master
+mywidth=window.innerWidth*2
+}
+function gostop(){
+if (parseInt(temp.left)>mywidth){
+temp.left=-600
+clearInterval(timer)
+}
+else
+temp.left=parseInt(temp.left)+5
+}
+
+
+function go(y){
+if (y==0){
+clearInterval(timer)
+return
+}
+timer=setInterval("gostop()",100)
+}
+if (document.layers)
+go(1)
+</script>

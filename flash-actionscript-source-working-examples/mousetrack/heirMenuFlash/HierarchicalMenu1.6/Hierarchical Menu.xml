@@ -1,0 +1,102 @@
+<customactions>
+	<actionspanel>
+		<folder name="Hierarchical Menu Component" id="Hierarchical Menu Component" index="true" tiptext="Hierarchical Menu Component" version="6">
+			<folder name="HFHierMenuClass" id="HFHierMenuClass" index="true" tiptext="Hierarchical Menu Class" version="6">
+				<folder name="Methods" id="Methods" tiptext="HFHierMenuClass Methods" version="6">
+					<string name="addItem" tiptext="Appends a new item at the end of the menu." text=".addItem(% dpChain, itemInfoObj %)" object="HFHierMenuClass" version="6"/>
+					<string name="addItemAt" tiptext="Adds a new item at a specific position in the menu." text=".addItemAt(% dpChain, itemID, itemInfoObj %)" object="HFHierMenuClass" version="6"/>
+					<string name="changeMenu" tiptext="Changes the menu." text=".changeMenu(% type, newXML %)" object="HFHierMenuClass" version="6"/>
+					<string name="collapseAll" tiptext="Collapses the menu." text=".collapseAll()" object="HFHierMenuClass" version="6"/>
+					<string name="editItemAt" tiptext="Edits the info for a specific item" text=".editItemAt(% dpChain, itemID, newItemInfoObj %)" object="HFHierMenuClass" version="6"/>
+					<string name="getCheckBoxState" tiptext="Gets the current state of an item checkbox" text=".getCheckboxState(% dpChain, itemID %)" object="HFHierMenuClass" version="6"/>
+					<string name="getEnabled" tiptext="Method; returns a boolean; specifying whether the item specified in the parameters is enabled or disabled." text=".getEnabled(% dpChain, itemID %)" object="HFHierMenuClass" version="6"/>
+					<string name="getParentPressedLabel" tiptext="Method; returns the text label of the parent item of the last pressed item." text=".getParentPressedLabel()" object="HFHierMenuClass" version="6"/>
+					<string name="getPressedIdx" tiptext="Method; returns the index of the last pressed item." text=".getPressedIdx()" object="HFHierMenuClass" version="6"/>
+					<string name="getPressedLabel" tiptext="Method; returns the text label of the last pressed item." text=".getPressedLabel()" object="HFHierMenuClass" version="6"/>
+					<string name="getRadioActiveItemIndex" tiptext="Method; returns the index number of the selected item in the radiogroup radioGroupName." text=".getRadioActiveItemIndex(% radioGroupName %)" object="HFHierMenuClass" version="6"/>
+					<string name="getRadioActiveItemData" tiptext="Method; returns the 'data' object of the selected item in the radiogroup 'radioGroupName'." text=".getRadioActiveItemData(% radioGroupName %)" object="HFHierMenuClass" version="6"/>
+					<string name="getParentItem" tiptext="Method; returns the 'data' object of the parent item of the item specified in the parameters." text=".getParentItem(% dpChain, itemID %)" object="HFHierMenuClass" version="6"/>
+					<string name="getChildItems" tiptext="Method; returns an array with all the 'data' objects of child items of the item specified in the parameters." text=".getChildItems(% dpChain, itemID %)" object="HFHierMenuClass" version="6"/>
+					<string name="refresh" tiptext="Rebuilds the menu." text=".refresh()" object="HFHierMenuClass" version="6"/>
+					<string name="removeItemAt" tiptext="Method; removes an item." text=".removeItemAt(% dpChain, itemID %)" object="HFHierMenuClass" version="6"/>
+					<string name="setCheckBoxState" tiptext="Method; sets the state of a checkbox menu item." text=".setCheckBoxState(% dpChain, itemID, bool %)" object="HFHierMenuClass" version="6"/>
+					<string name="setEnabled" tiptext="Method; enables and disables menu items" text=".setEnabled(% dpChain, itemID, bool %)" object="HFHierMenuClass" version="6"/>
+					<string name="setRadioActiveItem" tiptext="Method; sets the selected item in the radiogroup specified by radioGroupName." text=".setRadioActiveItem(% radioGroupName, itemID %)" object="HFHierMenuClass" version="6"/>
+				</folder>
+				<folder name="Events" id="Events" tiptext="HFHierMenuClass Events" version="6">              
+					<string name="onBeginLoad" tiptext="Callback invoked just before the menu is created." text=".onBeginLoad = function() {\n\t\n}" version="6"/>
+					<string name="onFinishLoad" tiptext="Callback invoked just after the menu is created." text=".onFinishLoad = function() {\n\t\n}" version="6"/>
+					<string name="onPressItem" tiptext="Callback invoked when an menu item is pressed." text=".onPressItem = function(item_mc) {\n\t\n}" version="6"/>
+					<string name="onReleaseItem" tiptext="Callback invoked when an menu item is released." text=".onReleaseItem = function(item_mc) {\n\t\n}" version="6"/>
+					<string name="onRollOutItem" tiptext="Callback invoked when an menu item is rolled out by the mouse." text=".onRollOutItem = function(item_mc) {\n\t\n}" version="6"/>
+					<string name="onRollOverItem" tiptext="Callback invoked when an menu item is rolled over by the mouse." text=".onRollOverItem = function(item_mc) {\n\t\n}" version="6"/>
+            	</folder>
+			</folder>
+		</folder>
+	</actionspanel>
+	
+	<colorsyntax>
+		<identifier text="HFHierMenuClass"/>
+		<identifier text=".addItem"/>
+		<identifier text=".addItemAt"/>
+		<identifier text=".changeMenu"/>
+		<identifier text=".collapseAll"/>
+		<identifier text=".editItemAt"/>
+		<identifier text=".getCheckboxState"/>
+		<identifier text=".getEnabled"/>
+		<identifier text=".getParentPressedLabel"/>
+		<identifier text=".getPressedIdx"/>
+		<identifier text=".getPressedLabel"/>
+		<identifier text=".getRadioActiveItemIndex"/>
+		<identifier text=".getRadioActiveItemData"/>
+		<identifier text=".refresh"/>
+		<identifier text=".removeItemAt"/>
+		<identifier text=".setCheckBoxState"/>
+		<identifier text=".setEnabled"/>
+		<identifier text=".setRadioActiveItem"/>
+		<identifier text=".onBeginLoad"/>
+		<identifier text=".onFinishLoad"/>
+		<identifier text=".onPressItem"/>
+		<identifier text=".onReleaseItem"/>
+		<identifier text=".onRollOutItem"/>
+		<identifier text=".onRollOverItem"/>
+	</colorsyntax>
+	
+	<codehints>
+		<typeinfo pattern="*_hm" object="HFHierMenuClass"/>
+	</codehints>
+
+<reference path="Hierarchical Menu Component/HFHierMenuClass">
+<P class="titleStyle">HFHierMenuClass</P>
+<p class="subTitle">About</P>
+<p class="sectionContent">This component "Hierarchical Menu" creates OS-like menus that are XML-driven.</P>
+<p class="subTitle">Credits</P>
+<p class="sectionContent">This component has been developed by Hamza Fawzi. http://www22.brinkster.com/hamzaf.<br><br>
+Thanks to:<br>
+<ul>
+<li>Paddy (; over at Web Archipelago (<a href="http://www.wai.co.uk">http://www.wai.co.uk</a>), for helping me in the development of all the addItemAt, addItem, etc.. methods, and for letting me know about some bugs.</li>
+<li>Eero Koplimets (<a href="http://www.pimpelsang.ee">http://www.pimpelsang.ee</a>) ; for giving me suggestions for the the component, and for creating the makeMenu function, that could be found here: http://www22.brinkster.com/hamzaf/data/HM_DOC/makeMenu.html</li>
+<li>Adi; for giving me suggestions for the component</li>
+<li>All other people that helped me during the development of this component.</li>
+</ul>
+</P>
+<p class="subTitle">Copyright</P>
+<p class="sectionContent">This component is Copyright (C) 2003 by Hamza Fawzi.
+<p class="subTitle">NOTICE - (regarding itemID, and dpChain)</P>
+You'll notice that a lot of the methods in this component use two parameters: dpChain, and itemID. Basically, these two parameters serve to point to a menu item. If you didn't understood these two parameters very well, you may have to look at the posInfo object in the items movie clips.<br>
+In each menu item, there is an object called posInfo, that holds two properties: dpChain, and itemID.<br>
+So, if you want to know each dpChain, and itemID for a menu item, you simply write (Assuming that you have an instance of the Hierarchical Menu component on stage called "my_hm"):<br>
+<p class="codeStyle"><br>
+my_hm.onPressItem = function(item) {<br>
+    trace("item : " + item.data.name);<br>
+    for(var posProp in item.posInfo) {<br>
+        trace(posProp + " = " + item.posInfo[posProp]);<br>
+    }<br>
+    trace("-------------");<br>
+}<br>
+</P>
+then, choose Control > Test Movie, and when you press with the mouse a menu item, you"ll notice a message in the Output Window, that shows both the dpChain, and the itemID for the item you pressed on.
+</reference>
+
+</customactions>
+

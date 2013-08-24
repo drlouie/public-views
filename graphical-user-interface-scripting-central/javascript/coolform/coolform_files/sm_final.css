@@ -1,0 +1,96 @@
+BODY {
+	COLOR: #000000; FONT-FAMILY: arial, helvetica, sans serif; FONT-SIZE: 10pt
+}
+TD {
+	COLOR: #000000; FONT-FAMILY: arial, helvetica, sans serif; FONT-SIZE: 10pt
+}
+.hotspot {
+	CURSOR: hand
+}
+.reg {
+	COLOR: #000000; FONT-FAMILY: arial, helvetica, sans serif; FONT-SIZE: 10pt
+}
+.mhed {
+	COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica, sans serif; FONT-SIZE: 7pt; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.mhed2 {
+	COLOR: #ffffff; FONT-FAMILY: verdana, arial, helvetica, sans serif; FONT-SIZE: 7pt; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.lnlink {
+	COLOR: #333333; LEFT: 8px; POSITION: relative
+}
+.lnlink1 {
+	COLOR: #333333
+}
+.lnlink:hover {
+	COLOR: #cc0000; FONT-SIZE: 10pt
+}
+.lnlink1:hover {
+	COLOR: #cc0000; FONT-SIZE: 10pt
+}
+.rnlink {
+	COLOR: #cccccc
+}
+.rnlink:hover {
+	COLOR: #ffffff
+}
+.roll {
+	COLOR: #000000
+}
+.roll:hover {
+	COLOR: #cc0000
+}
+.ad {
+	COLOR: #999999; FONT-SIZE: 8pt; TEXT-DECORATION: none
+}
+.small {
+	COLOR: #333333; FONT-SIZE: 8pt
+}
+.small:hover {
+	COLOR: #cc0000
+}
+.tax {
+	COLOR: #3366cc; FONT-SIZE: 8pt
+}
+.arti {
+	COLOR: #333333; FONT-SIZE: 18pt; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.hoti {
+	COLOR: #333333; FONT-SIZE: 16pt; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.insethed {
+	COLOR: #333333; FONT-WEIGHT: bold
+}
+.insetl {
+	COLOR: #cc0000; MARGIN-LEFT: 8px; TEXT-INDENT: -8px
+}
+.blt {
+	COLOR: #000000; MARGIN-LEFT: 8px; TEXT-INDENT: -8px
+}
+.pftit {
+	COLOR: #3366cc; FONT-SIZE: 20pt; FONT-WEIGHT: bold
+}
+.pfhed {
+	COLOR: #ffffff; FONT-WEIGHT: bold
+}
+.anchor {
+	FONT-SIZE: 8pt
+}
+.sto-hed {
+	COLOR: #333333; FONT-SIZE: 12pt; FONT-WEIGHT: bold
+}
+.tbl-txt {
+	COLOR: #333333
+}
+.green {
+	COLOR: #006600; FONT-SIZE: 8pt
+}
+.red {
+	COLOR: #cc0000; FONT-SIZE: 8pt
+}
+.ietable {
+	LEFT: 19px; POSITION: relative
+}
+.blue10 {
+	COLOR: #3366cc
+}

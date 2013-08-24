@@ -1,0 +1,29 @@
+<macromedia-extension
+	name="Hierarchical Menu"
+	version="1.6"
+	type="Flash Component">
+	<products>
+		<product name="Flash" version="6" primary="true" /> 
+	</products> 
+	<author name="Hamza Fawzi" />
+	<description>
+		<![CDATA[
+			Hierarchical Menu Component<br>This component creates OS-Like XML-driven Menus.<br><br>
+			The documentation page can be found at http://www22.brinkster.com/hamzaf/HierMenu_Doc/docpage.html
+			There, you can find various examples, and frequently asked questions regarding this component.
+		]]>
+	</description>
+	<ui-access>
+		<![CDATA[
+			This component will be installed into the Flash MX > Components folder.
+			You can access this component through the Components Panel. Choose Window > Components to open it.
+			http://www22.brinkster.com/hamzaf
+		]]>
+	</ui-access>
+
+	<files>
+		<file name="Hierarchical Menu.fla" destination="$flash/Components" system="true"/>
+		<file name="HierMenuData.xml" destination="$flash/Components" system="true"/>
+		<file name="Hierarchical Menu.xml" destination="$flash/ActionsPanel/CustomActions" />
+	</files>
+</macromedia-extension>

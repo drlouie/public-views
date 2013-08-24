@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>Enhanced MTV-Effect</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<h1>&quot;Enhanced&quot; MTV-like-effect</h1>
+by Korneel Ketelslegers<br>
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="center"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" WIDTH=171 HEIGHT=308>
+         <PARAM NAME=movie VALUE="enhancedMTV.swf"> <PARAM NAME=loop VALUE=false> <PARAM NAME=menu VALUE=false> <PARAM NAME=quality VALUE=medium> <PARAM NAME=bgcolor VALUE=#1CC4EA> <EMBED src="enhancedMTV.swf" loop=false menu=false quality=medium bgcolor=#1CC4EA  WIDTH=171 HEIGHT=308 TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>
+        </OBJECT></td>
+  </tr>
+</table>
+<br>
+<p><b>1. INTRODUCTION.</b><br>
+  <br>
+  I saw the MTV-effect posted on this site and immediately liked it. I set about 
+  to implementing it in a site of my own and then stumbled on the simple yet rather 
+  ingenious &quot;heart&quot; of the effect. It involved placing multiple buttons 
+  and movie clips on top of eachother (take a look at the original source). A 
+  LOT of work in my case, so I wrote this tiny insignifficant script to do part 
+  of this for me.<br>
+  <br>
+  <b>2. WHAT DOES IT DO?</b><br>
+  <br>
+  This script will take a movieclip instance (with a unique instance name ofcourse) 
+  present on the timeline and duplicate it as many times as you tell it to.<br>
+  Lets just get to it right away (YOU MUST HAVE TAKEN A LOOK AT THE mtv-effect 
+  FIRST BEFORE CONTINUING!!!)...<br>
+  <br>
+  <b>3. THE SCRIPT ITSELF.</b><br>
+  <br>
+</p>
+<font face="Courier New, Courier, mono" size="2"> 
+<PRE>
+ <font color="#FF33FF">// **user definable parameters** //</font>
+ copies = "54";
+ instance = "reg1";
+ dupename = "reg";
+ hamount = "5";
+ <font color="FF33FF">// **initial copying setup** //</font>
+ xpos = <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_x</font>);
+ ypos = <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_y</font>);
+ instpos = xpos;
+ instw = <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_Width</font>);
+ insth = <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_Height</font>);
+ <font color="#FF33FF">// **copying loop starts here** //</font>
+ <font color="#0000FF">for</font> (j=2; j &lt; copies+2; j++) {
+         xpos = xpos + instw;
+         <font color="#0000FF">if</font> (xpos &gt; instpos + hamount * instw) {
+                 xpos = instpos;
+                 ypos = ypos + insth;
+         }
+         <font color="#0000FF">duplicateMovieClip</font>(instance,dupename add j,j);
+         <font color="#0000FF">setProperty</font>(dupename add j,<font color="#00CC00">_x</font>,xpos);
+         <font color="#0000FF">setProperty</font>(dupename add j,<font color="#00CC00">_y</font>,ypos);
+ }
+</PRE></font>
+<p><br>
+  Now, what the HELL does this all mean... Okay...<br>
+  The script makes a number of copies (<b>copies</b> variable) of the instance 
+  which name resides in the <b>insance</b> variable. You should give the instance 
+  a name ending with &quot;1&quot; (not really necessary though). The copied instances 
+  will be named <b>dupename</b> + a number starting from &quot;2&quot;. In the 
+  case of the script the first duplicate of <i>reg1</i> will be named <i>reg2</i>.<br>
+  The <b>hamount</b> variable stores how many copies you wish to be placed on 
+  one line. When this line is full, it will advance to the next one.<br>
+  The next bit of the script retrieves some information from the original movieclip. 
+  This is used lateron for the placement of the copies. I think this is pretty 
+  self explanatory, except maybe for the <b>instpos</b> variable. This one just 
+  keeps the original x position of the original movieclip, since we're gonna mess 
+  around with the <b>xpos</b> variable lateron. This implies that YOU HAVE TO 
+  place the original movieclip on the canvas where you want the copying to &quot;start&quot;. 
+  The script will start adding the copies horizontally behind the first movieclip.</p>
+<PRE>
+       <b>PAY ATTENTION</b>:
+       getProperty() retrieves information from the FIRST
+       frame in the movieclip. If this frame is empty, the
+       script will NOT work as it's supposed to. You can
+       solve this by putting an object (e.g. a square)
+       that represents the size (width & height) of the
+       movieclip in the first frame (POSITION IT CORRECTLY).
+       To make it invisible, just give it an alpha value
+       of 0%.
+       You can also remove the getProperty() call and
+       enter the width (<b>instw</b>) and height (<b>insth</b>) manually
+       Be sure it's correct though!!!!.
+</PRE>
+<p> Now we're getting to the acual duplication of the movieclip. I'm using a <i>for</i> 
+  loop here which (according to the documentation) is Flash 5 ONLY!!!! (Flash 
+  4 seems to have been released with severe limitations. Not even a for loop, 
+  or a loop at all for that matter 8)))) Anyway, we start by giving <b>j</b> (dunno 
+  why I took <b>j</b>, normally you would take &quot;i&quot;) a value of &quot;2&quot; 
+  (our original instance name ended with a &quot;1&quot; and we don't want to 
+  overwrite it, hence we start with &quot;2&quot;). <b>J</b> will be the counter 
+  inside the <i>for</i> loop. The loop will stop as soon as <b>j</b> exceeds our 
+  total number of copies. (+2 since we sarted counting there. If you want 54 copies 
+  and you start counting from 2, then you'll have 54 copies when you reach 56. 
+  So you'll have to stop when <b>j</b> &gt; 56). <b>j</b>++ simply increments 
+  <b>j</b> by one (C-like stuff, you know), this is done AFTER every execution 
+  of the statements within the loop.<br>
+  <br>
+  Inside the loop:<br>
+  We first advance one horizontal position. Then we check if we have exceeded 
+  our horizontal bounds. If so, we reset our horizontal position and then we advance 
+  one vertical line.<br>
+  Now we know our position is right and we duplicate the movieclip adding our 
+  counter <b>j</b> to its name to make sure we still have a unique instance name. 
+  We then set its properties to the correct values (duplicateMovieClip() retains 
+  the old information from the original movieclip) and we have one copy.<br>
+  Re-read the text <b>copies</b> times and you know what the flash player will 
+  go through when presented with this script 8))).<br>
+  <br>
+  <br>
+  If you find the init in the previous script too bulky, then you can always do 
+  it like this:<br>
+  <br></p>
+<font face="Courier New, Courier, mono" size="2"> 
+<PRE>
+ <font color="#FF33FF">// **user definable parameters** //</font>
+ copies = "54";
+ instance = "reg1";
+ dupename = "reg";
+ hamount = "5";
+ <font color="#FF33FF">// **initial copying setup** //</font>
+ movx = <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_x</font>);
+ movy = <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_y</font>);
+ <font color="#FF33FF">// **copying loop starts here** //</font>
+ <font color="#0000FF">for</font> (j=2; j>copies+2; j++) {
+         movx = movx + <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_Width</font>);
+         <font color="#0000FF">if</font> (movx > <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_x</font>) + hamount * <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_Width</font>)) {
+                 movx = <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_x</font>);
+                 movy = movy + <font color="#0000FF">getProperty</font>(instance,<font color="#00CC00">_Height</font>); 
+         }
+         <font color="#0000FF">duplicateMovieClip</font>(instance,dupename <font color="#0000FF">add</font> j,j);
+         <font color="#0000FF">setProperty</font>(dupename <font color="#0000FF">add</font> j,<font color="#00CC00">_x</font>,movx);
+         <font color="#0000FF">setProperty</font>(dupename <font color="#0000FF">add</font> j,<font color="#00CC00">_y</font>,movy);
+ }
+</PRE>
+</font> 
+<p><br>
+  But this way of doing things is not the way you should learn to code! It's simply 
+  not very clever to keep calling getProperty() over and over every time you need 
+  it. It's better to keep it in a variable like the previous version of the script.<br>
+  Why? Well, for example, if you like to change the width or height of you movie 
+  clip manually, then you just have to adjust some variables in the first script, 
+  while in the second script you'll have to go over it COMPLETELY by hand. It's 
+  just how fast you want to work. If you had to go over a 100 line script MANUALLY 
+  to apply those changes, well then... I'd wish you good luck 8).<br>
+  <br>
+</p>
+<p><b>IMPLEMENTATION.</b><br>
+  <br>
+  Okay, that was the script... How to implement it then...? You should place this 
+  script on the same frame as your original movieclip that you want to copy. It's 
+  not necessary, but it's beter to keep things together that belong together, 
+  or am I making a wrong assumption here? You could also place it on a separate 
+  layer in THE SAME timeline as the one where the movieclip that will be copied 
+  resides.<br>
+  You can't use it with the original MTV-Effect on this site because the movieclips 
+  in this effect are ALL different. I have included an example to show you what 
+  I used the MTV-effect for. Have a look at it and it'll become clear.<br>
+  <br>
+  I said in the beginning of this tutorial that it takes care of part of all the 
+  work you have to do manually. You still need an equal amount of buttons to controll 
+  the movieclips. I've been searching for a way to duplicate them too (you'd have 
+  to put the button inside a movieclip to duplicate it, ofcourse). The problem 
+  is that you'd have to be able to change the actions of a copied button, wich 
+  is impossible as far as I know.<br>
+  I've tried to make the button figure out the insance name of the movieclip it's 
+  in. If one could do that, the problem would be solved: you can give the buttons 
+  a number when you duplicate them and then you can addres the corresponding movieclip 
+  as follows: &quot;&lt;clipname&gt;&quot; add &quot;&lt;buttonclipnumber&gt;&quot;. 
+  For example :<br>
+</p>
+<PRE>
+     on (rollOut) {
+      tellTarget ("reg" add butname){
+       gotoAndPlay ("go"); 
+      }
+     }
+</PRE>
+<p>This ofcourse after you've figured out the button's instance name and put it 
+  in the <b>butname</b> variable (yes BUTname, haha).<br>
+  <br>
+  Just have a look at the example. I hope I haven't been going too fast. But then 
+  again, you CAN read the text ALL over again 8).</p>
+</body>
+</html>

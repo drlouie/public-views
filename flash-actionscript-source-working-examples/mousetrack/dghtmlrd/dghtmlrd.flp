@@ -1,0 +1,6 @@
+﻿<flash_project name="dghtmlrd" version="1">
+    <project_file path="./amazon.css" filetype="css" />
+    <project_file path="./AmazonApplication.as" filetype="as" />
+    <project_file path="./dghtmlrd.fla" filetype="fla" profile="" def_file="true" />
+    <project_file path="./HtmlCellRenderer.as" filetype="as" />
+</flash_project>

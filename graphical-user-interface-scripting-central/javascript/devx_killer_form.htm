@@ -1,0 +1,1039 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0042)http://www.devx.com/free/search/search.asp -->
+<HTML><HEAD><TITLE>DevX Advanced Search</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<SCRIPT language=JavaScript>
+		ie4 = (document.all)? true : false
+		ns4 = (document.layers)? true : false
+		var sQ = "'";
+
+		var imgPlus = new Image();
+		var imgMinus = new Image();
+		
+		imgPlus.src = "plus.gif";
+		imgMinus.src = "minus.gif";
+
+		function doTable(sName)
+		{
+			if (ie4) {
+				document.write('<td></td>');
+				document.write('<td>');
+				document.write('<table id="' + sName + '" cellpadding=0 cellspacing=0 style="display: none" width="100%">')
+			}
+			else {
+				document.write('<td>');
+				document.write('<table id="' + sName + '" cellpadding=0 cellspacing=0 width="100%">')
+			}
+		}
+
+		function iChk(eElem)
+		{
+			var sElemName = eElem.name;
+
+			if (eElem.checked) {
+				if (ie4) {
+					var oElement = document.all[sElemName.substr(0, 4)];
+				}
+				else {
+					var oForm = eElem.form;
+					var oElement = oForm.elements[sElemName.substr(0, 4)];
+				}
+			oElement.checked = true;
+			}
+		}
+
+		function selectSubjectItems(eElem)
+		{
+			var sElemName = eElem.name;
+			var bChecked = eElem.checked ? true : false;
+			var i;
+
+			if (ie4) {
+				var oContext = document.all;
+			}
+			else {
+				var oForm = eElem.form;
+				var oContext = oForm.elements;
+			}
+
+			if ( sElemName == "chkSubjC" ) 
+			{
+				oContext["chkA_1"].checked = bChecked;
+				oContext["chkA_5"].checked = bChecked;
+				oContext["chkD_0"].checked = bChecked;
+				for (i = 0; i <= 3; i++) {
+					oContext["chkO_" + i].checked = bChecked;
+				}
+				if (bChecked) {
+					oContext["chkA"].checked = true;
+					oContext["chkD"].checked = true;
+					oContext["chkO"].checked = true;
+				}
+			}
+			else if ( sElemName == "chkSubjEnt" ) 
+			{
+				oContext["chkA_2"].checked = bChecked;
+				oContext["chkA_4"].checked = bChecked;
+				oContext["chkA_8"].checked = bChecked;
+				oContext["chkD_2"].checked = bChecked;
+				oContext["chkD_5"].checked = bChecked;
+				for (i = 4; i <= 9; i++) {
+					oContext["chkO_" + i].checked = bChecked;
+				}
+				if (bChecked) {
+					oContext["chkA"].checked = true;
+					oContext["chkD"].checked = true;
+					oContext["chkO"].checked = true;
+				}
+			}
+			else if ( sElemName == "chkSubjJava" ) 
+			{
+				oContext["chkA_2"].checked = bChecked;
+				oContext["chkA_8"].checked = bChecked;
+				oContext["chkD_6"].checked = bChecked;
+				for (i = 10; i <= 17; i++) {
+					oContext["chkO_" + i].checked = bChecked;
+				}
+				if (bChecked) {
+					oContext["chkA"].checked = true;
+					oContext["chkD"].checked = true;
+					oContext["chkO"].checked = true;
+				}
+			}
+			else if ( sElemName == "chkSubjLinux" ) 
+			{
+				oContext["chkA_2"].checked = bChecked;
+				oContext["chkD_8"].checked = bChecked;
+				for (i = 18; i <= 25; i++) {
+					oContext["chkO_" + i].checked = bChecked;
+				}
+				if (bChecked) {
+					oContext["chkA"].checked = true;
+					oContext["chkD"].checked = true;
+					oContext["chkO"].checked = true;
+				}
+			}
+			else if ( sElemName == "chkSubjVB" ) 
+			{
+				oContext["chkA_3"].checked = bChecked;
+				oContext["chkA_6"].checked = bChecked;
+				oContext["chkD_3"].checked = bChecked;
+				for (i = 26; i <= 37; i++) {
+					oContext["chkO_" + i].checked = bChecked;
+				}
+				if (bChecked) {
+					oContext["chkA"].checked = true;
+					oContext["chkD"].checked = true;
+					oContext["chkO"].checked = true;
+				}
+			}
+			else if ( sElemName == "chkSubjWeb" ) 
+			{
+				oContext["chkA_7"].checked = bChecked;
+				oContext["chkA_9"].checked = bChecked;
+				oContext["chkD_4"].checked = bChecked;
+				for (i = 38; i <= 48; i++) {
+					oContext["chkO_" + i].checked = bChecked;
+				}
+				if (bChecked) {
+					oContext["chkA"].checked = true;
+					oContext["chkD"].checked = true;
+					oContext["chkO"].checked = true;
+				}
+			}
+			else if ( sElemName == "chkSubjOther" ) 
+			{
+				oContext["chkA_0"].checked = bChecked;
+				oContext["chkD_1"].checked = bChecked;
+				oContext["chkD_7"].checked = bChecked;
+				oContext["chkD_9"].checked = bChecked;
+				if (bChecked) {
+					oContext["chkA"].checked = true;
+					oContext["chkD"].checked = true;
+				}
+			}
+		}
+
+		function toggleScopeCat(sScope)
+		{
+			var oTable = document.getElementById("tbl" + sScope);
+			var oImg = document.getElementById("img" + sScope);
+			if (oTable && oTable.style.display == "block")
+			{	
+				oImg.src = imgPlus.src;
+				oTable.style.display = "none";
+			}
+			else
+			{
+				oImg.src = imgMinus.src;
+				oTable.style.display = "block";
+			}
+		}
+
+		function toggleSelected(eElem)
+		{
+			var sElemName = eElem.name;
+			var bChecked = eElem.checked ? true : false;
+			var i, iMax;
+
+			if ( sElemName == "chkA" ) { iMax = 9; }
+			else if ( sElemName == "chkD" ) { iMax = 9; }
+			else if ( sElemName == "chkP" ) { iMax = 3; }
+			else if ( sElemName == "chkR" ) { iMax = 1; }
+			else if ( sElemName == "chkO" ) { iMax = 48; }
+			else { iMax = 0; }
+
+			for (i = 0; i <= iMax; i++) {
+				if (ie4) {
+					document.all[sElemName + "_" + i].checked = bChecked;
+				}
+				else {
+					var oForm = eElem.form;
+					oForm.elements[sElemName + "_" + i].checked = bChecked;
+				}
+			}
+		}
+	</SCRIPT>
+
+<STYLE>.search {
+	FONT-SIZE: 8pt; font-face: Verdana, Arial, Helvetica, Sans-Serif
+}
+</STYLE>
+
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 link=#320096 topMargin=0 marginwidth="0" 
+marginheight="0"><!-- Start the page layout -->
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#666699 colSpan=2 height=20 vAlign=top><LINK 
+      href="devx_killer_form_files/devxstyles.css" rel=STYLESHEET type=text/css>
+      <TABLE bgColor=#666699 border=0 cellPadding=0 cellSpacing=0 width=800>
+        <TBODY>
+        <TR>
+          <TD align=middle height=20 width=143>&nbsp;</TD>
+          <TD height=20><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+            size=2><B><A class=menu 
+            href="https://www.devx.com/free/reg/premier.asp" 
+            style="COLOR: #cccc99; TEXT-DECORATION: none" 
+            target=_top>Join</A>&nbsp;&nbsp;&nbsp; <A class=menu 
+            href="http://www.devx.com/premier/premierclub/premierclub.asp" 
+            style="COLOR: #cccc99; TEXT-DECORATION: none" target=_top>Premier 
+            Club</A>&nbsp;&nbsp;&nbsp; <A class=menu 
+            href="http://www.devx.com/free/search/search.asp" 
+            style="COLOR: #cccc99; TEXT-DECORATION: none" 
+            target=_top>Search</A>&nbsp;&nbsp;&nbsp; <A class=menu 
+            href="http://www.devx.com/free/codelib/" 
+            style="COLOR: #cccc99; TEXT-DECORATION: none" target=_top>Code 
+            Library</A>&nbsp;&nbsp;&nbsp; <A class=menu 
+            href="http://www.devx.com/free/help/help.asp" 
+            style="COLOR: #cccc99; TEXT-DECORATION: none" 
+            target=_top>Help</A>&nbsp;&nbsp;&nbsp; <A class=menu 
+            href="http://www.devx.com/free/locatorplus/search.asp" 
+            style="COLOR: #cccc99; TEXT-DECORATION: none" 
+            target=_top>Locator+</A>&nbsp;&nbsp;&nbsp; <A class=menu 
+            href="http://marketplace.devx.com/" 
+            style="COLOR: #cccc99; TEXT-DECORATION: none" target=_top>Shop 
+            DevX</A> </B></FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE bgColor=#ffffff cellPadding=0 cellSpacing=0 width=657>
+  <TBODY>
+  <TR>
+    <TD align=right rowSpan=2 vAlign=bottom width=153><IMG border=0 height=53 
+      src="devx_killer_form_files/devx3.gif" width=157> </TD>
+    <TD align=middle>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD height=60>
+            <CENTER>
+            <TABLE border=0 height=60>
+              <TBODY>
+              <TR>
+                <TD height=60 vAlign=top><!-- AdSpace adsize=468 site=devx homepage=false 				
+			--><A 
+                  href="http://www.devx.com/event.ng/Type=click&amp;ProfileID=132&amp;RunID=1218&amp;AdID=1172&amp;TagValues=194.196.674&amp;FamilyID=488&amp;GroupID=8&amp;Redirect=http://objy.unetix.com/index.html" 
+                  target=_top><IMG alt="Click Here!" border=0 height=60 
+                  src="devx_killer_form_files/Objectivity_10.13.00.gif" 
+                  width=468></A> 
+          <!-- /AdSpace --></TD></TR></TBODY></TABLE></CENTER></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD align=left colSpan=2 width=504><IMG border=0 height=2 
+      src="devx_killer_form_files/toprule.gif" width=504> </TD></TR></TBODY></TABLE>
+<TABLE border=0 cellPadding=0 cellSpacing=0 height="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#666699 rowSpan=2 vAlign=top width=143>
+      <TABLE border=0 cellPadding=2 cellSpacing=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <STYLE>A {
+	TEXT-DECORATION: none
+}
+BODY {
+	BACKGROUND-COLOR: white
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+</STYLE>
+
+            <TABLE border=0 cellPadding=2 cellSpacing=0>
+              <TBODY>
+              <TR>
+                <TD align=middle><A href="http://www.devx.com/" 
+                  target=_top><IMG border=0 height=49 
+                  src="devx_killer_form_files/tagline.gif" width=143></A> </TD></TR>
+              <TR>
+                <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" size=2>
+                  <H5 class=menuhead>&nbsp;&nbsp;<FONT 
+                  color=#cccc99>Zones</FONT><BR>
+                  <TABLE cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=10>&nbsp;</TD>
+                      <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+                        size=2><A class=menuitem 
+                        href="http://www.appserver-zone.com/" 
+                        style="COLOR: #ffffff">Application Server</A><BR><A 
+                        class=menuitem href="http://www.asp-zone.com/" 
+                        style="COLOR: #ffffff">ASP</A><BR><A class=menuitem 
+                        href="http://www.cplus-zone.com/" 
+                        style="COLOR: #ffffff">C++</A><BR><A class=menuitem 
+                        href="http://careerlink.devx.com/" 
+                        style="COLOR: #ffffff">CareerLink</A><BR><A 
+                        class=menuitem href="http://www.dhtml-zone.com/" 
+                        style="COLOR: #ffffff">DHTML</A><BR><A class=menuitem 
+                        href="http://www.enterprise-zone.com/" 
+                        style="COLOR: #ffffff">Enterprise</A><BR><A 
+                        class=menuitem href="http://www.java-zone.com/" 
+                        style="COLOR: #ffffff">Java</A><BR><A class=menuitem 
+                        href="http://www.javabeans-zone.com/" 
+                        style="COLOR: #ffffff">JavaBeans</A><BR><A 
+                        class=menuitem href="http://linux.devx.com/" 
+                        style="COLOR: #ffffff">Linux</A><BR><A class=menuitem 
+                        href="http://www.netmeeting-zone.com/" 
+                        style="COLOR: #ffffff">NetMeeting</A><BR><A 
+                        class=menuitem href="http://security.devx.com/" 
+                        style="COLOR: #ffffff">Security</A><BR><A class=menuitem 
+                        href="http://www.sql-zone.com/" 
+                        style="COLOR: #ffffff">SQL</A><BR><A class=menuitem 
+                        href="http://www.uml-zone.com/" 
+                        style="COLOR: #ffffff">UML</A><BR><A class=menuitem 
+                        href="http://www.vb-zone.com/" 
+                        style="COLOR: #ffffff">Visual Basic</A><BR><A 
+                        class=menuitem href="http://www.xml-zone.com/" 
+                        style="COLOR: #ffffff">XML</A> 
+                  </FONT></TD></TR></TBODY></TABLE><BR>&nbsp;&nbsp;<FONT 
+                  color=#cccc99>Magazines</FONT><BR>
+                  <TABLE cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=10>&nbsp;</TD>
+                      <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+                        size=2><A class=menuitem 
+                        href="http://exchange.devx.com/" 
+                        style="COLOR: #ffffff">Exchange &amp; Outlook</A><BR><A 
+                        class=menuitem href="http://www.fawcette.com/future/" 
+                        style="COLOR: #ffffff">Future of Software</A><BR><A 
+                        class=menuitem href="http://gettingstarted.vbpj.com/" 
+                        style="COLOR: #ffffff">Getting Started</A><BR><A 
+                        class=menuitem href="http://www.java-pro.com/" 
+                        style="COLOR: #ffffff">Java Pro</A><BR><A class=menuitem 
+                        href="http://www.vbpj.com/" 
+                        style="COLOR: #ffffff">VBPJ</A><BR><A class=menuitem 
+                        href="http://www.vcdj.com/" 
+                        style="COLOR: #ffffff">VCDJ</A><BR><A class=menuitem 
+                        href="http://www.webbuildermag.com/" 
+                        style="COLOR: #ffffff">Web Builder</A><BR><A 
+                        class=menuitem href="http://www.xmlmag.com/" 
+                        style="COLOR: #ffffff">XML</A> 
+                  </FONT></TD></TR></TBODY></TABLE><BR>&nbsp;&nbsp;<A 
+                  href="http://marketplace.devx.com/"><FONT 
+                  color=#cccc99>MarketPlace</FONT></A><BR>
+                  <TABLE cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=10>&nbsp;</TD>
+                      <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+                        size=2><A class=menuitem 
+                        href="http://marketplace.devx.com/books.asp" 
+                        style="COLOR: #ffffff">Bookstore</A><BR><A 
+                        class=menuitem 
+                        href="http://marketplace.devx.com/software.asp" 
+                        style="COLOR: #ffffff">Software</A><BR><A class=menuitem 
+                        href="http://marketplace.devx.com/mags.asp" 
+                        style="COLOR: #ffffff">Subscriptions</A><BR><A 
+                        class=menuitem 
+                        href="https://www.devx.com/free/reg/premier.asp" 
+                        style="COLOR: #ffffff">Premier Club</A> 
+                    </FONT></TD></TR></TBODY></TABLE><BR>&nbsp;&nbsp;<A 
+                  href="http://conferences.devx.com/"><FONT 
+                  color=#cccc99>Conferences</FONT></A><BR>
+                  <TABLE cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=10>&nbsp;</TD>
+                      <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+                        size=2><A class=menuitem 
+                        href="http://builderlive.devx.com/" 
+                        style="COLOR: #ffffff">Builder.com Live!</A><BR><A 
+                        class=menuitem href="http://www.edevcon.com/" 
+                        style="COLOR: #ffffff">EDevCon</A><BR><A class=menuitem 
+                        href="http://www.sql2themax.com/" 
+                        style="COLOR: #ffffff">SQL2TheMax</A><BR><A 
+                        class=menuitem href="http://www.vbits.net/" 
+                        style="COLOR: #ffffff">VBITS</A><BR><A class=menuitem 
+                        href="http://www.vbits.net/com2000/" 
+                        style="COLOR: #ffffff">COM+</A><BR><A class=menuitem 
+                        href="http://www.vcdc.com/" style="COLOR: #ffffff">VC++ 
+                        Dev Con</A><BR><A class=menuitem 
+                        href="http://www.vslive.com/" 
+                        style="COLOR: #ffffff">VSLive!</A> 
+                  </FONT></TD></TR></TBODY></TABLE><BR>&nbsp;&nbsp;<A 
+                  href="http://www.projectcool.com/"><FONT color=#cccc99>Project 
+                  Cool</FONT></A><BR>
+                  <TABLE cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=10>&nbsp;</TD>
+                      <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+                        size=2><A class=menuitem 
+                        href="http://www.devsearch.com/" 
+                        style="COLOR: #ffffff">DevSearch</A><BR><A 
+                        class=menuitem 
+                        href="http://www.projectcool.com/developer/" 
+                        style="COLOR: #ffffff">Developer Zone</A><BR><A 
+                        class=menuitem 
+                        href="http://www.projectcool.com/sightings/" 
+                        style="COLOR: #ffffff">Sightings</A><BR><A 
+                        class=menuitem href="http://www.gettingstarted.net/" 
+                        style="COLOR: #ffffff">Gettingstarted.net</A> 
+                    </FONT></TD></TR></TBODY></TABLE><BR>&nbsp;&nbsp;<FONT 
+                  color=#cccc99>Ask the Pros</FONT><BR>&nbsp;&nbsp;(on <A 
+                  class=menuitem href="http://www.inquiry.com/" 
+                  style="COLOR: #ffffff">inquiry.com</A>)<BR>
+                  <TABLE cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=10>&nbsp;</TD>
+                      <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+                        size=2><A class=menuitem 
+                        href="http://www.inquiry.com/techtips/asp_pro/" 
+                        style="COLOR: #ffffff">ASP</A><BR><A class=menuitem 
+                        href="http://www.inquiry.com/techtips/cpp_pro/" 
+                        style="COLOR: #ffffff">C++</A><BR><A class=menuitem 
+                        href="http://www.inquiry.com/techtips/delphi_pro/" 
+                        style="COLOR: #ffffff">Delphi</A><BR><A class=menuitem 
+                        href="http://www.inquiry.com/techtips/dhtml_pro/" 
+                        style="COLOR: #ffffff">DHTML</A><BR><A class=menuitem 
+                        href="http://www.inquiry.com/techtips/exo_pro/" 
+                        style="COLOR: #ffffff">Exchange</A><BR><A class=menuitem 
+                        href="http://www.inquiry.com/techtips/info_pro/" 
+                        style="COLOR: #ffffff">Informix</A><BR><A class=menuitem 
+                        href="http://www.inquiry.com/techtips/java_pro/" 
+                        style="COLOR: #ffffff">Java</A><BR><A class=menuitem 
+                        href="http://www.inquiry.com/techtips/js_pro/" 
+                        style="COLOR: #ffffff">JavaScript</A><BR><A 
+                        class=menuitem 
+                        href="http://www.inquiry.com/techtips/mfc_pro/" 
+                        style="COLOR: #ffffff">MFC</A><BR><A class=menuitem 
+                        href="http://www.inquiry.com/techtips/pb_pro/" 
+                        style="COLOR: #ffffff">PowerBuilder</A><BR><A 
+                        class=menuitem 
+                        href="http://www.inquiry.com/techtips/thesqlpro/" 
+                        style="COLOR: #ffffff">SQL Server</A><BR><A 
+                        class=menuitem 
+                        href="http://www.inquiry.com/techtips/thevbpro/" 
+                        style="COLOR: #ffffff">Visual Basic</A><BR><A 
+                        class=menuitem 
+                        href="http://www.inquiry.com/techtips/vfox_pro/" 
+                        style="COLOR: #ffffff">Visual FoxPro</A><BR><A 
+                        class=menuitem 
+                        href="http://www.inquiry.com/techtips/web_pro/" 
+                        style="COLOR: #ffffff">Web</A><BR><A class=menuitem 
+                        href="http://www.inquiry.com/techtips/wince_pro/" 
+                        style="COLOR: #ffffff">Windows CE</A><BR><A 
+                        class=menuitem 
+                        href="http://www.inquiry.com/techtips/nt_pro/" 
+                        style="COLOR: #ffffff">Windows NT/2000</A><BR><A 
+                        class=menuitem 
+                        href="http://www.inquiry.com/techtips/wireless_pro/" 
+                        style="COLOR: #ffffff">Wireless Dev</A><BR><A 
+                        class=menuitem 
+                        href="http://www.inquiry.com/techtips/xml_pro/" 
+                        style="COLOR: #ffffff">XML</A><BR></FONT></TD></TR></TBODY></TABLE><BR>&nbsp;&nbsp;<FONT 
+                  color=#cccc99>References</FONT><BR>
+                  <TABLE cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=10>&nbsp;</TD>
+                      <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+                        size=2><A class=menuitem 
+                        href="http://www.devx.com/free/products/default.asp" 
+                        style="COLOR: #ffffff">Product Guide</A><BR><A 
+                        class=menuitem href="http://www.vb2themax.com/" 
+                        style="COLOR: #ffffff">VB2TheMax</A><BR><A 
+                        class=menuitem href="http://www.vbhow.to/" 
+                        style="COLOR: #ffffff">VB How To</A><BR><A 
+                        class=menuitem href="http://www.javahow.to/" 
+                        style="COLOR: #ffffff">Java How To</A><BR><A 
+                        class=menuitem 
+                        href="http://www.devx.com/free/books/booksearch.asp" 
+                        style="COLOR: #ffffff">Book Guide</A><BR><A 
+                        class=menuitem href="http://objects.devx.com/" 
+                        style="COLOR: #ffffff">VBA Objects</A><BR><A 
+                        class=menuitem 
+                        href="http://events.devx.com/eventcenter-bin/msclient.dll" 
+                        style="COLOR: #ffffff">Event Center</A> 
+                    </FONT></TD></TR></TBODY></TABLE><BR>&nbsp;&nbsp;<FONT 
+                  color=#cccc99>Resources</FONT><BR>
+                  <TABLE cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=10>&nbsp;</TD>
+                      <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+                        size=2><A class=menuitem 
+                        href="http://www.devx.com/free/codelib/" 
+                        style="COLOR: #ffffff">Code Library</A><BR><A 
+                        class=menuitem 
+                        href="http://www.devx.com/free/products/default.asp?Type=Download" 
+                        style="COLOR: #ffffff">Download Library</A><BR><A 
+                        class=menuitem 
+                        href="http://www.devx.com/free/tips/tipsearch.asp" 
+                        style="COLOR: #ffffff">Tech Tips</A><BR><A 
+                        class=menuitem 
+                        href="http://www.devx.com/free/links/sitesearch.asp" 
+                        style="COLOR: #ffffff">Web Guide</A><BR><A 
+                        class=menuitem 
+                        href="http://www.devx.com/free/products/default.asp?Type=Review" 
+                        style="COLOR: #ffffff">Product Reviews</A><BR><A 
+                        class=menuitem 
+                        href="http://www.devx.com/whitepapers/default.asp" 
+                        style="COLOR: #ffffff">White Papers</A><BR><A 
+                        class=menuitem href="http://www.devx.com/free/inter.asp" 
+                        style="COLOR: #ffffff">International</A> 
+                    </FONT></TD></TR></TBODY></TABLE><BR>&nbsp;&nbsp;<FONT 
+                  color=#cccc99>Community<BR>
+                  <TABLE cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=10>&nbsp;</TD>
+                      <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+                        size=2><A class=menuitem 
+                        href="http://www.devx.com/free/user.asp" 
+                        style="COLOR: #ffffff">User Groups</A><BR><A 
+                        class=menuitem href="http://news.devx.com/" 
+                        style="COLOR: #ffffff">Discussions</A> 
+                    </FONT></TD></TR></TBODY></TABLE><BR>&nbsp;&nbsp;<A 
+                  href="http://www.devx.net/"><FONT color=#cccc99>About 
+                  DevX</FONT></A><BR>
+                  <TABLE cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=10>&nbsp;</TD>
+                      <TD><FONT face="Verdana, Helvetica, Arial, sans-serif" 
+                        size=2><A class=menuitem 
+                        href="http://www.devx.net/advertiser/default.asp" 
+                        style="COLOR: #ffffff">Advertising Info</A><BR><A 
+                        class=menuitem 
+                        href="http://www.devx.com/free/help/devx_staff.asp" 
+                        style="COLOR: #ffffff">DevX Staff</A><BR><A 
+                        class=menuitem 
+                        href="http://www.devx.net/jobs/default.asp" 
+                        style="COLOR: #ffffff">Careers</A><BR><A class=menuitem 
+                        href="http://www.devx.net/company_contact.asp" 
+                        style="COLOR: #ffffff">Contact us</A><BR><A 
+                        class=menuitem 
+                        href="http://www.devx.com/free/help/help.asp" 
+                        style="COLOR: #ffffff">Help</A> 
+                  </FONT></TD></TR></TBODY></TABLE><BR>
+                  <FORM 
+                  action=http://www.devx.com/free/locatorplus/locateplus.asp 
+                  method=post>&nbsp;&nbsp;<FONT 
+                  color=#cccc99><B>Locator+</B></FONT><BR>&nbsp;<INPUT 
+                  name=Locator_code size=10> <INPUT align=middle border=0 
+                  name="Enter Code" src="devx_killer_form_files/find.gif" 
+                  type=image></FORM></H5></FONT></FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><BR></TD>
+    <TD vAlign=top>
+      <TABLE width=600>
+        <TBODY>
+        <TR>
+          <TD vAlign=top><!--BEGIN MAIN COLUMN-->
+            <FORM action=results.asp id=frmSearch method=post>
+            <TABLE cellSpacing=5 width="100%">
+              <TBODY>
+              <TR vAlign=top>
+                <TD colSpan=2><FONT color=#ff0000 
+                  face="Verdana, Arial, Helvetica, Sans-Serif" 
+                  size=3><B>Advanced Search</B></FONT> <IMG alt=DevX border=0 
+                  height=8 src="devx_killer_form_files/devxrule.gif" width=229> 
+                </TD></TR>
+              <TR>
+                <TD colSpan=2><FONT color=#000000 
+                  face="Verdana, Arial, Helvetica, Sans-Serif" size=1><B>Search 
+                  for:</B></FONT><BR><INPUT name=find size=25> &nbsp;<INPUT 
+                  border=0 name=search src="devx_killer_form_files/searchb.gif" 
+                  type=image> <FONT 
+                  face="Verdana, Arial, Helvetica, Sans-Serif">&nbsp;<A 
+                  class=search 
+                  href="http://www.devx.com/free/search/searchtips.asp">Search 
+                  tips</A> </FONT></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellPadding=5 cellSpacing=0 width="100%">
+                    <TBODY>
+                    <TR bgColor=#666699 height=20 vAlign=top>
+                      <TD><FONT color=white size=2><B>Subjects</B> 
+                    </FONT></TD></TR>
+                    <TR bgColor=#ffffcc>
+                      <TD>
+                        <TABLE cellPadding=0 cellSpacing=0 width="100%">
+                          <TBODY>
+                          <TR>
+                            <TD class=search width="35%"><INPUT CHECKED 
+                              name=chkSubjC onclick=selectSubjectItems(this); 
+                              type=checkbox> &nbsp;C++</INPUT> </TD>
+                            <TD class=search width=*><INPUT CHECKED 
+                              name=chkSubjVB onclick=selectSubjectItems(this); 
+                              type=checkbox> &nbsp;Visual Basic</INPUT> </TD></TR>
+                          <TR>
+                            <TD class=search><INPUT CHECKED name=chkSubjEnt 
+                              onclick=selectSubjectItems(this); type=checkbox> 
+                              &nbsp;Enterprise/ERP/DBMS</INPUT> </TD>
+                            <TD class=search><INPUT CHECKED name=chkSubjWeb 
+                              onclick=selectSubjectItems(this); type=checkbox> 
+                              &nbsp;Web Development</INPUT> </TD></TR>
+                          <TR>
+                            <TD class=search><INPUT CHECKED name=chkSubjJava 
+                              onclick=selectSubjectItems(this); type=checkbox> 
+                              &nbsp;Java</INPUT> </TD>
+                            <TD class=search><INPUT CHECKED name=chkSubjOther 
+                              onclick=selectSubjectItems(this); type=checkbox> 
+                              &nbsp;Other</INPUT> </TD></TR>
+                          <TR>
+                            <TD class=search colSpan=2><INPUT CHECKED 
+                              name=chkSubjLinux 
+                              onclick=selectSubjectItems(this); type=checkbox> 
+                              &nbsp;Linux/Open Source</INPUT> </TD></TR>
+                          <TR style="HEIGHT: 4pt"></TR></TBODY></TABLE></TD></TR>
+                    <TR bgColor=#666699 height=20 vAlign=top>
+                      <TD><FONT color=white size=2><B>Libraries</B> 
+                    </FONT></TD></TR></TBODY></TABLE>
+                  <TABLE cellPadding=0 cellSpacing=0 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellPadding=3 cellSpacing=0 width="100%">
+                          <SCRIPT language=JavaScript>
+									<!-- 
+									if (ie4) {
+										document.write('<colgroup><col style="width: 0.20in"><col></colgroup>');
+									}
+									// -->
+									</SCRIPT>
+
+                          <TBODY>
+                          <TR bgColor=#d0d0d0 height=20 vAlign=top>
+                            <SCRIPT language=JavaScript>
+										<!-- 
+										if (ie4) {
+											document.write('<td valign="middle">');
+											document.write('<img id="imgA" src="plus.gif" border=0 height=10 width=10');
+											document.write(' align="right" style="cursor: hand" onclick="toggleScopeCat(' + sQ + 'A' + sQ + ');">');
+											document.write('</td>');
+										}
+										// -->
+										</SCRIPT>
+
+                            <TD><FONT size=2><INPUT CHECKED name=chkA 
+                              onclick=toggleSelected(this); type=checkbox> 
+                              <B>Articles</B></INPUT> </FONT></TD></TR>
+                          <TR bgColor=#ffffcc>
+                            <SCRIPT language=JavaScript>
+											<!-- 
+											doTable('tblA');
+											// -->
+											</SCRIPT>
+
+                          <TR height=3>
+                            <TD></TD></TR>
+                          <TR>
+                            <TD class=search width="40%"><INPUT CHECKED 
+                              name=chkA_0 onclick=iChk(this); type=checkbox> Ask 
+                              the Pros</INPUT> </TD>
+                            <TD class=search width="40%"><INPUT CHECKED 
+                              name=chkA_1 onclick=iChk(this); type=checkbox> 
+                              Technical Guide to Visual Programming</INPUT> 
+                          </TD></TR>
+                          <TR>
+                            <TD class=search><INPUT CHECKED name=chkA_2 
+                              onclick=iChk(this); type=checkbox> Enterprise 
+                              Development</INPUT> </TD>
+                            <TD class=search><INPUT CHECKED name=chkA_3 
+                              onclick=iChk(this); type=checkbox> Visual Basic 
+                              Programmers Journal</INPUT> </TD></TR>
+                          <TR>
+                            <TD class=search><INPUT CHECKED name=chkA_4 
+                              onclick=iChk(this); type=checkbox> Exchange &amp; 
+                              Outlook</INPUT> </TD>
+                            <TD class=search><INPUT CHECKED name=chkA_5 
+                              onclick=iChk(this); type=checkbox> Visual C++ 
+                              Developers Journal</INPUT> </TD></TR>
+                          <TR>
+                            <TD class=search><INPUT CHECKED name=chkA_6 
+                              onclick=iChk(this); type=checkbox> Getting Started 
+                              with Visual Basic</INPUT> </TD>
+                            <TD class=search><INPUT CHECKED name=chkA_7 
+                              onclick=iChk(this); type=checkbox> Web 
+                              Builder</INPUT> </TD></TR>
+                          <TR>
+                            <TD class=search><INPUT CHECKED name=chkA_8 
+                              onclick=iChk(this); type=checkbox> Java 
+                              Pro</INPUT> </TD>
+                            <TD class=search><INPUT CHECKED name=chkA_9 
+                              onclick=iChk(this); type=checkbox> XML 
+                              Magazine</INPUT> </TD></TR>
+                          <TR height=12>
+                            <TD></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR bgColor=#d0d0d0 height=20 vAlign=top>
+                      <SCRIPT language=JavaScript>
+										<!-- 
+										if (ie4) {
+											document.write('<td></td>');
+										}
+										// -->
+										</SCRIPT>
+
+                      <TD><FONT size=2><INPUT CHECKED name=chkC type=checkbox> 
+                        <B>Code</B></INPUT> </FONT></TD></TR>
+                    <SCRIPT language=JavaScript>
+										<!-- 
+										if (ie4) {
+											document.write('<tr bgcolor="#ffffcc">');
+											document.write('<td></td>');
+											document.write('<td>');
+											document.write('<table id="tblC" cellpadding=0 cellspacing=0 style="display: none" width="100%">');
+											document.write('<tr><td></td></tr>');
+											document.write('</table>');
+											document.write('</td>');
+											document.write('</tr>');
+										}
+										// -->
+										</SCRIPT>
+
+                    <TR bgColor=#d0d0d0 height=20 vAlign=top>
+                      <SCRIPT language=JavaScript>
+										<!-- 
+										if (ie4) {
+											document.write('<td valign="middle">');
+											document.write('<img id="imgD" src="plus.gif" border=0 height=10 width=10');
+											document.write(' align="right" style="cursor: hand" onclick="toggleScopeCat(' + sQ + 'D' + sQ + ');">');
+											document.write('</td>');
+										}
+										// -->
+										</SCRIPT>
+
+                      <TD><FONT size=2><INPUT CHECKED name=chkD 
+                        onclick=toggleSelected(this); type=checkbox> 
+                        <B>Discussions</B></INPUT> </FONT></TD></TR>
+                    <TR bgColor=#ffffcc>
+                      <SCRIPT language=JavaScript>
+											<!-- 
+											doTable('tblD');
+											// -->
+											</SCRIPT>
+
+                    <TR height=3>
+                      <TD></TD></TR>
+                    <TR>
+                      <TD class=search width="40%"><INPUT CHECKED name=chkD_0 
+                        onclick=iChk(this); type=checkbox> C++</INPUT> </TD>
+                      <TD class=search width="40%"><INPUT CHECKED name=chkD_1 
+                        onclick=iChk(this); type=checkbox> UI Design</INPUT> 
+                    </TD></TR>
+                    <TR>
+                      <TD class=search><INPUT CHECKED name=chkD_2 
+                        onclick=iChk(this); type=checkbox> Enterprise</INPUT> 
+</TD>
+                      <TD class=search><INPUT CHECKED name=chkD_3 
+                        onclick=iChk(this); type=checkbox> Visual Basic</INPUT> 
+                      </TD></TR>
+                    <TR>
+                      <TD class=search><INPUT CHECKED name=chkD_4 
+                        onclick=iChk(this); type=checkbox> Internet</INPUT> </TD>
+                      <TD class=search><INPUT CHECKED name=chkD_5 
+                        onclick=iChk(this); type=checkbox> Visual FoxPro</INPUT> 
+                      </TD></TR>
+                    <TR>
+                      <TD class=search><INPUT CHECKED name=chkD_6 
+                        onclick=iChk(this); type=checkbox> Java</INPUT> </TD>
+                      <TD class=search><INPUT CHECKED name=chkD_7 
+                        onclick=iChk(this); type=checkbox> Author Events</INPUT> 
+                      </TD></TR>
+                    <TR>
+                      <TD class=search><INPUT CHECKED name=chkD_8 
+                        onclick=iChk(this); type=checkbox> Linux</INPUT> </TD>
+                      <TD class=search><INPUT CHECKED name=chkD_9 
+                        onclick=iChk(this); type=checkbox> Feedback</INPUT> 
+                    </TD></TR>
+                    <TR height=12>
+                      <TD></TD></TR></TBODY></TABLE></TD></TR>
+              <TR bgColor=#d0d0d0 height=20 vAlign=top>
+                <SCRIPT language=JavaScript>
+										<!-- 
+										if (ie4) {
+											document.write('<td valign="middle">');
+											document.write('<img id="imgP" src="plus.gif" border=0 height=10 width=10');
+											document.write(' align="right" style="cursor: hand" onclick="toggleScopeCat(' + sQ + 'P' + sQ + ');">');
+											document.write('</td>');
+										}
+										// -->
+										</SCRIPT>
+
+                <TD><FONT size=2><INPUT CHECKED name=chkP 
+                  onclick=toggleSelected(this); type=checkbox> 
+                  <B>Products</B></INPUT> </FONT></TD></TR>
+              <TR bgColor=#ffffcc>
+                <SCRIPT language=JavaScript>
+											<!-- 
+											doTable('tblP');
+											// -->
+											</SCRIPT>
+
+              <TR height=3>
+                <TD colSpan=2></TD></TR>
+              <TR>
+                <TD class=search colSpan=2><INPUT CHECKED name=chkP_0 
+                  onclick=iChk(this); type=checkbox>&nbsp; Books</INPUT> </TD></TR>
+              <TR>
+                <TD class=search colSpan=2><INPUT CHECKED name=chkP_1 
+                  onclick=iChk(this); type=checkbox>&nbsp; Conferences</INPUT> 
+                </TD></TR>
+              <TR>
+                <TD class=search colSpan=2><INPUT CHECKED name=chkP_2 
+                  onclick=iChk(this); type=checkbox>&nbsp; Magazines</INPUT> 
+              </TD></TR>
+              <TR>
+                <TD class=search colSpan=2><INPUT CHECKED name=chkP_3 
+                  onclick=iChk(this); type=checkbox>&nbsp; Software</INPUT> 
+              </TD></TR>
+              <TR height=12>
+                <TD colSpan=2></TD></TR></TBODY></TABLE></TD></TR>
+        <TR bgColor=#d0d0d0 height=20 vAlign=top>
+          <SCRIPT language=JavaScript>
+										<!-- 
+										if (ie4) {
+											document.write('<td valign="middle">');
+											document.write('<img id="imgR" src="plus.gif" border=0 height=10 width=10');
+											document.write(' align="right" style="cursor: hand" onclick="toggleScopeCat(' + sQ + 'R' + sQ + ');">');
+											document.write('</td>');
+										}
+										// -->
+										</SCRIPT>
+
+          <TD><FONT size=2><INPUT CHECKED name=chkR 
+            onclick=toggleSelected(this); type=checkbox> <B>Reviews</B></INPUT> 
+            </FONT></TD></TR>
+        <TR bgColor=#ffffcc>
+          <SCRIPT language=JavaScript>
+											<!-- 
+											doTable('tblR');
+											// -->
+											</SCRIPT>
+
+        <TR height=3>
+          <TD colSpan=2></TD></TR>
+        <TR>
+          <TD class=search colSpan=2><INPUT CHECKED name=chkR_0 
+            onclick=iChk(this); type=checkbox>&nbsp; Books</INPUT> </TD></TR>
+        <TR>
+          <TD class=search colSpan=2><INPUT CHECKED name=chkR_1 
+            onclick=iChk(this); type=checkbox>&nbsp; Software</INPUT> </TD></TR>
+        <TR height=12>
+          <TD colSpan=2></TD></TR></TBODY></TABLE></TD></TR>
+  <TR bgColor=#d0d0d0 height=20 vAlign=top>
+    <SCRIPT language=JavaScript>
+										<!-- 
+										if (ie4) {
+											document.write('<td></td>');
+										}
+										// -->
+										</SCRIPT>
+
+    <TD><FONT size=2><INPUT CHECKED name=chkW type=checkbox> 
+      <B>Downloads</B></INPUT> </FONT></TD></TR>
+  <SCRIPT language=JavaScript>
+										<!-- 
+										if (ie4) {
+											document.write('<tr bgcolor="#ffffcc">');
+											document.write('<td></td>');
+											document.write('<td>');
+											document.write('<table id="tblW" cellpadding=0 cellspacing=0 style="display: none" width="100%">');
+											document.write('<tr><td></td></tr>');
+											document.write('</table>');
+											document.write('</td>');
+											document.write('</tr>');
+										}
+										// -->
+										</SCRIPT>
+
+  <TR bgColor=#d0d0d0 height=20 vAlign=top>
+    <SCRIPT language=JavaScript>
+										<!-- 
+										if (ie4) {
+											document.write('<td valign="middle">');
+											document.write('<img id="imgO" src="plus.gif" border=0 height=10 width=10');
+											document.write(' align="right" style="cursor: hand" onclick="toggleScopeCat(' + sQ + 'O' + sQ + ');">');
+											document.write('</td>');
+										}
+										// -->
+										</SCRIPT>
+
+    <TD><FONT size=2><INPUT CHECKED name=chkO onclick=toggleSelected(this); 
+      type=checkbox> <B>Other Sites</B></INPUT> </FONT></TD></TR>
+  <TR bgColor=#ffffcc>
+    <SCRIPT language=JavaScript>
+											<!-- 
+											doTable('tblO');
+											// -->
+											</SCRIPT>
+
+  <TR height=3>
+    <TD colSpan=2></TD></TR>
+  <TR>
+    <TD class=search width="40%"><INPUT CHECKED name=chkO_0 
+      onclick=iChk(this); type=checkbox>&nbsp; Cetus Links (C++)</INPUT> </TD>
+    <TD class=search width="40%"><INPUT CHECKED name=chkO_1 
+      onclick=iChk(this); type=checkbox>&nbsp; MSDN (C++)</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_2 onclick=iChk(this); 
+      type=checkbox>&nbsp; Developer.com (C++)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_3 onclick=iChk(this); 
+      type=checkbox>&nbsp; MFC Pro</INPUT> </TD></TR>
+  <TR height=10>
+    <TD colSpan=2></TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_4 onclick=iChk(this); 
+      type=checkbox>&nbsp; Cetus Links (Enterprise)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_5 onclick=iChk(this); 
+      type=checkbox>&nbsp; Microsoft (Enterprise)</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_6 onclick=iChk(this); 
+      type=checkbox>&nbsp; IBM (Enterprise)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_7 onclick=iChk(this); 
+      type=checkbox>&nbsp; Oracle (Enterprise)</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_8 onclick=iChk(this); 
+      type=checkbox>&nbsp; Informix</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_9 onclick=iChk(this); 
+      type=checkbox>&nbsp; Swynk.com</INPUT> </TD></TR>
+  <TR height=10>
+    <TD colSpan=2></TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_10 onclick=iChk(this); 
+      type=checkbox>&nbsp; Builder Buzz (Java)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_11 onclick=iChk(this); 
+      type=checkbox>&nbsp; JavaWorld</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_12 onclick=iChk(this); 
+      type=checkbox>&nbsp; Cetus Links (Java)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_13 onclick=iChk(this); 
+      type=checkbox>&nbsp; Netscape (Java)</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_14 onclick=iChk(this); 
+      type=checkbox>&nbsp; Developer.com (Java)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_15 onclick=iChk(this); 
+      type=checkbox>&nbsp; Oracle (Java)</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_16 onclick=iChk(this); 
+      type=checkbox>&nbsp; IBM (Java)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_17 onclick=iChk(this); 
+      type=checkbox>&nbsp; Sun (Java)</INPUT> </TD></TR>
+  <TR height=10>
+    <TD colSpan=2></TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_18 onclick=iChk(this); 
+      type=checkbox>&nbsp; Builder Buzz (Linux)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_19 onclick=iChk(this); 
+      type=checkbox>&nbsp; Linux.com</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_20 onclick=iChk(this); 
+      type=checkbox>&nbsp; Caldera</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_21 onclick=iChk(this); 
+      type=checkbox>&nbsp; Red Hat</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_22 onclick=iChk(this); 
+      type=checkbox>&nbsp; Corel (Linux)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_23 onclick=iChk(this); 
+      type=checkbox>&nbsp; Slashdot</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_24 onclick=iChk(this); 
+      type=checkbox>&nbsp; Developer.com (Linux)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_25 onclick=iChk(this); 
+      type=checkbox>&nbsp; Sun (StarOffice)</INPUT> </TD></TR>
+  <TR height=10>
+    <TD colSpan=2></TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_26 onclick=iChk(this); 
+      type=checkbox>&nbsp; Ben Baird's VB Thunder</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_27 onclick=iChk(this); 
+      type=checkbox>&nbsp; MSDN (VB)</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_28 onclick=iChk(this); 
+      type=checkbox>&nbsp; Randy Birch's VBnet</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_29 onclick=iChk(this); 
+      type=checkbox>&nbsp; SoftCircuits Programming</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_30 onclick=iChk(this); 
+      type=checkbox>&nbsp; Carl &amp; Gary's VB Home Page</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_31 onclick=iChk(this); 
+      type=checkbox>&nbsp; VB Accelerator</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_32 onclick=iChk(this); 
+      type=checkbox>&nbsp; Brad Martinez</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_33 onclick=iChk(this); 
+      type=checkbox>&nbsp; VB AdminCode</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_34 onclick=iChk(this); 
+      type=checkbox>&nbsp; Karl Peterson's One-Stop SourceShop</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_35 onclick=iChk(this); 
+      type=checkbox>&nbsp; VB Explorer</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_36 onclick=iChk(this); 
+      type=checkbox>&nbsp; Klaus Probst's VB Box</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_37 onclick=iChk(this); 
+      type=checkbox>&nbsp; VB Wire</INPUT> </TD></TR>
+  <TR height=10>
+    <TD colSpan=2></TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_38 onclick=iChk(this); 
+      type=checkbox>&nbsp; 15 Seconds</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_39 onclick=iChk(this); 
+      type=checkbox>&nbsp; MSDN (Web)</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_40 onclick=iChk(this); 
+      type=checkbox>&nbsp; ASPng.com</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_41 onclick=iChk(this); 
+      type=checkbox>&nbsp; Netscape (Web)</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_42 onclick=iChk(this); 
+      type=checkbox>&nbsp; Builder.com</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_43 onclick=iChk(this); 
+      type=checkbox>&nbsp; WebMonkey</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_44 onclick=iChk(this); 
+      type=checkbox>&nbsp; Cetus Links (Web)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_45 onclick=iChk(this); 
+      type=checkbox>&nbsp; WebReference</INPUT> </TD></TR>
+  <TR>
+    <TD class=search><INPUT CHECKED name=chkO_46 onclick=iChk(this); 
+      type=checkbox>&nbsp; Developer.com (Web)</INPUT> </TD>
+    <TD class=search><INPUT CHECKED name=chkO_47 onclick=iChk(this); 
+      type=checkbox>&nbsp; WebReview</INPUT> </TD></TR>
+  <TR>
+    <TD class=search colSpan=2><INPUT CHECKED name=chkO_48 onclick=iChk(this); 
+      type=checkbox>&nbsp; Internet.com</INPUT> 
+</TD></TR></TBODY></TABLE></TD></TR></TABLE></TD></TR></TABLE></TD></TR></TABLE><INPUT 
+name=search type=hidden value=advanced> 
+</FORM></TD></TR></TABLE></TD></TR></TABLE></BODY></HTML>

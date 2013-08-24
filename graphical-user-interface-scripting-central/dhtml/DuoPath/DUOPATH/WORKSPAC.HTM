@@ -1,0 +1,991 @@
+<HTML>
+<HEAD>
+<!--
+DuoPath 1.11
+Copyright 1998 Dan Steinman
+July 23, 1998.
+-->
+<TITLE>DuoPath - Workspace Window</TITLE>
+<SCRIPT LANGUAGE="JavaScript" SRC="dynlayer.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+ns4 = (document.layers)? true:false
+ie4 = (document.all)? true:false
+
+function init() {
+	pc = parent.frames[2]
+	pt = parent.frames[0]
+	pc.loaded = 1
+	erasecount = -1
+	insertcount = -1
+	infocount = -1
+	movemode = 0
+	moveallmode = 0
+	insertmode = 0
+	linemode = 0
+	previewmode = 0
+	previewspeed = 30
+	loopmode = 0
+	crosshair = 1
+	crosshairx = new DynLayer("crosshairxDiv")
+	crosshairy = new DynLayer("crosshairyDiv")
+	linepoint1 = new DynLayer("linepoint1Div")
+	linepoint2 = new DynLayer("linepoint2Div")
+	square = new DynLayer("previewsquareDiv","previewareaDiv")
+	square.pathpos = 0
+	square.active = 0
+	c = new Array()
+	s = new Array()
+	for (var i=0;i<=pc.maxpoints-1;i++) {eval("c["+i+"] = new DynLayer('c"+i+"')")}
+	for (var i=0;i<=pc.maxspline-1;i++) {eval("s["+i+"] = new DynLayer('s"+i+"')")}
+	if (pc.setcount > 0) {
+		for (var i=0; i<=pc.setcount; i++) {
+			c[i].moveTo(pc.xvalues[i]-3+100,pc.yvalues[i]-3+100)
+		}
+	}
+	else {
+		pc.xvalues = new Array()
+		pc.yvalues = new Array()
+	}
+	if (pc.splinecount > 0) {
+		for (var i=0; i<=pc.splinecount; i++) {
+			s[i].moveTo(pc.xspline[i]-3+100,pc.yspline[i]-3+100)
+		}
+	}
+	else {
+		pc.xspline = new Array()
+		pc.yspline = new Array()
+	}
+	pc.xsplinenew = new Array()
+	pc.ysplinenew = new Array()
+
+	displayValues()
+	if (pt.loaded==1) {
+		changeCrosshair()
+		if (pc.splinemode) {
+			pc.mode = "splinenew"
+			pt.splinemode('splinenew')
+			splinespacing = Number(pt.spline.ref.splineform.pathpointsf.value)
+			pt.preview.hide()
+			pt.buttons.hide()
+			pt.spline.show()
+		}
+		else {
+			pc.splinemode = 0
+			splinespacing = 8
+			pc.mode = "new"
+			pt.mode('newpoint')
+			pt.preview.hide()
+			pt.buttons.show()
+		}
+	}
+	if (pc.sourcepage != "source.html") document.sourceLayer.src = pc.sourcepage
+	document.onmousedown = mouseDown
+	document.onmousemove = mouseMove
+	document.onmouseup = mouseUp
+	if (ns4) document.captureEvents(Event.MOUSEDOWN | Event.MOUSEMOVE | Event.MOUSEUP)
+}
+
+function mouseDown(e) {
+	if (((ns4 && e.which == 1) || ie4) && !previewmode) {
+		if (ns4) {var x=Number(e.pageX); var y=Number(e.pageY)}
+		if (ie4) {var x=Number(event.x); var y=Number(event.y)}
+		if (pc.mode == "new") pointNew(x,y)
+		else if (pc.mode == "erase") pointErase(x,y)
+		else if (pc.mode == "insert") pointInsert(x,y)
+		else if (pc.mode == "line") pointLine(x,y)
+		else if (pc.mode == "info") pointInfo(x,y)
+		else if (pc.mode == "splinenew") splineNew(x,y)
+		else if (pc.mode == "splineerase") eraseSpline(x,y)
+		else if (pc.mode == "move" || pc.mode == "moveall") {
+			for (var i=0; i<=pc.setcount; i++) {
+				if (x>=c[i].x && x<=c[i].x+7 && y>=c[i].y && y<=c[i].y+7) {
+					dragActive = 1
+					dragObjectNum = i
+					dragObject = c[i]
+					if (pc.mode=="moveall") {
+						moveallstartX = x
+						moveallstartY = y
+					}
+					break
+				}
+			}
+		}
+		else if (pc.mode == "splinemove" || pc.mode == "splinemoveall") {
+			for (var i=0; i<=pc.splinecount; i++) {
+				if (x>=s[i].x && x<=s[i].x+7 && y>=s[i].y && y<=s[i].y+7) {
+					dragActive = 1
+					dragObjectNum = i
+					dragObject = s[i]
+					if (pc.mode=="splinemoveall") {
+						moveallstartX = x
+						moveallstartY = y
+					}
+					break
+				}
+			}
+		}
+	}
+}
+
+dragActive=0
+function mouseMove(e) {
+	if (!previewmode) {
+		if (ns4) {var x=Number(e.pageX); var y=Number(e.pageY)}
+		if (ie4) {var x=Number(event.x); var y=Number(event.y)}
+		status = "x:"+(x-100)+" y:"+(y-100)
+		if (crosshair) {
+			if (y>99&&y<580) crosshairx.moveTo(99,y)
+			else crosshairx.moveTo(99,580)
+			if (x>99&&x<740) crosshairy.moveTo(x,99)
+			else crosshairy.moveTo(740,99)
+		}
+		if (insertmode) insertpoint.moveTo(x-3,y-3)
+		else if (dragActive) {
+			if (pc.mode=="move" || pc.mode=="moveall" || pc.mode=="splinemove" || pc.mode=="splinemoveall") {
+				dragObject.moveTo(x-3,y-3)
+				return false
+			}
+		}
+	}
+}
+
+function mouseUp(e) {
+	if (((ns4 && e.which == 1) || ie4) && dragActive) {
+		if (ns4) {var x=Number(e.pageX); var y=Number(e.pageY)}
+		if (ie4) {var x=Number(event.x); var y=Number(event.y)}
+		if (pc.mode=="move") {
+			dragActive = 0
+			pc.xvalues[dragObjectNum] = dragObject.x+3-100
+			pc.yvalues[dragObjectNum] = dragObject.y+3-100
+			dragObject.moveTo(x-3,y-3)
+			displayValues()
+		}
+		else if (pc.mode=="moveall") {
+			dragActive = 0
+			dragObject.moveTo(x-3,y-3)
+			var dx = moveallstartX-x
+			var dy = moveallstartY-y
+			for (var i=0;i<=pc.setcount;i++) {
+				pc.xvalues[i] -= dx
+				pc.yvalues[i] -= dy
+				c[i].moveTo(pc.xvalues[i]-3+100,pc.yvalues[i]-3+100)
+			}
+			displayValues()
+		}
+		else if (pc.mode=="splinemove") {
+			dragActive = 0
+			pc.xspline[dragObjectNum] = dragObject.x+3-100
+			pc.yspline[dragObjectNum] = dragObject.y+3-100
+			dragObject.moveTo(x-3,y-3)
+			pc.setcount -= (pc.splinecount)*splinespacing
+			drawSpline()
+		}
+		else if (pc.mode=="splinemoveall") {
+			dragActive = 0
+			dragObject.moveTo(x-3,y-3)
+			var dx = moveallstartX-x
+			var dy = moveallstartY-y
+			for (var i=0;i<=pc.splinecount;i++) {
+				pc.xspline[i] -= dx
+				pc.yspline[i] -= dy
+				s[i].moveTo(pc.xspline[i]-3+100,pc.yspline[i]-3+100)
+			}
+			pc.setcount -= (pc.splinecount)*splinespacing
+			drawSpline()
+		}
+	}
+}
+
+function pointNew(x,y) {
+	pc.setcount += 1
+	pc.xvalues[pc.setcount] = x-100
+	pc.yvalues[pc.setcount] = y-100
+	if (pc.setcount < pc.maxpoints-1) {
+		c[pc.setcount].moveTo(x-3,y-3)
+		displayValues()
+	}
+	else changeMaxPoints()
+}
+
+function pointErase(x,y) {
+	if (pc.setcount >= 0) {
+		for (var i=0; i<=pc.setcount; i++) {
+			if (x>=c[i].x && x<=c[i].x+7 && y>=c[i].y && y<=c[i].y+7) {
+				erasecount = i
+				break
+			}
+		}
+		if (erasecount >= 0) {
+			if (erasecount == pc.setcount) {
+				c[pc.setcount].moveTo(0,-10)
+				pc.setcount -= 1
+			}
+			else {
+				for (var i=erasecount;i<=pc.setcount-1;i++) {
+					pc.xvalues[i] = pc.xvalues[i+1]
+					pc.yvalues[i] = pc.yvalues[i+1]
+					c[i].moveTo(pc.xvalues[i]-3+100,pc.yvalues[i]-3+100)
+				}
+				c[pc.setcount].moveTo(0,-10)
+				pc.setcount -= 1
+			}
+			displayValues()
+		}
+		erasecount = -1
+	}
+}
+
+function pointInsert(x,y) {
+	if (!insertmode) {
+		if (pc.setcount < pc.maxpoints-1) {
+			for (var i=0; i<=pc.setcount; i++) {
+				if (x>=c[i].x && x<=c[i].x+7 && y>=c[i].y && y<=c[i].y+7) {
+					insertpoint = c[i]
+					insertcount = i
+					break
+				}
+			}
+			if (insertcount >= 0) {
+				pc.setcount+=1
+				for (var i=pc.setcount;i>=insertcount+1;i--) {
+					pc.xvalues[i] = pc.xvalues[i-1]
+					pc.yvalues[i] = pc.yvalues[i-1]
+					c[i].moveTo(pc.xvalues[i]-3+100,pc.yvalues[i]-3+100)
+				}
+				c[insertcount].moveTo(x-3,y-3)
+				insertmode = 1
+			}
+		}
+		else changeMaxPoints()
+	}
+	else {
+		if (insertcount > -1) {
+			pc.xvalues[insertcount] = x-100
+			pc.yvalues[insertcount] = y-100
+			insertmode = 0
+			displayValues()
+			insertcount = -1
+		}
+	}
+}
+
+function pointLine(x,y) {
+	if (!linemode) {
+		linemode = 1
+		linestartx = x-100
+		linestarty = y-100
+		linepoint1.moveTo(linestartx-3+100,linestarty-3+100)
+	}
+	else {
+		linemode = 0
+		lineendx = x-100
+		lineendy = y-100
+		linepoint2.moveTo(lineendx-3+100,lineendy-3+100)
+		var linedx = Math.abs(linestartx - lineendx)
+		var linedy = Math.abs(linestarty - lineendy)
+		var angle = Math.atan(linedy/linedx)*180/Math.PI
+		if (lineendy<linestarty) {
+			if (lineendx>=linestartx) angle = angle
+			else angle = 180-angle
+		}
+		else {
+			if (lineendx<=linestartx) angle = 180+angle
+			else angle = -1*angle
+		}
+		var spacing = prompt("How many pixels apart are the\npoints to be spaced?",10)
+		var distance = Math.sqrt(Math.pow(linedx,2) + Math.pow(linedy,2))
+		var numpoints = Math.floor(distance/spacing)
+		var distance = distance/numpoints
+		pc.setcount+=1
+		var linecount = pc.setcount
+		pc.xvalues[linecount] = linestartx
+		pc.yvalues[linecount] = linestarty
+		if (pc.setcount+numpoints < pc.maxpoints-1) {
+			c[linecount].moveTo(pc.xvalues[linecount]-3+100,pc.yvalues[linecount]-3+100)
+			for (var i=1;i<=numpoints;i++) {
+				pc.xvalues[pc.setcount+i] = pc.xvalues[linecount] + Math.round(i*distance*Math.cos(angle*Math.PI/180))
+				pc.yvalues[pc.setcount+i] = pc.yvalues[linecount] - Math.round(i*distance*Math.sin(angle*Math.PI/180))
+				c[pc.setcount+i].moveTo(pc.xvalues[pc.setcount+i]-3+100,pc.yvalues[pc.setcount+i]-3+100)
+			}
+			pc.setcount+=numpoints
+			linepoint1.moveTo(0,-10)
+			linepoint2.moveTo(0,-10)
+			displayValues()
+		}
+		else {
+			for (var i=1;i<=numpoints;i++) {
+				pc.xvalues[pc.setcount+i] = pc.xvalues[linecount] + Math.round(i*distance*Math.cos(angle*Math.PI/180))
+				pc.yvalues[pc.setcount+i] = pc.yvalues[linecount] - Math.round(i*distance*Math.sin(angle*Math.PI/180))
+			}
+			pc.setcount+=numpoints
+			pc.maxpoints+=numpoints
+			changeMaxPoints()
+		}
+	}
+}
+
+function pointInfo(x,y) {
+	for (var i=0; i<=pc.setcount; i++) {
+		if (x>=c[i].x && x<=c[i].x+7 && y>=c[i].y && y<=c[i].y+7) {
+			infocount = i
+			break
+		}
+	}
+	if (infocount >= 0) {
+		alert("Information about this point..." +
+		"\n\nNumber: "+ (infocount+1) + " of " + (pc.setcount+1) +
+		"\nx: " + pc.xvalues[infocount] +
+		"\ny: " + pc.yvalues[infocount])
+		infocount = -1
+	}
+}
+
+function startSpline() {
+	pt.buttons.hide()
+	pt.spline.show()
+	modebeforespline = pc.mode
+	pc.mode = "splinenew"
+	pc.splinemode = 1
+}
+
+function endSpline() {
+	if (pc.splinecount<3 || (pc.splinecount>=3 && confirm("Going into edit mode will end your curve session, you\nwill not be able to edit your curve points any longer.\n\nDo you want to continue?"))) {
+		for (var i=0;i<=pc.splinecount;i++) {
+			s[i].moveTo(0,-10)
+		}
+		pc.splinecount = -1
+		pt.spline.hide()
+		pt.buttons.show()
+		pc.mode = modebeforespline
+		pc.splinemode = 0
+	}
+}
+
+function newSpline() {
+	if (pc.splinecount>-1) {
+		for (var i=0;i<=pc.splinecount;i++) {
+			s[i].moveTo(0,-10)
+		}
+		pc.splinecount = -1
+	}
+}
+
+function splineNew(x,y) {
+	if (pc.splinecount+1 < pc.maxspline-1) {
+		if (pc.setcount+splinespacing+1 < pc.maxpoints-1) {
+			if (pc.splinecount==-1) {
+				var newss = Number(pt.spline.ref.splineform.pathpointsf[pt.spline.ref.splineform.pathpointsf.selectedIndex].value)
+				if (newss>=4 && newss<=20) splinespacing = newss
+			}
+			pc.splinecount += 1
+			pc.xspline[pc.splinecount] = x-100
+			pc.yspline[pc.splinecount] = y-100
+			s[pc.splinecount].moveTo(x-3,y-3)
+			if (pc.splinecount>=3) {
+				if (pc.splinecount>3) {
+					pc.setcount -= (pc.splinecount-1)*splinespacing
+				}
+				drawSpline()
+			}
+		}
+		else changeMaxPoints()
+	}
+	else changeMaxSpline()
+}
+
+erasesplinecount = -1
+function eraseSpline(x,y) {
+	if (pc.splinecount>=4) {
+	for (var i=0; i<=pc.splinecount; i++) {
+		if (x>=s[i].x && x<=s[i].x+7 && y>=s[i].y && y<=s[i].y+7) {
+			erasesplinecount = i
+			break
+		}
+	}
+	if (erasesplinecount >= 0) {
+		if (erasesplinecount==pc.splinecount) {
+			s[erasesplinecount].moveTo(0,-10)
+			pc.splinecount -= 1
+		}
+		else {
+			for (var i=erasesplinecount;i<=pc.splinecount-1;i++) {
+				pc.xspline[i] = pc.xspline[i+1]
+				pc.yspline[i] = pc.yspline[i+1]
+				s[i].moveTo(pc.xspline[i]-3+100,pc.yspline[i]-3+100)
+			}
+			s[pc.splinecount].moveTo(0,-10)
+			pc.splinecount -= 1
+		}
+		for (var i=pc.setcount-splinespacing;i<=pc.setcount;i++) c[i].moveTo(0,-10)
+		pc.setcount -= (pc.splinecount+1)*splinespacing
+		drawSpline()
+	}
+	erasesplinecount = -1
+	}
+	else if (confirm("You cannot erase any more control points,\ndo you want to start over?")) {
+		eraseAllSpline()
+		pc.mode = "splinenew"
+	}
+}
+
+splinespacing = 8
+function eraseAllSpline() {
+	if (pc.splinecount>-1) {
+		if (pc.splinecount>=3) {
+			for (var i=pc.setcount; i>=pc.setcount-(pc.splinecount)*splinespacing+1;i--) {
+				c[i].moveTo(0,-10)
+			}
+			pc.setcount -= (pc.splinecount)*splinespacing
+		}
+		for (var i=0;i<=pc.splinecount;i++) {
+			s[i].moveTo(0,-10)
+		}
+		pc.splinecount = -1
+		displayValues()
+	}
+}
+
+function drawSpline() {
+	var length = pc.splinecount+1
+	for (var i=0;i<length;i++) {
+		pc.xsplinenew[i]=pc.xspline[i]
+		pc.ysplinenew[i]=pc.yspline[i]
+	}
+	for (var i=length;i>=1;i--) {
+		pc.xsplinenew[i] = pc.xsplinenew[i-1]
+		pc.ysplinenew[i] = pc.ysplinenew[i-1]
+	}
+	for (var i=length+1;i<=length+2;i++) {
+		pc.xsplinenew[i] = pc.xsplinenew[i-1]
+		pc.ysplinenew[i] = pc.ysplinenew[i-1]
+	}
+	var s = 1
+	if (splinespacing==6||splinespacing==7||splinespacing==10||splinespacing==13||splinespacing==14||splinespacing==15||splinespacing==19) s -= 1/splinespacing
+	for (var i=1;i<=length-1;i++) {
+		for (var u=0;u<s;u+=1/splinespacing) {
+			var nc1 = -(u*u*u/6)+u*u/2-u/2+1/6
+			var nc2 = u*u*u/2-u*u+2/3
+			var nc3 = (-u*u*u+u*u+u)/2+1/6
+			var nc4 = u*u*u/6
+			var x = Math.round(nc1*pc.xsplinenew[i-1]+nc2*pc.xsplinenew[i]+nc3*pc.xsplinenew[i+1]+nc4*pc.xsplinenew[i+2])
+			var y = Math.round(nc1*pc.ysplinenew[i-1]+nc2*pc.ysplinenew[i]+nc3*pc.ysplinenew[i+1]+nc4*pc.ysplinenew[i+2])
+			pc.setcount++
+			pc.xvalues[pc.setcount] = x
+			pc.yvalues[pc.setcount] = y
+			c[pc.setcount].moveTo(x-3+100,y-3+100)
+		}
+	}
+	displayValues()
+}
+
+function displayValues() {
+	if (pc.setcount >= 0) {
+		xstring = "x: " + pc.xvalues[0]
+		ystring = "y: " + pc.yvalues[0]
+		for (var i=1; i<=pc.setcount; i++) {
+			xstring += ("," + pc.xvalues[i])
+			ystring += ("," + pc.yvalues[i])
+		}
+		pc.document.coordsform.coordsfield.value = xstring + "\n" + ystring
+		pc.document.coordsform.pointsfield.value = pc.setcount + 1
+	}
+	else {
+		pc.setcount = -1
+		pc.document.coordsform.coordsfield.value = "x: \ny: "
+		pc.document.coordsform.pointsfield.value = "0"
+	}
+}
+
+function eraseLast() {
+	if (pc.setcount > -1) {
+		c[pc.setcount].moveTo(0,-10)
+		pc.setcount -= 1
+		displayValues()
+	}
+}
+
+function eraseAll() {
+	if (confirm("Are you sure?")) {
+		for (var i=0;i<=pc.setcount;i++) {c[i].moveTo(0,-10)}
+		pc.setcount = -1
+		pc.maxpoints = 100
+		setTimeout("displayValues()",100)
+		pc.mode = "new"
+		pt.mode("newpoint")
+	}
+}
+
+function inputPoints() {
+	if (confirm("Inputing new points will erase your current work.\nDo you want to continue?")) {
+		newxstring = new String(prompt("Enter the x string:", "11,22,33"))
+		newystring = new String(prompt("Now enter the y string:", "11,22,33"))
+		newxvalues = new Array()
+		newyvalues = new Array()
+		newxvalues = newxstring.split(",")
+		newyvalues = newystring.split(",")
+		for (var i=0; i<=pc.setcount; i++) {
+			c[i].moveTo(0,-10)
+		}
+		pc.setcount = newxvalues.length-1
+		for (var i=0; i<=pc.setcount; i++) {
+			pc.xvalues[i] = Number(newxvalues[i])
+			pc.yvalues[i] = Number(newyvalues[i])
+		}
+		if (pc.setcount < pc.maxpoints) {
+			for (var i=0; i<=pc.setcount; i++) {
+				c[i].moveTo(pc.xvalues[i]-3+100,pc.yvalues[i]-3+100)
+			}
+			displayValues()
+		}
+		else {
+			pc.maxpoints = pc.setcount + 50
+			location = "workspace.html"
+		}
+	}
+}
+
+function openCircle() {
+	if (pc.setcount >= 0) window.open("circle.html","cwin","width=290,height=390,menubar=no,statusbar=no,toolbar=no,resizable=yes")
+	else alert("You must have one point down before\ndrawing a circle.  The circle will begin\nat the last point in the path.")
+}
+circledrawn = 0
+circlenumpoints = 0
+function circle(radius,angleinc,anglestart,direction,vertical,horizontal,amount,slant) {
+	var angle = anglestart
+	circlenumpoints = Math.floor(amount*360/angleinc)
+	var u = horizontal*radius*Math.cos(anglestart*Math.PI/180)
+	var v = vertical*radius*Math.sin(anglestart*Math.PI/180)
+	var a = slant*Math.PI/180;
+	var centerX = pc.xvalues[pc.setcount] - (u*Math.cos(a) - v*Math.sin(a))
+	var centerY = pc.yvalues[pc.setcount] + (u*Math.sin(a) + v*Math.cos(a))
+	for (var i=1; i<=circlenumpoints; i+=1) {
+		angle += direction*angleinc
+		u = horizontal*radius*Math.cos(angle*Math.PI/180)
+		v = vertical*radius*Math.sin(angle*Math.PI/180)
+		pc.xvalues[pc.setcount+i] = Math.round(centerX + (u*Math.cos(a) - v*Math.sin(a)))
+		pc.yvalues[pc.setcount+i] = Math.round(centerY - (u*Math.sin(a) + v*Math.cos(a)))
+	}
+	if (pc.setcount+circlenumpoints <= pc.maxpoints) {
+		for (var i=1; i<=circlenumpoints; i+=1) c[pc.setcount+i].moveTo(pc.xvalues[pc.setcount+i]-3+100,pc.yvalues[pc.setcount+i]-3+100)
+		pc.setcount+=circlenumpoints
+		displayValues()
+		circledrawn = 1
+	}
+	else {
+		pc.setcount+=circlenumpoints
+		pc.maxpoints = pc.setcount+50
+		changeMaxPoints()
+	}
+}
+function deleteCircle() {
+	if (circledrawn) {
+		circledrawn = 0
+		for (var i=pc.setcount; i>=pc.setcount-circlenumpoints+1; i--) c[i].moveTo(0,-10)
+		pc.setcount-=circlenumpoints
+		displayValues()
+	}
+}
+
+function openParabola() {
+	if (pc.setcount >= 0) window.open("parabola.html","pwin","width=290,height=330,menubar=no,statusbar=no,toolbar=no,resizable=yes")
+	else alert("You must have at least one point down\nbefore drawing a parabola")
+}
+paraboladrawn = 0
+parabolanumpoints = 0
+function parabola(type,xDistance,yDistance,xDirection,yDirection,xinc) {
+	var pos = 0
+	var multiplier = yDistance/Math.pow(xDistance/type,2)
+	parabolanumpoints = Math.floor(xDistance/xinc)
+	for (var i=1; i<=parabolanumpoints; i++) {
+		pos += xDirection*xinc
+		pc.xvalues[pc.setcount+i] = pc.xvalues[pc.setcount] + pos
+		if (type == 1) pc.yvalues[pc.setcount+i] = Math.floor(pc.yvalues[pc.setcount] + yDirection*multiplier*Math.pow(Math.abs(pos),2))
+		if (type == 2) pc.yvalues[pc.setcount+i] = Math.floor(pc.yvalues[pc.setcount] - yDirection*multiplier*Math.pow(xDistance/2-Math.abs(pos),2) + yDirection*yDistance)
+	}
+	if (pc.setcount+parabolanumpoints <= pc.maxpoints) {
+		for (var i=1; i<=parabolanumpoints; i+=1) {c[pc.setcount+i].moveTo(pc.xvalues[pc.setcount+i]-3+100,pc.yvalues[pc.setcount+i]-3+100)}
+		pc.setcount += parabolanumpoints
+		displayValues()
+		paraboladrawn = 1
+	}
+	else {
+		pc.setcount += parabolanumpoints
+		pc.maxpoints = pc.setcount+50
+		changeMaxPoints()
+	}
+}
+function deleteParabola() {
+	if (paraboladrawn) {
+		paraboladrawn = 0
+		for (var i=pc.setcount; i>=pc.setcount-parabolanumpoints+1; i--) c[i].moveTo(0,-10)
+		pc.setcount-=parabolanumpoints
+		displayValues()
+	}
+}
+
+function changeMaxPoints() {
+	alert("The current maximum number of points has been reached.\nDuoPath will reload to fit more.")
+	pc.document.coordsform.coordsfield.value = "DuoPath is refreshing the workarea, please wait..."
+	pc.maxpoints += 100
+	location = "workspace.html"
+}
+
+function changeMaxSpline() {
+	alert("The current maximum number of curve points has been reached.\nDuoPath will reload to fit more.")
+	pc.document.coordsform.coordsfield.value = "DuoPath is refreshing the workarea, please wait..."
+	pc.maxspline += 30
+	location = "workspace.html"
+}
+
+function changeCrosshair() {
+	if (pt.buttons.ref.buttonsform.crosshairbox.checked) {
+		crosshair = 1
+		crosshairx.show()
+		crosshairy.show()
+	}
+	else {
+		crosshair = 0
+		crosshairx.hide()
+		crosshairy.hide()
+	}
+}
+
+function startPreview() {
+	if (pc.setcount >= 1) {
+		modebeforepreview = pc.mode
+		pc.mode = "preview"
+		if (crosshair) {
+			crosshairx.hide()
+			crosshairy.hide()
+		}
+		for (var i=0;i<=pc.setcount;i++) {
+			c[i].hide()
+		}
+		if (pc.splinemode) {
+			if (pc.splinecount>-1)
+				for (var i=0;i<=pc.splinecount;i++)
+					s[i].hide()
+			pt.spline.hide()
+		}
+		else pt.buttons.hide()
+		pt.preview.show()
+		square.moveTo(pc.xvalues[0],pc.yvalues[0])
+		square.show()
+	}
+	else alert("You must have at least 2 points down\nbefore previewing the animation.")
+}
+
+function endPreview() {
+	previewStop()
+	if (crosshair) {
+		crosshairx.show()
+		crosshairy.show()
+	}
+	pc.mode = modebeforepreview
+	for (var i=0;i<=pc.setcount;i++) {
+		c[i].show()
+	}
+	if (pc.splinemode) {
+		if (pc.splinecount>-1)
+			for (var i=0;i<=pc.splinecount;i++)
+				s[i].show()
+		pt.spline.show()
+	}
+	else pt.buttons.show()
+	pt.preview.hide()
+	square.moveTo(-50,-50)
+	square.hide()
+}
+
+previewpaused = 0
+function previewStart() {
+	if (!previewpaused) {
+		if (!square.active) {
+			square.active = 1
+			square.pathpos = 0
+			square.stoploop = 1
+			if (pt.preview.ref.previewform.speedfield.value==parseInt(pt.preview.ref.previewform.speedfield.value) && ((parseInt(pt.preview.ref.previewform.speedfield.value) >= 5 && parseInt(pt.preview.ref.previewform.speedfield.value) <= 1000))) {
+				previewspeed = parseInt(pt.preview.ref.previewform.speedfield.value)
+				previewPlay()
+			}
+			else alert("Please enter a value between 5 and 1000")
+		}
+	}
+	else {
+		square.active = 1
+		previewpaused = 0
+		previewPlay()
+	}
+}
+
+function previewPause() {
+	square.active = 0
+	previewpaused = 1
+}
+
+function previewPlay() {
+	if (square.pathpos <= pc.setcount && square.active) {
+		square.moveTo(pc.xvalues[square.pathpos],pc.yvalues[square.pathpos])
+		square.pathpos += 1
+		setTimeout("previewPlay()",previewspeed)
+	}
+	else {
+		if (parseInt(pt.preview.ref.previewform.speedfield.value) > 5 && parseInt(pt.preview.ref.previewform.speedfield.value) < 1000) {
+			previewspeed = parseInt(pt.preview.ref.previewform.speedfield.value)
+		}
+		if (!previewpaused && loopmode && square.stoploop) {
+			square.pathpos = 0
+			previewPlay()
+		}
+		else square.active = 0
+	}
+}
+
+function previewStop() {
+	square.active = 0
+	square.pathpos = 0
+	square.stoploop = 0
+	previewpaused = 0
+	square.moveTo(pc.xvalues[0],pc.yvalues[0])
+}
+
+function previewLoop() {
+	if (pt.preview.ref.previewform.loopbox.checked==true) loopmode = 1
+	else loopmode = 0
+}
+
+function changeSource() {
+	if (ns4) {
+		var page = prompt("Enter the location of the page to be viewed","source.html")
+		if (page != null) {
+			pc.sourcepage = page
+			document.sourceLayer.src = page
+			location = location.href
+		}
+	}
+	else alert("This feature is only for Netscape 4.0 only")
+}
+
+function openGenerate() {
+	window.open("generate.html","gen","toolbar=no,width=340,height=320,directories=no,status=no,scrollbars=no,resizable=yes,menubar=no")
+}
+
+function generateHTML(generatename,start,loop,pathnum,speed) {
+	generate = window.open("","generatewin","width=500,height=400,scrollbars=yes,menubar=no,toolbar=no,status=no,location=no")
+	gd = generate.document
+	gd.open()
+	gd.writeln('<HTML>')
+	gd.writeln('<TITLE>DuoPath Generated HTML</TITLE>')
+	gd.writeln('<PRE>')
+	gd.writeln('&lt;!-- cut and paste this code into a text editor --&gt;')
+	gd.writeln('&lt;!-- then save it and view in Netscape 4.0 or IE 4.0 --&gt;\n')
+	gd.writeln('&lt;HTML&gt;')
+	gd.writeln('&lt;HEAD&gt;')
+	gd.writeln('&lt;TITLE&gt;DuoPath Generated HTML&lt;/TITLE&gt;')
+	gd.writeln('&lt;SCRIPT LANGUAGE="JavaScript"&gt;\n')
+	gd.writeln('ns4 = (document.layers)? true:false')
+	gd.writeln('ie4 = (document.all)? true:false')
+	gd.writeln('')
+	gd.writeln('function init() {')
+	gd.writeln('	'+generatename+' = new DynLayer("'+generatename+'Div")')
+	gd.writeln('	'+generatename+'.path'+pathnum+' = new Path('+generatename+',"path'+pathnum+'",')
+	gd.writeln('	// x values')
+	gd.write('	new Array(')
+	gd.write(pc.xvalues[0])	
+	for (var i=1;i<=pc.setcount;i++) gd.write("," + pc.xvalues[i])
+	gd.writeln('),')
+	gd.writeln('	// y values')
+	gd.write('	new Array(')
+	gd.write(pc.yvalues[0])
+	for (var i=1;i<=pc.setcount;i++) gd.write("," + pc.yvalues[i])
+	gd.writeln('))')
+	if (start=="init") gd.writeln('	'+generatename+'.path'+pathnum+'.play('+loop+','+speed+')')
+	gd.writeln('}\n')
+	gd.writeln('// Dynamic Layer Object [core]')
+	gd.writeln('// Copyright 1998 Dan Steinman')
+	gd.writeln('// Available at the Dynamic Duo (http://www.dansteinman.com/dynduo/)')
+	gd.writeln('// February 1998.  Last Updated July 6, 1998.')
+	gd.writeln('// In order to use this code you must keep this disclaimer\n')
+	gd.writeln('function DynLayer(id,nestref) {')
+	gd.writeln('	if (ns4) {')
+	gd.writeln('		this.css = (nestref)? eval("document."+nestref+".document."+id) : document.layers[id]')
+	gd.writeln('		this.x = this.css.left')
+	gd.writeln('		this.y = this.css.top')
+	gd.writeln('	}')
+	gd.writeln('	else if (ie4) {')
+	gd.writeln('		this.css = document.all[id].style')
+	gd.writeln('		this.x = this.css.pixelLeft')
+	gd.writeln('		this.y = this.css.pixelTop')
+	gd.writeln('	}')
+	gd.writeln('	this.moveTo = DynLayerMoveTo')
+	gd.writeln('	this.moveBy = DynLayerMoveBy')
+	gd.writeln('	this.show = DynLayerShow')
+	gd.writeln('	this.hide = DynLayerHide')
+	gd.writeln('	this.addon = DynLayerAddon')
+	gd.writeln('	this.addon(id,nestref)')
+	gd.writeln('}')
+	gd.writeln('function DynLayerMoveTo(x,y) {')
+	gd.writeln('	if (x!=null) {')
+	gd.writeln('		this.x = x')
+	gd.writeln('		this.css.left = this.x')
+	gd.writeln('	}')
+	gd.writeln('	if (y!=null) {')
+	gd.writeln('		this.y = y')
+	gd.writeln('		this.css.top = this.y')
+	gd.writeln('	}')
+	gd.writeln('}')
+	gd.writeln('function DynLayerMoveBy(x,y) {')
+	gd.writeln('	this.moveTo(this.x+x,this.y+y)')
+	gd.writeln('}')
+	gd.writeln('function DynLayerShow() {')
+	gd.writeln('	this.css.visibility = (ns4)? "show" : "visible"')
+	gd.writeln('}')
+	gd.writeln('function DynLayerHide() {')
+	gd.writeln('	this.css.visibility = (ns4)? "hide" : "hidden"')
+	gd.writeln('}')
+	gd.writeln('function DynLayerAddon(id,nestref) {')
+	gd.writeln('	this.obj = id + "DynLayer"')
+	gd.writeln('	eval(this.obj + "=this")')
+	gd.writeln('}\n')
+	gd.writeln('// Path Object')
+	gd.writeln('// Copyright 1998 Dan Steinman')
+	gd.writeln('// Available at the Dynamic Duo (http://www.dansteinman.com/dynduo/)')
+	gd.writeln('// July 3, 1998.')
+	gd.writeln('// In order to use this code you must keep this disclaimer\n')
+	gd.writeln('function Path(dynlayer,name,arrayX,arrayY) {')
+	gd.writeln('	this.dynlayer = dynlayer.obj')
+	gd.writeln('	this.name = name')
+	gd.writeln('	this.arrayX = arrayX')
+	gd.writeln('	this.arrayY = arrayY')
+	gd.writeln('	this.loop = false')
+	gd.writeln('	this.speed = 30')
+	gd.writeln('	this.fn = null')
+	gd.writeln('	this.play = PathPlay')
+	gd.writeln('	this.slide = PathSlide')
+	gd.writeln('	this.pause = PathPause')
+	gd.writeln('	this.stop = PathStop')
+	gd.writeln('}')
+	gd.writeln('function PathPlay(loop,speed,fn) {')
+	gd.writeln('	if (this.active) return')
+	gd.writeln('	this.loop = (loop)? loop : false')
+	gd.writeln('	this.speed = (speed)? speed : 30')
+	gd.writeln('	this.fn = (fn)? fn : null')
+	gd.writeln('	if (!this.paused) this.i = 0')
+	gd.writeln('	this.active = true')
+	gd.writeln('	this.paused = false')
+	gd.writeln('	eval(this.dynlayer+"."+this.name+".slide()")')
+	gd.writeln('}')
+	gd.writeln('function PathSlide() {')
+	gd.writeln('	if (this.active && this.i < this.arrayX.length) {')
+	gd.writeln('		eval(this.dynlayer+".moveTo("+this.arrayX[this.i]+","+this.arrayY[this.i]+")")')
+	gd.writeln('		this.i += 1')
+	gd.writeln('		setTimeout(this.dynlayer+"."+this.name+".slide()",this.speed)')
+	gd.writeln('	}')
+	gd.writeln('	else if (!this.paused) {')
+	gd.writeln('		this.i = 0')
+	gd.writeln('		if (this.loop && this.active) setTimeout(this.dynlayer+"."+this.name+".slide()",this.speed)')
+	gd.writeln('		else {')
+	gd.writeln('			this.active = false')
+	gd.writeln('			eval(this.fn)')
+	gd.writeln('		}')
+	gd.writeln('	}')
+	gd.writeln('}')
+	gd.writeln('function PathPause() {')
+	gd.writeln('	if (this.active) {')
+	gd.writeln('		this.active = false')
+	gd.writeln('		this.paused = true')
+	gd.writeln('	}')
+	gd.writeln('}')
+	gd.writeln('function PathStop() {')
+	gd.writeln('	this.active = false')
+	gd.writeln('	this.paused = false')
+	gd.writeln('}\n')
+	gd.writeln('&lt;/SCRIPT&gt;')
+	gd.writeln('&lt;STYLE TYPE="text/css"&gt;')
+	gd.writeln('&lt;!--')
+	gd.writeln('#'+generatename+'Div {position:absolute; left:'+pc.xvalues[0]+'; top:'+pc.yvalues[0]+'; width:50; height:50; clip:rect(0,50,50,0); background-color:#000000; layer-background-color:#000000;}')
+	gd.writeln('--&gt;')
+	gd.writeln('&lt;/STYLE&gt;')
+	gd.writeln('&lt;/HEAD&gt;')
+	gd.writeln('')
+	gd.writeln('&lt;BODY onLoad="init()"&gt;')
+	gd.writeln('\n&lt;DIV ID="'+generatename+'Div"&gt;')
+	gd.writeln('&lt;/DIV&gt;\n')
+	if (start=="link") {
+		gd.writeln('&lt;A HREF="javascript:'+generatename+'.path'+pathnum+'.play('+loop+','+speed+')"&gt;Play&lt;/A&gt;,')
+		gd.writeln('&lt;A HREF="javascript:'+generatename+'.path'+pathnum+'.pause()"&gt;Pause&lt;/A&gt;,')
+		gd.writeln('&lt;A HREF="javascript:'+generatename+'.path'+pathnum+'.stop()"&gt;Stop&lt;/A&gt;\n')
+	}
+	gd.writeln('&lt;/BODY&gt;')
+	gd.writeln('&lt;/HTML&gt;')
+	gd.writeln('</PRE>')
+	gd.close()
+}
+
+onResize = go()
+
+function go() {
+	if (parent.control.loaded) {
+		parent.control.loaded = 0
+		location="workspace.html"
+	}
+}        
+
+//-->
+</SCRIPT>
+<STYLE type="text/css">
+<!--
+#spacerDiv {position:absolute; left:840; top:680; width:1; height:1;}
+#workareaDiv {position:absolute; left:100; top:100; width:640; height:480; clip:rect(0,640,480,0); layer-background-color:#FFFFFF; background-color:#FFFFFF; background:URL(grid.gif);}
+#previewareaDiv {position:absolute; left:100; top:100; width:640; height:480; clip:rect(0,640,480,0);}
+#previewSquareDiv {position:absolute; left:-50; top:-50; width:30; height:30; clip:rect(0,30,30,0); layer-background-color:#000000; background-color:#000000; visibility:hidden;}
+#crosshairxDiv {position:absolute; left:99; top:-1; width:642; height:1; clip:rect(0,642,1,0); layer-background-color:#C0C0C0; background-color:#C0C0C0;}
+#crosshairyDiv {position:absolute; left:-1; top:99; width:1; height:482; clip:rect(0,1,482,0); layer-background-color:#C0C0C0; background-color:#C0C0C0;}
+#toplineDiv {position:absolute; left:99; top:99; width:642; height:1; clip:rect(0,642,1,0); layer-background-color:#000000; background-color:#000000;}
+#bottomlineDiv {position:absolute; left:99; top:580; width:642; height:1; clip:rect(0,642,1,0); layer-background-color:#000000; background-color:#000000;}
+#leftlineDiv {position:absolute; left:99; top:99; width:1; height:482; clip:rect(0,1,482,0); layer-background-color:#000000; background-color:#000000;}
+#rightlineDiv {position:absolute; left:740; top:99; width:1; height:482; clip:rect(0,1,482,0); layer-background-color:#000000; background-color:#000000;}
+#linepoint1Div {position:absolute; left:0; top:-10; width:7;}
+#linepoint2Div {position:absolute; left:0; top:-10; width:7;}
+#c0 {position:absolute; left:0; top:-10; width:7;}
+-->
+</STYLE>
+</HEAD>
+
+<BODY BGCOLOR="#DEDEDE" onLoad="parent.control.begin()">
+
+<DIV ID="spacerDiv"></DIV>
+<DIV ID="workareaDiv"></DIV>
+
+<LAYER NAME="sourceLayer" LEFT=100 TOP=100 WIDTH=640 HEIGHT=480 CLIP="0,0,640,480" SRC="source.html"></LAYER>
+
+<DIV ID="previewareaDiv">
+<DIV ID="previewsquareDiv"></DIV>
+</DIV>
+
+<DIV ID="crosshairxDiv"></DIV>
+<DIV ID="crosshairyDiv"></DIV>
+
+<DIV ID="toplineDiv"></DIV>
+<DIV ID="bottomlineDiv"></DIV>
+<DIV ID="leftlineDiv"></DIV>
+<DIV ID="rightlineDiv"></DIV>
+
+<DIV ID="linepoint1Div"><IMG SRC="point-blue.gif" WIDTH=7 HEIGHT=7 BORDER=0></DIV>
+<DIV ID="linepoint2Div"><IMG SRC="point-blue.gif" WIDTH=7 HEIGHT=7 BORDER=0></DIV>
+
+<DIV ID="c0"><IMG SRC="point-green.gif" WIDTH=7 HEIGHT=7 BORDER=0></DIV>
+
+<SCRIPT LANGUAGE="JavaScript">
+document.writeln("<STYLE TYPE='text/css'>")
+for (var i=1;i<=parent.control.maxpoints-1;i++) {document.writeln("#c"+i+" {position:absolute; left:0; top:-10; width:7;}")}
+for (var i=0;i<=parent.control.maxspline-1;i++) {document.writeln("#s"+i+" {position:absolute; left:0; top:-10; width:7;}")}
+document.writeln("</STYLE>")
+for (var i=1;i<=parent.control.maxpoints-1;i++) {document.writeln("<DIV ID='c"+i+"'><IMG SRC='point.gif' WIDTH=7 HEIGHT=7 BORDER=0></DIV>")}
+for (var i=0;i<=parent.control.maxspline-1;i++) {document.writeln("<DIV ID='s"+i+"'><IMG SRC='point-spline.gif' WIDTH=7 HEIGHT=7 BORDER=0></DIV>")}
+</SCRIPT>
+
+</BODY>
+</HTML>

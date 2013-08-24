@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+<TITLE>Shockwave</TITLE>
+</HEAD>
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+//Hide script from browser viewing
+document.write('<SCRIPT LANGUAGE="Javascript"\></SCRIPT\> \n');
+
+var InternetExplorer = navigator.appName.indexOf("Microsoft") != -1;
+// Handle all the the FSCommand messages in a FutureSplash movie
+function clock_DoFSCommand(command, args) {
+  var clockObj = InternetExplorer ? clock : document.clock;
+  if(command == "CMD") {
+	answer = confirm(args);
+	if(answer) {
+	whichObj('music').TGotoFrame('_level0/MusicTrigger',28);
+	whichObj('music').Play('_level0/MusicTrigger');
+	}
+  }
+}
+//
+// FSCommand Hook for Internet Explorer 
+if (navigator.userAgent && navigator.userAgent.indexOf("MSIE")>=0 && (navigator.userAgent.indexOf("Windows 95")>=0 || navigator.userAgent.indexOf("Windows NT")>=0)) {
+	document.write('<SCRIPT LANGUAGE=VBScript\> \n');
+	document.write('on error resume next \n');
+	document.write('Sub clock_FSCommand(ByVal command, ByVal args)\n');
+	document.write('  call clock_DoFSCommand(command, args)\n');
+	document.write('end sub\n');
+	document.write('</SCRIPT\> \n');
+}
+
+//Show properties
+function ShowProp() {
+	var str;
+	str = "<h3>Property list</h3>";
+	for (qq in document.clock) {
+		str += qq + " = " + document.clock[qq] + "<br>";
+	}
+	document.write(str);
+//	alert(str);
+}
+//framenum = 1
+var utc = 0;
+function tick () {
+	whichObj('clock').TGotoFrame('_level0/Sec',framenum);
+	framenum = framenum + 1
+	if (framenum == 61) {
+     		framenum = 1;
+	}
+	setTimeout("tick ()",utc)
+}
+function setNum() {
+	whichObj('clock').TGotoFrame('_level0/Hour',52);
+	whichObj('clock').TGotoFrame('_level0/Minute',55);
+}
+function zoomMovie(fact) {
+	whichObj('clock').Zoom(fact);
+}
+function whichObj(objName) {
+	if(navigator.appName=="Netscape") {
+		return document[objName]
+	} else {
+		return window[objName]
+	}
+}
+function calibrate() {
+// get system clock time
+	var c = new Date();
+//  hours
+	hrs = c.getHours();
+	if(hrs > 11) hrs = hrs - 12;
+	hrs = hrs *5;
+// seconds
+	var sec = c.getSeconds();
+	framenum = sec;
+// minutes
+	var min = c.getMinutes();
+	hrs  = hrs + min/12;
+	whichObj('clock').TGotoFrame('_level0/Hour',hrs+1);
+	whichObj('clock').TGotoFrame('_level0/Minute',min);
+// start clock
+	tick()
+}
+function setUTC(value) {
+	utc = value;
+}
+//-->
+</SCRIPT>
+<BODY text="#FF0000" link="#FFFFFF" bgcolor="#303030" vlink="#FFFF00">
+<hr align="center" size="3" width="100%">
+<form name="Form1">
+<input  name="Xpos" type="Text" size="10" maxlength="10">utc
+</form>
+<b><center>Move mouse horizontally in here to adjust clock speed</center></b>
+<hr align="center" size="3" width="100%">
+
+<center>
+<EMBED SRC="TestMusic.swf"
+	swLiveConnect="true"
+	name="music"
+	LOOP=false 
+	WIDTH=450
+	HEIGHT=50
+	QUALITY=high 
+	BGCOLOR=#000000
+	TYPE="application/x-shockwave-flash" 	PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
+</EMBED>
+<br>
+<hr align="center" size="3" width="100%">
+<b><center>This separation is to illustrate that there are two movies</center></b>
+<hr align="center" size="3" width="100%">
+<br>
+<EMBED SRC="Clock1.swf"
+	swLiveConnect="true"
+	name="clock"
+	LOOP=false 
+	WIDTH=450
+	HEIGHT=350
+	QUALITY=high 
+	BGCOLOR=#000000
+	TYPE="application/x-shockwave-flash" 	PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
+</EMBED>
+</center>
+<br>
+<a  href=# onClick="whichObj('clock').Zoom(50);">2x</a>
+<a  href=# onClick="whichObj('clock').Zoom(0);">1x</a>
+<a  href=# onClick="whichObj('clock').Pan(20,0,1);">Pan Left</a>
+<a  href=# onClick="whichObj('clock').Pan(0,20,1);">Pan Up</a>
+<a  href=# onClick="whichObj('clock').Pan(-20,0,1);">Pan Right</a>
+<a  href=# onClick="whichObj('clock').Pan(0,-20,1);">Pan Down</a>
+
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+calibrate();
+//Show properties
+ShowProp();
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function trackMouse(ev) { 
+	utc = ev.pageX / 800 * 2000;
+	document.forms[0].Xpos.value=utc;
+
+} 
+document.captureEvents(Event.MOUSEMOVE) 
+document.onmousemove = trackMouse 
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>

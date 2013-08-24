@@ -1,0 +1,24 @@
+<script>
+<!--
+
+/*Form words check script credit-Website Abstraction (www.wsabstract.com) 200+ free JavaScripts here!
+*/
+
+function checkwords(cur){
+//change max # of words to determine below
+var maxwords=10
+if (document.images){
+var temp=cur.words.value.split(" ")
+if (temp.length>maxwords){
+alert("Please restrain your input to 10 or less words!")
+return false
+}
+}
+}
+//-->
+</script>
+
+<form onsubmit="return checkwords(this)">
+<strong>In 10 words or less, please tell us your qualifications:</strong><br><textarea rows="5" cols="38" name="words"></textarea>
+<br><input type="submit" value="Submit!">
+</form>

@@ -1,0 +1,158 @@
+<html>
+<HEAD>
+<title>Billabong 2000 : TV</title>
+
+<!--------------------------------------------------------------------------------------->
+<!-- This site is designed and maintained by Web Twentyone.Com, www.webtwentyone.com. ---> 
+<!-- Any problems blast an email to info@webtwentyone.com ------------------------------->
+<!--------------------------------------------------------------------------------------->
+
+<script language="JavaScript">
+<!--
+
+var isOpen=0
+osType = navigator.platform.substring(0,3);
+browserName = navigator.appName.substring(0,8);
+
+if (browserName == "Netscape" && osType == "Mac"){ 
+	var MaxWidth=555
+	var MinWidth=264
+	var fixedHeight=276
+	var WidthMin=555
+	var WidthMax=275
+}else if (browserName == "Microsof" && osType == "Mac"){ 
+	var MaxWidth=541
+	var MinWidth=264
+	var fixedHeight=280
+	var WidthMin=540
+	var WidthMax=265
+}else if (browserName == "Netscape" && osType == "Win"){ 
+	var MaxWidth=555
+	var MinWidth=264
+	var fixedHeight=284
+	var WidthMin=555
+	var WidthMax=275
+}else if (browserName == "Microsof" && osType == "Win"){ 
+	var MaxWidth=555
+	var MinWidth=275
+	var fixedHeight=309
+	var WidthMin=555
+	var WidthMax=275
+}else{
+	var MaxWidth=555
+	var MinWidth=275
+	var fixedHeight=309
+	var WidthMin=555
+	var WidthMax=275
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<script language="JavaScript" >
+
+function resize() {
+
+	if (isOpen==0) {
+		Open(WidthMax)
+	} else {
+		Close(WidthMin);
+	}
+}
+
+function Open(Width) {
+	if (browserName == "Netscape") {
+		if (Width < MaxWidth) {
+			parent.window.resizeTo(Width,fixedHeight);
+			xWidth=parent.window.outerWidth
+			xWidth = xWidth + 15;
+			setTimeout('Open(xWidth)',0);
+		} else {
+			parent.window.resizeTo(MaxWidth,fixedHeight);
+			isOpen=1;
+			setTimeout('isOpen=1;',50);
+		 }
+	}else {
+		if (Width < MaxWidth) {
+			parent.window.resizeTo(Width,fixedHeight);
+			xWidth=Width+15;
+			setTimeout('Open(xWidth)',0);
+		} else {
+			parent.window.resizeTo(MaxWidth,fixedHeight);
+			isOpen=1;
+			setTimeout('isOpen=1;',50);
+		 }
+		
+	}	 
+}
+
+function Close(Width) {
+	if (browserName == "Netscape") {
+		if (Width > MinWidth) {
+			parent.window.resizeTo(Width,fixedHeight);
+			xWidth=parent.window.outerWidth;
+			xWidth=Width - 15;
+			setTimeout('Close(xWidth)',0);
+		} else {
+			parent.window.resizeTo(MinWidth,fixedHeight);
+			isOpen=0;
+			setTimeout('isOpen=0;',50);
+		} 
+	}else {
+			if (Width > MinWidth) {
+			parent.window.resizeTo(Width,fixedHeight);
+			xWidth=Width-15;
+			setTimeout('Close(xWidth)',0);
+		} else {
+			parent.window.resizeTo(MinWidth,fixedHeight);
+			isOpen=0;
+			setTimeout('isOpen=0;',50);
+		} 
+	
+	}	
+}
+
+</script>
+</HEAD>
+<BODY bgcolor="#000000" onLoad="MM_preloadImages('img/lfrmh.gif')">
+<div id="Layer1" style="position:absolute; width:221px; height:264px; z-index:1; left: 24px; top: 0px"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://active.macromedia.com/flash/cabs/swflash.cab#version=2,0,0,0"
+ id=b2ktv width=279 height=280>
+    <param name=movie value="bongtv_load.swf">
+    <param name=quality value=high>
+    <param name=bgcolor value=#000000>
+    <embed src="bongtv_load.swf"
+ swliveconnect=FALSE width=279 height=280
+ quality=high bgcolor=#000000
+ type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
+    </embed></object></div>
+	
+
+ 
+<div id="Layer2" style="position:absolute; width:8px; height:44px; z-index:2; left: 0px; top: 1px"><img src="img/lfrt.gif" width="24" height="63"> 
+</div>
+<div id="Layer3" style="position:absolute; width:10px; height:98px; z-index:3; left: 0px; top: 64px"><a href="javascript:resize();" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('button','','img/lfrmh.gif',1)"><img src="img/lfrm.gif" width="24" height="124" name="button" border="0"></a></div>
+<div id="Layer4" style="position:absolute; width:16px; height:76px; z-index:4; left: 0px; top: 188px"><img src="img/lfrb.gif" width="24" height="89"></div> 
+</BODY>
+</html>

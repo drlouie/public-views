@@ -1,0 +1,33 @@
+<style>
+<!--
+
+#tickertape{
+position:relative;
+
+layer-background-color:black;
+width:400;
+height:12;
+}
+
+#subtickertape{
+background-color:black;
+position:absolute;
+border: 1px solid black;
+width:400;
+height:12;
+
+}
+
+
+.subtickertapefont{
+font:bold 12px Verdana;
+text-decoration:none;
+color:white;
+}
+
+.subtickertapefont a{
+color:white;
+text-decoration:none;
+}
+-->
+</style>

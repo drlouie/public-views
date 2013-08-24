@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>The Dynamic Duo - Sliding Demo 1</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+ns4 = (document.layers)? true:false
+ie4 = (document.all)? true:false
+
+function init() {
+	if (ns4) block = document.blockDiv
+	if (ie4) block = blockDiv.style
+	block.xpos = parseInt(block.left)
+}
+
+function slide() {
+	if (block.xpos < 300) {
+		block.xpos += 5
+		block.left = block.xpos
+		setTimeout("slide()",30)
+	}
+}
+
+function restart() {
+	block.xpos = 50
+	block.left = block.xpos
+}
+
+function moveTo(obj,x,y) {
+	obj.xpos = x
+	obj.ypos = y
+	obj.left = obj.xpos
+	obj.top = obj.ypos
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" onLoad="init()">
+
+<A HREF="javascript:slide()">slide</A> - <A HREF="javascript:moveTo(block,50,100)">restart</A>
+
+<DIV ID="blockDiv" STYLE="position:absolute; left:50; top:100; width:30;">
+<IMG SRC="block.gif" WIDTH=30 HEIGHT=30 BORDER=0>
+</DIV>
+
+</BODY>
+</HTML>

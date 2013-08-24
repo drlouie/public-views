@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+
+<HTML>
+
+ <HEAD>
+  <TITLE>Welcome</TITLE>
+
+  <META http-equiv="Content-Script-Type" content="text/javascript">
+
+  <SCRIPT TYPE="text/javascript" SRC="Dispatcher.js"></SCRIPT>
+
+  <SCRIPT LANGUAGE="VBScript" SRC="Dispatcher.vbs"></SCRIPT>
+ </HEAD>
+
+
+ <BODY BGCOLOR="#ffffff">
+
+  <SCRIPT LANGUAGE="JavaScript">
+
+    MM_FlashDispatch(
+	"flash/index.html",
+	"5.0",
+	false,				// don't require latest rev. of plug-in
+	"upgradeFlash.html",
+	!MM_FlashUserDemurred(),	// don't install if user said no once
+	"installFlash.html",
+	"noflash/index.html",
+	false
+    );
+
+  </SCRIPT>
+  
+ </BODY>
+ 
+</HTML>

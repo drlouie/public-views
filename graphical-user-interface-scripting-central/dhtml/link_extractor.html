@@ -1,0 +1,24 @@
+
+<script language="JavaScript1.2">
+<!--
+
+/*
+Link Extractor Script- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+function extractlinks(){
+var links=document.all.tags("A")
+var total=links.length
+var win2=window.open("","","menubar,scrollbars")
+win2.document.write("<h2>Total Links="+total+"</h2><br>")
+for (i=0;i<total-1;i++){
+win2.document.write(links[i].outerHTML+"<br>")
+}
+}
+//-->
+</script>
+<button onClick="extractlinks()">Extract Links</button>

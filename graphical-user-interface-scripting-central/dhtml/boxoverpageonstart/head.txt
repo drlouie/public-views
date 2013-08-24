@@ -1,0 +1,12 @@
+<style>
+<!--
+.intro{
+position:absolute;
+left:0;
+top:0;
+layer-background-color:white;
+background-color:white;
+border:0.1px solid white
+}
+-->
+</style>

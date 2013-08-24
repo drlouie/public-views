@@ -1,0 +1,10 @@
+function changeOpac(opacity, id) {
+    var object = document.getElementById(id).style; 
+
+    object.opacity = (opacity / 100); 
+    object.MozOpacity = (opacity / 100); 
+    object.KhtmlOpacity = (opacity / 100); 
+    object.filter = "alpha(opacity=" + opacity + ")"; 
+    object.visibility = 'visible';
+} 
+

@@ -1,0 +1,5 @@
+text1a=<font color="#c6b5de"><u>Webstar Web Design
+&&text2a=<font color="#fff000">Logos as low as $50
+&&text3a=<font color="#7bc618" size="10"><b>www.newpage.cc
+&&text4a=<font color="#kx0000"><a href="http://www.newpage.cc/">Click here to learn more</a>
+&&mynum=20&&delay=4000

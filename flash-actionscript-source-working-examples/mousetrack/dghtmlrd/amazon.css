@@ -1,0 +1,48 @@
+a:link {
+	color: #006699;
+	text-decoration: underline;
+}
+
+/* Utilisation                                                 */
+/*  <p class='monStyle'>My Text here</p>                       */
+/*  <span class='monStyle'>My new text with monStyle</span>    */
+
+.product {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2D5164;
+}
+
+.manufacturer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: italic;
+	margin-left: 10px;
+	color: #FF7C00;
+}
+
+.price {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #CC6600;
+}
+
+.percent {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	color: #EE6363;
+}
+
+/*******************************/
+
+author {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 10px;
+	color: #6699CC;
+}
+

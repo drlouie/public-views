@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE>Flask Soccer</TITLE>
+</HEAD>
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+//
+// based on browser set object
+//
+function whichObj(objName) {
+	if(navigator.appName=="Netscape") {
+		return document[objName]
+	} else {
+		return window[objName]
+	}
+}
+//-->
+</SCRIPT>
+<BODY text="#FF0000" link="#FFFFFF" bgcolor="#000000" vlink="#FFFF00">
+<OBJECT ID="sball" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+    	codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=3,0,0,0"
+      width="320" height="240"> 
+     		<PARAM name="Movie" value="soccerball.swf">
+     		<PARAM NAME="BGColor" VALUE="#FFFFFF">
+     		<PARAM NAME="Quality" VALUE="High">
+     		<PARAM NAME="Loop" VALUE="False">
+     		<PARAM NAME="Play" VALUE="True">
+	<EMBED SRC="soccerball.swf"
+		swLiveConnect="true"
+		name="sball"
+		LOOP=false 
+		WIDTH=320
+		HEIGHT=240
+		QUALITY=high 
+		BGCOLOR=#FFFFFF
+		TYPE="application/x-shockwave-flash" 	PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
+	</EMBED>
+</object>
+<SCRIPT LANGUAGE=JavaScript>
+<!-- 
+for(i=0; i<32767; i++) {
+	if(whichObj('sball').PercentLoaded() == 100) {
+		whichObj('sball').TGotoFrame('_level0/Zmotion',49);
+		whichObj('sball').TGotoFrame('_level0/Zmotion/Ymotion',49);
+		whichObj('sball').TGotoFrame('_level0/Zmotion/Ymotion/Xmotion',49);
+		break;
+	}
+	if(i == 32767) alert("Error loading soccer!\n\nClick your browser Reload.");
+}
+ns4 = (document.layers)? true:false
+ie4 = (document.all)? true:false
+var Izf = 0;
+function zclick() {
+	Izf+=10;
+	if(Izf >100) Izf = 0;
+}
+function mouseMove(e) {
+     if (ns4) {var x=e.screenX; var y=e.screenY}
+     if (ie4) {var x=event.screenX; var y=event.screenY}
+	Ixf = Math.round(x*.3);
+	Iyf = 100 - Math.round( (y-340)*0.6)
+	whichObj('sball').TGotoFrame('_level0/Zmotion/Ymotion/Xmotion',Ixf);
+	whichObj('sball').TGotoFrame('_level0/Zmotion/Ymotion',Iyf);
+	whichObj('sball').TGotoFrame('_level0/Zmotion',Izf);
+}
+if (ns4) document.captureEvents(Event.MOUSEMOVE || Event.MOUSECLICK) 
+document.onmousemove =mouseMove 
+document.onclick = zclick
+//-->
+</SCRIPT>
+<br><br>Move the mouse for X-Y motion.  Click the mouse for Z motion.
+</BODY>
+</HTML>

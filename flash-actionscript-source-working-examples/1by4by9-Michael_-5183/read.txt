@@ -1,0 +1,33 @@
+Welcome to another open source movie.
+
+This movie is a basic navigation system where the user can fill in the blanks and just
+mess around with it a bit.
+
+The movie start as a rip off of an open source by  http://www.designstrategy.gq.nu 
+available on flashkit at http://www.flashkit.com/movies/Interfaces/Sites/designst-designst-5172/index.shtml
+
+I downloaded the movie because I liked the music, to my surprise the music wasn't in the source code,
+so just for fun I thought to see if I could improve on the movie that they created.  
+
+In the end there is only the navigation buttons left from the original movie and even those are modified a little.  
+
+This movie took me about eight hours to create (including the video editing), which is quite long for me because I usually lose interest after
+about an hour.    It still needs a good preloader and a scroll bar added to it, so if anyone want's to do that go ahead and upload it again.
+
+It also looks very similar to my other open source movie on flashkit called microbes 
+http://www.flashkit.com/movies/Interfaces/Other/Microbes-Michael_-3908/index.shtml 
+
+I just couldn't help it.
+
+Anyway I welcome any feedback since the only email I get is spam.
+
+Take Care.
+Mike
+
+mailto@indiamike.com
+
+www.indiamike.com
+
+June 23, 2001
+Toms River 
+NJ

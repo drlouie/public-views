@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<featuredProjects>
+	<proj>
+		<label>Sapmple 01</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_01.jpg</pic>
+	</proj>
+	<proj>
+		<label>Sapmple 02</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_02.jpg</pic>
+	</proj>
+	<proj>
+		<label>Sapmple 03</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_03.jpg</pic>
+	</proj>
+	<proj>
+		<label>Sapmple 04</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_04.jpg</pic>
+	</proj>
+	<proj>
+		<label>Sapmple 05</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_05.jpg</pic>
+	</proj>
+	<proj>
+		<label>Sapmple 06</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_06.jpg</pic>
+	</proj>
+	<proj>
+		<label>Sapmple 07</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_07.jpg</pic>
+	</proj>
+	<proj>
+		<label>Sapmple 08</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_08.jpg</pic>
+	</proj>
+	<proj>
+		<label>Sapmple 09</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_09.jpg</pic>
+	</proj>
+	<proj>
+		<label>Sapmple 10</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_10.jpg</pic>
+	</proj>
+	<proj>
+		<label>Sapmple 11</label>
+		<link>/marioz.htm</link>
+		<width>600</width>
+		<height>400</height>
+		<pic>sample_11.jpg</pic>
+	</proj>
+</featuredProjects>

@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Radio Bar Test</title>
+<script language="JavaScript">
+<!--
+on = new Image();
+on.src = "show_radio.gif";
+
+off = new Image();
+off.src = "hide_radio.gif";
+
+ns4 = (document.layers)? true:false
+ie4 = (document.all)? true:false
+
+function runit() {
+	if (ns4) block = document.blockDiv
+	if (ie4) block = blockDiv.style
+	block.xpos = parseInt(block.left)
+	block.ypos = parseInt(block.top)
+}
+
+function checkPos() {
+	if (block.xpos == 0) {
+	moveOut()			
+	}
+	else if (block.xpos == -230) {
+	moveIn()			
+	}
+}
+
+function moveIn() {
+	if (block.xpos < 0) {		
+	block.xpos += 10		
+	block.left = block.xpos
+	setTimeout("moveIn()",1);
+	
+	if (ns4) document.blockDiv.document.images['radiobar'].src = off.src
+	else document.images['radiobar'].src = off.src
+	}
+}
+
+function moveOut() {
+	if (block.xpos > -230){		
+	block.xpos -= 10		
+	block.left = block.xpos
+	setTimeout("moveOut()",1);
+		
+	if (ns4) document.blockDiv.document.images['radiobar'].src = on.src
+	else document.images['radiobar'].src = on.src
+	}
+}
+
+function showObject(obj) {
+	if (ns4) obj.visibility = "show"
+	else if (ie4) obj.visibility = "visible"
+}
+
+function hideObject(obj) {
+	if (ns4) obj.visibility = "hide"
+	else if (ie4) obj.visibility = "hidden"
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#000000" onLoad="runit()">
+
+<DIV ID="blockDiv" STYLE="position:absolute; left:-230px; top:100px; width:250px; height:100px; clip:rect(0px 250px 100px 0px)">
+<table width="250" cellpadding=0 cellspacing=0 align="right" border=0>
+<tr>
+<td align="left" width="230" bgcolor="#808080">
+
+</td>
+<td align="right" width="20">
+<a href="#" OnMouseOver="javascript:checkPos()"><img src="show_radio.gif" name="radiobar"  border=0 width=20 height=100></a>
+</td>
+</tr>
+</table>
+</DIV>
+
+</BODY>
+</HTML>
+

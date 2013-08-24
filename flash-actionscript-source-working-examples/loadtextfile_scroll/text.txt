@@ -1,0 +1,3 @@
+text=You can use this to allow quick text changes in Flash movies without actually having to open up the Flash file.  It is nice for simple changes of paragraphs.
+I would not recomment using this if your text is going to need a lot of formatting, like tables and so forth.
+To change the color/size of your text simply double-click your text field in the Flash movie set the color/size and that should do it!

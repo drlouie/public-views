@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XML Dynamic Gallery with Popup Window -- by marioz --</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<script language="JavaScript"> 
+ <!-- //
+var popNameWindow = null;  // This must be declared as a global
+function MakePop(width,height) {
+closePop();
+var features = 'width=' + width + ',height=' + height;
+
+ popNameWindow = window.open('','HMX',features);
+ popNameWindow.focus();
+ }
+
+function openNewWindow(URLtoOpen, windowName, windowFeatures)
+{
+	closePop();
+	popNameWindow=window.open(URLtoOpen, windowName, windowFeatures);
+
+ popNameWindow.focus();
+ }
+function closePop() {
+    if ( ( popNameWindow != null ) && ( !popNameWindow.closed ))  {
+        // window is still open -> close it
+        popNameWindow.close();
+        popNameWindow = null;
+    }
+}
+
+ // -->
+</script>
+
+</head>
+
+<body bgcolor="#CCCCCC" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" height="100%" border="0" cellpadding="1" cellspacing="1">
+  <tr>
+    <td align="center" valign="middle"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="600" height="161">
+        <param name="movie" value="XML_dynamic_gallery.swf">
+        <param name="quality" value="high">
+        <embed src="XML_dynamic_gallery.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="600" height="161"></embed></object></td>
+  </tr>
+</table>
+</body>
+</html>

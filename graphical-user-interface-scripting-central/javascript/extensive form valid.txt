@@ -1,0 +1,48 @@
+<HTML>
+<HEAD><TITLE>Validate This!</TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+
+// Check for email address: look for [@] and [.] function isEmail(elm) {
+    if (elm.value.indexOf("@") + "" != "-1" &&
+        elm.value.indexOf(".") + "" != "-1" && elm.value != "") 
+    return true;    
+    else return false;
+    }
+
+// Is it A positive integer?
+function isInt(elm) {
+var elmstr = elm.value + ""; 
+    if (elmstr == "") return false;
+    for (var i = 0; i < elmstr.length; i++) {
+        if (elmstr.charAt(i) < "0" ||
+            elmstr.charAt(i) > "9") {
+        return false;
+        }
+    }
+return true;
+}
+
+// Is it a phone number?
+function isPhone(elm) {
+var elmstr = elm.value + "";
+    if (elmstr.length != 12) return false;
+    for (var i = 0; i < elmstr.length; i++) {
+        if ((i < 3 && i > -1) ||
+            (i > 3 && i < 7) || 
+            (i > 7 && i < 12)) {
+            if (elmstr.charAt(i) < "0" || 
+                elmstr.charAt(i) > "9") return false;
+        }
+        else if (elmstr.charAt(i) != "-") return false;
+    }        
+return true;
+}
+
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR = "#FFFFFF">
+</BODY>
+</html>
+

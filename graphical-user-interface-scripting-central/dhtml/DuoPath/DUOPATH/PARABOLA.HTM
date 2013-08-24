@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<!--
+DuoPath 1.11
+Copyright 1998 Dan Steinman
+July 23, 1998.
+-->
+<TITLE>DuoPath - Parabola</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function drawParabola() {
+	var type = Number(document.parformf.typef.options[document.parformf.typef.selectedIndex].value)
+	var xDistance = Number(document.parformf.xDistancef.value)
+	var yDistance = Number(document.parformf.yDistancef.value)
+	var xDirection = Number(document.parformf.xDirectionf.options[document.parformf.xDirectionf.selectedIndex].value)
+	var yDirection = Number(document.parformf.yDirectionf.options[document.parformf.yDirectionf.selectedIndex].value)
+	var xinc = Number(document.parformf.xincf.value)
+	opener.parabola(type,xDistance,yDistance,xDirection,yDirection,xinc)
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0">
+
+<FORM NAME="parformf">
+<FONT FACE="Arial" SIZE=2><B>Parabola Path</B></FONT>
+
+<P><TABLE BORDER=1 CELLSPACING=1 CELLPADDING=1 BGCOLOR="#E4E4E4">
+<TR><TD><FONT FACE="Arial" SIZE=2>Parabola Type:</FONT></TD>
+<TD><SELECT NAME="typef">
+<OPTION VALUE="2" SELECTED>Arcing
+<OPTION VALUE="1">Dropping
+</SELECT></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Horizontal Distance:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="xDistancef" VALUE="100" SIZE="3" MAXLENGTH="3"></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Vertical Distance:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="yDistancef" VALUE="150" SIZE="3" MAXLENGTH="3"></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Horizontal Direction:</FONT></TD>
+<TD><SELECT NAME="xDirectionf">
+<OPTION VALUE="1" SELECTED>right
+<OPTION VALUE="-1">left
+</SELECT></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Vertical Direction:</FONT></TD>
+<TD><SELECT NAME="yDirectionf">
+<OPTION VALUE="1" SELECTED>down
+<OPTION VALUE="-1">up
+</SELECT></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Horizontal Increment:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="xincf" VALUE="4" SIZE="3" MAXLENGTH="3"></TD></TR>
+</TABLE>
+
+<P><INPUT TYPE="BUTTON" VALUE="Draw Parabola" onClick="drawParabola()">
+<INPUT TYPE="BUTTON" VALUE="Delete Parabola" onClick="opener.deleteParabola()">
+<P><INPUT TYPE="BUTTON" VALUE="Close Window" onClick="self.close()">
+
+</FORM>
+
+</BODY>
+</HTML>

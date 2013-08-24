@@ -1,0 +1,30 @@
+*********************** d i s c l a i m e r**************************
+*                                                                   *
+*   This flash-file was made by © 2000 Patrick Jansen Vormgeving f  *
+*   You may modify and use this file for personal use, as long as   *
+*   you leave a notice of artistic creation by Patrick Jansen       *
+*   Vormgeving either in source code or in copyrights-section of    *
+*   resulting work.                                                 *
+*                                                                   *
+*********************************************************************
+
+The only thing which i have not been able to make more automatic is
+the size of the window. It is not too difficult to change manualy
+however. If you open MC text1 there you can change any sizes you want.
+However, to change the text-scroller-height you will need to change 
+the following variable in frame 4 or MC text1:
+Set Variable: "balkheight" = "80"
+and you will have to change the underlying bar (graphic: bar) in the 
+3 frames of MC scrollbar manualy. Be carefull not to change te size
+of the scroll-button (MC scroll drag mc) here. Also correct the inicial
+possition of the scroll button here (set it to bottom, the effect 
+will be "mirrored" in result)
+
+To see a more advance variation, download
+http://orbita.starmedia.com/~pjv/files/multi-windows-inc.exe
+for a demo. This file will be sent on request only (to keep some of
+the direct competition behind ;-)
+
+Patrick Jansen
+http://orbita.starmedia.com/~pjv
+patrick@notenbomer.nl

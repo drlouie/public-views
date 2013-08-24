@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><ProductInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xml.amazon.com/schemas3/dev-lite.xsd">
+
+<Request><Args><Arg value="All" name="offer"></Arg><Arg value="us" name="locale"></Arg><Arg value="" name="page"></Arg><Arg value="css" name="KeywordSearch"></Arg><Arg value="ref=ase_xmlforaspnetd-20" name="dev-t"></Arg><Arg value="D3CDFQB8TFAH4L" name="t"></Arg><Arg value="xml" name="f"></Arg><Arg value="books" name="mode"></Arg><Arg value="lite" name="type"></Arg><Arg value=" pmrank" name="sort"></Arg></Args></Request>   <TotalResults>101</TotalResults>
+   <TotalPages>11</TotalPages>
+   <Details url="http://www.amazon.com/exec/obidos/ASIN/073571245X/D3CDFQB8TFAH4L?dev-t=ref=ase_xmlforaspnetd-20%26camp=2025%26link_code=xm2">
+      <Asin>073571245X</Asin>
+      <ProductName>Eric Meyer on CSS: Mastering the Language of Web Design</ProductName>
+      <Catalog>Book</Catalog>
+
+      <Authors>
+         <Author>Eric A. Meyer</Author>
+      </Authors>
+      <ReleaseDate>28 June, 2002</ReleaseDate>
+      <Manufacturer>New Riders</Manufacturer>
+      <ImageUrlSmall>http://images.amazon.com/images/P/073571245X.01.THUMBZZZ.jpg</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/images/P/073571245X.01.MZZZZZZZ.jpg</ImageUrlMedium>
+
+      <ImageUrlLarge>http://images.amazon.com/images/P/073571245X.01.LZZZZZZZ.jpg</ImageUrlLarge>
+      <Availability>Usually ships within 24 hours</Availability>
+      <ListPrice>$45.00</ListPrice>
+      <OurPrice>$31.50</OurPrice>
+      <UsedPrice>$26.00</UsedPrice>
+   </Details>
+
+   <Details url="http://www.amazon.com/exec/obidos/ASIN/1565926226/D3CDFQB8TFAH4L?dev-t=ref=ase_xmlforaspnetd-20%26camp=2025%26link_code=xm2">
+      <Asin>1565926226</Asin>
+      <ProductName>Cascading Style Sheets: The Definitive Guide</ProductName>
+      <Catalog>Book</Catalog>
+      <Authors>
+         <Author>Eric A. Meyer</Author>
+      </Authors>
+
+      <ReleaseDate>15 May, 2000</ReleaseDate>
+      <Manufacturer>O'Reilly &amp; Associates</Manufacturer>
+      <ImageUrlSmall>http://images.amazon.com/images/P/1565926226.01.THUMBZZZ.jpg</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/images/P/1565926226.01.MZZZZZZZ.jpg</ImageUrlMedium>
+      <ImageUrlLarge>http://images.amazon.com/images/P/1565926226.01.LZZZZZZZ.jpg</ImageUrlLarge>
+
+      <Availability>Usually ships within 24 hours</Availability>
+      <ListPrice>$34.95</ListPrice>
+      <OurPrice>$24.47</OurPrice>
+      <UsedPrice>$20.97</UsedPrice>
+   </Details>
+   <Details url="http://www.amazon.com/exec/obidos/ASIN/0321130073/D3CDFQB8TFAH4L?dev-t=ref=ase_xmlforaspnetd-20%26camp=2025%26link_code=xm2">
+      <Asin>0321130073</Asin>
+
+      <ProductName>HTML for the World Wide Web with XHTML and CSS: Visual QuickStart Guide, Fifth Edition</ProductName>
+      <Catalog>Book</Catalog>
+      <Authors>
+         <Author>Elizabeth Castro</Author>
+      </Authors>
+      <ReleaseDate>17 September, 2002</ReleaseDate>
+      <Manufacturer>Peachpit Press</Manufacturer>
+
+      <ImageUrlSmall>http://images.amazon.com/images/P/0321130073.01.THUMBZZZ.jpg</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/images/P/0321130073.01.MZZZZZZZ.jpg</ImageUrlMedium>
+      <ImageUrlLarge>http://images.amazon.com/images/P/0321130073.01.LZZZZZZZ.jpg</ImageUrlLarge>
+      <Availability>Usually ships within 24 hours</Availability>
+      <ListPrice>$21.99</ListPrice>
+      <OurPrice>$15.39</OurPrice>
+
+      <UsedPrice>$10.50</UsedPrice>
+   </Details>
+   <Details url="http://www.amazon.com/exec/obidos/ASIN/0735712638/D3CDFQB8TFAH4L?dev-t=ref=ase_xmlforaspnetd-20%26camp=2025%26link_code=xm2">
+      <Asin>0735712638</Asin>
+      <ProductName>Designing CSS Web Pages</ProductName>
+      <Catalog>Book</Catalog>
+      <Authors>
+
+         <Author>Christopher Schmitt</Author>
+      </Authors>
+      <ReleaseDate>20 September, 2002</ReleaseDate>
+      <Manufacturer>New Riders</Manufacturer>
+      <ImageUrlSmall>http://images.amazon.com/images/P/0735712638.01.THUMBZZZ.jpg</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/images/P/0735712638.01.MZZZZZZZ.jpg</ImageUrlMedium>
+
+      <ImageUrlLarge>http://images.amazon.com/images/P/0735712638.01.LZZZZZZZ.jpg</ImageUrlLarge>
+      <Availability>Usually ships within 24 hours</Availability>
+      <ListPrice>$29.99</ListPrice>
+      <OurPrice>$20.99</OurPrice>
+      <UsedPrice>$13.00</UsedPrice>
+   </Details>
+
+   <Details url="http://www.amazon.com/exec/obidos/ASIN/0957921829/D3CDFQB8TFAH4L?dev-t=ref=ase_xmlforaspnetd-20%26camp=2025%26link_code=xm2">
+      <Asin>0957921829</Asin>
+      <ProductName>HTML Utopia: Designing Without Tables Using CSS</ProductName>
+      <Catalog>Book</Catalog>
+      <Authors>
+         <Author>Dan Shafer</Author>
+      </Authors>
+
+      <ReleaseDate>01 May, 2003</ReleaseDate>
+      <Manufacturer>SitePoint Pty Ltd</Manufacturer>
+      <ImageUrlSmall>http://images.amazon.com/images/P/0957921829.01.THUMBZZZ.jpg</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/images/P/0957921829.01.MZZZZZZZ.jpg</ImageUrlMedium>
+      <ImageUrlLarge>http://images.amazon.com/images/P/0957921829.01.LZZZZZZZ.jpg</ImageUrlLarge>
+      <Availability>Usually ships within 24 hours</Availability>
+
+      <ListPrice>$39.95</ListPrice>
+      <OurPrice>$39.95</OurPrice>
+   </Details>
+   <Details url="http://www.amazon.com/exec/obidos/ASIN/0201730847/D3CDFQB8TFAH4L?dev-t=ref=ase_xmlforaspnetd-20%26camp=2025%26link_code=xm2">
+      <Asin>0201730847</Asin>
+      <ProductName>DHTML and CSS for the World Wide Web: Visual QuickStart Guide (2nd Edition)</ProductName>
+      <Catalog>Book</Catalog>
+
+      <Authors>
+         <Author>Jason Cranford Teague</Author>
+      </Authors>
+      <ReleaseDate>24 May, 2001</ReleaseDate>
+      <Manufacturer>Peachpit Press</Manufacturer>
+      <ImageUrlSmall>http://images.amazon.com/images/P/0201730847.01.THUMBZZZ.jpg</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/images/P/0201730847.01.MZZZZZZZ.jpg</ImageUrlMedium>
+
+      <ImageUrlLarge>http://images.amazon.com/images/P/0201730847.01.LZZZZZZZ.jpg</ImageUrlLarge>
+      <Availability>Usually ships within 24 hours</Availability>
+      <ListPrice>$21.99</ListPrice>
+      <OurPrice>$15.39</OurPrice>
+      <UsedPrice>$10.12</UsedPrice>
+   </Details>
+
+   <Details url="http://www.amazon.com/exec/obidos/ASIN/0596001207/D3CDFQB8TFAH4L?dev-t=ref=ase_xmlforaspnetd-20%26camp=2025%26link_code=xm2">
+      <Asin>0596001207</Asin>
+      <ProductName>CSS Pocket Reference</ProductName>
+      <Catalog>Book</Catalog>
+      <Authors>
+         <Author>Eric A. Meyer</Author>
+      </Authors>
+
+      <ReleaseDate>May, 2001</ReleaseDate>
+      <Manufacturer>O'Reilly &amp; Associates</Manufacturer>
+      <ImageUrlSmall>http://images.amazon.com/images/P/0596001207.01.THUMBZZZ.jpg</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/images/P/0596001207.01.MZZZZZZZ.jpg</ImageUrlMedium>
+      <ImageUrlLarge>http://images.amazon.com/images/P/0596001207.01.LZZZZZZZ.jpg</ImageUrlLarge>
+
+      <Availability>Usually ships within 24 hours</Availability>
+      <ListPrice>$9.95</ListPrice>
+      <OurPrice>$9.95</OurPrice>
+      <UsedPrice>$3.95</UsedPrice>
+   </Details>
+   <Details url="http://www.amazon.com/exec/obidos/ASIN/0201758342/D3CDFQB8TFAH4L?dev-t=ref=ase_xmlforaspnetd-20%26camp=2025%26link_code=xm2">
+      <Asin>0201758342</Asin>
+
+      <ProductName>The Web Wizard's Guide to DHTML and CSS</ProductName>
+      <Catalog>Book</Catalog>
+      <Authors>
+         <Author>Steven G. Estrella</Author>
+      </Authors>
+      <ReleaseDate>10 June, 2002</ReleaseDate>
+      <Manufacturer>Pearson Addison Wesley</Manufacturer>
+
+      <ImageUrlSmall>http://images.amazon.com/images/P/0201758342.01.THUMBZZZ.jpg</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/images/P/0201758342.01.MZZZZZZZ.jpg</ImageUrlMedium>
+      <ImageUrlLarge>http://images.amazon.com/images/P/0201758342.01.LZZZZZZZ.jpg</ImageUrlLarge>
+      <Availability>Usually ships within 7 to 11 days</Availability>
+      <ListPrice>$28.40</ListPrice>
+      <OurPrice>$28.40</OurPrice>
+
+      <UsedPrice>$17.50</UsedPrice>
+   </Details>
+   <Details url="http://www.amazon.com/exec/obidos/ASIN/0735711321/D3CDFQB8TFAH4L?dev-t=ref=ase_xmlforaspnetd-20%26camp=2025%26link_code=xm2">
+      <Asin>0735711321</Asin>
+      <ProductName>JavaScript + Css + DOM Magic (With CD-ROM)</ProductName>
+      <Catalog>Book</Catalog>
+      <Authors>
+
+         <Author>Makiko Itoh</Author>
+      </Authors>
+      <ReleaseDate>15 June, 2002</ReleaseDate>
+      <Manufacturer>New Riders</Manufacturer>
+      <ImageUrlSmall>http://images.amazon.com/images/P/0735711321.01.THUMBZZZ.jpg</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/images/P/0735711321.01.MZZZZZZZ.jpg</ImageUrlMedium>
+
+      <ImageUrlLarge>http://images.amazon.com/images/P/0735711321.01.LZZZZZZZ.jpg</ImageUrlLarge>
+      <Availability>Usually ships within 24 hours</Availability>
+      <ListPrice>$39.99</ListPrice>
+      <OurPrice>$27.99</OurPrice>
+      <UsedPrice>$22.95</UsedPrice>
+   </Details>
+
+   <Details url="http://www.amazon.com/exec/obidos/ASIN/0878332197/D3CDFQB8TFAH4L?dev-t=ref=ase_xmlforaspnetd-20%26camp=2025%26link_code=xm2">
+      <Asin>0878332197</Asin>
+      <ProductName>The CSS Hunley: The Greatest Undersea Adventure of the Civil War</ProductName>
+      <Catalog>Book</Catalog>
+      <Authors>
+         <Author>Richard Bak</Author>
+      </Authors>
+
+      <ReleaseDate>June, 1999</ReleaseDate>
+      <Manufacturer>Taylor Pub</Manufacturer>
+      <ImageUrlSmall>http://images.amazon.com/images/P/0878332197.01.THUMBZZZ.jpg</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/images/P/0878332197.01.MZZZZZZZ.jpg</ImageUrlMedium>
+      <ImageUrlLarge>http://images.amazon.com/images/P/0878332197.01.LZZZZZZZ.jpg</ImageUrlLarge>
+      <Availability>Usually ships within 24 hours</Availability>
+
+      <ListPrice>$29.95</ListPrice>
+      <OurPrice>$20.97</OurPrice>
+      <UsedPrice>$15.80</UsedPrice>
+   </Details>
+</ProductInfo>

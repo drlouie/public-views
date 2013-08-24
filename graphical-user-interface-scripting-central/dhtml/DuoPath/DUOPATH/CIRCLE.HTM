@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<!--
+DuoPath 1.11
+Copyright 1998 Dan Steinman
+July 23, 1998.
+-->
+<TITLE>DuoPath - Circle </TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function drawCircle() {
+	var amount = Number(document.circleformf.amountf.options[document.circleformf.amountf.selectedIndex].value)
+	var radius = Number(document.circleformf.radiusf.value)
+	var anglestart = Number(document.circleformf.anglestartf.value)
+	var angleinc = Number(document.circleformf.angleincf.value)
+	var direction = Number(document.circleformf.directionf.options[document.circleformf.directionf.selectedIndex].value)
+	var vertical = Number(document.circleformf.verticalf.value)
+	var horizontal = Number(document.circleformf.horizontalf.value)
+	var slant = Number(document.circleformf.slantf.value)
+	window.opener.parent.workspace.circle(radius,angleinc,anglestart,direction,vertical,horizontal,amount,slant)
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0">
+
+<FORM NAME="circleformf">
+<FONT FACE="Arial" SIZE=2><B>Circle Path</B></FONT>
+
+<P><TABLE BORDER=1 CELLSPACING=1 CELLPADDING=1 BGCOLOR="#E4E4E4">
+<TR><TD><FONT FACE="Arial" SIZE=2>Circle Amount:</FONT></TD>
+<TD><SELECT NAME="amountf">
+<OPTION VALUE="0.25">1/4
+<OPTION VALUE="0.5">1/2
+<OPTION VALUE="0.75">3/4
+<OPTION VALUE="1" SELECTED>full
+</SELECT></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Radius:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="radiusf" VALUE="100" SIZE="3" MAXLENGTH="3"></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Starting Angle:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="anglestartf" VALUE="0" SIZE="3" MAXLENGTH="3"></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Angle Increment:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="angleincf" VALUE="10" SIZE="3" MAXLENGTH="3"></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Direction:</FONT></TD>
+<TD><SELECT NAME="directionf">
+<OPTION VALUE="-1">clockwise
+<OPTION VALUE="1" SELECTED>counter-clockwise
+</SELECT></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Vertical Multiplier:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="verticalf" VALUE="1.0" SIZE="5" MAXLENGTH="5"></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Horizontal Multiplier:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="horizontalf" VALUE="1.0" SIZE="5" MAXLENGTH="5"></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Slant Angle:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="slantf" VALUE="0" SIZE="3" MAXLENGTH="3"></TD></TR>
+</TABLE>
+
+<P><INPUT TYPE="BUTTON" VALUE="Draw Circle" onClick="drawCircle()">
+<INPUT TYPE="BUTTON" VALUE="Delete Circle" onClick="opener.deleteCircle()">
+<P><INPUT TYPE="BUTTON" VALUE="Close Window" onClick="self.close()">
+
+</FORM>
+
+</BODY>
+</HTML>

@@ -1,0 +1,9 @@
+<DIV ID="chip1" STYLE="position:absolute; width:47; height:68;">
+<A HREF="some.html"><IMG SRC="../ballon3.gif" BORDER=0></a>
+</DIV>
+<DIV ID="chip2" STYLE="position:absolute; width:47; height:68;">
+<A HREF="some.html"><IMG SRC="../ballon4.gif" BORDER=0></a>
+</DIV>
+<DIV ID="chip3" STYLE="position:absolute; width:47; height:68;">
+<A HREF="some.html"><IMG SRC="../ballon2.gif" BORDER=0></a>
+</DIV>

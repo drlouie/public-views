@@ -1,0 +1,62 @@
+<hiermenu method="1">
+	<dp>
+		<item name="Links" sub="1" />
+	</dp>
+	
+	<dp_0>
+		<item name="Inspiration" sub="1" />
+		<item name="Resources" sub="1" />
+		<item name="Blogs" sub="1" />
+		<sep />
+		<item name="Load Movie 1" action="loadMovie" movie="movie1.swf" />
+		<sep />
+		<item name="hamza.fawzi (me!)" action="getURL" url="http://www22.brinkster.com/hamzaf" />
+	</dp_0>
+	
+	<dp_0_0>
+		<item name="Bit-101" action="getURL" url="http://www.bit-101.com" />
+		<item name="Levitated" action="getURL" url="http://www.levitated.net" />
+		<item name="Flight 404" action="getURL" url="http://www.flight404.com" />
+		<item name="Yugop" action="getURL" url="http://www.yugop.com" />
+		<item name="Illogicz" action="getURL" url="http://www.illogicz.com" />
+		<item name="Bit-101" action="getURL" url="http://www.bit-101.com" />
+		<item name="Levitated" action="getURL" url="http://www.levitated.net" />
+		<item name="Flight 404" action="getURL" url="http://www.flight404.com" />
+		<item name="Yugop" action="getURL" url="http://www.yugop.com" />
+		<item name="Illogicz" action="getURL" url="http://www.illogicz.com" />
+		<item name="Bit-101" action="getURL" url="http://www.bit-101.com" />
+		<item name="Levitated" action="getURL" url="http://www.levitated.net" />
+		<item name="Flight 404" action="getURL" url="http://www.flight404.com" />
+		<item name="Yugop" action="getURL" url="http://www.yugop.com" />
+		<item name="Bit-101" action="getURL" url="http://www.bit-101.com" />
+		<item name="Levitated" action="getURL" url="http://www.levitated.net" />
+		<item name="Flight 404" action="getURL" url="http://www.flight404.com" />
+		<item name="Yugop" action="getURL" url="http://www.yugop.com" />
+		<item name="Illogicz" action="getURL" url="http://www.illogicz.com" />
+		<item name="Bit-101" action="getURL" url="http://www.bit-101.com" />
+		<item name="Levitated" action="getURL" url="http://www.levitated.net" />
+		<item name="Flight 404" action="getURL" url="http://www.flight404.com" />
+		<item name="Yugop" action="getURL" url="http://www.yugop.com" />
+		<item name="Illogicz" action="getURL" url="http://www.illogicz.com" />
+		<item name="Bit-101" action="getURL" url="http://www.bit-101.com" />
+		<item name="Levitated" action="getURL" url="http://www.levitated.net" />
+		<item name="Flight 404" action="getURL" url="http://www.flight404.com" />
+		<item name="Yugop" action="getURL" url="http://www.yugop.com" />
+	</dp_0_0>
+	
+	<dp_0_1>
+		<item name="Flashkit" action="getURL" url="http://www.flashkit.com" />
+		<item name="Ultrashock" action="getURL" url="http://www.ultrashock.com" />
+		<item name="Were-Here" action="getURL" url="http://www.were-here.com" />
+		<item name="Actionscript.org" action="getURL" url="http://www.actionscript.org" />
+		<item name="Actionscript Toolbox" action="getURL" url="http://www.actionscript-toolbox.com" />
+	</dp_0_1>
+	
+	<dp_0_2>
+		<item name="Andre-michelle" action="getURL" url="http://www.andre-michelle.com" />
+		<item name="Peter Joel" action="getURL" url="http://www.peterjoel.com" />
+		<item name="onrelease" action="getURL" url="http://www.onrelease.org" />
+	</dp_0_2>
+
+
+</hiermenu>

@@ -1,0 +1,112 @@
+*************************************************************************************************
+Thank you for downloading this file. I hope this will be a great tool for which to follow. We here at DNT Graphics© enjoy Flash4© and want to help others who are just getting started, or who already have experience with the program. If you need any more help, or if you would like to ask questions, E-mail us at Questions@Nutnart.com  Note:These examples use PC lingo, not MAC, sorry.
+Once again, Thanks from DNT Graphics©1999/2000
+*************************************************************************************************
+(Note: Please refer to the .fla file for all references and examples)
+First off, one of the easiest ways to create "alpha texts" is to use the built in alpha tool that comes with Flash4. As you will see in the these animations of Flashkit.com, we use easy fade out's of the name itself. Let's get started......
+
+First Name
+Layer Names: Flashkit main, 1st alpha
+Step1. Create a graphic that you are going to re-use. In this example we created a Flashkit.com
+       graphic. Then insert it onto your stage area where you want it. This graphic will be solid
+       and never move. (until later, you'll see) On your layer insert as many frames as will take
+Step2. Create a new layer for your alpha tween. Copy the main graphic from the layer below it. 
+       Then goto your top layer and choose Edit, Paste in Place (Ctrl+Shift+V). This will put 
+       your copy exactly in place for the effect.
+Step3. Goto the first keyframe of your second layer (at this point you can lock out the bottom
+       layer so as to not interfere with it). Right-Click on it and choose insert motion tween.
+       One of two things happen, either it turns blue with a dotted line or if you already have
+       a keyframe at another point on the layer it forms an arrow. If you have a dotted line,
+       goto the frame where you want your animation to stop and insert a keyframe. (Erase any
+       leftover frames for clarity)
+Step4. Goto the last frame (if your already there, stay there) and left click it once. This 
+       should make the frame box black and put a box around your text to edit. 
+Step5. With the text selected choose the arrow tool and choose the Scale button (bottom right
+       of tool bar). Grab any of the corners and stretch and raise the text as much as you like.
+Step6. With the text in place, right click and goto properties (or simply left double-click).
+       Choose Color Effect, Alpha, move the bar or type in zero for the setting. click OK.
+       You will see that your text has disappeared from the screen but the box is still there.
+Step7. You can now press the play button (or press ENTER) to see the animation work. 
+
+Notes: Make sure that the bottom layer has the exact amount of frames as the animation above it.
+       If it has too many or too little it will appear glitchy.
+       Play around with the various placements and alpha settings to get different affects.
+
+Second Name 
+Layer Names: Flashkit main, layer3, layer4
+(in this demonstration we re-use the main layer and adding a second name, then use individual
+ letter animations for the effect)
+Step1. Create your graphic and insert it on the main layer of your movie.
+Step2. (this can be done anywhere) Copy your graphic and paste it out of the way. Then use the 
+       arrow tool and select the entire text. goto Modify, Break apart (Ctrl+B). You will see 
+       that every letter is now seperated and highlighted from the others. click anywhere on the
+       stage to deselect the text. 
+Step3. Now, one at a time, click on a letter, choose Insert, Convert to Symbol (F8). Save each 
+       letter as it's own graphic. Delete each letter off of the stage as you save it.
+Step4. Using the same techniques as described above, you can see that we alternated the                 animations from layer3 and layer4, saving space and file size. 
+       Layer three contains the letters:F,A,H,I,period,O
+       Layer four contains the letters: L,S,K,T,C,M
+Step5. Follow the above mentioned techniques for each letter.
+
+ 
+Third Name
+Layer Names:Flashkit slide in, alpha for slide
+Step1. Using your main graphic symbol, insert it on the stage. Choose the number of frames you
+       want for your animation.
+Step2. Insert the symbol on the stage where it is going to "stop" at in the middle of it's
+       animation. You will see the frame line turn grey. This means that in each frame that of 
+       that layer has that symbol in it in the exact same place.
+Step3. Insert a keyframe where the "stop" is going to happen. 
+Step4. Go back to your first frame, Create motion tween (an arrow should appear). Drag your 
+       graphic off the stage to the direct left. Press Enter to see if the animation works.
+Step5. Go a few frames after the "stop" part, insert a keyframe where you want the animation to 
+       start again. Create a motion tween and then grab your graphic and drag it off stage to
+       the direct right. goto the "stop" frame and copy the graphic, lock this layer.
+Step6. On the frame directly above the "stop" frame, insert a keyframe. Paste in place your 
+       graphic. 
+Step7. Create your motion tween, and follow the same techniques to make it fade away. 
+Step8. This time, on the alpha animation, goto the last frame. Select the faded graphic and drag
+       it off to the right a little or a lot, you decide. This has the effect of the alpha 
+       chasing the letters.
+
+Bottom Name
+Layer Names:Flashkit in, alpha for f.k.in
+
+Notes: We use a little different techniques for this. 
+       First, we shrunk the main name in the first frame to make it appear to come from the 
+       background.
+       Second, we kept the alpha graphic at 25% and used more keyframes to make it jump around
+       a bit.
+       Third, we used the same old tech. to make it fade out at the end.
+   
+The Button
+Layer Names: Flashkit Button
+(PLEASE REFER TO THE .FLA FILE FOR ALL THE REFERENCES TO THIS PARTICULAR SET-UP. IT'S NOT AS HARD  AS SOME PEOPLE MIGHT MAKE IT OUT TO BE.)
+Notes: First off you can see that we have the button in only one frame, with a stop action 
+       assigned to it. This is to prevent the playhead from skipping over your button and keep
+       playing. Also, on the button itself, in the properties box, we assigned the action of
+       "goto and play frame1" "on release".
+       If you edit the button in the .fla file you will see that two movie clips are used here.
+       The first is in the "over" state, and the second is in the "down" state. 
+       We created a Master background for the button on the "up" and "hit" states so they will 
+       always react correctly.
+       Then we needed to create our animations for the different states. First off, create a 
+       a new movie clip instance. Then goto the button and copy the Master graphic. Return to 
+       your movie clip and paste in place. Lock the layer of this graphic. create new layers
+       for any and all other animation needs.
+       Now go back to your button, open the library file and scroll down to your movie clip.
+       Drag the clip from the library onto the "OVER" FRAME (not the stage) and release the 
+       mouse when it is highlighted. This should drop the clip to the exact same position as
+       your "up" frame. If not, select all of the clip and toggle it around on the stage until it        fits into the correct position.
+       Do the exact same thing for the "down" state of the button. Creating another movie clip
+       or simply creating a new graphic, your choice.
+       Do not touch the "hit" state. It is just fine.
+       Now you should have an animated text button.
+
+Please do not hesitate to e-mail us at Questions@Nutnart.com   Your mail will be answered on the next following day. If it happens that it should take us a couple of days to work on your problem, you will still receive an e-mail the following day verifying that your message was received. 
+
+Visit us on the web at www.Nutnart.com     DNT Graphics©1999/2000 
+All rights reserved. Implied. Mentioned. Whatever........you know the drill.
+
+
+

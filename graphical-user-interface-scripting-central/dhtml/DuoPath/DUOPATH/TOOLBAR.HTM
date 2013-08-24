@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+<!--
+DuoPath 1.11
+Copyright 1998 Dan Steinman
+July 23, 1998.
+-->
+<TITLE>DuoPath - Toolbar Window</TITLE>
+<SCRIPT LANGUAGE="JavaScript" SRC="dynlayer.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+loaded=0
+
+ns4 = (document.layers)? true:false
+ie4 = (document.all)? true:false
+
+img = new Array("newpoint","move","moveall","erase","eraselast","insert","line","info","generate","preview","loadsource","loadpath","newpath","circle","parabola","curve")
+for (var i=0;i<img.length;i++) {
+eval(img[i]+"0=new Image()")
+eval(img[i]+"0.src='"+img[i]+"0.gif'")
+eval(img[i]+"1=new Image()")
+eval(img[i]+"1.src='"+img[i]+"1.gif'")}
+
+modeshown = "newpoint"
+
+function on(which,mode) {
+	if (loaded && modeshown != which) {
+		buttons.ref.images[which].src = eval(which+"1.src")
+	}
+}
+function off(which) {
+	if (loaded && modeshown != which) {
+		buttons.ref.images[which].src = eval(which+"0.src")
+	}
+}
+function mode(which) {
+	if (modeshown != which) {
+		if (loaded) {
+		buttons.ref.images[modeshown].src = eval(modeshown+"0.src")
+		buttons.ref.images[which].src = eval(which+"1.src")
+		}
+		modeshown = which
+	}
+}
+function splinemode(which) {
+	if (which=='splinenew') spline.ref.splineform.spliner[0].checked=true
+	if (which=='splinemove') spline.ref.splineform.spliner[1].checked=true
+	if (which=='splineerase') spline.ref.splineform.spliner[2].checked=true
+	if (which=='splinemoveall') spline.ref.splineform.spliner[3].checked=true
+	parent.control.mode = which
+}
+
+function init() {
+	buttons = new DynLayer("buttonsDiv")
+	preview = new DynLayer("previewDiv")
+	spline = new DynLayer("splineDiv")
+	loaded = 1
+	parent.control.begin()
+}
+
+function copyright() {
+	window.open("copyright.html","copy","toolbar=no,width=350,height=280,directories=no,status=no,scrollbars=no,resize=no,menubar=no")
+}
+
+//-->
+</SCRIPT>
+<STYLE TYPE="text/css">
+<!--
+EM {font-family:"Arial"; font-size: 9pt; text-decoration:none; font-style:normal;}
+A {color:#000000}
+A:visited {color:#000000}
+A.preview {font-family:"Arial"; font-size: 9pt; text-decoration:none; font-style:normal;}
+-->
+</STYLE>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0" onLoad="init()">
+
+<DIV ID="title" STYLE="position:absolute; left:0; top:0; width:90;">
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 NOWRAP>
+<TR><TD><IMG SRC="duopath.gif" WIDTH=80 HEIGHT=16 BORDER=0 ALT="DuoPath"></TD></TR>
+<TR><TD><IMG SRC="3dline.gif" WIDTH=78 HEIGHT=8 BORDER=0></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ID="buttonsDiv" STYLE="position:absolute; left:0; top:22; width:90;">
+<FORM NAME="buttonsform">
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 NOWRAP>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.control.mode='new';mode('newpoint')" onMouseOver="on('newpoint'); status='New Point'; return true;" onMouseOut="off('newpoint'); status='';"><IMG NAME="newpoint" SRC="newpoint1.gif" WIDTH=78 HEIGHT=21 ALT="New Point" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.control.mode='move';mode('move')" onMouseOver="on('move'); status='Move Point'; return true;" onMouseOut="off('move'); status='';"><IMG NAME="move" SRC="move0.gif" WIDTH=78 HEIGHT=21 ALT="Move Point" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.control.mode='moveall';mode('moveall')" onMouseOver="on('moveall'); status='Move All Points'; return true;" onMouseOut="off('moveall'); status='';"><IMG NAME="moveall" SRC="moveall0.gif" WIDTH=78 HEIGHT=21 ALT="Move All Points" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.control.mode='erase';mode('erase')" onMouseOver="on('erase'); status='Erase Point'; return true;" onMouseOut="off('erase'); status='';"><IMG NAME="erase" SRC="erase0.gif" WIDTH=78 HEIGHT=21 ALT="Erase Point" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.workspace.eraseLast()" onMouseOver="on('eraselast'); status='Erase Last Point'; return true;" onMouseOut="off('eraselast'); status='';"><IMG NAME="eraselast" SRC="eraselast0.gif" WIDTH=78 HEIGHT=21 ALT="Erase Last Point" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.control.mode='insert';mode('insert')" onMouseOver="on('insert'); status='Insert Point'; return true;" onMouseOut="off('insert'); status='';"><IMG NAME="insert" SRC="insert0.gif" WIDTH=78 HEIGHT=21 ALT="Insert Point" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.control.mode='line';mode('line')" onMouseOver="on('line'); status='Line'; return true;" onMouseOut="off('line'); status='';"><IMG NAME="line" SRC="line0.gif" WIDTH=78 HEIGHT=21 ALT="Line" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.workspace.openCircle()" onMouseOver="on('circle'); status='Circle'; return true;" onMouseOut="off('circle'); status='';"><IMG NAME="circle" SRC="circle0.gif" WIDTH=78 HEIGHT=21 ALT="Circle" BORDER=0></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.workspace.openParabola()" onMouseOver="on('parabola'); status='Parabola'; return true;" onMouseOut="off('parabola'); status='';"><IMG NAME="parabola" SRC="parabola0.gif" WIDTH=78 HEIGHT=21 ALT="Parabola" BORDER=0></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.workspace.startSpline()" onMouseOver="on('curve'); status='Curve Mode'; return true;" onMouseOut="off('curve');status='';"><IMG NAME="curve" SRC="curve0.gif" WIDTH=78 HEIGHT=21 ALT="Curve Mode" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.control.mode='info';mode('info')" onMouseOver="on('info'); status='Point Info'; return true;" onMouseOut="off('info'); status='';"><IMG NAME="info" SRC="info0.gif" WIDTH=78 HEIGHT=21 ALT="Info" BORDER="0"></A></TD></TR>
+<TR><TD><IMG SRC="3dline.gif" WIDTH=78 HEIGHT=8 BORDER=0></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.workspace.startPreview()" onMouseOver="on('preview'); status='Preview This Path'; return true;" onMouseOut="off('preview'); status='';"><IMG NAME="preview" SRC="preview0.gif" WIDTH=78 HEIGHT=21 ALT="Preview This Path" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.workspace.openGenerate()" onMouseOver="on('generate'); status='Generate HTML'; return true;" onMouseOut="off('generate'); status='';"><IMG NAME="generate" SRC="generate0.gif" WIDTH=78 HEIGHT=21 ALT="Generate HTML" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.workspace.changeSource()" onMouseOver="on('loadsource'); status='Load Source Page'; return true;" onMouseOut="off('loadsource'); status='';"><IMG NAME="loadsource" SRC="loadsource0.gif" WIDTH=78 HEIGHT=21 ALT="Load Source Page" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.workspace.inputPoints()" onMouseOver="on('loadpath'); status='Load Path'; return true;" onMouseOut="off('loadpath'); status='';"><IMG NAME="loadpath" SRC="loadpath0.gif" WIDTH=78 HEIGHT=21 ALT="Load Path" BORDER="0"></A></TD></TR>
+<TR><TD><A HREF="javascript:void(null)" onClick="parent.workspace.eraseAll()" onMouseOver="on('newpath'); status='New Path'; return true;" onMouseOut="off('newpath'); status='';"><IMG NAME="newpath" SRC="newpath0.gif" WIDTH=78 HEIGHT=21 ALT="Start New Path" BORDER="0"></A></TD></TR>
+<TR><TD><IMG SRC="3dline.gif" WIDTH=78 HEIGHT=8 BORDER=0></TD></TR>
+<TR><TD VALIGN=TOP><EM><INPUT TYPE="Checkbox" NAME="crosshairbox" ALIGN="TOP" CHECKED onClick="parent.workspace.changeCrosshair()">Crosshairs</EM></TD></TR>
+<TR><TD><EM><A HREF="javascript:void(null)" onClick="copyright()">copyright</A></EM></TD></TR>
+</TABLE>
+</FORM>
+</DIV>
+
+<DIV ID="previewDiv" STYLE="position:absolute; left:0; top:22; width:90; visibility:hidden;">
+<FORM NAME="previewform">
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 NOWRAP>
+<TR VALIGN=MIDDLE><TD><A CLASS="preview" HREF="javascript:void(null)" onClick="parent.workspace.previewStart()"><IMG SRC="previewplay.gif" WIDTH=25 HEIGHT=25 ALT="Play" BORDER=0></A></TD><TD><A CLASS="preview" HREF="javascript:void(null)" onClick="parent.workspace.previewStart()">Play</A></TD></TR>
+<TR VALIGN=MIDDLE><TD><A CLASS="preview" HREF="javascript:void(null)" onClick="parent.workspace.previewPause()"><IMG SRC="previewpause.gif" WIDTH=25 HEIGHT=25 ALT="Pause" BORDER=0></A></TD><TD><A CLASS="preview" HREF="javascript:void(null)" onClick="parent.workspace.previewPause()">Pause</A></TD></TR>
+<TR VALIGN=MIDDLE><TD><A CLASS="preview" HREF="javascript:void(null)" onClick="parent.workspace.previewStop()"><IMG SRC="previewstop.gif" WIDTH=25 HEIGHT=25 ALT="Stop" BORDER=0></A></TD><TD><A CLASS="preview" HREF="javascript:void(null)" onClick="parent.workspace.previewStop()">Stop</A></TD></TR>
+<TR VALIGN=MIDDLE><TD><INPUT TYPE="Checkbox" NAME="loopbox" onClick="parent.workspace.previewLoop()"></TD><TD><EM>Loop</EM></TD></TR>
+<TR><TD COLSPAN=2><EM>Speed: <INPUT TYPE="Text" NAME="speedfield" VALUE="30" ALIGN="ABSMIDDLE" SIZE="2">ms</EM><BR><BR></TD></TR>
+<TR><TD COLSPAN=2><EM><A HREF="#" onClick="parent.workspace.endPreview()">Edit Mode</A></EM></TD></TR>
+</TABLE>
+</FORM>
+</DIV>
+
+<DIV ID="splineDiv" STYLE="position:absolute; left:0; top:32; width:100; visibility:hidden;">
+<FORM NAME="splineform">
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0>
+<TR VALIGN=MIDDLE><TD NOWRAP>&nbsp;<B><EM>Curve Mode:</EM></B></TD></TR>
+<TR VALIGN=MIDDLE><TD NOWRAP><INPUT TYPE="Radio" NAME="spliner" onClick="splinemode('splinenew')" CHECKED><A CLASS="preview" HREF="javascript:void(null)" onClick="splinemode('splinenew')">new point</A></TD></TR>
+<TR VALIGN=MIDDLE><TD NOWRAP><INPUT TYPE="Radio" NAME="spliner" onClick="splinemode('splinemove')"><A CLASS="preview" HREF="javascript:void(null)" onClick="splinemode('splinemove')">move point</A></TD></TR>
+<TR VALIGN=MIDDLE><TD NOWRAP><INPUT TYPE="Radio" NAME="spliner" onClick="splinemode('splineerase')"><A CLASS="preview" HREF="javascript:void(null)" onClick="splinemode('splineerase')">erase point</A></TD></TR>
+<TR VALIGN=MIDDLE><TD NOWRAP><INPUT TYPE="Radio" NAME="spliner" onClick="splinemode('splinemoveall')"><A CLASS="preview" HREF="javascript:void(null)" onClick="splinemode('splinemoveall')">move curve</A></TD></TR>
+<TR VALIGN=MIDDLE><TD NOWRAP>&nbsp;<EM>Path Points:
+<BR>&nbsp;
+<SELECT NAME="pathpointsf" SIZE="1">
+<OPTION VALUE="4">4
+<OPTION VALUE="5">5
+<OPTION VALUE="6">6
+<OPTION VALUE="7">7
+<OPTION VALUE="8" SELECTED>8
+<OPTION VALUE="9">9
+<OPTION VALUE="10">10
+<OPTION VALUE="11">11
+<OPTION VALUE="12">12
+<OPTION VALUE="13">13
+<OPTION VALUE="14">14
+<OPTION VALUE="15">15
+<OPTION VALUE="16">16
+<OPTION VALUE="17">17
+<OPTION VALUE="18">18
+<OPTION VALUE="19">19
+<OPTION VALUE="20">20
+</SELECT></EM></TD></TR>
+<TR VALIGN=MIDDLE><TD NOWRAP>&nbsp;<A CLASS="preview" HREF="javascript:void(null)" onClick="parent.workspace.eraseAllSpline()">erase curve</A></TD></TR>
+<TR VALIGN=MIDDLE><TD NOWRAP>&nbsp;<A CLASS="preview" HREF="javascript:void(null)" onClick="parent.workspace.newSpline()">new curve</A><BR><BR></TD></TR>
+<TR VALIGN=MIDDLE><TD NOWRAP>&nbsp;<A CLASS="preview" HREF="javascript:void(null)" onClick="parent.workspace.startPreview()">preview curve</A></TD></TR>
+<TR VALIGN=MIDDLE><TD NOWRAP>&nbsp;<A CLASS="preview" HREF="javascript:void(null)" onClick="parent.workspace.endSpline()">edit mode</A></TD></TR>
+</TABLE>
+</FORM>
+</DIV>
+
+</BODY>
+</HTML>

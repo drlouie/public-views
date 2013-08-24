@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://www.ruleweb.com/dhtml/Sequence/jeffsequencex.html -->
+<HTML><HEAD><TITLE>Sequence</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<SCRIPT language=VBSCRIPT>
+<!--
+Sub Window_onload()
+	Call Seq("1").Play
+End Sub
+
+Sub Seq_OnInit()
+	Call seq("1").at(1.000, "pic1_show", 1, 0.000, 1)
+	Call seq("1").at(3.000, "pic2_show", 1, 0.000, 1)
+	Call seq("1").at(6.000, "pic1_hide", 1, 0.000, 1)
+	Call seq("1").at(8.000, "pic3_show", 1, 0.000, 1)
+	Call seq("1").at(10.200, "pic2_hide", 1, 0.000, 1)
+	Call seq("1").at(11.100, "pic3_hide", 1, 0.000, 1)
+	
+End Sub
+
+Sub pic1_show()
+	pic1.filters(0).apply()
+	pic1.style.visibility = "visible"
+	pic1.filters(0).play()
+End Sub
+
+Sub pic2_show()
+	pic2.filters(0).apply()
+	pic2.style.visibility = "visible"
+	pic2.filters(0).play()
+End Sub
+
+Sub pic1_hide()
+	pic1.filters(0).apply()
+	pic1.style.visibility = "hidden"
+	pic1.filters(0).play()
+End Sub
+
+Sub pic3_show()
+	pic3.filters(0).apply()
+	pic3.style.visibility = "visible"
+	pic3.filters(0).play()
+End Sub
+
+Sub pic2_hide()
+	pic2.filters(0).apply()
+	pic2.style.visibility = "hidden"
+	pic2.filters(0).play()
+End Sub
+
+Sub pic3_hide()
+	pic3.filters(0).apply()
+	pic3.style.visibility = "hidden"
+	pic3.filters(0).play()
+End Sub
+-->
+</SCRIPT>
+
+<STYLE>#pic1 {
+	LEFT: 1px; POSITION: absolute; TOP: 1px
+}
+#pic2 {
+	LEFT: 150px; POSITION: absolute; TOP: 150px
+}
+#pic3 {
+	LEFT: 300px; POSITION: absolute; TOP: 200px
+}
+</STYLE>
+
+<META content="MSHTML 5.00.2014.210" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0>
+<CENTER><IMG border=0 height=408 id=pic1 src="Sequence_files/1.jpg" 
+style="FILTER: blendTrans(duration=2.50); LEFT: 100px; POSITION: absolute; TOP: 100px; VISIBILITY: hidden; Z-INDEX: 1" 
+width=300> <IMG border=0 height=207 id=pic2 src="Sequence_files/2.jpg" 
+style="FILTER: blendTrans(duration=1.4); LEFT: 200px; POSITION: absolute; TOP: 150px; VISIBILITY: hidden; Z-INDEX: 1" 
+width=300> <IMG border=0 height=238 id=pic3 src="Sequence_files/3.jpg" 
+style="FILTER: revealTrans(duration=1.0,transition=5); LEFT: 350px; POSITION: absolute; TOP: 200px; VISIBILITY: hidden; Z-INDEX: 1" 
+width=300>
+<OBJECT classid=CLSID:B0A6BAE2-AAF0-11d0-A152-00A0C908DB96 
+id=Seq></OBJECT></CENTER></BODY></HTML>

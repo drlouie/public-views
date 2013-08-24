@@ -1,0 +1,26 @@
+<script language="JavaScript1.2">
+
+/*
+Blending Image Slide Show Script- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+function reapply(){
+setTimeout("slideit()",2000)
+return true
+}
+window.onerror=reapply
+</script>
+<script language="JavaScript1.1">
+<!--
+var image1=new Image()
+image1.src="firstimage.gif"
+var image2=new Image()
+image2.src="second.gif"
+var image3=new Image()
+image3.src="third.gif"
+//-->
+</script>

@@ -1,0 +1,14 @@
+<script language="JavaScript1.2">
+<!--
+				/**
+				 * Check that this page has been loaded in the main globalnav frame.
+				 * If not, load the globalnav frameset with the top document in the main frame.
+				 **/
+				if (!top.globalnav_mainframe || !top.www_citywalkhollywood_com)
+				{
+					//Top level page will become bookmarkable if this code is executed.
+					top.location.replace("/globalnav/gnf.pl?url=" + escape(top.location.href));
+				}
+
+//-->
+</script>

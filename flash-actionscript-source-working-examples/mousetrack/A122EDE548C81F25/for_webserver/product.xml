@@ -1,0 +1,36 @@
+<product name="Community MXtra*" 
+   created="1/21/2004" 
+   version="1.0" 
+   price="Free" 
+   requireVersion="1" 
+   help="http://www.communitymx.com/content/article.cfm?cid=A2D2A836CDB0353C" 
+   support="http://www.communitymx.com/content/article.cfm?cid=A2D2A836CDB0353C" 
+   category="Productivity" 
+   vendor="Community MX" 
+   vendorID="prnewman" 
+   productID="CND100-062234-167221-651442">
+   <author name="P.R. Newman" info="http://www.communitymx.com/"/>
+   <description>Community MXtra for Central</description>
+	<installerDescription>
+		<![CDATA[Check out CMXtra* for Central
+* Get the latest Community MX articles<br>* Search by date or keywords<br>* Maintain a list of your favorites
+		]]>
+	</installerDescription>
+
+   <application name="CMXtra*" 
+      src="cmxtra.swf" 
+      width="550" height="450" 
+      help="http://www.communitymx.com/content/article.cfm?cid=A2D2A836CDB0353C" 
+      support="http://www.communitymx.com/content/article.cfm?cid=A2D2A836CDB0353C" 
+      enabled="true" 
+      lang="en" 
+      background="#FFFFFF" 
+      version="1.0" 
+      sendto="true">
+      <icon src="icons/icon.swf" size="50"/>
+      <icon src="icons/icon_40.swf" size="40"/>
+      <pod name="Search" src="searchPod.swf" height="200"/>
+      <pod name="Favorites" src="favePod.swf" height="200"/>
+      <agent name="CMXtraAgent" src="agent.swf" started="true"/>
+   </application>
+</product>

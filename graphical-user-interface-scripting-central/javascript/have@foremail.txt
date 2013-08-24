@@ -1,0 +1,22 @@
+<script>
+<!--
+
+/*Email Check script credit-Website Abstraction (www.wsabstract.com) 200+ free JavaScripts here!
+*/
+
+function emailcheck(cur)
+{
+var string1=cur.email.value
+if (string1.indexOf("@")==-1)
+{
+alert("Please input a valid email address!")
+return false
+}
+}
+//-->
+</script>
+
+<form onsubmit="return emailcheck(this)">
+<strong>Enter your email address please:</strong><br><input type="text" size="20" name="email">
+<input type="submit" value="Submit!">
+</form>

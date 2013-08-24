@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<!--
+DuoPath 1.11
+Copyright 1998 Dan Steinman
+July 23, 1998.
+-->
+<TITLE>DuoPath - Generate HTML</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function generate() {
+	var objname = document.genform.objnamef.value
+	var start = (document.genform.startr[0].checked) ? 'link':'init'
+	var loop = (document.genform.loopr[0].checked) ? 'false':'true'
+	var pathnum = document.genform.pathnumf.value
+	var speed = document.genform.speedf.value
+	window.opener.parent.workspace.generateHTML(objname,start,loop,pathnum,speed)
+	self.close()
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#C0C0C0">
+
+<FORM NAME="genform">
+<FONT FACE="Arial" SIZE=2><B>Generate HTML</B></FONT>
+<P><TABLE BORDER=1 CELLSPACING=3 CELLPADDING=1 BGCOLOR="#E4E4E4">
+<TR><TD><FONT FACE="Arial" SIZE=2>Object Name:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="objnamef" VALUE="square" SIZE="15" MAXLENGTH="20"></TD></TR>
+<TR VALIGN=TOP><TD><FONT FACE="Arial" SIZE=2>How to Begin:</FONT></TD>
+<TD><INPUT TYPE="Radio" NAME="startr" CHECKED> links for Play, Pause, Stop
+<BR><INPUT TYPE="Radio" NAME="startr"> start immediately (onLoad)
+</TD></TR>
+<TR VALIGN=TOP><TD><FONT FACE="Arial" SIZE=2>Loop?</FONT></TD>
+<TD><INPUT TYPE="Radio" NAME="loopr" CHECKED> no
+<BR><INPUT TYPE="Radio" NAME="loopr"> yes
+</TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Path Number:</FONT></TD>
+<TD><INPUT TYPE="Text" NAME="pathnumf" VALUE="1" SIZE="2" MAXLENGTH="2"></TD></TR>
+<TR><TD><FONT FACE="Arial" SIZE=2>Speed (ms):</FONT></TD>
+<TD>
+<SCRIPT LANGUAGE="JavaScript">
+document.write('<INPUT TYPE="Text" NAME="speedf" VALUE="'+opener.parent.workspace.previewspeed+'" SIZE="3" MAXLENGTH="3">')
+</SCRIPT>
+</TD></TR>
+</TABLE>
+
+<P><INPUT TYPE="BUTTON" VALUE="Generate HTML" onClick="generate()">
+<INPUT TYPE="BUTTON" VALUE="Close Window" onClick="self.close()">
+
+</FORM>
+
+</BODY>
+</HTML>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<menuBar>
+	<!-- Options menu -->
+	<menu name="Options" instanceName="options" listener="optionsMenuListener">
+		<menuItem label="Enable Item 3" type="check" instanceName="enableItem3" selected="false" />
+		<menuItem type ="separator" />
+		<menuItem label="Item 3" instanceName="item3" enabled="false" />
+		<menuItem type="separator" />
+		<menuItem label="Either choose me" type="radio" groupName="myGroup" instanceName="item5" selected="true"/>
+		<menuItem label="Or me (but not both)" type="radio" groupName="myGroup" instanceName="item6" /> 
+	</menu>
+
+	<!-- Help menu -->	
+	<menu name="Help" instanceName="help" listener="helpMenuListener">
+		<menuItem label="About" instanceName="aboutMenuItem" />
+		<menuItem label="Ultrashock" instanceName="aboutUltrashock" />
+	</menu>
+</menuBar>

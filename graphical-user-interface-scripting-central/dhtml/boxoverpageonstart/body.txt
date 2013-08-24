@@ -1,0 +1,53 @@
+<div id="i1" class="intro"></div>
+<script language="JavaScript1.2">
+
+/*
+Boxing In Script- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+//change speed here
+var speed=5
+if (document.layers){
+var reference=window.innerWidth/window.innerHeight
+var temp=eval("document.i1.clip")
+temp.left=temp.top=0
+temp.right=window.innerWidth
+temp.bottom=window.innerHeight
+}
+else if (document.all){
+var reference=document.body.clientWidth/document.body.clientHeight
+var rightclip,leftclip,topclip,bottomclip
+var temp=document.all.i1.style
+topclip=leftclip=0
+rightclip=temp.width=document.body.clientWidth
+bottomclip=temp.height=document.body.clientHeight
+}
+
+
+function doit(){
+window.scrollTo(0,0)
+if (document.layers){
+if (temp.left>window.innerWidth/2)
+clearInterval(stopit)
+temp.left+=reference*speed
+temp.top+=speed
+temp.right-=reference*speed
+temp.bottom-=speed
+}
+else if (document.all){
+if (leftclip>document.body.clientWidth/2)
+clearInterval(stopit)
+temp.clip="rect( "+topclip+" "+rightclip+" "+bottomclip+" "+leftclip+")"
+leftclip+=reference*speed
+topclip+=speed
+rightclip-=reference*speed
+bottomclip-=speed
+}
+}
+stopit=setInterval("doit()",100)
+
+</script>

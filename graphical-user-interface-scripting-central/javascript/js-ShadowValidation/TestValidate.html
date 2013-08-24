@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Form Validation Example</title>
+<script type="text/javascript" src="ShadowValidation.js"></script>
+<script type="text/javascript">
+function MyValidate(objElement) {
+	var strText=objElement.value;
+	
+	//allow empty phone number:
+	if (strText.length == 0)
+		return true;
+	
+	//check for "-" character:
+	return strText.indexOf("-")>0;
+}
+</script>
+<style type="text/css">
+.validation_error {color: red; font-weight: bold;}
+</style>
+</head>
+<body>
+<form show_alert="1" onsubmit="return Validate(this);">
+name: <input type="text" validate="not_empty" msg="please enter username" name="username" /><br />
+password: <input type="password" validate="not_empty" msg="please enter password" name="password" /><br />
+email: <input type="text" validate="not_empty|email" msg="please enter email|invalid email address" name="email" /><br />
+age:
+	<select name="age" validate="not_empty" msg="please select age">
+		<option value="">---please select---</option>
+		<option value="1">10-20</option>
+		<option value="2">21-30</option>
+		<option value="3">31-50</option>
+		<option value="4">51+</option>
+	</select><br />
+gender:
+	<input type="radio" name="gender" value="M" validate="not_empty" msg="please select gender" />Male
+	<input type="radio" name="gender" value="F" />Female<br />
+habbits:
+	<input type="checkbox" name="habbits" value="swim" validate="not_empty" msg="please select habbits" />Swimming
+	<input type="checkbox" name="habbits" value="movies" />Watching movies
+	<input type="checkbox" name="habbits" value="friends" />Hanging around with friends<br />
+phone: <input type="text" name="phone" validate="MyValidate" msg="invalid phone number" /><br />
+<button type="submit">Submit</button>
+</form>
+</body>
+</html>

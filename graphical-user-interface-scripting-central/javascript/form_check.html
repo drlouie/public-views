@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" class="main">
+<SCRIPT LANGUAGE="JavaScript">
+
+ <!--Begin cloak
+
+ // Classified form and validation scheme by Tom Doan.
+
+ function formCheck() {
+
+ if (document.Form.mail.value=="" && document.Form.phone.value=="") {
+
+ alert("It would be helpful to include some contact information.");document.Form.mail.focus();return false
+
+ }
+
+ if (document.Form.mail.value!="") {
+
+ if (document.Form.mail.value.indexOf("@")==-1 || document.Form.mail.value.indexOf(".")==-1 || document.Form.mail.value.indexOf(" ")!=-1 || document.Form.mail.value.length<6) {
+
+ alert("Sorry, your email address is not valid.");document.Form.mail.focus();return false
+
+ }}
+
+ if (document.Form.item.value=="") {
+
+ alert("What would you like to buy, sell, or trade?");document.Form.item.focus();return false
+
+ }
+
+ if (document.Form.description.value.indexOf("://")!=-1) {
+
+ alert("The string :// is not allowed in the Description field.");document.Form.description.focus();return false
+
+ }}
+
+ function showValue() {
+
+ if (document.Form.transaction.options[document.Form.transaction.selectedIndex].value=="1") {
+
+ document.Form.price.value = "US $"
+
+ }
+
+ if (document.Form.transaction.options[document.Form.transaction.selectedIndex].value=="2") {
+
+ document.Form.price.value = "Up to $"
+
+ }
+
+ if (document.Form.transaction.options[document.Form.transaction.selectedIndex].value=="3") {
+
+ document.Form.price.value = ""
+
+ }
+
+ if (document.Form.transaction.options[document.Form.transaction.selectedIndex].value=="0") {
+
+ document.Form.price.value = ""
+
+ }}
+
+ // End cloak-->
+
+
+
+ </SCRIPT>
+ <FORM NAME="Form" METHOD=POST ACTION="" onSubmit="return formCheck()"><CENTER>
+ <TABLE>
+ <TR>
+ <TD ALIGN=RIGHT VALIGN=TOP><FONT FACE="Verdana,Arial,Helvetica" SIZE=-1>Name:</FONT></TD>
+ <TD><INPUT NAME="name" SIZE=30 MAXLENGTH=34></TD>
+ </TR>
+ <TR>
+ <TD ALIGN=RIGHT VALIGN=TOP><FONT FACE="Verdana,Arial,Helvetica" SIZE=-1>Email:</FONT></TD>
+ <TD><INPUT NAME="mail" SIZE=30 MAXLENGTH=34></TD>
+ </TR>
+ <TR>
+ <TD ALIGN=RIGHT VALIGN=TOP><FONT FACE="Verdana,Arial,Helvetica" SIZE=-1>Phone:</FONT></TD>
+ <TD><INPUT NAME="phone" SIZE=30 MAXLENGTH=34></TD>
+ </TR>
+ <TR>
+ <TD ALIGN=RIGHT VALIGN=TOP><FONT FACE="Verdana,Arial,Helvetica" SIZE=-1>Location:</FONT></TD>
+ <TD><INPUT NAME="location" SIZE=30 MAXLENGTH=34></TD>
+ </TR>
+ <TR>
+ <TD ALIGN=RIGHT VALIGN=TOP><FONT FACE="Verdana,Arial,Helvetica" SIZE=-1>Item:</FONT></TD>
+ <TD><SELECT NAME="transaction" onChange="showValue();document.Form.item.focus()"><OPTION VALUE="1">For 
+Sale<OPTION VALUE="2">Wanted<OPTION VALUE="3">For Trade<OPTION VALUE="0">Other</SELECT><INPUT NAME="item" SIZE=25 MAXLENGTH=45></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=TOP><FONT FACE="Verdana,Arial,Helvetica" SIZE=-1>Price:</FONT></TD>
+<TD>
+<INPUT NAME="price" VALUE="US $" SIZE=5 MAXLENGTH=28> 
+<INPUT TYPE=RADIO NAME="price_type" VALUE="1">Firm 
+<INPUT TYPE=RADIO NAME="price_type" VALUE="2">OBO 
+<SPACER SIZE=15>
+<INPUT TYPE=CHECKBOX NAME="cash">Cash or money order only
+</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana,Arial,Helvetica" SIZE=-1>Description:<SPACER SIZE=2></FONT></TD>
+<TD><TEXTAREA NAME="description" WRAP=VIRTUAL ROWS=8 COLS=35></TEXTAREA></TD>
+</TR>
+</TABLE>
+<P>
+<INPUT TYPE=SUBMIT VALUE="Submit">
+<SPACER TYPE=BLOCK WIDTH=2>
+<INPUT TYPE=RESET>
+</CENTER>
+</FORM>
+</body>
+<!-- #EndTemplate --></html>

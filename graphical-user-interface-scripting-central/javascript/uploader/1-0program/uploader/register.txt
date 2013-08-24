@@ -1,0 +1,48 @@
+ ---------------------- SOFTWARE REGISTRATION FORM ----------------------
+                  (Please print out and mail or fax back) 
+
+ SPAds © World of Perl
+ 5500 S. Simms pmb 210, Littleton, CO. 80127
+ Office: 303 697-4100  -  Fax: 303 697-4100
+
+ Invoice No: Web Software Purchase
+ --------------------------------------------------------------------
+  Qty 	      	 Description                     Subtotal
+ --------------------------------------------------------------------
+  ___ 	   SPAds © File Uploader ©  v2.0          $ 19.95
+  ___ 	   SPAds © Formsrv 2000 ©   v4.S          $ 19.95
+  ___ 	   SPAds © Formsrv 2000 ©   v4.R          $ 29.95
+  ___ 	   SPAds © PopChat ©        v1.5          $ 19.95
+  ___ 	   SPAds © Searchwire ©     v2.0          $ 19.95
+ =====================================================================
+       	.                    --->    Sub Total:  $ 
+       	.                    --->	 Total:  $ 
+
+ BILLING / SHIPPING ADDRESS:
+ Name:     ___________________________  
+ Address:  ___________________________
+ City:     ___________________________
+ Phone:    ___________________________
+ Fax:      ___________________________
+ Email:    ___________________________  
+
+ Pay by check:       ()Yes  ()No       Check #: _________
+
+ Make checks payable to: SPADS
+
+ Pay by credit card: ()Yes  ()No        Amount: $ 
+ Card Name: __________________________
+ Card No:   __________________________
+ Expires:   __________________________
+
+ AUTH/TKT: _____________  Date:___________  X:___________________________
+     (if paying by credit card please sign and Fax back to us.)
+
+ THANK YOU FOR YOUR REGISTRATION!
+ Please Fax this completed form to (303) 697-4100 for same day email service!
+
+ Thanks, Vince aka SPADS.
+ 
+
+
+

@@ -1,0 +1,25 @@
+<hiermenu method="1">
+
+	<dp>
+		<item name="Load Movie" sub="1" />
+	</dp>
+	
+	<dp_0>
+		<item name="load movie1.swf" action="loadMovie" movie="movie1.swf" />
+		<item name="load movie2.swf" action="loadMovie" movie="movie2.swf" />
+		<item name="load movie3.swf" action="loadMovie" movie="movie3.swf" />
+		<item name="load movie1.swf" action="loadMovie" movie="movie1.swf" />
+		<item name="load movie2.swf" action="loadMovie" movie="movie2.swf" />
+		<item name="load movie3.swf" action="loadMovie" movie="movie3.swf" />
+		<item name="load movie1.swf" action="loadMovie" movie="movie1.swf" />
+		<item name="load movie2.swf" action="loadMovie" movie="movie2.swf" />
+		<item name="load movie3.swf" action="loadMovie" movie="movie3.swf" />
+		<item name="load movie1.swf" action="loadMovie" movie="movie1.swf" />
+		<item name="load movie2.swf" action="loadMovie" movie="movie2.swf" />
+		<item name="load movie3.swf" action="loadMovie" movie="movie3.swf" />
+		<item name="load movie1.swf" action="loadMovie" movie="movie1.swf" />
+		<item name="load movie2.swf" action="loadMovie" movie="movie2.swf" />
+		<item name="load movie3.swf" action="loadMovie" movie="movie3.swf" />
+	</dp_0>
+
+</hiermenu>
